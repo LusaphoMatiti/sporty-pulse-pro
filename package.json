@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "postinstall": "prisma generate",
     "reset:user": "npx tsx scripts/reset-user.ts"
   },
   "dependencies": {
