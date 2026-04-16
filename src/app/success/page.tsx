@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-export default function Success() {
+function SuccessContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [status, setStatus] = useState<"verifying" | "confirmed" | "failed">(
@@ -68,5 +68,20 @@ export default function Success() {
         All premium features are now unlocked. Redirecting you now...
       </p>
     </div>
+  );
+}
+
+export default function SuccessPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-sp-bg text-sp-text font-dm flex flex-col items-center justify-center gap-4">
+          <div className="w-8 h-8 border-2 border-sp-accent border-t-transparent rounded-full animate-spin" />
+          <p className="text-sp-muted">Loading...</p>
+        </div>
+      }
+    >
+      <SuccessContent />
+    </Suspense>
   );
 }
