@@ -2,7 +2,7 @@
 import { useSession } from "next-auth/react";
 import { Role } from "@/generated/prisma";
 
-export function CoachPanel() {
+export default function CoachPanel() {
   const { data: session } = useSession();
 
   if (session?.user.role === Role.ATHLETE) return null;
