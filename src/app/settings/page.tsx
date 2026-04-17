@@ -9,8 +9,10 @@ export default async function SettingsPage() {
   const session = await getServerSession(authOptions);
   if (!session) redirect("/login");
 
+  const userId = session.user.id;
+
   const instance = await prisma.planInstance.findFirst({
-    where: { userId: session.user.id, status: InstanceStatus.ACTIVE },
+    where: { userId, status: InstanceStatus.ACTIVE },
     select: { level: true },
   });
 
@@ -19,5 +21,13 @@ export default async function SettingsPage() {
     | "INTERMEDIATE"
     | "ADVANCED";
 
-  return <Settings session={session} currentLevel={currentLevel} />;
+  // ── Fetch subscription tier ───────────────────────────────────
+  const subscription = await prisma.subscription.findUnique({
+    where: { userId },
+    select: { plan: true, status: true },
+  });
+
+  const plan = subscription?.status === "active" ? subscription.plan : "FREE";
+
+  return <Settings session={session} currentLevel={currentLevel} plan={plan} />;
 }

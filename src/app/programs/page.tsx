@@ -68,6 +68,7 @@ export default async function ProgramsPage() {
         canStartNewProgram: access.canStartNewProgram,
         activeInstanceCount: access.activeInstanceCount,
         programCap: access.isPro ? null : access.programCap,
+        declaredEquipmentIds: access.declaredEquipmentIds,
         activeEquipmentIds,
         expiredEquipmentIds,
         activePlanId: activeInstance?.planId ?? null,

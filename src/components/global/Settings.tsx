@@ -87,9 +87,10 @@ function SectionCard({
 type Props = {
   session: Session;
   currentLevel: "BEGINNER" | "INTERMEDIATE" | "ADVANCED";
+  plan: string;
 };
 
-function Settings({ session, currentLevel }: Props) {
+function Settings({ session, currentLevel, plan }: Props) {
   const router = useRouter();
   const { update: updateSession } = useSession();
   const [profileSheetOpen, setProfileSheetOpen] = useState(false);
@@ -98,8 +99,7 @@ function Settings({ session, currentLevel }: Props) {
   const { setTheme, resolvedTheme } = useTheme();
   const mounted = resolvedTheme !== undefined;
 
-  const tier = (session.user as { tier?: string }).tier ?? "free";
-  const isPro = tier === "pro";
+  const isPro = plan === "PRO";
 
   function handleSignOut() {
     signOut({ callbackUrl: "/login" });
@@ -180,8 +180,8 @@ function Settings({ session, currentLevel }: Props) {
           <span
             className={`text-[10px] font-medium rounded-lg px-2.5 py-1 shrink-0 border ${
               isPro
-                ? "bg-yellow-400/10 border-yellow-400/30 text-yellow-400"
-                : "bg-sp-accent/10 border-sp-accent/25 text-sp-accent"
+                ? "bg-sp-accent/10 border-sp-accent/20 text-sp-accent"
+                : "bg-sp-surface2 border-sp-border text-sp-muted"
             }`}
           >
             {isPro ? "Pro" : "Free Tier"}

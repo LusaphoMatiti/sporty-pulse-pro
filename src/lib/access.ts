@@ -26,6 +26,10 @@ export async function getUserAccess(ctx: AccessContext) {
     },
   });
 
+  const declaredEquipmentIds = userEquipment
+    .filter((e) => e.source === "DECLARED")
+    .map((e) => e.equipmentId);
+
   const activeEquipmentIds = new Set(
     userEquipment
       .filter(
@@ -74,6 +78,7 @@ export async function getUserAccess(ctx: AccessContext) {
     canStartNewProgram,
     activeInstanceCount,
     programCap,
+    declaredEquipmentIds,
     hasActiveTrial,
     trialExpiresAt,
     canAccessAICoach: isPro,

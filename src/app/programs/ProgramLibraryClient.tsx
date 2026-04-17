@@ -20,6 +20,7 @@ type AccessContext = {
   activeEquipmentIds: string[];
   expiredEquipmentIds: string[];
   activePlanId: string | null; // the planId of the user's current ACTIVE instance
+  declaredEquipmentIds: string[];
 };
 
 type Props = {
@@ -137,7 +138,8 @@ export default function ProgramLibraryClient({
         {/* ── Active trial banner ───────────────────────────────────── */}
         {access.hasActiveTrial &&
           access.trialExpiresAt &&
-          declaredEquipmentName && (
+          declaredEquipmentName &&
+          !access.isPro && (
             <TrialBanner
               trialExpiresAt={access.trialExpiresAt}
               equipmentName={declaredEquipmentName}
@@ -216,26 +218,54 @@ export default function ProgramLibraryClient({
 
         {/* ── Plan list ─────────────────────────────────────────────── */}
         <div className="space-y-3">
-          {plans.map((plan) => {
-            const reason = lockReason(plan);
+          {plans
+            .sort((a, b) => {
+              const aHasEquip = a.equipmentId !== null ? 0 : 1;
+              const bHasEquip = b.equipmentId !== null ? 0 : 1;
+              return aHasEquip - bHasEquip;
+            })
+            .filter((plan) => {
+              const isBodyweight = plan.equipmentId === null;
+              if (isBodyweight) return true; // always show bodyweight
 
-            if (reason) {
+              if (access.isPro) return true; // Pro sees everything
+
+              // Declared trial user (active or expired) →
+              // show ONLY plans for their declared equipment, hide everything else
+              if (access.declaredEquipmentIds.length > 0) {
+                return access.declaredEquipmentIds.includes(plan.equipmentId!);
+              }
+
+              // Free starter (no equipment at all) → hide all equipment plans
+              if (
+                access.activeEquipmentIds.length === 0 &&
+                access.expiredEquipmentIds.length === 0
+              ) {
+                return false;
+              }
+
+              return true;
+            })
+            .map((plan) => {
+              const reason = lockReason(plan);
+
+              if (reason) {
+                return (
+                  <LockedProgramCard
+                    key={plan.id}
+                    plan={plan}
+                    reason={reason}
+                    onUpgrade={() => openUpgrade(reason as UpgradeTrigger)}
+                  />
+                );
+              }
+
+              // Unlocked — render ProgramCard
+              const isActive = access.activePlanId === plan.id;
               return (
-                <LockedProgramCard
-                  key={plan.id}
-                  plan={plan}
-                  reason={reason}
-                  onUpgrade={() => openUpgrade(reason as UpgradeTrigger)}
-                />
+                <ProgramCard key={plan.id} plan={plan} isActive={isActive} />
               );
-            }
-
-            // Unlocked — render ProgramCard
-            const isActive = access.activePlanId === plan.id;
-            return (
-              <ProgramCard key={plan.id} plan={plan} isActive={isActive} />
-            );
-          })}
+            })}
         </div>
       </div>
 

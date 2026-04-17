@@ -109,7 +109,7 @@ export default function ProgramCard({ plan, isActive = false }: Props) {
                 </span>
               )}
               <span className="bg-sp-accent/10 border border-sp-accent/20 text-sp-accent text-[10px] font-medium rounded-lg px-2 py-1">
-                {plan.tier.charAt(0) + plan.tier.slice(1).toLowerCase()} Tier
+                {plan.equipment ? "Equipment" : "Bodyweight"}
               </span>
             </div>
           </div>
