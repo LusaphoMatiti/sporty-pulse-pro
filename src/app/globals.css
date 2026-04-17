@@ -86,3 +86,10 @@ body {
 .animate-page > *:nth-child(6) {
   animation-delay: 0.25s;
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
