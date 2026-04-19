@@ -1,6 +1,3 @@
-// src/app/page.tsx
-// Middleware guarantees: user is logged in, onboarded, and has seen welcome-back.
-
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { redirect } from "next/navigation";
@@ -9,19 +6,19 @@ import Home from "@/components/global/Home";
 
 export default async function RootPage() {
   const session = await getServerSession(authOptions);
-  if (!session) redirect("/login"); // safety net only
+  if (!session) redirect("/login");
 
   const userId = session.user.id;
   const now = new Date();
 
-  // ── Active plan instance ───────────────────────────────────────
+  //  Active plan instance
   const activeInstance = await prisma.planInstance.findFirst({
     where: { userId, status: "ACTIVE" },
     include: { plan: true },
     orderBy: { startedAt: "desc" },
   });
 
-  // ── All workout logs ───────────────────────────────────────────
+  // All workout logs
   const allLogs = await prisma.workoutLog.findMany({
     where: { userId },
     select: {
@@ -35,7 +32,7 @@ export default async function RootPage() {
     orderBy: { completedAt: "desc" },
   });
 
-  // ── Unique completed sessions ──────────────────────────────────
+  // Unique completed sessions
   const uniqueSessions = new Map<string, Date>();
   for (const log of allLogs) {
     const key = `${log.instanceId}-${log.sessionNumber}`;

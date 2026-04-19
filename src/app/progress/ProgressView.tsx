@@ -7,7 +7,7 @@ import UpgradePrompt, {
   UpgradeTrigger,
 } from "@/components/programs/UpgadePrompt";
 
-// Types
+// ── Types ──────────────────────────────────────────────────────────────────────
 
 type UserPlan = "FREE" | "EQUIPMENT" | "PRO";
 
@@ -56,6 +56,38 @@ type SessionItem = {
   instanceId: string;
 };
 
+// ── Dashboard types ────────────────────────────────────────────────────────────
+
+export type StrengthTrend = {
+  exerciseName: string;
+  percentChange: number;
+  currentRM: number;
+  priorRM: number;
+  dataPoints: number;
+};
+
+export type VolumeByMuscle = {
+  group: string;
+  thisWeekKg: number;
+  lastWeekKg: number;
+  percentChange: number | null;
+};
+
+export type RecoveryStatus = "FRESH" | "MODERATE" | "HIGH_FATIGUE";
+
+export type DashboardData = {
+  consistencyScore: number;
+  consistencyPlanned: number;
+  consistencyCompleted: number;
+  goalProgress: number;
+  goalLabel: string;
+  goalInsight: string;
+  recoveryStatus: RecoveryStatus;
+  recoveryInsight: string;
+  strengthTrends: StrengthTrend[];
+  volumeByMuscle: VolumeByMuscle[];
+};
+
 type Props = {
   userPlan: UserPlan;
   hasActiveTrial?: boolean;
@@ -67,9 +99,10 @@ type Props = {
   prevMonthName: string;
   bodySplit: BodySplitItem[];
   sessionHistory: SessionItem[];
+  dashboardData: DashboardData | null;
 };
 
-//  Helpers
+// ── Helpers ────────────────────────────────────────────────────────────────────
 
 function formatVolume(kg: number) {
   return `${kg.toLocaleString()}kg`;
@@ -109,7 +142,26 @@ const muscleGroupIcon: Record<string, string> = {
   FULLBODY: "⚡",
 };
 
-//  Locked Section Gate
+const recoveryConfig: Record<
+  RecoveryStatus,
+  { emoji: string; label: string; color: string; barPct: number }
+> = {
+  FRESH: { emoji: "🟢", label: "Fresh", color: "#4ade80", barPct: 90 },
+  MODERATE: {
+    emoji: "🟡",
+    label: "Moderate Fatigue",
+    color: "#f59e0b",
+    barPct: 55,
+  },
+  HIGH_FATIGUE: {
+    emoji: "🔴",
+    label: "High Fatigue",
+    color: "#f87171",
+    barPct: 20,
+  },
+};
+
+// ── Locked Section Gate ────────────────────────────────────────────────────────
 
 function LockedSection({
   label,
@@ -122,7 +174,6 @@ function LockedSection({
 }) {
   return (
     <div className="relative bg-sp-surface border border-sp-border rounded-2xl overflow-hidden">
-      {/* Blurred fake content */}
       <div
         className="p-5 space-y-3 select-none pointer-events-none"
         style={{ filter: "blur(4px)" }}
@@ -134,8 +185,6 @@ function LockedSection({
         <div className="h-6 w-3/5 bg-sp-surface2 rounded-lg" />
         <div className="h-4 w-1/2 bg-sp-surface2 rounded-full mt-1" />
       </div>
-
-      {/* Overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-sp-bg/70 backdrop-blur-[2px] px-5 gap-3">
         <div className="w-9 h-9 rounded-2xl bg-sp-surface border border-sp-border flex items-center justify-center">
           <svg
@@ -172,7 +221,287 @@ function LockedSection({
   );
 }
 
-//  PR Progression Card
+// ── Stat Card ─────────────────────────────────────────────────────────────────
+
+function StatCard({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex-1 bg-sp-surface border border-sp-border rounded-2xl p-4 flex flex-col gap-1">
+      <p className="text-[10px] tracking-widest text-sp-muted uppercase">
+        {label}
+      </p>
+      <p className="font-barlow font-extrabold text-[28px] leading-none text-sp-text">
+        {value}
+      </p>
+    </div>
+  );
+}
+
+// ── Smart Metric Card ─────────────────────────────────────────────────────────
+// Full-width horizontal card: label + icon left, big value + status right,
+// progress bar + insight below.
+
+function SmartMetricCard({
+  icon,
+  label,
+  value,
+  valueColor,
+  statusLabel,
+  barPct,
+  insight,
+}: {
+  icon: string;
+  label: string;
+  value: string;
+  valueColor: string;
+  statusLabel: string;
+  barPct: number;
+  insight: string;
+}) {
+  return (
+    <div className="bg-sp-surface border border-sp-border rounded-2xl p-4">
+      {/* Top row: label left, value right */}
+      <div className="flex items-start justify-between gap-3 mb-3">
+        <div className="flex items-center gap-2">
+          <span className="text-base leading-none">{icon}</span>
+          <p className="text-[11px] tracking-widest text-sp-muted uppercase font-medium">
+            {label}
+          </p>
+        </div>
+        <div className="text-right">
+          <p
+            className="font-barlow font-extrabold text-[26px] leading-none"
+            style={{ color: valueColor }}
+          >
+            {value}
+          </p>
+          <p
+            className="text-[11px] font-medium mt-0.5"
+            style={{ color: valueColor + "bb" }}
+          >
+            {statusLabel}
+          </p>
+        </div>
+      </div>
+      {/* Bar */}
+      <div className="h-1.5 bg-sp-surface2 rounded-full overflow-hidden mb-2.5">
+        <div
+          className="h-full rounded-full transition-all duration-700"
+          style={{ width: `${barPct}%`, backgroundColor: valueColor }}
+        />
+      </div>
+      {/* Insight */}
+      <p className="text-[11px] text-sp-muted2 leading-snug">{insight}</p>
+    </div>
+  );
+}
+
+// ── Smart Metrics (3 stacked cards) ───────────────────────────────────────────
+
+function SmartMetrics({ data }: { data: DashboardData }) {
+  const cs = data.consistencyScore;
+  const csColor = cs >= 75 ? "#CBFF47" : cs >= 50 ? "#f59e0b" : "#f87171";
+  const csStatus =
+    cs >= 80
+      ? "Outstanding"
+      : cs >= 65
+        ? "On track"
+        : cs >= 50
+          ? "Could improve"
+          : "Needs attention";
+
+  const gp = data.goalProgress;
+  const gpColor = gp >= 70 ? "#CBFF47" : gp >= 40 ? "#a78bfa" : "#60a5fa";
+
+  const rc = recoveryConfig[data.recoveryStatus];
+  const recoveryActionLabel =
+    data.recoveryStatus === "FRESH"
+      ? "Good to train"
+      : data.recoveryStatus === "MODERATE"
+        ? "Train smart"
+        : "Consider rest";
+
+  return (
+    <div className="space-y-2.5">
+      <SmartMetricCard
+        icon="🔁"
+        label="Consistency"
+        value={`${cs}%`}
+        valueColor={csColor}
+        statusLabel={csStatus}
+        barPct={cs}
+        insight={`${data.consistencyCompleted} of ${data.consistencyPlanned} planned sessions completed`}
+      />
+      <SmartMetricCard
+        icon="🎯"
+        label={data.goalLabel}
+        value={`${gp}%`}
+        valueColor={gpColor}
+        statusLabel="Goal Progress"
+        barPct={gp}
+        insight={data.goalInsight}
+      />
+      <SmartMetricCard
+        icon={rc.emoji}
+        label="Recovery"
+        value={rc.label}
+        valueColor={rc.color}
+        statusLabel={recoveryActionLabel}
+        barPct={rc.barPct}
+        insight={data.recoveryInsight}
+      />
+    </div>
+  );
+}
+
+// ── Strength Progress ─────────────────────────────────────────────────────────
+
+function StrengthTrendsCard({ trends }: { trends: StrengthTrend[] }) {
+  if (trends.length === 0) {
+    return (
+      <div className="bg-sp-surface border border-sp-border rounded-2xl px-5 py-6 text-center">
+        <p className="text-sp-muted text-sm">
+          Complete workouts over multiple weeks to see strength trends.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-sp-surface border border-sp-border rounded-2xl p-4 space-y-4">
+      {trends.map((t) => {
+        const isPos = t.percentChange >= 0;
+        const color = isPos ? "#CBFF47" : "#f87171";
+        const absPct = Math.abs(t.percentChange);
+        const barW = Math.min(100, (absPct / 30) * 100);
+
+        return (
+          <div key={t.exerciseName}>
+            <div className="flex items-center justify-between mb-1.5">
+              <p className="text-sm font-medium text-sp-text truncate max-w-[65%]">
+                {t.exerciseName}
+              </p>
+              <div className="flex items-center gap-2 shrink-0">
+                <span
+                  className="font-barlow font-bold text-sm"
+                  style={{ color }}
+                >
+                  {isPos ? "▲" : "▼"} {absPct}%
+                </span>
+                {t.currentRM > 0 && (
+                  <span className="text-[10px] text-sp-muted">
+                    {t.currentRM}kg
+                  </span>
+                )}
+              </div>
+            </div>
+            <div className="h-2 bg-sp-surface2 rounded-full overflow-hidden">
+              <div
+                className="h-full rounded-full transition-all duration-700"
+                style={{ width: `${barW}%`, backgroundColor: color }}
+              />
+            </div>
+          </div>
+        );
+      })}
+      <p className="text-[10px] text-sp-muted">
+        Last 4 weeks vs prior 4 weeks · estimated 1RM
+      </p>
+    </div>
+  );
+}
+
+// ── Weekly Volume ─────────────────────────────────────────────────────────────
+
+function VolumeByMuscleCard({ data }: { data: VolumeByMuscle[] }) {
+  const nonZero = data.filter((d) => d.thisWeekKg > 0 || d.lastWeekKg > 0);
+
+  if (nonZero.length === 0) {
+    return (
+      <div className="bg-sp-surface border border-sp-border rounded-2xl px-5 py-6 text-center">
+        <p className="text-sp-muted text-sm">
+          Complete a workout this week to see volume breakdown.
+        </p>
+      </div>
+    );
+  }
+
+  const maxKg = Math.max(
+    ...nonZero.flatMap((d) => [d.thisWeekKg, d.lastWeekKg]),
+    1,
+  );
+
+  return (
+    <div className="bg-sp-surface border border-sp-border rounded-2xl p-4">
+      {/* Legend */}
+      <div className="flex items-center gap-4 mb-4">
+        <div className="flex items-center gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-sm bg-sp-accent" />
+          <span className="text-[10px] text-sp-muted">This week</span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-sm bg-white/15" />
+          <span className="text-[10px] text-sp-muted">Last week</span>
+        </div>
+      </div>
+      <div className="space-y-4">
+        {nonZero.map((d) => {
+          const thisW = (d.thisWeekKg / maxKg) * 100;
+          const lastW = (d.lastWeekKg / maxKg) * 100;
+          const pct = d.percentChange;
+          const color = splitColors[d.group] ?? "#CBFF47";
+
+          return (
+            <div key={d.group}>
+              <div className="flex items-center justify-between mb-1.5">
+                <span className="text-sm font-medium text-sp-text">
+                  {splitLabels[d.group] ?? d.group}
+                </span>
+                {pct !== null && (
+                  <span
+                    className={`text-[11px] font-barlow font-bold ${pct >= 0 ? "text-sp-accent" : "text-red-400"}`}
+                  >
+                    {pct >= 0 ? "▲" : "▼"} {Math.abs(pct)}%
+                  </span>
+                )}
+              </div>
+              <div className="flex items-center gap-2 mb-1">
+                <div className="flex-1 h-5 bg-sp-surface2 rounded-md overflow-hidden">
+                  <div
+                    className="h-full rounded-md transition-all duration-700"
+                    style={{ width: `${thisW}%`, backgroundColor: color }}
+                  />
+                </div>
+                <span
+                  className="w-16 text-[10px] font-barlow font-bold text-right shrink-0"
+                  style={{ color }}
+                >
+                  {d.thisWeekKg > 0
+                    ? `${d.thisWeekKg.toLocaleString()}kg`
+                    : "—"}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="flex-1 h-5 bg-sp-surface2 rounded-md overflow-hidden">
+                  <div
+                    className="h-full rounded-md bg-white/15 transition-all duration-700"
+                    style={{ width: `${lastW}%` }}
+                  />
+                </div>
+                <span className="w-16 text-[10px] font-barlow font-bold text-sp-muted2 text-right shrink-0">
+                  {d.lastWeekKg > 0
+                    ? `${d.lastWeekKg.toLocaleString()}kg`
+                    : "—"}
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ── PR Card ───────────────────────────────────────────────────────────────────
 
 function PRCard({ pr }: { pr: PR }) {
   const isBodyweight = pr.weightKg === 0;
@@ -195,7 +524,6 @@ function PRCard({ pr }: { pr: PR }) {
       <p className="text-[11px] text-sp-muted2 leading-snug pr-10 font-medium">
         {pr.exerciseName}
       </p>
-
       <div className="flex items-end gap-1.5">
         {isBodyweight ? (
           <>
@@ -216,7 +544,6 @@ function PRCard({ pr }: { pr: PR }) {
           </>
         )}
       </div>
-
       {history.length > 1 ? (
         <div className="mt-1">
           <div className="flex items-end gap-1 h-12">
@@ -252,7 +579,7 @@ function PRCard({ pr }: { pr: PR }) {
   );
 }
 
-//  Monthly Comparison Chart
+// ── Monthly Comparison Chart ───────────────────────────────────────────────────
 
 function MonthCompareChart({
   thisMonth,
@@ -288,7 +615,6 @@ function MonthCompareChart({
 
   return (
     <div className="bg-sp-surface border border-sp-border rounded-2xl p-5 space-y-5">
-      {/* Legend */}
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-1.5">
           <div className="w-3 h-3 rounded-sm bg-sp-accent" />
@@ -299,7 +625,6 @@ function MonthCompareChart({
           <span className="text-[11px] text-sp-muted">{prevMonthName}</span>
         </div>
       </div>
-
       {metrics.map(({ label, current, previous, format }) => {
         const maxVal = Math.max(current, previous, 1);
         const currentPct = (current / maxVal) * 100;
@@ -359,22 +684,7 @@ function MonthCompareChart({
   );
 }
 
-//  Stat Card
-
-function StatCard({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex-1 bg-sp-surface border border-sp-border rounded-2xl p-4 flex flex-col gap-1">
-      <p className="text-[10px] tracking-widest text-sp-muted uppercase">
-        {label}
-      </p>
-      <p className="font-barlow font-extrabold text-[28px] leading-none text-sp-text">
-        {value}
-      </p>
-    </div>
-  );
-}
-
-//  Plan badge
+// ── Plan badge ─────────────────────────────────────────────────────────────────
 
 const planBadge: Record<UserPlan, { label: string; classes: string }> = {
   FREE: {
@@ -391,7 +701,7 @@ const planBadge: Record<UserPlan, { label: string; classes: string }> = {
   },
 };
 
-//  Floating Upgrade Banner
+// ── Floating Upgrade Banner ────────────────────────────────────────────────────
 
 function FloatingUpgradeBanner({ onUpgrade }: { onUpgrade: () => void }) {
   const [dismissed, setDismissed] = useState(false);
@@ -440,7 +750,32 @@ function FloatingUpgradeBanner({ onUpgrade }: { onUpgrade: () => void }) {
   );
 }
 
-//  Main View
+// ── Section header helper ──────────────────────────────────────────────────────
+
+function SectionHeader({
+  title,
+  right,
+}: {
+  title: string;
+  right?: React.ReactNode;
+}) {
+  return (
+    <div className="flex items-center justify-between mb-3">
+      <h2 className="font-barlow font-bold text-xl tracking-wide">{title}</h2>
+      {right}
+    </div>
+  );
+}
+
+function ProBadge() {
+  return (
+    <span className="text-[10px] font-barlow font-bold text-sp-accent uppercase tracking-wider border border-sp-accent/30 rounded-md px-1.5 py-0.5">
+      Pro
+    </span>
+  );
+}
+
+// ── Main View ──────────────────────────────────────────────────────────────────
 
 export default function ProgressView({
   userPlan,
@@ -453,6 +788,7 @@ export default function ProgressView({
   prevMonthName,
   bodySplit,
   sessionHistory,
+  dashboardData,
 }: Props) {
   const router = useRouter();
   const [historyLimit, setHistoryLimit] = useState(6);
@@ -465,37 +801,8 @@ export default function ProgressView({
     setUpgradeOpen(true);
   }
 
-  // Tier access rules (per spec)
-  //
-  // FREE (Starter):
-  //   - Only "All-time metrics" visible
-  //   - Everything else locked
-  //   - Floating upgrade banner shown
-  //
-  // Declared Trial:
-  //   - SAME as FREE on Progress page (spec: "Same as Starter")
-  //
-  // Purchased (EQUIPMENT):
-  //   - Limited metrics (same as Starter per spec)
-  //   - Locked metrics show upgrade banner
-  //   NOTE: Per spec EQUIPMENT is "still LIMITED" - only PRO unlocks all
-  //
-  // Pro:
-  //   - EVERYTHING unlocked
-  //
   const isPro = userPlan === "PRO";
-
-  // Per spec: only PRO gets analytics (monthly comparison, body split)
-  const hasAnalyticsAccess = isPro;
-
-  // LIMITED view = NOT PRO = show locks + floating upgrade banner
-  // This covers: FREE, Trial, and EQUIPMENT
   const isLimitedView = !isPro;
-
-  // Session history:
-  //   FREE / Trial: last 3 only
-  //   EQUIPMENT: last 3 only (still limited per spec)
-  //   PRO: full history with load-more
   const hasFullHistory = isPro;
   const visibleHistory = hasFullHistory
     ? sessionHistory.slice(0, historyLimit)
@@ -505,8 +812,8 @@ export default function ProgressView({
 
   return (
     <>
-      <div className="min-h-screen bg-sp-bg text-sp-text font-dm pb-28 px-5 pt-6 space-y-5 max-w-md mx-auto">
-        {/*  Header  */}
+      <div className="min-h-screen bg-sp-bg text-sp-text font-dm pb-28 px-5 pt-6 space-y-6 max-w-md mx-auto">
+        {/* ── 1. Header ── */}
         <div className="flex items-start justify-between">
           <div>
             <p className="text-[11px] tracking-widest text-sp-muted uppercase mb-1">
@@ -523,7 +830,7 @@ export default function ProgressView({
           </span>
         </div>
 
-        {/*  Trial notice  */}
+        {/* ── Plan notices ── */}
         {hasActiveTrial && userPlan !== "PRO" && (
           <div className="bg-amber-500/8 border border-amber-500/25 rounded-2xl px-4 py-3 flex items-center gap-3">
             <span className="text-amber-400 text-base">⏳</span>
@@ -535,8 +842,6 @@ export default function ProgressView({
             </div>
           </div>
         )}
-
-        {/* EQUIPMENT plan notice */}
         {userPlan === "EQUIPMENT" && !hasActiveTrial && (
           <div className="bg-sp-surface border border-sp-border rounded-2xl px-4 py-3 flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
@@ -559,7 +864,7 @@ export default function ProgressView({
           </div>
         )}
 
-        {/*  All-time stats — visible to EVERYONE  */}
+        {/* ── 2. All-time stats — always visible, always first ── */}
         <section>
           <p className="text-[10px] tracking-widest text-sp-muted uppercase mb-2.5">
             All Time
@@ -577,18 +882,76 @@ export default function ProgressView({
           </div>
         </section>
 
-        {/* ── Personal Records — visible to EVERYONE ─
-             PRs are basic metrics, accessible on all tiers */}
+        {/* ── 3. Smart Metrics (Consistency / Goal / Recovery) — PRO ── */}
         <section>
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="font-barlow font-bold text-xl tracking-wide">
-              Personal Records
-            </h2>
-            <span className="text-[11px] text-sp-muted2">
-              {personalRecords.length} exercise
-              {personalRecords.length !== 1 ? "s" : ""}
-            </span>
-          </div>
+          <SectionHeader
+            title="Smart Metrics"
+            right={!isPro ? <ProBadge /> : undefined}
+          />
+          {isPro ? (
+            dashboardData ? (
+              <SmartMetrics data={dashboardData} />
+            ) : (
+              <div className="bg-sp-surface border border-sp-border rounded-2xl px-5 py-6 text-center">
+                <p className="text-sp-muted text-sm">
+                  Complete a session to unlock smart metrics.
+                </p>
+              </div>
+            )
+          ) : (
+            <LockedSection
+              label="Smart Metrics"
+              sublabel="Consistency score, goal progress & recovery status"
+              onUnlock={() => openUpgrade("analytics")}
+            />
+          )}
+        </section>
+
+        {/* ── 4. Strength Progress — PRO ── */}
+        <section>
+          <SectionHeader
+            title="Strength Progress"
+            right={!isPro ? <ProBadge /> : undefined}
+          />
+          {isPro ? (
+            <StrengthTrendsCard trends={dashboardData?.strengthTrends ?? []} />
+          ) : (
+            <LockedSection
+              label="Strength Progress"
+              sublabel="Track your strength gains per exercise over time"
+              onUnlock={() => openUpgrade("analytics")}
+            />
+          )}
+        </section>
+
+        {/* ── 5. Weekly Training Volume — PRO ── */}
+        <section>
+          <SectionHeader
+            title="Weekly Volume"
+            right={!isPro ? <ProBadge /> : undefined}
+          />
+          {isPro ? (
+            <VolumeByMuscleCard data={dashboardData?.volumeByMuscle ?? []} />
+          ) : (
+            <LockedSection
+              label="Weekly Training Volume"
+              sublabel="See volume changes per muscle group week over week"
+              onUnlock={() => openUpgrade("analytics")}
+            />
+          )}
+        </section>
+
+        {/* ── 6. Personal Records — always visible ── */}
+        <section>
+          <SectionHeader
+            title="Personal Records"
+            right={
+              <span className="text-[11px] text-sp-muted2">
+                {personalRecords.length} exercise
+                {personalRecords.length !== 1 ? "s" : ""}
+              </span>
+            }
+          />
           {personalRecords.length === 0 ? (
             <div className="bg-sp-surface border border-sp-border rounded-2xl px-5 py-6 text-center">
               <p className="text-sp-muted text-sm">
@@ -604,12 +967,13 @@ export default function ProgressView({
           )}
         </section>
 
-        {/* Monthly Comparison —  PRO = all unlocked. */}
+        {/* ── 7. This Month vs Last — PRO ── */}
         <section>
-          <h2 className="font-barlow font-bold text-xl tracking-wide mb-3">
-            This Month vs Last
-          </h2>
-          {hasAnalyticsAccess ? (
+          <SectionHeader
+            title="This Month vs Last"
+            right={!isPro ? <ProBadge /> : undefined}
+          />
+          {isPro ? (
             <MonthCompareChart
               thisMonth={thisMonth}
               lastMonth={lastMonth}
@@ -625,17 +989,21 @@ export default function ProgressView({
           )}
         </section>
 
-        {/* ── Body Split — PRO only ── Per spec: same as monthly comparison */}
+        {/* ── 8. Body Split — PRO ── */}
         <section>
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="font-barlow font-bold text-xl tracking-wide">
-              Body Split
-            </h2>
-            <span className="text-[11px] text-sp-muted2 capitalize">
-              {new Date().toLocaleString("default", { month: "long" })}
-            </span>
-          </div>
-          {hasAnalyticsAccess ? (
+          <SectionHeader
+            title="Body Split"
+            right={
+              isPro ? (
+                <span className="text-[11px] text-sp-muted2 capitalize">
+                  {new Date().toLocaleString("default", { month: "long" })}
+                </span>
+              ) : (
+                <ProBadge />
+              )
+            }
+          />
+          {isPro ? (
             <div className="bg-sp-surface border border-sp-border rounded-2xl p-5 space-y-4">
               {bodySplit.map(({ group, percent }) => (
                 <div key={group} className="space-y-1.5">
@@ -668,24 +1036,21 @@ export default function ProgressView({
           )}
         </section>
 
-        {/*  Session History ──
-             FREE / Trial / EQUIPMENT: last 3 sessions + locked gate row
-             PRO: full history with load-more                              */}
+        {/* ── 9. Session History ── */}
         <section>
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="font-barlow font-bold text-xl tracking-wide">
-              Session History
-            </h2>
-            {isLimitedView && sessionHistory.length > 3 && (
-              <button
-                onClick={() => openUpgrade("volume_history")}
-                className="text-[11px] font-barlow font-bold text-sp-accent uppercase tracking-wider"
-              >
-                See all →
-              </button>
-            )}
-          </div>
-
+          <SectionHeader
+            title="Session History"
+            right={
+              isLimitedView && sessionHistory.length > 3 ? (
+                <button
+                  onClick={() => openUpgrade("volume_history")}
+                  className="text-[11px] font-barlow font-bold text-sp-accent uppercase tracking-wider"
+                >
+                  See all →
+                </button>
+              ) : undefined
+            }
+          />
           <div className="space-y-2.5">
             {sessionHistory.length === 0 ? (
               <div className="bg-sp-surface border border-sp-border rounded-2xl px-5 py-6 text-center">
@@ -728,7 +1093,6 @@ export default function ProgressView({
                   </button>
                 ))}
 
-                {/* Non-PRO: locked history gate */}
                 {isLimitedView && sessionHistory.length > 3 && (
                   <button
                     onClick={() => openUpgrade("volume_history")}
@@ -754,10 +1118,9 @@ export default function ProgressView({
                   </button>
                 )}
 
-                {/* PRO: load more */}
                 {hasFullHistory && sessionHistory.length > historyLimit && (
                   <button
-                    onClick={() => setHistoryLimit((l) => l + 10)}
+                    onClick={() => setHistoryLimit((l: number) => l + 10)}
                     className="w-full text-center text-[12px] font-barlow font-bold text-sp-accent uppercase tracking-wider py-3"
                   >
                     Load More ↓
@@ -769,16 +1132,12 @@ export default function ProgressView({
         </section>
       </div>
 
-      {/*  Floating upgrade banner — all non-PRO users ─
-           Per spec: "Show floating upgrade banner" for FREE.
-           We extend it to EQUIPMENT too since they're also limited. */}
       {isLimitedView && (
         <FloatingUpgradeBanner onUpgrade={() => openUpgrade("analytics")} />
       )}
 
       <Navbar />
 
-      {/*  Upgrade sheet */}
       <UpgradePrompt
         trigger={upgradeTrigger}
         open={upgradeOpen}

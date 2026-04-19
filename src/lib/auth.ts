@@ -77,9 +77,9 @@ export const authOptions: NextAuthOptions = {
 
   callbacks: {
     //  signIn
-    // Runs BEFORE jwt(). We upsert the Google user here and stamp the
-    // isNewUser / onboardingComplete flags directly onto the `user` object
-    // so jwt() can read them without a second DB round-trip.
+    // Runs before jwt(). Upserts the Google user and stamps the flags
+    // directly onto the user object so jwt() doesn't need a second
+    // DB round-trip on first sign-in.
     async signIn({ user, account }) {
       if (account?.provider === "google") {
         const existing = await prisma.user.findUnique({
@@ -110,11 +110,10 @@ export const authOptions: NextAuthOptions = {
           },
         });
 
-        // Stamp everything onto user so jwt() doesn't need to re-query
         const ext = user as ExtendedUser;
         ext.id = dbUser.id;
         ext.role = dbUser.role;
-        // isNewUser: true only if this is a brand-new account
+        // isNewUser is true only for brand-new accounts
         ext.isNewUser = !existing;
         ext.onboardingComplete = existing
           ? (existing.onboardingComplete ?? false)
@@ -123,11 +122,13 @@ export const authOptions: NextAuthOptions = {
       return true;
     },
 
-    //  jwt
+    // ── jwt ─────────────────────────────────────────────────────────
     async jwt({ token, user, account, trigger, session }) {
       const extToken = token as ExtendedJWT;
 
-      //  First sign-in .
+      // A. First sign-in — user object is present; copy flags onto token.
+      //    This is the ONLY time we touch the DB (via signIn() above).
+      //    All subsequent requests carry the flags on the token itself.
       if (account && user) {
         const extUser = user as ExtendedUser;
         extToken.id = extUser.id ?? token.sub ?? "";
@@ -136,17 +137,10 @@ export const authOptions: NextAuthOptions = {
         extToken.onboardingComplete = extUser.onboardingComplete ?? false;
       }
 
-      // B. Subsequent requests (no account)
-      if (!account && extToken.id) {
-        const dbUser = await prisma.user.findUnique({
-          where: { id: extToken.id },
-          select: { isNewUser: true, onboardingComplete: true },
-        });
-        extToken.isNewUser = dbUser?.isNewUser ?? false;
-        extToken.onboardingComplete = dbUser?.onboardingComplete ?? false;
-      }
-
-      // C. Session update
+      // B. Session update — fired when the client calls useSession().update().
+      //    The onboarding page calls this after the API route succeeds so
+      //    middleware sees onboardingComplete: true on the next request
+      //    without waiting for a full sign-in cycle.
       if (trigger === "update" && session) {
         if (session.name) extToken.name = session.name;
         if (session.image) extToken.picture = session.image;
@@ -160,6 +154,8 @@ export const authOptions: NextAuthOptions = {
     },
 
     //  session
+    // Exposes the token flags on the client-side session object so
+    // components and server pages can read them via getServerSession().
     async session({ session, token }) {
       const extToken = token as ExtendedJWT;
       if (extToken && session.user) {

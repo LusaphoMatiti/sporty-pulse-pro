@@ -1,98 +1,115 @@
-import { NextResponse } from "next/server";
+// src/app/api/onboarding/complete/route.ts
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import {
-  Plan,
-  EquipmentSource,
-  UserLevel,
-  MuscleGroup,
-} from "@/generated/prisma";
-import { resolveProgram } from "@/lib/resolver";
+import { NextResponse } from "next/server";
+
+const VALID_PRIMARY_GOALS = ["LOSE_WEIGHT", "BUILD_MUSCLE", "GET_FIT"] as const;
+const VALID_TRAINING_LOCATIONS = ["HOME", "GYM"] as const;
+const VALID_BIOLOGICAL_SEXES = ["MALE", "FEMALE", "NOT_SPECIFIED"] as const;
+const VALID_EXPERIENCE_LEVELS = [
+  "BEGINNER",
+  "INTERMEDIATE",
+  "ADVANCED",
+] as const;
+
+type PrimaryGoal = (typeof VALID_PRIMARY_GOALS)[number];
+type TrainingLocation = (typeof VALID_TRAINING_LOCATIONS)[number];
+type BiologicalSex = (typeof VALID_BIOLOGICAL_SEXES)[number];
+type ExperienceLevel = (typeof VALID_EXPERIENCE_LEVELS)[number];
 
 export async function POST(req: Request) {
+  // Auth check
   const session = await getServerSession(authOptions);
-  if (!session)
+  if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-
-  const { equipmentId, source, level, muscleGroup } = await req.json();
-
-  const plan = source === "bodyweight" ? Plan.FREE : Plan.EQUIPMENT;
-  const eqSource =
-    source === "purchased"
-      ? EquipmentSource.PURCHASED
-      : source === "declared"
-        ? EquipmentSource.DECLARED
-        : EquipmentSource.BODYWEIGHT;
-
-  // ── 1. Resolve muscleGroup enum ──────────────────────────────
-  const muscleGroupEnum: Record<string, MuscleGroup> = {
-    fullbody: MuscleGroup.FULLBODY,
-    upper: MuscleGroup.UPPER,
-    lower: MuscleGroup.LOWER,
-    core: MuscleGroup.CORE,
-  };
-  const muscleGroupValue = muscleGroupEnum[muscleGroup] ?? MuscleGroup.FULLBODY;
-
-  // ── 2. Look up plan by equipmentId + muscleGroup ─────────────
-  const workoutPlan = await prisma.workoutPlan.findFirst({
-    where: {
-      equipmentId: equipmentId ?? null,
-      muscleGroup: muscleGroupValue,
-    },
-    select: { id: true },
-  });
-
-  if (!workoutPlan) {
-    console.error(
-      `[ONBOARD] Plan not found for equipmentId="${equipmentId}" muscleGroup="${muscleGroupValue}"`,
-    );
-    return NextResponse.json({ error: "Plan not found" }, { status: 404 });
   }
 
-  // ── 3. Save subscription + equipment + mark onboarding done ──
-  await prisma.$transaction([
-    prisma.subscription.upsert({
-      where: { userId: session.user.id },
-      update: { plan, status: "active" },
-      create: { userId: session.user.id, plan, status: "active", source },
-    }),
-    ...(equipmentId
-      ? [
-          prisma.userEquipment.create({
-            data: {
-              userId: session.user.id,
-              equipmentId,
-              source: eqSource,
-              trialExpiresAt:
-                eqSource === EquipmentSource.DECLARED
-                  ? new Date(Date.now() + 14 * 24 * 60 * 60 * 1000)
-                  : null,
-            },
-          }),
-        ]
-      : []),
-    prisma.user.update({
-      where: { id: session.user.id },
-      data: { onboardingComplete: true },
-    }),
-  ]);
+  // Already onboarded — idempotent
+  if (session.user.onboardingComplete) {
+    return NextResponse.json({ ok: true, already: true });
+  }
 
-  // ── 4. Create the plan instance ───────────────────────────────
-  const userLevel = (level ?? "BEGINNER") as UserLevel;
+  // Parse body
+  let body: {
+    primaryGoal?: string;
+    trainingLocation?: string;
+    biologicalSex?: string;
+    experienceLevel?: string;
+  };
 
   try {
-    await resolveProgram({
-      userId: session.user.id,
-      planId: workoutPlan.id,
-      level: userLevel,
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
+  }
+
+  const { primaryGoal, trainingLocation, biologicalSex, experienceLevel } =
+    body;
+
+  // Validate
+  if (
+    !primaryGoal ||
+    !(VALID_PRIMARY_GOALS as readonly string[]).includes(primaryGoal)
+  ) {
+    return NextResponse.json(
+      {
+        error: `Invalid primaryGoal. Must be one of: ${VALID_PRIMARY_GOALS.join(", ")}`,
+      },
+      { status: 400 },
+    );
+  }
+  if (
+    !trainingLocation ||
+    !(VALID_TRAINING_LOCATIONS as readonly string[]).includes(trainingLocation)
+  ) {
+    return NextResponse.json(
+      {
+        error: `Invalid trainingLocation. Must be one of: ${VALID_TRAINING_LOCATIONS.join(", ")}`,
+      },
+      { status: 400 },
+    );
+  }
+  if (
+    !biologicalSex ||
+    !(VALID_BIOLOGICAL_SEXES as readonly string[]).includes(biologicalSex)
+  ) {
+    return NextResponse.json(
+      {
+        error: `Invalid biologicalSex. Must be one of: ${VALID_BIOLOGICAL_SEXES.join(", ")}`,
+      },
+      { status: 400 },
+    );
+  }
+  if (
+    !experienceLevel ||
+    !(VALID_EXPERIENCE_LEVELS as readonly string[]).includes(experienceLevel)
+  ) {
+    return NextResponse.json(
+      {
+        error: `Invalid experienceLevel. Must be one of: ${VALID_EXPERIENCE_LEVELS.join(", ")}`,
+      },
+      { status: 400 },
+    );
+  }
+
+  // Single DB write
+  try {
+    await prisma.user.update({
+      where: { id: session.user.id },
+      data: {
+        primaryGoal: primaryGoal as PrimaryGoal,
+        trainingLocation: trainingLocation as TrainingLocation,
+        biologicalSex: biologicalSex as BiologicalSex,
+        experienceLevel: experienceLevel as ExperienceLevel,
+        onboardingComplete: true,
+        onboardingCompletedAt: new Date(),
+        isNewUser: false,
+      },
     });
   } catch (err) {
-    console.error("[ONBOARD] resolveProgram failed:", err);
-    return NextResponse.json(
-      { error: "Failed to create program" },
-      { status: 500 },
-    );
+    console.error("[onboarding/complete] DB error:", err);
+    return NextResponse.json({ error: "Database error" }, { status: 500 });
   }
 
   return NextResponse.json({ ok: true });

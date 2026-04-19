@@ -19,6 +19,23 @@ enum Role {
   ADMIN
 }
 
+enum PrimaryGoal {
+  LOSE_WEIGHT
+  BUILD_MUSCLE
+  GET_FIT
+}
+
+enum TrainingLocation {
+  HOME
+  GYM
+}
+
+enum BiologicalSex {
+  MALE
+  FEMALE
+  NOT_SPECIFIED
+}
+
 enum Plan {
   FREE
   EQUIPMENT
@@ -73,6 +90,11 @@ model User {
   createdAt          DateTime  @default(now())
   updatedAt          DateTime  @updatedAt
   isNewUser         Boolean   @default(true)
+  primaryGoal   PrimaryGoal?
+  trainingLocation TrainingLocation?
+  biologicalSex BiologicalSex?
+  experienceLevel UserLevel?
+  onboardingCompletedAt DateTime?
 
   accounts      Account[]
   sessions      NextAuthSession[]
