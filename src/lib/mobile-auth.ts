@@ -4,14 +4,12 @@ import { authOptions } from "@/lib/auth";
 
 export async function getMobileOrWebSession(req: Request) {
   const auth = req.headers.get("authorization");
-  console.log("[mobile-auth] Authorization header:", auth?.slice(0, 30));
 
   if (auth?.startsWith("Bearer ")) {
     const token = auth.slice(7);
     try {
       const secret = new TextEncoder().encode(process.env.NEXTAUTH_SECRET!);
       const { payload } = await jwtVerify(token, secret);
-      console.log("[mobile-auth] payload.sub:", payload.sub);
       if (!payload.sub) return null;
       return {
         user: {
