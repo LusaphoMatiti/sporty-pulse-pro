@@ -1,8 +1,8 @@
 // src/app/api/onboarding/complete/route.ts
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+import { getSessionFromRequest } from "@/lib/getSession";
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
 const VALID_PRIMARY_GOALS = ["LOSE_WEIGHT", "BUILD_MUSCLE", "GET_FIT"] as const;
 const VALID_TRAINING_LOCATIONS = ["HOME", "GYM"] as const;
@@ -18,9 +18,9 @@ type TrainingLocation = (typeof VALID_TRAINING_LOCATIONS)[number];
 type BiologicalSex = (typeof VALID_BIOLOGICAL_SEXES)[number];
 type ExperienceLevel = (typeof VALID_EXPERIENCE_LEVELS)[number];
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   // Auth check
-  const session = await getServerSession(authOptions);
+  const session = await getSessionFromRequest(req);
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }

@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "res.cloudinary.com",
       },
-      // Keep any existing ones e.g. Google avatars:
       {
         protocol: "https",
         hostname: "lh3.googleusercontent.com",
