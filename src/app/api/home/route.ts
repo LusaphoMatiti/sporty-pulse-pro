@@ -21,6 +21,7 @@ import { prisma } from "@/lib/prisma";
 
 export async function GET(req: Request) {
   const session = await getMobileOrWebSession(req);
+  console.log("[api/home] session:", JSON.stringify(session));
   if (!session) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
