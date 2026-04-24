@@ -10,14 +10,14 @@
  */
 
 import { NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+import type { NextRequest } from "next/server";
+import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
 import { InstanceStatus } from "@/generated/prisma";
 import type { SessionDraft } from "@/app/api/session/draft/route";
 
-export async function GET() {
-  const session = await getServerSession(authOptions);
+export async function GET(req: NextRequest) {
+  const session = await getMobileOrWebSession(req);
   if (!session)
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
