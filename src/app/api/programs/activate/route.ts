@@ -1,15 +1,15 @@
+// src/app/api/programs/activate/route.ts
 import { NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { resolveProgram } from "@/lib/resolver";
 import { UserLevel } from "@/generated/prisma";
 
 export async function POST(req: Request) {
-  const session = await getServerSession(authOptions);
-
-  if (!session) {
+  const session = await getMobileOrWebSession(req);
+  if (!session)
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
+
+  const userId = session.user.id;
 
   const { planId, level } = await req.json();
 
@@ -26,7 +26,7 @@ export async function POST(req: Request) {
 
   try {
     const instance = await resolveProgram({
-      userId: session.user.id,
+      userId,
       planId,
       level: level as UserLevel,
     });
