@@ -7,6 +7,7 @@ import cloudinary from "@/lib/cloudinary";
 
 export async function GET(req: Request) {
   const session = await getMobileOrWebSession(req);
+  console.log("[profile] session:", JSON.stringify(session));
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
@@ -14,6 +15,8 @@ export async function GET(req: Request) {
     where: { id: session.user.id },
     select: { id: true, name: true, email: true, image: true, role: true },
   });
+
+  console.log("[profile] user from DB:", JSON.stringify(user));
   return NextResponse.json(user);
 }
 
