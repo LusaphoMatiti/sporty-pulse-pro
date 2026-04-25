@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
 import { InstanceStatus } from "@/generated/prisma";
 
@@ -20,7 +19,7 @@ type Body = {
 };
 
 export async function POST(req: Request) {
-  const auth = await getServerSession(authOptions);
+  const auth = await getMobileOrWebSession(req);
   if (!auth)
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
