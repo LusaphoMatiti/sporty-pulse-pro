@@ -110,6 +110,13 @@ export const authOptions: NextAuthOptions = {
           },
         });
 
+        // Ensure every Google user always has a subscription row
+        await prisma.subscription.upsert({
+          where: { userId: dbUser.id },
+          update: {},
+          create: { userId: dbUser.id, plan: "FREE", status: "active" },
+        });
+
         const ext = user as ExtendedUser;
         ext.id = dbUser.id;
         ext.role = dbUser.role;
