@@ -175,10 +175,13 @@ export const authOptions: NextAuthOptions = {
     },
 
     async redirect({ url, baseUrl }) {
-      if (url.startsWith(`${baseUrl}/api/auth/mobile-callback`)) {
-        return url;
-      }
+      // Allow the mobile deep-link scheme to pass through unmodified
+      if (url.startsWith("sporty-pulse-pro://")) return url;
 
+      // Allow the mobile-callback route
+      if (url.startsWith(`${baseUrl}/api/auth/mobile-callback`)) return url;
+
+      // Standard web redirects
       if (url.startsWith("/")) return `${baseUrl}${url}`;
       if (new URL(url).origin === baseUrl) return url;
 
