@@ -1,16 +1,29 @@
+// src/app/api/auth/mobile-callback/route.ts
+//
+// After Google OAuth completes, NextAuth redirects here (because
+// mobile-initiate set this as the callbackUrl).
+// We mint a short-lived JWT and fire a deep-link back to the app.
+
 import type { NextRequest } from "next/server";
 import { getToken } from "next-auth/jwt";
 import { SignJWT } from "jose";
+import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
 export async function GET(req: NextRequest) {
+  // If the mobile cookie isn't present this isn't a mobile OAuth flow —
+  // redirect web users to the app home instead.
+  const isMobile = req.cookies.get("sp_mobile_auth")?.value === "1";
+  if (!isMobile) {
+    return NextResponse.redirect(new URL("/", process.env.NEXTAUTH_URL!));
+  }
+
   const nextAuthToken = await getToken({
     req,
     secret: process.env.NEXTAUTH_SECRET!,
   });
 
   if (!nextAuthToken?.sub) {
-    // Client-side redirect so the WebView fires the deep link
     return htmlRedirect("sporty-pulse-pro://auth?error=no_session");
   }
 
@@ -31,8 +44,7 @@ export async function GET(req: NextRequest) {
     return htmlRedirect("sporty-pulse-pro://auth?error=no_user");
   }
 
-  // Clear isNewUser once onboarding is done so returning users
-  // are never routed to the welcome/onboarding flow again.
+  // Clear isNewUser once onboarding is done
   if (user.isNewUser && user.onboardingComplete) {
     await prisma.user.update({
       where: { id: user.id },
@@ -56,15 +68,17 @@ export async function GET(req: NextRequest) {
     .setExpirationTime("30d")
     .sign(secret);
 
-  return htmlRedirect(
-    `sporty-pulse-pro://auth?token=${token}&isNew=${user.isNewUser}`,
+  // Clear the mobile cookie
+  const deepLink = `sporty-pulse-pro://auth?token=${token}&isNew=${user.isNewUser}`;
+  const res = htmlRedirect(deepLink);
+  res.headers.append(
+    "Set-Cookie",
+    "sp_mobile_auth=; Max-Age=0; Path=/; HttpOnly",
   );
+  return res;
 }
 
 // ── Helper ────────────────────────────────────────────────────────────────────
-// Returns an HTML page that immediately redirects to a custom-scheme URL.
-// Browsers allow JS-initiated custom-scheme navigation; HTTP 30x redirects
-// to custom schemes are blocked by most WebViews for security reasons.
 function htmlRedirect(deepLink: string) {
   const html = `<!DOCTYPE html>
 <html>

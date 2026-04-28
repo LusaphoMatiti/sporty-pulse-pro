@@ -76,10 +76,6 @@ export const authOptions: NextAuthOptions = {
   ],
 
   callbacks: {
-    //  signIn
-    // Runs before jwt(). Upserts the Google user and stamps the flags
-    // directly onto the user object so jwt() doesn't need a second
-    // DB round-trip on first sign-in.
     async signIn({ user, account }) {
       if (account?.provider === "google") {
         const existing = await prisma.user.findUnique({
@@ -110,7 +106,6 @@ export const authOptions: NextAuthOptions = {
           },
         });
 
-        // Ensure every Google user always has a subscription row
         await prisma.subscription.upsert({
           where: { userId: dbUser.id },
           update: {},
@@ -120,7 +115,6 @@ export const authOptions: NextAuthOptions = {
         const ext = user as ExtendedUser;
         ext.id = dbUser.id;
         ext.role = dbUser.role;
-        // isNewUser is true only for brand-new accounts
         ext.isNewUser = !existing;
         ext.onboardingComplete = existing
           ? (existing.onboardingComplete ?? false)
@@ -129,13 +123,9 @@ export const authOptions: NextAuthOptions = {
       return true;
     },
 
-    // ── jwt ─────────────────────────────────────────────────────────
     async jwt({ token, user, account, trigger, session }) {
       const extToken = token as ExtendedJWT;
 
-      // A. First sign-in — user object is present; copy flags onto token.
-      //    This is the ONLY time we touch the DB (via signIn() above).
-      //    All subsequent requests carry the flags on the token itself.
       if (account && user) {
         const extUser = user as ExtendedUser;
         extToken.id = extUser.id ?? token.sub ?? "";
@@ -144,10 +134,6 @@ export const authOptions: NextAuthOptions = {
         extToken.onboardingComplete = extUser.onboardingComplete ?? false;
       }
 
-      // B. Session update — fired when the client calls useSession().update().
-      //    The onboarding page calls this after the API route succeeds so
-      //    middleware sees onboardingComplete: true on the next request
-      //    without waiting for a full sign-in cycle.
       if (trigger === "update" && session) {
         if (session.name) extToken.name = session.name;
         if (session.image) extToken.picture = session.image;
@@ -160,9 +146,6 @@ export const authOptions: NextAuthOptions = {
       return extToken;
     },
 
-    //  session
-    // Exposes the token flags on the client-side session object so
-    // components and server pages can read them via getServerSession().
     async session({ session, token }) {
       const extToken = token as ExtendedJWT;
       if (extToken && session.user) {
@@ -175,21 +158,15 @@ export const authOptions: NextAuthOptions = {
     },
 
     async redirect({ url, baseUrl }) {
-      // Allow the mobile deep-link scheme to pass through unmodified
+      // 1. Always allow deep-link scheme through (final step back to app)
       if (url.startsWith("sporty-pulse-pro://")) return url;
 
-      // Allow the mobile-callback route
+      // 2. Always allow mobile-callback through
       if (url.startsWith(`${baseUrl}/api/auth/mobile-callback`)) return url;
 
-      if (
-        url === baseUrl ||
-        url === `${baseUrl}/` ||
-        url === `${baseUrl}/login`
-      ) {
-        return `${baseUrl}/api/auth/mobile-callback`;
-      }
-
-      // Standard web redirects
+      // 3. Standard web redirects — do NOT fall through to mobile-callback
+      //    for web users. The mobile flow is handled by the cookie in
+      //    the /api/auth/mobile-initiate route, not here.
       if (url.startsWith("/")) return `${baseUrl}${url}`;
       if (new URL(url).origin === baseUrl) return url;
 
