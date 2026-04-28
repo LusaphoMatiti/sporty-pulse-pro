@@ -1,34 +1,49 @@
 // src/app/api/auth/mobile-initiate/route.ts
 //
-// Called by the Expo app instead of /api/auth/signin/google.
-// Sets a cookie so mobile-callback knows to mint a JWT,
-// then redirects straight to Google — bypassing the web /login page.
+// Called by the Expo app to start Google OAuth without touching the web login page.
+// NextAuth's /api/auth/signin/google only skips the custom signIn page when
+// called as a POST — a GET always bounces through pages.signIn first.
+//
+// This route returns an HTML page that fetches the CSRF token then
+// auto-submits a POST directly to NextAuth's Google provider endpoint,
+// going straight to Google without ever hitting /login.
 
-import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export async function GET(req: NextRequest) {
   const baseUrl = process.env.NEXTAUTH_URL!;
-
-  // The callbackUrl tells NextAuth where to send the user after Google
-  // completes. Because it's the same origin, NextAuth accepts it.
   const callbackUrl = `${baseUrl}/api/auth/mobile-callback`;
+  const secure = process.env.NODE_ENV === "production" ? "; secure" : "";
 
-  // Build the NextAuth Google signin URL directly — this skips the
-  // custom signIn page (/login) and goes straight to Google's OAuth screen.
-  const googleSignInUrl = `${baseUrl}/api/auth/signin/google?callbackUrl=${encodeURIComponent(callbackUrl)}`;
+  const html = `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Connecting to Google…</title>
+  </head>
+  <body>
+    <form id="f" method="POST" action="${baseUrl}/api/auth/signin/google">
+      <input type="hidden" name="callbackUrl" value="${callbackUrl}" />
+      <input type="hidden" name="csrfToken" id="csrf" />
+    </form>
+    <script>
+      fetch('${baseUrl}/api/auth/csrf')
+        .then(r => r.json())
+        .then(data => {
+          document.cookie = 'sp_mobile_auth=1; path=/; max-age=600; samesite=lax${secure}';
+          document.getElementById('csrf').value = data.csrfToken;
+          document.getElementById('f').submit();
+        })
+        .catch(() => {
+          window.location.href = '${baseUrl}/login';
+        });
+    </script>
+    <p>Connecting to Google…</p>
+  </body>
+</html>`;
 
-  const response = NextResponse.redirect(googleSignInUrl);
-
-  // Set a short-lived cookie so mobile-callback knows this is a mobile
-  // OAuth flow and should mint a JWT + redirect to the deep link.
-  response.cookies.set("sp_mobile_auth", "1", {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    maxAge: 60 * 10, // 10 minutes — plenty for OAuth round-trip
-    path: "/",
+  return new Response(html, {
+    status: 200,
+    headers: { "Content-Type": "text/html" },
   });
-
-  return response;
 }
