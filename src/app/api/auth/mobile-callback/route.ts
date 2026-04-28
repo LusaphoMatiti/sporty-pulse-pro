@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
   });
 
   if (!nextAuthToken?.sub) {
-    return NextResponse.redirect("sportypulse://auth?error=no_session");
+    return NextResponse.redirect("sporty-pulse-pro://auth?error=no_session");
   }
 
   // Fetch fresh user data
@@ -30,10 +30,9 @@ export async function GET(req: NextRequest) {
   });
 
   if (!user) {
-    return NextResponse.redirect("sportypulse://auth?error=no_user");
+    return NextResponse.redirect("sporty-pulse-pro://auth?error=no_user");
   }
 
-  // Sign with jose HS256 — same as mobile-signin, verified by mobile-auth
   const secret = new TextEncoder().encode(process.env.NEXTAUTH_SECRET!);
   const token = await new SignJWT({
     sub: user.id,
@@ -49,5 +48,7 @@ export async function GET(req: NextRequest) {
     .setExpirationTime("30d")
     .sign(secret);
 
-  return NextResponse.redirect(`sportypulse://auth?token=${token}`);
+  return NextResponse.redirect(
+    `sporty-pulse-pro://auth?token=${token}&isNew=${user.isNewUser}`,
+  );
 }
