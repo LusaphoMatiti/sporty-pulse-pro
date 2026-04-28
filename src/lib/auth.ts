@@ -181,6 +181,14 @@ export const authOptions: NextAuthOptions = {
       // Allow the mobile-callback route
       if (url.startsWith(`${baseUrl}/api/auth/mobile-callback`)) return url;
 
+      if (
+        url === baseUrl ||
+        url === `${baseUrl}/` ||
+        url === `${baseUrl}/login`
+      ) {
+        return `${baseUrl}/api/auth/mobile-callback`;
+      }
+
       // Standard web redirects
       if (url.startsWith("/")) return `${baseUrl}${url}`;
       if (new URL(url).origin === baseUrl) return url;
