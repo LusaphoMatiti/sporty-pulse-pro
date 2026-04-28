@@ -1,23 +1,14 @@
 // src/app/api/auth/mobile-callback/route.ts
 //
-// After Google OAuth completes, NextAuth redirects here (because
-// mobile-initiate set this as the callbackUrl).
-// We mint a short-lived JWT and fire a deep-link back to the app.
+// After Google OAuth completes, NextAuth redirects here.
+// Mints a short-lived JWT and fires a deep-link back to the Expo app.
 
 import type { NextRequest } from "next/server";
 import { getToken } from "next-auth/jwt";
 import { SignJWT } from "jose";
-import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
 export async function GET(req: NextRequest) {
-  // If the mobile cookie isn't present this isn't a mobile OAuth flow —
-  // redirect web users to the app home instead.
-  const isMobile = req.cookies.get("sp_mobile_auth")?.value === "1";
-  if (!isMobile) {
-    return NextResponse.redirect(new URL("/", process.env.NEXTAUTH_URL!));
-  }
-
   const nextAuthToken = await getToken({
     req,
     secret: process.env.NEXTAUTH_SECRET!,
@@ -44,7 +35,8 @@ export async function GET(req: NextRequest) {
     return htmlRedirect("sporty-pulse-pro://auth?error=no_user");
   }
 
-  // Clear isNewUser once onboarding is done
+  // Clear isNewUser once onboarding is done so returning users
+  // are never routed to the welcome/onboarding flow again.
   if (user.isNewUser && user.onboardingComplete) {
     await prisma.user.update({
       where: { id: user.id },
@@ -68,24 +60,24 @@ export async function GET(req: NextRequest) {
     .setExpirationTime("30d")
     .sign(secret);
 
-  // Clear the mobile cookie
-  const deepLink = `sporty-pulse-pro://auth?token=${token}&isNew=${user.isNewUser}`;
-  const res = htmlRedirect(deepLink);
-  res.headers.append(
-    "Set-Cookie",
-    "sp_mobile_auth=; Max-Age=0; Path=/; HttpOnly",
+  return htmlRedirect(
+    `sporty-pulse-pro://auth?token=${token}&isNew=${user.isNewUser}`,
   );
-  return res;
 }
 
 // ── Helper ────────────────────────────────────────────────────────────────────
+// Returns an HTML page that immediately redirects to the deep-link URL.
+// openAuthSessionAsync intercepts any URL matching the redirectUrl prefix
+// ("sporty-pulse-pro://") and hands it back to the Expo app automatically.
 function htmlRedirect(deepLink: string) {
   const html = `<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Redirecting…</title>
-    <script>window.location.href = ${JSON.stringify(deepLink)};</script>
+    <script>
+      window.location.replace(${JSON.stringify(deepLink)});
+    </script>
   </head>
   <body>
     <p>Redirecting back to the app…</p>
@@ -95,6 +87,9 @@ function htmlRedirect(deepLink: string) {
 
   return new Response(html, {
     status: 200,
-    headers: { "Content-Type": "text/html" },
+    headers: {
+      "Content-Type": "text/html",
+      "Cache-Control": "no-store",
+    },
   });
 }
