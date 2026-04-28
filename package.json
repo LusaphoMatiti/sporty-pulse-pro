@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "set NODE_OPTIONS=--max-old-space-size=4096 && expo start",
     "lint": "eslint",
     "postinstall": "prisma generate",
     "reset:user": "npx tsx scripts/reset-user.ts"
