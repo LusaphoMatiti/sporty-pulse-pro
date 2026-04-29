@@ -1,18 +1,23 @@
-// src/app/api/auth/mobile-initiate/route.ts
 //
 // Called by the Expo app to start Google OAuth without touching the web login page.
-// NextAuth's /api/auth/signin/google only skips the custom signIn page when
-// called as a POST — a GET always bounces through pages.signIn first.
-//
-// This route returns an HTML page that fetches the CSRF token then
-// auto-submits a POST directly to NextAuth's Google provider endpoint,
-// going straight to Google without ever hitting /login.
+// Receives ?redirectUri=<app-deep-link> from the Expo app, encodes it into
+// the callbackUrl so mobile-callback knows where to send the final deep link.
 
 import type { NextRequest } from "next/server";
 
 export async function GET(req: NextRequest) {
   const baseUrl = process.env.NEXTAUTH_URL!;
-  const callbackUrl = `${baseUrl}/api/auth/mobile-callback`;
+
+  // The deep-link scheme the app is currently running under.
+  // In dev: exp+sporty-pulse-expo://expo-development-client/...
+  // In prod: sporty-pulse-pro://auth
+  const redirectUri =
+    req.nextUrl.searchParams.get("redirectUri") ?? "sporty-pulse-pro://auth";
+
+  // Encode redirectUri into the callbackUrl so mobile-callback receives it
+  // after the OAuth round-trip completes.
+  const callbackUrl = `${baseUrl}/api/auth/mobile-callback?redirectUri=${encodeURIComponent(redirectUri)}`;
+
   const secure = process.env.NODE_ENV === "production" ? "; secure" : "";
 
   const html = `<!DOCTYPE html>
@@ -30,7 +35,6 @@ export async function GET(req: NextRequest) {
       fetch('${baseUrl}/api/auth/csrf')
         .then(r => r.json())
         .then(data => {
-          document.cookie = 'sp_mobile_auth=1; path=/; max-age=600; samesite=lax${secure}';
           document.getElementById('csrf').value = data.csrfToken;
           document.getElementById('f').submit();
         })
