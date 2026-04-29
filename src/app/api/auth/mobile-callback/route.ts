@@ -52,6 +52,7 @@ export async function GET(req: NextRequest) {
 
   const secret = new TextEncoder().encode(process.env.NEXTAUTH_SECRET!);
   const token = await new SignJWT({
+    id: user.id,
     sub: user.id,
     email: user.email,
     name: user.name,
