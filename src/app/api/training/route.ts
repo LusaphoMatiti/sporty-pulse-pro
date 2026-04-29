@@ -29,7 +29,7 @@ export async function GET(req: NextRequest) {
     include: { plan: true },
   });
   if (!instance)
-    return NextResponse.json({ error: "No active plan" }, { status: 404 });
+    return NextResponse.json({ instanceId: null }, { status: 200 });
 
   // ── Planned session ───────────────────────────────────────────────
   const plannedSession = await prisma.plannedSession.findUnique({
