@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
 import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
 import cloudinary from "@/lib/cloudinary";
@@ -28,13 +26,6 @@ export async function PATCH(req: NextRequest) {
     }
     const userId = session.user.id;
     console.log("[profile] userId from session:", userId);
-
-    // Verify the user actually exists before attempting update
-    const existing = await prisma.user.findUnique({
-      where: { id: userId },
-      select: { id: true, email: true },
-    });
-    console.log("[profile] DB lookup result:", existing);
 
     const form = await req.formData();
     const name = form.get("name") as string | null;

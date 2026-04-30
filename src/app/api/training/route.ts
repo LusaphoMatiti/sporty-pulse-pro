@@ -1,14 +1,3 @@
-/**
- * GET /api/training
- *
- * Returns TrainingData for the Expo mobile app.
- * Add this file to your Next.js project at:
- *   src/app/api/training/route.ts
- *
- * Extracts the exact same data logic from src/app/training/page.tsx
- * and exposes it as a JSON endpoint.
- */
-
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { getMobileOrWebSession } from "@/lib/mobile-auth";
@@ -23,15 +12,61 @@ export async function GET(req: NextRequest) {
 
   const userId = session.user.id;
 
-  // ── Active plan instance ──────────────────────────────────────────
-  const instance = await prisma.planInstance.findFirst({
-    where: { userId, status: InstanceStatus.ACTIVE },
-    include: { plan: true },
-  });
+  // ── Parallel fetch 1: instance + subscription + equipment + programs ──
+  // All independent of each other — no reason to wait sequentially
+  const [instance, subscription, userEquipmentRecords, allPrograms] =
+    await Promise.all([
+      prisma.planInstance.findFirst({
+        where: { userId, status: InstanceStatus.ACTIVE },
+        select: {
+          id: true,
+          level: true,
+          planId: true,
+          currentSession: true,
+          sessionDraft: true,
+          plan: {
+            select: {
+              id: true,
+              name: true,
+              muscleGroup: true,
+            },
+          },
+        },
+      }),
+      prisma.subscription.findUnique({
+        where: { userId },
+        select: { plan: true, status: true },
+      }),
+      // Single query replacing 3 separate userEquipment queries
+      prisma.userEquipment.findMany({
+        where: { userId },
+        select: {
+          source: true,
+          equipmentId: true,
+          trialExpiresAt: true,
+        },
+      }),
+      prisma.workoutPlan.findMany({
+        orderBy: { name: "asc" },
+        select: {
+          id: true,
+          name: true,
+          description: true,
+          tier: true,
+          muscleGroup: true,
+          durationWeeks: true,
+          sessionsPerWeek: true,
+          equipmentId: true,
+          // Select only id+name instead of full equipment row
+          equipment: { select: { id: true, name: true } },
+        },
+      }),
+    ]);
+
   if (!instance)
     return NextResponse.json({ instanceId: null }, { status: 200 });
 
-  // ── Planned session ───────────────────────────────────────────────
+  // ── Planned session (depends on instance.planId) ──────────────────
   const plannedSession = await prisma.plannedSession.findUnique({
     where: {
       planId_sessionNumber: {
@@ -39,17 +74,75 @@ export async function GET(req: NextRequest) {
         sessionNumber: instance.currentSession,
       },
     },
-    include: {
+    select: {
+      focus: true,
       plannedExercises: {
         orderBy: { order: "asc" },
-        include: {
-          exercise: { include: { equipment: true } },
+        select: {
+          id: true,
+          order: true,
+          beginnerSets: true,
+          beginnerReps: true,
+          intermediateSets: true,
+          intermediateReps: true,
+          advancedSets: true,
+          advancedReps: true,
+          restSeconds: true,
+          exercise: {
+            select: {
+              id: true,
+              name: true,
+              musclesWorked: true,
+              equipment: { select: { id: true, name: true } },
+            },
+          },
         },
       },
     },
   });
+
   if (!plannedSession)
     return NextResponse.json({ error: "No planned session" }, { status: 404 });
+
+  // ── Derive everything from the single userEquipment fetch ─────────
+  const now = new Date();
+  const activePlan =
+    subscription?.status === "active" ? subscription.plan : null;
+
+  type TrainingTier = "FREE" | "DECLARED_TRIAL" | "PURCHASED" | "PRO";
+  let tier: TrainingTier = "FREE";
+  let trialExpiresAt: string | null = null;
+
+  if (activePlan === "PRO") {
+    tier = "PRO";
+  } else if (activePlan === "EQUIPMENT") {
+    tier = "PURCHASED";
+  } else {
+    const declared = userEquipmentRecords.find(
+      (r) =>
+        r.source === "DECLARED" &&
+        r.trialExpiresAt != null &&
+        r.trialExpiresAt > now,
+    );
+    if (declared?.trialExpiresAt) {
+      tier = "DECLARED_TRIAL";
+      trialExpiresAt = declared.trialExpiresAt.toISOString();
+    }
+  }
+
+  const boughtFromStore = userEquipmentRecords.some(
+    (r) => r.source === "PURCHASED",
+  );
+
+  const activeEquipmentIds = userEquipmentRecords
+    .filter(
+      (r) =>
+        r.source === "PURCHASED" ||
+        (r.source === "DECLARED" &&
+          r.trialExpiresAt != null &&
+          r.trialExpiresAt > now),
+    )
+    .map((r) => r.equipmentId);
 
   // ── Level-appropriate sets/reps ───────────────────────────────────
   const levelKey = instance.level;
@@ -72,62 +165,9 @@ export async function GET(req: NextRequest) {
     exercise: pe.exercise,
   }));
 
-  // ── Muscles ───────────────────────────────────────────────────────
   const muscles = [
     ...new Set(exercisesForView.flatMap((e) => e.exercise.musclesWorked)),
   ];
-
-  // ── Tier ──────────────────────────────────────────────────────────
-  const subscription = await prisma.subscription.findUnique({
-    where: { userId },
-    select: { plan: true, status: true },
-  });
-  const activePlan =
-    subscription?.status === "active" ? subscription.plan : null;
-
-  type TrainingTier = "FREE" | "DECLARED_TRIAL" | "PURCHASED" | "PRO";
-  let tier: TrainingTier = "FREE";
-  let trialExpiresAt: string | null = null;
-
-  if (activePlan === "PRO") {
-    tier = "PRO";
-  } else if (activePlan === "EQUIPMENT") {
-    tier = "PURCHASED";
-  } else {
-    const declared = await prisma.userEquipment.findFirst({
-      where: { userId, source: "DECLARED", trialExpiresAt: { gt: new Date() } },
-      select: { trialExpiresAt: true },
-    });
-    if (declared?.trialExpiresAt) {
-      tier = "DECLARED_TRIAL";
-      trialExpiresAt = declared.trialExpiresAt.toISOString();
-    }
-  }
-
-  // ── boughtFromStore ───────────────────────────────────────────────
-  const purchasedEquipment = await prisma.userEquipment.findFirst({
-    where: { userId, source: "PURCHASED" },
-    select: { id: true },
-  });
-
-  // ── Active equipment IDs ──────────────────────────────────────────
-  const activeEquipmentRecords = await prisma.userEquipment.findMany({
-    where: {
-      userId,
-      OR: [
-        { source: "PURCHASED" },
-        { source: "DECLARED", trialExpiresAt: { gt: new Date() } },
-      ],
-    },
-    select: { equipmentId: true },
-  });
-  const activeEquipmentIds = activeEquipmentRecords.map((r) => r.equipmentId);
-
-  // ── All programs ──────────────────────────────────────────────────
-  const allPrograms = await prisma.workoutPlan.findMany({
-    include: { equipment: true },
-    orderBy: { name: "asc" },
-  });
 
   return NextResponse.json({
     instanceId: instance.id,
@@ -141,21 +181,9 @@ export async function GET(req: NextRequest) {
     muscles,
     tier,
     trialExpiresAt,
-    boughtFromStore: purchasedEquipment != null,
+    boughtFromStore,
     draft: (instance.sessionDraft as SessionDraft) ?? null,
-    allPrograms: allPrograms.map((p) => ({
-      id: p.id,
-      name: p.name,
-      description: p.description,
-      tier: p.tier,
-      muscleGroup: p.muscleGroup,
-      durationWeeks: p.durationWeeks,
-      sessionsPerWeek: p.sessionsPerWeek,
-      equipmentId: p.equipmentId,
-      equipment: p.equipment
-        ? { id: p.equipment.id, name: p.equipment.name }
-        : null,
-    })),
+    allPrograms,
     activeEquipmentIds,
   });
 }

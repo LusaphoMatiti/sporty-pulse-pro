@@ -33,7 +33,7 @@ export async function POST(req: Request) {
       userId: auth.user.id,
       status: InstanceStatus.ACTIVE,
     },
-    include: { plan: true },
+    select: { id: true, planId: true },
   });
 
   if (!instance) {

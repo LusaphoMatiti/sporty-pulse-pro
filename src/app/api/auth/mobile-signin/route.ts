@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
     .setExpirationTime("30d")
     .sign(secret);
 
-  await prisma.user.update({
+  prisma.user.update({
     where: { id: user.id },
     data: { lastLoginAt: new Date() },
   });

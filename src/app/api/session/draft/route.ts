@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import { InstanceStatus } from "@/generated/prisma";
+import { Prisma, InstanceStatus } from "@/generated/prisma"; // ← add Prisma here
 
 export type SessionDraft = {
   sessionNumber: number;
@@ -29,21 +29,18 @@ export async function POST(req: Request) {
   const body: Body = await req.json();
   const { instanceId, draft } = body;
 
-  const instance = await prisma.planInstance.findFirst({
+  const result = await prisma.planInstance.updateMany({
     where: {
       id: instanceId,
       userId: auth.user.id,
       status: InstanceStatus.ACTIVE,
     },
+    data: { sessionDraft: draft ?? Prisma.JsonNull },
   });
 
-  if (!instance)
+  if (result.count === 0) {
     return NextResponse.json({ error: "Instance not found" }, { status: 404 });
-
-  await prisma.planInstance.update({
-    where: { id: instanceId },
-    data: { sessionDraft: draft ?? undefined },
-  });
+  }
 
   return NextResponse.json({ ok: true });
 }

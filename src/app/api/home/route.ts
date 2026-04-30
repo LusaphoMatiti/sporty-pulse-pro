@@ -1,27 +1,9 @@
-/**
- * GET /api/home
- *
- * Returns HomeData for the Expo mobile app.
- *
- * This is the ONLY new file needed in your Next.js project.
- * It extracts the data-fetching logic from src/app/page.tsx
- * and exposes it as a JSON API endpoint.
- *
- * Add this file to your Next.js project at:
- *   src/app/api/home/route.ts
- *
- * The Expo app calls: api.get<HomeData>('/api/home')
- */
-
 import { NextResponse } from "next/server";
-// import { getServerSession } from "next-auth";
-// import { authOptions } from "@/lib/auth";
 import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
 
 export async function GET(req: Request) {
   const session = await getMobileOrWebSession(req);
-  console.log("[api/home] session:", JSON.stringify(session));
   if (!session) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
@@ -29,35 +11,46 @@ export async function GET(req: Request) {
   const userId = session.user.id;
   const now = new Date();
 
-  // ── All workout logs ─────────────────────────────────────────────
-  const allLogs = await prisma.workoutLog.findMany({
-    where: { userId },
-    select: {
-      instanceId: true,
-      sessionNumber: true,
-      completedAt: true,
-      actualSets: true,
-      weightKg: true,
-      actualReps: true,
-    },
-    orderBy: { completedAt: "desc" },
-  });
+  // ── Parallel: logs + active instance ─────────────────────────────
+  const [allLogs, activeInstance] = await Promise.all([
+    prisma.workoutLog.findMany({
+      where: { userId },
+      select: {
+        instanceId: true,
+        sessionNumber: true,
+        completedAt: true,
+        actualSets: true,
+        weightKg: true,
+        actualReps: true,
+      },
+      orderBy: { completedAt: "desc" },
+    }),
+    prisma.planInstance.findFirst({
+      where: { userId, status: "ACTIVE" },
+      orderBy: { startedAt: "desc" },
+      select: {
+        id: true,
+        planId: true,
+        currentSession: true,
+        plan: {
+          select: {
+            name: true,
+            sessionsPerWeek: true,
+            durationWeeks: true,
+          },
+        },
+      },
+    }),
+  ]);
 
-  // ── Active instance ──────────────────────────────────────────────
-  const activeInstance = await prisma.planInstance.findFirst({
-    where: { userId, status: "ACTIVE" },
-    include: { plan: true },
-    orderBy: { startedAt: "desc" },
-  });
-
-  // ── Unique completed sessions ────────────────────────────────────
+  // ── Unique completed sessions ─────────────────────────────────────
   const uniqueSessions = new Map<string, Date>();
   for (const log of allLogs) {
     const key = `${log.instanceId}-${log.sessionNumber}`;
     if (!uniqueSessions.has(key)) uniqueSessions.set(key, log.completedAt);
   }
 
-  // ── Metrics ──────────────────────────────────────────────────────
+  // ── Metrics ───────────────────────────────────────────────────────
   const totalWorkouts = uniqueSessions.size;
   const totalSets = allLogs.reduce((sum, l) => sum + (l.actualSets ?? 0), 0);
   const totalMinutes = totalWorkouts * 55;
@@ -66,7 +59,7 @@ export async function GET(req: Request) {
       ? `${Math.round(totalMinutes / 60)}h`
       : `${totalMinutes}m`;
 
-  // ── Streak ───────────────────────────────────────────────────────
+  // ── Streak ────────────────────────────────────────────────────────
   const activeDaysSet = new Set<string>();
   for (const date of uniqueSessions.values()) {
     activeDaysSet.add(date.toISOString().slice(0, 10));
@@ -83,8 +76,7 @@ export async function GET(req: Request) {
       cursor.setDate(cursor.getDate() - 1);
     } else if (dayStr === todayStr) {
       cursor.setDate(cursor.getDate() - 1);
-      const yesterdayStr = cursor.toISOString().slice(0, 10);
-      if (!activeDaysSet.has(yesterdayStr)) break;
+      if (!activeDaysSet.has(cursor.toISOString().slice(0, 10))) break;
     } else {
       break;
     }
@@ -117,10 +109,9 @@ export async function GET(req: Request) {
   const weekDays = DAY_LABELS.map((label, i) => {
     const day = new Date(monday);
     day.setDate(monday.getDate() + i);
-    const dayStr = day.toISOString().slice(0, 10);
     return {
       day: label,
-      worked: activeDaysSet.has(dayStr),
+      worked: activeDaysSet.has(day.toISOString().slice(0, 10)),
       isFuture: day > now,
     };
   });
@@ -130,11 +121,9 @@ export async function GET(req: Request) {
   sunday.setDate(monday.getDate() + 6);
   sunday.setHours(23, 59, 59, 999);
 
-  const thisWeekSessionKeys = new Set<string>();
-  for (const [key, date] of uniqueSessions.entries()) {
-    if (date >= monday && date <= sunday) thisWeekSessionKeys.add(key);
-  }
-  const weekCompletedCount = thisWeekSessionKeys.size;
+  const weekCompletedCount = Array.from(uniqueSessions.entries()).filter(
+    ([, date]) => date >= monday && date <= sunday,
+  ).length;
   const weekTotalCount = activeInstance?.plan.sessionsPerWeek ?? 0;
 
   // ── Plan progress ─────────────────────────────────────────────────
@@ -149,25 +138,21 @@ export async function GET(req: Request) {
     const completedSessionsInPlan = Array.from(uniqueSessions.keys()).filter(
       (key) => key.startsWith(activeInstance.id),
     ).length;
-    const currentSessionNum = completedSessionsInPlan + 1;
     planWeek = Math.ceil(
-      currentSessionNum / activeInstance.plan.sessionsPerWeek,
+      (completedSessionsInPlan + 1) / activeInstance.plan.sessionsPerWeek,
     );
     sessionsLeft = Math.max(0, totalSessions - completedSessionsInPlan);
   }
 
-  // ── Week workout list ─────────────────────────────────────────────
+  // ── Week workout list (conditional — depends on activeInstance) ───
   let weekWorkouts: { name: string; progress: number }[] = [];
 
   if (activeInstance) {
-    const completedInPlan = Array.from(uniqueSessions.entries())
-      .filter(([key]) => key.startsWith(activeInstance.id))
-      .map(([key]) => parseInt(key.split("-")[1], 10));
-
-    const completedCount = completedInPlan.length;
+    const completedCount = Array.from(uniqueSessions.keys()).filter((key) =>
+      key.startsWith(activeInstance.id),
+    ).length;
     const spw = activeInstance.plan.sessionsPerWeek;
-    const weekIndex = Math.floor(completedCount / spw);
-    const weekStart = weekIndex * spw + 1;
+    const weekStart = Math.floor(completedCount / spw) * spw + 1;
     const weekEnd = weekStart + spw - 1;
 
     const plannedSessions = await prisma.plannedSession.findMany({
@@ -176,18 +161,22 @@ export async function GET(req: Request) {
         sessionNumber: { gte: weekStart, lte: weekEnd },
       },
       orderBy: { sessionNumber: "asc" },
+      // Only need focus — no need to pull full row
+      select: { sessionNumber: true, focus: true },
     });
 
     weekWorkouts = plannedSessions.map((ps) => {
       const sessionKey = `${activeInstance.id}-${ps.sessionNumber}`;
       const isCompleted = uniqueSessions.has(sessionKey);
-      const sessionLogs = allLogs.filter(
+      const hasPartial = allLogs.some(
         (l) =>
           l.instanceId === activeInstance.id &&
           l.sessionNumber === ps.sessionNumber,
       );
-      const progress = isCompleted ? 100 : sessionLogs.length > 0 ? 50 : 0;
-      return { name: ps.focus, progress };
+      return {
+        name: ps.focus,
+        progress: isCompleted ? 100 : hasPartial ? 50 : 0,
+      };
     });
   }
 

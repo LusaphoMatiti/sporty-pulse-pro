@@ -40,6 +40,12 @@ export async function POST(req: Request) {
         role: Role.ATHLETE,
         isNewUser: true,
         onboardingComplete: false,
+        subscription: {
+          create: {
+            plan: "FREE",
+            status: "active",
+          },
+        },
       },
     });
 

@@ -12,51 +12,62 @@ export async function GET(req: Request) {
 
   const userId = session.user.id;
 
-  // ── All plans ────────────────────────────────────────────────────
-  const plans = await prisma.workoutPlan.findMany({
-    include: { equipment: true },
-    orderBy: [{ tier: "asc" }, { name: "asc" }],
-  });
+  // ── Parallel fetch — 3 queries instead of 4, run concurrently ───
+  const [plans, allUserEquipment, activeInstance] = await Promise.all([
+    prisma.workoutPlan.findMany({
+      select: {
+        id: true,
+        name: true,
+        tier: true,
+        equipmentId: true,
 
-  // ── Access context ───────────────────────────────────────────────
+        equipment: {
+          select: { id: true, name: true },
+        },
+      },
+      orderBy: [{ tier: "asc" }, { name: "asc" }],
+    }),
+
+    // Collapsed: was findFirst + findMany — now one query
+    prisma.userEquipment.findMany({
+      where: { userId },
+      select: {
+        equipmentId: true,
+        source: true,
+        trialExpiresAt: true,
+        equipment: { select: { name: true } }, // for declaredEquipmentName
+      },
+    }),
+
+    prisma.planInstance.findFirst({
+      where: { userId, status: InstanceStatus.ACTIVE },
+      select: { planId: true },
+    }),
+  ]);
+
+  // ── Derive declared equipment name in JS (no extra DB round-trip) ─
+  const declaredEntry = allUserEquipment.find((e) => e.source === "DECLARED");
+  const declaredEquipmentName = declaredEntry?.equipment?.name ?? null;
+
+  // ── Access context ────────────────────────────────────────────────
   const access = await getUserAccess({ userId });
 
-  // ── Declared equipment name ──────────────────────────────────────
-  const declaredEquipment = await prisma.userEquipment.findFirst({
-    where: { userId, source: "DECLARED" },
-    include: { equipment: true },
-  });
-
-  // ── Active + expired equipment IDs ───────────────────────────────
-  const allUserEquipment = await prisma.userEquipment.findMany({
-    where: { userId },
-    select: { equipmentId: true, source: true, trialExpiresAt: true },
-  });
+  const now = new Date();
 
   const activeEquipmentIds = allUserEquipment
     .filter(
       (e) =>
         e.source === "PURCHASED" ||
-        (e.source === "DECLARED" &&
-          e.trialExpiresAt &&
-          e.trialExpiresAt > new Date()),
+        (e.source === "DECLARED" && e.trialExpiresAt && e.trialExpiresAt > now),
     )
     .map((e) => e.equipmentId);
 
   const expiredEquipmentIds = allUserEquipment
     .filter(
       (e) =>
-        e.source === "DECLARED" &&
-        e.trialExpiresAt &&
-        e.trialExpiresAt <= new Date(),
+        e.source === "DECLARED" && e.trialExpiresAt && e.trialExpiresAt <= now,
     )
     .map((e) => e.equipmentId);
-
-  // ── Active plan instance ─────────────────────────────────────────
-  const activeInstance = await prisma.planInstance.findFirst({
-    where: { userId, status: InstanceStatus.ACTIVE },
-    select: { planId: true },
-  });
 
   return NextResponse.json({
     plans,
@@ -72,6 +83,6 @@ export async function GET(req: Request) {
       expiredEquipmentIds,
       activePlanId: activeInstance?.planId ?? null,
     },
-    declaredEquipmentName: declaredEquipment?.equipment.name ?? null,
+    declaredEquipmentName,
   });
 }

@@ -47,17 +47,55 @@ export async function GET(req: Request) {
     59,
   );
 
-  // ── Subscription ──────────────────────────────────────────────────
-  const subscription = await prisma.subscription.findUnique({
-    where: { userId },
-    select: { plan: true, status: true },
-  });
+  // ── Parallel: subscription + userProfile + allLogs ────────────────
+  // All three are independent — fire them together, save 2 round-trips.
+  const [subscription, userProfile, allLogs] = await Promise.all([
+    prisma.subscription.findUnique({
+      where: { userId },
+      select: { plan: true, status: true },
+    }),
+    prisma.user.findUnique({
+      where: { id: userId },
+      select: { primaryGoal: true },
+    }),
+    prisma.workoutLog.findMany({
+      where: { userId },
+      select: {
+        instanceId: true,
+        sessionNumber: true,
+        completedAt: true,
+        weightKg: true,
+        actualReps: true,
+        actualSets: true,
+        plannedExerciseId: true,
+        plannedExercise: {
+          select: {
+            session: {
+              select: {
+                focus: true,
+                plan: { select: { muscleGroup: true } },
+              },
+            },
+            exercise: { select: { name: true } },
+          },
+        },
+        instance: {
+          select: {
+            plan: { select: { name: true, muscleGroup: true } },
+          },
+        },
+      },
+      orderBy: { completedAt: "desc" },
+    }),
+  ]);
+
   const userPlan: "FREE" | "EQUIPMENT" | "PRO" =
     subscription?.status === "active"
       ? (subscription.plan as "FREE" | "EQUIPMENT" | "PRO")
       : "FREE";
 
   // ── Trial ─────────────────────────────────────────────────────────
+  // Depends on userPlan so must run after the parallel block above.
   const declaredTrial =
     userPlan === "FREE"
       ? await prisma.userEquipment.findFirst({
@@ -66,21 +104,6 @@ export async function GET(req: Request) {
         })
       : null;
   const hasActiveTrial = declaredTrial != null;
-
-  // ── All workout logs ──────────────────────────────────────────────
-  const allLogs = await prisma.workoutLog.findMany({
-    where: { userId },
-    include: {
-      plannedExercise: {
-        include: {
-          exercise: true,
-          session: { include: { plan: true } },
-        },
-      },
-      instance: { include: { plan: true } },
-    },
-    orderBy: { completedAt: "desc" },
-  });
 
   // ── Unique sessions ───────────────────────────────────────────────
   const uniqueSessions = new Map<
@@ -251,9 +274,19 @@ export async function GET(req: Request) {
   let dashboardData = null;
 
   if (totalWorkouts > 0) {
+    // Fetch active instance — select only the 3 fields actually used below.
     const activeInstance = await prisma.planInstance.findFirst({
       where: { userId, status: "ACTIVE" },
-      include: { plan: true },
+      select: {
+        id: true,
+        startedAt: true,
+        plan: {
+          select: {
+            sessionsPerWeek: true,
+            durationWeeks: true,
+          },
+        },
+      },
       orderBy: { startedAt: "desc" },
     });
 
@@ -409,11 +442,7 @@ export async function GET(req: Request) {
           : `${recentSessionCount} session${recentSessionCount !== 1 ? "s" : ""} this week — good balance.`;
     }
 
-    // Goal progress
-    const userProfile = await prisma.user.findUnique({
-      where: { id: userId },
-      select: { primaryGoal: true },
-    });
+    // Goal progress — uses userProfile fetched in parallel at the top
     const primaryGoal = userProfile?.primaryGoal ?? "GET_FIT";
     const strengthImprovedCount = strengthTrends.filter(
       (t) => t.percentChange > 0,
