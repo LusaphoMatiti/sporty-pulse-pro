@@ -20,7 +20,11 @@ export async function GET(req: Request) {
         name: true,
         tier: true,
         equipmentId: true,
-
+        description: true,
+        muscleGroup: true,
+        durationWeeks: true,
+        sessionsPerWeek: true,
+        difficulty: true,
         equipment: {
           select: { id: true, name: true },
         },
