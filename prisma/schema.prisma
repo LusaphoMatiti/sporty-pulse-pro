@@ -203,6 +203,7 @@ model WorkoutPlan {
   muscleGroup     MuscleGroup
   durationWeeks   Int
   sessionsPerWeek Int
+  difficulty      String?
   tier            PlanTier    @default(FREE)
 
   equipmentId String?
