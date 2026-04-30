@@ -123,6 +123,7 @@ model Account {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
+   @@index([userId])
   @@map("accounts")
 }
 
@@ -133,7 +134,7 @@ model NextAuthSession {
   expires      DateTime
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-
+ @@index([userId])
   @@map("sessions")
 }
 
@@ -143,6 +144,8 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+
+  
   @@map("verification_tokens")
 }
 
@@ -228,6 +231,7 @@ model PlannedSession {
   plannedExercises PlannedExercise[]
 
   @@unique([planId, sessionNumber])
+   @@index([planId])
   @@map("planned_sessions")
 }
 
@@ -256,6 +260,8 @@ model PlannedExercise {
   loggedSets WorkoutLog[]
 
   @@unique([sessionId, order])
+    @@index([sessionId])
+  @@index([exerciseId])
   @@map("planned_exercises")
 }
 
@@ -283,6 +289,9 @@ model PlanInstance {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  @@index([userId, status])
+  @@index([userId])
+
   @@map("plan_instances")
 }
 
@@ -309,7 +318,10 @@ model WorkoutLog {
   plannedExercise   PlannedExercise @relation(fields: [plannedExerciseId], references: [id])
 
   createdAt DateTime @default(now())
-
+  @@index([userId])
+  @@index([instanceId])
+  @@index([userId, plannedExerciseId])
+ @@index([instanceId, sessionNumber])
   @@map("workout_logs")
 }
 
@@ -346,6 +358,7 @@ model UserEquipment {
 
   equipmentId String
   equipment   Equipment @relation(fields: [equipmentId], references: [id])
+   @@index([userId])
 
   @@map("user_equipment")
 }
