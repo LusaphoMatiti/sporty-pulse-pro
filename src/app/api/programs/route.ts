@@ -77,6 +77,7 @@ export async function GET(req: Request) {
     plans,
     access: {
       isPro: access.isPro,
+      isEquipment: access.isEquipment,
       hasActiveTrial: access.hasActiveTrial,
       trialExpiresAt: access.trialExpiresAt?.toISOString() ?? null,
       canStartNewProgram: access.canStartNewProgram,

@@ -14,8 +14,8 @@ export async function getUserAccess(ctx: AccessContext) {
     select: { plan: true },
   });
 
-  const isPro =
-    subscription?.plan === Plan.PRO || subscription?.plan === Plan.EQUIPMENT;
+  const isPro = subscription?.plan === Plan.PRO;
+  const isEquipment = subscription?.plan === Plan.EQUIPMENT;
 
   // Equipment ownership
   const userEquipment = await prisma.userEquipment.findMany({
@@ -81,6 +81,7 @@ export async function getUserAccess(ctx: AccessContext) {
 
   return {
     isPro,
+    isEquipment,
     hasAnyActiveEquipment,
     canAccessEquipmentProgram,
     canStartNewProgram,
