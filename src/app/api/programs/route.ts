@@ -1,3 +1,7 @@
+// src/app/api/programs/route.ts
+
+export const dynamic = "force-dynamic";
+
 import { NextResponse } from "next/server";
 import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
@@ -12,7 +16,6 @@ export async function GET(req: Request) {
 
   const userId = session.user.id;
 
-  // ── Parallel fetch — 3 queries instead of 4, run concurrently ───
   const [plans, allUserEquipment, activeInstance] = await Promise.all([
     prisma.workoutPlan.findMany({
       select: {
@@ -32,14 +35,13 @@ export async function GET(req: Request) {
       orderBy: [{ tier: "asc" }, { name: "asc" }],
     }),
 
-    // Collapsed: was findFirst + findMany — now one query
     prisma.userEquipment.findMany({
       where: { userId },
       select: {
         equipmentId: true,
         source: true,
         trialExpiresAt: true,
-        equipment: { select: { name: true } }, // for declaredEquipmentName
+        equipment: { select: { name: true } },
       },
     }),
 
@@ -49,11 +51,9 @@ export async function GET(req: Request) {
     }),
   ]);
 
-  // ── Derive declared equipment name in JS (no extra DB round-trip) ─
   const declaredEntry = allUserEquipment.find((e) => e.source === "DECLARED");
   const declaredEquipmentName = declaredEntry?.equipment?.name ?? null;
 
-  // ── Access context ────────────────────────────────────────────────
   const access = await getUserAccess({ userId });
 
   const now = new Date();
