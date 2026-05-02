@@ -51,6 +51,16 @@ export async function GET(req: Request) {
     }),
   ]);
 
+  // ← debug log goes HERE, after Promise.all resolves
+  console.log(
+    "[programs] trialExpiresAt from DB:",
+    allUserEquipment.map((e) => ({
+      equipmentId: e.equipmentId,
+      source: e.source,
+      trialExpiresAt: e.trialExpiresAt,
+    })),
+  );
+
   const declaredEntry = allUserEquipment.find((e) => e.source === "DECLARED");
   const declaredEquipmentName = declaredEntry?.equipment?.name ?? null;
 
