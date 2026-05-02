@@ -1,4 +1,3 @@
-// src/app/api/onboarding/complete/route.ts
 import { getSessionFromRequest } from "@/lib/getSession";
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
@@ -13,19 +12,21 @@ const VALID_EXPERIENCE_LEVELS = [
   "ADVANCED",
 ] as const;
 
+const TRIAL_DAYS = 14;
+
 type PrimaryGoal = (typeof VALID_PRIMARY_GOALS)[number];
 type TrainingLocation = (typeof VALID_TRAINING_LOCATIONS)[number];
 type BiologicalSex = (typeof VALID_BIOLOGICAL_SEXES)[number];
 type ExperienceLevel = (typeof VALID_EXPERIENCE_LEVELS)[number];
 
 export async function POST(req: NextRequest) {
-  // Auth check
+  // Auth
   const session = await getSessionFromRequest(req);
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  // Already onboarded — idempotent
+  // Idempotent
   if (session.user.onboardingComplete) {
     return NextResponse.json({ ok: true, already: true });
   }
@@ -36,6 +37,7 @@ export async function POST(req: NextRequest) {
     trainingLocation?: string;
     biologicalSex?: string;
     experienceLevel?: string;
+    equipmentId?: string; // optional — only set when HOME + has equipment
   };
 
   try {
@@ -44,10 +46,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
   }
 
-  const { primaryGoal, trainingLocation, biologicalSex, experienceLevel } =
-    body;
+  const {
+    primaryGoal,
+    trainingLocation,
+    biologicalSex,
+    experienceLevel,
+    equipmentId,
+  } = body;
 
-  // Validate
+  // Validate required fields
   if (
     !primaryGoal ||
     !(VALID_PRIMARY_GOALS as readonly string[]).includes(primaryGoal)
@@ -93,19 +100,68 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Single DB write
+  // If equipmentId provided, validate it exists and is not Bodyweight
+  if (equipmentId) {
+    const equipment = await prisma.equipment.findUnique({
+      where: { id: equipmentId },
+      select: { id: true, name: true },
+    });
+    if (!equipment) {
+      return NextResponse.json(
+        { error: "Equipment not found" },
+        { status: 400 },
+      );
+    }
+    if (equipment.name === "Bodyweight") {
+      return NextResponse.json(
+        { error: "Cannot declare Bodyweight as equipment" },
+        { status: 400 },
+      );
+    }
+  }
+
+  const userId = session.user.id;
+
   try {
-    await prisma.user.update({
-      where: { id: session.user.id },
-      data: {
-        primaryGoal: primaryGoal as PrimaryGoal,
-        trainingLocation: trainingLocation as TrainingLocation,
-        biologicalSex: biologicalSex as BiologicalSex,
-        experienceLevel: experienceLevel as ExperienceLevel,
-        onboardingComplete: true,
-        onboardingCompletedAt: new Date(),
-        isNewUser: false,
-      },
+    // Run user update + optional equipment creation in a transaction
+    await prisma.$transaction(async (tx) => {
+      await tx.user.update({
+        where: { id: userId },
+        data: {
+          primaryGoal: primaryGoal as PrimaryGoal,
+          trainingLocation: trainingLocation as TrainingLocation,
+          biologicalSex: biologicalSex as BiologicalSex,
+          experienceLevel: experienceLevel as ExperienceLevel,
+          onboardingComplete: true,
+          onboardingCompletedAt: new Date(),
+          isNewUser: false,
+        },
+      });
+
+      if (equipmentId) {
+        const trialExpiresAt = new Date();
+        trialExpiresAt.setDate(trialExpiresAt.getDate() + TRIAL_DAYS);
+
+        // Upsert so re-running onboarding doesn't create duplicate rows
+        await tx.userEquipment.upsert({
+          where: {
+            // UserEquipment has no unique constraint on userId+equipmentId in
+            // the schema, so we use a findFirst pattern via create/update by id.
+            // We create with a known pattern — use create if no existing record.
+            id: `${userId}_${equipmentId}_declared`,
+          },
+          update: {
+            trialExpiresAt,
+          },
+          create: {
+            id: `${userId}_${equipmentId}_declared`,
+            userId,
+            equipmentId,
+            source: "DECLARED",
+            trialExpiresAt,
+          },
+        });
+      }
     });
   } catch (err) {
     console.error("[onboarding/complete] DB error:", err);
