@@ -12,8 +12,6 @@ export async function GET(req: NextRequest) {
 
   const userId = session.user.id;
 
-  // ── Parallel fetch 1: instance + subscription + equipment + programs ──
-  // All independent of each other — no reason to wait sequentially
   const [instance, subscription, userEquipmentRecords, allPrograms] =
     await Promise.all([
       prisma.planInstance.findFirst({
@@ -29,6 +27,8 @@ export async function GET(req: NextRequest) {
               id: true,
               name: true,
               muscleGroup: true,
+              imageUrl: true,
+              sessionDurationMin: true,
             },
           },
         },
@@ -37,7 +37,6 @@ export async function GET(req: NextRequest) {
         where: { userId },
         select: { plan: true, status: true },
       }),
-      // Single query replacing 3 separate userEquipment queries
       prisma.userEquipment.findMany({
         where: { userId },
         select: {
@@ -54,10 +53,11 @@ export async function GET(req: NextRequest) {
           description: true,
           tier: true,
           muscleGroup: true,
+          imageUrl: true,
+          sessionDurationMin: true,
           durationWeeks: true,
           sessionsPerWeek: true,
           equipmentId: true,
-          // Select only id+name instead of full equipment row
           equipment: { select: { id: true, name: true } },
         },
       }),
@@ -66,45 +66,49 @@ export async function GET(req: NextRequest) {
   if (!instance)
     return NextResponse.json({ instanceId: null }, { status: 200 });
 
-  // ── Planned session (depends on instance.planId) ──────────────────
-  const plannedSession = await prisma.plannedSession.findUnique({
-    where: {
-      planId_sessionNumber: {
-        planId: instance.planId,
-        sessionNumber: instance.currentSession,
+  const [plannedSession, totalSessions] = await Promise.all([
+    prisma.plannedSession.findUnique({
+      where: {
+        planId_sessionNumber: {
+          planId: instance.planId,
+          sessionNumber: instance.currentSession,
+        },
       },
-    },
-    select: {
-      focus: true,
-      plannedExercises: {
-        orderBy: { order: "asc" },
-        select: {
-          id: true,
-          order: true,
-          beginnerSets: true,
-          beginnerReps: true,
-          intermediateSets: true,
-          intermediateReps: true,
-          advancedSets: true,
-          advancedReps: true,
-          restSeconds: true,
-          exercise: {
-            select: {
-              id: true,
-              name: true,
-              musclesWorked: true,
-              equipment: { select: { id: true, name: true } },
+      select: {
+        focus: true,
+        estimatedMinutes: true,
+        plannedExercises: {
+          orderBy: { order: "asc" },
+          select: {
+            id: true,
+            order: true,
+            beginnerSets: true,
+            beginnerReps: true,
+            intermediateSets: true,
+            intermediateReps: true,
+            advancedSets: true,
+            advancedReps: true,
+            restSeconds: true,
+            exercise: {
+              select: {
+                id: true,
+                name: true,
+                musclesWorked: true,
+                equipment: { select: { id: true, name: true } },
+              },
             },
           },
         },
       },
-    },
-  });
+    }),
+    prisma.plannedSession.count({
+      where: { planId: instance.planId },
+    }),
+  ]);
 
   if (!plannedSession)
     return NextResponse.json({ error: "No planned session" }, { status: 404 });
 
-  // ── Derive everything from the single userEquipment fetch ─────────
   const now = new Date();
   const activePlan =
     subscription?.status === "active" ? subscription.plan : null;
@@ -144,7 +148,6 @@ export async function GET(req: NextRequest) {
     )
     .map((r) => r.equipmentId);
 
-  // ── Level-appropriate sets/reps ───────────────────────────────────
   const levelKey = instance.level;
   const exercisesForView = plannedSession.plannedExercises.map((pe) => ({
     id: pe.id,
@@ -174,9 +177,13 @@ export async function GET(req: NextRequest) {
     planId: instance.planId,
     planName: instance.plan.name,
     muscleGroup: instance.plan.muscleGroup,
+    imageUrl: instance.plan.imageUrl ?? null,
+    sessionDurationMin: instance.plan.sessionDurationMin ?? null,
     level: instance.level,
     currentSession: instance.currentSession,
+    totalSessions,
     focus: plannedSession.focus,
+    estimatedMinutes: plannedSession.estimatedMinutes,
     exercisesForView,
     muscles,
     tier,

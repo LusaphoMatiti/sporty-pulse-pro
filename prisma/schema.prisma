@@ -282,6 +282,7 @@ model RecoveryLog {
   id  String @id @default(cuid())
   loggedAt  DateTime @default(now())
   sleepHours Float?
+  sleepQuality   Int? 
   muscleSoreness Int?
   stressLevel Int?
   recoveryPct Int
