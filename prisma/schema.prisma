@@ -102,6 +102,7 @@ model User {
   userEquipment UserEquipment[]
   instances     PlanInstance[]
   workoutLogs   WorkoutLog[]
+  recoveryLogs  RecoveryLog[]
 
   @@map("users")
 }
@@ -227,6 +228,7 @@ model PlannedSession {
   id            String @id @default(cuid())
   sessionNumber Int
   focus         String
+  estimatedMinutes Int @default(45)
 
   planId String
   plan   WorkoutPlan @relation(fields: [planId], references: [id], onDelete: Cascade)
@@ -267,6 +269,30 @@ model PlannedExercise {
   @@index([exerciseId])
   @@map("planned_exercises")
 }
+
+
+// ─────────────────────────────────────────────
+// RECOVERY LOG
+// ─────────────────────────────────────────────
+
+model RecoveryLog {
+  id  String @id @default(cuid())
+  loggedAt  DateTime @default(now())
+  sleepHours Float?
+  muscleSoreness Int?
+  stressLevel Int?
+  recoveryPct Int
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, loggedAt])
+  @@map("recovery_logs")
+}
+
+
+
 
 // ─────────────────────────────────────────────
 // PLAN INSTANCE

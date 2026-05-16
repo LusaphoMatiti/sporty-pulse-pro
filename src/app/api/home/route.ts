@@ -2,6 +2,45 @@ import { NextResponse } from "next/server";
 import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
 
+export const dynamic = "force-dynamic";
+
+// ── Recovery helpers ──────────────────────────────────────────────────────────
+
+function getRecoveryLabel(pct: number | null): string | null {
+  if (pct === null) return null;
+  if (pct >= 75) return "Good to train";
+  if (pct >= 45) return "Train with caution";
+  return "Rest recommended";
+}
+
+function getRecoveryTip(pct: number | null): string | null {
+  if (pct === null) return null;
+  if (pct >= 75) return "You're recovered. Push hard today.";
+  if (pct >= 45) return "Moderate intensity only. Prioritise sleep.";
+  return "Your body needs rest. Consider a deload or rest day.";
+}
+
+// ── Streak dot grid builder ───────────────────────────────────────────────────
+// Returns 3 weeks: index 0 = oldest, index 2 = current week (Mon-anchored)
+
+function buildStreakWeeks(activeDaysSet: Set<string>, now: Date) {
+  const todayStr = now.toISOString().slice(0, 10);
+  const dayOfWeek = now.getDay();
+  const mondayOffset = dayOfWeek === 0 ? -6 : 1 - dayOfWeek;
+
+  return Array.from({ length: 3 }, (_, w) => {
+    const weekOffset = (2 - w) * 7; // 0 = current week, 14 = 2 weeks ago
+    return Array.from({ length: 7 }, (_, d) => {
+      const day = new Date(now);
+      day.setDate(now.getDate() + mondayOffset - weekOffset + d);
+      const str = day.toISOString().slice(0, 10);
+      return { completed: activeDaysSet.has(str), isToday: str === todayStr };
+    });
+  });
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+
 export async function GET(req: Request) {
   const session = await getMobileOrWebSession(req);
   if (!session) {
@@ -11,8 +50,14 @@ export async function GET(req: Request) {
   const userId = session.user.id;
   const now = new Date();
 
-  // ── Parallel: logs + active instance ─────────────────────────────
-  const [allLogs, activeInstance] = await Promise.all([
+  // ── Parallel queries ──────────────────────────────────────────────
+  const [
+    allLogs,
+    activeInstance,
+    latestRecovery,
+    subscription,
+    declaredEquipment,
+  ] = await Promise.all([
     prisma.workoutLog.findMany({
       where: { userId },
       select: {
@@ -32,6 +77,7 @@ export async function GET(req: Request) {
         id: true,
         planId: true,
         currentSession: true,
+        level: true,
         plan: {
           select: {
             name: true,
@@ -40,6 +86,20 @@ export async function GET(req: Request) {
           },
         },
       },
+    }),
+    prisma.recoveryLog.findFirst({
+      where: { userId },
+      orderBy: { loggedAt: "desc" },
+      select: { recoveryPct: true, loggedAt: true },
+    }),
+    prisma.subscription.findUnique({
+      where: { userId },
+      select: { plan: true },
+    }),
+    prisma.userEquipment.findFirst({
+      where: { userId, source: "DECLARED" },
+      orderBy: { addedAt: "desc" },
+      select: { trialExpiresAt: true },
     }),
   ]);
 
@@ -125,15 +185,17 @@ export async function GET(req: Request) {
     ([, date]) => date >= monday && date <= sunday,
   ).length;
   const weekTotalCount = activeInstance?.plan.sessionsPerWeek ?? 0;
+  const weekMinutes = weekCompletedCount * 55;
 
   // ── Plan progress ─────────────────────────────────────────────────
   let planWeek: number | null = null;
   let sessionsLeft: number | null = null;
   let planName: string | null = null;
+  let planTotalSessions: number | null = null;
 
   if (activeInstance) {
     planName = activeInstance.plan.name;
-    const totalSessions =
+    planTotalSessions =
       activeInstance.plan.durationWeeks * activeInstance.plan.sessionsPerWeek;
     const completedSessionsInPlan = Array.from(uniqueSessions.keys()).filter(
       (key) => key.startsWith(activeInstance.id),
@@ -141,10 +203,10 @@ export async function GET(req: Request) {
     planWeek = Math.ceil(
       (completedSessionsInPlan + 1) / activeInstance.plan.sessionsPerWeek,
     );
-    sessionsLeft = Math.max(0, totalSessions - completedSessionsInPlan);
+    sessionsLeft = Math.max(0, planTotalSessions - completedSessionsInPlan);
   }
 
-  // ── Week workout list (conditional — depends on activeInstance) ───
+  // ── Week workout list ─────────────────────────────────────────────
   let weekWorkouts: { name: string; progress: number }[] = [];
 
   if (activeInstance) {
@@ -161,7 +223,6 @@ export async function GET(req: Request) {
         sessionNumber: { gte: weekStart, lte: weekEnd },
       },
       orderBy: { sessionNumber: "asc" },
-      // Only need focus — no need to pull full row
       select: { sessionNumber: true, focus: true },
     });
 
@@ -180,13 +241,77 @@ export async function GET(req: Request) {
     });
   }
 
+  // ── Today's session details ───────────────────────────────────────
+  let todaySession: { focus: string; estimatedMinutes: number } | null = null;
+
+  if (activeInstance) {
+    todaySession = await prisma.plannedSession.findUnique({
+      where: {
+        planId_sessionNumber: {
+          planId: activeInstance.planId,
+          sessionNumber: activeInstance.currentSession,
+        },
+      },
+      select: { focus: true, estimatedMinutes: true },
+    });
+  }
+
+  // ── Recent activity ───────────────────────────────────────────────
+  let recentActivity: {
+    planName: string;
+    sessionLabel: string;
+    durationMin: number;
+  } | null = null;
+
+  if (allLogs.length > 0 && activeInstance) {
+    const lastLog = allLogs[0]; // already sorted desc
+    const lastSession = await prisma.plannedSession.findFirst({
+      where: {
+        planId: activeInstance.planId,
+        sessionNumber: lastLog.sessionNumber,
+      },
+      select: { focus: true, estimatedMinutes: true },
+    });
+    if (lastSession) {
+      recentActivity = {
+        planName: activeInstance.plan.name,
+        sessionLabel: lastSession.focus,
+        durationMin: lastSession.estimatedMinutes,
+      };
+    }
+  }
+
   // ── Next session URL ──────────────────────────────────────────────
   const nextSessionUrl =
     activeInstance && sessionsLeft && sessionsLeft > 0
       ? `/workout/${activeInstance.id}/${activeInstance.currentSession}`
       : null;
 
+  // ── Streak dot grid ───────────────────────────────────────────────
+  const streakWeeks = buildStreakWeeks(activeDaysSet, now);
+
+  // ── Access tier ───────────────────────────────────────────────────
+  const subPlan = subscription?.plan ?? "FREE";
+  const accessTier =
+    subPlan === "PRO" ? "pro" : subPlan === "EQUIPMENT" ? "equipment" : "free";
+
+  // ── Equipment trial ───────────────────────────────────────────────
+  const trialExpiresAt = declaredEquipment?.trialExpiresAt ?? null;
+  const equipmentTrial = trialExpiresAt
+    ? {
+        daysRemaining: Math.max(
+          0,
+          Math.ceil((trialExpiresAt.getTime() - now.getTime()) / 86400000),
+        ),
+        isExpired: trialExpiresAt < now,
+      }
+    : null;
+
+  // ── Recovery ──────────────────────────────────────────────────────
+  const recoveryPct = latestRecovery?.recoveryPct ?? null;
+
   return NextResponse.json({
+    // Existing fields
     totalWorkouts,
     trainedHours,
     totalSets,
@@ -200,5 +325,20 @@ export async function GET(req: Request) {
     weekTotalCount,
     weekWorkouts,
     nextSessionUrl,
+    // New fields
+    todaySessionNumber: activeInstance?.currentSession ?? null,
+    planTotalSessions,
+    sessionPhase: todaySession?.focus ?? null,
+    sessionDurationMin: todaySession?.estimatedMinutes ?? null,
+    trainingLevel: activeInstance?.level ?? null,
+    weekMinutes,
+    recentActivity,
+    recentActivityUrl: "/progress",
+    streakWeeks,
+    accessTier,
+    equipmentTrial,
+    recoveryPct,
+    recoveryLabel: getRecoveryLabel(recoveryPct),
+    recoveryTip: getRecoveryTip(recoveryPct),
   });
 }
