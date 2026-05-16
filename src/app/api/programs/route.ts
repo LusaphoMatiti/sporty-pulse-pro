@@ -22,6 +22,15 @@ export async function GET(req: Request) {
         id: true,
         name: true,
         tier: true,
+        imageUrl: true,
+        sessionDurationMin: true,
+        plannedSessions: {
+          select: {
+            plannedExercises: {
+              select: { id: true },
+            },
+          },
+        },
         equipmentId: true,
         description: true,
         muscleGroup: true,
@@ -83,10 +92,20 @@ export async function GET(req: Request) {
     )
     .map((e) => e.equipmentId);
 
+  const plansWithCount = plans.map((p) => {
+    const exerciseCount = p.plannedSessions.reduce(
+      (sum, s) => sum + s.plannedExercises.length,
+      0,
+    );
+    const { plannedSessions: _, ...rest } = p;
+    return { ...rest, exerciseCount };
+  });
+
   return NextResponse.json({
-    plans,
+    plans: plansWithCount,
     access: {
       isPro: access.isPro,
+
       isEquipment: access.isEquipment,
       hasActiveTrial: access.hasActiveTrial,
       trialExpiresAt: access.trialExpiresAt?.toISOString() ?? null,

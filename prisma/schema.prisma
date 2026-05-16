@@ -206,6 +206,9 @@ model WorkoutPlan {
   sessionsPerWeek Int
   difficulty      String?
   tier            PlanTier    @default(FREE)
+  imageUrl        String?
+  sessionDurationMin String? 
+
 
   equipmentId String?
   equipment   Equipment? @relation(fields: [equipmentId], references: [id])
