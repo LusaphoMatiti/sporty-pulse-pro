@@ -1,7 +1,11 @@
+// src/app/api/onboarding/complete/route.ts
 import { getSessionFromRequest } from "@/lib/getSession";
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { assignIdentity } from "@/lib/identity";
+
+export const dynamic = "force-dynamic";
 
 const VALID_PRIMARY_GOALS = ["LOSE_WEIGHT", "BUILD_MUSCLE", "GET_FIT"] as const;
 const VALID_TRAINING_LOCATIONS = ["HOME", "GYM"] as const;
@@ -37,7 +41,7 @@ export async function POST(req: NextRequest) {
     trainingLocation?: string;
     biologicalSex?: string;
     experienceLevel?: string;
-    equipmentId?: string; // optional — only set when HOME + has equipment
+    equipmentId?: string;
   };
 
   try {
@@ -122,9 +126,31 @@ export async function POST(req: NextRequest) {
 
   const userId = session.user.id;
 
+  // ─────────────────────────────────────────────
+  // ASSIGN IDENTITY
+  // Derive identity from onboarding inputs.
+  // lastLoginAt is null for brand new users —
+  // assignIdentity handles that gracefully.
+  // ─────────────────────────────────────────────
+  const user = await prisma.user.findUnique({
+    where: { id: userId },
+    select: { lastLoginAt: true, onboardingCompletedAt: true },
+  });
+
+  const { identity, reason } = assignIdentity({
+    experienceLevel: experienceLevel as ExperienceLevel,
+    primaryGoal: primaryGoal as PrimaryGoal,
+    lastLoginAt: user?.lastLoginAt ?? null,
+    onboardingCompletedAt: user?.onboardingCompletedAt ?? null,
+  });
+
+  console.log(
+    `[onboarding/complete] userId=${userId} assigned identity=${identity} reason="${reason}"`,
+  );
+
   try {
-    // Run user update + optional equipment creation in a transaction
     await prisma.$transaction(async (tx) => {
+      // Update user with onboarding data + assigned identity
       await tx.user.update({
         where: { id: userId },
         data: {
@@ -135,24 +161,19 @@ export async function POST(req: NextRequest) {
           onboardingComplete: true,
           onboardingCompletedAt: new Date(),
           isNewUser: false,
+          identity,
+          identityAssignedAt: new Date(),
         },
       });
 
+      // Create UserEquipment if equipment was declared
       if (equipmentId) {
         const trialExpiresAt = new Date();
         trialExpiresAt.setDate(trialExpiresAt.getDate() + TRIAL_DAYS);
 
-        // Upsert so re-running onboarding doesn't create duplicate rows
         await tx.userEquipment.upsert({
-          where: {
-            // UserEquipment has no unique constraint on userId+equipmentId in
-            // the schema, so we use a findFirst pattern via create/update by id.
-            // We create with a known pattern — use create if no existing record.
-            id: `${userId}_${equipmentId}_declared`,
-          },
-          update: {
-            trialExpiresAt,
-          },
+          where: { id: `${userId}_${equipmentId}_declared` },
+          update: { trialExpiresAt },
           create: {
             id: `${userId}_${equipmentId}_declared`,
             userId,
@@ -168,5 +189,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Database error" }, { status: 500 });
   }
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({
+    ok: true,
+    identity,
+  });
 }

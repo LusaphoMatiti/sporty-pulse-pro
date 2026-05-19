@@ -30,7 +30,7 @@ enum TrainingLocation {
   GYM
 }
 
-enum BiologicalSex {
+enum BiologicalSex {   
   MALE
   FEMALE
   NOT_SPECIFIED
@@ -73,6 +73,44 @@ enum InstanceStatus {
   ABANDONED
 }
 
+
+enum Identity {
+  REBUILD
+  OPERATOR
+  EXECUTIVE_PERFORMANCE
+}
+
+enum TemplateType {
+  FULL_BODY_RESTORE
+  FULL_BODY_STRENGTH
+  CONDITIONING_CIRCUIT
+  PUSH_PULL_LEGS
+  ADVANCED_PPL
+  STRENGTH_HIIT
+  PERFORMANCE_CONDITIONING
+}
+
+enum EnvironmentTarget {
+  HOME_BODYWEIGHT
+  HOME_EQUIPMENT
+  GYM
+  ANY
+}
+
+enum ProgressionType {
+  VOLUME
+  LOAD
+  DENSITY
+}
+
+enum ImpactLevel {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+
+
 // ─────────────────────────────────────────────
 // AUTH LAYER
 // ─────────────────────────────────────────────
@@ -90,6 +128,8 @@ model User {
   createdAt          DateTime  @default(now())
   updatedAt          DateTime  @updatedAt
   isNewUser         Boolean   @default(true)
+  identity          Identity?
+  identityAssignedAt  DateTime?
   primaryGoal   PrimaryGoal?
   trainingLocation TrainingLocation?
   biologicalSex BiologicalSex?
@@ -160,7 +200,7 @@ model Equipment {
   category  String // "fullbody" | "upper" | "lower" | "core"
 
   userEquipment UserEquipment[]
-  exercises     Exercise[]
+   exercises     ExerciseEquipment[]
   workoutPlans  WorkoutPlan[]
 
   createdAt DateTime @default(now())
@@ -178,20 +218,53 @@ model Exercise {
   name          String  @unique
   description   String?
   youtubeUrl    String?
-  musclesWorked String[] // ["glutes", "hamstrings", "quads"]
+  musclesWorked String[] 
   muscleGroup   MuscleGroup
 
   equipmentId String?
-  equipment   Equipment? @relation(fields: [equipmentId], references: [id])
+  
 
-  plannedExercises PlannedExercise[]
 
+  impactLevel ImpactLevel @default(MEDIUM)
+  isBodyweight Boolean @default(false)
+
+  equipment ExerciseEquipment[]
+  substitutions ExerciseSubstitution[] @relation("OriginalExercise")
+  substitutionsFor ExerciseSubstitution[] @relation("SubstituteExercise")
+  plannedExercises PlannedExercise []
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@index([equipmentId]) 
   @@map("exercises")
 }
+
+model ExerciseEquipment {
+  exerciseId String
+  equipmentId String
+  exercise Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+equipment Equipment @relation(fields: [equipmentId], references: [id], onDelete: Cascade)
+
+
+  @@id([exerciseId, equipmentId])
+  @@map("exercise_equipment")
+}
+
+model ExerciseSubstitution {
+  id String @id @default(cuid())
+  originalExerciseId String
+  substituteExerciseId String
+  reason String
+
+  originalExercise Exercise @relation("OriginalExercise", fields: [originalExerciseId], references: [id])
+  substituteExercise Exercise @relation("SubstituteExercise", fields: [substituteExerciseId], references: [id])
+
+  @@unique([originalExerciseId, substituteExerciseId])
+  @@index([originalExerciseId])
+  @@map("exercise_substitutions")
+}
+
+
 
 // ─────────────────────────────────────────────
 // WORKOUT PLAN
@@ -208,6 +281,11 @@ model WorkoutPlan {
   tier            PlanTier    @default(FREE)
   imageUrl        String?
   sessionDurationMin String? 
+  templateType TemplateType?
+ identityTarget  Identity?
+ goalTarget  PrimaryGoal?
+  environmentTarget EnvironmentTarget?
+  impactLevel ImpactLevel?
 
 
   equipmentId String?
@@ -316,8 +394,14 @@ model PlanInstance {
 
   planId String
   plan   WorkoutPlan @relation(fields: [planId], references: [id])
-
   workoutLogs WorkoutLog[]
+  progressionType ProgressionType?
+  progressionWeek Int?
+  currentSets Int?
+  currentReps Int?
+  currentRestSeconds Int?
+  deloadFlagged Boolean @default(false)
+  identityAtStart Identity?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

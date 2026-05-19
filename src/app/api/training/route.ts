@@ -1,9 +1,12 @@
+// src/app/api/training/route.ts
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
 import { InstanceStatus } from "@/generated/prisma";
 import type { SessionDraft } from "@/app/api/session/draft/route";
+
+export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
   const session = await getMobileOrWebSession(req);
@@ -57,8 +60,7 @@ export async function GET(req: NextRequest) {
           sessionDurationMin: true,
           durationWeeks: true,
           sessionsPerWeek: true,
-          equipmentId: true,
-          equipment: { select: { id: true, name: true } },
+          // equipmentId removed — equipment is now many-to-many via ExerciseEquipment
         },
       }),
     ]);
@@ -94,7 +96,14 @@ export async function GET(req: NextRequest) {
                 id: true,
                 name: true,
                 musclesWorked: true,
-                equipment: { select: { id: true, name: true } },
+                // Correct shape for many-to-many via ExerciseEquipment join table
+                equipment: {
+                  select: {
+                    equipment: {
+                      select: { id: true, name: true },
+                    },
+                  },
+                },
               },
             },
           },
@@ -149,6 +158,7 @@ export async function GET(req: NextRequest) {
     .map((r) => r.equipmentId);
 
   const levelKey = instance.level;
+
   const exercisesForView = plannedSession.plannedExercises.map((pe) => ({
     id: pe.id,
     order: pe.order,
@@ -165,7 +175,16 @@ export async function GET(req: NextRequest) {
           ? pe.intermediateReps
           : pe.advancedReps,
     restSeconds: pe.restSeconds,
-    exercise: pe.exercise,
+    exercise: {
+      id: pe.exercise.id,
+      name: pe.exercise.name,
+      musclesWorked: pe.exercise.musclesWorked,
+      // Flatten join table to a simple array for the mobile client
+      equipment: pe.exercise.equipment.map((ee) => ({
+        id: ee.equipment.id,
+        name: ee.equipment.name,
+      })),
+    },
   }));
 
   const muscles = [
