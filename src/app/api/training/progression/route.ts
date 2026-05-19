@@ -14,15 +14,17 @@ export const dynamic = "force-dynamic";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { planInstanceId: string } },
+  { params }: { params: Promise<{ planInstanceId: string }> },
 ) {
   const session = await getSessionFromRequest(req);
+
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   const userId = session.user.id;
-  const { planInstanceId } = params;
+
+  const { planInstanceId } = await params;
 
   // ── Fetch instance ───────────────────────────
   const instance = await prisma.planInstance.findUnique({
@@ -53,6 +55,7 @@ export async function GET(
       { status: 404 },
     );
   }
+
   if (instance.userId !== userId) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
@@ -60,26 +63,25 @@ export async function GET(
   // ── Compute progress metrics ─────────────────
   const totalSessions =
     instance.plan.durationWeeks * instance.plan.sessionsPerWeek;
+
   const completedSessions = Math.max(0, instance.currentSession - 1);
+
   const progressPct = Math.round((completedSessions / totalSessions) * 100);
 
-  // Sessions completed this week (last 7 days)
   const oneWeekAgo = new Date();
   oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+
   const sessionsThisWeek = instance.workoutLogs.filter(
     (log) => new Date(log.completedAt) >= oneWeekAgo,
   ).length;
 
-  // Last session date
   const lastSessionAt = instance.workoutLogs[0]?.completedAt ?? null;
 
-  // Deload info
   const deloadInfo = buildDeloadInfo(
     instance.deloadFlagged,
     instance.progressionWeek,
   );
 
-  // Next milestone
   const nextMilestone = buildNextMilestone(
     instance.progressionType,
     instance.progressionWeek ?? 1,
@@ -88,7 +90,6 @@ export async function GET(
     instance.currentRestSeconds,
   );
 
-  // ── Build response ───────────────────────────
   return NextResponse.json(
     {
       instance: {
@@ -101,6 +102,7 @@ export async function GET(
           ? IDENTITY_LABELS[instance.identityAtStart as Identity]
           : null,
       },
+
       plan: {
         id: instance.plan.id,
         name: instance.plan.name,
@@ -112,6 +114,7 @@ export async function GET(
         sessionsPerWeek: instance.plan.sessionsPerWeek,
         totalSessions,
       },
+
       progress: {
         currentSession: instance.currentSession,
         completedSessions,
@@ -120,6 +123,7 @@ export async function GET(
         sessionsThisWeek,
         lastSessionAt,
       },
+
       progression: {
         type: instance.progressionType,
         week: instance.progressionWeek ?? 1,
@@ -132,7 +136,9 @@ export async function GET(
       },
     },
     {
-      headers: { "Cache-Control": "no-store" },
+      headers: {
+        "Cache-Control": "no-store",
+      },
     },
   );
 }
