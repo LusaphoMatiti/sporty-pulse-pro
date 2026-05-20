@@ -34,10 +34,41 @@ export async function GET(req: NextRequest) {
   }
 
   if (!user.identity) {
-    return NextResponse.json(
-      { error: "Identity not assigned. Complete onboarding first." },
-      { status: 400 },
-    );
+    const allPrograms = await prisma.workoutPlan.findMany({
+      orderBy: { name: "asc" },
+      select: {
+        id: true,
+        name: true,
+        description: true,
+        muscleGroup: true,
+        durationWeeks: true,
+        sessionsPerWeek: true,
+        difficulty: true,
+        tier: true,
+        imageUrl: true,
+        sessionDurationMin: true,
+        identityTarget: true,
+        goalTarget: true,
+      },
+    });
+    return NextResponse.json({
+      plans: allPrograms,
+      access: {
+        isPro: false,
+        isEquipment: false,
+        hasActiveTrial: false,
+        trialExpiresAt: null,
+        canStartNewProgram: true,
+        activeInstanceCount: 0,
+        programCap: null,
+        activeEquipmentIds: [],
+        expiredEquipmentIds: [],
+        activePlanId: null,
+        declaredEquipmentIds: [],
+      },
+      declaredEquipmentName: null,
+      userIdentity: null,
+    });
   }
 
   const userEquipmentIds = await getUserEquipmentIds(userId);
@@ -52,7 +83,6 @@ export async function GET(req: NextRequest) {
 
   const programs = await prisma.workoutPlan.findMany({
     where: {
-      identityTarget: user.identity,
       OR: [
         { environmentTarget: templateMatch.environmentTarget },
         { environmentTarget: EnvironmentTarget.ANY },
