@@ -82,12 +82,6 @@ export async function GET(req: NextRequest) {
   });
 
   const programs = await prisma.workoutPlan.findMany({
-    where: {
-      OR: [
-        { environmentTarget: templateMatch.environmentTarget },
-        { environmentTarget: EnvironmentTarget.ANY },
-      ],
-    },
     include: {
       plannedSessions: {
         orderBy: { sessionNumber: "asc" },
