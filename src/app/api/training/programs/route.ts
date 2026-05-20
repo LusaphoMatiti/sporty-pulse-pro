@@ -131,13 +131,34 @@ export async function GET(req: NextRequest) {
     };
   });
 
+  const access = {
+    isPro: false,
+    isEquipment: false,
+    hasActiveTrial: false,
+    trialExpiresAt: null,
+    canStartNewProgram: true,
+    activeInstanceCount: 0,
+    programCap: null,
+    activeEquipmentIds: [],
+    expiredEquipmentIds: [],
+    activePlanId: null,
+    declaredEquipmentIds: [],
+  };
+
   return NextResponse.json(
     {
+      plans: resolvedPrograms,
+      access,
+      declaredEquipmentName: null,
+      userIdentity: user.identity,
+
+      // optional extras
       identity: {
         value: user.identity,
         label: IDENTITY_LABELS[user.identity as Identity],
         description: IDENTITY_DESCRIPTIONS[user.identity as Identity],
       },
+
       templateMatch: {
         templateType: templateMatch.templateType,
         label: TEMPLATE_LABELS[templateMatch.templateType],
@@ -145,7 +166,6 @@ export async function GET(req: NextRequest) {
         environmentTarget: templateMatch.environmentTarget,
         sessionDurationRange: templateMatch.sessionDurationRange,
       },
-      programs: resolvedPrograms,
     },
     { headers: { "Cache-Control": "no-store" } },
   );
