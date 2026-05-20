@@ -3,13 +3,7 @@ import Navbar from "@/components/global/Navbar";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState, useRef } from "react";
-import type {
-  PlanInstance,
-  WorkoutPlan,
-  PlannedSession,
-  Exercise,
-  Equipment,
-} from "@/generated/prisma";
+import type { PlanInstance, WorkoutPlan } from "@/generated/prisma";
 import type { SessionDraft } from "@/app/api/session/draft/route";
 
 //  Types
@@ -19,7 +13,12 @@ type ExerciseForView = {
   sets: number;
   reps: number;
   restSeconds: number;
-  exercise: Exercise & { equipment: Equipment | null };
+  exercise: {
+    id: string;
+    name: string;
+    musclesWorked: string[];
+    equipment: { id: string; name: string } | null;
+  };
 };
 
 /**
@@ -45,16 +44,14 @@ type ProgramStub = {
 
 type Props = {
   instance: PlanInstance & { plan: WorkoutPlan };
-  plannedSession: PlannedSession;
+  plannedSession: { focus: string };
   exercisesForView: ExerciseForView[];
   muscles: string[];
   boughtFromStore?: boolean | null;
   draft?: SessionDraft | null;
   tier?: TrainingTier;
   trialExpiresAt?: string | null;
-  /** All available programs in the library (for the programs panel) */
   allPrograms?: ProgramStub[];
-  /* Equipment IDs the user currently has active access to */
   activeEquipmentIds?: string[];
 };
 
@@ -538,7 +535,6 @@ function SessionDetailPanel({
   activeEquipmentIds,
 }: {
   instance: PlanInstance & { plan: WorkoutPlan };
-  plannedSession: PlannedSession;
   exercisesForView: ExerciseForView[];
   muscles: string[];
   boughtFromStore?: boolean | null;
@@ -919,7 +915,6 @@ export default function TrainingView({
           {(isViewingActiveProgram || allPrograms.length === 0) && (
             <SessionDetailPanel
               instance={instance}
-              plannedSession={plannedSession}
               exercisesForView={exercisesForView}
               muscles={muscles}
               boughtFromStore={boughtFromStore}

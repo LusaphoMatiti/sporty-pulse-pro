@@ -35,7 +35,18 @@ export default async function Training() {
         orderBy: { order: "asc" },
         include: {
           exercise: {
-            include: { equipment: true },
+            select: {
+              id: true,
+              name: true,
+              musclesWorked: true,
+              equipment: {
+                include: {
+                  equipment: {
+                    select: { id: true, name: true },
+                  },
+                },
+              },
+            },
           },
         },
       },
@@ -47,30 +58,29 @@ export default async function Training() {
   //  Pick sets/reps for this user's level
   const levelKey = instance.level; // "BEGINNER" | "INTERMEDIATE" | "ADVANCED"
 
-  const exercisesForView = plannedSession.plannedExercises.map((pe) => {
-    const sets =
+  const exercisesForView = plannedSession.plannedExercises.map((pe) => ({
+    id: pe.id,
+    order: pe.order,
+    sets:
       levelKey === "BEGINNER"
         ? pe.beginnerSets
         : levelKey === "INTERMEDIATE"
           ? pe.intermediateSets
-          : pe.advancedSets;
-
-    const reps =
+          : pe.advancedSets,
+    reps:
       levelKey === "BEGINNER"
         ? pe.beginnerReps
         : levelKey === "INTERMEDIATE"
           ? pe.intermediateReps
-          : pe.advancedReps;
-
-    return {
-      id: pe.id,
-      order: pe.order,
-      sets,
-      reps,
-      restSeconds: pe.restSeconds,
-      exercise: pe.exercise,
-    };
-  });
+          : pe.advancedReps,
+    restSeconds: pe.restSeconds,
+    exercise: {
+      id: pe.exercise.id,
+      name: pe.exercise.name,
+      musclesWorked: pe.exercise.musclesWorked,
+      equipment: pe.exercise.equipment[0]?.equipment ?? null, // ← this line
+    },
+  }));
 
   //  Derive unique muscles
   const muscles = [
