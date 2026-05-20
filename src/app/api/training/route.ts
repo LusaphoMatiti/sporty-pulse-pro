@@ -65,8 +65,26 @@ export async function GET(req: NextRequest) {
       }),
     ]);
 
-  if (!instance)
-    return NextResponse.json({ instanceId: null }, { status: 200 });
+  if (!instance) {
+    const allPrograms = await prisma.workoutPlan.findMany({
+      orderBy: { name: "asc" },
+      select: {
+        id: true,
+        name: true,
+        description: true,
+        tier: true,
+        muscleGroup: true,
+        imageUrl: true,
+        sessionDurationMin: true,
+        durationWeeks: true,
+        sessionsPerWeek: true,
+      },
+    });
+    return NextResponse.json(
+      { instanceId: null, allPrograms },
+      { status: 200 },
+    );
+  }
 
   const [plannedSession, totalSessions] = await Promise.all([
     prisma.plannedSession.findUnique({
