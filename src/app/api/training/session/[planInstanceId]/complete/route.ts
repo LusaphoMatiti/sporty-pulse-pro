@@ -17,7 +17,7 @@ export const dynamic = "force-dynamic";
 
 export async function POST(
   req: NextRequest,
-  { params }: { params: { planInstanceId: string } },
+  { params }: { params: Promise<{ planInstanceId: string }> },
 ) {
   const session = await getSessionFromRequest(req);
   if (!session?.user?.id) {
@@ -25,7 +25,7 @@ export async function POST(
   }
 
   const userId = session.user.id;
-  const { planInstanceId } = params;
+  const { planInstanceId } = await params;
 
   const instance = await prisma.planInstance.findUnique({
     where: { id: planInstanceId },
