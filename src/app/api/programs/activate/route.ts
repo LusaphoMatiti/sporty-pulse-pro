@@ -1,4 +1,3 @@
-// src/app/api/programs/activate/route.ts
 import { NextResponse } from "next/server";
 import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { resolveProgram } from "@/lib/resolver";
@@ -15,7 +14,7 @@ export async function POST(req: Request) {
 
   if (!planId || !level) {
     return NextResponse.json(
-      { error: "templateId and level are required" },
+      { error: "planId and level are required" },
       { status: 400 },
     );
   }

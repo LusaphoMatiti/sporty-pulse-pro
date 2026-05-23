@@ -1,0 +1,1266 @@
+{
+  "goal": "GET_FIT",
+  "totalWorkouts": 20,
+  "workouts": [
+    {
+      "workoutName": "Athletic Conditioning \u2014 Full Body Circuit",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "duration": "50 min",
+      "intensity": "HIGH",
+      "warmup": "5 min row or bike, jumping jacks x30, hip circles x10 each, arm swings x20, high knees x20",
+      "mainWorkout": [
+        {
+          "exercise": "Barbell Back Squat",
+          "sets": 3,
+          "reps": "8",
+          "tempo": "2-0-1-0",
+          "rest": "60s",
+          "coachingFocus": "Controlled descent, explosive up. Fitness is about power and strength combined. Don't grind \u2014 train to feel athletic."
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "15-20",
+          "tempo": "1-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Rigid plank body. Full ROM. Rhythmic pace. Chest to floor. If 20 reps is easy, add a weighted vest or elevate your feet."
+        },
+        {
+          "exercise": "Barbell Bent-Over Row",
+          "sets": 3,
+          "reps": "10",
+          "tempo": "2-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Pull elbows back. Hinge and hold. This is strength within a fitness context. Back strength is foundational to all movement quality."
+        },
+        {
+          "exercise": "Box Jump",
+          "sets": 3,
+          "reps": "8",
+          "tempo": "Explosive",
+          "rest": "45s",
+          "coachingFocus": "Land soft with both feet. Reset between reps. Explosiveness is a fitness quality \u2014 train it. Step down, don't jump down from the box."
+        },
+        {
+          "exercise": "Dumbbell Shoulder Press",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "2-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Full overhead range. Builds functional shoulder strength and stability. Athletic posture requires overhead strength."
+        },
+        {
+          "exercise": "Battle Ropes",
+          "sets": 3,
+          "reps": "30s on / 20s off",
+          "tempo": "Max effort",
+          "rest": "60s",
+          "coachingFocus": "Max effort for 30s. Alternating waves. Arms and cardiovascular system simultaneously. This is conditioning \u2014 push through the burn."
+        }
+      ],
+      "finisher": "Assault Bike: 4 x 20s sprint / 40s rest \u2014 max effort intervals to spike cardiovascular output",
+      "cooldown": "5 min walk, hip flexor lunge 45s each, hamstring stretch 60s each, thoracic rotation 30s each side",
+      "estimatedCalories": "520-640",
+      "progressionNotes": "Get fit training requires both cardiovascular and strength adaptation. Increase box jump height monthly. Reduce rest periods by 5s every 2 weeks as fitness improves."
+    },
+    {
+      "workoutName": "Functional Performance \u2014 AMRAP Style",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "duration": "45 min",
+      "intensity": "HIGH",
+      "warmup": "5 min bike, dynamic movement prep, goblet squat x10, push-up x10, jumping jack x20",
+      "mainWorkout": [
+        {
+          "exercise": "Goblet Squat",
+          "sets": 4,
+          "reps": "15",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "Higher reps for fitness \u2014 keep form sharp even when fatigued. Upright torso. Full depth. Don't compromise on the last 3 reps."
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 4,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "Consistent rhythm. Drop to knees before form breaks. Quality reps build capacity \u2014 poor reps just create fatigue."
+        },
+        {
+          "exercise": "Dumbbell Row (Single Arm)",
+          "sets": 4,
+          "reps": "12 each",
+          "tempo": "2-0-1-0",
+          "rest": "30s between arms",
+          "coachingFocus": "Move with purpose. Back pulls are as important as chest pushes for fitness and posture. Don't let back work fall behind push work."
+        },
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 4,
+          "reps": "20",
+          "tempo": "Rhythmic",
+          "rest": "30s",
+          "coachingFocus": "Hip hinge and snap. Glutes drive the swing. Not a squat. Hike the bell back, snap hips through. This is the single most efficient fitness exercise."
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 3,
+          "reps": "10",
+          "tempo": "As fast as possible",
+          "rest": "60s",
+          "coachingFocus": "Control the descent. Chest to floor. Stand fully. Explosive movement tests aerobic and anaerobic capacity simultaneously. Earn your rest."
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "Max effort",
+          "rest": "30s",
+          "coachingFocus": "Hips down. Plank integrity while running. Core and cardiovascular together. Keep hips from rising \u2014 form is the first thing to go when tired."
+        }
+      ],
+      "finisher": "EMOM 5 min: Odd minutes = 10 burpees, Even minutes = 15 goblet squats",
+      "cooldown": "Walk 3 min, full body stretch sequence, child's pose 90s, deep breathing 60s",
+      "estimatedCalories": "500-620",
+      "progressionNotes": "Track completion time for the circuit. Aim to reduce total session time by 2-3 min over 4 weeks by improving work capacity and reducing rest needs."
+    },
+    {
+      "workoutName": "Cardio Strength \u2014 Interval Training",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "BEGINNER",
+      "duration": "40 min",
+      "intensity": "MODERATE",
+      "warmup": "5 min walk, leg swings x10, arm circles x10, march in place 1 min, bodyweight squat x10",
+      "mainWorkout": [
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 3,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Establish the squat pattern. Feet shoulder-width. Knees track toes. Chest tall. This is your lower body workhorse at home or gym."
+        },
+        {
+          "exercise": "Incline Push-Up",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Hands elevated reduces load \u2014 perfect entry point. Full ROM is the priority. Progress to flat when 15 reps feel easy."
+        },
+        {
+          "exercise": "Resistance Band Row",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-1-1-0",
+          "rest": "45s",
+          "coachingFocus": "Pull elbows back. Squeeze shoulder blades. Back pulling patterns are essential for posture and functional fitness. Control the return."
+        },
+        {
+          "exercise": "High Knees",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "Moderate-high effort",
+          "rest": "45s",
+          "coachingFocus": "Drive knees up to hip height. Arms pump naturally. Gets heart rate up without impact stress of jumping. Breathe rhythmically."
+        },
+        {
+          "exercise": "Glute Bridge",
+          "sets": 3,
+          "reps": "15-20",
+          "tempo": "2-1-2-0",
+          "rest": "30s",
+          "coachingFocus": "Drive hips up. Squeeze glutes at top. Hold 1 second. This activates the posterior chain and is perfect for beginners building lower body fitness."
+        },
+        {
+          "exercise": "Plank",
+          "sets": 3,
+          "reps": "20-30s",
+          "tempo": "Isometric",
+          "rest": "45s",
+          "coachingFocus": "Ribs down. Glutes on. Breathe steadily. Core stability supports everything \u2014 running, lifting, sport, life. Build this."
+        }
+      ],
+      "finisher": "March in place: 3 min continuous at brisk pace \u2014 low-impact steady state to close",
+      "cooldown": "5 min walk, seated hamstring stretch 45s each, hip flexor lunge 45s each, chest stretch 45s",
+      "estimatedCalories": "300-380",
+      "progressionNotes": "Beginner base-building. Progress when each exercise feels 'easy' \u2014 not just completeable. Milestone: push-up on flat, 3x15 clean reps before moving on."
+    },
+    {
+      "workoutName": "Athletic Power & Conditioning",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "ADVANCED",
+      "duration": "55 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "5 min assault bike, jump rope 2 min, dynamic lunge x10 each, arm swings, broad jump x5 submaximal",
+      "mainWorkout": [
+        {
+          "exercise": "Power Clean",
+          "sets": 5,
+          "reps": "4",
+          "tempo": "Explosive",
+          "rest": "90s",
+          "coachingFocus": "Triple extension \u2014 ankle, knee, hip. Aggressive high pull. Catch in quarter squat. Power cleans build explosive athleticism that nothing else replaces."
+        },
+        {
+          "exercise": "Box Jump",
+          "sets": 4,
+          "reps": "6",
+          "tempo": "Max intent",
+          "rest": "60s",
+          "coachingFocus": "Load and jump explosively. Soft landing. Step down \u2014 don't jump down. Full hip extension at the top. Quality over quantity."
+        },
+        {
+          "exercise": "Barbell Back Squat",
+          "sets": 4,
+          "reps": "6",
+          "tempo": "2-0-X-0",
+          "rest": "90s",
+          "coachingFocus": "Strength base for power. Controlled descent, explosive ascent. Strength and power work synergistically for athletic fitness."
+        },
+        {
+          "exercise": "Broad Jump",
+          "sets": 4,
+          "reps": "5",
+          "tempo": "Max distance",
+          "rest": "60s",
+          "coachingFocus": "Full arm swing. Jump as far as possible. Soft landing. Horizontal power expression. Athletes who jump further are better at almost everything."
+        },
+        {
+          "exercise": "Thrusters",
+          "sets": 3,
+          "reps": "10",
+          "tempo": "Controlled but purposeful",
+          "rest": "90s",
+          "coachingFocus": "Squat drives the press. Use momentum from the squat into the overhead. Most demanding single exercise in the gym. Full lockout every rep."
+        },
+        {
+          "exercise": "Sprint Intervals (Running)",
+          "sets": 6,
+          "reps": "20s sprint",
+          "tempo": "Max effort",
+          "rest": "40s",
+          "coachingFocus": "Upright posture. Arm drive. Max effort every sprint. Anaerobic capacity is the fitness quality that separates athletes from exercisers."
+        }
+      ],
+      "finisher": "Assault Bike: 5 x 10s all-out sprint / 50s rest \u2014 Wingate-style peak power output test",
+      "cooldown": "10 min light walk/jog, hip flexor stretch 60s each, quad stretch 45s each, lower back cat-cow 60s",
+      "estimatedCalories": "620-750",
+      "progressionNotes": "Advanced: periodise power work in 4-week blocks. Week 1-2: volume (more sets), Week 3-4: intensity (heavier/faster). Deload week 5."
+    },
+    {
+      "workoutName": "Hybrid Fitness \u2014 Strength Meets Cardio",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "duration": "55 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "3 min row, jumping jacks x30, goblet squat x10, push-up x10, face pull x15",
+      "mainWorkout": [
+        {
+          "exercise": "Romanian Deadlift",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "2-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Strength component. Hip hinge for posterior chain. Maintain flat back. This is strength training embedded in a fitness workout \u2014 take it seriously."
+        },
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 4,
+          "reps": "20",
+          "tempo": "Rhythmic \u2014 explosive hip snap",
+          "rest": "45s",
+          "coachingFocus": "Bridge between strength and conditioning. Cardio through strength. Hip snap is the driver. Arms are just ropes attached to your hips."
+        },
+        {
+          "exercise": "Pull-Up",
+          "sets": 4,
+          "reps": "8-12",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "coachingFocus": "Strength pullup \u2014 pure and demanding. The fitness community over-kips and under-develops the back. Do it properly \u2014 dead hang, chin over bar."
+        },
+        {
+          "exercise": "Wall Ball",
+          "sets": 4,
+          "reps": "15",
+          "tempo": "Continuous rhythm",
+          "rest": "45s",
+          "coachingFocus": "Squat and launch. Catch and immediately squat. No pause. Upper and lower body cardio in one exercise. High 10ft target. Keep the pace."
+        },
+        {
+          "exercise": "Barbell Bench Press",
+          "sets": 3,
+          "reps": "8",
+          "tempo": "2-0-1-0",
+          "rest": "75s",
+          "coachingFocus": "Strength anchor for pushing. Moderate weight, controlled effort. Fitness doesn't mean sacrificing strength \u2014 it means building both."
+        },
+        {
+          "exercise": "Rowing Machine",
+          "sets": 3,
+          "reps": "500m",
+          "tempo": "Moderate-hard pace",
+          "rest": "90s",
+          "coachingFocus": "Drive with legs, not arms. Body leans back, then arms pull. Legs are 60% of the stroke. Consistent split time \u2014 don't die at the start."
+        }
+      ],
+      "finisher": "Kettlebell Swing x50 for time \u2014 record time and beat it next session",
+      "cooldown": "Row easy 2 min, hamstring stretch 60s each, lat stretch 45s each, deep breathing 60s",
+      "estimatedCalories": "540-660",
+      "progressionNotes": "Hybrid training requires managing both strength and cardio fatigue. Keep a training log \u2014 if strength suffers, reduce cardio volume. If cardio suffers, check recovery."
+    },
+    {
+      "workoutName": "Home Fitness \u2014 No Equipment HIIT Strength",
+      "goal": "GET_FIT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "duration": "35 min",
+      "intensity": "MODERATE",
+      "warmup": "March in place 2 min, arm circles x20, leg swings x10 each, hip circles x10 each, push-up x8",
+      "mainWorkout": [
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 3,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "The movement foundation. Feet shoulder-width. Chest up. Drive through heels. Do these well and your lower body fitness will accelerate."
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "10-15",
+          "tempo": "2-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "Plank position. Full ROM. No half-reps. If needed, incline hands on a chair to reduce load. Quality is the standard."
+        },
+        {
+          "exercise": "Glute Bridge",
+          "sets": 3,
+          "reps": "20",
+          "tempo": "2-1-2-0",
+          "rest": "30s",
+          "coachingFocus": "Hips up. Squeeze glutes hard at top. Hold 1 second. Lower back is passive here \u2014 if it fires, reset and drive more with glutes."
+        },
+        {
+          "exercise": "High Knees",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "Brisk",
+          "rest": "30s",
+          "coachingFocus": "Get the heart rate up. Knees to hip height. Arms pump. Breathe through your nose if you can \u2014 it's a good gauge of intensity."
+        },
+        {
+          "exercise": "Reverse Lunge",
+          "sets": 3,
+          "reps": "10 each",
+          "tempo": "2-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "Step back. Knee to floor. Drive through front foot. Safer than forward lunge for beginners. Build balance and unilateral strength here."
+        },
+        {
+          "exercise": "Plank",
+          "sets": 3,
+          "reps": "20-30s",
+          "tempo": "Isometric",
+          "rest": "30s",
+          "coachingFocus": "Perfect position. Ribs down. Glutes on. Don't let hips sag or rise. Build this weekly \u2014 a strong core is the chassis for all fitness."
+        }
+      ],
+      "finisher": "30s Bodyweight Squat + 30s Rest + 30s Push-Up + 30s Rest: 3 rounds total",
+      "cooldown": "Walk 3 min slowly, seated hamstring stretch 45s each, child's pose 60s, deep breathing 60s",
+      "estimatedCalories": "240-320",
+      "progressionNotes": "Beginner goal: complete all sets and reps with full ROM by week 3. Milestone: push-up flat x10 clean reps, plank 45s. Then progress to intermediate workouts."
+    },
+    {
+      "workoutName": "Functional Movement Circuit \u2014 Get Fit",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "duration": "50 min",
+      "intensity": "HIGH",
+      "warmup": "5 min row, Turkish get-up light x3 each, hip hinge drills, shoulder circles",
+      "mainWorkout": [
+        {
+          "exercise": "Turkish Get-Up",
+          "sets": 4,
+          "reps": "3 each side",
+          "tempo": "Slow and deliberate",
+          "rest": "60s between sides",
+          "coachingFocus": "Eyes on the weight throughout. Master each position before moving through it. This single exercise tests strength, mobility, and stability. No rush."
+        },
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 4,
+          "reps": "25",
+          "tempo": "Rhythmic",
+          "rest": "45s",
+          "coachingFocus": "Hip hinge and explosive snap. Don't squat the swing. Let the bell float at the top \u2014 power comes from hip extension, not muscle grinding."
+        },
+        {
+          "exercise": "Farmer's Carry",
+          "sets": 4,
+          "reps": "30m walk",
+          "tempo": "Controlled pace",
+          "rest": "60s",
+          "coachingFocus": "Tall posture. No leaning. Shoulders packed. Farmer's carries build grip, core, and cardiovascular fitness simultaneously. Simple but brutally effective."
+        },
+        {
+          "exercise": "Bear Crawl",
+          "sets": 3,
+          "reps": "15m forward + 15m back",
+          "tempo": "Controlled",
+          "rest": "60s",
+          "coachingFocus": "Knees hover 1 inch off floor. Opposite arm/leg move together. Shoulder and core stability under load. Humbling and highly effective."
+        },
+        {
+          "exercise": "Box Jump",
+          "sets": 3,
+          "reps": "8",
+          "tempo": "Explosive",
+          "rest": "45s",
+          "coachingFocus": "Reactive power \u2014 critical for functional fitness. Load the hips, explode up. Land soft. Step down. Express power every rep."
+        },
+        {
+          "exercise": "Single Arm KB Overhead Carry",
+          "sets": 3,
+          "reps": "20m each arm",
+          "tempo": "Controlled",
+          "rest": "45s between arms",
+          "coachingFocus": "KB in lockout overhead. Core fights the lean. Shoulder stabilisers work maximally. This is real functional fitness \u2014 not a machine in a corner."
+        }
+      ],
+      "finisher": "Sled Push: 4 x 20m \u2014 add moderate load. Drive through legs. Conditioning and leg strength in one brutal finisher.",
+      "cooldown": "Walk 3 min, hip circle 60s each, thoracic rotation 45s each, wrist flexor stretch 30s each",
+      "estimatedCalories": "500-620",
+      "progressionNotes": "Functional fitness progression: increase carry distance monthly, increase KB weight on swings when 25 reps feel comfortable for 3+ sessions in a row."
+    },
+    {
+      "workoutName": "Endurance Strength \u2014 Long Format Fitness",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "duration": "60 min",
+      "intensity": "MODERATE",
+      "warmup": "8 min easy row or bike, dynamic stretching sequence, mobility prep for all planned movements",
+      "mainWorkout": [
+        {
+          "exercise": "Goblet Squat",
+          "sets": 4,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Moderate weight. High reps. This is endurance strength. Breathing is key \u2014 exhale on the way up. Your legs will burn. That's the stimulus."
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 4,
+          "reps": "25",
+          "tempo": "1-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Paced pushing endurance. Don't rush the first 10. Consistent rhythm is better than a fast start and collapse. Form holds the session together."
+        },
+        {
+          "exercise": "Inverted Row",
+          "sets": 4,
+          "reps": "15-20",
+          "tempo": "2-1-1-0",
+          "rest": "45s",
+          "coachingFocus": "Pull chest to bar. Maintain straight body. Higher reps for fitness and pull endurance. Adjust difficulty by foot position."
+        },
+        {
+          "exercise": "Walking Lunge",
+          "sets": 3,
+          "reps": "20 each (40 total steps)",
+          "tempo": "Controlled walking pace",
+          "rest": "60s",
+          "coachingFocus": "Long continuous set. Front knee tracks toes. Torso upright. Lunges for distance build leg endurance and hip mobility simultaneously."
+        },
+        {
+          "exercise": "Rowing Machine",
+          "sets": 3,
+          "reps": "3 min at moderate pace",
+          "tempo": "Sustainable effort",
+          "rest": "90s",
+          "coachingFocus": "Legs then back then arms on each stroke. Sustainable pace \u2014 not max effort. Building aerobic base is the goal here. Monitor split time."
+        },
+        {
+          "exercise": "Plank",
+          "sets": 3,
+          "reps": "45-60s",
+          "tempo": "Isometric",
+          "rest": "45s",
+          "coachingFocus": "Core endurance holds everything together. Breathe. Ribs down. Glutes on. This should feel hard by the last set \u2014 if not, elevate your feet."
+        }
+      ],
+      "finisher": "Jump Rope: 5 min continuous at moderate pace \u2014 aerobic capacity builder",
+      "cooldown": "10 min walk, hip flexor stretch 60s each, hamstring stretch 60s each, child's pose 90s",
+      "estimatedCalories": "450-560",
+      "progressionNotes": "Endurance strength improves through increasing density. Track total reps completed per session. Goal: reduce rest periods from 45s to 30s over 6 weeks."
+    },
+    {
+      "workoutName": "High Intensity Interval Strength \u2014 HIIS",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "duration": "40 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "5 min bike moderate, jumping jacks x30, hip hinge x10, push-up x10, 2 min easy row",
+      "mainWorkout": [
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 5,
+          "reps": "30s on / 30s off",
+          "tempo": "Max effort",
+          "rest": "30s active rest (walk)",
+          "coachingFocus": "Explosive hip drive for the full 30s. Count reps per interval. Rest fully. Aim to maintain consistent rep count across all 5 sets."
+        },
+        {
+          "exercise": "Barbell Back Squat",
+          "sets": 4,
+          "reps": "40s on / 20s off",
+          "tempo": "Controlled but purposeful",
+          "rest": "20s",
+          "coachingFocus": "Moderate weight. As many quality reps as possible in 40s. Don't sacrifice depth for reps. Safety and stimulus go together."
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "30s on / 30s off",
+          "tempo": "Max effort",
+          "rest": "30s",
+          "coachingFocus": "Chest to floor. Jump and clap at the top. Max reps in the window. This is the purest fitness test \u2014 full body, cardiovascular, and mental."
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "30s on / 15s off",
+          "tempo": "Rhythmic",
+          "rest": "15s",
+          "coachingFocus": "Don't burn out in the first 10 seconds. Paced effort. Keep hips from sagging. Count reps \u2014 beat it next session."
+        },
+        {
+          "exercise": "Jump Squat",
+          "sets": 3,
+          "reps": "30s on / 30s off",
+          "tempo": "Explosive",
+          "rest": "30s",
+          "coachingFocus": "Quarter squat, explosive jump, soft land. Reset and repeat. Power-endurance \u2014 legs and heart at maximum."
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "30s on / 15s off",
+          "tempo": "Max effort",
+          "rest": "15s",
+          "coachingFocus": "Hips level. Drive knees toward chest. Fast feet. Core engaged throughout. Cardiovascular and core endurance in one."
+        }
+      ],
+      "finisher": "Assault Bike: 10 x 10s max sprint / 20s easy \u2014 max intensity spike to close the session",
+      "cooldown": "5 min walk, hamstring stretch 45s each, hip flexor lunge 60s each, deep breathing 90s",
+      "estimatedCalories": "560-680",
+      "progressionNotes": "HIIS training: track reps per interval across sessions. Progress when reps increase consistently by 2+ across 3 sessions. Reduce recovery by 5s every 2 weeks."
+    },
+    {
+      "workoutName": "Get Fit \u2014 Upper/Lower Split Day 1",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "duration": "50 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "5 min row, glute bridge x15, leg swings x10, hip circle x10, goblet squat x10",
+      "mainWorkout": [
+        {
+          "exercise": "Barbell Back Squat",
+          "sets": 4,
+          "reps": "8-10",
+          "tempo": "2-0-1-0",
+          "rest": "75s",
+          "coachingFocus": "Fitness requires strength. Squat is king. Controlled descent \u2014 explosive ascent. Train the pattern that serves you for life. Take it seriously."
+        },
+        {
+          "exercise": "Romanian Deadlift",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "2-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Hip hinge. Hamstring and glute posterior chain. Essential counterbalance to quad-dominant squat. Balance front-to-back every session."
+        },
+        {
+          "exercise": "Bulgarian Split Squat",
+          "sets": 3,
+          "reps": "10 each",
+          "tempo": "2-0-1-0",
+          "rest": "60s between legs",
+          "coachingFocus": "Unilateral fitness \u2014 address imbalances. Rear foot elevated. Front foot drives. This will test your cardiovascular system AND your legs."
+        },
+        {
+          "exercise": "Box Jump",
+          "sets": 3,
+          "reps": "8",
+          "tempo": "Explosive",
+          "rest": "45s",
+          "coachingFocus": "Power after strength. Reactive lower body fitness. Jump high. Land soft. Reset every rep. Don't accumulate fatigue \u2014 quality matters."
+        },
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 3,
+          "reps": "20",
+          "tempo": "Rhythmic",
+          "rest": "45s",
+          "coachingFocus": "Hip hinge and explosive snap. Cardiovascular conditioning via strength movements. This is what fitness training looks like \u2014 not isolated curls."
+        },
+        {
+          "exercise": "Suitcase Carry",
+          "sets": 3,
+          "reps": "30m each arm",
+          "tempo": "Controlled",
+          "rest": "45s between arms",
+          "coachingFocus": "Tall posture. Don't lean into the load. Core fights the weight laterally. Loaded carries build real-world functional fitness."
+        }
+      ],
+      "finisher": "Squat Thrust x10 + High Knees x20: 4 rounds, 30s rest \u2014 lower body and cardio blast",
+      "cooldown": "Hip flexor lunge 60s each, pigeon pose 60s each, hamstring stretch 45s each",
+      "estimatedCalories": "500-600",
+      "progressionNotes": "Lower body fitness day. Track total session completion time. Progress squat load when top of rep range is hit with full depth for all 4 sets."
+    },
+    {
+      "workoutName": "Get Fit \u2014 Upper/Lower Split Day 2",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "duration": "50 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "5 min bike, arm circles x20, band pull-aparts x20, push-up x10, face pull x15",
+      "mainWorkout": [
+        {
+          "exercise": "Barbell Bench Press",
+          "sets": 4,
+          "reps": "8-10",
+          "tempo": "2-0-1-0",
+          "rest": "75s",
+          "coachingFocus": "Upper body strength anchor. Chest, shoulders, triceps. Strength is the foundation of fitness \u2014 build it and the rest follows."
+        },
+        {
+          "exercise": "Pull-Up",
+          "sets": 4,
+          "reps": "8-12",
+          "tempo": "2-1-2-0",
+          "rest": "75s",
+          "coachingFocus": "Upper body pull to match the push. Dead hang. Full ROM. If 12 reps is easy, add weight. If less than 8 is possible, use band assistance."
+        },
+        {
+          "exercise": "Dumbbell Shoulder Press",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "2-0-1-0",
+          "rest": "60s",
+          "coachingFocus": "Overhead strength. Shoulder health is critical for fitness longevity. Full ROM. Keep core engaged \u2014 don't arch the lower back to press more."
+        },
+        {
+          "exercise": "Battle Ropes",
+          "sets": 4,
+          "reps": "30s on / 30s off",
+          "tempo": "Max effort",
+          "rest": "30s",
+          "coachingFocus": "Max effort alternating waves. Cardiovascular conditioning through the upper body. Arms and lungs simultaneously \u2014 elite fitness training."
+        },
+        {
+          "exercise": "Face Pull",
+          "sets": 3,
+          "reps": "20",
+          "tempo": "2-2-1-0",
+          "rest": "30s",
+          "coachingFocus": "Rear delt and rotator cuff health. Non-negotiable. External rotate hard at the end. Shoulder longevity underpins long-term fitness."
+        },
+        {
+          "exercise": "Renegade Row",
+          "sets": 3,
+          "reps": "8 each",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Plank + row. Minimal hip rotation. Core and back simultaneously. This is functional fitness in its purest form \u2014 multi-dimensional challenge."
+        }
+      ],
+      "finisher": "Push-Up x20 + Burpee x10: 3 rounds, 45s rest \u2014 full upper body and cardiovascular burnout",
+      "cooldown": "Cross-body shoulder stretch 45s each, lat stretch 45s each, doorway chest stretch 60s each, deep breathing",
+      "estimatedCalories": "480-580",
+      "progressionNotes": "Upper body fitness. Track pull-up max reps monthly. Goal: unweighted pull-ups x12+ clean, then begin weighted work."
+    },
+    {
+      "workoutName": "Recovery Fitness \u2014 Active Movement Day",
+      "goal": "GET_FIT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "duration": "40 min",
+      "intensity": "LOW",
+      "warmup": "5 min walk, neck rolls, shoulder circles, cat-cow x10, hip circles x10",
+      "mainWorkout": [
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-1-2-0",
+          "rest": "30s",
+          "coachingFocus": "Slow and controlled today. Recovery day is about blood flow and movement quality. Not intensity. Breathe deeply. Move with awareness."
+        },
+        {
+          "exercise": "Glute Bridge",
+          "sets": 3,
+          "reps": "20",
+          "tempo": "2-2-2-0",
+          "rest": "30s",
+          "coachingFocus": "Activate the glutes gently. 2-second hold at top. Breathing slow and deep. Active recovery restores without fatiguing further."
+        },
+        {
+          "exercise": "Incline Push-Up",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "3-0-2-0",
+          "rest": "30s",
+          "coachingFocus": "Slow and gentle today. Hands elevated. Controlled. This restores blood flow to the chest and shoulders without creating new soreness."
+        },
+        {
+          "exercise": "Resistance Band Row",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-1-2-0",
+          "rest": "30s",
+          "coachingFocus": "Gentle back activation. Squeeze between shoulder blades. This improves posture and counters the anterior tightness from desk work."
+        },
+        {
+          "exercise": "Cat-Cow",
+          "sets": 3,
+          "reps": "10 cycles",
+          "tempo": "Breath-paced",
+          "rest": "30s",
+          "coachingFocus": "Inhale \u2014 arch back (cow). Exhale \u2014 round back (cat). Spinal mobility and nervous system reset. Do this slowly. This is restoration."
+        },
+        {
+          "exercise": "Walking Lunge",
+          "sets": 2,
+          "reps": "10 each",
+          "tempo": "Slow controlled",
+          "rest": "45s",
+          "coachingFocus": "Light recovery lunge. Hip flexor extension with movement. Helps restore range of motion lost from sitting. No load, no rush."
+        }
+      ],
+      "finisher": "Walk 5 min at easy pace outdoors if possible \u2014 sunlight and movement are the best recovery tools",
+      "cooldown": "15 min full body stretch \u2014 hold each position for 60-90s, focus on breathing and parasympathetic recovery",
+      "estimatedCalories": "160-220",
+      "progressionNotes": "Recovery sessions should feel restorative, not challenging. If still very sore 48h after training, add a second recovery session. Never skip cooldowns on these days."
+    },
+    {
+      "workoutName": "CrossFit-Style \u2014 Functional Fitness WOD",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "ADVANCED",
+      "duration": "45 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "Row 500m easy, jump rope 2 min, dynamic mobility, 3 rounds: pull-up x3 + push-up x5 + air squat x7",
+      "mainWorkout": [
+        {
+          "exercise": "Power Clean",
+          "sets": 5,
+          "reps": "5",
+          "tempo": "Explosive",
+          "rest": "90s",
+          "coachingFocus": "Full triple extension. Aggressive pull under the bar. Catch in strong front rack. Power cleans are the most complete expression of athletic fitness."
+        },
+        {
+          "exercise": "Pull-Up",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "2-0-1-0",
+          "rest": "60s",
+          "coachingFocus": "Dead hang. Chin over. Full ROM. If kipping is allowed in your setting, strict first \u2014 always. Strength earns the gymnastics skills."
+        },
+        {
+          "exercise": "Thrusters",
+          "sets": 4,
+          "reps": "12",
+          "tempo": "Controlled but purposeful",
+          "rest": "75s",
+          "coachingFocus": "Squat drives the press. Lockout completely at the top. The thruster is both a mental and physical test \u2014 embrace the discomfort."
+        },
+        {
+          "exercise": "Box Jump",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "Explosive \u2014 reset each rep",
+          "rest": "45s",
+          "coachingFocus": "Full hip extension at top of box. Step down \u2014 always. Landing mechanics are non-negotiable. Never jump down from height after fatigue."
+        },
+        {
+          "exercise": "Assault Bike",
+          "sets": 4,
+          "reps": "30s on / 30s off",
+          "tempo": "Max effort",
+          "rest": "30s",
+          "coachingFocus": "Maximum caloric output in the window. Arms and legs working together. The Assault Bike is the most honest fitness machine in existence."
+        },
+        {
+          "exercise": "Double Under",
+          "sets": 4,
+          "reps": "30",
+          "tempo": "Rhythmic",
+          "rest": "45s",
+          "coachingFocus": "Jump higher than single under. Wrists spin fast. Stay relaxed in the shoulders. Consistent rhythm is faster than forced tension."
+        }
+      ],
+      "finisher": "For Time: 21-15-9 of Kettlebell Swing + Push-Up. Record time and aim to beat next week.",
+      "cooldown": "Walk 5 min, full body stretch, hip flexors, hamstrings, shoulders \u2014 minimum 10 min. Non-negotiable post-high intensity.",
+      "estimatedCalories": "650-800",
+      "progressionNotes": "Advanced: track WOD times. Progress load on power cleans and thrusters monthly. If form degrades under fatigue, reduce load. Fitness without form is just fatigue."
+    },
+    {
+      "workoutName": "Bodyweight Fitness \u2014 Intermediate Home",
+      "goal": "GET_FIT",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "duration": "45 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "Jumping jacks x40, hip circles x10 each, arm swings x20, push-up x10, air squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Pistol Squat (or progression)",
+          "sets": 4,
+          "reps": "6-8 each",
+          "tempo": "3-0-1-0",
+          "rest": "60s between legs",
+          "coachingFocus": "Most demanding bodyweight leg exercise. Use wall for balance if needed. Control descent. Arms forward. Build toward full ROM progressively."
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 4,
+          "reps": "20-25",
+          "tempo": "1-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "High-rep fitness push. Don't burn out. Steady rhythm. Chest to floor. Fitness requires volume \u2014 earn it with quality reps."
+        },
+        {
+          "exercise": "Pull-Up",
+          "sets": 4,
+          "reps": "Max reps",
+          "tempo": "2-0-2-0",
+          "rest": "90s",
+          "coachingFocus": "Dead hang. Chin over. Every rep. Stop before form fails. Max reps \u2014 write it down. Beat it by 1 next week. That's progressive overload."
+        },
+        {
+          "exercise": "Jump Squat",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "Explosive",
+          "rest": "45s",
+          "coachingFocus": "Explosive bodyweight conditioning. Land soft. Immediate reload. Cardiovascular and power combined. This is the heart of bodyweight fitness."
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "As fast as possible",
+          "rest": "45s",
+          "coachingFocus": "Chest to floor. Jump and clap. No shortcuts. The burpee is democratic \u2014 everyone hates it equally, and it works for everyone equally."
+        },
+        {
+          "exercise": "Plank",
+          "sets": 3,
+          "reps": "45-60s",
+          "tempo": "Isometric",
+          "rest": "30s",
+          "coachingFocus": "Core endurance builds session resilience. Ribs down. Glutes on. Breathe steadily. Increase by 5s each week until you hit 90s solid."
+        }
+      ],
+      "finisher": "Bodyweight Tabata: 8 rounds of 20s Push-Up / 10s rest + 8 rounds of 20s Squat / 10s rest",
+      "cooldown": "Walk 3 min, hip flexor lunge 60s each, hamstring stretch 60s each, chest stretch in doorway 45s each",
+      "estimatedCalories": "400-500",
+      "progressionNotes": "Bodyweight progression: track max pull-ups weekly. Once 15+ reps achieved, add weighted vest. Pistol squat: use wall, then TRX, then freestanding."
+    },
+    {
+      "workoutName": "Sprint & Strength \u2014 Athletic Power Circuit",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "ADVANCED",
+      "duration": "50 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "10 min jog, dynamic sprint drills (A-skip, B-skip, high knee), submaximal sprints x4 at 70%",
+      "mainWorkout": [
+        {
+          "exercise": "Sprint Intervals (Running)",
+          "sets": 6,
+          "reps": "30s sprint",
+          "tempo": "Max effort",
+          "rest": "90s walk",
+          "coachingFocus": "True max effort \u2014 not comfortable fast. Upright posture. Arm drive. Each sprint should feel like you couldn't possibly go harder. Recover fully."
+        },
+        {
+          "exercise": "Barbell Back Squat",
+          "sets": 4,
+          "reps": "6",
+          "tempo": "2-0-X-0",
+          "rest": "90s",
+          "coachingFocus": "Strength base for sprint power. Controlled descent. Explosive ascent. Strong legs make faster sprinters. Strength and speed are connected."
+        },
+        {
+          "exercise": "Broad Jump",
+          "sets": 4,
+          "reps": "6",
+          "tempo": "Max distance",
+          "rest": "60s",
+          "coachingFocus": "Horizontal power. Jump far. Land balanced. Measure distance and track monthly improvement. Athletic fitness is measurable \u2014 measure it."
+        },
+        {
+          "exercise": "Barbell Bent-Over Row",
+          "sets": 3,
+          "reps": "8",
+          "tempo": "2-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Athletic fitness requires balanced pulling. Upper back strength supports sprint mechanics \u2014 posture and arm drive efficiency."
+        },
+        {
+          "exercise": "Squat Thrust",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "Fast",
+          "rest": "30s",
+          "coachingFocus": "Jump feet back \u2014 jump feet forward \u2014 stand. Cardiovascular demand. Mimics athletic change-of-direction pattern. Quick feet and quick lungs."
+        },
+        {
+          "exercise": "Assault Bike",
+          "sets": 4,
+          "reps": "20s sprint",
+          "tempo": "Max effort",
+          "rest": "40s",
+          "coachingFocus": "Max caloric output in 20s. Arms and legs. Every set should feel like your first \u2014 if they don't, go harder on the earlier ones."
+        }
+      ],
+      "finisher": "Hill Sprint or Assault Bike: 4 x 15s all-out / 45s recovery \u2014 peak power and anaerobic capacity",
+      "cooldown": "10 min easy jog then walk, quad stretch 60s each, hip flexor 60s each, calf stretch 45s each",
+      "estimatedCalories": "600-740",
+      "progressionNotes": "Sprint fitness: track 30m sprint time monthly. As strength increases (squat numbers rise), sprint performance follows. Power is the bridge between them."
+    },
+    {
+      "workoutName": "Total Body Fitness \u2014 30 Minute Express",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "duration": "30 min",
+      "intensity": "HIGH",
+      "warmup": "3 min bike max, jumping jacks x20, push-up x10, air squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 3,
+          "reps": "20",
+          "tempo": "Rhythmic",
+          "rest": "20s",
+          "coachingFocus": "Express format \u2014 minimal rest. Explosive hip snap. Breathing is your pacing tool. Nasal breathing if possible \u2014 it's more efficient."
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "20s",
+          "coachingFocus": "Maintain plank. Consistent pace. Don't blow up early. 20 quality reps beats 30 half reps every session."
+        },
+        {
+          "exercise": "Goblet Squat",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "1-0-1-0",
+          "rest": "20s",
+          "coachingFocus": "Deep and tall. Fast enough for cardio, controlled enough for form. This is the fitness sweet spot \u2014 effort and quality together."
+        },
+        {
+          "exercise": "Dumbbell Row (Single Arm)",
+          "sets": 3,
+          "reps": "12 each",
+          "tempo": "2-0-1-0",
+          "rest": "20s between arms",
+          "coachingFocus": "Fast transition. Back work in a fitness context. Pull hard. Brief rest. This is where discipline in rest times separates fitness levels."
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 3,
+          "reps": "10",
+          "tempo": "Fast",
+          "rest": "30s",
+          "coachingFocus": "Finish strong. 10 quality burpees. Chest to floor. Jump at the top. These are the ones that matter most \u2014 the ones when you're tired."
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "Isometric",
+          "rest": "20s",
+          "coachingFocus": "Core close to session. Maintain position even when fatigued. This is where mental fitness is trained. Hold the position."
+        }
+      ],
+      "finisher": "Assault Bike: 1 min max effort \u2014 everything you have left. Record calories in 1 min and beat it.",
+      "cooldown": "5 min walk, basic stretch sequence \u2014 hamstrings, hip flexors, chest, lats",
+      "estimatedCalories": "420-520",
+      "progressionNotes": "Express sessions: track total workout density (total reps completed in the time). Add reps or reduce rest every 2 weeks. Efficiency is the fitness goal here."
+    },
+    {
+      "workoutName": "Gym Fitness \u2014 Machines & Free Weights",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "BEGINNER",
+      "duration": "45 min",
+      "intensity": "MODERATE",
+      "warmup": "5 min bike easy, leg swings x10, arm circles x20, machine row light x15, leg press light x15",
+      "mainWorkout": [
+        {
+          "exercise": "Leg Press",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Safe entry into lower body strength. Control the descent. Don't lock out knees. Good platform for learning leg drive without spinal load."
+        },
+        {
+          "exercise": "Machine Chest Press",
+          "sets": 3,
+          "reps": "12-15",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "coachingFocus": "Machine guides the movement. Focus on feeling the chest. Full ROM. Slow descent. This is your chest builder until free weight pressing is solid."
+        },
+        {
+          "exercise": "Machine Row",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "coachingFocus": "Pull to chest. Squeeze between shoulder blades. Full range. Machine rows teach the pull pattern safely. Learn to feel your back working."
+        },
+        {
+          "exercise": "Goblet Squat",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "3-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Dumbbell at chest. Deep and upright. This teaches the real squat pattern beyond what the leg press can. Master this and the barbell squat follows."
+        },
+        {
+          "exercise": "Dumbbell Shoulder Press",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Seated. Full ROM. Dumbbells allow natural wrist rotation. Don't press to the point of pain \u2014 find your natural groove and stay in it."
+        },
+        {
+          "exercise": "Rowing Machine",
+          "sets": 2,
+          "reps": "4 min at easy pace",
+          "tempo": "Conversational effort",
+          "rest": "90s",
+          "coachingFocus": "Cardiovascular conditioning through the session. Legs then back then arms each stroke. Even, sustainable effort. Build aerobic capacity gradually."
+        }
+      ],
+      "finisher": "Walk on incline treadmill: 8 min at 6-8% grade \u2014 low-impact steady state cardiovascular finish",
+      "cooldown": "Seated hamstring stretch 45s each, hip flexor stretch 60s each, chest stretch 45s, neck stretch 30s each",
+      "estimatedCalories": "320-400",
+      "progressionNotes": "Beginner machine-based fitness. Progress when 15 reps feels easy for all 3 sets. Transition from machine to free weight equivalents over 8-12 weeks."
+    },
+    {
+      "workoutName": "Conditioning Ladder \u2014 Ascending Challenge",
+      "goal": "GET_FIT",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "duration": "50 min",
+      "intensity": "HIGH",
+      "warmup": "Jumping jacks x40, hip circles x10, push-up x15, bodyweight squat x20, arm swings x20",
+      "mainWorkout": [
+        {
+          "exercise": "Pull-Up Ladder: 1-2-3-4-5-4-3-2-1",
+          "sets": 1,
+          "reps": "Ladder (25 total)",
+          "tempo": "2-0-2-0",
+          "rest": "45s between rungs",
+          "coachingFocus": "Ascending then descending ladder. Maintain full ROM every rep. As fatigue builds on the descent, form discipline is tested. This is where fitness is made."
+        },
+        {
+          "exercise": "Push-Up Ladder: 5-10-15-10-5",
+          "sets": 1,
+          "reps": "Ladder (45 total)",
+          "tempo": "1-0-1-0",
+          "rest": "30s between rungs",
+          "coachingFocus": "Volume through ladder structure. Consistency of form is the standard. At the peak rung, don't rush \u2014 maintain plank, maintain depth."
+        },
+        {
+          "exercise": "Pistol Squat",
+          "sets": 4,
+          "reps": "5 each",
+          "tempo": "3-0-1-0",
+          "rest": "60s between legs",
+          "coachingFocus": "Maximal unilateral leg strength. If pistol squat isn't available, Bulgarian split squat with bodyweight at high reps. Full ROM non-negotiable."
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 5,
+          "reps": "10",
+          "tempo": "Max controlled effort",
+          "rest": "45s",
+          "coachingFocus": "50 total burpees across 5 sets. Paced effort \u2014 not explosive start and slow finish. Equal output per set. That's fitness discipline."
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "45s",
+          "tempo": "High effort",
+          "rest": "30s",
+          "coachingFocus": "Hips level. Drive knees. Breathe. Core and cardiovascular in one. Count reps and aim to hit the same count each round."
+        },
+        {
+          "exercise": "Jump Squat",
+          "sets": 4,
+          "reps": "15",
+          "tempo": "Explosive, soft landing",
+          "rest": "30s",
+          "coachingFocus": "Lower body power-endurance. Each jump at max effort. Land softly every time. Soft landing mechanics protect joints and build deceleration strength."
+        }
+      ],
+      "finisher": "Plank hold: 90s \u2014 stillness and breath control after high-intensity work. Core composure is fitness too.",
+      "cooldown": "10 min walk if possible, full stretch sequence \u2014 quad, hip flexor, hamstring, chest, lat, shoulder",
+      "estimatedCalories": "480-580",
+      "progressionNotes": "Ladder training: track total completion time for the full session. Goal: reduce time by 2-3 min over 4 weeks by improving transitions and rest efficiency."
+    },
+    {
+      "workoutName": "Sport Prep Fitness \u2014 Agility & Strength",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "duration": "55 min",
+      "intensity": "HIGH",
+      "warmup": "10 min jog, agility ladder drills (if available), lateral shuffle x10m each, sprint to jog x3",
+      "mainWorkout": [
+        {
+          "exercise": "Box Jump",
+          "sets": 5,
+          "reps": "6",
+          "tempo": "Max intent \u2014 reset each rep",
+          "rest": "60s",
+          "coachingFocus": "Reactive power. Explosive hip extension. Soft landing with full foot. Step down. Every rep max intent \u2014 not fatigue survivors."
+        },
+        {
+          "exercise": "Barbell Back Squat",
+          "sets": 4,
+          "reps": "6",
+          "tempo": "2-0-X-0",
+          "rest": "90s",
+          "coachingFocus": "Strength foundation for sport performance. Controlled down, explosive up. Strong squatters are better at almost every sport. Build this."
+        },
+        {
+          "exercise": "Broad Jump",
+          "sets": 4,
+          "reps": "5",
+          "tempo": "Max distance",
+          "rest": "60s",
+          "coachingFocus": "Horizontal force production. Jump far. Land balanced. Measure and track. Improvement here reflects real athletic development."
+        },
+        {
+          "exercise": "Sprint Intervals (Running)",
+          "sets": 5,
+          "reps": "15s sprint",
+          "tempo": "Maximal",
+          "rest": "75s walk",
+          "coachingFocus": "Short, maximal sprints. Anaerobic power. Every sprint full effort. Walk the rest fully. Don't turn sprints into tempo runs \u2014 that's a different adaptation."
+        },
+        {
+          "exercise": "Barbell Bent-Over Row",
+          "sets": 3,
+          "reps": "8",
+          "tempo": "2-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Athletic fitness requires pulling strength. Upper back supports posture under fatigue. Row hard, control the descent."
+        },
+        {
+          "exercise": "Lateral Lunge",
+          "sets": 3,
+          "reps": "10 each",
+          "tempo": "2-0-1-0",
+          "rest": "45s between legs",
+          "coachingFocus": "Multi-directional fitness. Lateral movement is neglected in most gym training. Sink into the working leg. Full hip flexion on the lateral step."
+        }
+      ],
+      "finisher": "Cone drills or Shuttle Run: 5 x 20m, rest 45s between \u2014 change-of-direction speed and reactive fitness",
+      "cooldown": "10 min jog, quad stretch 60s each, hip flexor 60s each, hamstring 60s each, calf 45s each",
+      "estimatedCalories": "560-680",
+      "progressionNotes": "Sport fitness: track measurable output monthly. Box jump height, broad jump distance, sprint time. Real fitness shows up in numbers \u2014 measure what matters."
+    },
+    {
+      "workoutName": "MetCon \u2014 Metabolic Conditioning Blast",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "duration": "45 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "5 min bike, dynamic stretch, jumping jacks x30, goblet squat x10, push-up x10",
+      "mainWorkout": [
+        {
+          "exercise": "Dumbbell Thruster",
+          "sets": 4,
+          "reps": "12",
+          "tempo": "Controlled but fast",
+          "rest": "60s",
+          "coachingFocus": "Squat into press in one fluid movement. Full depth squat, drive momentum into lockout overhead. The most calorie-efficient single movement in the gym."
+        },
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 4,
+          "reps": "25",
+          "tempo": "Rhythmic",
+          "rest": "45s",
+          "coachingFocus": "Hip snap powers the swing. Not the arms. Breathe with the rhythm of the swing \u2014 exhale on the float. 25 reps builds serious work capacity."
+        },
+        {
+          "exercise": "Pull-Up",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "2-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Dead hang. Full ROM. In a MetCon context, technique must hold under fatigue. If it breaks, stop that set. Fitness without integrity is injury."
+        },
+        {
+          "exercise": "Box Jump",
+          "sets": 3,
+          "reps": "10",
+          "tempo": "Explosive",
+          "rest": "45s",
+          "coachingFocus": "Reactive power in a fatigue environment. This is harder than fresh box jumps \u2014 that's the point. Soft landing always. Step down."
+        },
+        {
+          "exercise": "Rowing Machine",
+          "sets": 3,
+          "reps": "250m sprint",
+          "tempo": "Max effort",
+          "rest": "90s",
+          "coachingFocus": "250m sprint \u2014 all-out effort. Legs then back then arms. Damper on 4-6. Record your time. Sub-55s is strong. Sub-50s is elite."
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "Max effort",
+          "rest": "60s",
+          "coachingFocus": "15 burpees post-sprint is brutal. That's the design. Fitness is built in the uncomfortable gap between wanting to stop and not stopping."
+        }
+      ],
+      "finisher": "AMRAP 5 min: 5 Thrusters + 5 Pull-Ups + 10 Burpees \u2014 record rounds completed",
+      "cooldown": "5 min walk, full body stretch, hip flexors 60s each, hamstrings 60s each, child's pose 90s, deep breathing 2 min",
+      "estimatedCalories": "580-700",
+      "progressionNotes": "MetCon sessions: track the AMRAP score. Add 1+ round over 4 weeks. Progress thruster load by 2.5kg monthly. Rowing 250m time is your benchmark \u2014 log every sprint."
+    }
+  ]
+}

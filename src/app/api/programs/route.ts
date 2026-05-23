@@ -1,5 +1,3 @@
-// src/app/api/programs/route.ts
-
 export const dynamic = "force-dynamic";
 
 import { NextResponse } from "next/server";
@@ -16,7 +14,7 @@ export async function GET(req: Request) {
 
   const userId = session.user.id;
 
-  const [plans, allUserEquipment, activeInstance] = await Promise.all([
+  const [plans, allUserEquipment, activeInstance, user] = await Promise.all([
     prisma.workoutPlan.findMany({
       select: {
         id: true,
@@ -37,6 +35,8 @@ export async function GET(req: Request) {
         durationWeeks: true,
         sessionsPerWeek: true,
         difficulty: true,
+        identityTarget: true,
+        goalTarget: true,
         equipment: {
           select: { id: true, name: true },
         },
@@ -58,9 +58,13 @@ export async function GET(req: Request) {
       where: { userId, status: InstanceStatus.ACTIVE },
       select: { planId: true },
     }),
+
+    prisma.user.findUnique({
+      where: { id: userId },
+      select: { identity: true },
+    }),
   ]);
 
-  // ← debug log goes HERE, after Promise.all resolves
   console.log(
     "[programs] trialExpiresAt from DB:",
     allUserEquipment.map((e) => ({
@@ -98,14 +102,17 @@ export async function GET(req: Request) {
       0,
     );
     const { plannedSessions: _, ...rest } = p;
-    return { ...rest, exerciseCount };
+    return {
+      ...rest,
+      exerciseCount,
+      requiresEquipment: !!p.equipmentId,
+    };
   });
 
   return NextResponse.json({
     plans: plansWithCount,
     access: {
       isPro: access.isPro,
-
       isEquipment: access.isEquipment,
       hasActiveTrial: access.hasActiveTrial,
       trialExpiresAt: access.trialExpiresAt?.toISOString() ?? null,
@@ -118,5 +125,6 @@ export async function GET(req: Request) {
       activePlanId: activeInstance?.planId ?? null,
     },
     declaredEquipmentName,
+    userIdentity: user?.identity ?? null,
   });
 }

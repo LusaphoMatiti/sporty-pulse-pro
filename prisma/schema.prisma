@@ -227,6 +227,8 @@ model Exercise {
 
   impactLevel ImpactLevel @default(MEDIUM)
   isBodyweight Boolean @default(false)
+  thumbnailUrl String?
+  videoUrl     String?
 
   equipment ExerciseEquipment[]
   substitutions ExerciseSubstitution[] @relation("OriginalExercise")
@@ -280,6 +282,7 @@ model WorkoutPlan {
   difficulty      String?
   tier            PlanTier    @default(FREE)
   imageUrl        String?
+  videoUrl        String?
   sessionDurationMin String? 
   templateType TemplateType?
  identityTarget  Identity?

@@ -1,0 +1,2261 @@
+{
+  "meta": {
+    "goal": "Lose Weight",
+    "totalSkeletons": 5,
+    "variationsPerSkeleton": 20,
+    "totalWorkouts": 100,
+    "generatedFrom": "exercises.ts + workout_skeletons.json",
+    "note": "All exercises sourced exclusively from provided exercise pool. Movement slots matched to skeleton structure."
+  },
+  "skeletons": [
+    {
+      "skeletonId": "lw-home-beg-001",
+      "skeletonName": "Fat Burn Foundation – Home Beginner",
+      "variations": [
+        {
+          "variationId": "lw-home-beg-001-v01",
+          "workoutName": "Foundation Burn A",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Bilateral Lower + Push",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              {
+                "exercise": "Jumping Jacks",
+                "id": "CD015",
+                "duration_sec": 60,
+                "coachingFocus": "Light and rhythmic, wake up the body"
+              },
+              {
+                "exercise": "Bodyweight Squat",
+                "id": "SQ001",
+                "reps": 10,
+                "coachingFocus": "Slow and controlled, find your range"
+              }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Bodyweight Squat",
+              "id": "SQ001",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "1-0-1",
+              "rest": "20s",
+              "coachingFocus": "Sit back and down, chest tall, drive through heels"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Body straight as a plank, lower chest to floor"
+            },
+            {
+              "exercise": "Romanian Deadlift (Dumbbell)",
+              "id": "HI004",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-1",
+              "rest": "20s",
+              "coachingFocus": "Hinge at hips, soft knees, feel the hamstring stretch"
+            },
+            {
+              "exercise": "Dead Bug",
+              "id": "CO002",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "slow",
+              "rest": "20s",
+              "coachingFocus": "Lower back flat on floor, breathe out on extension"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Split Squat",
+              "id": "LU005",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Drop rear knee straight down, front shin vertical"
+            },
+            {
+              "exercise": "Inverted Row (TRX Row)",
+              "id": "PLH004",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Body straight, pull chest to bar, elbows back"
+            },
+            {
+              "exercise": "Lateral Lunge",
+              "id": "LU006",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Step wide, sit back on one leg, push back to centre"
+            },
+            {
+              "exercise": "Bird Dog",
+              "id": "CO003",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "slow",
+              "rest": "20s",
+              "coachingFocus": "Neutral spine, hold 2 seconds at extension"
+            }
+          ],
+          "finisher": "None – beginner session ends after Circuit B",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              {
+                "exercise": "Hip Flexor Stretch",
+                "duration_sec": 40,
+                "side": "each"
+              },
+              {
+                "exercise": "Hamstring Stretch",
+                "duration_sec": 40,
+                "side": "each"
+              },
+              { "exercise": "Chest Stretch", "duration_sec": 30 },
+              { "exercise": "Deep Breathing", "reps": "5 slow breaths" }
+            ]
+          },
+          "estimatedCalories": "180–230",
+          "progressionNotes": "When both circuits feel easy at 2 rounds, add a 3rd round of Circuit A before progressing to Intermediate."
+        },
+        {
+          "variationId": "lw-home-beg-001-v02",
+          "workoutName": "Foundation Burn B",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Hinge + Pull",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              {
+                "exercise": "High Knees",
+                "id": "CD008",
+                "duration_sec": 45,
+                "coachingFocus": "Drive knees above hip, light foot contact"
+              },
+              {
+                "exercise": "Reverse Lunge",
+                "id": "LU002",
+                "reps": 8,
+                "side": "each",
+                "coachingFocus": "Upright torso, controlled descent"
+              }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Sumo Squat",
+              "id": "SQ007",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Wide stance toes out 45°, squeeze glutes at top"
+            },
+            {
+              "exercise": "Incline Push-Up",
+              "id": "PHH003",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Hands on surface, body straight, controlled press"
+            },
+            {
+              "exercise": "Good Morning (Bodyweight)",
+              "id": "HI010",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-1",
+              "rest": "20s",
+              "coachingFocus": "Hinge from hips, soft knee, return tall"
+            },
+            {
+              "exercise": "Plank",
+              "id": "CO001",
+              "sets": 2,
+              "reps": "30s hold",
+              "tempo": "iso",
+              "rest": "20s",
+              "coachingFocus": "Glutes squeezed, neutral spine, breathe steadily"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Step-Up",
+              "id": "LU010",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "1-0-1",
+              "rest": "20s",
+              "coachingFocus": "Drive through heel on step, full hip extension at top"
+            },
+            {
+              "exercise": "Resistance Band Row",
+              "id": "PLH008",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Pull elbows back, squeeze shoulder blades"
+            },
+            {
+              "exercise": "Lateral Step-Up",
+              "id": "LU016",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "1-0-1",
+              "rest": "20s",
+              "coachingFocus": "Drive through lateral leg, full extension at top"
+            },
+            {
+              "exercise": "Side Plank",
+              "id": "CO009",
+              "sets": 2,
+              "reps": "30s each side",
+              "tempo": "iso",
+              "rest": "20s",
+              "coachingFocus": "Hips stacked, body in straight line"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              {
+                "exercise": "Glute Stretch",
+                "duration_sec": 40,
+                "side": "each"
+              },
+              { "exercise": "Lat Stretch", "duration_sec": 30, "side": "each" },
+              {
+                "exercise": "Quad Stretch",
+                "duration_sec": 30,
+                "side": "each"
+              },
+              { "exercise": "Deep Breathing", "reps": "5 slow breaths" }
+            ]
+          },
+          "estimatedCalories": "175–225",
+          "progressionNotes": "Increase step height on Step-Up when movement feels stable. Add resistance band on Sumo Squat when bodyweight feels easy."
+        },
+        {
+          "variationId": "lw-home-beg-001-v03",
+          "workoutName": "Foundation Burn C – Unilateral Focus",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Unilateral Lower + Core",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              {
+                "exercise": "Mountain Climbers",
+                "id": "CD002",
+                "duration_sec": 40,
+                "coachingFocus": "Slow pace, hips level, warm the core"
+              },
+              {
+                "exercise": "Box Squat",
+                "id": "SQ005",
+                "reps": 10,
+                "coachingFocus": "Sit back to surface, pause briefly, stand tall"
+              }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Reverse Lunge",
+              "id": "LU002",
+              "sets": 2,
+              "reps": "30s alternating",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Step back, drop rear knee, upright torso"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Elbows at 45°, lower chest to floor, press up strong"
+            },
+            {
+              "exercise": "Single Leg Romanian Deadlift (Bodyweight)",
+              "id": "HI012",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-1",
+              "rest": "20s",
+              "coachingFocus": "Hinge on one leg, hip drives back, back stays flat"
+            },
+            {
+              "exercise": "Bicycle Crunch",
+              "id": "CO015",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "slow",
+              "rest": "20s",
+              "coachingFocus": "Rotate shoulder to knee not elbow, extend opposite leg"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Forward Lunge",
+              "id": "LU001",
+              "sets": 2,
+              "reps": "30s alternating",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Front shin vertical, drive through front heel to return"
+            },
+            {
+              "exercise": "Resistance Band Row",
+              "id": "PLH008",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Anchor at waist height, elbows back, squeeze blades"
+            },
+            {
+              "exercise": "Curtsy Lunge",
+              "id": "LU007",
+              "sets": 2,
+              "reps": "30s alternating",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Step diagonally behind, lower rear knee, front knee tracks"
+            },
+            {
+              "exercise": "Russian Twist",
+              "id": "CO010",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "controlled",
+              "rest": "20s",
+              "coachingFocus": "Lean back 45°, rotate through full range, chest tall"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              {
+                "exercise": "Pigeon Stretch",
+                "duration_sec": 45,
+                "side": "each"
+              },
+              { "exercise": "Adductor Stretch", "duration_sec": 30 },
+              {
+                "exercise": "Shoulder Stretch",
+                "duration_sec": 30,
+                "side": "each"
+              }
+            ]
+          },
+          "estimatedCalories": "180–230",
+          "progressionNotes": "Add a light dumbbell to Reverse Lunge and Romanian Deadlift when you can complete all rounds without stopping."
+        },
+        {
+          "variationId": "lw-home-beg-001-v04",
+          "workoutName": "Foundation Burn D – Low Impact",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low",
+          "emphasis": "Zero Impact – Joint Friendly",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              {
+                "exercise": "Jumping Jacks",
+                "id": "CD015",
+                "duration_sec": 60,
+                "coachingFocus": "Step-jacks option if needed, easy rhythm"
+              },
+              {
+                "exercise": "Squat Pulse",
+                "id": "SQ016",
+                "reps": 15,
+                "coachingFocus": "Small range, stay tense, breathe rhythmically"
+              }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Wall Sit",
+              "id": "SQ013",
+              "sets": 2,
+              "reps": "30s hold",
+              "tempo": "iso",
+              "rest": "20s",
+              "coachingFocus": "90° knee angle, back flat, arms at sides"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "3-0-1",
+              "rest": "20s",
+              "coachingFocus": "Slow 3-count down, full range, push through palms"
+            },
+            {
+              "exercise": "Bodyweight Good Morning",
+              "id": "HI010",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-1",
+              "rest": "20s",
+              "coachingFocus": "Hands behind head, hinge at hips, feel hamstrings"
+            },
+            {
+              "exercise": "Plank",
+              "id": "CO001",
+              "sets": 2,
+              "reps": "30s hold",
+              "tempo": "iso",
+              "rest": "20s",
+              "coachingFocus": "Neutral spine, glutes engaged, breathe"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Split Squat",
+              "id": "LU005",
+              "sets": 2,
+              "reps": "30s each leg",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Both feet stationary, drop rear knee, front shin vertical"
+            },
+            {
+              "exercise": "Inverted Row (TRX Row)",
+              "id": "PLH004",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Adjust foot position for difficulty, pull chest to bar"
+            },
+            {
+              "exercise": "Lateral Lunge",
+              "id": "LU006",
+              "sets": 2,
+              "reps": "30s alternating",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Sit back on one leg, keep other leg straight"
+            },
+            {
+              "exercise": "Dead Bug",
+              "id": "CO002",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "slow",
+              "rest": "20s",
+              "coachingFocus": "Back pinned to floor throughout entire movement"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              { "exercise": "Child's Pose", "duration_sec": 45 },
+              {
+                "exercise": "Hip Flexor Stretch",
+                "duration_sec": 40,
+                "side": "each"
+              },
+              { "exercise": "Chest Opener", "duration_sec": 30 }
+            ]
+          },
+          "estimatedCalories": "150–200",
+          "progressionNotes": "This is the low-impact variation. Progress to v01 when you can complete this without resting during intervals."
+        },
+        {
+          "variationId": "lw-home-beg-001-v05",
+          "workoutName": "Foundation Burn E – Push Emphasis",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Push Pattern Dominant",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              { "exercise": "High Knees", "id": "CD008", "duration_sec": 45 },
+              { "exercise": "Bodyweight Squat", "id": "SQ001", "reps": 12 }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Bodyweight Squat",
+              "id": "SQ001",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Knees track over toes, chest tall, sit back and down"
+            },
+            {
+              "exercise": "Tricep Dip (Chair)",
+              "id": "PHH015",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Elbows track back not out, lower to 90° and press"
+            },
+            {
+              "exercise": "Romanian Deadlift (Dumbbell)",
+              "id": "HI004",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-1",
+              "rest": "20s",
+              "coachingFocus": "Push hips back, weight slides down legs, feel hamstrings"
+            },
+            {
+              "exercise": "Bird Dog",
+              "id": "CO003",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "slow",
+              "rest": "20s",
+              "coachingFocus": "Neutral spine, opposite arm and leg, hold 2 seconds"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Step-Up",
+              "id": "LU010",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "1-0-1",
+              "rest": "20s",
+              "coachingFocus": "Don't push off back leg, drive through heel"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Modify on knees if needed, full range of motion"
+            },
+            {
+              "exercise": "Mountain Climbers",
+              "id": "CD002",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "moderate",
+              "rest": "20s",
+              "coachingFocus": "Plank position, hips level, alternate legs"
+            },
+            {
+              "exercise": "Side Plank",
+              "id": "CO009",
+              "sets": 2,
+              "reps": "30s each side",
+              "tempo": "iso",
+              "rest": "20s",
+              "coachingFocus": "Stack hips, body in line, don't let hip drop"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              {
+                "exercise": "Tricep Stretch",
+                "duration_sec": 30,
+                "side": "each"
+              },
+              {
+                "exercise": "Quad Stretch",
+                "duration_sec": 30,
+                "side": "each"
+              },
+              { "exercise": "Deep Breathing", "reps": "5 slow breaths" }
+            ]
+          },
+          "estimatedCalories": "185–235",
+          "progressionNotes": "When 2 rounds feel manageable, reduce rest to 15s. Then move to 3 rounds before increasing intensity."
+        },
+        {
+          "variationId": "lw-home-beg-001-v06",
+          "workoutName": "Foundation Burn F – Glute Focus",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Posterior Chain / Glute Dominant",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              {
+                "exercise": "Jumping Jacks",
+                "id": "CD015",
+                "duration_sec": 60
+              },
+              {
+                "exercise": "Sumo Squat",
+                "id": "SQ007",
+                "reps": 10,
+                "coachingFocus": "Wide stance, feel glutes engage at top"
+              }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Sumo Squat",
+              "id": "SQ007",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Squeeze glutes hard at top, knees out"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Core stays rigid, elbows at 45°"
+            },
+            {
+              "exercise": "Single Leg Romanian Deadlift (Bodyweight)",
+              "id": "HI012",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-1",
+              "rest": "20s",
+              "coachingFocus": "Balance on one leg, reach hands toward floor, back flat"
+            },
+            {
+              "exercise": "Bicycle Crunch",
+              "id": "CO015",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "slow",
+              "rest": "20s",
+              "coachingFocus": "Deliberate rotation, don't rush"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Curtsy Lunge",
+              "id": "LU007",
+              "sets": 2,
+              "reps": "30s alternating",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Diagonal step behind, targets glute medius"
+            },
+            {
+              "exercise": "Resistance Band Row",
+              "id": "PLH008",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Squeeze shoulder blades at end of pull"
+            },
+            {
+              "exercise": "Lateral Lunge",
+              "id": "LU006",
+              "sets": 2,
+              "reps": "30s alternating",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Sit into hip, feel inner thigh and glute"
+            },
+            {
+              "exercise": "Dead Bug",
+              "id": "CO002",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "slow",
+              "rest": "20s",
+              "coachingFocus": "Lower back stays pinned, breathe through extension"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              {
+                "exercise": "Figure-4 Glute Stretch",
+                "duration_sec": 45,
+                "side": "each"
+              },
+              { "exercise": "Adductor Stretch", "duration_sec": 30 },
+              { "exercise": "Cat-Cow", "reps": "8 slow cycles" }
+            ]
+          },
+          "estimatedCalories": "178–228",
+          "progressionNotes": "Add a resistance band above knees on Sumo Squat and Curtsy Lunge to increase glute activation."
+        },
+        {
+          "variationId": "lw-home-beg-001-v07",
+          "workoutName": "Foundation Burn G – Core Emphasis",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Anti-Extension Core + Full Body",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              {
+                "exercise": "Mountain Climbers",
+                "id": "CD002",
+                "duration_sec": 40
+              },
+              { "exercise": "Box Squat", "id": "SQ005", "reps": 10 }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Resistance Band Squat",
+              "id": "SQ017",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Band under feet, knees push out against band"
+            },
+            {
+              "exercise": "Incline Push-Up",
+              "id": "PHH003",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Hands elevated, body straight, full range"
+            },
+            {
+              "exercise": "Bodyweight Romanian Deadlift",
+              "id": "HI010",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-1",
+              "rest": "20s",
+              "coachingFocus": "Hinge, feel hamstrings, return tall"
+            },
+            {
+              "exercise": "Plank",
+              "id": "CO001",
+              "sets": 2,
+              "reps": "30s hold",
+              "tempo": "iso",
+              "rest": "20s",
+              "coachingFocus": "Create full body tension, don't let hips drop"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Forward Lunge",
+              "id": "LU001",
+              "sets": 2,
+              "reps": "30s alternating",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Step forward, drop knee straight down"
+            },
+            {
+              "exercise": "Resistance Band Row",
+              "id": "PLH008",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Seated or standing, pull elbows back"
+            },
+            {
+              "exercise": "High Knees",
+              "id": "CD008",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "moderate",
+              "rest": "20s",
+              "coachingFocus": "Drive knees above hip, pump arms, stay light on feet"
+            },
+            {
+              "exercise": "Side Plank",
+              "id": "CO009",
+              "sets": 2,
+              "reps": "30s each",
+              "tempo": "iso",
+              "rest": "20s",
+              "coachingFocus": "Stack feet or stagger, keep hips lifted"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              { "exercise": "Child's Pose", "duration_sec": 45 },
+              {
+                "exercise": "Hip Flexor Stretch",
+                "duration_sec": 40,
+                "side": "each"
+              },
+              { "exercise": "Thoracic Rotation", "reps": "6 each side" }
+            ]
+          },
+          "estimatedCalories": "180–230",
+          "progressionNotes": "Progress plank to 45s hold. Add 3rd round of Circuit A when 2 rounds feel submaximal."
+        },
+        {
+          "variationId": "lw-home-beg-001-v08",
+          "workoutName": "Foundation Burn H – Cardio Blend",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Moderate",
+          "emphasis": "Cardiovascular Conditioning Blend",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              {
+                "exercise": "Jumping Jacks",
+                "id": "CD015",
+                "duration_sec": 60
+              },
+              { "exercise": "Bodyweight Squat", "id": "SQ001", "reps": 12 }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Jump Squat",
+              "id": "SQ012",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "explosive",
+              "rest": "20s",
+              "coachingFocus": "Quarter squat, explode up, land soft with bent knees"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Chest touches floor, press explosively"
+            },
+            {
+              "exercise": "Romanian Deadlift (Bodyweight)",
+              "id": "HI010",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-1",
+              "rest": "20s",
+              "coachingFocus": "Controlled hinge, feel stretch, drive hips forward"
+            },
+            {
+              "exercise": "Mountain Climbers",
+              "id": "CD002",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "moderate-fast",
+              "rest": "20s",
+              "coachingFocus": "Hips level, alternate legs rhythmically"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Reverse Lunge to Knee Drive",
+              "id": "LU014",
+              "sets": 2,
+              "reps": "30s each leg",
+              "tempo": "1-0-explosive",
+              "rest": "20s",
+              "coachingFocus": "Step back, drive knee up on return, balance"
+            },
+            {
+              "exercise": "Inverted Row (TRX Row)",
+              "id": "PLH004",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Body straight, pull chest up, slow negative"
+            },
+            {
+              "exercise": "High Knees",
+              "id": "CD008",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "fast",
+              "rest": "20s",
+              "coachingFocus": "Max knee height, arm drive, stay light"
+            },
+            {
+              "exercise": "Dead Bug",
+              "id": "CO002",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "slow",
+              "rest": "20s",
+              "coachingFocus": "Back stays flat, slow extension and return"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              {
+                "exercise": "Standing Quad Stretch",
+                "duration_sec": 30,
+                "side": "each"
+              },
+              {
+                "exercise": "Hip Flexor Lunge Stretch",
+                "duration_sec": 40,
+                "side": "each"
+              },
+              { "exercise": "Deep Breathing", "reps": "6 slow breaths" }
+            ]
+          },
+          "estimatedCalories": "210–270",
+          "progressionNotes": "Jump Squat is the intensity driver here. Regress to Bodyweight Squat if too taxing. Progress by increasing speed."
+        },
+        {
+          "variationId": "lw-home-beg-001-v09",
+          "workoutName": "Foundation Burn I – Rotation Focus",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Rotational Core + Lower Body",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              { "exercise": "High Knees", "id": "CD008", "duration_sec": 45 },
+              {
+                "exercise": "Split Squat",
+                "id": "LU005",
+                "reps": 8,
+                "side": "each"
+              }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Bodyweight Squat",
+              "id": "SQ001",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Chest tall, sit back, drive through heels"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Full range, body rigid"
+            },
+            {
+              "exercise": "Good Morning (Bodyweight)",
+              "id": "HI010",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-1",
+              "rest": "20s",
+              "coachingFocus": "Hinge and return, feel posterior chain"
+            },
+            {
+              "exercise": "Russian Twist",
+              "id": "CO010",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "controlled",
+              "rest": "20s",
+              "coachingFocus": "Feet off floor for challenge, full rotation"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Walking Lunge",
+              "id": "LU004",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "1-0-1",
+              "rest": "20s",
+              "coachingFocus": "Continuous movement, full hip extension each rep"
+            },
+            {
+              "exercise": "Resistance Band Row",
+              "id": "PLH008",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Anchor band, pull elbows back, retract scapulae"
+            },
+            {
+              "exercise": "Mountain Climbers",
+              "id": "CD002",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "moderate",
+              "rest": "20s",
+              "coachingFocus": "Hip level, rhythmic alternating drives"
+            },
+            {
+              "exercise": "Bird Dog",
+              "id": "CO003",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "slow",
+              "rest": "20s",
+              "coachingFocus": "Quadruped, extend opposite arm and leg, hold"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              {
+                "exercise": "Seated Twist Stretch",
+                "duration_sec": 30,
+                "side": "each"
+              },
+              {
+                "exercise": "Hamstring Stretch",
+                "duration_sec": 40,
+                "side": "each"
+              },
+              { "exercise": "Deep Breathing", "reps": "5 slow breaths" }
+            ]
+          },
+          "estimatedCalories": "175–225",
+          "progressionNotes": "Add a light medicine ball or dumbbell to Russian Twist. Increase Walking Lunge distance across the room."
+        },
+        {
+          "variationId": "lw-home-beg-001-v10",
+          "workoutName": "Foundation Burn J – Tempo Training",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Time Under Tension – Slower Tempos",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              {
+                "exercise": "Jumping Jacks",
+                "id": "CD015",
+                "duration_sec": 60
+              },
+              { "exercise": "Bodyweight Squat", "id": "SQ001", "reps": 10 }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Tempo Squat (Bodyweight)",
+              "id": "SQ019",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "4-1-2",
+              "rest": "20s",
+              "coachingFocus": "4-second descent, 1-second pause at bottom, 2-second rise"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "3-1-1",
+              "rest": "20s",
+              "coachingFocus": "3-second lower, pause at bottom, press up"
+            },
+            {
+              "exercise": "Good Morning (Bodyweight)",
+              "id": "HI010",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "3-1-2",
+              "rest": "20s",
+              "coachingFocus": "Slow hinge, pause at bottom, drive hips forward"
+            },
+            {
+              "exercise": "Plank",
+              "id": "CO001",
+              "sets": 2,
+              "reps": "30s hold",
+              "tempo": "iso",
+              "rest": "20s",
+              "coachingFocus": "Full tension, breathe steadily"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Split Squat",
+              "id": "LU005",
+              "sets": 2,
+              "reps": "30s each leg",
+              "tempo": "3-1-2",
+              "rest": "20s",
+              "coachingFocus": "3-second lower, pause, 2-second return"
+            },
+            {
+              "exercise": "Inverted Row (TRX Row)",
+              "id": "PLH004",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-2",
+              "rest": "20s",
+              "coachingFocus": "Pull, squeeze at top, 2-second controlled lower"
+            },
+            {
+              "exercise": "Lateral Lunge",
+              "id": "LU006",
+              "sets": 2,
+              "reps": "30s alternating",
+              "tempo": "3-1-1",
+              "rest": "20s",
+              "coachingFocus": "Slow lateral descent, pause in stretch"
+            },
+            {
+              "exercise": "Dead Bug",
+              "id": "CO002",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "slow deliberate",
+              "rest": "20s",
+              "coachingFocus": "3-second extension, back flat entire time"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              {
+                "exercise": "Hip Flexor Stretch",
+                "duration_sec": 40,
+                "side": "each"
+              },
+              { "exercise": "Chest Stretch", "duration_sec": 30 },
+              { "exercise": "Deep Breathing", "reps": "6 slow breaths" }
+            ]
+          },
+          "estimatedCalories": "165–215",
+          "progressionNotes": "Tempo training builds strength and body awareness. Progress by adding light dumbbells to Squat and Split Squat."
+        },
+        {
+          "variationId": "lw-home-beg-001-v11",
+          "workoutName": "Foundation Burn K – Ladder Format",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Ascending Rep Ladder",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              {
+                "exercise": "Mountain Climbers",
+                "id": "CD002",
+                "duration_sec": 40
+              },
+              {
+                "exercise": "Reverse Lunge",
+                "id": "LU002",
+                "reps": 8,
+                "side": "each"
+              }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Ascending Ladder: 5-10-15 reps of each",
+              "format": "Minimal rest, complete all exercises at 5 reps, then 10, then 15"
+            },
+            {
+              "exercise": "Bodyweight Squat",
+              "id": "SQ001",
+              "sets": "ladder",
+              "reps": "5, 10, 15",
+              "tempo": "1-0-1",
+              "rest": "as needed",
+              "coachingFocus": "Quality reps regardless of ladder position"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": "ladder",
+              "reps": "5, 10, 15",
+              "tempo": "2-0-1",
+              "rest": "as needed",
+              "coachingFocus": "Knees down if needed on round of 15"
+            },
+            {
+              "exercise": "Reverse Lunge",
+              "id": "LU002",
+              "sets": "ladder",
+              "reps": "5, 10, 15 (each leg)",
+              "tempo": "1-0-1",
+              "rest": "as needed",
+              "coachingFocus": "Upright torso, controlled descent"
+            },
+            {
+              "exercise": "Dead Bug",
+              "id": "CO002",
+              "sets": "ladder",
+              "reps": "5, 10, 15 (reps each side)",
+              "tempo": "slow",
+              "rest": "as needed",
+              "coachingFocus": "Back flat, deliberate extension"
+            },
+            {
+              "exercise": "Resistance Band Row",
+              "id": "PLH008",
+              "sets": "ladder",
+              "reps": "5, 10, 15",
+              "tempo": "2-0-1",
+              "rest": "as needed",
+              "coachingFocus": "Squeeze scapulae at end of each rep"
+            },
+            {
+              "exercise": "Mountain Climbers",
+              "id": "CD002",
+              "sets": "ladder",
+              "reps": "5, 10, 15 each leg",
+              "tempo": "moderate",
+              "rest": "as needed",
+              "coachingFocus": "Hips level, alternate legs, breathe"
+            }
+          ],
+          "finisher": "60s Plank hold",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              { "exercise": "Full Body Stretch Sequence", "duration_min": 5 }
+            ]
+          },
+          "estimatedCalories": "190–240",
+          "progressionNotes": "When 5-10-15 ladder feels manageable, progress to 10-15-20 ladder."
+        },
+        {
+          "variationId": "lw-home-beg-001-v12",
+          "workoutName": "Foundation Burn L – EMOM Intro",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "EMOM Format Introduction",
+          "warmup": {
+            "duration_min": 5,
+            "exercises": [
+              {
+                "exercise": "Jumping Jacks",
+                "id": "CD015",
+                "duration_sec": 60
+              },
+              { "exercise": "Bodyweight Squat", "id": "SQ001", "reps": 10 },
+              { "exercise": "Push-Up", "id": "PHH001", "reps": 5 }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "EMOM x 16 minutes – 8 exercises alternating",
+              "format": "Every minute on the minute, complete reps and rest remainder of minute"
+            },
+            {
+              "minute": "1, 3, 5, 7, 9, 11, 13, 15",
+              "exercise": "Bodyweight Squat",
+              "id": "SQ001",
+              "reps": 12,
+              "tempo": "1-0-1",
+              "coachingFocus": "Efficient reps, rest the remainder of the minute"
+            },
+            {
+              "minute": "2, 4, 6, 8, 10, 12, 14, 16",
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "reps": 8,
+              "tempo": "2-0-1",
+              "coachingFocus": "Quality reps, modify on knees if needed"
+            },
+            {
+              "block": "EMOM x 8 minutes",
+              "format": "Alternate two exercises"
+            },
+            {
+              "minute": "odd",
+              "exercise": "Reverse Lunge",
+              "id": "LU002",
+              "reps": "8 each leg",
+              "coachingFocus": "Control descent, upright torso"
+            },
+            {
+              "minute": "even",
+              "exercise": "Dead Bug",
+              "id": "CO002",
+              "reps": 10,
+              "coachingFocus": "Back flat, slow controlled extension"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              {
+                "exercise": "Hip Flexor Stretch",
+                "duration_sec": 40,
+                "side": "each"
+              },
+              { "exercise": "Chest Stretch", "duration_sec": 30 },
+              { "exercise": "Deep Breathing", "reps": "5 slow breaths" }
+            ]
+          },
+          "estimatedCalories": "185–235",
+          "progressionNotes": "Increase reps per minute by 2 each week. Progress to 20-minute EMOM when comfortable."
+        },
+        {
+          "variationId": "lw-home-beg-001-v13",
+          "workoutName": "Foundation Burn M – Full Body Flow",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Smooth Full Body Sequence",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              { "exercise": "High Knees", "id": "CD008", "duration_sec": 45 },
+              {
+                "exercise": "Split Squat",
+                "id": "LU005",
+                "reps": 8,
+                "side": "each"
+              }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Goblet Squat",
+              "id": "SQ002",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Hold weight at chest, elbows inside knees, upright torso"
+            },
+            {
+              "exercise": "Incline Push-Up",
+              "id": "PHH003",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Hands elevated, body straight line"
+            },
+            {
+              "exercise": "Romanian Deadlift (Dumbbell)",
+              "id": "HI004",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-1",
+              "rest": "20s",
+              "coachingFocus": "Push hips back, feel hamstrings, drive forward"
+            },
+            {
+              "exercise": "Plank",
+              "id": "CO001",
+              "sets": 2,
+              "reps": "30s hold",
+              "tempo": "iso",
+              "rest": "20s",
+              "coachingFocus": "Squeeze everything, breathe steadily"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Dumbbell Lunges",
+              "id": "LU008",
+              "sets": 2,
+              "reps": "30s alternating",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Dumbbells at sides, upright torso, full lunge depth"
+            },
+            {
+              "exercise": "Dumbbell Row",
+              "id": "PLH002",
+              "sets": 2,
+              "reps": "30s each",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Support on surface, pull elbow to ceiling, no rotation"
+            },
+            {
+              "exercise": "Jumping Jacks",
+              "id": "CD015",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "moderate",
+              "rest": "20s",
+              "coachingFocus": "Light and rhythmic, full arm swing"
+            },
+            {
+              "exercise": "Bird Dog",
+              "id": "CO003",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "slow",
+              "rest": "20s",
+              "coachingFocus": "Hold 2 seconds at full extension, neutral spine"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              { "exercise": "Full Body Stretch", "duration_min": 5 }
+            ]
+          },
+          "estimatedCalories": "195–245",
+          "progressionNotes": "Goblet Squat and Dumbbell Row allow easy load progression. Increase dumbbell weight by 2kg increments."
+        },
+        {
+          "variationId": "lw-home-beg-001-v14",
+          "workoutName": "Foundation Burn N – Strength Intro",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Straight Sets – Strength Focus",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              {
+                "exercise": "Jumping Jacks",
+                "id": "CD015",
+                "duration_sec": 60
+              },
+              { "exercise": "Bodyweight Squat", "id": "SQ001", "reps": 10 }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Straight Sets",
+              "format": "3 sets each exercise, 60s rest between sets"
+            },
+            {
+              "exercise": "Goblet Squat",
+              "id": "SQ002",
+              "sets": 3,
+              "reps": "12",
+              "tempo": "2-0-1",
+              "rest": "60s",
+              "coachingFocus": "Full depth, upright torso, elbows inside knees"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": 3,
+              "reps": "8-10",
+              "tempo": "2-0-1",
+              "rest": "60s",
+              "coachingFocus": "Consistent form, full range of motion"
+            },
+            {
+              "exercise": "Romanian Deadlift (Dumbbell)",
+              "id": "HI004",
+              "sets": 3,
+              "reps": "12",
+              "tempo": "2-1-1",
+              "rest": "60s",
+              "coachingFocus": "Slow hinge, feel hamstrings, drive hips"
+            },
+            {
+              "exercise": "Dumbbell Row",
+              "id": "PLH002",
+              "sets": 3,
+              "reps": "10 each",
+              "tempo": "2-0-1",
+              "rest": "60s",
+              "coachingFocus": "Full stretch at bottom, pull to hip"
+            },
+            {
+              "exercise": "Plank",
+              "id": "CO001",
+              "sets": 3,
+              "reps": "25s hold",
+              "tempo": "iso",
+              "rest": "45s",
+              "coachingFocus": "Build time under tension"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              { "exercise": "Full Body Stretch", "duration_min": 5 }
+            ]
+          },
+          "estimatedCalories": "170–220",
+          "progressionNotes": "Double progression: aim for top of rep range before increasing weight. Track every session."
+        },
+        {
+          "variationId": "lw-home-beg-001-v15",
+          "workoutName": "Foundation Burn O – Weekend Active Recovery",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 25,
+          "intensity": "Low",
+          "emphasis": "Active Recovery – Light Movement",
+          "warmup": {
+            "duration_min": 3,
+            "exercises": [
+              { "exercise": "Jumping Jacks", "id": "CD015", "duration_sec": 45 }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Easy Circuit – 2 rounds",
+              "format": "40s work / 30s rest, no intensity"
+            },
+            {
+              "exercise": "Bodyweight Squat",
+              "id": "SQ001",
+              "sets": 2,
+              "reps": "40s slow",
+              "tempo": "3-0-2",
+              "rest": "30s",
+              "coachingFocus": "Deliberate, feel the movement"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": 2,
+              "reps": "40s slow",
+              "tempo": "3-0-2",
+              "rest": "30s",
+              "coachingFocus": "Slow and controlled, knees down if needed"
+            },
+            {
+              "exercise": "Good Morning (Bodyweight)",
+              "id": "HI010",
+              "sets": 2,
+              "reps": "40s",
+              "tempo": "3-1-2",
+              "rest": "30s",
+              "coachingFocus": "Gentle hinge, feel the stretch"
+            },
+            {
+              "exercise": "Bird Dog",
+              "id": "CO003",
+              "sets": 2,
+              "reps": "40s",
+              "tempo": "slow",
+              "rest": "30s",
+              "coachingFocus": "Hold each rep 3 seconds"
+            },
+            {
+              "exercise": "Lateral Lunge",
+              "id": "LU006",
+              "sets": 2,
+              "reps": "40s slow",
+              "tempo": "3-1-2",
+              "rest": "30s",
+              "coachingFocus": "Move into the stretch, feel hip mobility"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 7,
+            "exercises": [
+              { "exercise": "Extended Full Body Stretch", "duration_min": 7 }
+            ]
+          },
+          "estimatedCalories": "110–150",
+          "progressionNotes": "This is a recovery session. Use it on days between harder workouts. No progression target."
+        },
+        {
+          "variationId": "lw-home-beg-001-v16",
+          "workoutName": "Foundation Burn P – Superset Pairs",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Antagonist Supersets",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              {
+                "exercise": "Mountain Climbers",
+                "id": "CD002",
+                "duration_sec": 40
+              },
+              { "exercise": "Bodyweight Squat", "id": "SQ001", "reps": 10 }
+            ]
+          },
+          "mainWorkout": [
+            { "block": "Superset 1 – 3 rounds, 45s rest between rounds" },
+            {
+              "exercise": "Bodyweight Squat",
+              "id": "SQ001",
+              "sets": 3,
+              "reps": "12",
+              "tempo": "2-0-1",
+              "rest": "0s (superset)",
+              "coachingFocus": "Chest tall, drive through heels"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": 3,
+              "reps": "8",
+              "tempo": "2-0-1",
+              "rest": "45s",
+              "coachingFocus": "Full range, pause at bottom briefly"
+            },
+            { "block": "Superset 2 – 3 rounds, 45s rest between rounds" },
+            {
+              "exercise": "Romanian Deadlift (Dumbbell)",
+              "id": "HI004",
+              "sets": 3,
+              "reps": "12",
+              "tempo": "2-1-1",
+              "rest": "0s (superset)",
+              "coachingFocus": "Hip hinge, feel hamstrings fully"
+            },
+            {
+              "exercise": "Resistance Band Row",
+              "id": "PLH008",
+              "sets": 3,
+              "reps": "12",
+              "tempo": "2-0-1",
+              "rest": "45s",
+              "coachingFocus": "Retract scapulae, elbows drive back"
+            },
+            { "block": "Superset 3 – 2 rounds, 30s rest between rounds" },
+            {
+              "exercise": "Reverse Lunge",
+              "id": "LU002",
+              "sets": 2,
+              "reps": "10 each leg",
+              "tempo": "2-0-1",
+              "rest": "0s (superset)",
+              "coachingFocus": "Upright torso, full drop each rep"
+            },
+            {
+              "exercise": "Plank",
+              "id": "CO001",
+              "sets": 2,
+              "reps": "25s hold",
+              "tempo": "iso",
+              "rest": "30s",
+              "coachingFocus": "Squeeze everything, breathe steadily"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              { "exercise": "Full Body Stretch Sequence", "duration_min": 5 }
+            ]
+          },
+          "estimatedCalories": "180–230",
+          "progressionNotes": "Add 1 rep per set each week. Progress to 4 rounds of Superset 1 before adding weight."
+        },
+        {
+          "variationId": "lw-home-beg-001-v17",
+          "workoutName": "Foundation Burn Q – Hip Hinge Emphasis",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Hip Hinge + Posterior Chain",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              { "exercise": "High Knees", "id": "CD008", "duration_sec": 45 },
+              {
+                "exercise": "Good Morning (Bodyweight)",
+                "id": "HI010",
+                "reps": 10
+              }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Box Squat",
+              "id": "SQ005",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-1",
+              "rest": "20s",
+              "coachingFocus": "Sit back to surface, pause, stand explosively"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Elbows at 45°, chest to floor"
+            },
+            {
+              "exercise": "Romanian Deadlift (Dumbbell)",
+              "id": "HI004",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "3-1-1",
+              "rest": "20s",
+              "coachingFocus": "Slow 3-count down, feel stretch, drive forward"
+            },
+            {
+              "exercise": "Dead Bug",
+              "id": "CO002",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "slow",
+              "rest": "20s",
+              "coachingFocus": "Back pinned, breathe out on extension"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Single Leg Romanian Deadlift (Bodyweight)",
+              "id": "HI012",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-1",
+              "rest": "20s",
+              "coachingFocus": "Balance challenge, back flat, hinge on one leg"
+            },
+            {
+              "exercise": "Inverted Row (TRX Row)",
+              "id": "PLH004",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Body straight, pull up, slow lower"
+            },
+            {
+              "exercise": "Step-Up",
+              "id": "LU010",
+              "sets": 2,
+              "reps": "30s alternating",
+              "tempo": "1-0-1",
+              "rest": "20s",
+              "coachingFocus": "Drive through heel, full extension at top"
+            },
+            {
+              "exercise": "Side Plank",
+              "id": "CO009",
+              "sets": 2,
+              "reps": "30s each",
+              "tempo": "iso",
+              "rest": "20s",
+              "coachingFocus": "Hips stacked, hold firm"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              {
+                "exercise": "Hamstring Stretch",
+                "duration_sec": 45,
+                "side": "each"
+              },
+              {
+                "exercise": "Hip Flexor Stretch",
+                "duration_sec": 40,
+                "side": "each"
+              },
+              { "exercise": "Deep Breathing", "reps": "5 slow breaths" }
+            ]
+          },
+          "estimatedCalories": "180–230",
+          "progressionNotes": "Single Leg RDL is a skill exercise. Master bodyweight before adding dumbbells. Track balance improvements."
+        },
+        {
+          "variationId": "lw-home-beg-001-v18",
+          "workoutName": "Foundation Burn R – Upper Body Emphasis",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Upper Body Push-Pull + Lower",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              {
+                "exercise": "Jumping Jacks",
+                "id": "CD015",
+                "duration_sec": 60
+              },
+              { "exercise": "Bodyweight Squat", "id": "SQ001", "reps": 10 }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Sumo Squat",
+              "id": "SQ007",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Wide stance, knees track toes, squeeze glutes"
+            },
+            {
+              "exercise": "Tricep Dip (Chair)",
+              "id": "PHH015",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Elbows straight back, lower to 90°"
+            },
+            {
+              "exercise": "Good Morning (Bodyweight)",
+              "id": "HI010",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-1",
+              "rest": "20s",
+              "coachingFocus": "Feel hamstrings and glutes"
+            },
+            {
+              "exercise": "Bicycle Crunch",
+              "id": "CO015",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "slow",
+              "rest": "20s",
+              "coachingFocus": "Deliberate rotation each rep"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Split Squat",
+              "id": "LU005",
+              "sets": 2,
+              "reps": "30s each leg",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Stationary feet, drop rear knee"
+            },
+            {
+              "exercise": "Resistance Band Row",
+              "id": "PLH008",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Pull elbows back, retract scapulae"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Full range, body rigid"
+            },
+            {
+              "exercise": "Plank",
+              "id": "CO001",
+              "sets": 2,
+              "reps": "30s hold",
+              "tempo": "iso",
+              "rest": "20s",
+              "coachingFocus": "Maximize tension throughout"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              { "exercise": "Chest Stretch", "duration_sec": 30 },
+              { "exercise": "Lat Stretch", "duration_sec": 30, "side": "each" },
+              {
+                "exercise": "Tricep Stretch",
+                "duration_sec": 30,
+                "side": "each"
+              }
+            ]
+          },
+          "estimatedCalories": "175–225",
+          "progressionNotes": "Progress Tricep Dip by straightening legs. Progress Row by using heavier resistance band."
+        },
+        {
+          "variationId": "lw-home-beg-001-v19",
+          "workoutName": "Foundation Burn S – Conditioning Focus",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Moderate",
+          "emphasis": "Cardiovascular Conditioning",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              {
+                "exercise": "Jumping Jacks",
+                "id": "CD015",
+                "duration_sec": 60
+              },
+              { "exercise": "High Knees", "id": "CD008", "duration_sec": 30 }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Jump Squat",
+              "id": "SQ012",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "explosive",
+              "rest": "20s",
+              "coachingFocus": "Quarter depth, soft landing, immediate reload"
+            },
+            {
+              "exercise": "Push-Up",
+              "id": "PHH001",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "1-0-1",
+              "rest": "20s",
+              "coachingFocus": "Pace is moderate, maintain form"
+            },
+            {
+              "exercise": "Mountain Climbers",
+              "id": "CD002",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "fast",
+              "rest": "20s",
+              "coachingFocus": "Drive knees, hips level, alternating pace"
+            },
+            {
+              "exercise": "Bicycle Crunch",
+              "id": "CO015",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "moderate",
+              "rest": "20s",
+              "coachingFocus": "Deliberate rotation, extend opposite leg fully"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Reverse Lunge to Knee Drive",
+              "id": "LU014",
+              "sets": 2,
+              "reps": "30s each leg",
+              "tempo": "controlled-explosive",
+              "rest": "20s",
+              "coachingFocus": "Step back, drive knee up fast"
+            },
+            {
+              "exercise": "Resistance Band Row",
+              "id": "PLH008",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "1-0-1",
+              "rest": "20s",
+              "coachingFocus": "Faster tempo, retract blades each rep"
+            },
+            {
+              "exercise": "High Knees",
+              "id": "CD008",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "fast",
+              "rest": "20s",
+              "coachingFocus": "Drive knees high, pump arms, stay light"
+            },
+            {
+              "exercise": "Plank",
+              "id": "CO001",
+              "sets": 2,
+              "reps": "30s hold",
+              "tempo": "iso",
+              "rest": "20s",
+              "coachingFocus": "Steady after the intensity"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              { "exercise": "Full Body Stretch", "duration_min": 5 }
+            ]
+          },
+          "estimatedCalories": "220–280",
+          "progressionNotes": "This is the most cardiovascularly demanding beginner variation. Regress Jump Squat to Bodyweight Squat if HR is too high."
+        },
+        {
+          "variationId": "lw-home-beg-001-v20",
+          "workoutName": "Foundation Burn T – Full Body Balance",
+          "goal": "Lose Weight",
+          "location": "Home",
+          "level": "Beginner",
+          "duration": 30,
+          "intensity": "Low-Moderate",
+          "emphasis": "Balanced Full Body – All Patterns",
+          "warmup": {
+            "duration_min": 4,
+            "exercises": [
+              {
+                "exercise": "Mountain Climbers",
+                "id": "CD002",
+                "duration_sec": 40
+              },
+              { "exercise": "Sumo Squat", "id": "SQ007", "reps": 10 }
+            ]
+          },
+          "mainWorkout": [
+            {
+              "block": "Circuit A – Round 1 & 2",
+              "format": "30s work / 20s rest"
+            },
+            {
+              "exercise": "Goblet Squat",
+              "id": "SQ002",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Weight at chest, elbows inside knees at bottom"
+            },
+            {
+              "exercise": "Incline Push-Up",
+              "id": "PHH003",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Hands elevated, body straight line, full ROM"
+            },
+            {
+              "exercise": "Good Morning (Bodyweight)",
+              "id": "HI010",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-1-1",
+              "rest": "20s",
+              "coachingFocus": "Hip hinge, feel posterior chain"
+            },
+            {
+              "exercise": "Plank",
+              "id": "CO001",
+              "sets": 2,
+              "reps": "30s hold",
+              "tempo": "iso",
+              "rest": "20s",
+              "coachingFocus": "Full body tension, breathe"
+            },
+            {
+              "block": "Circuit B – Round 1 & 2",
+              "format": "30s work / 20s rest",
+              "rest_between_circuits": "60s"
+            },
+            {
+              "exercise": "Walking Lunge",
+              "id": "LU004",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "1-0-1",
+              "rest": "20s",
+              "coachingFocus": "Continuous movement, full hip extension"
+            },
+            {
+              "exercise": "Inverted Row (TRX Row)",
+              "id": "PLH004",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "2-0-1",
+              "rest": "20s",
+              "coachingFocus": "Body straight, pull chest up, elbows back"
+            },
+            {
+              "exercise": "Jumping Jacks",
+              "id": "CD015",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "moderate",
+              "rest": "20s",
+              "coachingFocus": "Light and rhythmic, full arm swing"
+            },
+            {
+              "exercise": "Russian Twist",
+              "id": "CO010",
+              "sets": 2,
+              "reps": "30s",
+              "tempo": "controlled",
+              "rest": "20s",
+              "coachingFocus": "Rotate through full range, chest tall"
+            }
+          ],
+          "finisher": "None",
+          "cooldown": {
+            "duration_min": 5,
+            "exercises": [
+              { "exercise": "Full Body Stretch Sequence", "duration_min": 5 }
+            ]
+          },
+          "estimatedCalories": "185–235",
+          "progressionNotes": "This is the benchmark variation. Return to this monthly to assess improvement. Add dumbbells to Goblet Squat and Lunge for progression."
+        }
+      ]
+    }
+  ]
+}
