@@ -1,4 +1,3 @@
-// src/app/api/training/route.ts
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { getMobileOrWebSession } from "@/lib/mobile-auth";
@@ -64,6 +63,7 @@ export async function GET(req: NextRequest) {
           trialExpiresAt: true,
         },
       }),
+      // Fetch programs with first exercise thumbnail as fallback image
       prisma.workoutPlan.findMany({
         orderBy: { name: "asc" },
         select: {
@@ -76,18 +76,47 @@ export async function GET(req: NextRequest) {
           sessionDurationMin: true,
           durationWeeks: true,
           sessionsPerWeek: true,
+          plannedSessions: {
+            orderBy: { sessionNumber: "asc" },
+            take: 1,
+            select: {
+              plannedExercises: {
+                orderBy: { order: "asc" },
+                take: 1,
+                select: {
+                  exercise: {
+                    select: { thumbnailUrl: true },
+                  },
+                },
+              },
+            },
+          },
         },
       }),
     ]);
+
+  // Helper: resolve best image for a plan (own imageUrl → first exercise thumbnail)
+  function resolvePlanImage(p: {
+    imageUrl: string | null;
+    plannedSessions: {
+      plannedExercises: { exercise: { thumbnailUrl: string | null } }[];
+    }[];
+  }): string | null {
+    const own = getFullImageUrl(p.imageUrl);
+    if (own) return own;
+    const firstThumb =
+      p.plannedSessions[0]?.plannedExercises[0]?.exercise?.thumbnailUrl ?? null;
+    return getFullImageUrl(firstThumb);
+  }
 
   // ── No active plan: return just the program list ──────────────────────────
   if (!instance) {
     return NextResponse.json(
       {
         instanceId: null,
-        allPrograms: allPrograms.map((p) => ({
+        allPrograms: allPrograms.map(({ plannedSessions: _, ...p }) => ({
           ...p,
-          imageUrl: getFullImageUrl(p.imageUrl),
+          imageUrl: resolvePlanImage({ ...p, plannedSessions: _ }),
         })),
       },
       { status: 200 },
@@ -122,6 +151,7 @@ export async function GET(req: NextRequest) {
                 id: true,
                 name: true,
                 musclesWorked: true,
+                thumbnailUrl: true, // ← ADD: exercise thumbnail
                 equipment: {
                   select: {
                     equipment: {
@@ -204,6 +234,7 @@ export async function GET(req: NextRequest) {
       id: pe.exercise.id,
       name: pe.exercise.name,
       musclesWorked: pe.exercise.musclesWorked,
+      thumbnailUrl: getFullImageUrl(pe.exercise.thumbnailUrl), // ← ADD
       equipment: pe.exercise.equipment.map((ee) => ({
         id: ee.equipment.id,
         name: ee.equipment.name,
@@ -215,6 +246,11 @@ export async function GET(req: NextRequest) {
     ...new Set(exercisesForView.flatMap((e) => e.exercise.musclesWorked)),
   ];
 
+  // Plan-level hero image: own imageUrl → first exercise thumbnail
+  const planImageUrl =
+    getFullImageUrl(instance.plan.imageUrl) ??
+    getFullImageUrl(exercisesForView[0]?.exercise.thumbnailUrl ?? null);
+
   return NextResponse.json({
     instanceId: instance.id,
     planId: instance.planId,
@@ -223,7 +259,7 @@ export async function GET(req: NextRequest) {
     sessionDurationMin: instance.plan.sessionDurationMin ?? null,
     level: instance.level,
     currentSession: instance.currentSession,
-    imageUrl: getFullImageUrl(instance.plan.imageUrl) ?? null,
+    imageUrl: planImageUrl ?? null,
     totalSessions,
     focus: plannedSession.focus,
     estimatedMinutes: plannedSession.estimatedMinutes,
@@ -233,11 +269,9 @@ export async function GET(req: NextRequest) {
     trialExpiresAt,
     boughtFromStore,
     draft: (instance.sessionDraft as SessionDraft) ?? null,
-    // ── FIX: run getFullImageUrl on every program so the mobile client
-    //         receives absolute Cloudinary URLs, not raw /v… paths ──────────
-    allPrograms: allPrograms.map((p) => ({
+    allPrograms: allPrograms.map(({ plannedSessions: _, ...p }) => ({
       ...p,
-      imageUrl: getFullImageUrl(p.imageUrl),
+      imageUrl: resolvePlanImage({ ...p, plannedSessions: _ }),
     })),
     activeEquipmentIds,
   });

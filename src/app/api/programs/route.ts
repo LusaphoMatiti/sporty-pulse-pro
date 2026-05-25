@@ -8,23 +8,16 @@ import { InstanceStatus } from "@/generated/prisma";
 
 function getFullImageUrl(imageUrl: string | null): string | null {
   if (!imageUrl) return null;
-
-  // If it's already a full URL (http:// or https://)
   if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) {
     return imageUrl;
   }
-
-  // If it's a Cloudinary path (starts with /v...)
   if (imageUrl.startsWith("/v") || imageUrl.includes("cloudinary")) {
-    // Ensure we have the full Cloudinary base URL
     const CLOUDINARY_BASE = "https://res.cloudinary.com/dsoxsrjn2/image/upload";
     if (imageUrl.startsWith("/v")) {
       return `${CLOUDINARY_BASE}${imageUrl}`;
     }
     return imageUrl;
   }
-
-  // For local paths, construct full URL from API base
   const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
   return `${API_BASE}${imageUrl}`;
 }
@@ -46,9 +39,17 @@ export async function GET(req: Request) {
         imageUrl: true,
         sessionDurationMin: true,
         plannedSessions: {
+          orderBy: { sessionNumber: "asc" },
           select: {
             plannedExercises: {
-              select: { id: true },
+              orderBy: { order: "asc" },
+              select: {
+                id: true,
+                // Fetch first exercise thumbnail for plan image fallback
+                exercise: {
+                  select: { thumbnailUrl: true },
+                },
+              },
             },
           },
         },
@@ -124,10 +125,17 @@ export async function GET(req: Request) {
       (sum, s) => sum + s.plannedExercises.length,
       0,
     );
+
+    // Resolve image: plan's own imageUrl → first exercise's thumbnailUrl
+    const firstExerciseThumb =
+      p.plannedSessions[0]?.plannedExercises[0]?.exercise?.thumbnailUrl ?? null;
+    const resolvedImageUrl =
+      getFullImageUrl(p.imageUrl) ?? getFullImageUrl(firstExerciseThumb);
+
     const { plannedSessions: _, ...rest } = p;
     return {
       ...rest,
-      imageUrl: getFullImageUrl(rest.imageUrl),
+      imageUrl: resolvedImageUrl,
       exerciseCount,
       requiresEquipment: !!p.equipmentId,
     };
