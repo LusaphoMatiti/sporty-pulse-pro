@@ -17,7 +17,10 @@
           "reps": "8-10",
           "tempo": "3-1-1-0",
           "rest": "90s",
-          "coachingFocus": "Retract scapulae hard before unracking. Lower to lower chest with control. Drive through the full foot. Own the negative."
+          "coachingFocus": "Retract scapulae hard before unracking. Lower to lower chest with control. Drive through the full foot. Own the negative.",
+          "id": "PH002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704390/Barbell_Bench_Press_gsbldt.png",
+          "videoUrl": "/exercises/videos/PH002.mp4"
         },
         {
           "exercise": "Incline Dumbbell Press",
@@ -25,7 +28,10 @@
           "reps": "10-12",
           "tempo": "3-0-1-0",
           "rest": "75s",
-          "coachingFocus": "30-45° bench. Feel the upper chest stretch at the bottom. Squeeze hard at the top. Don't let the elbows flare beyond 45°."
+          "coachingFocus": "30-45° bench. Feel the upper chest stretch at the bottom. Squeeze hard at the top. Don't let the elbows flare beyond 45°.",
+          "id": "PH004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704181/Dumbbell_Press_d6emjw.png",
+          "videoUrl": "/exercises/videos/PH004.mp4"
         },
         {
           "exercise": "Lat Pulldown",
@@ -33,7 +39,10 @@
           "reps": "10-12",
           "tempo": "2-1-2-0",
           "rest": "75s",
-          "coachingFocus": "Initiate with scapular depression. Pull elbows to ribs. Full stretch at top — don't short-change the ROM."
+          "coachingFocus": "Initiate with scapular depression. Pull elbows to ribs. Full stretch at top — don't short-change the ROM.",
+          "id": "PLV003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779711454/Lat_Down_jxxqmy.png",
+          "videoUrl": "/exercises/videos/PLV003.mp4"
         },
         {
           "exercise": "Chest-Supported Dumbbell Row",
@@ -41,7 +50,10 @@
           "reps": "12-15",
           "tempo": "2-1-2-0",
           "rest": "60s",
-          "coachingFocus": "Chest on pad removes lower back. Pure upper back pull. Retract and depress scaps at the top of each rep."
+          "coachingFocus": "Chest on pad removes lower back. Pure upper back pull. Retract and depress scaps at the top of each rep.",
+          "id": "PLH007",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH007.mp4"
         },
         {
           "exercise": "Dumbbell Fly",
@@ -49,7 +61,10 @@
           "reps": "12-15",
           "tempo": "3-1-1-0",
           "rest": "60s",
-          "coachingFocus": "This is a stretch exercise. Own the bottom. Slight elbow bend throughout. Don't let the stretch become reckless."
+          "coachingFocus": "This is a stretch exercise. Own the bottom. Slight elbow bend throughout. Don't let the stretch become reckless.",
+          "id": "PH012",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704400/Cable_Fly_zuuqot.png",
+          "videoUrl": "/exercises/videos/PH012.mp4"
         },
         {
           "exercise": "Face Pull",
@@ -57,7 +72,10 @@
           "reps": "15-20",
           "tempo": "2-2-1-0",
           "rest": "45s",
-          "coachingFocus": "Rope to face height. Elbows high and wide. External rotate hard at the end. Shoulder health non-negotiable."
+          "coachingFocus": "Rope to face height. Elbows high and wide. External rotate hard at the end. Shoulder health non-negotiable.",
+          "id": "PLH011",
+          "thumbnailUrl": "/exercises/thumbnails/PLH011.jpg",
+          "videoUrl": "/exercises/videos/PLH011.mp4"
         }
       ],
       "finisher": "Cable Chest Press: 3 sets of 20 reps with minimal rest (30s) — pump and blood flow focus",
@@ -80,7 +98,10 @@
           "reps": "6-8",
           "tempo": "3-1-1-0",
           "rest": "2 min",
-          "coachingFocus": "Brace 360° before descent. Break hips and knees simultaneously. Drive knees out. Think about pushing the floor away, not just standing up."
+          "coachingFocus": "Brace 360° before descent. Break hips and knees simultaneously. Drive knees out. Think about pushing the floor away, not just standing up.",
+          "id": "SQ003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626390/Get_Fit_UpperLower_Split_Day_1_dio3bq.png",
+          "videoUrl": "/exercises/videos/SQ003.mp4"
         },
         {
           "exercise": "Romanian Deadlift",
@@ -88,7 +109,10 @@
           "reps": "10-12",
           "tempo": "3-1-1-0",
           "rest": "90s",
-          "coachingFocus": "Hip hinge — push hips back, not down. Maintain neutral spine. Feel the hamstring stretch load. Drive hips through at the top."
+          "coachingFocus": "Hip hinge — push hips back, not down. Maintain neutral spine. Feel the hamstring stretch load. Drive hips through at the top.",
+          "id": "HI004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI004.mp4"
         },
         {
           "exercise": "Hack Squat (Machine)",
@@ -96,7 +120,10 @@
           "reps": "10-12",
           "tempo": "3-0-1-0",
           "rest": "90s",
-          "coachingFocus": "Feet low on platform for quad emphasis. Don't lock out at top. Control the negative — this is where growth happens."
+          "coachingFocus": "Feet low on platform for quad emphasis. Don't lock out at top. Control the negative — this is where growth happens.",
+          "id": "SQ009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710450/Hack_Squat_ryovym.png",
+          "videoUrl": "/exercises/videos/SQ009.mp4"
         },
         {
           "exercise": "Bulgarian Split Squat",
@@ -104,7 +131,10 @@
           "reps": "10-12 each",
           "tempo": "3-0-1-0",
           "rest": "75s between legs",
-          "coachingFocus": "Rear foot on bench. Stay tall. Sink the back knee toward the floor. Drive through front heel. This will be uncomfortable. That's the point."
+          "coachingFocus": "Rear foot on bench. Stay tall. Sink the back knee toward the floor. Drive through front heel. This will be uncomfortable. That's the point.",
+          "id": "LU003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Bulgarian_Split_Squat_mdoejf.png",
+          "videoUrl": "/exercises/videos/LU003.mp4"
         },
         {
           "exercise": "Leg Press",
@@ -112,7 +142,10 @@
           "reps": "15-20",
           "tempo": "2-0-2-0",
           "rest": "60s",
-          "coachingFocus": "High-rep pump set. Don't lock out knees. Control the descent. Press through the full foot evenly."
+          "coachingFocus": "High-rep pump set. Don't lock out knees. Control the descent. Press through the full foot evenly.",
+          "id": "SQ010",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710454/Leg_Press_xkdtsb.png",
+          "videoUrl": "/exercises/videos/SQ010.mp4"
         },
         {
           "exercise": "Nordic Curl",
@@ -120,7 +153,10 @@
           "reps": "6-8",
           "tempo": "4-0-X-0",
           "rest": "90s",
-          "coachingFocus": "Slow eccentric is the gold. Lower as far as you can control. Use hands to push back up if needed. Hamstring length-tension at its best."
+          "coachingFocus": "Slow eccentric is the gold. Lower as far as you can control. Use hands to push back up if needed. Hamstring length-tension at its best.",
+          "id": "HI015",
+          "thumbnailUrl": "/exercises/thumbnails/HI015.jpg",
+          "videoUrl": "/exercises/videos/HI015.mp4"
         }
       ],
       "finisher": "Wall Sit: 3 x max hold (aim 45-60s) with 30s rest — quad burnout",
@@ -143,7 +179,10 @@
           "reps": "8-10",
           "tempo": "3-1-1-0",
           "rest": "90s",
-          "coachingFocus": "Lead with upper chest. Full stretch at bottom. Squeeze hard at top. This is your strength prime mover today — don't go too light."
+          "coachingFocus": "Lead with upper chest. Full stretch at bottom. Squeeze hard at top. This is your strength prime mover today — don't go too light.",
+          "id": "PH004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704181/Dumbbell_Press_d6emjw.png",
+          "videoUrl": "/exercises/videos/PH004.mp4"
         },
         {
           "exercise": "Dumbbell Shoulder Press",
@@ -151,7 +190,10 @@
           "reps": "10-12",
           "tempo": "2-1-1-0",
           "rest": "75s",
-          "coachingFocus": "Seated or standing. Full ROM — all the way up, all the way down. Control the eccentric. Neutral or pronated grip depending on shoulder comfort."
+          "coachingFocus": "Seated or standing. Full ROM — all the way up, all the way down. Control the eccentric. Neutral or pronated grip depending on shoulder comfort.",
+          "id": "PHH020",
+          "thumbnailUrl": "/exercises/thumbnails/PHH020.jpg",
+          "videoUrl": "/exercises/videos/PHH020.mp4"
         },
         {
           "exercise": "Cable Chest Press",
@@ -159,7 +201,10 @@
           "reps": "12-15",
           "tempo": "2-0-2-0",
           "rest": "60s",
-          "coachingFocus": "Constant cable tension beats barbell for chest isolation. Squeeze pecs at lockout. Don't let the weight drift. Chest-to-cable connection is the goal."
+          "coachingFocus": "Constant cable tension beats barbell for chest isolation. Squeeze pecs at lockout. Don't let the weight drift. Chest-to-cable connection is the goal.",
+          "id": "PH009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704400/Cable_Fly_zuuqot.png",
+          "videoUrl": "/exercises/videos/PH009.mp4"
         },
         {
           "exercise": "Lateral Raise",
@@ -167,7 +212,10 @@
           "reps": "15-20",
           "tempo": "2-1-2-0",
           "rest": "45s",
-          "coachingFocus": "Lead with elbows, not wrists. Slight forward lean. Don't shrug. Control the descent — it builds the muscle, not the lift up."
+          "coachingFocus": "Lead with elbows, not wrists. Slight forward lean. Don't shrug. Control the descent — it builds the muscle, not the lift up.",
+          "id": "PHH022",
+          "thumbnailUrl": "/exercises/thumbnails/PHH022.jpg",
+          "videoUrl": "/exercises/videos/PHH022.mp4"
         },
         {
           "exercise": "Chest Dip",
@@ -175,7 +223,10 @@
           "reps": "10-15",
           "tempo": "3-0-1-0",
           "rest": "75s",
-          "coachingFocus": "Lean forward for pec emphasis. Go to full depth. If this is easy, add weight next session. If hard, reduce reps — don't shorten ROM."
+          "coachingFocus": "Lean forward for pec emphasis. Go to full depth. If this is easy, add weight next session. If hard, reduce reps — don't shorten ROM.",
+          "id": "PH006",
+          "thumbnailUrl": "/exercises/thumbnails/PH006.jpg",
+          "videoUrl": "/exercises/videos/PH006.mp4"
         },
         {
           "exercise": "Skull Crusher",
@@ -183,7 +234,10 @@
           "reps": "12-15",
           "tempo": "3-0-1-0",
           "rest": "60s",
-          "coachingFocus": "Lower to forehead or behind head. Elbows stay stationary. Full extension at top. Tricep long head emphasis — critical for arm size."
+          "coachingFocus": "Lower to forehead or behind head. Elbows stay stationary. Full extension at top. Tricep long head emphasis — critical for arm size.",
+          "id": "TRI005",
+          "thumbnailUrl": "/exercises/thumbnails/TRI005.jpg",
+          "videoUrl": "/exercises/videos/TRI005.mp4"
         }
       ],
       "finisher": "Diamond Push-Up: AMRAP x2 with 30s rest — tricep and inner pec burnout",
@@ -206,7 +260,10 @@
           "reps": "5-8",
           "tempo": "2-1-2-0",
           "rest": "2 min",
-          "coachingFocus": "Full dead hang start. Depress and retract scaps before pulling. Chin over bar. Don't kip. Add load when all reps are clean."
+          "coachingFocus": "Full dead hang start. Depress and retract scaps before pulling. Chin over bar. Don't kip. Add load when all reps are clean.",
+          "id": "PLV004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Chin_Up_Pull_Up_lylqeo.png",
+          "videoUrl": "/exercises/videos/PLV004.mp4"
         },
         {
           "exercise": "Barbell Bent-Over Row",
@@ -214,7 +271,10 @@
           "reps": "8-10",
           "tempo": "2-1-2-0",
           "rest": "90s",
-          "coachingFocus": "Hinge to 45° and hold. Row to lower abdomen. Elbows drive back, not out. Squeeze the back at the top. Control the bar down."
+          "coachingFocus": "Hinge to 45° and hold. Row to lower abdomen. Elbows drive back, not out. Squeeze the back at the top. Control the bar down.",
+          "id": "PLH001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704398/Pendlay_Row_ybff7k.png",
+          "videoUrl": "/exercises/videos/PLH001.mp4"
         },
         {
           "exercise": "Lat Pulldown",
@@ -222,7 +282,10 @@
           "reps": "12-15",
           "tempo": "2-1-2-0",
           "rest": "60s",
-          "coachingFocus": "Wide grip. Pull to upper chest. Let the lat fully stretch at the top. Think of driving elbows to your hip pockets."
+          "coachingFocus": "Wide grip. Pull to upper chest. Let the lat fully stretch at the top. Think of driving elbows to your hip pockets.",
+          "id": "PLV003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779711454/Lat_Down_jxxqmy.png",
+          "videoUrl": "/exercises/videos/PLV003.mp4"
         },
         {
           "exercise": "Cable Single Arm Row",
@@ -230,7 +293,10 @@
           "reps": "12-15 each",
           "tempo": "2-1-2-0",
           "rest": "60s between arms",
-          "coachingFocus": "Rotate into the row for full lat stretch at the bottom. Anti-rotation demand on the core. Own the contraction at the end of each rep."
+          "coachingFocus": "Rotate into the row for full lat stretch at the bottom. Anti-rotation demand on the core. Own the contraction at the end of each rep.",
+          "id": "PLH015",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH015.mp4"
         },
         {
           "exercise": "Rear Delt Fly (DB)",
@@ -238,7 +304,10 @@
           "reps": "15-20",
           "tempo": "2-1-2-0",
           "rest": "45s",
-          "coachingFocus": "Hinge 45°+. Arc arms out to side. Slight elbow bend. Don't shrug. Rear delts are chronically underdeveloped — prioritise them."
+          "coachingFocus": "Hinge 45°+. Arc arms out to side. Slight elbow bend. Don't shrug. Rear delts are chronically underdeveloped — prioritise them.",
+          "id": "PLH010",
+          "thumbnailUrl": "/exercises/thumbnails/PLH010.jpg",
+          "videoUrl": "/exercises/videos/PLH010.mp4"
         },
         {
           "exercise": "EZ Bar Curl",
@@ -246,7 +315,10 @@
           "reps": "10-12",
           "tempo": "2-1-3-0",
           "rest": "60s",
-          "coachingFocus": "Don't swing. Slow eccentric is the growth driver. Supinate at the top. Full ROM from extended arm to peak contraction."
+          "coachingFocus": "Don't swing. Slow eccentric is the growth driver. Supinate at the top. Full ROM from extended arm to peak contraction.",
+          "id": "BIC005",
+          "thumbnailUrl": "/exercises/thumbnails/BIC005.jpg",
+          "videoUrl": "/exercises/videos/BIC005.mp4"
         }
       ],
       "finisher": "Chin-Up: max reps x2 sets / Lat Pulldown: 2 x 20 (if pull-ups are limited) — 60s rest",
@@ -269,7 +341,10 @@
           "reps": "8-10",
           "tempo": "3-1-1-0",
           "rest": "2 min",
-          "coachingFocus": "Load the hamstrings eccentrically. Push hips back — don't round the lower back. Bar stays close to legs. Full hip extension at top."
+          "coachingFocus": "Load the hamstrings eccentrically. Push hips back — don't round the lower back. Bar stays close to legs. Full hip extension at top.",
+          "id": "HI004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI004.mp4"
         },
         {
           "exercise": "Hip Thrust",
@@ -277,7 +352,10 @@
           "reps": "10-15",
           "tempo": "2-2-1-0",
           "rest": "90s",
-          "coachingFocus": "Upper back on bench. Bar over hip crease. Drive hips to full extension. 2-second hold at top. Posterior pelvic tilt at top. Glutes, not lower back."
+          "coachingFocus": "Upper back on bench. Bar over hip crease. Drive hips to full extension. 2-second hold at top. Posterior pelvic tilt at top. Glutes, not lower back.",
+          "id": "HI008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779711907/Barbell_Hip_Thrust_q4copv.png",
+          "videoUrl": "/exercises/videos/HI008.mp4"
         },
         {
           "exercise": "Nordic Curl",
@@ -285,7 +363,10 @@
           "reps": "5-8",
           "tempo": "4-0-X-0",
           "rest": "90s",
-          "coachingFocus": "Most potent hamstring exercise on the planet. Slow eccentric is the goal. Use hands at the bottom if needed. Build up gradually."
+          "coachingFocus": "Most potent hamstring exercise on the planet. Slow eccentric is the goal. Use hands at the bottom if needed. Build up gradually.",
+          "id": "HI015",
+          "thumbnailUrl": "/exercises/thumbnails/HI015.jpg",
+          "videoUrl": "/exercises/videos/HI015.mp4"
         },
         {
           "exercise": "Goblet Squat",
@@ -293,7 +374,10 @@
           "reps": "12-15",
           "tempo": "3-1-1-0",
           "rest": "75s",
-          "coachingFocus": "Elbows inside knees at bottom. Upright torso. Full depth. This is a quad accessory today — go deep and feel the quad stretch."
+          "coachingFocus": "Elbows inside knees at bottom. Upright torso. Full depth. This is a quad accessory today — go deep and feel the quad stretch.",
+          "id": "SQ002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
+          "videoUrl": "/exercises/videos/SQ002.mp4"
         },
         {
           "exercise": "Single Leg Romanian Deadlift",
@@ -301,7 +385,10 @@
           "reps": "10-12 each",
           "tempo": "3-1-1-0",
           "rest": "60s between legs",
-          "coachingFocus": "Hip hinge on one leg. Control the balance — don't sacrifice it for load. Hamstring stretch is the goal. Dumbbell in opposite hand for balance."
+          "coachingFocus": "Hip hinge on one leg. Control the balance — don't sacrifice it for load. Hamstring stretch is the goal. Dumbbell in opposite hand for balance.",
+          "id": "HI005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI005.mp4"
         },
         {
           "exercise": "Seated Calf Raise",
@@ -309,7 +396,10 @@
           "reps": "15-20",
           "tempo": "2-2-1-0",
           "rest": "45s",
-          "coachingFocus": "Full ROM every rep. Pause and stretch at the bottom. Soleus emphasis (knee bent). Calves are trained through stretch — short reps are wasted reps."
+          "coachingFocus": "Full ROM every rep. Pause and stretch at the bottom. Soleus emphasis (knee bent). Calves are trained through stretch — short reps are wasted reps.",
+          "id": "CAL002",
+          "thumbnailUrl": "/exercises/thumbnails/CAL002.jpg",
+          "videoUrl": "/exercises/videos/CAL002.mp4"
         }
       ],
       "finisher": "Glute Bridge Pulse: 3 x 30 reps bodyweight — glute endurance and blood flow",
@@ -332,7 +422,10 @@
           "reps": "10-12",
           "tempo": "3-1-1-0",
           "rest": "90s",
-          "coachingFocus": "Hold weight at chest. Elbows inside knees at bottom. Upright torso is the goal here. Build the squat pattern before loading it heavily."
+          "coachingFocus": "Hold weight at chest. Elbows inside knees at bottom. Upright torso is the goal here. Build the squat pattern before loading it heavily.",
+          "id": "SQ002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
+          "videoUrl": "/exercises/videos/SQ002.mp4"
         },
         {
           "exercise": "Dumbbell Bench Press",
@@ -340,7 +433,10 @@
           "reps": "10-12",
           "tempo": "3-1-1-0",
           "rest": "75s",
-          "coachingFocus": "Greater ROM than barbell. Control the stretch. Squeeze at the top. Elbows 45° from body — not flaring wide."
+          "coachingFocus": "Greater ROM than barbell. Control the stretch. Squeeze at the top. Elbows 45° from body — not flaring wide.",
+          "id": "PH003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704181/Dumbbell_Press_d6emjw.png",
+          "videoUrl": "/exercises/videos/PH003.mp4"
         },
         {
           "exercise": "Dumbbell Row (Single Arm)",
@@ -348,7 +444,10 @@
           "reps": "12-15 each",
           "tempo": "2-1-2-0",
           "rest": "60s between arms",
-          "coachingFocus": "Brace on bench. Drive elbow back — think elbow to ceiling. Squeeze the lat at the top. Don't let the shoulder drop."
+          "coachingFocus": "Brace on bench. Drive elbow back — think elbow to ceiling. Squeeze the lat at the top. Don't let the shoulder drop.",
+          "id": "PLH002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH002.mp4"
         },
         {
           "exercise": "Romanian Deadlift",
@@ -356,7 +455,10 @@
           "reps": "10-12",
           "tempo": "3-1-1-0",
           "rest": "90s",
-          "coachingFocus": "Hinge pattern priority. Push hips back. Maintain flat back throughout. Bar or dumbbells stay close. Feel the hamstring load."
+          "coachingFocus": "Hinge pattern priority. Push hips back. Maintain flat back throughout. Bar or dumbbells stay close. Feel the hamstring load.",
+          "id": "HI004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI004.mp4"
         },
         {
           "exercise": "Dumbbell Shoulder Press",
@@ -364,7 +466,10 @@
           "reps": "10-12",
           "tempo": "2-0-1-0",
           "rest": "75s",
-          "coachingFocus": "Full ROM. Control it down. Seat back support is fine for beginners. Don't overarch the lower back to press more."
+          "coachingFocus": "Full ROM. Control it down. Seat back support is fine for beginners. Don't overarch the lower back to press more.",
+          "id": "PHH020",
+          "thumbnailUrl": "/exercises/thumbnails/PHH020.jpg",
+          "videoUrl": "/exercises/videos/PHH020.mp4"
         },
         {
           "exercise": "Plank",
@@ -372,7 +477,10 @@
           "reps": "30-45s",
           "tempo": "Isometric",
           "rest": "45s",
-          "coachingFocus": "Ribs down. Glutes squeezed. Breathe rhythmically. No sagging hips. Quality over duration — don't just survive the timer."
+          "coachingFocus": "Ribs down. Glutes squeezed. Breathe rhythmically. No sagging hips. Quality over duration — don't just survive the timer.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
       "finisher": "Bodyweight Squat x20 + Push-Up x10: 3 rounds with 45s rest — total body pump",
@@ -395,7 +503,10 @@
           "reps": "8-10",
           "tempo": "3-1-1-0",
           "rest": "90s",
-          "coachingFocus": "Hands shoulder-width or slightly closer. Elbows tuck close to ribs. Tricep emphasis. Lower to lower chest. Biggest tricep builder in the gym."
+          "coachingFocus": "Hands shoulder-width or slightly closer. Elbows tuck close to ribs. Tricep emphasis. Lower to lower chest. Biggest tricep builder in the gym.",
+          "id": "PH013",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704390/Barbell_Bench_Press_gsbldt.png",
+          "videoUrl": "/exercises/videos/PH013.mp4"
         },
         {
           "exercise": "EZ Bar Curl",
@@ -403,7 +514,10 @@
           "reps": "8-10",
           "tempo": "2-1-3-0",
           "rest": "90s",
-          "coachingFocus": "No swinging. Slow eccentric is non-negotiable. Full ROM. Supinate and squeeze hard at the top. Elbows stay at sides."
+          "coachingFocus": "No swinging. Slow eccentric is non-negotiable. Full ROM. Supinate and squeeze hard at the top. Elbows stay at sides.",
+          "id": "BIC005",
+          "thumbnailUrl": "/exercises/thumbnails/BIC005.jpg",
+          "videoUrl": "/exercises/videos/BIC005.mp4"
         },
         {
           "exercise": "Skull Crusher",
@@ -411,7 +525,10 @@
           "reps": "10-12",
           "tempo": "3-0-1-0",
           "rest": "75s",
-          "coachingFocus": "Lower to forehead or behind. Elbows stationary. Full extension. Tricep long head = biggest portion of the arm. Train it hard."
+          "coachingFocus": "Lower to forehead or behind. Elbows stationary. Full extension. Tricep long head = biggest portion of the arm. Train it hard.",
+          "id": "TRI005",
+          "thumbnailUrl": "/exercises/thumbnails/TRI005.jpg",
+          "videoUrl": "/exercises/videos/TRI005.mp4"
         },
         {
           "exercise": "Incline Dumbbell Curl",
@@ -419,7 +536,10 @@
           "reps": "10-12",
           "tempo": "2-0-3-0",
           "rest": "60s",
-          "coachingFocus": "Bench at 45°. Arms hang back — maximum stretch on the long head. Curl without swinging body. Massive growth stimulus."
+          "coachingFocus": "Bench at 45°. Arms hang back — maximum stretch on the long head. Curl without swinging body. Massive growth stimulus.",
+          "id": "BIC007",
+          "thumbnailUrl": "/exercises/thumbnails/BIC007.jpg",
+          "videoUrl": "/exercises/videos/BIC007.mp4"
         },
         {
           "exercise": "Tricep Dip (Chest Dip)",
@@ -427,7 +547,10 @@
           "reps": "10-15",
           "tempo": "3-0-1-0",
           "rest": "75s",
-          "coachingFocus": "Stay upright for tricep emphasis. Full ROM down. Lockout at top. Add weight if bodyweight is too easy."
+          "coachingFocus": "Stay upright for tricep emphasis. Full ROM down. Lockout at top. Add weight if bodyweight is too easy.",
+          "id": "PHH015",
+          "thumbnailUrl": "/exercises/thumbnails/PHH015.jpg",
+          "videoUrl": "/exercises/videos/PHH015.mp4"
         },
         {
           "exercise": "Hammer Curl",
@@ -435,7 +558,10 @@
           "reps": "12-15",
           "tempo": "2-0-2-0",
           "rest": "45s",
-          "coachingFocus": "Neutral grip. Works brachialis and brachioradialis. Key for arm thickness and forearm development. Control both ways."
+          "coachingFocus": "Neutral grip. Works brachialis and brachioradialis. Key for arm thickness and forearm development. Control both ways.",
+          "id": "BIC006",
+          "thumbnailUrl": "/exercises/thumbnails/BIC006.jpg",
+          "videoUrl": "/exercises/videos/BIC006.mp4"
         }
       ],
       "finisher": "Curl-to-Press: 3 x 10 — bicep curl straight into overhead press — integrated pump",
@@ -458,7 +584,10 @@
           "reps": "5-6",
           "tempo": "3-1-X-0",
           "rest": "2 min",
-          "coachingFocus": "Heavy strength focus. Maximise mechanical tension. Full arch, leg drive, tight upper back. The foundation of chest mass."
+          "coachingFocus": "Heavy strength focus. Maximise mechanical tension. Full arch, leg drive, tight upper back. The foundation of chest mass.",
+          "id": "PH002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704390/Barbell_Bench_Press_gsbldt.png",
+          "videoUrl": "/exercises/videos/PH002.mp4"
         },
         {
           "exercise": "Incline Dumbbell Press",
@@ -466,7 +595,10 @@
           "reps": "10-12",
           "tempo": "3-0-1-0",
           "rest": "90s",
-          "coachingFocus": "Upper chest is often underdeveloped. Control the stretch. Elbows slightly tucked. Squeeze at top. This is your hypertrophy block."
+          "coachingFocus": "Upper chest is often underdeveloped. Control the stretch. Elbows slightly tucked. Squeeze at top. This is your hypertrophy block.",
+          "id": "PH004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704181/Dumbbell_Press_d6emjw.png",
+          "videoUrl": "/exercises/videos/PH004.mp4"
         },
         {
           "exercise": "Chest Dip",
@@ -474,7 +606,10 @@
           "reps": "12-15",
           "tempo": "3-0-1-0",
           "rest": "75s",
-          "coachingFocus": "Lean forward for pec. Full ROM every rep. If 15 reps is easy, add a plate. Lower chest needs direct volume."
+          "coachingFocus": "Lean forward for pec. Full ROM every rep. If 15 reps is easy, add a plate. Lower chest needs direct volume.",
+          "id": "PH006",
+          "thumbnailUrl": "/exercises/thumbnails/PH006.jpg",
+          "videoUrl": "/exercises/videos/PH006.mp4"
         },
         {
           "exercise": "Cable Fly (Low to High)",
@@ -482,7 +617,10 @@
           "reps": "15-20",
           "tempo": "2-1-2-0",
           "rest": "60s",
-          "coachingFocus": "Cables from low position, arc up and together. Upper chest and anterior delt. Constant tension — peak contraction focus."
+          "coachingFocus": "Cables from low position, arc up and together. Upper chest and anterior delt. Constant tension — peak contraction focus.",
+          "id": "PHH016",
+          "thumbnailUrl": "/exercises/thumbnails/PHH016.jpg",
+          "videoUrl": "/exercises/videos/PHH016.mp4"
         },
         {
           "exercise": "Skull Crusher",
@@ -490,7 +628,10 @@
           "reps": "10-12",
           "tempo": "3-0-1-0",
           "rest": "75s",
-          "coachingFocus": "Long head overloaded here. Behind the head maximises stretch. Elbows absolutely stationary. This is a precision exercise."
+          "coachingFocus": "Long head overloaded here. Behind the head maximises stretch. Elbows absolutely stationary. This is a precision exercise.",
+          "id": "TRI005",
+          "thumbnailUrl": "/exercises/thumbnails/TRI005.jpg",
+          "videoUrl": "/exercises/videos/TRI005.mp4"
         },
         {
           "exercise": "Diamond Push-Up",
@@ -498,7 +639,10 @@
           "reps": "AMRAP",
           "tempo": "2-0-1-0",
           "rest": "60s",
-          "coachingFocus": "End of session burnout. Full ROM. Don't compensate with faster reps. Quality reps only. Stop before form breaks."
+          "coachingFocus": "End of session burnout. Full ROM. Don't compensate with faster reps. Quality reps only. Stop before form breaks.",
+          "id": "PH005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Diamond_push-ups_bmqaty.png",
+          "videoUrl": "/exercises/videos/PH005.mp4"
         }
       ],
       "finisher": "Cable Chest Press: 3 x 25 with 30s rest — high-rep pump to maximise hypertrophic stimulus",
@@ -521,7 +665,10 @@
           "reps": "5-6",
           "tempo": "2-1-2-0",
           "rest": "2 min",
-          "coachingFocus": "Heaviest compound row. Hinge to 45°. Pull to belly button. Upper back contracted hard. This builds thickness — rows beat pull-ups for back size."
+          "coachingFocus": "Heaviest compound row. Hinge to 45°. Pull to belly button. Upper back contracted hard. This builds thickness — rows beat pull-ups for back size.",
+          "id": "PLH001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704398/Pendlay_Row_ybff7k.png",
+          "videoUrl": "/exercises/videos/PLH001.mp4"
         },
         {
           "exercise": "Weighted Pull-Up",
@@ -529,7 +676,10 @@
           "reps": "6-8",
           "tempo": "2-1-3-0",
           "rest": "2 min",
-          "coachingFocus": "Width comes from pull-ups. Slow eccentric is the stimulus. Full hang at bottom. Chest to bar target. Don't kip."
+          "coachingFocus": "Width comes from pull-ups. Slow eccentric is the stimulus. Full hang at bottom. Chest to bar target. Don't kip.",
+          "id": "PLV004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Chin_Up_Pull_Up_lylqeo.png",
+          "videoUrl": "/exercises/videos/PLV004.mp4"
         },
         {
           "exercise": "T-Bar Row",
@@ -537,7 +687,10 @@
           "reps": "10-12",
           "tempo": "2-1-2-0",
           "rest": "90s",
-          "coachingFocus": "Close neutral grip. Chest on pad. Drive elbows back. Full range of motion. Rhomboids and mid-traps are the target."
+          "coachingFocus": "Close neutral grip. Chest on pad. Drive elbows back. Full range of motion. Rhomboids and mid-traps are the target.",
+          "id": "PLH006",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704398/Pendlay_Row_ybff7k.png",
+          "videoUrl": "/exercises/videos/PLH006.mp4"
         },
         {
           "exercise": "Meadows Row",
@@ -545,7 +698,10 @@
           "reps": "10-12 each",
           "tempo": "2-1-2-0",
           "rest": "60s between arms",
-          "coachingFocus": "Landmine row variation. Pull in an arc. High elbow at top. Teres major and lats get a unique stretch at the bottom. Underrated exercise."
+          "coachingFocus": "Landmine row variation. Pull in an arc. High elbow at top. Teres major and lats get a unique stretch at the bottom. Underrated exercise.",
+          "id": "PLH013",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH013.mp4"
         },
         {
           "exercise": "Face Pull",
@@ -553,7 +709,10 @@
           "reps": "20-25",
           "tempo": "2-2-1-0",
           "rest": "45s",
-          "coachingFocus": "Rear delt health. Elbows high and wide. External rotate hard. Do this every session — shoulder longevity depends on it."
+          "coachingFocus": "Rear delt health. Elbows high and wide. External rotate hard. Do this every session — shoulder longevity depends on it.",
+          "id": "PLH011",
+          "thumbnailUrl": "/exercises/thumbnails/PLH011.jpg",
+          "videoUrl": "/exercises/videos/PLH011.mp4"
         },
         {
           "exercise": "EZ Bar Curl",
@@ -561,7 +720,10 @@
           "reps": "8-10",
           "tempo": "2-0-3-0",
           "rest": "75s",
-          "coachingFocus": "Heavy curl. No swing. 3-second negative. Supinate at top. Bicep peak development requires full ROM and a strong eccentric."
+          "coachingFocus": "Heavy curl. No swing. 3-second negative. Supinate at top. Bicep peak development requires full ROM and a strong eccentric.",
+          "id": "BIC005",
+          "thumbnailUrl": "/exercises/thumbnails/BIC005.jpg",
+          "videoUrl": "/exercises/videos/BIC005.mp4"
         }
       ],
       "finisher": "Chin-Up mechanical dropset: max reps with load → strip weight → max bodyweight reps — 2 rounds",
@@ -584,7 +746,10 @@
           "reps": "10-12",
           "tempo": "2-2-1-0",
           "rest": "90s",
-          "coachingFocus": "The premier glute builder. Bar on pad over hips. Drive to full extension. 2-second squeeze at top. Posterior pelvic tilt matters — don't hyperextend the lumbar."
+          "coachingFocus": "The premier glute builder. Bar on pad over hips. Drive to full extension. 2-second squeeze at top. Posterior pelvic tilt matters — don't hyperextend the lumbar.",
+          "id": "HI008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779711907/Barbell_Hip_Thrust_q4copv.png",
+          "videoUrl": "/exercises/videos/HI008.mp4"
         },
         {
           "exercise": "Romanian Deadlift",
@@ -592,7 +757,10 @@
           "reps": "8-10",
           "tempo": "3-1-1-0",
           "rest": "90s",
-          "coachingFocus": "Hamstring stretch-focused. Push hips back further than you think. Maintain flat back. Drive hips through at top. Glutes fire hard in the top half."
+          "coachingFocus": "Hamstring stretch-focused. Push hips back further than you think. Maintain flat back. Drive hips through at top. Glutes fire hard in the top half.",
+          "id": "HI004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI004.mp4"
         },
         {
           "exercise": "Bulgarian Split Squat",
@@ -600,7 +768,10 @@
           "reps": "12 each",
           "tempo": "3-0-1-0",
           "rest": "75s between legs",
-          "coachingFocus": "Front foot further from bench for more glute. Sink deep. Drive through heel. Glutes and hamstrings at long length = maximal stimulus."
+          "coachingFocus": "Front foot further from bench for more glute. Sink deep. Drive through heel. Glutes and hamstrings at long length = maximal stimulus.",
+          "id": "LU003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Bulgarian_Split_Squat_mdoejf.png",
+          "videoUrl": "/exercises/videos/LU003.mp4"
         },
         {
           "exercise": "Sumo Squat",
@@ -608,7 +779,10 @@
           "reps": "12-15",
           "tempo": "3-1-1-0",
           "rest": "60s",
-          "coachingFocus": "Wide stance, toes 45°. Knees track toes. Inner thigh and glute emphasis. Go deep. Squeeze glutes hard at the top."
+          "coachingFocus": "Wide stance, toes 45°. Knees track toes. Inner thigh and glute emphasis. Go deep. Squeeze glutes hard at the top.",
+          "id": "SQ007",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ007.mp4"
         },
         {
           "exercise": "Nordic Curl",
@@ -616,7 +790,10 @@
           "reps": "5-7",
           "tempo": "4-0-X-0",
           "rest": "2 min",
-          "coachingFocus": "The eccentric hamstring king. Lower as slowly as possible. Catch yourself at the bottom. Build over weeks — this is a serious exercise."
+          "coachingFocus": "The eccentric hamstring king. Lower as slowly as possible. Catch yourself at the bottom. Build over weeks — this is a serious exercise.",
+          "id": "HI015",
+          "thumbnailUrl": "/exercises/thumbnails/HI015.jpg",
+          "videoUrl": "/exercises/videos/HI015.mp4"
         },
         {
           "exercise": "Single Leg Romanian Deadlift",
@@ -624,7 +801,10 @@
           "reps": "10-12 each",
           "tempo": "3-0-1-0",
           "rest": "60s between legs",
-          "coachingFocus": "Balance challenge + hamstring work. Don't sacrifice depth for balance. Hold dumbbell in opposite hand. Hip stability is the bonus adaptation."
+          "coachingFocus": "Balance challenge + hamstring work. Don't sacrifice depth for balance. Hold dumbbell in opposite hand. Hip stability is the bonus adaptation.",
+          "id": "HI005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI005.mp4"
         }
       ],
       "finisher": "Hip Thrust Burnout: 3 x 20 bodyweight, 30s rest — glute endurance finish",
@@ -647,7 +827,10 @@
           "reps": "8-10",
           "tempo": "2-1-2-0",
           "rest": "90s",
-          "coachingFocus": "Full ROM is non-negotiable. Don't quarter-rep. Seated for stability. Control the eccentric. This is your strength anchor today."
+          "coachingFocus": "Full ROM is non-negotiable. Don't quarter-rep. Seated for stability. Control the eccentric. This is your strength anchor today.",
+          "id": "PHH020",
+          "thumbnailUrl": "/exercises/thumbnails/PHH020.jpg",
+          "videoUrl": "/exercises/videos/PHH020.mp4"
         },
         {
           "exercise": "Lateral Raise",
@@ -655,7 +838,10 @@
           "reps": "15-20",
           "tempo": "2-1-3-0",
           "rest": "60s",
-          "coachingFocus": "Width comes from lateral delts. Lead with elbows. Don't shrug. Slow descent builds the muscle. 5 sets is appropriate — laterals are hard to overload."
+          "coachingFocus": "Width comes from lateral delts. Lead with elbows. Don't shrug. Slow descent builds the muscle. 5 sets is appropriate — laterals are hard to overload.",
+          "id": "PHH022",
+          "thumbnailUrl": "/exercises/thumbnails/PHH022.jpg",
+          "videoUrl": "/exercises/videos/PHH022.mp4"
         },
         {
           "exercise": "Face Pull",
@@ -663,7 +849,10 @@
           "reps": "20-25",
           "tempo": "2-2-1-0",
           "rest": "45s",
-          "coachingFocus": "Rope at face height. Elbows high. External rotate hard at the end. Rear delts and rotator cuff health. Never skip these."
+          "coachingFocus": "Rope at face height. Elbows high. External rotate hard at the end. Rear delts and rotator cuff health. Never skip these.",
+          "id": "PLH011",
+          "thumbnailUrl": "/exercises/thumbnails/PLH011.jpg",
+          "videoUrl": "/exercises/videos/PLH011.mp4"
         },
         {
           "exercise": "Rear Delt Fly (DB)",
@@ -671,7 +860,10 @@
           "reps": "15-20",
           "tempo": "2-1-2-0",
           "rest": "45s",
-          "coachingFocus": "Hinge 45°+. Lift arms to side. Rear delts — the most neglected part of the shoulder. Consistent high volume here changes your physique."
+          "coachingFocus": "Hinge 45°+. Lift arms to side. Rear delts — the most neglected part of the shoulder. Consistent high volume here changes your physique.",
+          "id": "PLH010",
+          "thumbnailUrl": "/exercises/thumbnails/PLH010.jpg",
+          "videoUrl": "/exercises/videos/PLH010.mp4"
         },
         {
           "exercise": "Arnold Press",
@@ -679,7 +871,10 @@
           "reps": "10-12",
           "tempo": "2-1-2-0",
           "rest": "75s",
-          "coachingFocus": "Start with palms facing you, rotate to face out as you press. Hits all three delt heads through the rotation. Controlled throughout."
+          "coachingFocus": "Start with palms facing you, rotate to face out as you press. Hits all three delt heads through the rotation. Controlled throughout.",
+          "id": "PV003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704181/Dumbbell_Arnold_Press_zbwfim.png",
+          "videoUrl": "/exercises/videos/PV003.mp4"
         },
         {
           "exercise": "Upright Row (DB)",
@@ -687,7 +882,10 @@
           "reps": "12-15",
           "tempo": "2-1-2-0",
           "rest": "60s",
-          "coachingFocus": "Elbows lead and stay slightly above wrists. Pull to mid-chest. Don't go too wide — keep wrists below elbow level for shoulder safety."
+          "coachingFocus": "Elbows lead and stay slightly above wrists. Pull to mid-chest. Don't go too wide — keep wrists below elbow level for shoulder safety.",
+          "id": "PHH024",
+          "thumbnailUrl": "/exercises/thumbnails/PHH024.jpg",
+          "videoUrl": "/exercises/videos/PHH024.mp4"
         }
       ],
       "finisher": "Lateral Raise dropset: heavy x10 → medium x10 → light x10 — 3 rounds, 60s rest. Lateral delt obliteration.",
@@ -710,7 +908,10 @@
           "reps": "4-6",
           "tempo": "3-1-X-0",
           "rest": "2-3 min",
-          "coachingFocus": "Strength block. Heavy mechanical tension builds the most muscle. Bracing is critical. Drive your back into the bar on the way up."
+          "coachingFocus": "Strength block. Heavy mechanical tension builds the most muscle. Bracing is critical. Drive your back into the bar on the way up.",
+          "id": "SQ003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626390/Get_Fit_UpperLower_Split_Day_1_dio3bq.png",
+          "videoUrl": "/exercises/videos/SQ003.mp4"
         },
         {
           "exercise": "Barbell Bench Press",
@@ -718,7 +919,10 @@
           "reps": "5-7",
           "tempo": "3-0-X-0",
           "rest": "2 min",
-          "coachingFocus": "Upper body press anchor. Leg drive. Tight arch. Bar path is an arc — not straight up. Touch and press — no bouncing."
+          "coachingFocus": "Upper body press anchor. Leg drive. Tight arch. Bar path is an arc — not straight up. Touch and press — no bouncing.",
+          "id": "PH002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704390/Barbell_Bench_Press_gsbldt.png",
+          "videoUrl": "/exercises/videos/PH002.mp4"
         },
         {
           "exercise": "Barbell Bent-Over Row",
@@ -726,7 +930,10 @@
           "reps": "6-8",
           "tempo": "2-1-2-0",
           "rest": "2 min",
-          "coachingFocus": "Heavy row to match heavy press. Back thickness is built here. Pull to belly. Control the descent. The eccentric matters."
+          "coachingFocus": "Heavy row to match heavy press. Back thickness is built here. Pull to belly. Control the descent. The eccentric matters.",
+          "id": "PLH001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704398/Pendlay_Row_ybff7k.png",
+          "videoUrl": "/exercises/videos/PLH001.mp4"
         },
         {
           "exercise": "Romanian Deadlift",
@@ -734,7 +941,10 @@
           "reps": "8-10",
           "tempo": "3-1-1-0",
           "rest": "90s",
-          "coachingFocus": "Posterior chain accessory. Heavy but controlled. Hamstring load is the stimulus. Don't bounce at the bottom."
+          "coachingFocus": "Posterior chain accessory. Heavy but controlled. Hamstring load is the stimulus. Don't bounce at the bottom.",
+          "id": "HI004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI004.mp4"
         },
         {
           "exercise": "Dumbbell Shoulder Press",
@@ -742,7 +952,10 @@
           "reps": "8-10",
           "tempo": "2-0-2-0",
           "rest": "75s",
-          "coachingFocus": "Overhead strength after the primary movers. Full ROM. Don't rush. Shoulder stability earned through prior exercises supports this."
+          "coachingFocus": "Overhead strength after the primary movers. Full ROM. Don't rush. Shoulder stability earned through prior exercises supports this.",
+          "id": "PHH020",
+          "thumbnailUrl": "/exercises/thumbnails/PHH020.jpg",
+          "videoUrl": "/exercises/videos/PHH020.mp4"
         },
         {
           "exercise": "Pull-Up",
@@ -750,7 +963,10 @@
           "reps": "8-10",
           "tempo": "2-1-2-0",
           "rest": "90s",
-          "coachingFocus": "Back width cap to the session. Dead hang. Full ROM. If fatigued from rows, use a lighter band to maintain quality. Volume > load at this point."
+          "coachingFocus": "Back width cap to the session. Dead hang. Full ROM. If fatigued from rows, use a lighter band to maintain quality. Volume > load at this point.",
+          "id": "PLV001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Chin_Up_Pull_Up_lylqeo.png",
+          "videoUrl": "/exercises/videos/PLV001.mp4"
         }
       ],
       "finisher": "Farmer's Carry: 4 x 30m with heavy dumbbells — grip, core, and total body finisher",
@@ -773,7 +989,10 @@
           "reps": "10-12",
           "tempo": "3-1-1-0",
           "rest": "90s",
-          "coachingFocus": "On the floor if no bench. Full ROM limited, but control the negative. At home, technique discipline is your competitive advantage."
+          "coachingFocus": "On the floor if no bench. Full ROM limited, but control the negative. At home, technique discipline is your competitive advantage.",
+          "id": "PH003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704181/Dumbbell_Press_d6emjw.png",
+          "videoUrl": "/exercises/videos/PH003.mp4"
         },
         {
           "exercise": "Dumbbell Row (Single Arm)",
@@ -781,7 +1000,10 @@
           "reps": "12-15 each",
           "tempo": "2-1-2-0",
           "rest": "60s between arms",
-          "coachingFocus": "Brace on knee or chair. Elbow to ceiling. Control the descent. At home, this is your primary back builder — don't rush it."
+          "coachingFocus": "Brace on knee or chair. Elbow to ceiling. Control the descent. At home, this is your primary back builder — don't rush it.",
+          "id": "PLH002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH002.mp4"
         },
         {
           "exercise": "Goblet Squat",
@@ -789,7 +1011,10 @@
           "reps": "12-15",
           "tempo": "3-1-1-0",
           "rest": "75s",
-          "coachingFocus": "Heavy goblet squat builds serious quad and glute muscle. Go deep. Elbows inside knees at bottom. Upright torso."
+          "coachingFocus": "Heavy goblet squat builds serious quad and glute muscle. Go deep. Elbows inside knees at bottom. Upright torso.",
+          "id": "SQ002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
+          "videoUrl": "/exercises/videos/SQ002.mp4"
         },
         {
           "exercise": "Romanian Deadlift",
@@ -797,7 +1022,10 @@
           "reps": "12-15",
           "tempo": "3-1-1-0",
           "rest": "75s",
-          "coachingFocus": "Dumbbell RDL. Hip hinge is the pattern. Load the hamstrings. Drive hips through. If dumbbells are too light, add reps or slow the tempo."
+          "coachingFocus": "Dumbbell RDL. Hip hinge is the pattern. Load the hamstrings. Drive hips through. If dumbbells are too light, add reps or slow the tempo.",
+          "id": "HI004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI004.mp4"
         },
         {
           "exercise": "Dumbbell Shoulder Press",
@@ -805,7 +1033,10 @@
           "reps": "10-12",
           "tempo": "2-1-2-0",
           "rest": "75s",
-          "coachingFocus": "Standing or seated. Full ROM. If weight is limiting, increase reps to 20 and maintain slow tempo for time under tension."
+          "coachingFocus": "Standing or seated. Full ROM. If weight is limiting, increase reps to 20 and maintain slow tempo for time under tension.",
+          "id": "PHH020",
+          "thumbnailUrl": "/exercises/thumbnails/PHH020.jpg",
+          "videoUrl": "/exercises/videos/PHH020.mp4"
         },
         {
           "exercise": "Incline Dumbbell Curl",
@@ -813,7 +1044,10 @@
           "reps": "12-15",
           "tempo": "2-0-3-0",
           "rest": "60s",
-          "coachingFocus": "Use a chair at an angle if no bench. Arms hang back. Full stretch. Slow eccentric. Best bicep exercise for home training."
+          "coachingFocus": "Use a chair at an angle if no bench. Arms hang back. Full stretch. Slow eccentric. Best bicep exercise for home training.",
+          "id": "BIC007",
+          "thumbnailUrl": "/exercises/thumbnails/BIC007.jpg",
+          "videoUrl": "/exercises/videos/BIC007.mp4"
         }
       ],
       "finisher": "Dumbbell Complex: Romanian Deadlift x8 + Bent-Over Row x8 + Shoulder Press x8 = 1 round. 3 rounds, 90s rest.",
@@ -836,7 +1070,10 @@
           "reps": "8",
           "tempo": "5-1-1-0",
           "rest": "90s",
-          "coachingFocus": "5-second descent. 1-second pause. This is painful and productive. Muscles are maximally loaded through the full range. Lighter weight than normal — that's correct."
+          "coachingFocus": "5-second descent. 1-second pause. This is painful and productive. Muscles are maximally loaded through the full range. Lighter weight than normal — that's correct.",
+          "id": "SQ019",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ019.mp4"
         },
         {
           "exercise": "Incline Dumbbell Press",
@@ -844,7 +1081,10 @@
           "reps": "10",
           "tempo": "4-1-1-0",
           "rest": "90s",
-          "coachingFocus": "4-second descent. Full stretch. Don't touch shoulders. Squeeze hard at the top. Time under tension method maximises hypertrophy at lower loads."
+          "coachingFocus": "4-second descent. Full stretch. Don't touch shoulders. Squeeze hard at the top. Time under tension method maximises hypertrophy at lower loads.",
+          "id": "PH004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704181/Dumbbell_Press_d6emjw.png",
+          "videoUrl": "/exercises/videos/PH004.mp4"
         },
         {
           "exercise": "Lat Pulldown",
@@ -852,7 +1092,10 @@
           "reps": "10",
           "tempo": "2-1-3-0",
           "rest": "75s",
-          "coachingFocus": "3-second controlled return to full stretch. Lat under load for longer. This is a different stimulus to normal tempo — embrace it."
+          "coachingFocus": "3-second controlled return to full stretch. Lat under load for longer. This is a different stimulus to normal tempo — embrace it.",
+          "id": "PLV003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779711454/Lat_Down_jxxqmy.png",
+          "videoUrl": "/exercises/videos/PLV003.mp4"
         },
         {
           "exercise": "Romanian Deadlift",
@@ -860,7 +1103,10 @@
           "reps": "10",
           "tempo": "4-1-1-0",
           "rest": "90s",
-          "coachingFocus": "4-second hip hinge down. Hamstrings loaded slowly and deeply. 1-second pause at the stretch. Drive hips through assertively at the top."
+          "coachingFocus": "4-second hip hinge down. Hamstrings loaded slowly and deeply. 1-second pause at the stretch. Drive hips through assertively at the top.",
+          "id": "HI004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI004.mp4"
         },
         {
           "exercise": "Dumbbell Fly",
@@ -868,7 +1114,10 @@
           "reps": "12",
           "tempo": "4-1-1-0",
           "rest": "60s",
-          "coachingFocus": "Stretch-focused exercise already — add 4-second descent and it becomes elite. Chest muscle growth is all about time in the lengthened position."
+          "coachingFocus": "Stretch-focused exercise already — add 4-second descent and it becomes elite. Chest muscle growth is all about time in the lengthened position.",
+          "id": "PH012",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704400/Cable_Fly_zuuqot.png",
+          "videoUrl": "/exercises/videos/PH012.mp4"
         },
         {
           "exercise": "Nordic Curl",
@@ -876,7 +1125,10 @@
           "reps": "5",
           "tempo": "6-0-X-0",
           "rest": "2 min",
-          "coachingFocus": "6-second eccentric. The slowest thing you'll do in the gym. Hamstring lengthened-state loading is the most potent hypertrophy signal for posterior chain."
+          "coachingFocus": "6-second eccentric. The slowest thing you'll do in the gym. Hamstring lengthened-state loading is the most potent hypertrophy signal for posterior chain.",
+          "id": "HI015",
+          "thumbnailUrl": "/exercises/thumbnails/HI015.jpg",
+          "videoUrl": "/exercises/videos/HI015.mp4"
         }
       ],
       "finisher": "Pause Squat: 3 x 10 with 2-second pause at bottom — sustained quad tension",
@@ -899,7 +1151,10 @@
           "reps": "15-20",
           "tempo": "2-1-2-0",
           "rest": "60s",
-          "coachingFocus": "Machine isolates the chest beautifully for high-rep work. Control both ways. Squeeze at lockout. Higher rep ranges increase metabolic stress."
+          "coachingFocus": "Machine isolates the chest beautifully for high-rep work. Control both ways. Squeeze at lockout. Higher rep ranges increase metabolic stress.",
+          "id": "PH010",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710450/Machine_Chest_Press_irkw48.png",
+          "videoUrl": "/exercises/videos/PH010.mp4"
         },
         {
           "exercise": "Lat Pulldown",
@@ -907,7 +1162,10 @@
           "reps": "15-20",
           "tempo": "2-1-2-0",
           "rest": "60s",
-          "coachingFocus": "High rep pulldown. Full stretch at top. Drive elbows down. Blood flow to the lats is the goal today — pump-focused training works."
+          "coachingFocus": "High rep pulldown. Full stretch at top. Drive elbows down. Blood flow to the lats is the goal today — pump-focused training works.",
+          "id": "PLV003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779711454/Lat_Down_jxxqmy.png",
+          "videoUrl": "/exercises/videos/PLV003.mp4"
         },
         {
           "exercise": "Lateral Raise",
@@ -915,7 +1173,10 @@
           "reps": "20-25",
           "tempo": "2-1-2-0",
           "rest": "45s",
-          "coachingFocus": "High-rep laterals build width. Light weight. Perfect form. Lead with elbows. Control down. 5 sets x 20-25 reps = serious delt volume."
+          "coachingFocus": "High-rep laterals build width. Light weight. Perfect form. Lead with elbows. Control down. 5 sets x 20-25 reps = serious delt volume.",
+          "id": "PHH022",
+          "thumbnailUrl": "/exercises/thumbnails/PHH022.jpg",
+          "videoUrl": "/exercises/videos/PHH022.mp4"
         },
         {
           "exercise": "Cable Chest Press",
@@ -923,7 +1184,10 @@
           "reps": "20",
           "tempo": "2-0-2-0",
           "rest": "45s",
-          "coachingFocus": "Constant tension from cables. Squeeze hard at lockout. Don't let the weight pull you into a bad position. Pure pump work."
+          "coachingFocus": "Constant tension from cables. Squeeze hard at lockout. Don't let the weight pull you into a bad position. Pure pump work.",
+          "id": "PH009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704400/Cable_Fly_zuuqot.png",
+          "videoUrl": "/exercises/videos/PH009.mp4"
         },
         {
           "exercise": "Face Pull",
@@ -931,7 +1195,10 @@
           "reps": "25-30",
           "tempo": "2-2-1-0",
           "rest": "30s",
-          "coachingFocus": "Rear delt health and volume. High rep, light weight. External rotation at the end. These reps are cumulative — do them every push session."
+          "coachingFocus": "Rear delt health and volume. High rep, light weight. External rotation at the end. These reps are cumulative — do them every push session.",
+          "id": "PLH011",
+          "thumbnailUrl": "/exercises/thumbnails/PLH011.jpg",
+          "videoUrl": "/exercises/videos/PLH011.mp4"
         },
         {
           "exercise": "Hammer Curl",
@@ -939,7 +1206,10 @@
           "reps": "15-20",
           "tempo": "2-0-2-0",
           "rest": "45s",
-          "coachingFocus": "Neutral grip. Brachialis and forearm pump. No swing. Control down. Combined with other volume, this finishes the arms completely."
+          "coachingFocus": "Neutral grip. Brachialis and forearm pump. No swing. Control down. Combined with other volume, this finishes the arms completely.",
+          "id": "BIC006",
+          "thumbnailUrl": "/exercises/thumbnails/BIC006.jpg",
+          "videoUrl": "/exercises/videos/BIC006.mp4"
         }
       ],
       "finisher": "Push-Up x25 + Band Pull-Apart x25: 3 rounds, 45s rest — chest/rear delt superset pump finisher",
@@ -962,7 +1232,10 @@
           "reps": "10-12 each",
           "tempo": "3-0-1-0",
           "rest": "75s between legs",
-          "coachingFocus": "The king of unilateral leg training. Sink deep. Front foot controls emphasis — forward for glutes, more upright for quads. Address imbalances here."
+          "coachingFocus": "The king of unilateral leg training. Sink deep. Front foot controls emphasis — forward for glutes, more upright for quads. Address imbalances here.",
+          "id": "LU003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Bulgarian_Split_Squat_mdoejf.png",
+          "videoUrl": "/exercises/videos/LU003.mp4"
         },
         {
           "exercise": "Single Arm DB Press (Flat)",
@@ -970,7 +1243,10 @@
           "reps": "10-12 each",
           "tempo": "3-1-1-0",
           "rest": "60s between arms",
-          "coachingFocus": "Single arm requires core anti-rotation. Heavier relative stimulus than bilateral. Don't let the torso rotate. Pec isolation is enhanced."
+          "coachingFocus": "Single arm requires core anti-rotation. Heavier relative stimulus than bilateral. Don't let the torso rotate. Pec isolation is enhanced.",
+          "id": "PHH023",
+          "thumbnailUrl": "/exercises/thumbnails/PHH023.jpg",
+          "videoUrl": "/exercises/videos/PHH023.mp4"
         },
         {
           "exercise": "Cable Single Arm Row",
@@ -978,7 +1254,10 @@
           "reps": "12-15 each",
           "tempo": "2-1-2-0",
           "rest": "60s between arms",
-          "coachingFocus": "Rotate into the row for full lat stretch. Unilateral rows allow greater range of motion than barbell variations. Own the stretch."
+          "coachingFocus": "Rotate into the row for full lat stretch. Unilateral rows allow greater range of motion than barbell variations. Own the stretch.",
+          "id": "PLH015",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH015.mp4"
         },
         {
           "exercise": "Single Leg Romanian Deadlift",
@@ -986,7 +1265,10 @@
           "reps": "10-12 each",
           "tempo": "3-0-1-0",
           "rest": "60s between legs",
-          "coachingFocus": "Unilateral hinge. Balance is secondary to the hip hinge. Slow and controlled. Great for hamstring and glute independence."
+          "coachingFocus": "Unilateral hinge. Balance is secondary to the hip hinge. Slow and controlled. Great for hamstring and glute independence.",
+          "id": "HI005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI005.mp4"
         },
         {
           "exercise": "Archer Push-Up",
@@ -994,7 +1276,10 @@
           "reps": "8-10 each",
           "tempo": "3-0-1-0",
           "rest": "75s",
-          "coachingFocus": "Shift weight to one arm per rep. The working arm carries significantly more load. Progression toward one-arm push-up. Core demand is high."
+          "coachingFocus": "Shift weight to one arm per rep. The working arm carries significantly more load. Progression toward one-arm push-up. Core demand is high.",
+          "id": "PH011",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
+          "videoUrl": "/exercises/videos/PH011.mp4"
         },
         {
           "exercise": "Step-Up",
@@ -1002,7 +1287,10 @@
           "reps": "12-15 each",
           "tempo": "2-0-1-0",
           "rest": "60s between legs",
-          "coachingFocus": "Drive through the top foot. Don't push off the bottom. Full hip extension at the top. Quad and glute unilateral volume."
+          "coachingFocus": "Drive through the top foot. Don't push off the bottom. Full hip extension at the top. Quad and glute unilateral volume.",
+          "id": "LU010",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU010.mp4"
         }
       ],
       "finisher": "Deficit Reverse Lunge: 3 x 10 each leg with bodyweight — deep quad and glute stretch to finish",
@@ -1025,7 +1313,10 @@
           "reps": "6-8",
           "tempo": "3-1-1-0",
           "rest": "2 min",
-          "coachingFocus": "Most quad-dominant squat variation. Elbows high is non-negotiable. Deep knee flexion. Upright torso removes posterior chain and loads the quads maximally."
+          "coachingFocus": "Most quad-dominant squat variation. Elbows high is non-negotiable. Deep knee flexion. Upright torso removes posterior chain and loads the quads maximally.",
+          "id": "SQ004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ004.mp4"
         },
         {
           "exercise": "Hack Squat (Machine)",
@@ -1033,7 +1324,10 @@
           "reps": "10-12",
           "tempo": "3-0-1-0",
           "rest": "90s",
-          "coachingFocus": "Feet low on platform. Don't lock out. Control the negative. Hack squat on machine gives safe overload of the quads without lower back fatigue."
+          "coachingFocus": "Feet low on platform. Don't lock out. Control the negative. Hack squat on machine gives safe overload of the quads without lower back fatigue.",
+          "id": "SQ009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710450/Hack_Squat_ryovym.png",
+          "videoUrl": "/exercises/videos/SQ009.mp4"
         },
         {
           "exercise": "Leg Press",
@@ -1041,7 +1335,10 @@
           "reps": "15-20",
           "tempo": "2-0-2-0",
           "rest": "75s",
-          "coachingFocus": "High feet placement shifts to glutes. Low feet = quads. Today = low feet, moderate width. Control the descent — don't let the sled drop."
+          "coachingFocus": "High feet placement shifts to glutes. Low feet = quads. Today = low feet, moderate width. Control the descent — don't let the sled drop.",
+          "id": "SQ010",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710454/Leg_Press_xkdtsb.png",
+          "videoUrl": "/exercises/videos/SQ010.mp4"
         },
         {
           "exercise": "Tempo Squat",
@@ -1049,7 +1346,10 @@
           "reps": "10",
           "tempo": "4-1-1-0",
           "rest": "90s",
-          "coachingFocus": "4-second descent for quad time-under-tension. Lighter than normal is expected and appropriate. Muscle burn = stimulus."
+          "coachingFocus": "4-second descent for quad time-under-tension. Lighter than normal is expected and appropriate. Muscle burn = stimulus.",
+          "id": "SQ019",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ019.mp4"
         },
         {
           "exercise": "Goblet Squat",
@@ -1057,7 +1357,10 @@
           "reps": "15-20",
           "tempo": "2-1-1-0",
           "rest": "60s",
-          "coachingFocus": "High-rep pump set. Keep the weight moderate. This is about flushing blood through the quads and maintaining the stimulus at end of session."
+          "coachingFocus": "High-rep pump set. Keep the weight moderate. This is about flushing blood through the quads and maintaining the stimulus at end of session.",
+          "id": "SQ002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
+          "videoUrl": "/exercises/videos/SQ002.mp4"
         },
         {
           "exercise": "Standing Calf Raise",
@@ -1065,7 +1368,10 @@
           "reps": "15-20",
           "tempo": "2-2-2-0",
           "rest": "45s",
-          "coachingFocus": "Full stretch at the bottom — pause there. Rise to full contraction. Calves need range more than load. Gastrocnemius focus (knee straight)."
+          "coachingFocus": "Full stretch at the bottom — pause there. Rise to full contraction. Calves need range more than load. Gastrocnemius focus (knee straight).",
+          "id": "CAL001",
+          "thumbnailUrl": "/exercises/thumbnails/CAL001.jpg",
+          "videoUrl": "/exercises/videos/CAL001.mp4"
         }
       ],
       "finisher": "Wall Sit: 3 x 45-60s — terminal quad isometric burnout",
@@ -1088,7 +1394,10 @@
           "reps": "5-8 each",
           "tempo": "3-1-X-0",
           "rest": "90s between legs",
-          "coachingFocus": "Full ROM single leg squat. Control descent. Arms forward for balance. The most demanding bodyweight leg exercise. Strength and mobility combined."
+          "coachingFocus": "Full ROM single leg squat. Control descent. Arms forward for balance. The most demanding bodyweight leg exercise. Strength and mobility combined.",
+          "id": "SQ008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704137/Pistol_Squat_b1sb9k.png",
+          "videoUrl": "/exercises/videos/SQ008.mp4"
         },
         {
           "exercise": "Archer Push-Up",
@@ -1096,7 +1405,10 @@
           "reps": "8-10 each",
           "tempo": "3-0-1-0",
           "rest": "75s",
-          "coachingFocus": "Near-unilateral push. Maximum chest and tricep loading possible without weights. Earn this movement — wide push-up first if not ready."
+          "coachingFocus": "Near-unilateral push. Maximum chest and tricep loading possible without weights. Earn this movement — wide push-up first if not ready.",
+          "id": "PH011",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
+          "videoUrl": "/exercises/videos/PH011.mp4"
         },
         {
           "exercise": "Pull-Up",
@@ -1104,7 +1416,10 @@
           "reps": "8-12",
           "tempo": "2-1-3-0",
           "rest": "2 min",
-          "coachingFocus": "Full ROM. Dead hang. 3-second negative. The best bodyweight back exercise. Volume here = back development."
+          "coachingFocus": "Full ROM. Dead hang. 3-second negative. The best bodyweight back exercise. Volume here = back development.",
+          "id": "PLV001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Chin_Up_Pull_Up_lylqeo.png",
+          "videoUrl": "/exercises/videos/PLV001.mp4"
         },
         {
           "exercise": "Bulgarian Split Squat",
@@ -1112,7 +1427,10 @@
           "reps": "12-15 each",
           "tempo": "3-0-1-0",
           "rest": "75s between legs",
-          "coachingFocus": "Bodyweight or with any load available. Deep sink. Rear foot elevated. Quad and glute emphasis depending on torso lean."
+          "coachingFocus": "Bodyweight or with any load available. Deep sink. Rear foot elevated. Quad and glute emphasis depending on torso lean.",
+          "id": "LU003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Bulgarian_Split_Squat_mdoejf.png",
+          "videoUrl": "/exercises/videos/LU003.mp4"
         },
         {
           "exercise": "Diamond Push-Up",
@@ -1120,7 +1438,10 @@
           "reps": "15-20",
           "tempo": "2-0-1-0",
           "rest": "60s",
-          "coachingFocus": "Tricep isolation bodyweight style. Elbows track close. Full ROM. Use as accessory after archer push-ups — arms are pre-fatigued."
+          "coachingFocus": "Tricep isolation bodyweight style. Elbows track close. Full ROM. Use as accessory after archer push-ups — arms are pre-fatigued.",
+          "id": "PH005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Diamond_push-ups_bmqaty.png",
+          "videoUrl": "/exercises/videos/PH005.mp4"
         },
         {
           "exercise": "Chin-Up",
@@ -1128,7 +1449,10 @@
           "reps": "10-15",
           "tempo": "2-0-3-0",
           "rest": "90s",
-          "coachingFocus": "Supinated grip. More bicep. Full stretch at bottom. Chest to bar target. Slow negative for maximum bicep growth."
+          "coachingFocus": "Supinated grip. More bicep. Full stretch at bottom. Chest to bar target. Slow negative for maximum bicep growth.",
+          "id": "PLV002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Chin_Up_Pull_Up_lylqeo.png",
+          "videoUrl": "/exercises/videos/PLV002.mp4"
         }
       ],
       "finisher": "Burpee x5 + Push-Up x10 + Squat x15: 3 rounds, 60s rest — full body metabolic close",
@@ -1151,7 +1475,10 @@
           "reps": "10-12",
           "tempo": "3-1-1-0",
           "rest": "90s",
-          "coachingFocus": "Learn the squat pattern here. Elbows inside knees. Chest tall. Upright. This is your foundation — everything else builds on it."
+          "coachingFocus": "Learn the squat pattern here. Elbows inside knees. Chest tall. Upright. This is your foundation — everything else builds on it.",
+          "id": "SQ002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
+          "videoUrl": "/exercises/videos/SQ002.mp4"
         },
         {
           "exercise": "Dumbbell Bench Press",
@@ -1159,7 +1486,10 @@
           "reps": "10-12",
           "tempo": "3-1-1-0",
           "rest": "90s",
-          "coachingFocus": "Safer than barbell for beginners. Control the weight. Feel the chest doing the work. Elbows 45° from body."
+          "coachingFocus": "Safer than barbell for beginners. Control the weight. Feel the chest doing the work. Elbows 45° from body.",
+          "id": "PH003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704181/Dumbbell_Press_d6emjw.png",
+          "videoUrl": "/exercises/videos/PH003.mp4"
         },
         {
           "exercise": "Lat Pulldown",
@@ -1167,7 +1497,10 @@
           "reps": "12-15",
           "tempo": "2-1-2-0",
           "rest": "75s",
-          "coachingFocus": "Machine makes the pattern accessible. Pull elbows to ribs. Full stretch at top. You're building the pull-up here — every rep matters."
+          "coachingFocus": "Machine makes the pattern accessible. Pull elbows to ribs. Full stretch at top. You're building the pull-up here — every rep matters.",
+          "id": "PLV003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779711454/Lat_Down_jxxqmy.png",
+          "videoUrl": "/exercises/videos/PLV003.mp4"
         },
         {
           "exercise": "Romanian Deadlift",
@@ -1175,7 +1508,10 @@
           "reps": "10-12",
           "tempo": "3-0-1-0",
           "rest": "90s",
-          "coachingFocus": "Hip hinge is a fundamental human movement. Push hips back. Neutral spine. Feel the hamstring load. Light weight first — this is a skill."
+          "coachingFocus": "Hip hinge is a fundamental human movement. Push hips back. Neutral spine. Feel the hamstring load. Light weight first — this is a skill.",
+          "id": "HI004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI004.mp4"
         },
         {
           "exercise": "Dumbbell Shoulder Press",
@@ -1183,7 +1519,10 @@
           "reps": "10-12",
           "tempo": "2-0-2-0",
           "rest": "75s",
-          "coachingFocus": "Seated for stability. Full ROM. Don't overarch the lower back. Shoulders work independently of each other — note any asymmetry."
+          "coachingFocus": "Seated for stability. Full ROM. Don't overarch the lower back. Shoulders work independently of each other — note any asymmetry.",
+          "id": "PHH020",
+          "thumbnailUrl": "/exercises/thumbnails/PHH020.jpg",
+          "videoUrl": "/exercises/videos/PHH020.mp4"
         },
         {
           "exercise": "Plank",
@@ -1191,7 +1530,10 @@
           "reps": "20-30s",
           "tempo": "Isometric",
           "rest": "45s",
-          "coachingFocus": "Core stability. Ribs down. Glutes on. Breathe. Build toward 60s over 4-6 weeks. Quality beats duration every time."
+          "coachingFocus": "Core stability. Ribs down. Glutes on. Breathe. Build toward 60s over 4-6 weeks. Quality beats duration every time.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
       "finisher": "Bodyweight Squat x15 + Push-Up x8: 2 rounds, 60s rest — reinforce patterns at session close",
@@ -1214,7 +1556,10 @@
           "reps": "8 each position (mechanical drop)",
           "tempo": "2-0-1-0",
           "rest": "2 min",
-          "coachingFocus": "Mechanical dropset: start in weakest position (incline), progress to stronger positions without rest. Maximises total chest volume and metabolic stress."
+          "coachingFocus": "Mechanical dropset: start in weakest position (incline), progress to stronger positions without rest. Maximises total chest volume and metabolic stress.",
+          "id": "PHH021",
+          "thumbnailUrl": "/exercises/thumbnails/PHH021.jpg",
+          "videoUrl": "/exercises/videos/PHH021.mp4"
         },
         {
           "exercise": "Wide Grip Lat Pulldown → Neutral Grip Pulldown → Underhand Pulldown",
@@ -1222,7 +1567,10 @@
           "reps": "8 each grip (mechanical drop)",
           "tempo": "2-1-2-0",
           "rest": "2 min",
-          "coachingFocus": "Mechanical lat dropset — same cable, different grips in sequence. Each grip hits the back slightly differently. Massive lat volume in short time."
+          "coachingFocus": "Mechanical lat dropset — same cable, different grips in sequence. Each grip hits the back slightly differently. Massive lat volume in short time.",
+          "id": "PLH009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH009.mp4"
         },
         {
           "exercise": "Barbell Bench Press",
@@ -1230,7 +1578,10 @@
           "reps": "8-10",
           "tempo": "3-1-1-0",
           "rest": "90s",
-          "coachingFocus": "After the dropset, standard bench press to build raw strength on a pre-fatigued muscle. Lighter weight than normal. Chest connection should be excellent."
+          "coachingFocus": "After the dropset, standard bench press to build raw strength on a pre-fatigued muscle. Lighter weight than normal. Chest connection should be excellent.",
+          "id": "PH002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704390/Barbell_Bench_Press_gsbldt.png",
+          "videoUrl": "/exercises/videos/PH002.mp4"
         },
         {
           "exercise": "Pull-Up",
@@ -1238,7 +1589,10 @@
           "reps": "6-10",
           "tempo": "2-1-3-0",
           "rest": "90s",
-          "coachingFocus": "After pulldown dropset, pull-ups finish the lat work. Slow eccentric. Full ROM. If fatigued, use band assistance to maintain quality."
+          "coachingFocus": "After pulldown dropset, pull-ups finish the lat work. Slow eccentric. Full ROM. If fatigued, use band assistance to maintain quality.",
+          "id": "PLV001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Chin_Up_Pull_Up_lylqeo.png",
+          "videoUrl": "/exercises/videos/PLV001.mp4"
         },
         {
           "exercise": "Rear Delt Fly (DB)",
@@ -1246,7 +1600,10 @@
           "reps": "15-20",
           "tempo": "2-1-2-0",
           "rest": "45s",
-          "coachingFocus": "Rear delt always. Every push/pull session. High rep, controlled, consistent. Never skip these."
+          "coachingFocus": "Rear delt always. Every push/pull session. High rep, controlled, consistent. Never skip these.",
+          "id": "PLH010",
+          "thumbnailUrl": "/exercises/thumbnails/PLH010.jpg",
+          "videoUrl": "/exercises/videos/PLH010.mp4"
         },
         {
           "exercise": "Face Pull",
@@ -1254,7 +1611,10 @@
           "reps": "20",
           "tempo": "2-2-1-0",
           "rest": "45s",
-          "coachingFocus": "Rotator cuff and rear delt health. External rotate hard. Elbows high. Shoulder longevity over decades starts with consistent face pulls."
+          "coachingFocus": "Rotator cuff and rear delt health. External rotate hard. Elbows high. Shoulder longevity over decades starts with consistent face pulls.",
+          "id": "PLH011",
+          "thumbnailUrl": "/exercises/thumbnails/PLH011.jpg",
+          "videoUrl": "/exercises/videos/PLH011.mp4"
         }
       ],
       "finisher": "Push-Up x20 + Chin-Up x8: 3 superset rounds, 60s rest — bilateral upper body burnout",
