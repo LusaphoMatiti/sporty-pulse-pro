@@ -6,6 +6,29 @@ import { prisma } from "@/lib/prisma";
 import { getUserAccess } from "@/lib/access";
 import { InstanceStatus } from "@/generated/prisma";
 
+function getFullImageUrl(imageUrl: string | null): string | null {
+  if (!imageUrl) return null;
+
+  // If it's already a full URL (http:// or https://)
+  if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) {
+    return imageUrl;
+  }
+
+  // If it's a Cloudinary path (starts with /v...)
+  if (imageUrl.startsWith("/v") || imageUrl.includes("cloudinary")) {
+    // Ensure we have the full Cloudinary base URL
+    const CLOUDINARY_BASE = "https://res.cloudinary.com/dsoxsrjn2/image/upload";
+    if (imageUrl.startsWith("/v")) {
+      return `${CLOUDINARY_BASE}${imageUrl}`;
+    }
+    return imageUrl;
+  }
+
+  // For local paths, construct full URL from API base
+  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
+  return `${API_BASE}${imageUrl}`;
+}
+
 export async function GET(req: Request) {
   const session = await getMobileOrWebSession(req);
   if (!session?.user?.id) {
@@ -104,6 +127,7 @@ export async function GET(req: Request) {
     const { plannedSessions: _, ...rest } = p;
     return {
       ...rest,
+      imageUrl: getFullImageUrl(rest.imageUrl),
       exerciseCount,
       requiresEquipment: !!p.equipmentId,
     };

@@ -8,6 +8,22 @@ import type { SessionDraft } from "@/app/api/session/draft/route";
 
 export const dynamic = "force-dynamic";
 
+function getFullImageUrl(imageUrl: string | null): string | null {
+  if (!imageUrl) return null;
+  if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) {
+    return imageUrl;
+  }
+  if (imageUrl.startsWith("/v") || imageUrl.includes("cloudinary")) {
+    const CLOUDINARY_BASE = "https://res.cloudinary.com/dsoxsrjn2/image/upload";
+    if (imageUrl.startsWith("/v")) {
+      return `${CLOUDINARY_BASE}${imageUrl}`;
+    }
+    return imageUrl;
+  }
+  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
+  return `${API_BASE}${imageUrl}`;
+}
+
 export async function GET(req: NextRequest) {
   const session = await getMobileOrWebSession(req);
   if (!session)
@@ -214,10 +230,10 @@ export async function GET(req: NextRequest) {
     planId: instance.planId,
     planName: instance.plan.name,
     muscleGroup: instance.plan.muscleGroup,
-    imageUrl: instance.plan.imageUrl ?? null,
     sessionDurationMin: instance.plan.sessionDurationMin ?? null,
     level: instance.level,
     currentSession: instance.currentSession,
+    imageUrl: getFullImageUrl(instance.plan.imageUrl) ?? null,
     totalSessions,
     focus: plannedSession.focus,
     estimatedMinutes: plannedSession.estimatedMinutes,
