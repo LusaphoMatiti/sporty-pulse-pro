@@ -76,28 +76,20 @@ export async function GET(req: NextRequest) {
           sessionDurationMin: true,
           durationWeeks: true,
           sessionsPerWeek: true,
-          // equipmentId removed — equipment is now many-to-many via ExerciseEquipment
         },
       }),
     ]);
 
+  // ── No active plan: return just the program list ──────────────────────────
   if (!instance) {
-    const allPrograms = await prisma.workoutPlan.findMany({
-      orderBy: { name: "asc" },
-      select: {
-        id: true,
-        name: true,
-        description: true,
-        tier: true,
-        muscleGroup: true,
-        imageUrl: true,
-        sessionDurationMin: true,
-        durationWeeks: true,
-        sessionsPerWeek: true,
-      },
-    });
     return NextResponse.json(
-      { instanceId: null, allPrograms },
+      {
+        instanceId: null,
+        allPrograms: allPrograms.map((p) => ({
+          ...p,
+          imageUrl: getFullImageUrl(p.imageUrl),
+        })),
+      },
       { status: 200 },
     );
   }
@@ -130,7 +122,6 @@ export async function GET(req: NextRequest) {
                 id: true,
                 name: true,
                 musclesWorked: true,
-                // Correct shape for many-to-many via ExerciseEquipment join table
                 equipment: {
                   select: {
                     equipment: {
@@ -213,7 +204,6 @@ export async function GET(req: NextRequest) {
       id: pe.exercise.id,
       name: pe.exercise.name,
       musclesWorked: pe.exercise.musclesWorked,
-      // Flatten join table to a simple array for the mobile client
       equipment: pe.exercise.equipment.map((ee) => ({
         id: ee.equipment.id,
         name: ee.equipment.name,
@@ -243,7 +233,12 @@ export async function GET(req: NextRequest) {
     trialExpiresAt,
     boughtFromStore,
     draft: (instance.sessionDraft as SessionDraft) ?? null,
-    allPrograms,
+    // ── FIX: run getFullImageUrl on every program so the mobile client
+    //         receives absolute Cloudinary URLs, not raw /v… paths ──────────
+    allPrograms: allPrograms.map((p) => ({
+      ...p,
+      imageUrl: getFullImageUrl(p.imageUrl),
+    })),
     activeEquipmentIds,
   });
 }
