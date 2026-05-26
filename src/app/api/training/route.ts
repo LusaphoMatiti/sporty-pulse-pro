@@ -9,16 +9,24 @@ export const dynamic = "force-dynamic";
 
 function getFullImageUrl(imageUrl: string | null): string | null {
   if (!imageUrl) return null;
+  // Already absolute
   if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) {
     return imageUrl;
   }
+  // Cloudinary delivery URL fragment (/v<version>/...) or full cloudinary domain
+  const CLOUDINARY_BASE = "https://res.cloudinary.com/dsoxsrjn2/image/upload";
   if (imageUrl.startsWith("/v") || imageUrl.includes("cloudinary")) {
-    const CLOUDINARY_BASE = "https://res.cloudinary.com/dsoxsrjn2/image/upload";
-    if (imageUrl.startsWith("/v")) {
-      return `${CLOUDINARY_BASE}${imageUrl}`;
-    }
-    return imageUrl;
+    return imageUrl.startsWith("/v")
+      ? `${CLOUDINARY_BASE}${imageUrl}`
+      : imageUrl;
   }
+  // Bare Cloudinary public ID (e.g. "sporty-pulse/exercises/pushup")
+  // Anything that is not an absolute URL and not a leading-slash relative path
+  // is assumed to be a Cloudinary public ID.
+  if (!imageUrl.startsWith("/")) {
+    return `${CLOUDINARY_BASE}/${imageUrl}`;
+  }
+  // Leading-slash relative path — prepend API base
   const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
   return `${API_BASE}${imageUrl}`;
 }
