@@ -13,6 +13,57 @@ import buildMuscleRaw from "../src/training/workouts_build_muscle.json";
 import loseWeightRaw from "../src/training/workouts_lose_weight.json";
 import getFitRaw from "../src/training/workouts_get_fit.json";
 
+interface WorkoutEntry {
+  exercise: string;
+  thumbnailUrl?: string;
+}
+
+interface WorkoutBlock {
+  mainWorkout?: WorkoutEntry[];
+}
+
+interface WorkoutGoalFile {
+  workouts: WorkoutBlock[];
+}
+
+interface LoseWeightVariation {
+  mainWorkout?: WorkoutEntry[];
+}
+
+interface LoseWeightSkeleton {
+  variations: LoseWeightVariation[];
+}
+
+interface LoseWeightFile {
+  skeletons: LoseWeightSkeleton[];
+}
+
+function buildThumbnailMap(): Map<string, string> {
+  const map = new Map<string, string>();
+
+  const allWorkoutEntries: WorkoutEntry[] = [
+    ...(buildMuscleRaw as WorkoutGoalFile).workouts.flatMap(
+      (w) => w.mainWorkout ?? [],
+    ),
+    ...(loseWeightRaw as LoseWeightFile).skeletons.flatMap((s) =>
+      s.variations.flatMap((v) => v.mainWorkout ?? []),
+    ),
+    ...(getFitRaw as WorkoutGoalFile).workouts.flatMap(
+      (w) => w.mainWorkout ?? [],
+    ),
+  ];
+
+  for (const entry of allWorkoutEntries) {
+    if (entry.exercise && entry.thumbnailUrl?.startsWith("https://")) {
+      if (!map.has(entry.exercise)) {
+        map.set(entry.exercise, entry.thumbnailUrl);
+      }
+    }
+  }
+
+  return map;
+}
+
 const adapter = new PrismaPg({ connectionString: process.env.DIRECT_URL! });
 const prisma = new PrismaClient({ adapter });
 
@@ -414,6 +465,8 @@ function normaliseNestedJSON(raw: {
 async function main() {
   // ── 1. Equipment ──────────────────────────
   console.log("Seeding equipment...");
+
+  const thumbnailMap = buildThumbnailMap();
   for (const item of equipmentSeed) {
     await prisma.equipment.upsert({
       where: { name: item.name },
@@ -452,7 +505,10 @@ async function main() {
 
     // Asset URLs read directly from exercises.ts — add them there after Cloudinary upload
     const description = EXERCISE_DESCRIPTIONS[ex.name] ?? null;
-    const thumbnailUrl = (ex as { thumbnailUrl?: string }).thumbnailUrl ?? null;
+    const thumbnailUrl =
+      (ex as { thumbnailUrl?: string }).thumbnailUrl ??
+      thumbnailMap.get(ex.name) ??
+      null;
     const videoUrl = (ex as { videoUrl?: string }).videoUrl ?? null;
 
     await prisma.exercise.upsert({
