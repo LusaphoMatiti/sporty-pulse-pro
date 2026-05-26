@@ -373,6 +373,14 @@ function parseReps(reps: string | number | undefined): number {
   return 10;
 }
 
+function parseSets(sets: number | string | undefined): number {
+  if (sets === undefined || sets === null) return 3;
+  if (typeof sets === "number" && !isNaN(sets)) return sets;
+  const str = String(sets).trim();
+  const match = str.match(/^(\d+)/);
+  return match ? parseInt(match[1], 10) : 3;
+}
+
 /**
  * Parse rest string to seconds integer.
  * "90s" → 90, "2 min" → 120, "75s between legs" → 75, "60" → 60
@@ -568,6 +576,44 @@ async function main() {
   const exerciseRecords = await prisma.exercise.findMany();
   const exerciseByName = new Map(exerciseRecords.map((e) => [e.name, e.id]));
 
+  const EXERCISE_NAME_ALIASES: Record<string, string> = {
+    // RDL variants
+    "Romanian Deadlift": "Romanian Deadlift (RDL)",
+    "Romanian Deadlift (Dumbbell)": "Dumbbell RDL",
+    "Romanian Deadlift (Bodyweight)": "Romanian Deadlift (RDL)",
+    "Bodyweight Romanian Deadlift": "Romanian Deadlift (RDL)",
+    "Single Leg Romanian Deadlift (Bodyweight)": "Single Leg Romanian Deadlift",
+
+    // Row variants
+    "Dumbbell Row (Single Arm)": "Dumbbell Row",
+    "Inverted Row": "Inverted Row (TRX Row)",
+
+    // Dip variants
+    "Tricep Dip (Chair)": "Chest Dip",
+    "Tricep Dip (Chest Dip)": "Chest Dip",
+
+    // Press variants
+    "Dumbbell Shoulder Press": "Overhead Dumbbell Press",
+    "Single Arm DB Press (Flat)": "Single Arm Dumbbell Press",
+
+    // Good Morning variants
+    "Good Morning (Bodyweight)": "Good Morning",
+    "Bodyweight Good Morning": "Good Morning",
+
+    // Squat variants
+    "Tempo Squat (Bodyweight)": "Tempo Squat",
+    "Pistol Squat (or progression)": "Pistol Squat",
+
+    // Carries — apostrophe encoding difference
+    "Farmer's Carry": "Farmer's Carry",
+
+    // Lateral raise — map to specific DB version
+    "Lateral Raise": "Dumbbell Lateral Raise",
+
+    // Sprint variant
+    "Sprint Intervals (Running)": "Sprint Intervals",
+  };
+
   // Normalise all three JSON files into a common shape
   const allWorkouts: NormalisedWorkout[] = [
     ...normaliseFlatJSON(
@@ -586,9 +632,11 @@ async function main() {
     // Filter to exercises that exist in our exercise library
     const validExercises = workout.exercises.filter((e) => {
       if (!e.exercise) return false;
-      if (!exerciseByName.has(e.exercise)) {
+      const resolvedName = EXERCISE_NAME_ALIASES[e.exercise] ?? e.exercise;
+      e.exercise = resolvedName;
+      if (!exerciseByName.has(resolvedName)) {
         console.warn(
-          `    ⚠ Skipping unknown exercise: "${e.exercise}" in "${workout.workoutName}"`,
+          `    ⚠ Skipping unknown exercise: "${resolvedName}" in "${workout.workoutName}"`,
         );
         return false;
       }
@@ -669,7 +717,7 @@ async function main() {
       const e = validExercises[i];
       const exerciseId = exerciseByName.get(e.exercise!)!;
       const repsVal = parseReps(e.reps);
-      const setsVal = e.sets ?? 3;
+      const setsVal = parseSets(e.sets);
       const restSeconds = parseRestSeconds(e.rest);
 
       // Sets/reps scaled by level — beginner down, advanced up
