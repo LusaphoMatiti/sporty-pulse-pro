@@ -4,32 +4,10 @@ import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
 import { InstanceStatus } from "@/generated/prisma";
 import type { SessionDraft } from "@/app/api/session/draft/route";
+// ─── CHANGED: single import replaces the old inline getFullImageUrl ───────────
+import { buildCloudinaryUrl, resolvePlanImage } from "@/lib/cloudinary";
 
 export const dynamic = "force-dynamic";
-
-function getFullImageUrl(imageUrl: string | null): string | null {
-  if (!imageUrl) return null;
-  // Already absolute
-  if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) {
-    return imageUrl;
-  }
-  // Cloudinary delivery URL fragment (/v<version>/...) or full cloudinary domain
-  const CLOUDINARY_BASE = "https://res.cloudinary.com/dsoxsrjn2/image/upload";
-  if (imageUrl.startsWith("/v") || imageUrl.includes("cloudinary")) {
-    return imageUrl.startsWith("/v")
-      ? `${CLOUDINARY_BASE}${imageUrl}`
-      : imageUrl;
-  }
-  // Bare Cloudinary public ID (e.g. "sporty-pulse/exercises/pushup")
-  // Anything that is not an absolute URL and not a leading-slash relative path
-  // is assumed to be a Cloudinary public ID.
-  if (!imageUrl.startsWith("/")) {
-    return `${CLOUDINARY_BASE}/${imageUrl}`;
-  }
-  // Leading-slash relative path — prepend API base
-  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
-  return `${API_BASE}${imageUrl}`;
-}
 
 export async function GET(req: NextRequest) {
   const session = await getMobileOrWebSession(req);
@@ -71,7 +49,6 @@ export async function GET(req: NextRequest) {
           trialExpiresAt: true,
         },
       }),
-      // Fetch programs with first exercise thumbnail as fallback image
       prisma.workoutPlan.findMany({
         orderBy: { name: "asc" },
         select: {
@@ -103,20 +80,6 @@ export async function GET(req: NextRequest) {
       }),
     ]);
 
-  // Helper: resolve best image for a plan (own imageUrl → first exercise thumbnail)
-  function resolvePlanImage(p: {
-    imageUrl: string | null;
-    plannedSessions: {
-      plannedExercises: { exercise: { thumbnailUrl: string | null } }[];
-    }[];
-  }): string | null {
-    const own = getFullImageUrl(p.imageUrl);
-    if (own) return own;
-    const firstThumb =
-      p.plannedSessions[0]?.plannedExercises[0]?.exercise?.thumbnailUrl ?? null;
-    return getFullImageUrl(firstThumb);
-  }
-
   // ── No active plan: return just the program list ──────────────────────────
   if (!instance) {
     return NextResponse.json(
@@ -124,7 +87,8 @@ export async function GET(req: NextRequest) {
         instanceId: null,
         allPrograms: allPrograms.map(({ plannedSessions: _, ...p }) => ({
           ...p,
-          imageUrl: resolvePlanImage({ ...p, plannedSessions: _ }),
+          // CHANGED: use optimised miniCard preset for the horizontal scroll list
+          imageUrl: resolvePlanImage({ ...p, plannedSessions: _ }, "miniCard"),
         })),
       },
       { status: 200 },
@@ -159,7 +123,7 @@ export async function GET(req: NextRequest) {
                 id: true,
                 name: true,
                 musclesWorked: true,
-                thumbnailUrl: true, // ← ADD: exercise thumbnail
+                thumbnailUrl: true,
                 equipment: {
                   select: {
                     equipment: {
@@ -242,7 +206,8 @@ export async function GET(req: NextRequest) {
       id: pe.exercise.id,
       name: pe.exercise.name,
       musclesWorked: pe.exercise.musclesWorked,
-      thumbnailUrl: getFullImageUrl(pe.exercise.thumbnailUrl), // ← ADD
+      // CHANGED: serve a properly-sized thumbnail, not the raw upload
+      thumbnailUrl: buildCloudinaryUrl(pe.exercise.thumbnailUrl, "thumb"),
       equipment: pe.exercise.equipment.map((ee) => ({
         id: ee.equipment.id,
         name: ee.equipment.name,
@@ -254,10 +219,13 @@ export async function GET(req: NextRequest) {
     ...new Set(exercisesForView.flatMap((e) => e.exercise.musclesWorked)),
   ];
 
-  // Plan-level hero image: own imageUrl → first exercise thumbnail
+  // CHANGED: hero image uses the "hero" preset (800×450), mini cards use "miniCard"
   const planImageUrl =
-    getFullImageUrl(instance.plan.imageUrl) ??
-    getFullImageUrl(exercisesForView[0]?.exercise.thumbnailUrl ?? null);
+    buildCloudinaryUrl(instance.plan.imageUrl, "hero") ??
+    buildCloudinaryUrl(
+      exercisesForView[0]?.exercise.thumbnailUrl ?? null,
+      "hero",
+    );
 
   return NextResponse.json({
     instanceId: instance.id,
@@ -277,9 +245,10 @@ export async function GET(req: NextRequest) {
     trialExpiresAt,
     boughtFromStore,
     draft: (instance.sessionDraft as SessionDraft) ?? null,
+    // CHANGED: mini-card preset for the horizontal scroll programs list
     allPrograms: allPrograms.map(({ plannedSessions: _, ...p }) => ({
       ...p,
-      imageUrl: resolvePlanImage({ ...p, plannedSessions: _ }),
+      imageUrl: resolvePlanImage({ ...p, plannedSessions: _ }, "miniCard"),
     })),
     activeEquipmentIds,
   });

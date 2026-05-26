@@ -5,31 +5,8 @@ import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
 import { getUserAccess } from "@/lib/access";
 import { InstanceStatus } from "@/generated/prisma";
-
-function getFullImageUrl(imageUrl: string | null): string | null {
-  if (!imageUrl) return null;
-  // Already absolute
-  if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) {
-    return imageUrl;
-  }
-
-  // Cloudinary delivery URL fragment (/v<version>/...) or full cloudinary domain
-  const CLOUDINARY_BASE = "https://res.cloudinary.com/dsoxsrjn2/image/upload";
-  if (imageUrl.startsWith("/v") || imageUrl.includes("cloudinary")) {
-    return imageUrl.startsWith("/v")
-      ? `${CLOUDINARY_BASE}${imageUrl}`
-      : imageUrl;
-  }
-  // Bare Cloudinary public ID (e.g. "sporty-pulse/exercises/pushup")
-  // Anything that is not an absolute URL and not a leading-slash relative path
-  // is assumed to be a Cloudinary public ID.
-  if (!imageUrl.startsWith("/")) {
-    return `${CLOUDINARY_BASE}/${imageUrl}`;
-  }
-  // Leading-slash relative path — prepend API base
-  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
-  return `${API_BASE}${imageUrl}`;
-}
+// ─── CHANGED: single import replaces the old inline getFullImageUrl ───────────
+import { buildCloudinaryUrl } from "@/lib/cloudinary";
 
 export async function GET(req: Request) {
   const session = await getMobileOrWebSession(req);
@@ -54,7 +31,6 @@ export async function GET(req: Request) {
               orderBy: { order: "asc" },
               select: {
                 id: true,
-                // Fetch first exercise thumbnail for plan image fallback
                 exercise: {
                   select: { thumbnailUrl: true },
                 },
@@ -135,11 +111,14 @@ export async function GET(req: Request) {
       0,
     );
 
-    // Resolve image: plan's own imageUrl → first exercise's thumbnailUrl
+    // CHANGED: use the "card" preset (portrait crop, 400×560) for the plan list
+    // card layout which shows a tall left-side image. Falls back to first exercise
+    // thumbnail if the plan has no own image.
     const firstExerciseThumb =
       p.plannedSessions[0]?.plannedExercises[0]?.exercise?.thumbnailUrl ?? null;
     const resolvedImageUrl =
-      getFullImageUrl(p.imageUrl) ?? getFullImageUrl(firstExerciseThumb);
+      buildCloudinaryUrl(p.imageUrl, "card") ??
+      buildCloudinaryUrl(firstExerciseThumb, "card");
 
     const { plannedSessions: _, ...rest } = p;
     return {
