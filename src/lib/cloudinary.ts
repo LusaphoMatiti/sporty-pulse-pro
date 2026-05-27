@@ -50,20 +50,20 @@ const CLOUDINARY_BASE = "https://res.cloudinary.com/dsoxsrjn2/image/upload";
 type Preset = "hero" | "card" | "miniCard" | "thumb" | "squareThumb";
 
 const PRESETS: Record<Preset, string> = {
-  // Full-width program hero banner — 16:9 crop
-  hero: "w_800,h_450,c_fill,f_auto,q_auto",
+  // Full-width program hero banner — fit whole subject, pad dark
+  hero: "w_800,h_450,c_fit,b_rgb:0C0E10,f_auto,q_auto",
 
-  // Plan list card left-side image — portrait crop
-  card: "w_400,h_560,c_fill,f_auto,q_auto",
+  // Plan list card left-side image — fit full body, pad dark
+  card: "w_400,h_560,c_fit,b_rgb:0C0E10,f_auto,q_auto",
 
   // Horizontal scroll mini-card thumbnail
-  miniCard: "w_300,h_200,c_fill,f_auto,q_auto",
+  miniCard: "w_300,h_200,c_fit,b_rgb:0C0E10,f_auto,q_auto",
 
   // Exercise row thumbnail (landscape)
-  thumb: "w_200,h_150,c_fill,f_auto,q_auto",
+  thumb: "w_200,h_150,c_fit,b_rgb:0C0E10,f_auto,q_auto",
 
   // Square tile (library grid, exercise cards)
-  squareThumb: "w_200,h_200,c_fill,f_auto,q_auto",
+  squareThumb: "w_200,h_200,c_fit,b_rgb:0C0E10,f_auto,q_auto",
 };
 
 // ─── Core builder ─────────────────────────────────────────────────────────────
