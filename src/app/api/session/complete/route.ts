@@ -1,87 +1,164 @@
-import { NextResponse } from "next/server";
-import { getMobileOrWebSession } from "@/lib/mobile-auth";
+import { getSessionFromRequest } from "@/lib/getSession";
 import { prisma } from "@/lib/prisma";
-import { InstanceStatus } from "@/generated/prisma";
+import type { NextRequest } from "next/server";
+import {
+  calculateNextWeek,
+  checkDeloadRequired,
+  getProgressionType,
+  getInitialProgressionState,
+} from "@/lib/progression";
+import { shouldPromoteIdentity } from "@/lib/identity";
+import { Identity, Prisma } from "@/generated/prisma";
+import {
+  apiSuccess,
+  unauthorized,
+  forbidden,
+  notFound,
+  validationError,
+  internalError,
+} from "@/lib/api-response";
 
-type LogEntry = {
-  plannedExerciseId: string;
-  actualSets: number;
-  actualReps: number;
-  weightKg?: number;
-};
+export const dynamic = "force-dynamic";
 
-type Body = {
-  instanceId: string;
-  sessionNumber: number;
-  durationSeconds: number;
-  completed: boolean;
-  logs: LogEntry[];
-};
+export async function POST(
+  req: NextRequest,
+  { params }: { params: Promise<{ planInstanceId: string }> },
+) {
+  try {
+    const session = await getSessionFromRequest(req);
+    if (!session?.user?.id) return unauthorized();
 
-export async function POST(req: Request) {
-  const auth = await getMobileOrWebSession(req);
-  if (!auth)
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    const userId = session.user.id;
+    const { planInstanceId } = await params;
 
-  const body: Body = await req.json();
-  const { instanceId, sessionNumber, completed, logs } = body;
+    const instance = await prisma.planInstance.findUnique({
+      where: { id: planInstanceId },
+      include: {
+        plan: {
+          select: {
+            sessionsPerWeek: true,
+            durationWeeks: true,
+            templateType: true,
+          },
+        },
+      },
+    });
 
-  // ── Verify the instance belongs to this user ─────────────────────────────
-  const instance = await prisma.planInstance.findFirst({
-    where: {
-      id: instanceId,
-      userId: auth.user.id,
-      status: InstanceStatus.ACTIVE,
-    },
-    select: { id: true, planId: true },
-  });
-
-  if (!instance) {
-    return NextResponse.json({ error: "Instance not found" }, { status: 404 });
-  }
-
-  // ── How many sessions does this plan have in total? ───────────────────────
-  const totalSessions = await prisma.plannedSession.count({
-    where: { planId: instance.planId },
-  });
-
-  const isLastSession = sessionNumber >= totalSessions;
-
-  // ── Write all WorkoutLog rows in a transaction ────────────────────────────
-  await prisma.$transaction(async (tx) => {
-    // 1. Save a WorkoutLog for each exercise
-    if (logs.length > 0) {
-      await tx.workoutLog.createMany({
-        data: logs.map((log) => ({
-          sessionNumber,
-          actualSets: log.actualSets,
-          actualReps: log.actualReps,
-          weightKg: log.weightKg ?? null,
-          userId: auth.user.id,
-          instanceId,
-          plannedExerciseId: log.plannedExerciseId,
-        })),
-      });
+    if (!instance) return notFound("Plan instance");
+    if (instance.userId !== userId) return forbidden();
+    if (instance.status !== "ACTIVE") {
+      return validationError(
+        `Plan instance is ${instance.status.toLowerCase()}`,
+      );
     }
 
-    // 2. Advance the plan instance
-    if (completed) {
-      if (isLastSession) {
-        await tx.planInstance.update({
-          where: { id: instanceId },
+    const user = await prisma.user.findUnique({
+      where: { id: userId },
+      select: { identity: true, primaryGoal: true, trainingLocation: true },
+    });
+
+    if (!user) return notFound("User");
+
+    const totalSessions =
+      instance.plan.sessionsPerWeek * instance.plan.durationWeeks;
+    const isLastSession = instance.currentSession >= totalSessions;
+
+    let progressionType = instance.progressionType;
+    let progressionWeek = instance.progressionWeek ?? 1;
+    let currentSets = instance.currentSets;
+    let currentReps = instance.currentReps;
+    let currentRestSeconds = instance.currentRestSeconds;
+
+    if (!progressionType) {
+      progressionType = getProgressionType({
+        identity: user.identity ?? Identity.REBUILD,
+        goal: user.primaryGoal,
+        trainingLocation: user.trainingLocation,
+      });
+
+      const initial = getInitialProgressionState(
+        progressionType,
+        instance.level,
+      );
+      progressionWeek = initial.progressionWeek;
+      currentSets = initial.currentSets;
+      currentReps = initial.currentReps;
+      currentRestSeconds = initial.currentRestSeconds;
+    }
+
+    const next = calculateNextWeek({
+      progressionType,
+      progressionWeek,
+      currentSets,
+      currentReps,
+      currentRestSeconds,
+      level: instance.level,
+      identity: user.identity,
+    });
+
+    const deloadFlagged = checkDeloadRequired(
+      user.identity,
+      next.progressionWeek,
+    );
+
+    const shouldPromote = shouldPromoteIdentity({
+      currentIdentity: user.identity ?? Identity.REBUILD,
+      primaryGoal: user.primaryGoal,
+      progressionWeek: next.progressionWeek,
+    });
+
+    await prisma.$transaction(async (tx) => {
+      await tx.planInstance.update({
+        where: { id: planInstanceId },
+        data: {
+          currentSession: isLastSession
+            ? instance.currentSession
+            : instance.currentSession + 1,
+          status: isLastSession ? "COMPLETED" : "ACTIVE",
+          completedAt: isLastSession ? new Date() : null,
+          sessionDraft: Prisma.JsonNull,
+          progressionType,
+          progressionWeek: next.progressionWeek,
+          currentSets: next.currentSets,
+          currentReps: next.currentReps,
+          currentRestSeconds: next.currentRestSeconds,
+          deloadFlagged,
+        },
+      });
+
+      if (shouldPromote) {
+        await tx.user.update({
+          where: { id: userId },
           data: {
-            status: InstanceStatus.COMPLETED,
-            completedAt: new Date(),
+            identity: Identity.EXECUTIVE_PERFORMANCE,
+            identityAssignedAt: new Date(),
           },
         });
-      } else {
-        await tx.planInstance.update({
-          where: { id: instanceId },
-          data: { currentSession: { increment: 1 } },
-        });
-      }
-    }
-  });
 
-  return NextResponse.json({ ok: true, advanced: completed });
+        console.log(
+          `[session/complete] userId=${userId} promoted OPERATOR → EXECUTIVE_PERFORMANCE at week ${next.progressionWeek}`,
+        );
+      }
+    });
+
+    return apiSuccess({
+      sessionCompleted: instance.currentSession,
+      planCompleted: isLastSession,
+      progression: {
+        week: next.progressionWeek,
+        type: progressionType,
+        sets: next.currentSets,
+        reps: next.currentReps,
+        restSeconds: next.currentRestSeconds,
+        note: next.progressionNote,
+      },
+      deloadFlagged,
+      identityPromoted: shouldPromote
+        ? { from: Identity.OPERATOR, to: Identity.EXECUTIVE_PERFORMANCE }
+        : null,
+    });
+  } catch (err) {
+    console.error("[session/complete] error:", err);
+    return internalError();
+  }
 }

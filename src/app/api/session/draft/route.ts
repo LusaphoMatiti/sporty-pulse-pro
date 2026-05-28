@@ -1,8 +1,13 @@
-import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import { Prisma, InstanceStatus } from "@/generated/prisma"; // ← add Prisma here
+import { Prisma, InstanceStatus } from "@/generated/prisma";
+import {
+  apiSuccess,
+  unauthorized,
+  notFound,
+  internalError,
+} from "@/lib/api-response";
 
 export type SessionDraft = {
   sessionNumber: number;
@@ -22,25 +27,27 @@ type Body =
   | { instanceId: string; draft: null };
 
 export async function POST(req: Request) {
-  const auth = await getServerSession(authOptions);
-  if (!auth)
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  try {
+    const auth = await getServerSession(authOptions);
+    if (!auth) return unauthorized();
 
-  const body: Body = await req.json();
-  const { instanceId, draft } = body;
+    const body: Body = await req.json();
+    const { instanceId, draft } = body;
 
-  const result = await prisma.planInstance.updateMany({
-    where: {
-      id: instanceId,
-      userId: auth.user.id,
-      status: InstanceStatus.ACTIVE,
-    },
-    data: { sessionDraft: draft ?? Prisma.JsonNull },
-  });
+    const result = await prisma.planInstance.updateMany({
+      where: {
+        id: instanceId,
+        userId: auth.user.id,
+        status: InstanceStatus.ACTIVE,
+      },
+      data: { sessionDraft: draft ?? Prisma.JsonNull },
+    });
 
-  if (result.count === 0) {
-    return NextResponse.json({ error: "Instance not found" }, { status: 404 });
+    if (result.count === 0) return notFound("Instance");
+
+    return apiSuccess({ saved: true });
+  } catch (err) {
+    console.error("[session/draft] error:", err);
+    return internalError();
   }
-
-  return NextResponse.json({ ok: true });
 }
