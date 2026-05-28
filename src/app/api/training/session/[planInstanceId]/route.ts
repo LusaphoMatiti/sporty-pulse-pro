@@ -1,4 +1,3 @@
-// src/app/api/training/progression/[planInstanceId]/route.ts
 import { getSessionFromRequest } from "@/lib/getSession";
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
