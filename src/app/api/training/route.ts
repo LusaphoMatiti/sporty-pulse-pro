@@ -2,7 +2,7 @@ import type { NextRequest } from "next/server";
 import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
 import { InstanceStatus } from "@/generated/prisma";
-import type { SessionDraft } from "@/app/api/session/draft/route";
+import type { SessionDraft } from "@/lib/types";
 import { buildCloudinaryUrl, resolvePlanImage } from "@/lib/cloudinary";
 import {
   apiSuccess,
