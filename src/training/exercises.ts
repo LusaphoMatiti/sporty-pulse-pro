@@ -103,6 +103,7 @@ const exercises = [
     progressions: ["Paused Front Squat", "Tempo Front Squat"],
     substitutions: ["Hack Squat", "Goblet Squat"],
   },
+
   {
     id: "SQ005",
     name: "Box Squat",
