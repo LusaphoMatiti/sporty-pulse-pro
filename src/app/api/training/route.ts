@@ -235,6 +235,6 @@ export async function GET(req: NextRequest) {
     });
   } catch (err) {
     console.error("[training/GET] error:", err);
-    return internalError();
+    return internalError(err);
   }
 }

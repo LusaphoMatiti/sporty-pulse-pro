@@ -48,6 +48,6 @@ export async function POST(req: Request) {
     return apiSuccess({ saved: true });
   } catch (err) {
     console.error("[session/draft] error:", err);
-    return internalError();
+    return internalError(err);
   }
 }

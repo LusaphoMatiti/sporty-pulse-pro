@@ -1,11 +1,5 @@
-// Single source of truth for all API response shapes.
-// Every route.ts must use apiSuccess / apiError — no raw NextResponse.json calls.
-//
-// Mobile app contract:
-//   Success: { success: true,  data: T }
-//   Error:   { success: false, error: { code: string, message: string } }
-
 import { NextResponse } from "next/server";
+import * as Sentry from "@sentry/nextjs";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -69,5 +63,10 @@ export const notFound = (resource = "Resource") =>
 export const validationError = (message: string) =>
   apiError(400, "VALIDATION_ERROR", message);
 
-export const internalError = (message = "An unexpected error occurred") =>
-  apiError(500, "INTERNAL_ERROR", message);
+export function internalError(
+  err?: unknown,
+  message = "An unexpected error occurred",
+): NextResponse<ApiError> {
+  if (err) Sentry.captureException(err);
+  return apiError(500, "INTERNAL_ERROR", message);
+}

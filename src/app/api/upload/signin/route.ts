@@ -51,6 +51,6 @@ export async function POST(req: NextRequest) {
     });
   } catch (err) {
     console.error("[upload/sign] error:", err);
-    return internalError();
+    return internalError(err);
   }
 }

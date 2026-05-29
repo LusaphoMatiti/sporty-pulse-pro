@@ -159,6 +159,6 @@ export async function POST(
     });
   } catch (err) {
     console.error("[session/complete] error:", err);
-    return internalError();
+    return internalError(err);
   }
 }

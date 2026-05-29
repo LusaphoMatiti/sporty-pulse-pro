@@ -64,6 +64,6 @@ export async function POST(req: NextRequest) {
     return apiSuccess({ token });
   } catch (err) {
     console.error("[mobile-signin] error:", err);
-    return internalError();
+    return internalError(err);
   }
 }
