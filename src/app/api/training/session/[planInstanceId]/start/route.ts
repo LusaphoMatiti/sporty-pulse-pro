@@ -121,6 +121,8 @@ export async function GET(
         muscleGroup: instance.plan.muscleGroup,
         exercises,
         draft: (instance.sessionDraft as object) ?? null,
+        totalSessions:
+          instance.plan.durationWeeks * instance.plan.sessionsPerWeek,
       },
     },
     { headers: { "Cache-Control": "no-store" } },
