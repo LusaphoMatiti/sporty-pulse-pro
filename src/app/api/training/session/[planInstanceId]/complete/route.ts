@@ -20,6 +20,18 @@ import {
 
 export const dynamic = "force-dynamic";
 
+type CompleteBody = {
+  sessionNumber: number;
+  durationSeconds: number;
+  completed: boolean;
+  logs: {
+    plannedExerciseId: string;
+    actualSets: number;
+    actualReps: number;
+    weightKg?: number;
+  }[];
+};
+
 export async function POST(
   req: NextRequest,
   { params }: { params: Promise<{ planInstanceId: string }> },
@@ -30,6 +42,9 @@ export async function POST(
 
     const userId = session.user.id;
     const { planInstanceId } = await params;
+
+    // ── Parse body once ──────────────────────────────────────────────────────
+    const body = (await req.json()) as CompleteBody;
 
     const instance = await prisma.planInstance.findUnique({
       where: { id: planInstanceId },
@@ -126,6 +141,21 @@ export async function POST(
         },
       });
 
+      // ── Write workout logs ─────────────────────────────────────────────────
+      if (body.logs && body.logs.length > 0) {
+        await tx.workoutLog.createMany({
+          data: body.logs.map((log) => ({
+            userId,
+            instanceId: planInstanceId,
+            sessionNumber: body.sessionNumber,
+            plannedExerciseId: log.plannedExerciseId,
+            actualSets: log.actualSets,
+            actualReps: log.actualReps,
+            weightKg: log.weightKg ?? null,
+          })),
+        });
+      }
+
       if (shouldPromote) {
         await tx.user.update({
           where: { id: userId },
@@ -134,10 +164,6 @@ export async function POST(
             identityAssignedAt: new Date(),
           },
         });
-
-        console.log(
-          `[session/complete] userId=${userId} promoted OPERATOR → EXECUTIVE_PERFORMANCE at week ${next.progressionWeek}`,
-        );
       }
     });
 
