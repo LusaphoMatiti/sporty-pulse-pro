@@ -1,13 +1,12 @@
-// src/app/api/programs/start/route.ts
 import { NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+import type { NextRequest } from "next/server";
+import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
 import { getUserAccess } from "@/lib/access";
 import { UserLevel, InstanceStatus } from "@/generated/prisma";
 
-export async function POST(req: Request) {
-  const session = await getServerSession(authOptions);
+export async function POST(req: NextRequest) {
+  const session = await getMobileOrWebSession(req);
   if (!session) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
@@ -23,13 +22,11 @@ export async function POST(req: Request) {
 
   const { planId, level } = body;
 
-  // ── Validate level ────────────────────────────────────────────
   const validLevels: UserLevel[] = ["BEGINNER", "INTERMEDIATE", "ADVANCED"];
   if (!validLevels.includes(level as UserLevel)) {
     return NextResponse.json({ error: "Invalid level" }, { status: 400 });
   }
 
-  // ── Validate plan exists ──────────────────────────────────────
   const plan = await prisma.workoutPlan.findUnique({
     where: { id: planId },
     include: { equipment: true },
@@ -38,10 +35,8 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Plan not found" }, { status: 404 });
   }
 
-  // ── Access check ──────────────────────────────────────────────
   const access = await getUserAccess({ userId });
 
-  // Equipment plan access
   if (plan.equipmentId) {
     const hasAccess =
       access.isPro || access.canAccessEquipmentProgram(plan.equipmentId);
@@ -53,14 +48,11 @@ export async function POST(req: Request) {
     }
   }
 
-  // ── Abandon existing ACTIVE instances ─────────────────────────
-
   await prisma.planInstance.updateMany({
     where: { userId, status: InstanceStatus.ACTIVE },
     data: { status: InstanceStatus.ABANDONED },
   });
 
-  // ── Create the new instance ───────────────────────────────────
   const instance = await prisma.planInstance.create({
     data: {
       userId,
