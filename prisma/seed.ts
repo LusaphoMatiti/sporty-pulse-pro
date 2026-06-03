@@ -5,6 +5,7 @@ import {
   PlanTier,
   ImpactLevel,
   PrimaryGoal,
+  EnvironmentTarget,
 } from "../src/generated/prisma";
 import { PrismaPg } from "@prisma/adapter-pg";
 import exercises from "../src/training/exercises";
@@ -332,6 +333,20 @@ function toPrimaryGoal(goal: string): PrimaryGoal {
   if (g.includes("WEIGHT") || g.includes("LOSE"))
     return PrimaryGoal.LOSE_WEIGHT;
   return PrimaryGoal.GET_FIT;
+}
+
+function toEnvironmentTarget(
+  location: string,
+  hasEquipment: boolean,
+): EnvironmentTarget {
+  const loc = location.toUpperCase();
+  if (loc === "GYM") return EnvironmentTarget.GYM;
+  if (loc === "HOME") {
+    return hasEquipment
+      ? EnvironmentTarget.HOME_EQUIPMENT
+      : EnvironmentTarget.HOME_BODYWEIGHT;
+  }
+  return EnvironmentTarget.ANY;
 }
 
 // ─────────────────────────────────────────────
@@ -671,6 +686,17 @@ async function main() {
     const imageUrl = workout.imageUrl ?? null;
     const videoUrl = workout.videoUrl ?? null;
 
+    // Derive whether this plan needs equipment from the exercise mix
+    const planNeedsEquipment = validExercises.some((e) => {
+      const exRecord = exerciseRecords.find((r) => r.name === e.exercise);
+      return exRecord ? !exRecord.isBodyweight : false;
+    });
+
+    const environmentTarget = toEnvironmentTarget(
+      workout.location,
+      planNeedsEquipment,
+    );
+
     const plan = await prisma.workoutPlan.upsert({
       where: { name: workout.workoutName },
       update: {
@@ -684,6 +710,7 @@ async function main() {
         sessionDurationMin: String(workout.duration),
         imageUrl,
         videoUrl,
+        environmentTarget,
       },
       create: {
         name: workout.workoutName,
