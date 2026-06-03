@@ -1,7 +1,7 @@
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+import { getSessionFromRequest } from "@/lib/getSession";
 import { prisma } from "@/lib/prisma";
 import { Prisma, InstanceStatus } from "@/generated/prisma";
+import type { NextRequest } from "next/server";
 import {
   apiSuccess,
   unauthorized,
@@ -22,22 +22,21 @@ export type SessionDraft = {
   }[];
 };
 
-type Body =
-  | { instanceId: string; draft: SessionDraft }
-  | { instanceId: string; draft: null };
-
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
-    const auth = await getServerSession(authOptions);
-    if (!auth) return unauthorized();
+    const session = await getSessionFromRequest(req);
+    if (!session?.user?.id) return unauthorized();
 
-    const body: Body = await req.json();
+    const body = (await req.json()) as {
+      instanceId: string;
+      draft: SessionDraft | null;
+    };
     const { instanceId, draft } = body;
 
     const result = await prisma.planInstance.updateMany({
       where: {
         id: instanceId,
-        userId: auth.user.id,
+        userId: session.user.id,
         status: InstanceStatus.ACTIVE,
       },
       data: { sessionDraft: draft ?? Prisma.JsonNull },
