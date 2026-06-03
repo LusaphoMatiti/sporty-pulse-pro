@@ -519,6 +519,23 @@ export async function GET(req: Request) {
       totalWorkouts,
       totalHours,
       totalVolumeKg: Math.round(totalVolumeKg),
+      currentStreak: (() => {
+        const activeDaysSet = new Set(
+          Array.from(uniqueSessions.values()).map((s) =>
+            s.completedAt.toISOString().slice(0, 10),
+          ),
+        );
+        let streak = 0;
+        const cursor = new Date(now);
+        if (!activeDaysSet.has(cursor.toISOString().slice(0, 10))) {
+          cursor.setDate(cursor.getDate() - 1);
+        }
+        while (activeDaysSet.has(cursor.toISOString().slice(0, 10))) {
+          streak++;
+          cursor.setDate(cursor.getDate() - 1);
+        }
+        return streak;
+      })(),
     },
     personalRecords,
     thisMonth: {
