@@ -115,7 +115,8 @@ export async function GET(req: Request) {
     if (!uniqueSessions.has(key)) {
       uniqueSessions.set(key, {
         completedAt: log.completedAt,
-        muscleGroup: log.plannedExercise.session.plan.muscleGroup,
+        muscleGroup:
+          log.plannedExercise?.session?.plan?.muscleGroup ?? "FULLBODY",
       });
     }
   }
@@ -141,7 +142,8 @@ export async function GET(req: Request) {
   >();
   for (const log of logsByDate) {
     if (!log.actualReps || !log.actualSets) continue;
-    const name = log.plannedExercise.exercise.name;
+    const name = log.plannedExercise?.exercise?.name;
+    if (!name) continue;
     if (!prHistoryMap.has(name)) prHistoryMap.set(name, []);
     prHistoryMap.get(name)!.push({
       date: log.completedAt.toISOString().slice(0, 10),
@@ -156,7 +158,8 @@ export async function GET(req: Request) {
   >();
   for (const log of logsByDate) {
     if (!log.actualReps || !log.actualSets) continue;
-    const name = log.plannedExercise.exercise.name;
+    const name = log.plannedExercise?.exercise?.name;
+    if (!name) continue;
     const score = log.weightKg
       ? log.weightKg * log.actualReps
       : log.actualReps * log.actualSets;
@@ -240,7 +243,7 @@ export async function GET(req: Request) {
         completedAt: log.completedAt,
         planName: log.instance.plan.name,
         muscleGroup: log.instance.plan.muscleGroup,
-        focus: log.plannedExercise.session.focus,
+        focus: log.plannedExercise?.session?.focus ?? "Session",
         exerciseCount: new Set(),
         totalVolume: 0,
         sessionNumber: log.sessionNumber,

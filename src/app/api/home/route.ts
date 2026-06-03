@@ -129,14 +129,15 @@ export async function GET(req: Request) {
   let currentStreak = 0;
   const todayStr = now.toISOString().slice(0, 10);
   const cursor = new Date(now);
+
+  if (!activeDaysSet.has(todayStr)) {
+    cursor.setDate(cursor.getDate() - 1);
+  }
   while (true) {
     const dayStr = cursor.toISOString().slice(0, 10);
     if (activeDaysSet.has(dayStr)) {
       currentStreak++;
       cursor.setDate(cursor.getDate() - 1);
-    } else if (dayStr === todayStr) {
-      cursor.setDate(cursor.getDate() - 1);
-      if (!activeDaysSet.has(cursor.toISOString().slice(0, 10))) break;
     } else {
       break;
     }
@@ -256,28 +257,33 @@ export async function GET(req: Request) {
     });
   }
 
-  // ── Recent activity ───────────────────────────────────────────────
   let recentActivity: {
     planName: string;
     sessionLabel: string;
     durationMin: number;
   } | null = null;
 
-  if (allLogs.length > 0 && activeInstance) {
-    const lastLog = allLogs[0]; // already sorted desc
-    const lastSession = await prisma.plannedSession.findFirst({
-      where: {
-        planId: activeInstance.planId,
-        sessionNumber: lastLog.sessionNumber,
-      },
-      select: { focus: true, estimatedMinutes: true },
+  if (allLogs.length > 0) {
+    const lastLog = allLogs[0];
+    const lastInstance = await prisma.planInstance.findUnique({
+      where: { id: lastLog.instanceId },
+      select: { planId: true, plan: { select: { name: true } } },
     });
-    if (lastSession) {
-      recentActivity = {
-        planName: activeInstance.plan.name,
-        sessionLabel: lastSession.focus,
-        durationMin: lastSession.estimatedMinutes,
-      };
+    if (lastInstance) {
+      const lastSession = await prisma.plannedSession.findFirst({
+        where: {
+          planId: lastInstance.planId,
+          sessionNumber: lastLog.sessionNumber,
+        },
+        select: { focus: true, estimatedMinutes: true },
+      });
+      if (lastSession) {
+        recentActivity = {
+          planName: lastInstance.plan.name,
+          sessionLabel: lastSession.focus,
+          durationMin: lastSession.estimatedMinutes,
+        };
+      }
     }
   }
 
