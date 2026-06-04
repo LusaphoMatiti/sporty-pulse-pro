@@ -12,7 +12,10 @@ import { apiSuccess, unauthorized, internalError } from "@/lib/api-response";
 
 export const dynamic = "force-dynamic";
 
-// Maps trainingLocation from User to the EnvironmentTarget values a plan can have
+// ─── Environment resolution ───────────────────────────────────────────────────
+// Maps trainingLocation from User to the EnvironmentTarget values a plan can have.
+// EnvironmentTarget.ANY is always included — plans tagged ANY are shown to everyone.
+
 function resolveEnvironmentTargets(
   trainingLocation: string | null,
   hasDeclaredEquipment: boolean,
@@ -22,19 +25,43 @@ function resolveEnvironmentTargets(
   }
   if (trainingLocation === "HOME") {
     if (hasDeclaredEquipment) {
-      // User has equipment at home — show bodyweight, equipment, and generic plans
       return [
         EnvironmentTarget.HOME_BODYWEIGHT,
         EnvironmentTarget.HOME_EQUIPMENT,
         EnvironmentTarget.ANY,
       ];
     }
-    // Bodyweight-only home user
     return [EnvironmentTarget.HOME_BODYWEIGHT, EnvironmentTarget.ANY];
   }
   // No location set yet — return everything so the screen isn't blank
   return Object.values(EnvironmentTarget);
 }
+
+// ─── Goal resolution ──────────────────────────────────────────────────────────
+// Returns the ordered list of goalTarget values to match against.
+// LOSE_WEIGHT falls back to GET_FIT because the lose_weight seed data is
+// being completed incrementally (currently only Home/Beginner exists).
+// When the remaining 4 skeletons are added and re-seeded, LOSE_WEIGHT plans
+// for those environments will start appearing automatically — no code change needed.
+// GET_FIT stays in the list as a secondary fallback so users always see something.
+
+function resolveGoalTargets(primaryGoal: string): PrimaryGoal[] {
+  switch (primaryGoal as PrimaryGoal) {
+    case PrimaryGoal.LOSE_WEIGHT:
+      // Primary: LOSE_WEIGHT. Secondary fallback: GET_FIT (closest match).
+      // As LOSE_WEIGHT plans are seeded for each environment + level, they will
+      // naturally rank above GET_FIT plans once the DB has them.
+      return [PrimaryGoal.LOSE_WEIGHT, PrimaryGoal.GET_FIT];
+    case PrimaryGoal.BUILD_MUSCLE:
+      return [PrimaryGoal.BUILD_MUSCLE];
+    case PrimaryGoal.GET_FIT:
+      return [PrimaryGoal.GET_FIT];
+    default:
+      return [primaryGoal as PrimaryGoal];
+  }
+}
+
+// ─── GET /api/programs ────────────────────────────────────────────────────────
 
 export async function GET(req: Request) {
   try {
@@ -43,7 +70,6 @@ export async function GET(req: Request) {
 
     const userId = session.user.id;
 
-    // Fetch user profile alongside the other parallel queries
     const [allUserEquipment, activeInstance, user] = await Promise.all([
       prisma.userEquipment.findMany({
         where: { userId },
@@ -79,30 +105,42 @@ export async function GET(req: Request) {
       hasDeclaredEquipment,
     );
 
-    // Build the plan where clause based on onboarding answers
+    // ── Build plan filter ─────────────────────────────────────────────────────
+    //
+    // Environment: strict match against allowedEnvironments.
+    // EnvironmentTarget.ANY is already included in allowedEnvironments by
+    // resolveEnvironmentTargets, so no separate null escape is needed.
+    // Plans with environmentTarget: null are treated as universal fallbacks.
+    //
+    // Goal: primary goal first, with a GET_FIT fallback for LOSE_WEIGHT users
+    // until the full lose_weight dataset is seeded. Plans with goalTarget: null
+    // are shown to everyone regardless of goal.
+    //
+    // Level: cumulative — INTERMEDIATE users see BEGINNER + INTERMEDIATE plans.
+    // Plans with difficulty: null are shown to everyone.
+
     const planWhere: Prisma.WorkoutPlanWhereInput = {
-      // Always filter by environment
+      // Strict environment match — no null escape so plans without a tag
+      // only appear if explicitly set to null (universal) in the DB.
       OR: [
         { environmentTarget: { in: allowedEnvironments } },
-        { environmentTarget: null }, // plans with no target set are shown to everyone
+        { environmentTarget: null },
       ],
     };
 
-    // Filter by goal if set — include plans with no goalTarget too
+    // Goal filter
     if (user?.primaryGoal) {
+      const goalTargets = resolveGoalTargets(user.primaryGoal);
+
       planWhere.AND = [
         ...(Array.isArray(planWhere.AND) ? planWhere.AND : []),
         {
-          OR: [
-            { goalTarget: user.primaryGoal as PrimaryGoal },
-            { goalTarget: null },
-          ],
+          OR: [{ goalTarget: { in: goalTargets } }, { goalTarget: null }],
         },
       ];
     }
 
-    // Filter by experience level (stored as difficulty string on WorkoutPlan)
-    // Lower levels also see plans designed for levels below them
+    // Level filter (cumulative hierarchy)
     if (user?.experienceLevel) {
       const levelHierarchy: Record<string, string[]> = {
         BEGINNER: ["BEGINNER"],
@@ -116,7 +154,7 @@ export async function GET(req: Request) {
         {
           OR: [
             { difficulty: { in: allowedDifficulties } },
-            { difficulty: null }, // plans with no difficulty set shown to everyone
+            { difficulty: null },
           ],
         },
       ];
