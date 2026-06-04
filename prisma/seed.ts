@@ -706,7 +706,7 @@ async function main() {
         sessionsPerWeek: 3,
         tier,
         goalTarget,
-        difficulty: workout.level,
+        difficulty: workout.level.toUpperCase(),
         sessionDurationMin: String(workout.duration),
         imageUrl,
         videoUrl,
@@ -720,10 +720,11 @@ async function main() {
         sessionsPerWeek: 3,
         tier,
         goalTarget,
-        difficulty: workout.level,
+        difficulty: workout.level.toUpperCase(),
         sessionDurationMin: String(workout.duration),
         imageUrl,
         videoUrl,
+        environmentTarget,
       },
     });
 
