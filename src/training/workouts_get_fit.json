@@ -85,7 +85,8 @@
       "finisher": "Assault Bike: 4 x 20s sprint / 40s rest — max effort intervals",
       "cooldown": "5 min walk, hip flexor lunge 45s each, hamstring stretch 60s each, thoracic rotation 30s each side",
       "estimatedCalories": "520-640",
-      "progressionNotes": "Increase box jump height monthly. Reduce rest periods by 5s every 2 weeks."
+      "progressionNotes": "Increase box jump height monthly. Reduce rest periods by 5s every 2 weeks.",
+      "equipment": null
     },
     {
       "workoutName": "Functional Performance — AMRAP Style",
@@ -170,7 +171,8 @@
       "finisher": "EMOM 5 min: Odd minutes = 10 burpees, Even minutes = 15 goblet squats",
       "cooldown": "Walk 3 min, full body stretch sequence, child's pose 90s, deep breathing 60s",
       "estimatedCalories": "500-620",
-      "progressionNotes": "Track completion time for the circuit. Aim to reduce total session time by 2-3 min over 4 weeks."
+      "progressionNotes": "Track completion time for the circuit. Aim to reduce total session time by 2-3 min over 4 weeks.",
+      "equipment": null
     },
     {
       "workoutName": "Cardio Strength — Interval Training",
@@ -255,7 +257,8 @@
       "finisher": "March in place: 3 min continuous at brisk pace",
       "cooldown": "5 min walk, seated hamstring stretch 45s each, hip flexor lunge 45s each, chest stretch 45s",
       "estimatedCalories": "300-380",
-      "progressionNotes": "Beginner base-building. Progress when each exercise feels 'easy'. Milestone: push-up on flat, 3x15 clean reps."
+      "progressionNotes": "Beginner base-building. Progress when each exercise feels 'easy'. Milestone: push-up on flat, 3x15 clean reps.",
+      "equipment": null
     },
     {
       "workoutName": "Athletic Power & Conditioning",
@@ -337,7 +340,8 @@
       "finisher": "Assault Bike: 5 x 10s all-out sprint / 50s rest",
       "cooldown": "10 min light walk/jog, hip flexor stretch 60s each, quad stretch 45s each, lower back cat-cow 60s",
       "estimatedCalories": "620-750",
-      "progressionNotes": "Advanced: periodise power work in 4-week blocks."
+      "progressionNotes": "Advanced: periodise power work in 4-week blocks.",
+      "equipment": null
     },
     {
       "workoutName": "Hybrid Fitness — Strength Meets Cardio",
@@ -422,7 +426,8 @@
       "finisher": "Kettlebell Swing x50 for time — record time and beat it next session",
       "cooldown": "Row easy 2 min, hamstring stretch 60s each, lat stretch 45s each, deep breathing 60s",
       "estimatedCalories": "540-660",
-      "progressionNotes": "Hybrid training requires managing both strength and cardio fatigue. Keep a training log."
+      "progressionNotes": "Hybrid training requires managing both strength and cardio fatigue. Keep a training log.",
+      "equipment": null
     },
     {
       "workoutName": "Home Fitness — No Equipment HIIT Strength",
@@ -507,7 +512,8 @@
       "finisher": "30s Bodyweight Squat + 30s Rest + 30s Push-Up + 30s Rest: 3 rounds total",
       "cooldown": "Walk 3 min slowly, seated hamstring stretch 45s each, child's pose 60s, deep breathing 60s",
       "estimatedCalories": "240-320",
-      "progressionNotes": "Beginner goal: complete all sets and reps with full ROM by week 3."
+      "progressionNotes": "Beginner goal: complete all sets and reps with full ROM by week 3.",
+      "equipment": null
     },
     {
       "workoutName": "High Intensity Interval Strength — HIIS",
@@ -592,7 +598,8 @@
       "finisher": "Assault Bike: 10 x 10s max sprint / 20s easy",
       "cooldown": "5 min walk, hamstring stretch 45s each, hip flexor lunge 60s each, deep breathing 90s",
       "estimatedCalories": "560-680",
-      "progressionNotes": "HIIS training: track reps per interval across sessions."
+      "progressionNotes": "HIIS training: track reps per interval across sessions.",
+      "equipment": null
     },
     {
       "workoutName": "Get Fit — Upper/Lower Split Day 1",
@@ -677,7 +684,8 @@
       "finisher": "Squat Thrust x10 + High Knees x20: 4 rounds, 30s rest",
       "cooldown": "Hip flexor lunge 60s each, pigeon pose 60s each, hamstring stretch 45s each",
       "estimatedCalories": "500-600",
-      "progressionNotes": "Lower body fitness day. Track total session completion time."
+      "progressionNotes": "Lower body fitness day. Track total session completion time.",
+      "equipment": null
     },
     {
       "workoutName": "Get Fit — Upper/Lower Split Day 2",
@@ -762,7 +770,8 @@
       "finisher": "Push-Up x20 + Burpee x10: 3 rounds, 45s rest",
       "cooldown": "Cross-body shoulder stretch 45s each, lat stretch 45s each, doorway chest stretch 60s each, deep breathing",
       "estimatedCalories": "480-580",
-      "progressionNotes": "Upper body fitness. Track pull-up max reps monthly."
+      "progressionNotes": "Upper body fitness. Track pull-up max reps monthly.",
+      "equipment": null
     },
     {
       "workoutName": "Recovery Fitness — Active Movement Day",
@@ -847,7 +856,8 @@
       "finisher": "Walk 5 min at easy pace outdoors if possible",
       "cooldown": "15 min full body stretch — hold each position for 60-90s, focus on breathing and parasympathetic recovery",
       "estimatedCalories": "160-220",
-      "progressionNotes": "Recovery sessions should feel restorative, not challenging."
+      "progressionNotes": "Recovery sessions should feel restorative, not challenging.",
+      "equipment": null
     },
     {
       "workoutName": "CrossFit-Style — Functional Fitness WOD",
@@ -932,7 +942,8 @@
       "finisher": "For Time: 21-15-9 of Kettlebell Swing + Push-Up. Record time.",
       "cooldown": "Walk 5 min, full body stretch — minimum 10 min.",
       "estimatedCalories": "650-800",
-      "progressionNotes": "Advanced: track WOD times. Progress load on power cleans and thrusters monthly."
+      "progressionNotes": "Advanced: track WOD times. Progress load on power cleans and thrusters monthly.",
+      "equipment": null
     },
     {
       "workoutName": "Bodyweight Fitness — Intermediate Home",
@@ -1014,7 +1025,8 @@
       "finisher": "Bodyweight Tabata: 8 rounds of 20s Push-Up / 10s rest + 8 rounds of 20s Squat / 10s rest",
       "cooldown": "Walk 3 min, hip flexor lunge 60s each, hamstring stretch 60s each, chest stretch in doorway 45s each",
       "estimatedCalories": "400-500",
-      "progressionNotes": "Bodyweight progression: track max pull-ups weekly."
+      "progressionNotes": "Bodyweight progression: track max pull-ups weekly.",
+      "equipment": null
     },
     {
       "workoutName": "Sprint & Strength — Athletic Power Circuit",
@@ -1085,7 +1097,8 @@
       "finisher": "Hill Sprint or Assault Bike: 4 x 15s all-out / 45s recovery",
       "cooldown": "10 min easy jog then walk, quad stretch 60s each, hip flexor 60s each, calf stretch 45s each",
       "estimatedCalories": "600-740",
-      "progressionNotes": "Sprint fitness: track 30m sprint time monthly."
+      "progressionNotes": "Sprint fitness: track 30m sprint time monthly.",
+      "equipment": null
     },
     {
       "workoutName": "Total Body Fitness — 30 Minute Express",
@@ -1170,7 +1183,8 @@
       "finisher": "Assault Bike: 1 min max effort — everything you have left. Record calories in 1 min.",
       "cooldown": "5 min walk, basic stretch sequence — hamstrings, hip flexors, chest, lats",
       "estimatedCalories": "420-520",
-      "progressionNotes": "Express sessions: track total workout density. Add reps or reduce rest every 2 weeks."
+      "progressionNotes": "Express sessions: track total workout density. Add reps or reduce rest every 2 weeks.",
+      "equipment": null
     },
     {
       "workoutName": "Gym Fitness — Machines & Free Weights",
@@ -1255,7 +1269,8 @@
       "finisher": "Walk on incline treadmill: 8 min at 6-8% grade",
       "cooldown": "Seated hamstring stretch 45s each, hip flexor stretch 60s each, chest stretch 45s, neck stretch 30s each",
       "estimatedCalories": "320-400",
-      "progressionNotes": "Beginner machine-based fitness. Progress when 15 reps feels easy. Transition from machine to free weight equivalents over 8-12 weeks."
+      "progressionNotes": "Beginner machine-based fitness. Progress when 15 reps feels easy. Transition from machine to free weight equivalents over 8-12 weeks.",
+      "equipment": null
     },
     {
       "workoutName": "Conditioning Ladder — Ascending Challenge",
@@ -1340,7 +1355,8 @@
       "finisher": "Plank hold: 90s — stillness and breath control after high-intensity work.",
       "cooldown": "10 min walk if possible, full stretch sequence — quad, hip flexor, hamstring, chest, lat, shoulder",
       "estimatedCalories": "480-580",
-      "progressionNotes": "Ladder training: track total completion time for the full session."
+      "progressionNotes": "Ladder training: track total completion time for the full session.",
+      "equipment": null
     },
     {
       "workoutName": "Sport Prep Fitness — Agility & Strength",
@@ -1422,7 +1438,8 @@
       "finisher": "Cone drills or Shuttle Run: 5 x 20m, rest 45s between",
       "cooldown": "10 min jog, quad stretch 60s each, hip flexor 60s each, hamstring 60s each, calf 45s each",
       "estimatedCalories": "560-680",
-      "progressionNotes": "Sport fitness: track measurable output monthly."
+      "progressionNotes": "Sport fitness: track measurable output monthly.",
+      "equipment": null
     },
     {
       "workoutName": "MetCon — Metabolic Conditioning Blast",
@@ -1496,7 +1513,8 @@
       "finisher": "AMRAP 5 min: 5 Thrusters + 5 Pull-Ups + 10 Burpees — record rounds completed",
       "cooldown": "5 min walk, full body stretch, hip flexors 60s each, hamstrings 60s each, child's pose 90s, deep breathing 2 min",
       "estimatedCalories": "580-700",
-      "progressionNotes": "MetCon sessions: track the AMRAP score. Add 1+ round over 4 weeks."
+      "progressionNotes": "MetCon sessions: track the AMRAP score. Add 1+ round over 4 weeks.",
+      "equipment": null
     },
     {
       "workoutName": "Functional Movement Circuit — Get Fit",
@@ -1570,7 +1588,8 @@
       "finisher": "Sled Push: 4 x 20m — add moderate load. Conditioning and leg strength in one brutal finisher.",
       "cooldown": "Walk 3 min, hip circle 60s each, thoracic rotation 45s each, wrist flexor stretch 30s each",
       "estimatedCalories": "500-620",
-      "progressionNotes": "Functional fitness progression: increase carry distance monthly, increase KB weight on swings when 25 reps feel comfortable."
+      "progressionNotes": "Functional fitness progression: increase carry distance monthly, increase KB weight on swings when 25 reps feel comfortable.",
+      "equipment": null
     },
     {
       "workoutName": "Endurance Strength — Long Format Fitness",
@@ -1644,7 +1663,8 @@
       "finisher": "Jump Rope: 5 min continuous at moderate pace — aerobic capacity builder",
       "cooldown": "10 min walk, hip flexor stretch 60s each, hamstring stretch 60s each, child's pose 90s",
       "estimatedCalories": "450-560",
-      "progressionNotes": "Endurance strength improves through increasing density. Track total reps completed per session."
+      "progressionNotes": "Endurance strength improves through increasing density. Track total reps completed per session.",
+      "equipment": null
     }
   ]
 }

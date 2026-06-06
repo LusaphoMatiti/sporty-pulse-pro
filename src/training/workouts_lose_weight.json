@@ -107,7 +107,8 @@
       "finisher": "None — beginner session ends after Circuit B",
       "cooldown": "5 min: Hip Flexor Stretch 40s each, Hamstring Stretch 40s each, Chest Stretch 30s, Deep Breathing 5 breaths",
       "estimatedCalories": "180-230",
-      "progressionNotes": "When both circuits feel easy at 2 rounds, add a 3rd round of Circuit A before progressing to Intermediate."
+      "progressionNotes": "When both circuits feel easy at 2 rounds, add a 3rd round of Circuit A before progressing to Intermediate.",
+      "equipment": null
     },
     {
       "workoutName": "Foundation Burn B – Hinge & Pull",
@@ -214,7 +215,8 @@
       "finisher": "None",
       "cooldown": "5 min: Glute Stretch 40s each, Lat Stretch 30s each, Quad Stretch 30s each, Deep Breathing",
       "estimatedCalories": "175-225",
-      "progressionNotes": "Increase step height on Step-Up when movement feels stable. Add resistance band on Sumo Squat when bodyweight feels easy."
+      "progressionNotes": "Increase step height on Step-Up when movement feels stable. Add resistance band on Sumo Squat when bodyweight feels easy.",
+      "equipment": null
     },
     {
       "workoutName": "Foundation Burn C – Unilateral Focus",
@@ -321,7 +323,8 @@
       "finisher": "None",
       "cooldown": "5 min: Pigeon Stretch 45s each, Adductor Stretch 30s, Shoulder Stretch 30s each",
       "estimatedCalories": "180-230",
-      "progressionNotes": "Add a light dumbbell to Reverse Lunge and Single Leg RDL when you can complete all rounds without stopping."
+      "progressionNotes": "Add a light dumbbell to Reverse Lunge and Single Leg RDL when you can complete all rounds without stopping.",
+      "equipment": null
     },
     {
       "workoutName": "Foundation Burn D – Low Impact",
@@ -428,7 +431,8 @@
       "finisher": "None",
       "cooldown": "5 min: Hip Flexor Stretch 45s each, Calf Stretch 30s each, Deep Breathing 5 breaths",
       "estimatedCalories": "160-210",
-      "progressionNotes": "Low impact option for joint-sensitive beginners. Progress to Foundation Burn A when comfortable."
+      "progressionNotes": "Low impact option for joint-sensitive beginners. Progress to Foundation Burn A when comfortable.",
+      "equipment": null
     },
     {
       "workoutName": "Foundation Burn E – Core & Glute Activation",
@@ -535,7 +539,8 @@
       "finisher": "None",
       "cooldown": "5 min: Pigeon Pose 45s each, Hamstring Stretch 40s each, Child's Pose 60s",
       "estimatedCalories": "150-200",
-      "progressionNotes": "Glute activation focus. Add 3rd circuit round when 2 rounds feel easy."
+      "progressionNotes": "Glute activation focus. Add 3rd circuit round when 2 rounds feel easy.",
+      "equipment": null
     },
     {
       "workoutName": "Fat Burn Intermediate A – Home Circuit",
@@ -642,7 +647,8 @@
       "finisher": "3 rounds of Jumping Jacks x20 + Bodyweight Squat x10 — 30s rest between rounds",
       "cooldown": "5 min: Hip Flexor Lunge 45s each, Hamstring Stretch 45s each, Chest Stretch 30s",
       "estimatedCalories": "280-360",
-      "progressionNotes": "Intermediate: add a 3rd round to all circuits when 2 rounds feel manageable."
+      "progressionNotes": "Intermediate: add a 3rd round to all circuits when 2 rounds feel manageable.",
+      "equipment": null
     },
     {
       "workoutName": "Fat Burn Intermediate B – Cardio Strength",
@@ -749,7 +755,8 @@
       "finisher": "None",
       "cooldown": "5 min full body stretch — hip flexors, hamstrings, chest, lats",
       "estimatedCalories": "260-330",
-      "progressionNotes": "Increase rounds from 2 to 3 when this session feels manageable throughout."
+      "progressionNotes": "Increase rounds from 2 to 3 when this session feels manageable throughout.",
+      "equipment": null
     },
     {
       "workoutName": "Fat Burn Intermediate C – HIIT Strength",
@@ -856,7 +863,8 @@
       "finisher": "Tabata: 8 rounds of 20s Jump Squat / 10s rest",
       "cooldown": "5 min: Hip Flexor 45s each, Pigeon Pose 45s each, Hamstring 45s each",
       "estimatedCalories": "320-400",
-      "progressionNotes": "When this session feels manageable, progress to Advanced Fat Burn."
+      "progressionNotes": "When this session feels manageable, progress to Advanced Fat Burn.",
+      "equipment": null
     },
     {
       "workoutName": "Fat Burn Intermediate D – Dumbbell Burner",
@@ -963,7 +971,8 @@
       "finisher": "Dumbbell Complex: Goblet Squat x8 + Shoulder Press x8 + Row x8 each arm — 2 rounds, 60s rest",
       "cooldown": "5 min: Doorway Chest Stretch 45s each, Hamstring Stretch 45s each, Hip Flexor 45s each",
       "estimatedCalories": "300-380",
-      "progressionNotes": "Progress by increasing dumbbell weight when 30s intervals feel easy."
+      "progressionNotes": "Progress by increasing dumbbell weight when 30s intervals feel easy.",
+      "equipment": "Dumbbell"
     },
     {
       "workoutName": "Fat Burn Intermediate E – Full Body Strength Circuit",
@@ -1070,7 +1079,8 @@
       "finisher": "Bodyweight Squat x20 + Push-Up x10: 3 rounds, 30s rest",
       "cooldown": "5 min full body stretch",
       "estimatedCalories": "270-350",
-      "progressionNotes": "Standard benchmark session. Return monthly to assess improvement."
+      "progressionNotes": "Standard benchmark session. Return monthly to assess improvement.",
+      "equipment": null
     },
     {
       "workoutName": "Fat Burn Advanced A – High Intensity",
@@ -1177,7 +1187,8 @@
       "finisher": "AMRAP 3 min: Burpee x5 + Jump Squat x10 — record rounds",
       "cooldown": "8 min: Hip Flexor 60s each, Pigeon Pose 60s each, Hamstring 60s each, Chest Doorway 45s each",
       "estimatedCalories": "420-520",
-      "progressionNotes": "Advanced: track reps per 30s interval. Aim to beat total reps each session."
+      "progressionNotes": "Advanced: track reps per 30s interval. Aim to beat total reps each session.",
+      "equipment": null
     },
     {
       "workoutName": "Fat Burn Advanced B – Plyometric Power",
@@ -1284,7 +1295,8 @@
       "finisher": "None",
       "cooldown": "5 min full body stretch",
       "estimatedCalories": "380-480",
-      "progressionNotes": "Plyometric focus. Regress Jump Squat to Bodyweight Squat if HR is too high."
+      "progressionNotes": "Plyometric focus. Regress Jump Squat to Bodyweight Squat if HR is too high.",
+      "equipment": null
     },
     {
       "workoutName": "GYM Fat Burn – Beginner Circuit",
@@ -1391,7 +1403,8 @@
       "finisher": "5 min incline treadmill walk — steady state caloric burn",
       "cooldown": "5 min: Hip Flexor 40s each, Hamstring 40s each, Chest Stretch 30s",
       "estimatedCalories": "220-300",
-      "progressionNotes": "Beginner gym fat burn. Progress to 3 rounds when 2 feel easy."
+      "progressionNotes": "Beginner gym fat burn. Progress to 3 rounds when 2 feel easy.",
+      "equipment": null
     },
     {
       "workoutName": "GYM Fat Burn – Intermediate Strength Circuit",
@@ -1498,7 +1511,8 @@
       "finisher": "Assault Bike: 5 x 15s sprint / 45s easy — caloric afterburn protocol",
       "cooldown": "5 min walk, hip flexor 60s each, hamstring 60s each, child's pose 90s",
       "estimatedCalories": "400-500",
-      "progressionNotes": "Progress KB weight when swings feel easy for 30s. Increase box jump height monthly."
+      "progressionNotes": "Progress KB weight when swings feel easy for 30s. Increase box jump height monthly.",
+      "equipment": null
     },
     {
       "workoutName": "GYM Fat Burn – Advanced HIIT Strength",
@@ -1605,7 +1619,8 @@
       "finisher": "AMRAP 4 min: 5 Burpees + 10 KB Swings + 5 Box Jumps — record rounds",
       "cooldown": "8 min: Walk 3 min, Hip Flexor 60s each, Pigeon 60s each, Hamstring 60s each",
       "estimatedCalories": "520-640",
-      "progressionNotes": "Advanced: track AMRAP rounds. Aim to increase by 1+ round each 4 weeks."
+      "progressionNotes": "Advanced: track AMRAP rounds. Aim to increase by 1+ round each 4 weeks.",
+      "equipment": null
     },
     {
       "workoutName": "Foundation Burn T – Full Body Balance",
@@ -1712,7 +1727,8 @@
       "finisher": "None",
       "cooldown": "5 min: Full Body Stretch Sequence",
       "estimatedCalories": "185-235",
-      "progressionNotes": "Benchmark variation. Return monthly to assess improvement. Add dumbbells to Goblet Squat and Lunge for progression."
+      "progressionNotes": "Benchmark variation. Return monthly to assess improvement. Add dumbbells to Goblet Squat and Lunge for progression.",
+      "equipment": null
     },
     {
       "workoutName": "GYM Fat Burn – Beginner Cardio Strength",
@@ -1819,7 +1835,8 @@
       "finisher": "5 min rowing machine at easy conversational pace",
       "cooldown": "5 min: Hip Flexor 40s each, Hamstring 40s each, Chest Stretch 30s",
       "estimatedCalories": "200-270",
-      "progressionNotes": "Beginner gym fat burn. Progress to 3 rounds when 2 feel fully comfortable."
+      "progressionNotes": "Beginner gym fat burn. Progress to 3 rounds when 2 feel fully comfortable.",
+      "equipment": null
     },
     {
       "workoutName": "GYM Fat Burn – Intermediate Kettlebell HIIT",
@@ -1926,7 +1943,8 @@
       "finisher": "KB Swing for 50 consecutive reps — record time, beat it next session",
       "cooldown": "5 min walk, hip flexor 60s each, hamstring 60s each, lat stretch 45s each",
       "estimatedCalories": "420-520",
-      "progressionNotes": "Intermediate KB HIIT. Increase KB weight when 30s swings feel comfortable throughout."
+      "progressionNotes": "Intermediate KB HIIT. Increase KB weight when 30s swings feel comfortable throughout.",
+      "equipment": null
     }
   ]
 }

@@ -85,7 +85,8 @@
       "finisher": "Cable Chest Press: 3 sets of 20 reps with minimal rest (30s) — pump and blood flow focus",
       "cooldown": "Doorway chest stretch 60s each side, lat hang 45s, child's pose 60s, thoracic extension on foam roller 90s",
       "estimatedCalories": "420-500",
-      "progressionNotes": "Add 2.5kg to bench when all 4 sets hit 10 reps with clean form. Add 1 rep per session on accessories before increasing weight."
+      "progressionNotes": "Add 2.5kg to bench when all 4 sets hit 10 reps with clean form. Add 1 rep per session on accessories before increasing weight.",
+      "equipment": null
     },
     {
       "workoutName": "Lower Body Mass Builder",
@@ -170,7 +171,8 @@
       "finisher": "Wall Sit: 3 x max hold (aim 45-60s) with 30s rest — quad burnout",
       "cooldown": "Seated hamstring stretch 60s each, pigeon pose 90s each, quad stretch 45s each, hip flexor lunge 60s each",
       "estimatedCalories": "500-620",
-      "progressionNotes": "Prioritise squat strength. Add 2.5-5kg when all sets hit top of rep range."
+      "progressionNotes": "Prioritise squat strength. Add 2.5-5kg when all sets hit top of rep range.",
+      "equipment": null
     },
     {
       "workoutName": "Push Day — Chest & Shoulder Emphasis",
@@ -255,7 +257,8 @@
       "finisher": "Diamond Push-Up: AMRAP x2 with 30s rest — tricep and inner pec burnout",
       "cooldown": "Cross-body shoulder stretch 45s each, overhead tricep stretch 45s each, doorway chest stretch 60s each side",
       "estimatedCalories": "380-460",
-      "progressionNotes": "Rotate primary lift weekly between Barbell Bench and Incline DB Press."
+      "progressionNotes": "Rotate primary lift weekly between Barbell Bench and Incline DB Press.",
+      "equipment": null
     },
     {
       "workoutName": "Pull Day — Back & Bicep Width Builder",
@@ -340,7 +343,8 @@
       "finisher": "Chin-Up: max reps x2 sets / Lat Pulldown: 2 x 20 (if pull-ups are limited) — 60s rest",
       "cooldown": "Lat stretch on rack 45s each side, bicep wall stretch 45s each, thoracic foam roll 90s",
       "estimatedCalories": "400-480",
-      "progressionNotes": "Track total weighted pull-up volume. Progress weighted pull-up before adding more accessory volume."
+      "progressionNotes": "Track total weighted pull-up volume. Progress weighted pull-up before adding more accessory volume.",
+      "equipment": null
     },
     {
       "workoutName": "Leg Day — Posterior Chain Focus",
@@ -425,7 +429,8 @@
       "finisher": "Bodyweight Squat x20 + Push-Up x10: 3 rounds with 45s rest — total body pump",
       "cooldown": "Hip flexor lunge stretch 60s each, chest doorway stretch 45s each, lat stretch 45s each",
       "estimatedCalories": "350-420",
-      "progressionNotes": "Beginner-focused. Log every session. Increase weight by smallest increment when top rep range is achieved."
+      "progressionNotes": "Beginner-focused. Log every session. Increase weight by smallest increment when top rep range is achieved.",
+      "equipment": null
     },
     {
       "workoutName": "Arm Specialisation — Bicep & Tricep Volume",
@@ -510,7 +515,8 @@
       "finisher": "Curl-to-Press: 3 x 10 — bicep curl straight into overhead press — integrated pump",
       "cooldown": "Overhead tricep stretch 45s each, bicep wall stretch 45s each, wrist flexor/extensor stretch 30s each",
       "estimatedCalories": "280-360",
-      "progressionNotes": "Arms respond to volume. Track total sets per week (aim for 12-16 sets per muscle)."
+      "progressionNotes": "Arms respond to volume. Track total sets per week (aim for 12-16 sets per muscle).",
+      "equipment": null
     },
     {
       "workoutName": "Chest & Tricep Hypertrophy — Advanced",
@@ -595,7 +601,8 @@
       "finisher": "Cable Chest Press: 3 x 25 with 30s rest — high-rep pump",
       "cooldown": "Doorway chest stretch 90s each side, overhead tricep stretch 60s each, PVC thoracic extension 90s",
       "estimatedCalories": "460-540",
-      "progressionNotes": "Advanced: use double progression — increase reps first, then weight."
+      "progressionNotes": "Advanced: use double progression — increase reps first, then weight.",
+      "equipment": null
     },
     {
       "workoutName": "Back & Bicep Thickness Builder",
@@ -680,7 +687,8 @@
       "finisher": "Chin-Up mechanical dropset: max reps with load → strip weight → max bodyweight reps — 2 rounds",
       "cooldown": "Lat stretch on rack 60s each side, bicep stretch on wall 45s each, thoracic extension foam roll 2 min",
       "estimatedCalories": "480-580",
-      "progressionNotes": "Advanced back training requires managing cumulative fatigue. Rotate primary row every 4 weeks."
+      "progressionNotes": "Advanced back training requires managing cumulative fatigue. Rotate primary row every 4 weeks.",
+      "equipment": null
     },
     {
       "workoutName": "Glute & Hamstring Specialisation",
@@ -765,7 +773,8 @@
       "finisher": "Hip Thrust Burnout: 3 x 20 bodyweight, 30s rest",
       "cooldown": "Pigeon pose 90s each, figure-four 60s each, lying hamstring stretch 60s each, hip flexor lunge 60s each",
       "estimatedCalories": "420-500",
-      "progressionNotes": "Hip thrust progression: target 1-1.5x bodyweight for 10 reps within 12 weeks."
+      "progressionNotes": "Hip thrust progression: target 1-1.5x bodyweight for 10 reps within 12 weeks.",
+      "equipment": null
     },
     {
       "workoutName": "Shoulder Width & Rear Delt Builder",
@@ -850,7 +859,8 @@
       "finisher": "Lateral Raise dropset: heavy x10 → medium x10 → light x10 — 3 rounds, 60s rest",
       "cooldown": "Cross-body shoulder stretch 60s each, neck side stretch 45s each, doorway stretch 60s",
       "estimatedCalories": "320-400",
-      "progressionNotes": "Lateral raises: prioritise feel over weight."
+      "progressionNotes": "Lateral raises: prioritise feel over weight.",
+      "equipment": null
     },
     {
       "workoutName": "Compound Strength — Full Body Heavy Day",
@@ -935,7 +945,8 @@
       "finisher": "Farmer's Carry: 4 x 30m with heavy dumbbells",
       "cooldown": "Full body stretch sequence — hip flexors, hamstrings, chest, lats, shoulders — 2 min total",
       "estimatedCalories": "580-700",
-      "progressionNotes": "Heavy compound days require recovery. Sleep 8h minimum. Eat above maintenance."
+      "progressionNotes": "Heavy compound days require recovery. Sleep 8h minimum. Eat above maintenance.",
+      "equipment": null
     },
     {
       "workoutName": "Home Hypertrophy — Dumbbell Only",
@@ -1020,7 +1031,8 @@
       "finisher": "Dumbbell Complex: Romanian Deadlift x8 + Bent-Over Row x8 + Shoulder Press x8 = 1 round. 3 rounds, 90s rest.",
       "cooldown": "Doorway chest stretch 60s, lat side stretch 45s each, hamstring seated stretch 60s each",
       "estimatedCalories": "380-460",
-      "progressionNotes": "With limited equipment, progression comes through tempo, rep range, and exercise variation."
+      "progressionNotes": "With limited equipment, progression comes through tempo, rep range, and exercise variation.",
+      "equipment": "Dumbbell"
     },
     {
       "workoutName": "Tempo Hypertrophy — Time Under Tension",
@@ -1105,7 +1117,8 @@
       "finisher": "Pause Squat: 3 x 10 with 2-second pause at bottom",
       "cooldown": "Full body stretch — extra time on each position given the deep muscle fatigue from tempo work. Minimum 10 min.",
       "estimatedCalories": "360-440",
-      "progressionNotes": "Tempo training: reduce load 20-30% compared to normal."
+      "progressionNotes": "Tempo training: reduce load 20-30% compared to normal.",
+      "equipment": null
     },
     {
       "workoutName": "Upper Body Volume Day — High Rep Hypertrophy",
@@ -1190,7 +1203,8 @@
       "finisher": "Push-Up x25 + Band Pull-Apart x25: 3 rounds, 45s rest",
       "cooldown": "Doorway chest stretch 60s each side, lat stretch 45s each, neck and shoulder mobility 2 min",
       "estimatedCalories": "350-430",
-      "progressionNotes": "Volume-focused day. Track total reps per exercise. Add 1-2 reps per set each week before increasing weight."
+      "progressionNotes": "Volume-focused day. Track total reps per exercise. Add 1-2 reps per set each week before increasing weight.",
+      "equipment": null
     },
     {
       "workoutName": "Unilateral Focus — Single Limb Hypertrophy",
@@ -1275,7 +1289,8 @@
       "finisher": "Single Arm Overhead Carry: 3 x 20m each arm — shoulder stability and core anti-lateral flexion",
       "cooldown": "Hip flexor lunge 60s each, cross-body stretch 45s each, lat hang 45s, hamstring seated stretch 60s each",
       "estimatedCalories": "380-460",
-      "progressionNotes": "Unilateral work: correct imbalances before adding load. Weaker side dictates the weight."
+      "progressionNotes": "Unilateral work: correct imbalances before adding load. Weaker side dictates the weight.",
+      "equipment": null
     },
     {
       "workoutName": "Bodyweight Hypertrophy — Advanced Calisthenics",
@@ -1360,7 +1375,8 @@
       "finisher": "Push-Up x30 + Pull-Up x10: 2 superset rounds, 90s rest",
       "cooldown": "Doorway chest stretch 60s each side, lat hang 45s, hip flexor lunge 60s each, hamstring 60s each",
       "estimatedCalories": "440-520",
-      "progressionNotes": "Advanced bodyweight: progression is through weighted vest, tempo manipulation, or harder variations."
+      "progressionNotes": "Advanced bodyweight: progression is through weighted vest, tempo manipulation, or harder variations.",
+      "equipment": null
     },
     {
       "workoutName": "Muscle Gain — Beginner Foundation",
@@ -1445,7 +1461,8 @@
       "finisher": "Bodyweight Squat x15 + Push-Up x8: 2 rounds, 60s rest",
       "cooldown": "Hip flexor lunge 60s each, hamstring seated stretch 45s each, chest stretch 45s, child's pose 60s",
       "estimatedCalories": "300-380",
-      "progressionNotes": "Beginners: increase weight by the smallest increment available when all sets and reps are completed with full control."
+      "progressionNotes": "Beginners: increase weight by the smallest increment available when all sets and reps are completed with full control.",
+      "equipment": null
     },
     {
       "workoutName": "Mechanical Advantage Drop Set — Upper Body",
@@ -1530,7 +1547,8 @@
       "finisher": "Push-Up x20 + Chin-Up x8: 3 superset rounds, 60s rest",
       "cooldown": "Doorway stretch 60s each side, lat bar hang 45s, cross-body stretch 45s each, thoracic foam roll 2 min",
       "estimatedCalories": "420-500",
-      "progressionNotes": "Mechanical dropsets are an advanced technique — use sparingly (once per 2 weeks per muscle group)."
+      "progressionNotes": "Mechanical dropsets are an advanced technique — use sparingly (once per 2 weeks per muscle group).",
+      "equipment": null
     }
   ]
 }

@@ -138,7 +138,7 @@ export async function GET(req: Request) {
       ],
     };
 
-    // ── Goal filter ────────────────────────────────────────────────────────
+    // ── Goal filter
     if (user?.primaryGoal) {
       const goalTargets = resolveGoalTargets(user.primaryGoal);
       planWhere.AND = [
@@ -149,7 +149,7 @@ export async function GET(req: Request) {
       ];
     }
 
-    // ── Level filter (cumulative hierarchy) ────────────────────────────────
+    // ── Level filter
     if (user?.experienceLevel) {
       const levelHierarchy: Record<string, string[]> = {
         BEGINNER: ["BEGINNER"],
@@ -168,7 +168,7 @@ export async function GET(req: Request) {
       ];
     }
 
-    // ── Sex filter ─────────────────────────────────────────────────────────
+    // ── Sex filter
     // Only applied when the user has declared a specific biological sex.
     // - MALE user   → plans where sexTarget is MALE or null
     // - FEMALE user → plans where sexTarget is FEMALE or null
@@ -191,6 +191,32 @@ export async function GET(req: Request) {
         ];
       }
     }
+
+    // ── Equipment filter
+    // HOME_EQUIPMENT plans have an equipmentId set — only show them if the
+    // user has declared or purchased that specific equipment.
+    // GYM plans and bodyweight plans have equipmentId = null, so they always
+    // pass through this filter via the { equipmentId: null } OR clause.
+    const now = new Date();
+    const accessibleEquipmentIds = allUserEquipment
+      .filter(
+        (e) =>
+          e.source === "PURCHASED" ||
+          (e.source === "DECLARED" &&
+            e.trialExpiresAt &&
+            e.trialExpiresAt > now),
+      )
+      .map((e) => e.equipmentId);
+
+    planWhere.AND = [
+      ...(Array.isArray(planWhere.AND) ? planWhere.AND : []),
+      {
+        OR: [
+          { equipmentId: { in: accessibleEquipmentIds } }, // user has this equipment
+          { equipmentId: null }, // GYM or bodyweight plan
+        ],
+      },
+    ];
 
     const plans = await prisma.workoutPlan.findMany({
       where: planWhere,
@@ -232,17 +258,8 @@ export async function GET(req: Request) {
     const declaredEquipmentName = declaredEntry?.equipment?.name ?? null;
 
     const access = await getUserAccess({ userId });
-    const now = new Date();
 
-    const activeEquipmentIds = allUserEquipment
-      .filter(
-        (e) =>
-          e.source === "PURCHASED" ||
-          (e.source === "DECLARED" &&
-            e.trialExpiresAt &&
-            e.trialExpiresAt > now),
-      )
-      .map((e) => e.equipmentId);
+    const activeEquipmentIds = accessibleEquipmentIds;
 
     const expiredEquipmentIds = allUserEquipment
       .filter(
