@@ -9,6 +9,10 @@ const isMigration =
 export default defineConfig({
   schema: "prisma/schema.prisma",
 
+  migrations: {
+    seed: "tsx prisma/seed.ts",
+  },
+
   datasource: {
     url: isMigration ? process.env.DIRECT_URL! : process.env.DATABASE_URL!,
   },

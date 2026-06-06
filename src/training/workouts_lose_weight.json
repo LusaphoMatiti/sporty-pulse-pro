@@ -1,2789 +1,1932 @@
 {
-  "meta": {
-    "goal": "Lose Weight",
-    "totalSkeletons": 5,
-    "variationsPerSkeleton": 20,
-    "totalWorkouts": 100,
-    "generatedFrom": "exercises.ts + workout_skeletons.json",
-    "note": "All exercises sourced exclusively from provided exercise pool. Movement slots matched to skeleton structure."
-  },
-  "skeletons": [
+  "goal": "LOSE_WEIGHT",
+  "totalWorkouts": 20,
+  "workouts": [
     {
-      "skeletonId": "lw-home-beg-001",
-      "skeletonName": "Fat Burn Foundation – Home Beginner",
-      "variations": [
+      "workoutName": "Foundation Burn A – Home Beginner",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_BODYWEIGHT",
+      "collection": "Fat Burn Series",
+      "duration": "30 min",
+      "intensity": "LOW_MODERATE",
+      "warmup": "4 min: Jumping Jacks x60s, Bodyweight Squat x10 slow",
+      "mainWorkout": [
         {
-          "variationId": "lw-home-beg-001-v01",
-          "workoutName": "Foundation Burn A",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Bilateral Lower + Push",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "Jumping Jacks",
-                "id": "CD015",
-                "duration_sec": 60,
-                "coachingFocus": "Light and rhythmic, wake up the body",
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD015.mp4"
-              },
-              {
-                "exercise": "Bodyweight Squat",
-                "id": "SQ001",
-                "reps": 10,
-                "coachingFocus": "Slow and controlled, find your range",
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-                "videoUrl": "/exercises/videos/SQ001.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Bodyweight Squat",
-              "id": "SQ001",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "1-0-1",
-              "rest": "20s",
-              "coachingFocus": "Sit back and down, chest tall, drive through heels",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-              "videoUrl": "/exercises/videos/SQ001.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Body straight as a plank, lower chest to floor",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "exercise": "Romanian Deadlift (Dumbbell)",
-              "id": "HI004",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-1",
-              "rest": "20s",
-              "coachingFocus": "Hinge at hips, soft knees, feel the hamstring stretch",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
-              "videoUrl": "/exercises/videos/HI004.mp4"
-            },
-            {
-              "exercise": "Dead Bug",
-              "id": "CO002",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "slow",
-              "rest": "20s",
-              "coachingFocus": "Lower back flat on floor, breathe out on extension",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO002.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Split Squat",
-              "id": "LU005",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Drop rear knee straight down, front shin vertical",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU005.mp4"
-            },
-            {
-              "exercise": "Inverted Row (TRX Row)",
-              "id": "PLH004",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Body straight, pull chest to bar, elbows back",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH004.mp4"
-            },
-            {
-              "exercise": "Lateral Lunge",
-              "id": "LU006",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Step wide, sit back on one leg, push back to centre",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU006.mp4"
-            },
-            {
-              "exercise": "Bird Dog",
-              "id": "CO003",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "slow",
-              "rest": "20s",
-              "coachingFocus": "Neutral spine, hold 2 seconds at extension",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO003.mp4"
-            }
-          ],
-          "finisher": "None – beginner session ends after Circuit B",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Hip Flexor Stretch",
-                "duration_sec": 40,
-                "side": "each"
-              },
-              {
-                "exercise": "Hamstring Stretch",
-                "duration_sec": 40,
-                "side": "each"
-              },
-              {
-                "exercise": "Chest Stretch",
-                "duration_sec": 30
-              },
-              {
-                "exercise": "Deep Breathing",
-                "reps": "5 slow breaths"
-              }
-            ]
-          },
-          "estimatedCalories": "180–230",
-          "progressionNotes": "When both circuits feel easy at 2 rounds, add a 3rd round of Circuit A before progressing to Intermediate."
+          "exercise": "Bodyweight Squat",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "1-0-1",
+          "rest": "20s",
+          "coachingFocus": "Sit back and down, chest tall, drive through heels",
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ001.mp4"
         },
         {
-          "variationId": "lw-home-beg-001-v02",
-          "workoutName": "Foundation Burn B",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Hinge + Pull",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "High Knees",
-                "id": "CD008",
-                "duration_sec": 45,
-                "coachingFocus": "Drive knees above hip, light foot contact",
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD008.mp4"
-              },
-              {
-                "exercise": "Reverse Lunge",
-                "id": "LU002",
-                "reps": 8,
-                "side": "each",
-                "coachingFocus": "Upright torso, controlled descent",
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-                "videoUrl": "/exercises/videos/LU002.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Sumo Squat",
-              "id": "SQ007",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Wide stance toes out 45°, squeeze glutes at top",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-              "videoUrl": "/exercises/videos/SQ007.mp4"
-            },
-            {
-              "exercise": "Incline Push-Up",
-              "id": "PHH003",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Hands on surface, body straight, controlled press",
-              "thumbnailUrl": "/exercises/thumbnails/PHH003.jpg",
-              "videoUrl": "/exercises/videos/PHH003.mp4"
-            },
-            {
-              "exercise": "Good Morning (Bodyweight)",
-              "id": "HI010",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-1",
-              "rest": "20s",
-              "coachingFocus": "Hinge from hips, soft knee, return tall",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
-              "videoUrl": "/exercises/videos/HI010.mp4"
-            },
-            {
-              "exercise": "Plank",
-              "id": "CO001",
-              "sets": 2,
-              "reps": "30s hold",
-              "tempo": "iso",
-              "rest": "20s",
-              "coachingFocus": "Glutes squeezed, neutral spine, breathe steadily",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO001.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Step-Up",
-              "id": "LU010",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "1-0-1",
-              "rest": "20s",
-              "coachingFocus": "Drive through heel on step, full hip extension at top",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU010.mp4"
-            },
-            {
-              "exercise": "Resistance Band Row",
-              "id": "PLH008",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Pull elbows back, squeeze shoulder blades",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH008.mp4"
-            },
-            {
-              "exercise": "Lateral Step-Up",
-              "id": "LU016",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "1-0-1",
-              "rest": "20s",
-              "coachingFocus": "Drive through lateral leg, full extension at top",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU016.mp4"
-            },
-            {
-              "exercise": "Side Plank",
-              "id": "CO009",
-              "sets": 2,
-              "reps": "30s each side",
-              "tempo": "iso",
-              "rest": "20s",
-              "coachingFocus": "Hips stacked, body in straight line",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Side_Planks_sjrxva.png",
-              "videoUrl": "/exercises/videos/CO009.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Glute Stretch",
-                "duration_sec": 40,
-                "side": "each"
-              },
-              {
-                "exercise": "Lat Stretch",
-                "duration_sec": 30,
-                "side": "each"
-              },
-              {
-                "exercise": "Quad Stretch",
-                "duration_sec": 30,
-                "side": "each"
-              },
-              {
-                "exercise": "Deep Breathing",
-                "reps": "5 slow breaths"
-              }
-            ]
-          },
-          "estimatedCalories": "175–225",
-          "progressionNotes": "Increase step height on Step-Up when movement feels stable. Add resistance band on Sumo Squat when bodyweight feels easy."
+          "exercise": "Push-Up",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Body straight as a plank, lower chest to floor",
+          "id": "PHH001",
+          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "videoUrl": "/exercises/videos/PHH001.mp4"
         },
         {
-          "variationId": "lw-home-beg-001-v03",
-          "workoutName": "Foundation Burn C – Unilateral Focus",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Unilateral Lower + Core",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "Mountain Climbers",
-                "id": "CD002",
-                "duration_sec": 40,
-                "coachingFocus": "Slow pace, hips level, warm the core",
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
-                "videoUrl": "/exercises/videos/CD002.mp4"
-              },
-              {
-                "exercise": "Box Squat",
-                "id": "SQ005",
-                "reps": 10,
-                "coachingFocus": "Sit back to surface, pause briefly, stand tall",
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-                "videoUrl": "/exercises/videos/SQ005.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Reverse Lunge",
-              "id": "LU002",
-              "sets": 2,
-              "reps": "30s alternating",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Step back, drop rear knee, upright torso",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU002.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Elbows at 45°, lower chest to floor, press up strong",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "exercise": "Single Leg Romanian Deadlift (Bodyweight)",
-              "id": "HI012",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-1",
-              "rest": "20s",
-              "coachingFocus": "Hinge on one leg, hip drives back, back stays flat",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
-              "videoUrl": "/exercises/videos/HI012.mp4"
-            },
-            {
-              "exercise": "Bicycle Crunch",
-              "id": "CO015",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "slow",
-              "rest": "20s",
-              "coachingFocus": "Rotate shoulder to knee not elbow, extend opposite leg",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Bicycle_Crunch_a2lruv.png",
-              "videoUrl": "/exercises/videos/CO015.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Forward Lunge",
-              "id": "LU001",
-              "sets": 2,
-              "reps": "30s alternating",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Front shin vertical, drive through front heel to return",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU001.mp4"
-            },
-            {
-              "exercise": "Resistance Band Row",
-              "id": "PLH008",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Anchor at waist height, elbows back, squeeze blades",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH008.mp4"
-            },
-            {
-              "exercise": "Curtsy Lunge",
-              "id": "LU007",
-              "sets": 2,
-              "reps": "30s alternating",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Step diagonally behind, lower rear knee, front knee tracks",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU007.mp4"
-            },
-            {
-              "exercise": "Russian Twist",
-              "id": "CO010",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "controlled",
-              "rest": "20s",
-              "coachingFocus": "Lean back 45°, rotate through full range, chest tall",
-              "thumbnailUrl": "/exercises/thumbnails/CO010.jpg",
-              "videoUrl": "/exercises/videos/CO010.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Pigeon Stretch",
-                "duration_sec": 45,
-                "side": "each"
-              },
-              {
-                "exercise": "Adductor Stretch",
-                "duration_sec": 30
-              },
-              {
-                "exercise": "Shoulder Stretch",
-                "duration_sec": 30,
-                "side": "each"
-              }
-            ]
-          },
-          "estimatedCalories": "180–230",
-          "progressionNotes": "Add a light dumbbell to Reverse Lunge and Romanian Deadlift when you can complete all rounds without stopping."
+          "exercise": "Romanian Deadlift (Dumbbell)",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-1-1",
+          "rest": "20s",
+          "coachingFocus": "Hinge at hips, soft knees, feel the hamstring stretch",
+          "id": "HI004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI004.mp4"
         },
         {
-          "variationId": "lw-home-beg-001-v04",
-          "workoutName": "Foundation Burn D – Low Impact",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low",
-          "emphasis": "Zero Impact – Joint Friendly",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "Jumping Jacks",
-                "id": "CD015",
-                "duration_sec": 60,
-                "coachingFocus": "Step-jacks option if needed, easy rhythm",
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD015.mp4"
-              },
-              {
-                "exercise": "Squat Pulse",
-                "id": "SQ016",
-                "reps": 15,
-                "coachingFocus": "Small range, stay tense, breathe rhythmically",
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-                "videoUrl": "/exercises/videos/SQ016.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Wall Sit",
-              "id": "SQ013",
-              "sets": 2,
-              "reps": "30s hold",
-              "tempo": "iso",
-              "rest": "20s",
-              "coachingFocus": "90° knee angle, back flat, arms at sides",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704135/Wall_Sit_x1vi7d.png",
-              "videoUrl": "/exercises/videos/SQ013.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "3-0-1",
-              "rest": "20s",
-              "coachingFocus": "Slow 3-count down, full range, push through palms",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "exercise": "Bodyweight Good Morning",
-              "id": "HI010",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-1",
-              "rest": "20s",
-              "coachingFocus": "Hands behind head, hinge at hips, feel hamstrings",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
-              "videoUrl": "/exercises/videos/HI010.mp4"
-            },
-            {
-              "exercise": "Plank",
-              "id": "CO001",
-              "sets": 2,
-              "reps": "30s hold",
-              "tempo": "iso",
-              "rest": "20s",
-              "coachingFocus": "Neutral spine, glutes engaged, breathe",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO001.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Split Squat",
-              "id": "LU005",
-              "sets": 2,
-              "reps": "30s each leg",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Both feet stationary, drop rear knee, front shin vertical",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU005.mp4"
-            },
-            {
-              "exercise": "Inverted Row (TRX Row)",
-              "id": "PLH004",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Adjust foot position for difficulty, pull chest to bar",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH004.mp4"
-            },
-            {
-              "exercise": "Lateral Lunge",
-              "id": "LU006",
-              "sets": 2,
-              "reps": "30s alternating",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Sit back on one leg, keep other leg straight",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU006.mp4"
-            },
-            {
-              "exercise": "Dead Bug",
-              "id": "CO002",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "slow",
-              "rest": "20s",
-              "coachingFocus": "Back pinned to floor throughout entire movement",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO002.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Child's Pose",
-                "duration_sec": 45
-              },
-              {
-                "exercise": "Hip Flexor Stretch",
-                "duration_sec": 40,
-                "side": "each"
-              },
-              {
-                "exercise": "Chest Opener",
-                "duration_sec": 30
-              }
-            ]
-          },
-          "estimatedCalories": "150–200",
-          "progressionNotes": "This is the low-impact variation. Progress to v01 when you can complete this without resting during intervals."
+          "exercise": "Dead Bug",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "slow",
+          "rest": "20s",
+          "coachingFocus": "Lower back flat on floor, breathe out on extension",
+          "id": "CO002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO002.mp4"
         },
         {
-          "variationId": "lw-home-beg-001-v05",
-          "workoutName": "Foundation Burn E – Push Emphasis",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Push Pattern Dominant",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "High Knees",
-                "id": "CD008",
-                "duration_sec": 45,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD008.mp4"
-              },
-              {
-                "exercise": "Bodyweight Squat",
-                "id": "SQ001",
-                "reps": 12,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-                "videoUrl": "/exercises/videos/SQ001.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Bodyweight Squat",
-              "id": "SQ001",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Knees track over toes, chest tall, sit back and down",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-              "videoUrl": "/exercises/videos/SQ001.mp4"
-            },
-            {
-              "exercise": "Tricep Dip (Chair)",
-              "id": "PHH015",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Elbows track back not out, lower to 90° and press",
-              "thumbnailUrl": "/exercises/thumbnails/PHH015.jpg",
-              "videoUrl": "/exercises/videos/PHH015.mp4"
-            },
-            {
-              "exercise": "Romanian Deadlift (Dumbbell)",
-              "id": "HI004",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-1",
-              "rest": "20s",
-              "coachingFocus": "Push hips back, weight slides down legs, feel hamstrings",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
-              "videoUrl": "/exercises/videos/HI004.mp4"
-            },
-            {
-              "exercise": "Bird Dog",
-              "id": "CO003",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "slow",
-              "rest": "20s",
-              "coachingFocus": "Neutral spine, opposite arm and leg, hold 2 seconds",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO003.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Step-Up",
-              "id": "LU010",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "1-0-1",
-              "rest": "20s",
-              "coachingFocus": "Don't push off back leg, drive through heel",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU010.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Modify on knees if needed, full range of motion",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "exercise": "Mountain Climbers",
-              "id": "CD002",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "moderate",
-              "rest": "20s",
-              "coachingFocus": "Plank position, hips level, alternate legs",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
-              "videoUrl": "/exercises/videos/CD002.mp4"
-            },
-            {
-              "exercise": "Side Plank",
-              "id": "CO009",
-              "sets": 2,
-              "reps": "30s each side",
-              "tempo": "iso",
-              "rest": "20s",
-              "coachingFocus": "Stack hips, body in line, don't let hip drop",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Side_Planks_sjrxva.png",
-              "videoUrl": "/exercises/videos/CO009.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Tricep Stretch",
-                "duration_sec": 30,
-                "side": "each"
-              },
-              {
-                "exercise": "Quad Stretch",
-                "duration_sec": 30,
-                "side": "each"
-              },
-              {
-                "exercise": "Deep Breathing",
-                "reps": "5 slow breaths"
-              }
-            ]
-          },
-          "estimatedCalories": "185–235",
-          "progressionNotes": "When 2 rounds feel manageable, reduce rest to 15s. Then move to 3 rounds before increasing intensity."
+          "exercise": "Split Squat",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Drop rear knee straight down, front shin vertical",
+          "id": "LU005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU005.mp4"
         },
         {
-          "variationId": "lw-home-beg-001-v06",
-          "workoutName": "Foundation Burn F – Glute Focus",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Posterior Chain / Glute Dominant",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "Jumping Jacks",
-                "id": "CD015",
-                "duration_sec": 60,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD015.mp4"
-              },
-              {
-                "exercise": "Sumo Squat",
-                "id": "SQ007",
-                "reps": 10,
-                "coachingFocus": "Wide stance, feel glutes engage at top",
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-                "videoUrl": "/exercises/videos/SQ007.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Sumo Squat",
-              "id": "SQ007",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Squeeze glutes hard at top, knees out",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-              "videoUrl": "/exercises/videos/SQ007.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Core stays rigid, elbows at 45°",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "exercise": "Single Leg Romanian Deadlift (Bodyweight)",
-              "id": "HI012",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-1",
-              "rest": "20s",
-              "coachingFocus": "Balance on one leg, reach hands toward floor, back flat",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
-              "videoUrl": "/exercises/videos/HI012.mp4"
-            },
-            {
-              "exercise": "Bicycle Crunch",
-              "id": "CO015",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "slow",
-              "rest": "20s",
-              "coachingFocus": "Deliberate rotation, don't rush",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Bicycle_Crunch_a2lruv.png",
-              "videoUrl": "/exercises/videos/CO015.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Curtsy Lunge",
-              "id": "LU007",
-              "sets": 2,
-              "reps": "30s alternating",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Diagonal step behind, targets glute medius",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU007.mp4"
-            },
-            {
-              "exercise": "Resistance Band Row",
-              "id": "PLH008",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Squeeze shoulder blades at end of pull",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH008.mp4"
-            },
-            {
-              "exercise": "Lateral Lunge",
-              "id": "LU006",
-              "sets": 2,
-              "reps": "30s alternating",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Sit into hip, feel inner thigh and glute",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU006.mp4"
-            },
-            {
-              "exercise": "Dead Bug",
-              "id": "CO002",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "slow",
-              "rest": "20s",
-              "coachingFocus": "Lower back stays pinned, breathe through extension",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO002.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Figure-4 Glute Stretch",
-                "duration_sec": 45,
-                "side": "each"
-              },
-              {
-                "exercise": "Adductor Stretch",
-                "duration_sec": 30
-              },
-              {
-                "exercise": "Cat-Cow",
-                "reps": "8 slow cycles"
-              }
-            ]
-          },
-          "estimatedCalories": "178–228",
-          "progressionNotes": "Add a resistance band above knees on Sumo Squat and Curtsy Lunge to increase glute activation."
+          "exercise": "Inverted Row (TRX Row)",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Body straight, pull chest to bar, elbows back",
+          "id": "PLH004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH004.mp4"
         },
         {
-          "variationId": "lw-home-beg-001-v07",
-          "workoutName": "Foundation Burn G – Core Emphasis",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Anti-Extension Core + Full Body",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "Mountain Climbers",
-                "id": "CD002",
-                "duration_sec": 40,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
-                "videoUrl": "/exercises/videos/CD002.mp4"
-              },
-              {
-                "exercise": "Box Squat",
-                "id": "SQ005",
-                "reps": 10,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-                "videoUrl": "/exercises/videos/SQ005.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Resistance Band Squat",
-              "id": "SQ017",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Band under feet, knees push out against band",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626173/Band_Squat_itktwz.png",
-              "videoUrl": "/exercises/videos/SQ017.mp4"
-            },
-            {
-              "exercise": "Incline Push-Up",
-              "id": "PHH003",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Hands elevated, body straight, full range",
-              "thumbnailUrl": "/exercises/thumbnails/PHH003.jpg",
-              "videoUrl": "/exercises/videos/PHH003.mp4"
-            },
-            {
-              "exercise": "Bodyweight Romanian Deadlift",
-              "id": "HI010",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-1",
-              "rest": "20s",
-              "coachingFocus": "Hinge, feel hamstrings, return tall",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
-              "videoUrl": "/exercises/videos/HI010.mp4"
-            },
-            {
-              "exercise": "Plank",
-              "id": "CO001",
-              "sets": 2,
-              "reps": "30s hold",
-              "tempo": "iso",
-              "rest": "20s",
-              "coachingFocus": "Create full body tension, don't let hips drop",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO001.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Forward Lunge",
-              "id": "LU001",
-              "sets": 2,
-              "reps": "30s alternating",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Step forward, drop knee straight down",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU001.mp4"
-            },
-            {
-              "exercise": "Resistance Band Row",
-              "id": "PLH008",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Seated or standing, pull elbows back",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH008.mp4"
-            },
-            {
-              "exercise": "High Knees",
-              "id": "CD008",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "moderate",
-              "rest": "20s",
-              "coachingFocus": "Drive knees above hip, pump arms, stay light on feet",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-              "videoUrl": "/exercises/videos/CD008.mp4"
-            },
-            {
-              "exercise": "Side Plank",
-              "id": "CO009",
-              "sets": 2,
-              "reps": "30s each",
-              "tempo": "iso",
-              "rest": "20s",
-              "coachingFocus": "Stack feet or stagger, keep hips lifted",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Side_Planks_sjrxva.png",
-              "videoUrl": "/exercises/videos/CO009.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Child's Pose",
-                "duration_sec": 45
-              },
-              {
-                "exercise": "Hip Flexor Stretch",
-                "duration_sec": 40,
-                "side": "each"
-              },
-              {
-                "exercise": "Thoracic Rotation",
-                "reps": "6 each side"
-              }
-            ]
-          },
-          "estimatedCalories": "180–230",
-          "progressionNotes": "Progress plank to 45s hold. Add 3rd round of Circuit A when 2 rounds feel submaximal."
+          "exercise": "Lateral Lunge",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Step wide, sit back on one leg, push back to centre",
+          "id": "LU006",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU006.mp4"
         },
         {
-          "variationId": "lw-home-beg-001-v08",
-          "workoutName": "Foundation Burn H – Cardio Blend",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Moderate",
-          "emphasis": "Cardiovascular Conditioning Blend",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "Jumping Jacks",
-                "id": "CD015",
-                "duration_sec": 60,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD015.mp4"
-              },
-              {
-                "exercise": "Bodyweight Squat",
-                "id": "SQ001",
-                "reps": 12,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-                "videoUrl": "/exercises/videos/SQ001.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Jump Squat",
-              "id": "SQ012",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "explosive",
-              "rest": "20s",
-              "coachingFocus": "Quarter squat, explode up, land soft with bent knees",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-              "videoUrl": "/exercises/videos/SQ012.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Chest touches floor, press explosively",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "exercise": "Romanian Deadlift (Bodyweight)",
-              "id": "HI010",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-1",
-              "rest": "20s",
-              "coachingFocus": "Controlled hinge, feel stretch, drive hips forward",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
-              "videoUrl": "/exercises/videos/HI010.mp4"
-            },
-            {
-              "exercise": "Mountain Climbers",
-              "id": "CD002",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "moderate-fast",
-              "rest": "20s",
-              "coachingFocus": "Hips level, alternate legs rhythmically",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
-              "videoUrl": "/exercises/videos/CD002.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Reverse Lunge to Knee Drive",
-              "id": "LU014",
-              "sets": 2,
-              "reps": "30s each leg",
-              "tempo": "1-0-explosive",
-              "rest": "20s",
-              "coachingFocus": "Step back, drive knee up on return, balance",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU014.mp4"
-            },
-            {
-              "exercise": "Inverted Row (TRX Row)",
-              "id": "PLH004",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Body straight, pull chest up, slow negative",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH004.mp4"
-            },
-            {
-              "exercise": "High Knees",
-              "id": "CD008",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "fast",
-              "rest": "20s",
-              "coachingFocus": "Max knee height, arm drive, stay light",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-              "videoUrl": "/exercises/videos/CD008.mp4"
-            },
-            {
-              "exercise": "Dead Bug",
-              "id": "CO002",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "slow",
-              "rest": "20s",
-              "coachingFocus": "Back stays flat, slow extension and return",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO002.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Standing Quad Stretch",
-                "duration_sec": 30,
-                "side": "each"
-              },
-              {
-                "exercise": "Hip Flexor Lunge Stretch",
-                "duration_sec": 40,
-                "side": "each"
-              },
-              {
-                "exercise": "Deep Breathing",
-                "reps": "6 slow breaths"
-              }
-            ]
-          },
-          "estimatedCalories": "210–270",
-          "progressionNotes": "Jump Squat is the intensity driver here. Regress to Bodyweight Squat if too taxing. Progress by increasing speed."
-        },
-        {
-          "variationId": "lw-home-beg-001-v09",
-          "workoutName": "Foundation Burn I – Rotation Focus",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Rotational Core + Lower Body",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "High Knees",
-                "id": "CD008",
-                "duration_sec": 45,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD008.mp4"
-              },
-              {
-                "exercise": "Split Squat",
-                "id": "LU005",
-                "reps": 8,
-                "side": "each",
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-                "videoUrl": "/exercises/videos/LU005.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Bodyweight Squat",
-              "id": "SQ001",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Chest tall, sit back, drive through heels",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-              "videoUrl": "/exercises/videos/SQ001.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Full range, body rigid",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "exercise": "Good Morning (Bodyweight)",
-              "id": "HI010",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-1",
-              "rest": "20s",
-              "coachingFocus": "Hinge and return, feel posterior chain",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
-              "videoUrl": "/exercises/videos/HI010.mp4"
-            },
-            {
-              "exercise": "Russian Twist",
-              "id": "CO010",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "controlled",
-              "rest": "20s",
-              "coachingFocus": "Feet off floor for challenge, full rotation",
-              "thumbnailUrl": "/exercises/thumbnails/CO010.jpg",
-              "videoUrl": "/exercises/videos/CO010.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Walking Lunge",
-              "id": "LU004",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "1-0-1",
-              "rest": "20s",
-              "coachingFocus": "Continuous movement, full hip extension each rep",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU004.mp4"
-            },
-            {
-              "exercise": "Resistance Band Row",
-              "id": "PLH008",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Anchor band, pull elbows back, retract scapulae",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH008.mp4"
-            },
-            {
-              "exercise": "Mountain Climbers",
-              "id": "CD002",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "moderate",
-              "rest": "20s",
-              "coachingFocus": "Hip level, rhythmic alternating drives",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
-              "videoUrl": "/exercises/videos/CD002.mp4"
-            },
-            {
-              "exercise": "Bird Dog",
-              "id": "CO003",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "slow",
-              "rest": "20s",
-              "coachingFocus": "Quadruped, extend opposite arm and leg, hold",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO003.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Seated Twist Stretch",
-                "duration_sec": 30,
-                "side": "each"
-              },
-              {
-                "exercise": "Hamstring Stretch",
-                "duration_sec": 40,
-                "side": "each"
-              },
-              {
-                "exercise": "Deep Breathing",
-                "reps": "5 slow breaths"
-              }
-            ]
-          },
-          "estimatedCalories": "175–225",
-          "progressionNotes": "Add a light medicine ball or dumbbell to Russian Twist. Increase Walking Lunge distance across the room."
-        },
-        {
-          "variationId": "lw-home-beg-001-v10",
-          "workoutName": "Foundation Burn J – Tempo Training",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Time Under Tension – Slower Tempos",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "Jumping Jacks",
-                "id": "CD015",
-                "duration_sec": 60,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD015.mp4"
-              },
-              {
-                "exercise": "Bodyweight Squat",
-                "id": "SQ001",
-                "reps": 10,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-                "videoUrl": "/exercises/videos/SQ001.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Tempo Squat (Bodyweight)",
-              "id": "SQ019",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "4-1-2",
-              "rest": "20s",
-              "coachingFocus": "4-second descent, 1-second pause at bottom, 2-second rise",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-              "videoUrl": "/exercises/videos/SQ019.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "3-1-1",
-              "rest": "20s",
-              "coachingFocus": "3-second lower, pause at bottom, press up",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "exercise": "Good Morning (Bodyweight)",
-              "id": "HI010",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "3-1-2",
-              "rest": "20s",
-              "coachingFocus": "Slow hinge, pause at bottom, drive hips forward",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
-              "videoUrl": "/exercises/videos/HI010.mp4"
-            },
-            {
-              "exercise": "Plank",
-              "id": "CO001",
-              "sets": 2,
-              "reps": "30s hold",
-              "tempo": "iso",
-              "rest": "20s",
-              "coachingFocus": "Full tension, breathe steadily",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO001.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Split Squat",
-              "id": "LU005",
-              "sets": 2,
-              "reps": "30s each leg",
-              "tempo": "3-1-2",
-              "rest": "20s",
-              "coachingFocus": "3-second lower, pause, 2-second return",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU005.mp4"
-            },
-            {
-              "exercise": "Inverted Row (TRX Row)",
-              "id": "PLH004",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-2",
-              "rest": "20s",
-              "coachingFocus": "Pull, squeeze at top, 2-second controlled lower",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH004.mp4"
-            },
-            {
-              "exercise": "Lateral Lunge",
-              "id": "LU006",
-              "sets": 2,
-              "reps": "30s alternating",
-              "tempo": "3-1-1",
-              "rest": "20s",
-              "coachingFocus": "Slow lateral descent, pause in stretch",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU006.mp4"
-            },
-            {
-              "exercise": "Dead Bug",
-              "id": "CO002",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "slow deliberate",
-              "rest": "20s",
-              "coachingFocus": "3-second extension, back flat entire time",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO002.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Hip Flexor Stretch",
-                "duration_sec": 40,
-                "side": "each"
-              },
-              {
-                "exercise": "Chest Stretch",
-                "duration_sec": 30
-              },
-              {
-                "exercise": "Deep Breathing",
-                "reps": "6 slow breaths"
-              }
-            ]
-          },
-          "estimatedCalories": "165–215",
-          "progressionNotes": "Tempo training builds strength and body awareness. Progress by adding light dumbbells to Squat and Split Squat."
-        },
-        {
-          "variationId": "lw-home-beg-001-v11",
-          "workoutName": "Foundation Burn K – Ladder Format",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Ascending Rep Ladder",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "Mountain Climbers",
-                "id": "CD002",
-                "duration_sec": 40,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
-                "videoUrl": "/exercises/videos/CD002.mp4"
-              },
-              {
-                "exercise": "Reverse Lunge",
-                "id": "LU002",
-                "reps": 8,
-                "side": "each",
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-                "videoUrl": "/exercises/videos/LU002.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Ascending Ladder: 5-10-15 reps of each",
-              "format": "Minimal rest, complete all exercises at 5 reps, then 10, then 15"
-            },
-            {
-              "exercise": "Bodyweight Squat",
-              "id": "SQ001",
-              "sets": "ladder",
-              "reps": "5, 10, 15",
-              "tempo": "1-0-1",
-              "rest": "as needed",
-              "coachingFocus": "Quality reps regardless of ladder position",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-              "videoUrl": "/exercises/videos/SQ001.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": "ladder",
-              "reps": "5, 10, 15",
-              "tempo": "2-0-1",
-              "rest": "as needed",
-              "coachingFocus": "Knees down if needed on round of 15",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "exercise": "Reverse Lunge",
-              "id": "LU002",
-              "sets": "ladder",
-              "reps": "5, 10, 15 (each leg)",
-              "tempo": "1-0-1",
-              "rest": "as needed",
-              "coachingFocus": "Upright torso, controlled descent",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU002.mp4"
-            },
-            {
-              "exercise": "Dead Bug",
-              "id": "CO002",
-              "sets": "ladder",
-              "reps": "5, 10, 15 (reps each side)",
-              "tempo": "slow",
-              "rest": "as needed",
-              "coachingFocus": "Back flat, deliberate extension",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO002.mp4"
-            },
-            {
-              "exercise": "Resistance Band Row",
-              "id": "PLH008",
-              "sets": "ladder",
-              "reps": "5, 10, 15",
-              "tempo": "2-0-1",
-              "rest": "as needed",
-              "coachingFocus": "Squeeze scapulae at end of each rep",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH008.mp4"
-            },
-            {
-              "exercise": "Mountain Climbers",
-              "id": "CD002",
-              "sets": "ladder",
-              "reps": "5, 10, 15 each leg",
-              "tempo": "moderate",
-              "rest": "as needed",
-              "coachingFocus": "Hips level, alternate legs, breathe",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
-              "videoUrl": "/exercises/videos/CD002.mp4"
-            }
-          ],
-          "finisher": "60s Plank hold",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Full Body Stretch Sequence",
-                "duration_min": 5
-              }
-            ]
-          },
-          "estimatedCalories": "190–240",
-          "progressionNotes": "When 5-10-15 ladder feels manageable, progress to 10-15-20 ladder."
-        },
-        {
-          "variationId": "lw-home-beg-001-v12",
-          "workoutName": "Foundation Burn L – EMOM Intro",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "EMOM Format Introduction",
-          "warmup": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Jumping Jacks",
-                "id": "CD015",
-                "duration_sec": 60,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD015.mp4"
-              },
-              {
-                "exercise": "Bodyweight Squat",
-                "id": "SQ001",
-                "reps": 10,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-                "videoUrl": "/exercises/videos/SQ001.mp4"
-              },
-              {
-                "exercise": "Push-Up",
-                "id": "PHH001",
-                "reps": 5,
-                "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-                "videoUrl": "/exercises/videos/PHH001.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "EMOM x 16 minutes – 8 exercises alternating",
-              "format": "Every minute on the minute, complete reps and rest remainder of minute"
-            },
-            {
-              "minute": "1, 3, 5, 7, 9, 11, 13, 15",
-              "exercise": "Bodyweight Squat",
-              "id": "SQ001",
-              "reps": 12,
-              "tempo": "1-0-1",
-              "coachingFocus": "Efficient reps, rest the remainder of the minute",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-              "videoUrl": "/exercises/videos/SQ001.mp4"
-            },
-            {
-              "minute": "2, 4, 6, 8, 10, 12, 14, 16",
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "reps": 8,
-              "tempo": "2-0-1",
-              "coachingFocus": "Quality reps, modify on knees if needed",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "block": "EMOM x 8 minutes",
-              "format": "Alternate two exercises"
-            },
-            {
-              "minute": "odd",
-              "exercise": "Reverse Lunge",
-              "id": "LU002",
-              "reps": "8 each leg",
-              "coachingFocus": "Control descent, upright torso",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU002.mp4"
-            },
-            {
-              "minute": "even",
-              "exercise": "Dead Bug",
-              "id": "CO002",
-              "reps": 10,
-              "coachingFocus": "Back flat, slow controlled extension",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO002.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Hip Flexor Stretch",
-                "duration_sec": 40,
-                "side": "each"
-              },
-              {
-                "exercise": "Chest Stretch",
-                "duration_sec": 30
-              },
-              {
-                "exercise": "Deep Breathing",
-                "reps": "5 slow breaths"
-              }
-            ]
-          },
-          "estimatedCalories": "185–235",
-          "progressionNotes": "Increase reps per minute by 2 each week. Progress to 20-minute EMOM when comfortable."
-        },
-        {
-          "variationId": "lw-home-beg-001-v13",
-          "workoutName": "Foundation Burn M – Full Body Flow",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Smooth Full Body Sequence",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "High Knees",
-                "id": "CD008",
-                "duration_sec": 45,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD008.mp4"
-              },
-              {
-                "exercise": "Split Squat",
-                "id": "LU005",
-                "reps": 8,
-                "side": "each",
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-                "videoUrl": "/exercises/videos/LU005.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Goblet Squat",
-              "id": "SQ002",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Hold weight at chest, elbows inside knees, upright torso",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
-              "videoUrl": "/exercises/videos/SQ002.mp4"
-            },
-            {
-              "exercise": "Incline Push-Up",
-              "id": "PHH003",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Hands elevated, body straight line",
-              "thumbnailUrl": "/exercises/thumbnails/PHH003.jpg",
-              "videoUrl": "/exercises/videos/PHH003.mp4"
-            },
-            {
-              "exercise": "Romanian Deadlift (Dumbbell)",
-              "id": "HI004",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-1",
-              "rest": "20s",
-              "coachingFocus": "Push hips back, feel hamstrings, drive forward",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
-              "videoUrl": "/exercises/videos/HI004.mp4"
-            },
-            {
-              "exercise": "Plank",
-              "id": "CO001",
-              "sets": 2,
-              "reps": "30s hold",
-              "tempo": "iso",
-              "rest": "20s",
-              "coachingFocus": "Squeeze everything, breathe steadily",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO001.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Dumbbell Lunges",
-              "id": "LU008",
-              "sets": 2,
-              "reps": "30s alternating",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Dumbbells at sides, upright torso, full lunge depth",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU008.mp4"
-            },
-            {
-              "exercise": "Dumbbell Row",
-              "id": "PLH002",
-              "sets": 2,
-              "reps": "30s each",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Support on surface, pull elbow to ceiling, no rotation",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH002.mp4"
-            },
-            {
-              "exercise": "Jumping Jacks",
-              "id": "CD015",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "moderate",
-              "rest": "20s",
-              "coachingFocus": "Light and rhythmic, full arm swing",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-              "videoUrl": "/exercises/videos/CD015.mp4"
-            },
-            {
-              "exercise": "Bird Dog",
-              "id": "CO003",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "slow",
-              "rest": "20s",
-              "coachingFocus": "Hold 2 seconds at full extension, neutral spine",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO003.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Full Body Stretch",
-                "duration_min": 5
-              }
-            ]
-          },
-          "estimatedCalories": "195–245",
-          "progressionNotes": "Goblet Squat and Dumbbell Row allow easy load progression. Increase dumbbell weight by 2kg increments."
-        },
-        {
-          "variationId": "lw-home-beg-001-v14",
-          "workoutName": "Foundation Burn N – Strength Intro",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Straight Sets – Strength Focus",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "Jumping Jacks",
-                "id": "CD015",
-                "duration_sec": 60,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD015.mp4"
-              },
-              {
-                "exercise": "Bodyweight Squat",
-                "id": "SQ001",
-                "reps": 10,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-                "videoUrl": "/exercises/videos/SQ001.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Straight Sets",
-              "format": "3 sets each exercise, 60s rest between sets"
-            },
-            {
-              "exercise": "Goblet Squat",
-              "id": "SQ002",
-              "sets": 3,
-              "reps": "12",
-              "tempo": "2-0-1",
-              "rest": "60s",
-              "coachingFocus": "Full depth, upright torso, elbows inside knees",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
-              "videoUrl": "/exercises/videos/SQ002.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": 3,
-              "reps": "8-10",
-              "tempo": "2-0-1",
-              "rest": "60s",
-              "coachingFocus": "Consistent form, full range of motion",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "exercise": "Romanian Deadlift (Dumbbell)",
-              "id": "HI004",
-              "sets": 3,
-              "reps": "12",
-              "tempo": "2-1-1",
-              "rest": "60s",
-              "coachingFocus": "Slow hinge, feel hamstrings, drive hips",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
-              "videoUrl": "/exercises/videos/HI004.mp4"
-            },
-            {
-              "exercise": "Dumbbell Row",
-              "id": "PLH002",
-              "sets": 3,
-              "reps": "10 each",
-              "tempo": "2-0-1",
-              "rest": "60s",
-              "coachingFocus": "Full stretch at bottom, pull to hip",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH002.mp4"
-            },
-            {
-              "exercise": "Plank",
-              "id": "CO001",
-              "sets": 3,
-              "reps": "25s hold",
-              "tempo": "iso",
-              "rest": "45s",
-              "coachingFocus": "Build time under tension",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO001.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Full Body Stretch",
-                "duration_min": 5
-              }
-            ]
-          },
-          "estimatedCalories": "170–220",
-          "progressionNotes": "Double progression: aim for top of rep range before increasing weight. Track every session."
-        },
-        {
-          "variationId": "lw-home-beg-001-v15",
-          "workoutName": "Foundation Burn O – Weekend Active Recovery",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 25,
-          "intensity": "Low",
-          "emphasis": "Active Recovery – Light Movement",
-          "warmup": {
-            "duration_min": 3,
-            "exercises": [
-              {
-                "exercise": "Jumping Jacks",
-                "id": "CD015",
-                "duration_sec": 45,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD015.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Easy Circuit – 2 rounds",
-              "format": "40s work / 30s rest, no intensity"
-            },
-            {
-              "exercise": "Bodyweight Squat",
-              "id": "SQ001",
-              "sets": 2,
-              "reps": "40s slow",
-              "tempo": "3-0-2",
-              "rest": "30s",
-              "coachingFocus": "Deliberate, feel the movement",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-              "videoUrl": "/exercises/videos/SQ001.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": 2,
-              "reps": "40s slow",
-              "tempo": "3-0-2",
-              "rest": "30s",
-              "coachingFocus": "Slow and controlled, knees down if needed",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "exercise": "Good Morning (Bodyweight)",
-              "id": "HI010",
-              "sets": 2,
-              "reps": "40s",
-              "tempo": "3-1-2",
-              "rest": "30s",
-              "coachingFocus": "Gentle hinge, feel the stretch",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
-              "videoUrl": "/exercises/videos/HI010.mp4"
-            },
-            {
-              "exercise": "Bird Dog",
-              "id": "CO003",
-              "sets": 2,
-              "reps": "40s",
-              "tempo": "slow",
-              "rest": "30s",
-              "coachingFocus": "Hold each rep 3 seconds",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO003.mp4"
-            },
-            {
-              "exercise": "Lateral Lunge",
-              "id": "LU006",
-              "sets": 2,
-              "reps": "40s slow",
-              "tempo": "3-1-2",
-              "rest": "30s",
-              "coachingFocus": "Move into the stretch, feel hip mobility",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU006.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 7,
-            "exercises": [
-              {
-                "exercise": "Extended Full Body Stretch",
-                "duration_min": 7
-              }
-            ]
-          },
-          "estimatedCalories": "110–150",
-          "progressionNotes": "This is a recovery session. Use it on days between harder workouts. No progression target."
-        },
-        {
-          "variationId": "lw-home-beg-001-v16",
-          "workoutName": "Foundation Burn P – Superset Pairs",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Antagonist Supersets",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "Mountain Climbers",
-                "id": "CD002",
-                "duration_sec": 40,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
-                "videoUrl": "/exercises/videos/CD002.mp4"
-              },
-              {
-                "exercise": "Bodyweight Squat",
-                "id": "SQ001",
-                "reps": 10,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-                "videoUrl": "/exercises/videos/SQ001.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Superset 1 – 3 rounds, 45s rest between rounds"
-            },
-            {
-              "exercise": "Bodyweight Squat",
-              "id": "SQ001",
-              "sets": 3,
-              "reps": "12",
-              "tempo": "2-0-1",
-              "rest": "0s (superset)",
-              "coachingFocus": "Chest tall, drive through heels",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-              "videoUrl": "/exercises/videos/SQ001.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": 3,
-              "reps": "8",
-              "tempo": "2-0-1",
-              "rest": "45s",
-              "coachingFocus": "Full range, pause at bottom briefly",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "block": "Superset 2 – 3 rounds, 45s rest between rounds"
-            },
-            {
-              "exercise": "Romanian Deadlift (Dumbbell)",
-              "id": "HI004",
-              "sets": 3,
-              "reps": "12",
-              "tempo": "2-1-1",
-              "rest": "0s (superset)",
-              "coachingFocus": "Hip hinge, feel hamstrings fully",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
-              "videoUrl": "/exercises/videos/HI004.mp4"
-            },
-            {
-              "exercise": "Resistance Band Row",
-              "id": "PLH008",
-              "sets": 3,
-              "reps": "12",
-              "tempo": "2-0-1",
-              "rest": "45s",
-              "coachingFocus": "Retract scapulae, elbows drive back",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH008.mp4"
-            },
-            {
-              "block": "Superset 3 – 2 rounds, 30s rest between rounds"
-            },
-            {
-              "exercise": "Reverse Lunge",
-              "id": "LU002",
-              "sets": 2,
-              "reps": "10 each leg",
-              "tempo": "2-0-1",
-              "rest": "0s (superset)",
-              "coachingFocus": "Upright torso, full drop each rep",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU002.mp4"
-            },
-            {
-              "exercise": "Plank",
-              "id": "CO001",
-              "sets": 2,
-              "reps": "25s hold",
-              "tempo": "iso",
-              "rest": "30s",
-              "coachingFocus": "Squeeze everything, breathe steadily",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO001.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Full Body Stretch Sequence",
-                "duration_min": 5
-              }
-            ]
-          },
-          "estimatedCalories": "180–230",
-          "progressionNotes": "Add 1 rep per set each week. Progress to 4 rounds of Superset 1 before adding weight."
-        },
-        {
-          "variationId": "lw-home-beg-001-v17",
-          "workoutName": "Foundation Burn Q – Hip Hinge Emphasis",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Hip Hinge + Posterior Chain",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "High Knees",
-                "id": "CD008",
-                "duration_sec": 45,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD008.mp4"
-              },
-              {
-                "exercise": "Good Morning (Bodyweight)",
-                "id": "HI010",
-                "reps": 10,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
-                "videoUrl": "/exercises/videos/HI010.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Box Squat",
-              "id": "SQ005",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-1",
-              "rest": "20s",
-              "coachingFocus": "Sit back to surface, pause, stand explosively",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-              "videoUrl": "/exercises/videos/SQ005.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Elbows at 45°, chest to floor",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "exercise": "Romanian Deadlift (Dumbbell)",
-              "id": "HI004",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "3-1-1",
-              "rest": "20s",
-              "coachingFocus": "Slow 3-count down, feel stretch, drive forward",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
-              "videoUrl": "/exercises/videos/HI004.mp4"
-            },
-            {
-              "exercise": "Dead Bug",
-              "id": "CO002",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "slow",
-              "rest": "20s",
-              "coachingFocus": "Back pinned, breathe out on extension",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO002.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Single Leg Romanian Deadlift (Bodyweight)",
-              "id": "HI012",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-1",
-              "rest": "20s",
-              "coachingFocus": "Balance challenge, back flat, hinge on one leg",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
-              "videoUrl": "/exercises/videos/HI012.mp4"
-            },
-            {
-              "exercise": "Inverted Row (TRX Row)",
-              "id": "PLH004",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Body straight, pull up, slow lower",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH004.mp4"
-            },
-            {
-              "exercise": "Step-Up",
-              "id": "LU010",
-              "sets": 2,
-              "reps": "30s alternating",
-              "tempo": "1-0-1",
-              "rest": "20s",
-              "coachingFocus": "Drive through heel, full extension at top",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU010.mp4"
-            },
-            {
-              "exercise": "Side Plank",
-              "id": "CO009",
-              "sets": 2,
-              "reps": "30s each",
-              "tempo": "iso",
-              "rest": "20s",
-              "coachingFocus": "Hips stacked, hold firm",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Side_Planks_sjrxva.png",
-              "videoUrl": "/exercises/videos/CO009.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Hamstring Stretch",
-                "duration_sec": 45,
-                "side": "each"
-              },
-              {
-                "exercise": "Hip Flexor Stretch",
-                "duration_sec": 40,
-                "side": "each"
-              },
-              {
-                "exercise": "Deep Breathing",
-                "reps": "5 slow breaths"
-              }
-            ]
-          },
-          "estimatedCalories": "180–230",
-          "progressionNotes": "Single Leg RDL is a skill exercise. Master bodyweight before adding dumbbells. Track balance improvements."
-        },
-        {
-          "variationId": "lw-home-beg-001-v18",
-          "workoutName": "Foundation Burn R – Upper Body Emphasis",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Upper Body Push-Pull + Lower",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "Jumping Jacks",
-                "id": "CD015",
-                "duration_sec": 60,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD015.mp4"
-              },
-              {
-                "exercise": "Bodyweight Squat",
-                "id": "SQ001",
-                "reps": 10,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-                "videoUrl": "/exercises/videos/SQ001.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Sumo Squat",
-              "id": "SQ007",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Wide stance, knees track toes, squeeze glutes",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-              "videoUrl": "/exercises/videos/SQ007.mp4"
-            },
-            {
-              "exercise": "Tricep Dip (Chair)",
-              "id": "PHH015",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Elbows straight back, lower to 90°",
-              "thumbnailUrl": "/exercises/thumbnails/PHH015.jpg",
-              "videoUrl": "/exercises/videos/PHH015.mp4"
-            },
-            {
-              "exercise": "Good Morning (Bodyweight)",
-              "id": "HI010",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-1",
-              "rest": "20s",
-              "coachingFocus": "Feel hamstrings and glutes",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
-              "videoUrl": "/exercises/videos/HI010.mp4"
-            },
-            {
-              "exercise": "Bicycle Crunch",
-              "id": "CO015",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "slow",
-              "rest": "20s",
-              "coachingFocus": "Deliberate rotation each rep",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Bicycle_Crunch_a2lruv.png",
-              "videoUrl": "/exercises/videos/CO015.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Split Squat",
-              "id": "LU005",
-              "sets": 2,
-              "reps": "30s each leg",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Stationary feet, drop rear knee",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU005.mp4"
-            },
-            {
-              "exercise": "Resistance Band Row",
-              "id": "PLH008",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Pull elbows back, retract scapulae",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH008.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Full range, body rigid",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "exercise": "Plank",
-              "id": "CO001",
-              "sets": 2,
-              "reps": "30s hold",
-              "tempo": "iso",
-              "rest": "20s",
-              "coachingFocus": "Maximize tension throughout",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO001.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Chest Stretch",
-                "duration_sec": 30
-              },
-              {
-                "exercise": "Lat Stretch",
-                "duration_sec": 30,
-                "side": "each"
-              },
-              {
-                "exercise": "Tricep Stretch",
-                "duration_sec": 30,
-                "side": "each"
-              }
-            ]
-          },
-          "estimatedCalories": "175–225",
-          "progressionNotes": "Progress Tricep Dip by straightening legs. Progress Row by using heavier resistance band."
-        },
-        {
-          "variationId": "lw-home-beg-001-v19",
-          "workoutName": "Foundation Burn S – Conditioning Focus",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Moderate",
-          "emphasis": "Cardiovascular Conditioning",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "Jumping Jacks",
-                "id": "CD015",
-                "duration_sec": 60,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD015.mp4"
-              },
-              {
-                "exercise": "High Knees",
-                "id": "CD008",
-                "duration_sec": 30,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-                "videoUrl": "/exercises/videos/CD008.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Jump Squat",
-              "id": "SQ012",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "explosive",
-              "rest": "20s",
-              "coachingFocus": "Quarter depth, soft landing, immediate reload",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-              "videoUrl": "/exercises/videos/SQ012.mp4"
-            },
-            {
-              "exercise": "Push-Up",
-              "id": "PHH001",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "1-0-1",
-              "rest": "20s",
-              "coachingFocus": "Pace is moderate, maintain form",
-              "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
-              "videoUrl": "/exercises/videos/PHH001.mp4"
-            },
-            {
-              "exercise": "Mountain Climbers",
-              "id": "CD002",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "fast",
-              "rest": "20s",
-              "coachingFocus": "Drive knees, hips level, alternating pace",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
-              "videoUrl": "/exercises/videos/CD002.mp4"
-            },
-            {
-              "exercise": "Bicycle Crunch",
-              "id": "CO015",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "moderate",
-              "rest": "20s",
-              "coachingFocus": "Deliberate rotation, extend opposite leg fully",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Bicycle_Crunch_a2lruv.png",
-              "videoUrl": "/exercises/videos/CO015.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Reverse Lunge to Knee Drive",
-              "id": "LU014",
-              "sets": 2,
-              "reps": "30s each leg",
-              "tempo": "controlled-explosive",
-              "rest": "20s",
-              "coachingFocus": "Step back, drive knee up fast",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU014.mp4"
-            },
-            {
-              "exercise": "Resistance Band Row",
-              "id": "PLH008",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "1-0-1",
-              "rest": "20s",
-              "coachingFocus": "Faster tempo, retract blades each rep",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH008.mp4"
-            },
-            {
-              "exercise": "High Knees",
-              "id": "CD008",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "fast",
-              "rest": "20s",
-              "coachingFocus": "Drive knees high, pump arms, stay light",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-              "videoUrl": "/exercises/videos/CD008.mp4"
-            },
-            {
-              "exercise": "Plank",
-              "id": "CO001",
-              "sets": 2,
-              "reps": "30s hold",
-              "tempo": "iso",
-              "rest": "20s",
-              "coachingFocus": "Steady after the intensity",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO001.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Full Body Stretch",
-                "duration_min": 5
-              }
-            ]
-          },
-          "estimatedCalories": "220–280",
-          "progressionNotes": "This is the most cardiovascularly demanding beginner variation. Regress Jump Squat to Bodyweight Squat if HR is too high."
-        },
-        {
-          "variationId": "lw-home-beg-001-v20",
-          "workoutName": "Foundation Burn T – Full Body Balance",
-          "goal": "Lose Weight",
-          "location": "Home",
-          "level": "Beginner",
-          "duration": 30,
-          "intensity": "Low-Moderate",
-          "emphasis": "Balanced Full Body – All Patterns",
-          "warmup": {
-            "duration_min": 4,
-            "exercises": [
-              {
-                "exercise": "Mountain Climbers",
-                "id": "CD002",
-                "duration_sec": 40,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
-                "videoUrl": "/exercises/videos/CD002.mp4"
-              },
-              {
-                "exercise": "Sumo Squat",
-                "id": "SQ007",
-                "reps": 10,
-                "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
-                "videoUrl": "/exercises/videos/SQ007.mp4"
-              }
-            ]
-          },
-          "mainWorkout": [
-            {
-              "block": "Circuit A – Round 1 & 2",
-              "format": "30s work / 20s rest"
-            },
-            {
-              "exercise": "Goblet Squat",
-              "id": "SQ002",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Weight at chest, elbows inside knees at bottom",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
-              "videoUrl": "/exercises/videos/SQ002.mp4"
-            },
-            {
-              "exercise": "Incline Push-Up",
-              "id": "PHH003",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Hands elevated, body straight line, full ROM",
-              "thumbnailUrl": "/exercises/thumbnails/PHH003.jpg",
-              "videoUrl": "/exercises/videos/PHH003.mp4"
-            },
-            {
-              "exercise": "Good Morning (Bodyweight)",
-              "id": "HI010",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-1-1",
-              "rest": "20s",
-              "coachingFocus": "Hip hinge, feel posterior chain",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
-              "videoUrl": "/exercises/videos/HI010.mp4"
-            },
-            {
-              "exercise": "Plank",
-              "id": "CO001",
-              "sets": 2,
-              "reps": "30s hold",
-              "tempo": "iso",
-              "rest": "20s",
-              "coachingFocus": "Full body tension, breathe",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
-              "videoUrl": "/exercises/videos/CO001.mp4"
-            },
-            {
-              "block": "Circuit B – Round 1 & 2",
-              "format": "30s work / 20s rest",
-              "rest_between_circuits": "60s"
-            },
-            {
-              "exercise": "Walking Lunge",
-              "id": "LU004",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "1-0-1",
-              "rest": "20s",
-              "coachingFocus": "Continuous movement, full hip extension",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
-              "videoUrl": "/exercises/videos/LU004.mp4"
-            },
-            {
-              "exercise": "Inverted Row (TRX Row)",
-              "id": "PLH004",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "2-0-1",
-              "rest": "20s",
-              "coachingFocus": "Body straight, pull chest up, elbows back",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
-              "videoUrl": "/exercises/videos/PLH004.mp4"
-            },
-            {
-              "exercise": "Jumping Jacks",
-              "id": "CD015",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "moderate",
-              "rest": "20s",
-              "coachingFocus": "Light and rhythmic, full arm swing",
-              "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
-              "videoUrl": "/exercises/videos/CD015.mp4"
-            },
-            {
-              "exercise": "Russian Twist",
-              "id": "CO010",
-              "sets": 2,
-              "reps": "30s",
-              "tempo": "controlled",
-              "rest": "20s",
-              "coachingFocus": "Rotate through full range, chest tall",
-              "thumbnailUrl": "/exercises/thumbnails/CO010.jpg",
-              "videoUrl": "/exercises/videos/CO010.mp4"
-            }
-          ],
-          "finisher": "None",
-          "cooldown": {
-            "duration_min": 5,
-            "exercises": [
-              {
-                "exercise": "Full Body Stretch Sequence",
-                "duration_min": 5
-              }
-            ]
-          },
-          "estimatedCalories": "185–235",
-          "progressionNotes": "This is the benchmark variation. Return to this monthly to assess improvement. Add dumbbells to Goblet Squat and Lunge for progression."
+          "exercise": "Bird Dog",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "slow",
+          "rest": "20s",
+          "coachingFocus": "Neutral spine, hold 2 seconds at extension",
+          "id": "CO003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO003.mp4"
         }
-      ]
+      ],
+      "finisher": "None — beginner session ends after Circuit B",
+      "cooldown": "5 min: Hip Flexor Stretch 40s each, Hamstring Stretch 40s each, Chest Stretch 30s, Deep Breathing 5 breaths",
+      "estimatedCalories": "180-230",
+      "progressionNotes": "When both circuits feel easy at 2 rounds, add a 3rd round of Circuit A before progressing to Intermediate."
+    },
+    {
+      "workoutName": "Foundation Burn B – Hinge & Pull",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_BODYWEIGHT",
+      "collection": "Fat Burn Series",
+      "duration": "30 min",
+      "intensity": "LOW_MODERATE",
+      "warmup": "4 min: High Knees 45s, Reverse Lunge x8 each",
+      "mainWorkout": [
+        {
+          "exercise": "Sumo Squat",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Wide stance toes out 45°, squeeze glutes at top",
+          "id": "SQ007",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ007.mp4"
+        },
+        {
+          "exercise": "Incline Push-Up",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Hands on surface, body straight, controlled press",
+          "id": "PHH003",
+          "thumbnailUrl": "/exercises/thumbnails/PHH003.jpg",
+          "videoUrl": "/exercises/videos/PHH003.mp4"
+        },
+        {
+          "exercise": "Good Morning (Bodyweight)",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-1-1",
+          "rest": "20s",
+          "coachingFocus": "Hinge from hips, soft knee, return tall",
+          "id": "HI010",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
+          "videoUrl": "/exercises/videos/HI010.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "30s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Glutes squeezed, neutral spine, breathe steadily",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        },
+        {
+          "exercise": "Step-Up",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "1-0-1",
+          "rest": "20s",
+          "coachingFocus": "Drive through heel on step, full hip extension at top",
+          "id": "LU010",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU010.mp4"
+        },
+        {
+          "exercise": "Resistance Band Row",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Pull elbows back, squeeze shoulder blades",
+          "id": "PLH008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH008.mp4"
+        },
+        {
+          "exercise": "Lateral Lunge",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Step wide, sit back on one leg, push back to centre",
+          "id": "LU006",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU006.mp4"
+        },
+        {
+          "exercise": "Side Plank",
+          "sets": 2,
+          "reps": "30s each side",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Hips stacked, body in straight line",
+          "id": "CO009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Side_Planks_sjrxva.png",
+          "videoUrl": "/exercises/videos/CO009.mp4"
+        }
+      ],
+      "finisher": "None",
+      "cooldown": "5 min: Glute Stretch 40s each, Lat Stretch 30s each, Quad Stretch 30s each, Deep Breathing",
+      "estimatedCalories": "175-225",
+      "progressionNotes": "Increase step height on Step-Up when movement feels stable. Add resistance band on Sumo Squat when bodyweight feels easy."
+    },
+    {
+      "workoutName": "Foundation Burn C – Unilateral Focus",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_BODYWEIGHT",
+      "collection": "Fat Burn Series",
+      "duration": "30 min",
+      "intensity": "LOW_MODERATE",
+      "warmup": "4 min: Mountain Climbers 40s, Box Squat x10",
+      "mainWorkout": [
+        {
+          "exercise": "Reverse Lunge",
+          "sets": 2,
+          "reps": "30s alternating",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Step back, drop rear knee, upright torso",
+          "id": "LU002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU002.mp4"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Elbows at 45°, lower chest to floor, press up strong",
+          "id": "PHH001",
+          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "videoUrl": "/exercises/videos/PHH001.mp4"
+        },
+        {
+          "exercise": "Single Leg Romanian Deadlift (Bodyweight)",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-1-1",
+          "rest": "20s",
+          "coachingFocus": "Hinge on one leg, hip drives back, back stays flat",
+          "id": "HI012",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI012.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "30s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Ribs down, glutes on, breathe",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        },
+        {
+          "exercise": "Forward Lunge",
+          "sets": 2,
+          "reps": "30s alternating",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Front shin vertical, drive through front heel to return",
+          "id": "LU001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU001.mp4"
+        },
+        {
+          "exercise": "Resistance Band Row",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Anchor at waist height, elbows back, squeeze blades",
+          "id": "PLH008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH008.mp4"
+        },
+        {
+          "exercise": "Curtsy Lunge",
+          "sets": 2,
+          "reps": "30s alternating",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Step diagonally behind, lower rear knee, front knee tracks",
+          "id": "LU007",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU007.mp4"
+        },
+        {
+          "exercise": "Russian Twist",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "controlled",
+          "rest": "20s",
+          "coachingFocus": "Lean back 45°, rotate through full range, chest tall",
+          "id": "CO010",
+          "thumbnailUrl": "/exercises/thumbnails/CO010.jpg",
+          "videoUrl": "/exercises/videos/CO010.mp4"
+        }
+      ],
+      "finisher": "None",
+      "cooldown": "5 min: Pigeon Stretch 45s each, Adductor Stretch 30s, Shoulder Stretch 30s each",
+      "estimatedCalories": "180-230",
+      "progressionNotes": "Add a light dumbbell to Reverse Lunge and Single Leg RDL when you can complete all rounds without stopping."
+    },
+    {
+      "workoutName": "Foundation Burn D – Low Impact",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_BODYWEIGHT",
+      "collection": "Fat Burn Series",
+      "duration": "30 min",
+      "intensity": "LOW",
+      "warmup": "4 min: Jumping Jacks (step option) 60s, Squat Pulse x15",
+      "mainWorkout": [
+        {
+          "exercise": "Wall Sit",
+          "sets": 2,
+          "reps": "30s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "90° knee angle, back flat, arms at sides",
+          "id": "SQ013",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704135/Wall_Sit_x1vi7d.png",
+          "videoUrl": "/exercises/videos/SQ013.mp4"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "3-0-1",
+          "rest": "20s",
+          "coachingFocus": "Slow 3-count down, full range, push through palms",
+          "id": "PHH001",
+          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "videoUrl": "/exercises/videos/PHH001.mp4"
+        },
+        {
+          "exercise": "Good Morning (Bodyweight)",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-1-1",
+          "rest": "20s",
+          "coachingFocus": "Hands behind head, hinge at hips, feel hamstrings",
+          "id": "HI010",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
+          "videoUrl": "/exercises/videos/HI010.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "30s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Neutral spine, glutes engaged, breathe",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        },
+        {
+          "exercise": "Split Squat",
+          "sets": 2,
+          "reps": "30s each leg",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Both feet stationary, drop rear knee, front shin vertical",
+          "id": "LU005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU005.mp4"
+        },
+        {
+          "exercise": "Inverted Row (TRX Row)",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Adjust foot position for difficulty, pull chest to bar",
+          "id": "PLH004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH004.mp4"
+        },
+        {
+          "exercise": "Lateral Lunge",
+          "sets": 2,
+          "reps": "30s alternating",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Sit back on one leg, keep other leg straight",
+          "id": "LU006",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU006.mp4"
+        },
+        {
+          "exercise": "Dead Bug",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "slow",
+          "rest": "20s",
+          "coachingFocus": "Lower back flat, opposite arm and leg extend slowly",
+          "id": "CO002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO002.mp4"
+        }
+      ],
+      "finisher": "None",
+      "cooldown": "5 min: Hip Flexor Stretch 45s each, Calf Stretch 30s each, Deep Breathing 5 breaths",
+      "estimatedCalories": "160-210",
+      "progressionNotes": "Low impact option for joint-sensitive beginners. Progress to Foundation Burn A when comfortable."
+    },
+    {
+      "workoutName": "Foundation Burn E – Core & Glute Activation",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "LOWER",
+      "environmentTarget": "HOME_BODYWEIGHT",
+      "collection": "Fat Burn Series",
+      "duration": "30 min",
+      "intensity": "LOW_MODERATE",
+      "warmup": "4 min: Marching in place 60s, Hip Circles x10, Glute Bridge x10",
+      "mainWorkout": [
+        {
+          "exercise": "Glute Bridge",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-2-1",
+          "rest": "20s",
+          "coachingFocus": "Drive hips up, 2-second squeeze at top, breathe",
+          "id": "HI009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png",
+          "videoUrl": "/exercises/videos/HI009.mp4"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Body as a plank. Chest to floor. Press strong.",
+          "id": "PHH001",
+          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "videoUrl": "/exercises/videos/PHH001.mp4"
+        },
+        {
+          "exercise": "Donkey Kick",
+          "sets": 2,
+          "reps": "30s each",
+          "tempo": "1-1-1",
+          "rest": "20s",
+          "coachingFocus": "Drive heel to ceiling, knee at 90°, don't rotate hips",
+          "id": "HI013",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png",
+          "videoUrl": "/exercises/videos/HI013.mp4"
+        },
+        {
+          "exercise": "Dead Bug",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "slow",
+          "rest": "20s",
+          "coachingFocus": "Back flat. Breathe out as the limbs extend.",
+          "id": "CO002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO002.mp4"
+        },
+        {
+          "exercise": "Single-Leg Glute Bridge",
+          "sets": 2,
+          "reps": "30s each",
+          "tempo": "2-2-1",
+          "rest": "20s",
+          "coachingFocus": "Single leg — double glute challenge. Hips level throughout.",
+          "id": "HI011",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png",
+          "videoUrl": "/exercises/videos/HI011.mp4"
+        },
+        {
+          "exercise": "Inverted Row (TRX Row)",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Pull chest to bar. Back engagement every rep.",
+          "id": "PLH004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH004.mp4"
+        },
+        {
+          "exercise": "Fire Hydrant",
+          "sets": 2,
+          "reps": "30s each",
+          "tempo": "1-1-1",
+          "rest": "20s",
+          "coachingFocus": "Lift knee to side, glute medius is the target, no hip rotation",
+          "id": "HI014",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png",
+          "videoUrl": "/exercises/videos/HI014.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "30s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Cap the session. Core stability ties everything together.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        }
+      ],
+      "finisher": "None",
+      "cooldown": "5 min: Pigeon Pose 45s each, Hamstring Stretch 40s each, Child's Pose 60s",
+      "estimatedCalories": "150-200",
+      "progressionNotes": "Glute activation focus. Add 3rd circuit round when 2 rounds feel easy."
+    },
+    {
+      "workoutName": "Fat Burn Intermediate A – Home Circuit",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_BODYWEIGHT",
+      "collection": "Fat Burn Series",
+      "duration": "40 min",
+      "intensity": "MODERATE",
+      "warmup": "4 min: High Knees 45s, Jumping Jacks 45s, Bodyweight Squat x12",
+      "mainWorkout": [
+        {
+          "exercise": "Jump Squat",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "explosive-soft land",
+          "rest": "20s",
+          "coachingFocus": "Quarter squat, explosive jump, land through the whole foot. Control every landing.",
+          "id": "SQ012",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ012.mp4"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "1-0-1",
+          "rest": "20s",
+          "coachingFocus": "Chest to floor. Consistent rhythm. Don't sag at the hips.",
+          "id": "PHH001",
+          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "videoUrl": "/exercises/videos/PHH001.mp4"
+        },
+        {
+          "exercise": "Romanian Deadlift (Dumbbell)",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-1-1",
+          "rest": "20s",
+          "coachingFocus": "Hinge deep. Hamstrings loaded. Drive hips forward at the top.",
+          "id": "HI004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI004.mp4"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "fast",
+          "rest": "20s",
+          "coachingFocus": "Drive knees toward chest. Hips stay level. This is both core and cardio.",
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
+          "videoUrl": "/exercises/videos/CD002.mp4"
+        },
+        {
+          "exercise": "Bulgarian Split Squat",
+          "sets": 3,
+          "reps": "30s each",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Rear foot elevated. Front leg drives. Glutes and quads working together.",
+          "id": "LU003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Bulgarian_Split_Squat_mdoejf.png",
+          "videoUrl": "/exercises/videos/LU003.mp4"
+        },
+        {
+          "exercise": "Inverted Row (TRX Row)",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Body straight, pull chest to bar. Back engagement matches push volume.",
+          "id": "PLH004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH004.mp4"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "max effort",
+          "rest": "30s",
+          "coachingFocus": "Chest to floor. Jump at the top. Intermediate fat burn finisher.",
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
+          "videoUrl": "/exercises/videos/CD001.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "40s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Core endurance. Hold quality position even when fatigued.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        }
+      ],
+      "finisher": "3 rounds of Jumping Jacks x20 + Bodyweight Squat x10 — 30s rest between rounds",
+      "cooldown": "5 min: Hip Flexor Lunge 45s each, Hamstring Stretch 45s each, Chest Stretch 30s",
+      "estimatedCalories": "280-360",
+      "progressionNotes": "Intermediate: add a 3rd round to all circuits when 2 rounds feel manageable."
+    },
+    {
+      "workoutName": "Fat Burn Intermediate B – Cardio Strength",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_BODYWEIGHT",
+      "collection": "Fat Burn Series",
+      "duration": "40 min",
+      "intensity": "MODERATE",
+      "warmup": "4 min: Mountain Climbers 40s, Squat x10, Arm Circles",
+      "mainWorkout": [
+        {
+          "exercise": "Walking Lunge",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "1-0-1",
+          "rest": "20s",
+          "coachingFocus": "Continuous stepping. Full hip extension between reps. Torso upright.",
+          "id": "LU004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU004.mp4"
+        },
+        {
+          "exercise": "Wide Push-Up",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Greater chest stretch. Control the descent. Drive back up.",
+          "id": "PHH002",
+          "thumbnailUrl": "/exercises/thumbnails/PHH002.jpg",
+          "videoUrl": "/exercises/videos/PHH002.mp4"
+        },
+        {
+          "exercise": "Single-Leg Glute Bridge",
+          "sets": 3,
+          "reps": "30s each",
+          "tempo": "2-2-1",
+          "rest": "20s",
+          "coachingFocus": "Drive one hip up. Hips level. Hold 2 seconds at top.",
+          "id": "HI011",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png",
+          "videoUrl": "/exercises/videos/HI011.mp4"
+        },
+        {
+          "exercise": "High Knees",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "fast",
+          "rest": "20s",
+          "coachingFocus": "Drive knees to hip height. Arms pump. Stay light on your feet.",
+          "id": "CD008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
+          "videoUrl": "/exercises/videos/CD008.mp4"
+        },
+        {
+          "exercise": "Reverse Lunge",
+          "sets": 3,
+          "reps": "30s alternating",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Step back, drop rear knee, drive through front foot.",
+          "id": "LU002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU002.mp4"
+        },
+        {
+          "exercise": "Resistance Band Row",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Retract blades each rep. Pulling volume balances all the cardio work.",
+          "id": "PLH008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH008.mp4"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "moderate",
+          "rest": "20s",
+          "coachingFocus": "Full arm swing. Light foot contact. Steady cardio output.",
+          "id": "CD015",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
+          "videoUrl": "/exercises/videos/CD015.mp4"
+        },
+        {
+          "exercise": "Russian Twist",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "controlled",
+          "rest": "20s",
+          "coachingFocus": "Full rotation. Chest tall. Core under load after cardio.",
+          "id": "CO010",
+          "thumbnailUrl": "/exercises/thumbnails/CO010.jpg",
+          "videoUrl": "/exercises/videos/CO010.mp4"
+        }
+      ],
+      "finisher": "None",
+      "cooldown": "5 min full body stretch — hip flexors, hamstrings, chest, lats",
+      "estimatedCalories": "260-330",
+      "progressionNotes": "Increase rounds from 2 to 3 when this session feels manageable throughout."
+    },
+    {
+      "workoutName": "Fat Burn Intermediate C – HIIT Strength",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_BODYWEIGHT",
+      "collection": "Fat Burn Series",
+      "duration": "40 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "4 min: Jumping Jacks 45s, High Knees 30s, Bodyweight Squat x12, Push-Up x8",
+      "mainWorkout": [
+        {
+          "exercise": "Jump Squat",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "explosive",
+          "rest": "20s",
+          "coachingFocus": "Max intent each rep. Land soft. Reload immediately.",
+          "id": "SQ012",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ012.mp4"
+        },
+        {
+          "exercise": "Decline Push-Up",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Feet elevated. Upper chest and front delts. Full ROM.",
+          "id": "PH008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
+          "videoUrl": "/exercises/videos/PH008.mp4"
+        },
+        {
+          "exercise": "Lateral Lunge",
+          "sets": 3,
+          "reps": "30s alternating",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Multi-directional movement improves fat burn and agility.",
+          "id": "LU006",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU006.mp4"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "max effort",
+          "rest": "30s",
+          "coachingFocus": "Chest to floor. Explosive jump at top. Max caloric output.",
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
+          "videoUrl": "/exercises/videos/CD001.mp4"
+        },
+        {
+          "exercise": "Glute Bridge",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-1-1",
+          "rest": "20s",
+          "coachingFocus": "Drive hips up. Squeeze at top. Posterior chain activation after all the cardio.",
+          "id": "HI009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png",
+          "videoUrl": "/exercises/videos/HI009.mp4"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "fast",
+          "rest": "20s",
+          "coachingFocus": "Core + cardio. Hips level. Drive knees toward chest alternately.",
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
+          "videoUrl": "/exercises/videos/CD002.mp4"
+        },
+        {
+          "exercise": "Inverted Row (TRX Row)",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Back work at end of HIIT. Chest to bar. Elbows back.",
+          "id": "PLH004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH004.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "40s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Still and tight. Core strength closes the session.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        }
+      ],
+      "finisher": "Tabata: 8 rounds of 20s Jump Squat / 10s rest",
+      "cooldown": "5 min: Hip Flexor 45s each, Pigeon Pose 45s each, Hamstring 45s each",
+      "estimatedCalories": "320-400",
+      "progressionNotes": "When this session feels manageable, progress to Advanced Fat Burn."
+    },
+    {
+      "workoutName": "Fat Burn Intermediate D – Dumbbell Burner",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Fat Burn Series",
+      "duration": "40 min",
+      "intensity": "MODERATE",
+      "warmup": "4 min: Jumping Jacks 45s, Hip Hinge Drill x10, Push-Up x10",
+      "mainWorkout": [
+        {
+          "exercise": "Goblet Squat",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Weight at chest. Elbows inside knees at bottom. Deep squat.",
+          "id": "SQ002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
+          "videoUrl": "/exercises/videos/SQ002.mp4"
+        },
+        {
+          "exercise": "Dumbbell Bench Press",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Full chest range. Control the descent. Caloric burn through strength.",
+          "id": "PH003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704181/Dumbbell_Press_d6emjw.png",
+          "videoUrl": "/exercises/videos/PH003.mp4"
+        },
+        {
+          "exercise": "Romanian Deadlift (Dumbbell)",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-1-1",
+          "rest": "20s",
+          "coachingFocus": "Hip hinge. Load the hamstrings. Drive hips through at top.",
+          "id": "HI004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI004.mp4"
+        },
+        {
+          "exercise": "High Knees",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "fast",
+          "rest": "20s",
+          "coachingFocus": "Knees to hip height. Arms pump. Heart rate spike between strength sets.",
+          "id": "CD008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
+          "videoUrl": "/exercises/videos/CD008.mp4"
+        },
+        {
+          "exercise": "Dumbbell Shoulder Press",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Full overhead range. Burns calories through compound upper body.",
+          "id": "PHH020",
+          "thumbnailUrl": "/exercises/thumbnails/PHH020.jpg",
+          "videoUrl": "/exercises/videos/PHH020.mp4"
+        },
+        {
+          "exercise": "Dumbbell Row (Single Arm)",
+          "sets": 3,
+          "reps": "30s each",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Elbow to ceiling. Back engagement matches all the push work.",
+          "id": "PLH002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH002.mp4"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "moderate",
+          "rest": "20s",
+          "coachingFocus": "Cardio recovery between dumbbell work. Full arm swing.",
+          "id": "CD015",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
+          "videoUrl": "/exercises/videos/CD015.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "40s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Core stability to finish. Ribs down. Breathe.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        }
+      ],
+      "finisher": "Dumbbell Complex: Goblet Squat x8 + Shoulder Press x8 + Row x8 each arm — 2 rounds, 60s rest",
+      "cooldown": "5 min: Doorway Chest Stretch 45s each, Hamstring Stretch 45s each, Hip Flexor 45s each",
+      "estimatedCalories": "300-380",
+      "progressionNotes": "Progress by increasing dumbbell weight when 30s intervals feel easy."
+    },
+    {
+      "workoutName": "Fat Burn Intermediate E – Full Body Strength Circuit",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_BODYWEIGHT",
+      "collection": "Fat Burn Series",
+      "duration": "40 min",
+      "intensity": "MODERATE",
+      "warmup": "4 min: Mountain Climbers 40s, Hip Circles x10, Arm Swings x20",
+      "mainWorkout": [
+        {
+          "exercise": "Sumo Squat",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Wide stance. Inner thigh and glute emphasis. Deep squat.",
+          "id": "SQ007",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ007.mp4"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "1-0-1",
+          "rest": "20s",
+          "coachingFocus": "Rhythmic pace. Full ROM. Don't let the hips sag.",
+          "id": "PHH001",
+          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "videoUrl": "/exercises/videos/PHH001.mp4"
+        },
+        {
+          "exercise": "Good Morning (Bodyweight)",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-1-1",
+          "rest": "20s",
+          "coachingFocus": "Hip hinge. Feel the hamstrings load. Return tall.",
+          "id": "HI010",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
+          "videoUrl": "/exercises/videos/HI010.mp4"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "fast",
+          "rest": "20s",
+          "coachingFocus": "Core and cardio. Drive knees alternately. Hips level.",
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
+          "videoUrl": "/exercises/videos/CD002.mp4"
+        },
+        {
+          "exercise": "Curtsy Lunge",
+          "sets": 3,
+          "reps": "30s alternating",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Cross behind. Glute medius emphasis. Front knee tracks forward.",
+          "id": "LU007",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU007.mp4"
+        },
+        {
+          "exercise": "Resistance Band Row",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Pull elbows back. Squeeze blades. Back volume for posture.",
+          "id": "PLH008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH008.mp4"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "moderate",
+          "rest": "20s",
+          "coachingFocus": "Steady cardio buffer between strength rounds.",
+          "id": "CD015",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
+          "videoUrl": "/exercises/videos/CD015.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "40s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Core endurance close. Perfect position for 40 full seconds.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        }
+      ],
+      "finisher": "Bodyweight Squat x20 + Push-Up x10: 3 rounds, 30s rest",
+      "cooldown": "5 min full body stretch",
+      "estimatedCalories": "270-350",
+      "progressionNotes": "Standard benchmark session. Return monthly to assess improvement."
+    },
+    {
+      "workoutName": "Fat Burn Advanced A – High Intensity",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_BODYWEIGHT",
+      "collection": "Fat Burn Series",
+      "duration": "45 min",
+      "intensity": "HIGH",
+      "warmup": "5 min: High Knees 45s, Jumping Jacks 45s, Jump Squat x8, Push-Up x10, Inchworm x5",
+      "mainWorkout": [
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "max effort",
+          "rest": "20s",
+          "coachingFocus": "Full chest to floor. Explosive jump. Max reps per 30s. Advanced fat burn.",
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
+          "videoUrl": "/exercises/videos/CD001.mp4"
+        },
+        {
+          "exercise": "Pistol Squat",
+          "sets": 4,
+          "reps": "30s each",
+          "tempo": "3-0-1",
+          "rest": "20s",
+          "coachingFocus": "Full depth single-leg squat. Arms forward for balance. Own the descent.",
+          "id": "SQ008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704137/Pistol_Squat_b1sb9k.png",
+          "videoUrl": "/exercises/videos/SQ008.mp4"
+        },
+        {
+          "exercise": "Diamond Push-Up",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "1-0-1",
+          "rest": "20s",
+          "coachingFocus": "Hands close. Tricep emphasis. Full ROM. High-output advanced variation.",
+          "id": "PH005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Diamond_push-ups_bmqaty.png",
+          "videoUrl": "/exercises/videos/PH005.mp4"
+        },
+        {
+          "exercise": "Jump Squat",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "explosive-controlled",
+          "rest": "20s",
+          "coachingFocus": "Quarter squat, max intent jump, soft land. Repeat immediately.",
+          "id": "SQ012",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ012.mp4"
+        },
+        {
+          "exercise": "Pull-Up",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "30s",
+          "coachingFocus": "Dead hang. Chin over bar. Quality beats speed. Pull strongly.",
+          "id": "PLV001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Chin_Up_Pull_Up_lylqeo.png",
+          "videoUrl": "/exercises/videos/PLV001.mp4"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "max effort",
+          "rest": "20s",
+          "coachingFocus": "Hips level. Drive knees. Full speed — this is the conditioning work.",
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
+          "videoUrl": "/exercises/videos/CD002.mp4"
+        },
+        {
+          "exercise": "Renegade Row",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-1-2",
+          "rest": "20s",
+          "coachingFocus": "Plank + row. Minimal hip rotation. Core and back together.",
+          "id": "PLH019",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH019.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "60s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Advanced plank duration. Tight everything. Breathe steadily.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        }
+      ],
+      "finisher": "AMRAP 3 min: Burpee x5 + Jump Squat x10 — record rounds",
+      "cooldown": "8 min: Hip Flexor 60s each, Pigeon Pose 60s each, Hamstring 60s each, Chest Doorway 45s each",
+      "estimatedCalories": "420-520",
+      "progressionNotes": "Advanced: track reps per 30s interval. Aim to beat total reps each session."
+    },
+    {
+      "workoutName": "Fat Burn Advanced B – Plyometric Power",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "LOWER",
+      "environmentTarget": "HOME_BODYWEIGHT",
+      "collection": "Fat Burn Series",
+      "duration": "45 min",
+      "intensity": "HIGH",
+      "warmup": "5 min: High Knees 45s, Jump Squat x8 submaximal, Dynamic Lunge x8 each, Arm Circles",
+      "mainWorkout": [
+        {
+          "exercise": "Jump Squat",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "max intent",
+          "rest": "20s",
+          "coachingFocus": "Every jump maximum effort. Land quiet and controlled. Reload.",
+          "id": "SQ012",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ012.mp4"
+        },
+        {
+          "exercise": "Skater Lunge",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "controlled-explosive",
+          "rest": "20s",
+          "coachingFocus": "Lateral hop. Land on one foot. Swing other leg behind. Hip abductor + quad.",
+          "id": "LU014",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU014.mp4"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "1-0-1",
+          "rest": "20s",
+          "coachingFocus": "High volume upper body. Maintain plank integrity. Consistent rhythm.",
+          "id": "PHH001",
+          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "videoUrl": "/exercises/videos/PHH001.mp4"
+        },
+        {
+          "exercise": "Bulgarian Split Squat",
+          "sets": 3,
+          "reps": "30s each",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Rear foot elevated. Deep lunge. Glute and quad loaded.",
+          "id": "LU003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Bulgarian_Split_Squat_mdoejf.png",
+          "videoUrl": "/exercises/videos/LU003.mp4"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "max effort",
+          "rest": "30s",
+          "coachingFocus": "Chest to floor. Explosive jump. Maximum output.",
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
+          "videoUrl": "/exercises/videos/CD001.mp4"
+        },
+        {
+          "exercise": "Resistance Band Row",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "1-0-1",
+          "rest": "20s",
+          "coachingFocus": "Faster tempo. Retract blades each rep. Back balance after lower focus.",
+          "id": "PLH008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH008.mp4"
+        },
+        {
+          "exercise": "High Knees",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "fast",
+          "rest": "20s",
+          "coachingFocus": "Drive knees high. Pump arms. Stay light.",
+          "id": "CD008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
+          "videoUrl": "/exercises/videos/CD008.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "60s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Steady after the intensity.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        }
+      ],
+      "finisher": "None",
+      "cooldown": "5 min full body stretch",
+      "estimatedCalories": "380-480",
+      "progressionNotes": "Plyometric focus. Regress Jump Squat to Bodyweight Squat if HR is too high."
+    },
+    {
+      "workoutName": "GYM Fat Burn – Beginner Circuit",
+      "goal": "LOSE_WEIGHT",
+      "location": "GYM",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "collection": "Fat Burn Series",
+      "duration": "40 min",
+      "intensity": "LOW_MODERATE",
+      "warmup": "5 min treadmill walk, leg swings x10, arm circles x20, machine row light x10",
+      "mainWorkout": [
+        {
+          "exercise": "Leg Press",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-2",
+          "rest": "20s",
+          "coachingFocus": "Machine supported. Controlled descend. Full extension on press. Safe entry to weight training.",
+          "id": "SQ010",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710454/Leg_Press_xkdtsb.png",
+          "videoUrl": "/exercises/videos/SQ010.mp4"
+        },
+        {
+          "exercise": "Machine Chest Press",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-1-2",
+          "rest": "20s",
+          "coachingFocus": "Machine guides movement. Full ROM. Feel the chest.",
+          "id": "PH010",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710450/Machine_Chest_Press_irkw48.png",
+          "videoUrl": "/exercises/videos/PH010.mp4"
+        },
+        {
+          "exercise": "Goblet Squat",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-1-1",
+          "rest": "20s",
+          "coachingFocus": "Dumbbell at chest. Deep squat. Builds real lower body fat-burning capacity.",
+          "id": "SQ002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
+          "videoUrl": "/exercises/videos/SQ002.mp4"
+        },
+        {
+          "exercise": "High Knees",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "moderate",
+          "rest": "20s",
+          "coachingFocus": "Heart rate up. Arms pump. Consistent pace between strength sets.",
+          "id": "CD008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
+          "videoUrl": "/exercises/videos/CD008.mp4"
+        },
+        {
+          "exercise": "Glute Bridge",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-2-1",
+          "rest": "20s",
+          "coachingFocus": "Posterior chain activation. Drive hips up. Squeeze at top.",
+          "id": "HI009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png",
+          "videoUrl": "/exercises/videos/HI009.mp4"
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-1-2",
+          "rest": "20s",
+          "coachingFocus": "Pull elbows to ribs. Full stretch at top. Back strength for posture and caloric burn.",
+          "id": "PLV003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779711454/Lat_Down_jxxqmy.png",
+          "videoUrl": "/exercises/videos/PLV003.mp4"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "moderate",
+          "rest": "20s",
+          "coachingFocus": "Light cardio. Full arm swing.",
+          "id": "CD015",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
+          "videoUrl": "/exercises/videos/CD015.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "25s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Core stability to close. Ribs down. Breathe steadily.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        }
+      ],
+      "finisher": "5 min incline treadmill walk — steady state caloric burn",
+      "cooldown": "5 min: Hip Flexor 40s each, Hamstring 40s each, Chest Stretch 30s",
+      "estimatedCalories": "220-300",
+      "progressionNotes": "Beginner gym fat burn. Progress to 3 rounds when 2 feel easy."
+    },
+    {
+      "workoutName": "GYM Fat Burn – Intermediate Strength Circuit",
+      "goal": "LOSE_WEIGHT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "collection": "Fat Burn Series",
+      "duration": "50 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "5 min bike, jumping jacks x30, goblet squat x10, face pull x15, push-up x10",
+      "mainWorkout": [
+        {
+          "exercise": "Barbell Back Squat",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "30s",
+          "coachingFocus": "Moderate weight. Rhythm squats for fat burn. Controlled descent, explosive ascent.",
+          "id": "SQ003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626390/Get_Fit_UpperLower_Split_Day_1_dio3bq.png",
+          "videoUrl": "/exercises/videos/SQ003.mp4"
+        },
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "rhythmic-explosive",
+          "rest": "20s",
+          "coachingFocus": "Hip snap drives the swing. Not the arms. Most efficient fat burn movement in the gym.",
+          "id": "HI003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
+          "videoUrl": "/exercises/videos/HI003.mp4"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "1-0-1",
+          "rest": "20s",
+          "coachingFocus": "Chest to floor. Consistent rhythm. Upper body burn.",
+          "id": "PHH001",
+          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "videoUrl": "/exercises/videos/PHH001.mp4"
+        },
+        {
+          "exercise": "Romanian Deadlift",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-1-1",
+          "rest": "30s",
+          "coachingFocus": "Hip hinge. Hamstrings and glutes loaded. Compound posterior chain burn.",
+          "id": "HI004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI004.mp4"
+        },
+        {
+          "exercise": "Battle Ropes",
+          "sets": 3,
+          "reps": "30s on / 20s off",
+          "tempo": "max effort",
+          "rest": "20s",
+          "coachingFocus": "Alternating waves. Max effort. Upper body cardio and shoulder endurance.",
+          "id": "CD005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710450/Battle_Rope_kmqduv.png",
+          "videoUrl": "/exercises/videos/CD005.mp4"
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-1-2",
+          "rest": "20s",
+          "coachingFocus": "Full stretch at top. Drive elbows down. Back balance for posture.",
+          "id": "PLV003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779711454/Lat_Down_jxxqmy.png",
+          "videoUrl": "/exercises/videos/PLV003.mp4"
+        },
+        {
+          "exercise": "Box Jump",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "explosive",
+          "rest": "30s",
+          "coachingFocus": "Land soft. Step down. Reactive lower body power boosts post-workout caloric burn.",
+          "id": "CD004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/CD004.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "40s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Core close. Still and tight.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        }
+      ],
+      "finisher": "Assault Bike: 5 x 15s sprint / 45s easy — caloric afterburn protocol",
+      "cooldown": "5 min walk, hip flexor 60s each, hamstring 60s each, child's pose 90s",
+      "estimatedCalories": "400-500",
+      "progressionNotes": "Progress KB weight when swings feel easy for 30s. Increase box jump height monthly."
+    },
+    {
+      "workoutName": "GYM Fat Burn – Advanced HIIT Strength",
+      "goal": "LOSE_WEIGHT",
+      "location": "GYM",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "collection": "Fat Burn Series",
+      "duration": "55 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "5 min assault bike, jumping jacks x40, submaximal box jump x5, push-up x15, inchworm x5",
+      "mainWorkout": [
+        {
+          "exercise": "Barbell Back Squat",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "2-0-X",
+          "rest": "20s",
+          "coachingFocus": "Moderate load. Explosive intention. Rhythm squats at advanced intensity.",
+          "id": "SQ003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626390/Get_Fit_UpperLower_Split_Day_1_dio3bq.png",
+          "videoUrl": "/exercises/videos/SQ003.mp4"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "max effort",
+          "rest": "20s",
+          "coachingFocus": "Chest to floor. Explosive jump. Advanced fat burn standard.",
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
+          "videoUrl": "/exercises/videos/CD001.mp4"
+        },
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "rhythmic-explosive",
+          "rest": "20s",
+          "coachingFocus": "Hip snap. Max output per interval. This is the heart of the session.",
+          "id": "HI003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
+          "videoUrl": "/exercises/videos/HI003.mp4"
+        },
+        {
+          "exercise": "Box Jump",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "explosive",
+          "rest": "30s",
+          "coachingFocus": "Land soft. Reset. Full hip extension at top of box.",
+          "id": "CD004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/CD004.mp4"
+        },
+        {
+          "exercise": "Pull-Up",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "30s",
+          "coachingFocus": "Dead hang. Full ROM. Back strength under fatigue is a real adaptation.",
+          "id": "PLV001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Chin_Up_Pull_Up_lylqeo.png",
+          "videoUrl": "/exercises/videos/PLV001.mp4"
+        },
+        {
+          "exercise": "Battle Ropes",
+          "sets": 3,
+          "reps": "30s on / 20s off",
+          "tempo": "max effort",
+          "rest": "20s",
+          "coachingFocus": "Max output waves. Arms and cardiovascular system simultaneously.",
+          "id": "CD005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710450/Battle_Rope_kmqduv.png",
+          "videoUrl": "/exercises/videos/CD005.mp4"
+        },
+        {
+          "exercise": "Romanian Deadlift",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-1-1",
+          "rest": "20s",
+          "coachingFocus": "Posterior chain compound movement. Hip hinge power.",
+          "id": "HI004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI004.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "60s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Core endurance close. Full position. Breathe.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        }
+      ],
+      "finisher": "AMRAP 4 min: 5 Burpees + 10 KB Swings + 5 Box Jumps — record rounds",
+      "cooldown": "8 min: Walk 3 min, Hip Flexor 60s each, Pigeon 60s each, Hamstring 60s each",
+      "estimatedCalories": "520-640",
+      "progressionNotes": "Advanced: track AMRAP rounds. Aim to increase by 1+ round each 4 weeks."
+    },
+    {
+      "workoutName": "Foundation Burn T – Full Body Balance",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_BODYWEIGHT",
+      "collection": "Fat Burn Series",
+      "duration": "30 min",
+      "intensity": "LOW_MODERATE",
+      "warmup": "4 min: Mountain Climbers 40s, Sumo Squat x10",
+      "mainWorkout": [
+        {
+          "exercise": "Goblet Squat",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Weight at chest, elbows inside knees at bottom",
+          "id": "SQ002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
+          "videoUrl": "/exercises/videos/SQ002.mp4"
+        },
+        {
+          "exercise": "Incline Push-Up",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Hands elevated, body straight line, full ROM",
+          "id": "PHH003",
+          "thumbnailUrl": "/exercises/thumbnails/PHH003.jpg",
+          "videoUrl": "/exercises/videos/PHH003.mp4"
+        },
+        {
+          "exercise": "Good Morning (Bodyweight)",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-1-1",
+          "rest": "20s",
+          "coachingFocus": "Hip hinge, feel posterior chain",
+          "id": "HI010",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
+          "videoUrl": "/exercises/videos/HI010.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "30s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Full body tension, breathe",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        },
+        {
+          "exercise": "Walking Lunge",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "1-0-1",
+          "rest": "20s",
+          "coachingFocus": "Continuous movement, full hip extension",
+          "id": "LU004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU004.mp4"
+        },
+        {
+          "exercise": "Inverted Row (TRX Row)",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Body straight, pull chest up, elbows back",
+          "id": "PLH004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH004.mp4"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "moderate",
+          "rest": "20s",
+          "coachingFocus": "Light and rhythmic, full arm swing",
+          "id": "CD015",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
+          "videoUrl": "/exercises/videos/CD015.mp4"
+        },
+        {
+          "exercise": "Russian Twist",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "controlled",
+          "rest": "20s",
+          "coachingFocus": "Rotate through full range, chest tall",
+          "id": "CO010",
+          "thumbnailUrl": "/exercises/thumbnails/CO010.jpg",
+          "videoUrl": "/exercises/videos/CO010.mp4"
+        }
+      ],
+      "finisher": "None",
+      "cooldown": "5 min: Full Body Stretch Sequence",
+      "estimatedCalories": "185-235",
+      "progressionNotes": "Benchmark variation. Return monthly to assess improvement. Add dumbbells to Goblet Squat and Lunge for progression."
+    },
+    {
+      "workoutName": "GYM Fat Burn – Beginner Cardio Strength",
+      "goal": "LOSE_WEIGHT",
+      "location": "GYM",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "collection": "Fat Burn Series",
+      "duration": "40 min",
+      "intensity": "LOW_MODERATE",
+      "warmup": "5 min treadmill easy, dynamic stretching, arm circles x20",
+      "mainWorkout": [
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "1-0-1",
+          "rest": "20s",
+          "coachingFocus": "Foundation movement. Chest up. Knees track toes.",
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ001.mp4"
+        },
+        {
+          "exercise": "Incline Push-Up",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Hands on bench or racked barbell. Full ROM. Easy entry point.",
+          "id": "PHH003",
+          "thumbnailUrl": "/exercises/thumbnails/PHH003.jpg",
+          "videoUrl": "/exercises/videos/PHH003.mp4"
+        },
+        {
+          "exercise": "Glute Bridge",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-2-1",
+          "rest": "20s",
+          "coachingFocus": "Posterior chain activation. Drive hips up. Squeeze.",
+          "id": "HI009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png",
+          "videoUrl": "/exercises/videos/HI009.mp4"
+        },
+        {
+          "exercise": "High Knees",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "moderate",
+          "rest": "20s",
+          "coachingFocus": "Elevate heart rate. Knees up. Steady pace.",
+          "id": "CD008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
+          "videoUrl": "/exercises/videos/CD008.mp4"
+        },
+        {
+          "exercise": "Resistance Band Row",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Pull elbows back. Blades squeeze. Posture work.",
+          "id": "PLH008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH008.mp4"
+        },
+        {
+          "exercise": "Split Squat",
+          "sets": 2,
+          "reps": "30s each leg",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "Stationary lunge. Both feet down. Control descent.",
+          "id": "LU005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626964/Kettlebell_Goblet_Squat_lrhdmf.png",
+          "videoUrl": "/exercises/videos/LU005.mp4"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "moderate",
+          "rest": "20s",
+          "coachingFocus": "Light cardio. Full arm swing.",
+          "id": "CD015",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Jumping_Jack_nbxdgk.png",
+          "videoUrl": "/exercises/videos/CD015.mp4"
+        },
+        {
+          "exercise": "Dead Bug",
+          "sets": 2,
+          "reps": "30s",
+          "tempo": "slow",
+          "rest": "20s",
+          "coachingFocus": "Core activation. Back flat. Opposite limbs extend slowly.",
+          "id": "CO002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO002.mp4"
+        }
+      ],
+      "finisher": "5 min rowing machine at easy conversational pace",
+      "cooldown": "5 min: Hip Flexor 40s each, Hamstring 40s each, Chest Stretch 30s",
+      "estimatedCalories": "200-270",
+      "progressionNotes": "Beginner gym fat burn. Progress to 3 rounds when 2 feel fully comfortable."
+    },
+    {
+      "workoutName": "GYM Fat Burn – Intermediate Kettlebell HIIT",
+      "goal": "LOSE_WEIGHT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "collection": "Fat Burn Series",
+      "duration": "45 min",
+      "intensity": "HIGH",
+      "warmup": "5 min bike, goblet squat x10, hip hinge drill x10, push-up x12, band pull-apart x20",
+      "mainWorkout": [
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 4,
+          "reps": "30s on / 20s off",
+          "tempo": "rhythmic-explosive",
+          "rest": "20s",
+          "coachingFocus": "Hip hinge and snap every rep. Count reps per interval and track weekly.",
+          "id": "HI003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
+          "videoUrl": "/exercises/videos/HI003.mp4"
+        },
+        {
+          "exercise": "Goblet Squat",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-0-1",
+          "rest": "20s",
+          "coachingFocus": "KB at chest. Deep squat. Continuous reps. Moderate weight for fat burn.",
+          "id": "SQ002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
+          "videoUrl": "/exercises/videos/SQ002.mp4"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "1-0-1",
+          "rest": "20s",
+          "coachingFocus": "Chest to floor. Consistent rhythm. Body as a plank.",
+          "id": "PHH001",
+          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "videoUrl": "/exercises/videos/PHH001.mp4"
+        },
+        {
+          "exercise": "Romanian Deadlift",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-1-1",
+          "rest": "20s",
+          "coachingFocus": "Hip hinge. Hamstrings loaded. Compound movement for caloric burn.",
+          "id": "HI004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
+          "videoUrl": "/exercises/videos/HI004.mp4"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "max effort",
+          "rest": "30s",
+          "coachingFocus": "Chest to floor. Explosive jump at top. Maximum output each interval.",
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
+          "videoUrl": "/exercises/videos/CD001.mp4"
+        },
+        {
+          "exercise": "Lat Pulldown",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "2-1-2",
+          "rest": "20s",
+          "coachingFocus": "Pull elbows down. Full stretch at top. Back volume for balance.",
+          "id": "PLV003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779711454/Lat_Down_jxxqmy.png",
+          "videoUrl": "/exercises/videos/PLV003.mp4"
+        },
+        {
+          "exercise": "Box Jump",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "explosive",
+          "rest": "30s",
+          "coachingFocus": "Soft landing. Step down. Reactive power builds EPOC for longer caloric burn.",
+          "id": "CD004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/CD004.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "45s hold",
+          "tempo": "iso",
+          "rest": "20s",
+          "coachingFocus": "Core holds everything. Still and tight.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        }
+      ],
+      "finisher": "KB Swing for 50 consecutive reps — record time, beat it next session",
+      "cooldown": "5 min walk, hip flexor 60s each, hamstring 60s each, lat stretch 45s each",
+      "estimatedCalories": "420-520",
+      "progressionNotes": "Intermediate KB HIIT. Increase KB weight when 30s swings feel comfortable throughout."
     }
   ]
 }

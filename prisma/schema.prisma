@@ -19,6 +19,12 @@ enum Role {
   ADMIN
 }
 
+enum SexTarget {
+  MALE
+  FEMALE
+  ANY
+}
+
 enum PrimaryGoal {
   LOSE_WEIGHT
   BUILD_MUSCLE
@@ -289,7 +295,8 @@ model WorkoutPlan {
  goalTarget  PrimaryGoal?
   environmentTarget EnvironmentTarget?
   impactLevel ImpactLevel?
-
+  sexTarget          SexTarget?         
+  collection         String?  
 
   equipmentId String?
   equipment   Equipment? @relation(fields: [equipmentId], references: [id])
@@ -300,8 +307,12 @@ model WorkoutPlan {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  @@index([equipmentId])
+   @@index([equipmentId])
+  @@index([goalTarget])
+  @@index([environmentTarget])
+  @@index([sexTarget])
   @@map("workout_plans")
+
 }
 
 // ─────────────────────────────────────────────

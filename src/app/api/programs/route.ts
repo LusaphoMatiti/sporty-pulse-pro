@@ -5,6 +5,7 @@ import {
   InstanceStatus,
   EnvironmentTarget,
   PrimaryGoal,
+  SexTarget,
   Prisma,
 } from "@/generated/prisma";
 import { buildCloudinaryUrl } from "@/lib/cloudinary";
@@ -12,9 +13,9 @@ import { apiSuccess, unauthorized, internalError } from "@/lib/api-response";
 
 export const dynamic = "force-dynamic";
 
-// ─── Environment resolution ───────────────────────────────────────────────────
-// Maps trainingLocation from User to the EnvironmentTarget values a plan can have.
-// EnvironmentTarget.ANY is always included — plans tagged ANY are shown to everyone.
+// ─── Environment resolution ────────────────────────────────────────────────
+// Maps trainingLocation from User to the EnvironmentTarget values a plan can
+// have. EnvironmentTarget.ANY is always included.
 
 function resolveEnvironmentTargets(
   trainingLocation: string | null,
@@ -37,20 +38,14 @@ function resolveEnvironmentTargets(
   return Object.values(EnvironmentTarget);
 }
 
-// ─── Goal resolution ──────────────────────────────────────────────────────────
-// Returns the ordered list of goalTarget values to match against.
-// LOSE_WEIGHT falls back to GET_FIT because the lose_weight seed data is
-// being completed incrementally (currently only Home/Beginner exists).
-// When the remaining 4 skeletons are added and re-seeded, LOSE_WEIGHT plans
-// for those environments will start appearing automatically — no code change needed.
-// GET_FIT stays in the list as a secondary fallback so users always see something.
+// ─── Goal resolution ───────────────────────────────────────────────────────
+// LOSE_WEIGHT falls back to GET_FIT while seed data is being completed.
+// As LOSE_WEIGHT plans are seeded for each environment + level, they will
+// naturally rank above GET_FIT plans once the DB has them.
 
 function resolveGoalTargets(primaryGoal: string): PrimaryGoal[] {
   switch (primaryGoal as PrimaryGoal) {
     case PrimaryGoal.LOSE_WEIGHT:
-      // Primary: LOSE_WEIGHT. Secondary fallback: GET_FIT (closest match).
-      // As LOSE_WEIGHT plans are seeded for each environment + level, they will
-      // naturally rank above GET_FIT plans once the DB has them.
       return [PrimaryGoal.LOSE_WEIGHT, PrimaryGoal.GET_FIT];
     case PrimaryGoal.BUILD_MUSCLE:
       return [PrimaryGoal.BUILD_MUSCLE];
@@ -61,7 +56,21 @@ function resolveGoalTargets(primaryGoal: string): PrimaryGoal[] {
   }
 }
 
-// ─── GET /api/programs ────────────────────────────────────────────────────────
+// ─── Sex target resolution ─────────────────────────────────────────────────
+// Returns the BiologicalSex values that should be shown to a given user.
+// null sexTarget on a plan = shown to everyone regardless of user's sex.
+// A plan tagged MALE/FEMALE is only shown to users with that declared sex.
+// NOT_SPECIFIED users see all plans (null sexTarget only), since we can't
+// make a good guess. Plans with sexTarget null are always included.
+
+function resolveSexTargets(biologicalSex: string | null): SexTarget[] | null {
+  if (!biologicalSex || biologicalSex === "NOT_SPECIFIED") return null;
+  if (biologicalSex === "MALE") return [SexTarget.MALE];
+  if (biologicalSex === "FEMALE") return [SexTarget.FEMALE];
+  return null;
+}
+
+// ─── GET /api/programs ─────────────────────────────────────────────────────
 
 export async function GET(req: Request) {
   try {
@@ -105,33 +114,33 @@ export async function GET(req: Request) {
       hasDeclaredEquipment,
     );
 
-    // ── Build plan filter ─────────────────────────────────────────────────────
+    // ── Build plan filter ──────────────────────────────────────────────────
     //
     // Environment: strict match against allowedEnvironments.
-    // EnvironmentTarget.ANY is already included in allowedEnvironments by
-    // resolveEnvironmentTargets, so no separate null escape is needed.
-    // Plans with environmentTarget: null are treated as universal fallbacks.
+    //   EnvironmentTarget.ANY is already in allowedEnvironments.
+    //   Plans with environmentTarget null are universal fallbacks.
     //
-    // Goal: primary goal first, with a GET_FIT fallback for LOSE_WEIGHT users
-    // until the full lose_weight dataset is seeded. Plans with goalTarget: null
-    // are shown to everyone regardless of goal.
+    // Goal: primary goal first, with a GET_FIT fallback for LOSE_WEIGHT users.
+    //   Plans with goalTarget null are shown to everyone.
     //
     // Level: cumulative — INTERMEDIATE users see BEGINNER + INTERMEDIATE plans.
-    // Plans with difficulty: null are shown to everyone.
+    //   Plans with difficulty null are shown to everyone.
+    //
+    // Sex: MALE users see plans tagged MALE or null.
+    //      FEMALE users see plans tagged FEMALE or null.
+    //      NOT_SPECIFIED users see only null (unisex) plans.
+    //      No sex declared = no sex filter applied (show everything).
 
     const planWhere: Prisma.WorkoutPlanWhereInput = {
-      // Strict environment match — no null escape so plans without a tag
-      // only appear if explicitly set to null (universal) in the DB.
       OR: [
         { environmentTarget: { in: allowedEnvironments } },
         { environmentTarget: null },
       ],
     };
 
-    // Goal filter
+    // ── Goal filter ────────────────────────────────────────────────────────
     if (user?.primaryGoal) {
       const goalTargets = resolveGoalTargets(user.primaryGoal);
-
       planWhere.AND = [
         ...(Array.isArray(planWhere.AND) ? planWhere.AND : []),
         {
@@ -140,7 +149,7 @@ export async function GET(req: Request) {
       ];
     }
 
-    // Level filter (cumulative hierarchy)
+    // ── Level filter (cumulative hierarchy) ────────────────────────────────
     if (user?.experienceLevel) {
       const levelHierarchy: Record<string, string[]> = {
         BEGINNER: ["BEGINNER"],
@@ -148,7 +157,6 @@ export async function GET(req: Request) {
         ADVANCED: ["BEGINNER", "INTERMEDIATE", "ADVANCED"],
       };
       const allowedDifficulties = levelHierarchy[user.experienceLevel] ?? [];
-
       planWhere.AND = [
         ...(Array.isArray(planWhere.AND) ? planWhere.AND : []),
         {
@@ -160,6 +168,30 @@ export async function GET(req: Request) {
       ];
     }
 
+    // ── Sex filter ─────────────────────────────────────────────────────────
+    // Only applied when the user has declared a specific biological sex.
+    // - MALE user   → plans where sexTarget is MALE or null
+    // - FEMALE user → plans where sexTarget is FEMALE or null
+    // - NOT_SPECIFIED / no sex declared → only plans where sexTarget is null
+    //   (we can't make a good recommendation without knowing their sex)
+    // Sex filter
+    if (user?.biologicalSex) {
+      const sexTargets = resolveSexTargets(user.biologicalSex);
+      if (sexTargets !== null) {
+        planWhere.AND = [
+          ...(Array.isArray(planWhere.AND) ? planWhere.AND : []),
+          {
+            OR: [{ sexTarget: { in: sexTargets } }, { sexTarget: null }],
+          },
+        ];
+      } else if (user.biologicalSex === "NOT_SPECIFIED") {
+        planWhere.AND = [
+          ...(Array.isArray(planWhere.AND) ? planWhere.AND : []),
+          { sexTarget: null },
+        ];
+      }
+    }
+
     const plans = await prisma.workoutPlan.findMany({
       where: planWhere,
       select: {
@@ -168,6 +200,8 @@ export async function GET(req: Request) {
         tier: true,
         imageUrl: true,
         sessionDurationMin: true,
+        collection: true,
+        sexTarget: true,
         plannedSessions: {
           orderBy: { sessionNumber: "asc" },
           select: {
