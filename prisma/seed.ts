@@ -678,50 +678,59 @@ async function main() {
       },
     });
 
-    await prisma.plannedSession.deleteMany({ where: { planId: plan.id } });
-
-    // ── Create planned session ────────────────────────────────────────────
-    const plannedSession = await prisma.plannedSession.create({
-      data: {
-        planId: plan.id,
-        sessionNumber: 1,
-        focus: validExercises[0]?.exercise ?? workout.workoutName,
-        estimatedMinutes: workout.duration,
+    await prisma.workoutLog.deleteMany({
+      where: {
+        plannedExercise: {
+          session: { planId: plan.id },
+        },
       },
     });
+    await prisma.plannedSession.deleteMany({ where: { planId: plan.id } });
 
-    // ── Create planned exercises ──────────────────────────────────────────
-    for (let i = 0; i < validExercises.length; i++) {
-      const e = validExercises[i];
+    // ── Pre-compute exercise payloads once — all sessions share the same list ──
+    const exercisePayloads = validExercises.map((e, i) => {
       const exerciseId = exerciseByName.get(e.exercise!)!;
       const repsVal = parseReps(e.reps);
       const setsVal = parseSets(e.sets);
       const restSeconds = parseRestSeconds(e.rest);
 
-      // Sets/reps scaled by level
-      const beginnerSets = Math.max(1, setsVal - 1);
-      const beginnerReps = Math.max(6, repsVal - 2);
-      const intermediateSets = setsVal;
-      const intermediateReps = repsVal;
-      const advancedSets = setsVal + 1;
-      const advancedReps = repsVal + 2;
+      return {
+        exerciseId,
+        order: i + 1,
+        beginnerSets: Math.max(1, setsVal - 1),
+        beginnerReps: Math.max(6, repsVal - 2),
+        intermediateSets: setsVal,
+        intermediateReps: repsVal,
+        advancedSets: setsVal + 1,
+        advancedReps: repsVal + 2,
+        restSeconds,
+      };
+    });
 
-      await prisma.plannedExercise.create({
+    // ── Create all 12 planned sessions (4 weeks × 3 per week) ────────────
+    const TOTAL_SESSIONS = 4 * 3;
+
+    for (
+      let sessionNumber = 1;
+      sessionNumber <= TOTAL_SESSIONS;
+      sessionNumber++
+    ) {
+      const plannedSession = await prisma.plannedSession.create({
         data: {
-          sessionId: plannedSession.id,
-          exerciseId,
-          order: i + 1,
-          beginnerSets,
-          beginnerReps,
-          intermediateSets,
-          intermediateReps,
-          advancedSets,
-          advancedReps,
-          restSeconds,
+          planId: plan.id,
+          sessionNumber,
+          focus: validExercises[0]?.exercise ?? workout.workoutName,
+          estimatedMinutes: workout.duration,
         },
       });
-    }
 
+      await prisma.plannedExercise.createMany({
+        data: exercisePayloads.map((payload) => ({
+          ...payload,
+          sessionId: plannedSession.id,
+        })),
+      });
+    }
     console.log(
       `  ✓ ${workout.workoutName} [${workout.goal} | ${environmentTarget} | ${workout.level} | ${muscleGroup}${collection ? ` | ${collection}` : ""}${sexTarget ? ` | ${sexTarget}` : ""}] — ${validExercises.length} exercises`,
     );
