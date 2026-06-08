@@ -120,7 +120,10 @@ export async function GET(
         level: instance.level,
         muscleGroup: instance.plan.muscleGroup,
         exercises,
-        draft: (instance.sessionDraft as object) ?? null,
+        draft:
+          instance.currentSession === sessionNumber
+            ? ((instance.sessionDraft as object) ?? null)
+            : null,
         totalSessions:
           instance.plan.durationWeeks * instance.plan.sessionsPerWeek,
       },
