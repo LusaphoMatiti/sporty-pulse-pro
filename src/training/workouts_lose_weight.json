@@ -3,7 +3,7 @@
   "totalWorkouts": 20,
   "workouts": [
     {
-      "workoutName": "Foundation Burn A – Home Beginner",
+      "workoutName": "Foundation Burn A",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -104,14 +104,15 @@
           "videoUrl": "/exercises/videos/CO003.mp4"
         }
       ],
-      "finisher": "None — beginner session ends after Circuit B",
+      "finisher": "None \u2014 beginner session ends after Circuit B",
       "cooldown": "5 min: Hip Flexor Stretch 40s each, Hamstring Stretch 40s each, Chest Stretch 30s, Deep Breathing 5 breaths",
       "estimatedCalories": "180-230",
       "progressionNotes": "When both circuits feel easy at 2 rounds, add a 3rd round of Circuit A before progressing to Intermediate.",
-      "equipment": null
+      "equipment": null,
+      "description": "A beginner home fat-loss session using bodyweight squats, push-ups, and core work. Builds movement quality and burns calories without any equipment."
     },
     {
-      "workoutName": "Foundation Burn B – Hinge & Pull",
+      "workoutName": "Foundation Burn B",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -129,7 +130,7 @@
           "reps": "30s",
           "tempo": "2-0-1",
           "rest": "20s",
-          "coachingFocus": "Wide stance toes out 45°, squeeze glutes at top",
+          "coachingFocus": "Wide stance toes out 45\u00b0, squeeze glutes at top",
           "id": "SQ007",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
           "videoUrl": "/exercises/videos/SQ007.mp4"
@@ -216,10 +217,11 @@
       "cooldown": "5 min: Glute Stretch 40s each, Lat Stretch 30s each, Quad Stretch 30s each, Deep Breathing",
       "estimatedCalories": "175-225",
       "progressionNotes": "Increase step height on Step-Up when movement feels stable. Add resistance band on Sumo Squat when bodyweight feels easy.",
-      "equipment": null
+      "equipment": null,
+      "description": "A hinge and pull-focused beginner circuit for home training. Good mornings, incline push-ups, and planks build posterior chain strength while keeping intensity accessible."
     },
     {
-      "workoutName": "Foundation Burn C – Unilateral Focus",
+      "workoutName": "Foundation Burn C",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -248,7 +250,7 @@
           "reps": "30s",
           "tempo": "2-0-1",
           "rest": "20s",
-          "coachingFocus": "Elbows at 45°, lower chest to floor, press up strong",
+          "coachingFocus": "Elbows at 45\u00b0, lower chest to floor, press up strong",
           "id": "PHH001",
           "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
           "videoUrl": "/exercises/videos/PHH001.mp4"
@@ -314,7 +316,7 @@
           "reps": "30s",
           "tempo": "controlled",
           "rest": "20s",
-          "coachingFocus": "Lean back 45°, rotate through full range, chest tall",
+          "coachingFocus": "Lean back 45\u00b0, rotate through full range, chest tall",
           "id": "CO010",
           "thumbnailUrl": "/exercises/thumbnails/CO010.jpg",
           "videoUrl": "/exercises/videos/CO010.mp4"
@@ -324,10 +326,11 @@
       "cooldown": "5 min: Pigeon Stretch 45s each, Adductor Stretch 30s, Shoulder Stretch 30s each",
       "estimatedCalories": "180-230",
       "progressionNotes": "Add a light dumbbell to Reverse Lunge and Single Leg RDL when you can complete all rounds without stopping.",
-      "equipment": null
+      "equipment": null,
+      "description": "A unilateral-focused fat-loss session using reverse lunges and single-leg hinges. Develops balance, corrects imbalances, and burns calories through single-limb training."
     },
     {
-      "workoutName": "Foundation Burn D – Low Impact",
+      "workoutName": "Foundation Burn D",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -345,7 +348,7 @@
           "reps": "30s hold",
           "tempo": "iso",
           "rest": "20s",
-          "coachingFocus": "90° knee angle, back flat, arms at sides",
+          "coachingFocus": "90\u00b0 knee angle, back flat, arms at sides",
           "id": "SQ013",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704135/Wall_Sit_x1vi7d.png",
           "videoUrl": "/exercises/videos/SQ013.mp4"
@@ -432,10 +435,11 @@
       "cooldown": "5 min: Hip Flexor Stretch 45s each, Calf Stretch 30s each, Deep Breathing 5 breaths",
       "estimatedCalories": "160-210",
       "progressionNotes": "Low impact option for joint-sensitive beginners. Progress to Foundation Burn A when comfortable.",
-      "equipment": null
+      "equipment": null,
+      "description": "A low-impact beginner session ideal for those with joint sensitivities. Wall sits, push-ups, and isometric holds drive calorie burn without high-impact movement."
     },
     {
-      "workoutName": "Foundation Burn E – Core & Glute Activation",
+      "workoutName": "Foundation Burn E",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -475,7 +479,7 @@
           "reps": "30s each",
           "tempo": "1-1-1",
           "rest": "20s",
-          "coachingFocus": "Drive heel to ceiling, knee at 90°, don't rotate hips",
+          "coachingFocus": "Drive heel to ceiling, knee at 90\u00b0, don't rotate hips",
           "id": "HI013",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png",
           "videoUrl": "/exercises/videos/HI013.mp4"
@@ -497,7 +501,7 @@
           "reps": "30s each",
           "tempo": "2-2-1",
           "rest": "20s",
-          "coachingFocus": "Single leg — double glute challenge. Hips level throughout.",
+          "coachingFocus": "Single leg \u2014 double glute challenge. Hips level throughout.",
           "id": "HI011",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png",
           "videoUrl": "/exercises/videos/HI011.mp4"
@@ -540,10 +544,11 @@
       "cooldown": "5 min: Pigeon Pose 45s each, Hamstring Stretch 40s each, Child's Pose 60s",
       "estimatedCalories": "150-200",
       "progressionNotes": "Glute activation focus. Add 3rd circuit round when 2 rounds feel easy.",
-      "equipment": null
+      "equipment": null,
+      "description": "A glute and core activation circuit for beginners at home. Glute bridges, dead bugs, and donkey kicks build foundational strength and ignite the posterior chain."
     },
     {
-      "workoutName": "Fat Burn Intermediate A – Home Circuit",
+      "workoutName": "Fat Burn Circuit",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "INTERMEDIATE",
@@ -644,14 +649,15 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "3 rounds of Jumping Jacks x20 + Bodyweight Squat x10 — 30s rest between rounds",
+      "finisher": "3 rounds of Jumping Jacks x20 + Bodyweight Squat x10 \u2014 30s rest between rounds",
       "cooldown": "5 min: Hip Flexor Lunge 45s each, Hamstring Stretch 45s each, Chest Stretch 30s",
       "estimatedCalories": "280-360",
       "progressionNotes": "Intermediate: add a 3rd round to all circuits when 2 rounds feel manageable.",
-      "equipment": null
+      "equipment": null,
+      "description": "An intermediate home circuit combining jump squats and dumbbell work with cardio bursts. Elevates heart rate and builds lean muscle through alternating strength and conditioning sets."
     },
     {
-      "workoutName": "Fat Burn Intermediate B – Cardio Strength",
+      "workoutName": "Cardio Strength Burn",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "INTERMEDIATE",
@@ -753,13 +759,14 @@
         }
       ],
       "finisher": "None",
-      "cooldown": "5 min full body stretch — hip flexors, hamstrings, chest, lats",
+      "cooldown": "5 min full body stretch \u2014 hip flexors, hamstrings, chest, lats",
       "estimatedCalories": "260-330",
       "progressionNotes": "Increase rounds from 2 to 3 when this session feels manageable throughout.",
-      "equipment": null
+      "equipment": null,
+      "description": "A home fat-loss session blending strength lunges and push variations with high knees and cardio. Builds endurance and burns fat through structured interval-style training."
     },
     {
-      "workoutName": "Fat Burn Intermediate C – HIIT Strength",
+      "workoutName": "HIIT Strength Burn",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "INTERMEDIATE",
@@ -864,10 +871,11 @@
       "cooldown": "5 min: Hip Flexor 45s each, Pigeon Pose 45s each, Hamstring 45s each",
       "estimatedCalories": "320-400",
       "progressionNotes": "When this session feels manageable, progress to Advanced Fat Burn.",
-      "equipment": null
+      "equipment": null,
+      "description": "A high-intensity home session pairing explosive jumps and burpees with strength movements. Maximises calorie burn and metabolic conditioning in a short, sharp workout."
     },
     {
-      "workoutName": "Fat Burn Intermediate D – Dumbbell Burner",
+      "workoutName": "Dumbbell Burner",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "INTERMEDIATE",
@@ -968,14 +976,15 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "Dumbbell Complex: Goblet Squat x8 + Shoulder Press x8 + Row x8 each arm — 2 rounds, 60s rest",
+      "finisher": "Dumbbell Complex: Goblet Squat x8 + Shoulder Press x8 + Row x8 each arm \u2014 2 rounds, 60s rest",
       "cooldown": "5 min: Doorway Chest Stretch 45s each, Hamstring Stretch 45s each, Hip Flexor 45s each",
       "estimatedCalories": "300-380",
       "progressionNotes": "Progress by increasing dumbbell weight when 30s intervals feel easy.",
-      "equipment": "Dumbbell"
+      "equipment": "Dumbbell",
+      "description": "A dumbbell-driven intermediate home session for fat loss and conditioning. Goblet squats, RDLs, and cardio intervals combine to build lean muscle and torch calories."
     },
     {
-      "workoutName": "Fat Burn Intermediate E – Full Body Strength Circuit",
+      "workoutName": "Full Body Burn",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "INTERMEDIATE",
@@ -1080,10 +1089,11 @@
       "cooldown": "5 min full body stretch",
       "estimatedCalories": "270-350",
       "progressionNotes": "Standard benchmark session. Return monthly to assess improvement.",
-      "equipment": null
+      "equipment": null,
+      "description": "A full-body home circuit targeting all major muscle groups through compound movements. Sumo squats, push-ups, and mountain climbers drive fat loss and fitness simultaneously."
     },
     {
-      "workoutName": "Fat Burn Advanced A – High Intensity",
+      "workoutName": "Advanced Home Burn",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "ADVANCED",
@@ -1156,7 +1166,7 @@
           "reps": "30s",
           "tempo": "max effort",
           "rest": "20s",
-          "coachingFocus": "Hips level. Drive knees. Full speed — this is the conditioning work.",
+          "coachingFocus": "Hips level. Drive knees. Full speed \u2014 this is the conditioning work.",
           "id": "CD002",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
           "videoUrl": "/exercises/videos/CD002.mp4"
@@ -1184,14 +1194,15 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "AMRAP 3 min: Burpee x5 + Jump Squat x10 — record rounds",
+      "finisher": "AMRAP 3 min: Burpee x5 + Jump Squat x10 \u2014 record rounds",
       "cooldown": "8 min: Hip Flexor 60s each, Pigeon Pose 60s each, Hamstring 60s each, Chest Doorway 45s each",
       "estimatedCalories": "420-520",
       "progressionNotes": "Advanced: track reps per 30s interval. Aim to beat total reps each session.",
-      "equipment": null
+      "equipment": null,
+      "description": "A high-intensity advanced session using burpees, pistol squats, and plyometrics. Demands full-body strength and serious cardio fitness to push fat loss to the limit."
     },
     {
-      "workoutName": "Fat Burn Advanced B – Plyometric Power",
+      "workoutName": "Plyometric Power Burn",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "ADVANCED",
@@ -1296,10 +1307,11 @@
       "cooldown": "5 min full body stretch",
       "estimatedCalories": "380-480",
       "progressionNotes": "Plyometric focus. Regress Jump Squat to Bodyweight Squat if HR is too high.",
-      "equipment": null
+      "equipment": null,
+      "description": "An advanced bodyweight fat-loss session built around explosive jump training. Skater lunges, split squats, and jump squats build power while burning maximum calories."
     },
     {
-      "workoutName": "GYM Fat Burn – Beginner Circuit",
+      "workoutName": "Gym Burn Starter",
       "goal": "LOSE_WEIGHT",
       "location": "GYM",
       "level": "BEGINNER",
@@ -1400,14 +1412,15 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "5 min incline treadmill walk — steady state caloric burn",
+      "finisher": "5 min incline treadmill walk \u2014 steady state caloric burn",
       "cooldown": "5 min: Hip Flexor 40s each, Hamstring 40s each, Chest Stretch 30s",
       "estimatedCalories": "220-300",
       "progressionNotes": "Beginner gym fat burn. Progress to 3 rounds when 2 feel easy.",
-      "equipment": null
+      "equipment": null,
+      "description": "A beginner gym circuit using machines and goblet squats to build fat-loss foundations. Structured, safe, and effective for those new to training in a gym environment."
     },
     {
-      "workoutName": "GYM Fat Burn – Intermediate Strength Circuit",
+      "workoutName": "Gym Strength Circuit",
       "goal": "LOSE_WEIGHT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1508,14 +1521,15 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "Assault Bike: 5 x 15s sprint / 45s easy — caloric afterburn protocol",
+      "finisher": "Assault Bike: 5 x 15s sprint / 45s easy \u2014 caloric afterburn protocol",
       "cooldown": "5 min walk, hip flexor 60s each, hamstring 60s each, child's pose 90s",
       "estimatedCalories": "400-500",
       "progressionNotes": "Progress KB weight when swings feel easy for 30s. Increase box jump height monthly.",
-      "equipment": null
+      "equipment": null,
+      "description": "An intermediate gym fat-loss session pairing barbell squats and kettlebell swings with push-ups. Builds lean muscle and cardiovascular conditioning through compound-focused circuits."
     },
     {
-      "workoutName": "GYM Fat Burn – Advanced HIIT Strength",
+      "workoutName": "Gym HIIT Strength",
       "goal": "LOSE_WEIGHT",
       "location": "GYM",
       "level": "ADVANCED",
@@ -1616,14 +1630,15 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "AMRAP 4 min: 5 Burpees + 10 KB Swings + 5 Box Jumps — record rounds",
+      "finisher": "AMRAP 4 min: 5 Burpees + 10 KB Swings + 5 Box Jumps \u2014 record rounds",
       "cooldown": "8 min: Walk 3 min, Hip Flexor 60s each, Pigeon 60s each, Hamstring 60s each",
       "estimatedCalories": "520-640",
       "progressionNotes": "Advanced: track AMRAP rounds. Aim to increase by 1+ round each 4 weeks.",
-      "equipment": null
+      "equipment": null,
+      "description": "An advanced gym session combining barbell lifts, burpees, and kettlebell work at high intensity. Pushes metabolic output and strength simultaneously for maximum fat loss."
     },
     {
-      "workoutName": "Foundation Burn T – Full Body Balance",
+      "workoutName": "Foundation Burn T",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -1728,10 +1743,11 @@
       "cooldown": "5 min: Full Body Stretch Sequence",
       "estimatedCalories": "185-235",
       "progressionNotes": "Benchmark variation. Return monthly to assess improvement. Add dumbbells to Goblet Squat and Lunge for progression.",
-      "equipment": null
+      "equipment": null,
+      "description": "A beginner full-body balance session mixing goblet squats, good mornings, and planks. Builds movement competency and daily calorie burn for those starting their fat-loss journey."
     },
     {
-      "workoutName": "GYM Fat Burn – Beginner Cardio Strength",
+      "workoutName": "Gym Cardio Strength",
       "goal": "LOSE_WEIGHT",
       "location": "GYM",
       "level": "BEGINNER",
@@ -1836,10 +1852,11 @@
       "cooldown": "5 min: Hip Flexor 40s each, Hamstring 40s each, Chest Stretch 30s",
       "estimatedCalories": "200-270",
       "progressionNotes": "Beginner gym fat burn. Progress to 3 rounds when 2 feel fully comfortable.",
-      "equipment": null
+      "equipment": null,
+      "description": "A beginner gym session pairing bodyweight movements with light cardio bursts. Introduces gym training for fat loss with manageable intensity and clear progression."
     },
     {
-      "workoutName": "GYM Fat Burn – Intermediate Kettlebell HIIT",
+      "workoutName": "Kettlebell HIIT Burn",
       "goal": "LOSE_WEIGHT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1940,11 +1957,12 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "KB Swing for 50 consecutive reps — record time, beat it next session",
+      "finisher": "KB Swing for 50 consecutive reps \u2014 record time, beat it next session",
       "cooldown": "5 min walk, hip flexor 60s each, hamstring 60s each, lat stretch 45s each",
       "estimatedCalories": "420-520",
       "progressionNotes": "Intermediate KB HIIT. Increase KB weight when 30s swings feel comfortable throughout.",
-      "equipment": null
+      "equipment": null,
+      "description": "An intermediate gym fat-loss session centred on kettlebell swings, goblet squats, and RDLs. Drives metabolic conditioning and posterior chain activation for efficient calorie burn."
     }
   ]
 }

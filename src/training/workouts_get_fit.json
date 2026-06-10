@@ -3,7 +3,7 @@
   "totalWorkouts": 20,
   "workouts": [
     {
-      "workoutName": "Athletic Conditioning — Full Body Circuit",
+      "workoutName": "Conditioning Circuit",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -21,7 +21,7 @@
           "reps": "8",
           "tempo": "2-0-1-0",
           "rest": "60s",
-          "coachingFocus": "Controlled descent, explosive up. Don't grind — train to feel athletic.",
+          "coachingFocus": "Controlled descent, explosive up. Don't grind \u2014 train to feel athletic.",
           "id": "SQ003",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626390/Get_Fit_UpperLower_Split_Day_1_dio3bq.png",
           "videoUrl": "/exercises/videos/SQ003.mp4"
@@ -82,14 +82,15 @@
           "videoUrl": "/exercises/videos/CD005.mp4"
         }
       ],
-      "finisher": "Assault Bike: 4 x 20s sprint / 40s rest — max effort intervals",
+      "finisher": "Assault Bike: 4 x 20s sprint / 40s rest \u2014 max effort intervals",
       "cooldown": "5 min walk, hip flexor lunge 45s each, hamstring stretch 60s each, thoracic rotation 30s each side",
       "estimatedCalories": "520-640",
       "progressionNotes": "Increase box jump height monthly. Reduce rest periods by 5s every 2 weeks.",
-      "equipment": null
+      "equipment": null,
+      "description": "A full-body gym circuit blending barbell lifts with explosive movements. Builds athletic capacity, strength endurance, and cardiovascular fitness simultaneously."
     },
     {
-      "workoutName": "Functional Performance — AMRAP Style",
+      "workoutName": "AMRAP Fitness",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -107,7 +108,7 @@
           "reps": "15",
           "tempo": "1-0-1-0",
           "rest": "30s",
-          "coachingFocus": "Higher reps for fitness — keep form sharp even when fatigued. Upright torso. Full depth.",
+          "coachingFocus": "Higher reps for fitness \u2014 keep form sharp even when fatigued. Upright torso. Full depth.",
           "id": "SQ002",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
           "videoUrl": "/exercises/videos/SQ002.mp4"
@@ -172,10 +173,11 @@
       "cooldown": "Walk 3 min, full body stretch sequence, child's pose 90s, deep breathing 60s",
       "estimatedCalories": "500-620",
       "progressionNotes": "Track completion time for the circuit. Aim to reduce total session time by 2-3 min over 4 weeks.",
-      "equipment": null
+      "equipment": null,
+      "description": "An AMRAP-style session using functional movements to test work capacity. Goblet squats, kettlebell swings, and rows cycle continuously for maximum conditioning output."
     },
     {
-      "workoutName": "Cardio Strength — Interval Training",
+      "workoutName": "Cardio Strength Intervals",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "BEGINNER",
@@ -204,7 +206,7 @@
           "reps": "15",
           "tempo": "2-0-1-0",
           "rest": "45s",
-          "coachingFocus": "Hands elevated reduces load — perfect entry point. Full ROM is the priority.",
+          "coachingFocus": "Hands elevated reduces load \u2014 perfect entry point. Full ROM is the priority.",
           "id": "PH007",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
           "videoUrl": "/exercises/videos/PH007.mp4"
@@ -258,10 +260,11 @@
       "cooldown": "5 min walk, seated hamstring stretch 45s each, hip flexor lunge 45s each, chest stretch 45s",
       "estimatedCalories": "300-380",
       "progressionNotes": "Beginner base-building. Progress when each exercise feels 'easy'. Milestone: push-up on flat, 3x15 clean reps.",
-      "equipment": null
+      "equipment": null,
+      "description": "A beginner-friendly gym session alternating strength sets with cardio bursts. Builds a fitness base by pairing bodyweight movements with short, structured rest periods."
     },
     {
-      "workoutName": "Athletic Power & Conditioning",
+      "workoutName": "Athletic Power",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "ADVANCED",
@@ -279,7 +282,7 @@
           "reps": "4",
           "tempo": "Explosive",
           "rest": "90s",
-          "coachingFocus": "Triple extension — ankle, knee, hip. Aggressive high pull. Catch in quarter squat.",
+          "coachingFocus": "Triple extension \u2014 ankle, knee, hip. Aggressive high pull. Catch in quarter squat.",
           "id": "CD010",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
           "videoUrl": "/exercises/videos/CD010.mp4"
@@ -341,10 +344,11 @@
       "cooldown": "10 min light walk/jog, hip flexor stretch 60s each, quad stretch 45s each, lower back cat-cow 60s",
       "estimatedCalories": "620-750",
       "progressionNotes": "Advanced: periodise power work in 4-week blocks.",
-      "equipment": null
+      "equipment": null,
+      "description": "An explosive advanced session built around power cleans, box jumps, and plyometrics. Develops athletic power, speed-strength, and neuromuscular coordination."
     },
     {
-      "workoutName": "Hybrid Fitness — Strength Meets Cardio",
+      "workoutName": "Hybrid Fitness",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -371,7 +375,7 @@
           "exercise": "Kettlebell Swing",
           "sets": 4,
           "reps": "20",
-          "tempo": "Rhythmic — explosive hip snap",
+          "tempo": "Rhythmic \u2014 explosive hip snap",
           "rest": "45s",
           "coachingFocus": "Bridge between strength and conditioning. Cardio through strength.",
           "id": "HI003",
@@ -384,7 +388,7 @@
           "reps": "8-12",
           "tempo": "2-1-2-0",
           "rest": "60s",
-          "coachingFocus": "Strength pull-up — pure and demanding. Dead hang, chin over bar.",
+          "coachingFocus": "Strength pull-up \u2014 pure and demanding. Dead hang, chin over bar.",
           "id": "PLV001",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Chin_Up_Pull_Up_lylqeo.png",
           "videoUrl": "/exercises/videos/PLV001.mp4"
@@ -423,14 +427,15 @@
           "videoUrl": "/exercises/videos/CD006.mp4"
         }
       ],
-      "finisher": "Kettlebell Swing x50 for time — record time and beat it next session",
+      "finisher": "Kettlebell Swing x50 for time \u2014 record time and beat it next session",
       "cooldown": "Row easy 2 min, hamstring stretch 60s each, lat stretch 45s each, deep breathing 60s",
       "estimatedCalories": "540-660",
       "progressionNotes": "Hybrid training requires managing both strength and cardio fatigue. Keep a training log.",
-      "equipment": null
+      "equipment": null,
+      "description": "A strength-meets-cardio session pairing compound lifts with high-intensity intervals. Pulls, swings, and wall balls combine to build a well-rounded fitness base."
     },
     {
-      "workoutName": "Home Fitness — No Equipment HIIT Strength",
+      "workoutName": "No Equipment HIIT",
       "goal": "GET_FIT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -513,10 +518,11 @@
       "cooldown": "Walk 3 min slowly, seated hamstring stretch 45s each, child's pose 60s, deep breathing 60s",
       "estimatedCalories": "240-320",
       "progressionNotes": "Beginner goal: complete all sets and reps with full ROM by week 3.",
-      "equipment": null
+      "equipment": null,
+      "description": "A beginner home workout using only bodyweight to build fitness and movement quality. Squats, push-ups, and cardio bursts keep intensity accessible and effective."
     },
     {
-      "workoutName": "High Intensity Interval Strength — HIIS",
+      "workoutName": "HIIT Strength",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -599,10 +605,11 @@
       "cooldown": "5 min walk, hamstring stretch 45s each, hip flexor lunge 60s each, deep breathing 90s",
       "estimatedCalories": "560-680",
       "progressionNotes": "HIIS training: track reps per interval across sessions.",
-      "equipment": null
+      "equipment": null,
+      "description": "High-intensity intervals fused with kettlebell and barbell strength work. Pushes cardiovascular limits while building total body strength through compound movements."
     },
     {
-      "workoutName": "Get Fit — Upper/Lower Split Day 1",
+      "workoutName": "Lower Fitness Day",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -620,7 +627,7 @@
           "reps": "8-10",
           "tempo": "2-0-1-0",
           "rest": "75s",
-          "coachingFocus": "Fitness requires strength. Squat is king. Controlled descent — explosive ascent.",
+          "coachingFocus": "Fitness requires strength. Squat is king. Controlled descent \u2014 explosive ascent.",
           "id": "SQ003",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626390/Get_Fit_UpperLower_Split_Day_1_dio3bq.png",
           "videoUrl": "/exercises/videos/SQ003.mp4"
@@ -642,7 +649,7 @@
           "reps": "10 each",
           "tempo": "2-0-1-0",
           "rest": "60s between legs",
-          "coachingFocus": "Unilateral fitness — address imbalances. Rear foot elevated. Front foot drives.",
+          "coachingFocus": "Unilateral fitness \u2014 address imbalances. Rear foot elevated. Front foot drives.",
           "id": "LU003",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Bulgarian_Split_Squat_mdoejf.png",
           "videoUrl": "/exercises/videos/LU003.mp4"
@@ -685,10 +692,11 @@
       "cooldown": "Hip flexor lunge 60s each, pigeon pose 60s each, hamstring stretch 45s each",
       "estimatedCalories": "500-600",
       "progressionNotes": "Lower body fitness day. Track total session completion time.",
-      "equipment": null
+      "equipment": null,
+      "description": "An upper/lower split lower body session combining squats, hinges, and jumps. Builds leg strength and athletic power through structured gym training."
     },
     {
-      "workoutName": "Get Fit — Upper/Lower Split Day 2",
+      "workoutName": "Upper Fitness Day",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -771,10 +779,11 @@
       "cooldown": "Cross-body shoulder stretch 45s each, lat stretch 45s each, doorway chest stretch 60s each, deep breathing",
       "estimatedCalories": "480-580",
       "progressionNotes": "Upper body fitness. Track pull-up max reps monthly.",
-      "equipment": null
+      "equipment": null,
+      "description": "The upper body complement to the split, blending pressing, pulling, and battle rope conditioning. Develops pushing and pulling strength alongside metabolic output."
     },
     {
-      "workoutName": "Recovery Fitness — Active Movement Day",
+      "workoutName": "Active Recovery",
       "goal": "GET_FIT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -854,13 +863,14 @@
         }
       ],
       "finisher": "Walk 5 min at easy pace outdoors if possible",
-      "cooldown": "15 min full body stretch — hold each position for 60-90s, focus on breathing and parasympathetic recovery",
+      "cooldown": "15 min full body stretch \u2014 hold each position for 60-90s, focus on breathing and parasympathetic recovery",
       "estimatedCalories": "160-220",
       "progressionNotes": "Recovery sessions should feel restorative, not challenging.",
-      "equipment": null
+      "equipment": null,
+      "description": "A low-intensity home movement session to promote recovery and maintain activity. Gentle squats, bridges, and band work keep the body moving without taxing the system."
     },
     {
-      "workoutName": "CrossFit-Style — Functional Fitness WOD",
+      "workoutName": "CrossFit Performance",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "ADVANCED",
@@ -909,9 +919,9 @@
           "exercise": "Box Jump",
           "sets": 4,
           "reps": "10",
-          "tempo": "Explosive — reset each rep",
+          "tempo": "Explosive \u2014 reset each rep",
           "rest": "45s",
-          "coachingFocus": "Full hip extension at top of box. Step down — always.",
+          "coachingFocus": "Full hip extension at top of box. Step down \u2014 always.",
           "id": "CD004",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
           "videoUrl": "/exercises/videos/CD004.mp4"
@@ -940,13 +950,14 @@
         }
       ],
       "finisher": "For Time: 21-15-9 of Kettlebell Swing + Push-Up. Record time.",
-      "cooldown": "Walk 5 min, full body stretch — minimum 10 min.",
+      "cooldown": "Walk 5 min, full body stretch \u2014 minimum 10 min.",
       "estimatedCalories": "650-800",
       "progressionNotes": "Advanced: track WOD times. Progress load on power cleans and thrusters monthly.",
-      "equipment": null
+      "equipment": null,
+      "description": "A WOD-style advanced session with Olympic lifts, gymnastics, and high-intensity cardio. Challenges total body fitness, work capacity, and mental toughness simultaneously."
     },
     {
-      "workoutName": "Bodyweight Fitness — Intermediate Home",
+      "workoutName": "Bodyweight Fitness",
       "goal": "GET_FIT",
       "location": "HOME",
       "level": "INTERMEDIATE",
@@ -1026,10 +1037,11 @@
       "cooldown": "Walk 3 min, hip flexor lunge 60s each, hamstring stretch 60s each, chest stretch in doorway 45s each",
       "estimatedCalories": "400-500",
       "progressionNotes": "Bodyweight progression: track max pull-ups weekly.",
-      "equipment": null
+      "equipment": null,
+      "description": "An intermediate home workout using progressive calisthenics for full-body fitness. Pistol squats, pull-ups, and jump squats build strength and conditioning without equipment."
     },
     {
-      "workoutName": "Sprint & Strength — Athletic Power Circuit",
+      "workoutName": "Sprint & Strength",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "ADVANCED",
@@ -1098,10 +1110,11 @@
       "cooldown": "10 min easy jog then walk, quad stretch 60s each, hip flexor 60s each, calf stretch 45s each",
       "estimatedCalories": "600-740",
       "progressionNotes": "Sprint fitness: track 30m sprint time monthly.",
-      "equipment": null
+      "equipment": null,
+      "description": "An advanced athletic circuit combining sprint intervals with barbell strength work. Develops speed, power, and muscular endurance for high-performance conditioning."
     },
     {
-      "workoutName": "Total Body Fitness — 30 Minute Express",
+      "workoutName": "30-Minute Express",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1119,7 +1132,7 @@
           "reps": "20",
           "tempo": "Rhythmic",
           "rest": "20s",
-          "coachingFocus": "Express format — minimal rest. Explosive hip snap. Breathing is your pacing tool.",
+          "coachingFocus": "Express format \u2014 minimal rest. Explosive hip snap. Breathing is your pacing tool.",
           "id": "HI003",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
           "videoUrl": "/exercises/videos/HI003.mp4"
@@ -1180,14 +1193,15 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "Assault Bike: 1 min max effort — everything you have left. Record calories in 1 min.",
-      "cooldown": "5 min walk, basic stretch sequence — hamstrings, hip flexors, chest, lats",
+      "finisher": "Assault Bike: 1 min max effort \u2014 everything you have left. Record calories in 1 min.",
+      "cooldown": "5 min walk, basic stretch sequence \u2014 hamstrings, hip flexors, chest, lats",
       "estimatedCalories": "420-520",
       "progressionNotes": "Express sessions: track total workout density. Add reps or reduce rest every 2 weeks.",
-      "equipment": null
+      "equipment": null,
+      "description": "A time-efficient full-body session designed to build fitness in under 30 minutes. Kettlebell and dumbbell circuits keep intensity high with minimal rest."
     },
     {
-      "workoutName": "Gym Fitness — Machines & Free Weights",
+      "workoutName": "Machine & Free Weights",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "BEGINNER",
@@ -1270,10 +1284,11 @@
       "cooldown": "Seated hamstring stretch 45s each, hip flexor stretch 60s each, chest stretch 45s, neck stretch 30s each",
       "estimatedCalories": "320-400",
       "progressionNotes": "Beginner machine-based fitness. Progress when 15 reps feels easy. Transition from machine to free weight equivalents over 8-12 weeks.",
-      "equipment": null
+      "equipment": null,
+      "description": "A beginner-friendly gym session using machines and dumbbells to build fitness foundations. Safe, structured, and ideal for learning movement patterns in a gym environment."
     },
     {
-      "workoutName": "Conditioning Ladder — Ascending Challenge",
+      "workoutName": "Conditioning Ladder",
       "goal": "GET_FIT",
       "location": "HOME",
       "level": "ADVANCED",
@@ -1324,7 +1339,7 @@
           "reps": "10",
           "tempo": "Max controlled effort",
           "rest": "45s",
-          "coachingFocus": "50 total burpees across 5 sets. Paced effort — equal output per set. That's fitness discipline.",
+          "coachingFocus": "50 total burpees across 5 sets. Paced effort \u2014 equal output per set. That's fitness discipline.",
           "id": "CD001",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
           "videoUrl": "/exercises/videos/CD001.mp4"
@@ -1352,14 +1367,15 @@
           "videoUrl": "/exercises/videos/SQ012.mp4"
         }
       ],
-      "finisher": "Plank hold: 90s — stillness and breath control after high-intensity work.",
-      "cooldown": "10 min walk if possible, full stretch sequence — quad, hip flexor, hamstring, chest, lat, shoulder",
+      "finisher": "Plank hold: 90s \u2014 stillness and breath control after high-intensity work.",
+      "cooldown": "10 min walk if possible, full stretch sequence \u2014 quad, hip flexor, hamstring, chest, lat, shoulder",
       "estimatedCalories": "480-580",
       "progressionNotes": "Ladder training: track total completion time for the full session.",
-      "equipment": null
+      "equipment": null,
+      "description": "An ascending rep ladder using pull-ups, push-ups, and plyometrics for advanced home training. Builds mental toughness, endurance, and bodyweight strength simultaneously."
     },
     {
-      "workoutName": "Sport Prep Fitness — Agility & Strength",
+      "workoutName": "Agility & Strength",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1375,7 +1391,7 @@
           "exercise": "Box Jump",
           "sets": 5,
           "reps": "6",
-          "tempo": "Max intent — reset each rep",
+          "tempo": "Max intent \u2014 reset each rep",
           "rest": "60s",
           "coachingFocus": "Reactive power. Explosive hip extension. Soft landing with full foot. Step down.",
           "id": "CD004",
@@ -1439,10 +1455,11 @@
       "cooldown": "10 min jog, quad stretch 60s each, hip flexor 60s each, hamstring 60s each, calf 45s each",
       "estimatedCalories": "560-680",
       "progressionNotes": "Sport fitness: track measurable output monthly.",
-      "equipment": null
+      "equipment": null,
+      "description": "A sport-prep session combining box jumps, barbell squats, and sprint drills. Designed to build the reactive strength and athletic power needed for sport performance."
     },
     {
-      "workoutName": "MetCon — Metabolic Conditioning Blast",
+      "workoutName": "MetCon Blast",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1493,7 +1510,7 @@
           "reps": "250m sprint",
           "tempo": "Max effort",
           "rest": "90s",
-          "coachingFocus": "250m sprint — all-out effort. Legs then back then arms. Record your time.",
+          "coachingFocus": "250m sprint \u2014 all-out effort. Legs then back then arms. Record your time.",
           "id": "CD006",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710454/Rowing_Erg_Sprint_pk4g5w.png",
           "videoUrl": "/exercises/videos/CD006.mp4"
@@ -1510,14 +1527,15 @@
           "videoUrl": "/exercises/videos/CD001.mp4"
         }
       ],
-      "finisher": "AMRAP 5 min: 5 Thrusters + 5 Pull-Ups + 10 Burpees — record rounds completed",
+      "finisher": "AMRAP 5 min: 5 Thrusters + 5 Pull-Ups + 10 Burpees \u2014 record rounds completed",
       "cooldown": "5 min walk, full body stretch, hip flexors 60s each, hamstrings 60s each, child's pose 90s, deep breathing 2 min",
       "estimatedCalories": "580-700",
       "progressionNotes": "MetCon sessions: track the AMRAP score. Add 1+ round over 4 weeks.",
-      "equipment": null
+      "equipment": null,
+      "description": "A metabolic conditioning session using kettlebells, rowing, and box jumps. Drives cardiovascular fitness and muscular endurance through structured high-intensity work."
     },
     {
-      "workoutName": "Functional Movement Circuit — Get Fit",
+      "workoutName": "Functional Circuit",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1568,7 +1586,7 @@
           "reps": "8",
           "tempo": "Explosive",
           "rest": "45s",
-          "coachingFocus": "Reactive power — critical for functional fitness. Express power every rep.",
+          "coachingFocus": "Reactive power \u2014 critical for functional fitness. Express power every rep.",
           "id": "CD004",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
           "videoUrl": "/exercises/videos/CD004.mp4"
@@ -1585,14 +1603,15 @@
           "videoUrl": "/exercises/videos/PLV001.mp4"
         }
       ],
-      "finisher": "Sled Push: 4 x 20m — add moderate load. Conditioning and leg strength in one brutal finisher.",
+      "finisher": "Sled Push: 4 x 20m \u2014 add moderate load. Conditioning and leg strength in one brutal finisher.",
       "cooldown": "Walk 3 min, hip circle 60s each, thoracic rotation 45s each, wrist flexor stretch 30s each",
       "estimatedCalories": "500-620",
       "progressionNotes": "Functional fitness progression: increase carry distance monthly, increase KB weight on swings when 25 reps feel comfortable.",
-      "equipment": null
+      "equipment": null,
+      "description": "A movement-quality focused circuit using Turkish get-ups, carries, and swings. Develops total body coordination, stability, and functional strength."
     },
     {
-      "workoutName": "Endurance Strength — Long Format Fitness",
+      "workoutName": "Endurance Strength",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1610,7 +1629,7 @@
           "reps": "20",
           "tempo": "1-0-1-0",
           "rest": "45s",
-          "coachingFocus": "Moderate weight. High reps. Breathing is key — exhale on the way up.",
+          "coachingFocus": "Moderate weight. High reps. Breathing is key \u2014 exhale on the way up.",
           "id": "SQ002",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
           "videoUrl": "/exercises/videos/SQ002.mp4"
@@ -1660,11 +1679,12 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "Jump Rope: 5 min continuous at moderate pace — aerobic capacity builder",
+      "finisher": "Jump Rope: 5 min continuous at moderate pace \u2014 aerobic capacity builder",
       "cooldown": "10 min walk, hip flexor stretch 60s each, hamstring stretch 60s each, child's pose 90s",
       "estimatedCalories": "450-560",
       "progressionNotes": "Endurance strength improves through increasing density. Track total reps completed per session.",
-      "equipment": null
+      "equipment": null,
+      "description": "A long-format moderate intensity session blending strength movements with cardio machine work. Builds aerobic base and muscular endurance through sustained effort."
     }
   ]
 }

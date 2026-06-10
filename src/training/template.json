@@ -9,7 +9,7 @@
   "skeletons": [
     {
       "id": "lw-home-beg-001",
-      "templateName": "Fat Burn Foundation – Home Beginner",
+      "templateName": "Fat Burner",
       "goal": "Lose Weight",
       "location": "Home",
       "level": "Beginner",
@@ -81,7 +81,7 @@
 
     {
       "id": "lw-home-int-001",
-      "templateName": "Metabolic Burn – Home Intermediate",
+      "templateName": "Metabolic Conditioning",
       "goal": "Lose Weight",
       "location": "Home",
       "level": "Intermediate",
@@ -160,7 +160,7 @@
 
     {
       "id": "lw-home-adv-001",
-      "templateName": "High Intensity Metabolic Storm – Home Advanced",
+      "templateName": "HIIT Cardio",
       "goal": "Lose Weight",
       "location": "Home",
       "level": "Advanced",
@@ -242,7 +242,7 @@
 
     {
       "id": "lw-gym-beg-001",
-      "templateName": "Fat Burn Foundation – Gym Beginner",
+      "templateName": "Cardio Blast",
       "goal": "Lose Weight",
       "location": "Gym",
       "level": "Beginner",
@@ -305,7 +305,7 @@
 
     {
       "id": "lw-gym-adv-001",
-      "templateName": "Athletic Fat Loss – Gym Advanced",
+      "templateName": "Athletic Conditioning",
       "goal": "Lose Weight",
       "location": "Gym",
       "level": "Advanced",
@@ -388,7 +388,7 @@
 
     {
       "id": "bm-home-beg-001",
-      "templateName": "Muscle Foundation – Home Beginner",
+      "templateName": "Functional Strength",
       "goal": "Build Muscle",
       "location": "Home",
       "level": "Beginner",
@@ -456,7 +456,7 @@
 
     {
       "id": "bm-home-int-001",
-      "templateName": "Hypertrophy Push-Pull – Home Intermediate",
+      "templateName": "Muscle Builder",
       "goal": "Build Muscle",
       "location": "Home",
       "level": "Intermediate",
@@ -535,7 +535,7 @@
 
     {
       "id": "bm-home-adv-001",
-      "templateName": "Advanced Hypertrophy – Home Advanced",
+      "templateName": "Power & Strength",
       "goal": "Build Muscle",
       "location": "Home",
       "level": "Advanced",
@@ -618,7 +618,7 @@
 
     {
       "id": "bm-gym-beg-001",
-      "templateName": "Muscle Foundation – Gym Beginner",
+      "templateName": "Functional Fitness",
       "goal": "Build Muscle",
       "location": "Gym",
       "level": "Beginner",
@@ -686,7 +686,7 @@
 
     {
       "id": "bm-gym-adv-001",
-      "templateName": "Periodized Hypertrophy – Gym Advanced",
+      "templateName": "Hypertrophy",
       "goal": "Build Muscle",
       "location": "Gym",
       "level": "Advanced",
@@ -775,7 +775,7 @@
 
     {
       "id": "gf-home-beg-001",
-      "templateName": "Functional Fitness Base – Home Beginner",
+      "templateName": "Functional Fitness",
       "goal": "Get Fit",
       "location": "Home",
       "level": "Beginner",
@@ -847,7 +847,7 @@
 
     {
       "id": "gf-home-int-001",
-      "templateName": "Athletic Conditioning – Home Intermediate",
+      "templateName": "Athletic Conditioning",
       "goal": "Get Fit",
       "location": "Home",
       "level": "Intermediate",
@@ -926,7 +926,7 @@
 
     {
       "id": "gf-home-adv-001",
-      "templateName": "Hybrid Performance – Home Advanced",
+      "templateName": "HIIT Strength",
       "goal": "Get Fit",
       "location": "Home",
       "level": "Advanced",
@@ -1006,7 +1006,7 @@
 
     {
       "id": "gf-gym-beg-001",
-      "templateName": "Functional Fitness Base – Gym Beginner",
+      "templateName": "Functional Strength",
       "goal": "Get Fit",
       "location": "Gym",
       "level": "Beginner",
@@ -1070,7 +1070,7 @@
 
     {
       "id": "gf-gym-adv-001",
-      "templateName": "Hybrid Performance – Gym Advanced",
+      "templateName": "Power & Strength",
       "goal": "Get Fit",
       "location": "Gym",
       "level": "Advanced",
@@ -1155,7 +1155,7 @@
 
     {
       "id": "lw-gym-int-001",
-      "templateName": "Strength-Cardio Fusion – Gym Intermediate",
+      "templateName": "HIIT Strength",
       "goal": "Lose Weight",
       "location": "Gym",
       "level": "Intermediate",
@@ -1233,7 +1233,7 @@
 
     {
       "id": "lw-home-rec-001",
-      "templateName": "Low Impact Burn – Home Recovery",
+      "templateName": "Recovery Session",
       "goal": "Lose Weight",
       "location": "Home",
       "level": "Beginner",
@@ -1287,7 +1287,7 @@
 
     {
       "id": "bm-gym-int-001",
-      "templateName": "Push-Pull-Legs Hybrid – Gym Intermediate",
+      "templateName": "Strength & Conditioning",
       "goal": "Build Muscle",
       "location": "Gym",
       "level": "Intermediate",
@@ -1369,7 +1369,7 @@
 
     {
       "id": "bm-home-rec-001",
-      "templateName": "Mobility Restore – Home Muscle Recovery",
+      "templateName": "Mobility Flow",
       "goal": "Build Muscle",
       "location": "Home",
       "level": "Beginner",
@@ -1431,7 +1431,7 @@
 
     {
       "id": "gf-gym-int-001",
-      "templateName": "Strength & Cardio Hybrid – Gym Intermediate",
+      "templateName": "Strength & Conditioning",
       "goal": "Get Fit",
       "location": "Gym",
       "level": "Intermediate",
@@ -1510,7 +1510,7 @@
 
     {
       "id": "gf-home-rec-001",
-      "templateName": "Active Recovery Flow – Home",
+      "templateName": "Recovery Session",
       "goal": "Get Fit",
       "location": "Home",
       "level": "Beginner",
@@ -1561,7 +1561,7 @@
 
     {
       "id": "lw-gym-beg-002",
-      "templateName": "Cardio-Strength Introduction – Gym Beginner",
+      "templateName": "Endurance Builder",
       "goal": "Lose Weight",
       "location": "Gym",
       "level": "Beginner",
@@ -1615,7 +1615,7 @@
 
     {
       "id": "bm-gym-adv-002",
-      "templateName": "Powerbuilding – Gym Advanced",
+      "templateName": "Powerbuilding",
       "goal": "Build Muscle",
       "location": "Gym",
       "level": "Advanced",
@@ -1702,7 +1702,7 @@
 
     {
       "id": "gf-gym-adv-002",
-      "templateName": "CrossFit-Style Athletic Performance – Gym Advanced",
+      "templateName": "CrossFit Performance",
       "goal": "Get Fit",
       "location": "Gym",
       "level": "Advanced",

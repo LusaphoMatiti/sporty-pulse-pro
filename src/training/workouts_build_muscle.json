@@ -3,7 +3,7 @@
   "totalWorkouts": 20,
   "workouts": [
     {
-      "workoutName": "Upper Body Hypertrophy Block A",
+      "workoutName": "Upper Hypertrophy",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -32,7 +32,7 @@
           "reps": "10-12",
           "tempo": "3-0-1-0",
           "rest": "75s",
-          "coachingFocus": "30-45° bench. Feel the upper chest stretch at the bottom. Squeeze hard at the top. Don't let the elbows flare beyond 45°.",
+          "coachingFocus": "30-45\u00b0 bench. Feel the upper chest stretch at the bottom. Squeeze hard at the top. Don't let the elbows flare beyond 45\u00b0.",
           "id": "PH004",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704181/Dumbbell_Press_d6emjw.png",
           "videoUrl": "/exercises/videos/PH004.mp4"
@@ -43,7 +43,7 @@
           "reps": "10-12",
           "tempo": "2-1-2-0",
           "rest": "75s",
-          "coachingFocus": "Initiate with scapular depression. Pull elbows to ribs. Full stretch at top — don't short-change the ROM.",
+          "coachingFocus": "Initiate with scapular depression. Pull elbows to ribs. Full stretch at top \u2014 don't short-change the ROM.",
           "id": "PLV003",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779711454/Lat_Down_jxxqmy.png",
           "videoUrl": "/exercises/videos/PLV003.mp4"
@@ -82,14 +82,15 @@
           "videoUrl": "/exercises/videos/PLH011.mp4"
         }
       ],
-      "finisher": "Cable Chest Press: 3 sets of 20 reps with minimal rest (30s) — pump and blood flow focus",
+      "finisher": "Cable Chest Press: 3 sets of 20 reps with minimal rest (30s) \u2014 pump and blood flow focus",
       "cooldown": "Doorway chest stretch 60s each side, lat hang 45s, child's pose 60s, thoracic extension on foam roller 90s",
       "estimatedCalories": "420-500",
       "progressionNotes": "Add 2.5kg to bench when all 4 sets hit 10 reps with clean form. Add 1 rep per session on accessories before increasing weight.",
-      "equipment": null
+      "equipment": null,
+      "description": "A chest and back volume session built around compound pressing and pulling. Designed to maximise upper body mass with controlled tempos and strategic supersets."
     },
     {
-      "workoutName": "Lower Body Mass Builder",
+      "workoutName": "Leg Mass Builder",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -107,7 +108,7 @@
           "reps": "6-8",
           "tempo": "3-1-1-0",
           "rest": "2 min",
-          "coachingFocus": "Brace 360° before descent. Break hips and knees simultaneously. Drive knees out.",
+          "coachingFocus": "Brace 360\u00b0 before descent. Break hips and knees simultaneously. Drive knees out.",
           "id": "SQ003",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626390/Get_Fit_UpperLower_Split_Day_1_dio3bq.png",
           "videoUrl": "/exercises/videos/SQ003.mp4"
@@ -118,7 +119,7 @@
           "reps": "10-12",
           "tempo": "3-1-1-0",
           "rest": "90s",
-          "coachingFocus": "Hip hinge — push hips back, not down. Maintain neutral spine. Feel the hamstring stretch load.",
+          "coachingFocus": "Hip hinge \u2014 push hips back, not down. Maintain neutral spine. Feel the hamstring stretch load.",
           "id": "HI004",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
           "videoUrl": "/exercises/videos/HI004.mp4"
@@ -168,14 +169,15 @@
           "videoUrl": "/exercises/videos/HI015.mp4"
         }
       ],
-      "finisher": "Wall Sit: 3 x max hold (aim 45-60s) with 30s rest — quad burnout",
+      "finisher": "Wall Sit: 3 x max hold (aim 45-60s) with 30s rest \u2014 quad burnout",
       "cooldown": "Seated hamstring stretch 60s each, pigeon pose 90s each, quad stretch 45s each, hip flexor lunge 60s each",
       "estimatedCalories": "500-620",
       "progressionNotes": "Prioritise squat strength. Add 2.5-5kg when all sets hit top of rep range.",
-      "equipment": null
+      "equipment": null,
+      "description": "A high-volume lower body day anchored by barbell squats and RDLs. Targets quads, hamstrings, and glutes through progressive overload and burnout finishers."
     },
     {
-      "workoutName": "Push Day — Chest & Shoulder Emphasis",
+      "workoutName": "Push Day",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -254,14 +256,15 @@
           "videoUrl": "/exercises/videos/TRI005.mp4"
         }
       ],
-      "finisher": "Diamond Push-Up: AMRAP x2 with 30s rest — tricep and inner pec burnout",
+      "finisher": "Diamond Push-Up: AMRAP x2 with 30s rest \u2014 tricep and inner pec burnout",
       "cooldown": "Cross-body shoulder stretch 45s each, overhead tricep stretch 45s each, doorway chest stretch 60s each side",
       "estimatedCalories": "380-460",
       "progressionNotes": "Rotate primary lift weekly between Barbell Bench and Incline DB Press.",
-      "equipment": null
+      "equipment": null,
+      "description": "Chest and shoulder emphasis with heavy pressing followed by isolation work. A classic PPL push session structured for hypertrophy from every angle."
     },
     {
-      "workoutName": "Pull Day — Back & Bicep Width Builder",
+      "workoutName": "Pull Day",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -290,7 +293,7 @@
           "reps": "8-10",
           "tempo": "2-1-2-0",
           "rest": "90s",
-          "coachingFocus": "Hinge to 45° and hold. Row to lower abdomen. Elbows drive back, not out.",
+          "coachingFocus": "Hinge to 45\u00b0 and hold. Row to lower abdomen. Elbows drive back, not out.",
           "id": "PLH001",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704398/Pendlay_Row_ybff7k.png",
           "videoUrl": "/exercises/videos/PLH001.mp4"
@@ -323,7 +326,7 @@
           "reps": "15-20",
           "tempo": "2-1-2-0",
           "rest": "45s",
-          "coachingFocus": "Hinge 45°+. Arc arms out to side. Rear delts are chronically underdeveloped.",
+          "coachingFocus": "Hinge 45\u00b0+. Arc arms out to side. Rear delts are chronically underdeveloped.",
           "id": "PLH010",
           "thumbnailUrl": "/exercises/thumbnails/PLH010.jpg",
           "videoUrl": "/exercises/videos/PLH010.mp4"
@@ -340,14 +343,15 @@
           "videoUrl": "/exercises/videos/BIC005.mp4"
         }
       ],
-      "finisher": "Chin-Up: max reps x2 sets / Lat Pulldown: 2 x 20 (if pull-ups are limited) — 60s rest",
+      "finisher": "Chin-Up: max reps x2 sets / Lat Pulldown: 2 x 20 (if pull-ups are limited) \u2014 60s rest",
       "cooldown": "Lat stretch on rack 45s each side, bicep wall stretch 45s each, thoracic foam roll 90s",
       "estimatedCalories": "400-480",
       "progressionNotes": "Track total weighted pull-up volume. Progress weighted pull-up before adding more accessory volume.",
-      "equipment": null
+      "equipment": null,
+      "description": "Back and bicep width builder using vertical and horizontal pulls. Prioritises lat development and rear delt health for a balanced upper body."
     },
     {
-      "workoutName": "Leg Day — Posterior Chain Focus",
+      "workoutName": "Posterior Chain Day",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -426,14 +430,15 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "Bodyweight Squat x20 + Push-Up x10: 3 rounds with 45s rest — total body pump",
+      "finisher": "Bodyweight Squat x20 + Push-Up x10: 3 rounds with 45s rest \u2014 total body pump",
       "cooldown": "Hip flexor lunge stretch 60s each, chest doorway stretch 45s each, lat stretch 45s each",
       "estimatedCalories": "350-420",
       "progressionNotes": "Beginner-focused. Log every session. Increase weight by smallest increment when top rep range is achieved.",
-      "equipment": null
+      "equipment": null,
+      "description": "A hinge-heavy leg session focused on hamstrings, glutes, and lower back. Pairs deadlift patterns with unilateral work for complete posterior development."
     },
     {
-      "workoutName": "Arm Specialisation — Bicep & Tricep Volume",
+      "workoutName": "Arm Sculptor",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -484,7 +489,7 @@
           "reps": "10-12",
           "tempo": "2-0-3-0",
           "rest": "60s",
-          "coachingFocus": "Bench at 45°. Arms hang back — maximum stretch on the long head.",
+          "coachingFocus": "Bench at 45\u00b0. Arms hang back \u2014 maximum stretch on the long head.",
           "id": "BIC007",
           "thumbnailUrl": "/exercises/thumbnails/BIC007.jpg",
           "videoUrl": "/exercises/videos/BIC007.mp4"
@@ -512,14 +517,15 @@
           "videoUrl": "/exercises/videos/BIC006.mp4"
         }
       ],
-      "finisher": "Curl-to-Press: 3 x 10 — bicep curl straight into overhead press — integrated pump",
+      "finisher": "Curl-to-Press: 3 x 10 \u2014 bicep curl straight into overhead press \u2014 integrated pump",
       "cooldown": "Overhead tricep stretch 45s each, bicep wall stretch 45s each, wrist flexor/extensor stretch 30s each",
       "estimatedCalories": "280-360",
       "progressionNotes": "Arms respond to volume. Track total sets per week (aim for 12-16 sets per muscle).",
-      "equipment": null
+      "equipment": null,
+      "description": "Dedicated bicep and tricep volume day using supersets and drop sets. Maximises arm pump and time under tension for serious sleeve-filling gains."
     },
     {
-      "workoutName": "Chest & Tricep Hypertrophy — Advanced",
+      "workoutName": "Chest & Tri Blast",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "ADVANCED",
@@ -570,7 +576,7 @@
           "reps": "15-20",
           "tempo": "2-1-2-0",
           "rest": "60s",
-          "coachingFocus": "Cables from low position, arc up and together. Constant tension — peak contraction focus.",
+          "coachingFocus": "Cables from low position, arc up and together. Constant tension \u2014 peak contraction focus.",
           "id": "PHH016",
           "thumbnailUrl": "/exercises/thumbnails/PHH016.jpg",
           "videoUrl": "/exercises/videos/PHH016.mp4"
@@ -598,14 +604,15 @@
           "videoUrl": "/exercises/videos/PH005.mp4"
         }
       ],
-      "finisher": "Cable Chest Press: 3 x 25 with 30s rest — high-rep pump",
+      "finisher": "Cable Chest Press: 3 x 25 with 30s rest \u2014 high-rep pump",
       "cooldown": "Doorway chest stretch 90s each side, overhead tricep stretch 60s each, PVC thoracic extension 90s",
       "estimatedCalories": "460-540",
-      "progressionNotes": "Advanced: use double progression — increase reps first, then weight.",
-      "equipment": null
+      "progressionNotes": "Advanced: use double progression \u2014 increase reps first, then weight.",
+      "equipment": null,
+      "description": "An advanced push session pairing heavy chest compounds with tricep isolation. High volume, mechanical drop sets, and a burner finisher for upper body hypertrophy."
     },
     {
-      "workoutName": "Back & Bicep Thickness Builder",
+      "workoutName": "Back Thickness Builder",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "ADVANCED",
@@ -623,7 +630,7 @@
           "reps": "5-6",
           "tempo": "2-1-2-0",
           "rest": "2 min",
-          "coachingFocus": "Heaviest compound row. Hinge to 45°. Pull to belly button. Upper back contracted hard.",
+          "coachingFocus": "Heaviest compound row. Hinge to 45\u00b0. Pull to belly button. Upper back contracted hard.",
           "id": "PLH001",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704398/Pendlay_Row_ybff7k.png",
           "videoUrl": "/exercises/videos/PLH001.mp4"
@@ -684,14 +691,15 @@
           "videoUrl": "/exercises/videos/BIC005.mp4"
         }
       ],
-      "finisher": "Chin-Up mechanical dropset: max reps with load → strip weight → max bodyweight reps — 2 rounds",
+      "finisher": "Chin-Up mechanical dropset: max reps with load \u2192 strip weight \u2192 max bodyweight reps \u2014 2 rounds",
       "cooldown": "Lat stretch on rack 60s each side, bicep stretch on wall 45s each, thoracic extension foam roll 2 min",
       "estimatedCalories": "480-580",
       "progressionNotes": "Advanced back training requires managing cumulative fatigue. Rotate primary row every 4 weeks.",
-      "equipment": null
+      "equipment": null,
+      "description": "A rowing-focused pull day targeting mid-back thickness and bicep density. Uses barbell, dumbbell, and cable rows to attack the back from multiple angles."
     },
     {
-      "workoutName": "Glute & Hamstring Specialisation",
+      "workoutName": "Glute & Hamstring Focus",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -742,7 +750,7 @@
           "reps": "12-15",
           "tempo": "3-1-1-0",
           "rest": "60s",
-          "coachingFocus": "Wide stance, toes 45°. Inner thigh and glute emphasis. Go deep. Squeeze glutes hard at the top.",
+          "coachingFocus": "Wide stance, toes 45\u00b0. Inner thigh and glute emphasis. Go deep. Squeeze glutes hard at the top.",
           "id": "SQ007",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
           "videoUrl": "/exercises/videos/SQ007.mp4"
@@ -774,10 +782,11 @@
       "cooldown": "Pigeon pose 90s each, figure-four 60s each, lying hamstring stretch 60s each, hip flexor lunge 60s each",
       "estimatedCalories": "420-500",
       "progressionNotes": "Hip thrust progression: target 1-1.5x bodyweight for 10 reps within 12 weeks.",
-      "equipment": null
+      "equipment": null,
+      "description": "A specialisation session built entirely around posterior chain development. Hip thrusts, Romanian deadlifts, and Nordic curls drive glute and hamstring hypertrophy."
     },
     {
-      "workoutName": "Shoulder Width & Rear Delt Builder",
+      "workoutName": "Shoulder & Rear Delt Day",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -828,7 +837,7 @@
           "reps": "15-20",
           "tempo": "2-1-2-0",
           "rest": "45s",
-          "coachingFocus": "Hinge 45°+. Lift arms to side. Consistent high volume here changes your physique.",
+          "coachingFocus": "Hinge 45\u00b0+. Lift arms to side. Consistent high volume here changes your physique.",
           "id": "PLH010",
           "thumbnailUrl": "/exercises/thumbnails/PLH010.jpg",
           "videoUrl": "/exercises/videos/PLH010.mp4"
@@ -856,14 +865,15 @@
           "videoUrl": "/exercises/videos/PHH024.mp4"
         }
       ],
-      "finisher": "Lateral Raise dropset: heavy x10 → medium x10 → light x10 — 3 rounds, 60s rest",
+      "finisher": "Lateral Raise dropset: heavy x10 \u2192 medium x10 \u2192 light x10 \u2014 3 rounds, 60s rest",
       "cooldown": "Cross-body shoulder stretch 60s each, neck side stretch 45s each, doorway stretch 60s",
       "estimatedCalories": "320-400",
       "progressionNotes": "Lateral raises: prioritise feel over weight.",
-      "equipment": null
+      "equipment": null,
+      "description": "Overhead pressing paired with lateral and rear delt isolation work. Builds shoulder width and rotator cuff health for a full, balanced deltoid."
     },
     {
-      "workoutName": "Compound Strength — Full Body Heavy Day",
+      "workoutName": "Heavy Compound Day",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "ADVANCED",
@@ -943,13 +953,14 @@
         }
       ],
       "finisher": "Farmer's Carry: 4 x 30m with heavy dumbbells",
-      "cooldown": "Full body stretch sequence — hip flexors, hamstrings, chest, lats, shoulders — 2 min total",
+      "cooldown": "Full body stretch sequence \u2014 hip flexors, hamstrings, chest, lats, shoulders \u2014 2 min total",
       "estimatedCalories": "580-700",
       "progressionNotes": "Heavy compound days require recovery. Sleep 8h minimum. Eat above maintenance.",
-      "equipment": null
+      "equipment": null,
+      "description": "A full-body strength session centred on the big lifts \u2014 squat, deadlift, and press. Low reps, heavy loads, and long rest periods to drive maximal strength adaptation."
     },
     {
-      "workoutName": "Home Hypertrophy — Dumbbell Only",
+      "workoutName": "Dumbbell Hypertrophy",
       "goal": "BUILD_MUSCLE",
       "location": "HOME",
       "level": "INTERMEDIATE",
@@ -1032,10 +1043,11 @@
       "cooldown": "Doorway chest stretch 60s, lat side stretch 45s each, hamstring seated stretch 60s each",
       "estimatedCalories": "380-460",
       "progressionNotes": "With limited equipment, progression comes through tempo, rep range, and exercise variation.",
-      "equipment": "Dumbbell"
+      "equipment": "Dumbbell",
+      "description": "A home-friendly muscle-building session using dumbbells only. Full-body stimulus across push, pull, and hinge patterns with no barbell required."
     },
     {
-      "workoutName": "Tempo Hypertrophy — Time Under Tension",
+      "workoutName": "Tempo Hypertrophy",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1053,7 +1065,7 @@
           "reps": "8",
           "tempo": "5-1-1-0",
           "rest": "90s",
-          "coachingFocus": "5-second descent. 1-second pause. Lighter weight than normal — that's correct.",
+          "coachingFocus": "5-second descent. 1-second pause. Lighter weight than normal \u2014 that's correct.",
           "id": "SQ019",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
           "videoUrl": "/exercises/videos/SQ019.mp4"
@@ -1097,7 +1109,7 @@
           "reps": "12",
           "tempo": "4-1-1-0",
           "rest": "60s",
-          "coachingFocus": "Stretch-focused exercise already — add 4-second descent and it becomes elite.",
+          "coachingFocus": "Stretch-focused exercise already \u2014 add 4-second descent and it becomes elite.",
           "id": "PH012",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704400/Cable_Fly_zuuqot.png",
           "videoUrl": "/exercises/videos/PH012.mp4"
@@ -1115,13 +1127,14 @@
         }
       ],
       "finisher": "Pause Squat: 3 x 10 with 2-second pause at bottom",
-      "cooldown": "Full body stretch — extra time on each position given the deep muscle fatigue from tempo work. Minimum 10 min.",
+      "cooldown": "Full body stretch \u2014 extra time on each position given the deep muscle fatigue from tempo work. Minimum 10 min.",
       "estimatedCalories": "360-440",
       "progressionNotes": "Tempo training: reduce load 20-30% compared to normal.",
-      "equipment": null
+      "equipment": null,
+      "description": "A time-under-tension session using slow, deliberate tempos on every rep. Challenges muscles differently to standard lifting and accelerates hypertrophy stimulus."
     },
     {
-      "workoutName": "Upper Body Volume Day — High Rep Hypertrophy",
+      "workoutName": "High Rep Volume Day",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1204,10 +1217,11 @@
       "cooldown": "Doorway chest stretch 60s each side, lat stretch 45s each, neck and shoulder mobility 2 min",
       "estimatedCalories": "350-430",
       "progressionNotes": "Volume-focused day. Track total reps per exercise. Add 1-2 reps per set each week before increasing weight.",
-      "equipment": null
+      "equipment": null,
+      "description": "Upper body hypertrophy through high-rep sets and pump-focused training. Designed to drive blood flow, muscle fullness, and sarcoplasmic growth."
     },
     {
-      "workoutName": "Unilateral Focus — Single Limb Hypertrophy",
+      "workoutName": "Unilateral Hypertrophy",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1286,14 +1300,15 @@
           "videoUrl": "/exercises/videos/BIC006.mp4"
         }
       ],
-      "finisher": "Single Arm Overhead Carry: 3 x 20m each arm — shoulder stability and core anti-lateral flexion",
+      "finisher": "Single Arm Overhead Carry: 3 x 20m each arm \u2014 shoulder stability and core anti-lateral flexion",
       "cooldown": "Hip flexor lunge 60s each, cross-body stretch 45s each, lat hang 45s, hamstring seated stretch 60s each",
       "estimatedCalories": "380-460",
       "progressionNotes": "Unilateral work: correct imbalances before adding load. Weaker side dictates the weight.",
-      "equipment": null
+      "equipment": null,
+      "description": "Single-limb training to correct imbalances and maximise isolation. Lunges, single-arm presses, and unilateral pulls build symmetry and functional strength."
     },
     {
-      "workoutName": "Bodyweight Hypertrophy — Advanced Calisthenics",
+      "workoutName": "Calisthenics Strength",
       "goal": "BUILD_MUSCLE",
       "location": "HOME",
       "level": "ADVANCED",
@@ -1376,10 +1391,11 @@
       "cooldown": "Doorway chest stretch 60s each side, lat hang 45s, hip flexor lunge 60s each, hamstring 60s each",
       "estimatedCalories": "440-520",
       "progressionNotes": "Advanced bodyweight: progression is through weighted vest, tempo manipulation, or harder variations.",
-      "equipment": null
+      "equipment": null,
+      "description": "Advanced bodyweight hypertrophy using rings, weighted progressions, and gymnastic-style movements. Builds functional muscle mass without a barbell in sight."
     },
     {
-      "workoutName": "Muscle Gain — Beginner Foundation",
+      "workoutName": "Beginner Foundation",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "BEGINNER",
@@ -1462,10 +1478,11 @@
       "cooldown": "Hip flexor lunge 60s each, hamstring seated stretch 45s each, chest stretch 45s, child's pose 60s",
       "estimatedCalories": "300-380",
       "progressionNotes": "Beginners: increase weight by the smallest increment available when all sets and reps are completed with full control.",
-      "equipment": null
+      "equipment": null,
+      "description": "A full-body introduction to resistance training for new gym-goers. Covers the fundamental movement patterns with manageable loads and clear progression cues."
     },
     {
-      "workoutName": "Mechanical Advantage Drop Set — Upper Body",
+      "workoutName": "Mechanical Drop Set",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "ADVANCED",
@@ -1494,7 +1511,7 @@
           "reps": "8 each grip (mechanical drop)",
           "tempo": "2-1-2-0",
           "rest": "2 min",
-          "coachingFocus": "Mechanical lat dropset — same cable, different grips in sequence. Massive lat volume in short time.",
+          "coachingFocus": "Mechanical lat dropset \u2014 same cable, different grips in sequence. Massive lat volume in short time.",
           "id": "PLH009",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
           "videoUrl": "/exercises/videos/PLH009.mp4"
@@ -1547,8 +1564,9 @@
       "finisher": "Push-Up x20 + Chin-Up x8: 3 superset rounds, 60s rest",
       "cooldown": "Doorway stretch 60s each side, lat bar hang 45s, cross-body stretch 45s each, thoracic foam roll 2 min",
       "estimatedCalories": "420-500",
-      "progressionNotes": "Mechanical dropsets are an advanced technique — use sparingly (once per 2 weeks per muscle group).",
-      "equipment": null
+      "progressionNotes": "Mechanical dropsets are an advanced technique \u2014 use sparingly (once per 2 weeks per muscle group).",
+      "equipment": null,
+      "description": "An advanced upper body session using mechanical drop sets to maximise fatigue and volume. Pre-exhausts major movers before following with straight strength sets."
     }
   ]
 }
