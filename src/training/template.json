@@ -5,7 +5,6 @@
     "description": "Modular workout session skeletons. No exercises hardcoded. Movement slots only. Engine populates slots based on goal, environment, equipment, level, recovery, and progression state.",
     "totalSkeletons": 45
   },
-
   "skeletons": [
     {
       "id": "lw-home-beg-001",
@@ -74,11 +73,12 @@
         "between_circuits_sec": 60,
         "scaling": "If recovery is LOW, extend to 90s between circuits"
       },
-      "progressionStyle": "Volume overload – increase rounds from 2 to 3 before increasing work interval",
+      "progressionStyle": "Volume overload \u2013 increase rounds from 2 to 3 before increasing work interval",
       "recoveryDemand": "Low",
-      "equipmentDependency": "Bodyweight only. Optional: resistance band."
+      "equipmentDependency": "Bodyweight only. Optional: resistance band.",
+      "description": "A beginner-friendly fat loss circuit you can do anywhere at home. Low-impact movements build a calorie-burning foundation without overwhelming your joints or recovery.",
+      "coachingNote": "Focus on moving with control, not speed. Consistency beats intensity at this stage \u2014 showing up every session matters more than how hard you push."
     },
-
     {
       "id": "lw-home-int-001",
       "templateName": "Metabolic Conditioning",
@@ -153,11 +153,12 @@
         "between_blocks_sec": 60,
         "scaling": "Recovery LOW: 90s between blocks, reduce AMRAP rounds by 1"
       },
-      "progressionStyle": "Density progression – reduce rest intervals by 5s each week until 10s rest, then add round",
+      "progressionStyle": "Density progression \u2013 reduce rest intervals by 5s each week until 10s rest, then add round",
       "recoveryDemand": "Moderate",
-      "equipmentDependency": "Bodyweight. Optional: resistance bands, dumbbells."
+      "equipmentDependency": "Bodyweight. Optional: resistance bands, dumbbells.",
+      "description": "Metabolic conditioning that keeps your heart rate elevated throughout. Alternating strength and cardio intervals maximise calorie burn and improve cardiovascular fitness simultaneously.",
+      "coachingNote": "Track how long your rest feels \u2014 as you improve, you'll need less recovery between rounds. That's the clearest sign the program is working."
     },
-
     {
       "id": "lw-home-adv-001",
       "templateName": "HIIT Cardio",
@@ -235,11 +236,12 @@
         "between_blocks_sec": 60,
         "scaling": "Recovery LOW: skip metabolic finisher, add 5min extended cooldown"
       },
-      "progressionStyle": "Intensity cycling – week 1-2 build volume, week 3 deload, week 4 max intensity",
+      "progressionStyle": "Intensity cycling \u2013 week 1-2 build volume, week 3 deload, week 4 max intensity",
       "recoveryDemand": "High",
-      "equipmentDependency": "Bodyweight. Optional: dumbbells, resistance bands."
+      "equipmentDependency": "Bodyweight. Optional: dumbbells, resistance bands.",
+      "description": "High-intensity cardio intervals that push your aerobic ceiling. Advanced movement combinations keep sessions challenging and prevent adaptation plateaus.",
+      "coachingNote": "Push hard during work intervals \u2014 then recover fully. Half-effort on both is the worst approach. Commit to the intensity, earn the rest."
     },
-
     {
       "id": "lw-gym-beg-001",
       "templateName": "Cardio Blast",
@@ -298,11 +300,12 @@
         "between_blocks_sec": 60,
         "scaling": "Recovery LOW: reduce circuit to 2 rounds, extend cardio rest to 90s"
       },
-      "progressionStyle": "Load progression – increase resistance by smallest increment when 15 reps achieved consistently",
+      "progressionStyle": "Load progression \u2013 increase resistance by smallest increment when 15 reps achieved consistently",
       "recoveryDemand": "Low",
-      "equipmentDependency": "Machines, cardio equipment, resistance bands."
+      "equipmentDependency": "Machines, cardio equipment, resistance bands.",
+      "description": "A gym-based fat loss circuit combining cardio machines and bodyweight movements. Builds early conditioning and gets you comfortable with a structured gym routine.",
+      "coachingNote": "Don't skip the rest periods \u2014 they're programmed deliberately. Learning to pace yourself now builds the discipline that carries you to advanced levels."
     },
-
     {
       "id": "lw-gym-adv-001",
       "templateName": "Athletic Conditioning",
@@ -336,7 +339,7 @@
             "barbell_upper_push_slot",
             "barbell_upper_pull_slot"
           ],
-          "notes": "Barbell complex – no rest between movements within set. Full rest between sets."
+          "notes": "Barbell complex \u2013 no rest between movements within set. Full rest between sets."
         },
         {
           "block": "superset_block",
@@ -381,11 +384,12 @@
         "between_blocks_sec": 75,
         "scaling": "Recovery LOW: replace barbell complex with dumbbell version, reduce AMRAP to 8min"
       },
-      "progressionStyle": "Periodized loading – 3 weeks progressive overload, 1 week deload, track AMRAP rounds as performance marker",
+      "progressionStyle": "Periodized loading \u2013 3 weeks progressive overload, 1 week deload, track AMRAP rounds as performance marker",
       "recoveryDemand": "High",
-      "equipmentDependency": "Full gym – barbells, dumbbells, cables, cardio machines, foam roller."
+      "equipmentDependency": "Full gym \u2013 barbells, dumbbells, cables, cardio machines, foam roller.",
+      "description": "Advanced athletic fat loss combining compound lifts with high-intensity cardio. Burns fat while preserving muscle mass \u2014 the hallmark of serious body recomposition.",
+      "coachingNote": "Fuel your sessions properly. At this intensity, under-eating kills performance. Prioritise protein and don't fear pre-workout carbohydrates."
     },
-
     {
       "id": "bm-home-beg-001",
       "templateName": "Functional Strength",
@@ -449,11 +453,12 @@
         "between_blocks_sec": 60,
         "scaling": "Recovery LOW: reduce to 2 sets per block, increase rest to 90s"
       },
-      "progressionStyle": "Double progression – achieve top of rep range for all sets before adding load or resistance",
+      "progressionStyle": "Double progression \u2013 achieve top of rep range for all sets before adding load or resistance",
       "recoveryDemand": "Low",
-      "equipmentDependency": "Bodyweight. Resistance bands strongly recommended. Optional: dumbbells."
+      "equipmentDependency": "Bodyweight. Resistance bands strongly recommended. Optional: dumbbells.",
+      "description": "Full-body strength training using bodyweight and minimal equipment. Builds foundational movement patterns \u2014 squat, hinge, push, pull \u2014 that underpin every strength goal.",
+      "coachingNote": "Master the basics before chasing progression. Clean reps with full range of motion build the muscle memory that makes future gains faster and safer."
     },
-
     {
       "id": "bm-home-int-001",
       "templateName": "Muscle Builder",
@@ -528,11 +533,12 @@
         "between_blocks_sec": 75,
         "scaling": "Recovery LOW: reduce pump finisher sets, extend rest to 120s in strength block"
       },
-      "progressionStyle": "Periodized hypertrophy – weeks 1-3 volume accumulation, week 4 intensity peak with reduced reps",
+      "progressionStyle": "Periodized hypertrophy \u2013 weeks 1-3 volume accumulation, week 4 intensity peak with reduced reps",
       "recoveryDemand": "Moderate",
-      "equipmentDependency": "Resistance bands, dumbbells, pull-up bar recommended."
+      "equipmentDependency": "Resistance bands, dumbbells, pull-up bar recommended.",
+      "description": "Intermediate hypertrophy training designed for home environments. Progressive overload through rep targets and tempo manipulation drives consistent muscle growth.",
+      "coachingNote": "Muscle is built in the final reps of each set. If the last two reps feel comfortable, you're not pushing hard enough. Controlled difficulty builds size."
     },
-
     {
       "id": "bm-home-adv-001",
       "templateName": "Power & Strength",
@@ -586,7 +592,7 @@
           "format": "mechanical_dropset",
           "rounds": 3,
           "slots": ["upper_push_slot", "upper_pull_slot"],
-          "notes": "Mechanical advantage dropset – change lever/angle not load."
+          "notes": "Mechanical advantage dropset \u2013 change lever/angle not load."
         },
         {
           "block": "iso_burnout",
@@ -611,11 +617,12 @@
         "between_blocks_sec": 90,
         "scaling": "Recovery LOW: drop mechanical dropset block, extend rest 150s in strength peak"
       },
-      "progressionStyle": "DUP (Daily Undulating Periodization) – rotate strength/hypertrophy/endurance focus across sessions",
+      "progressionStyle": "DUP (Daily Undulating Periodization) \u2013 rotate strength/hypertrophy/endurance focus across sessions",
       "recoveryDemand": "High",
-      "equipmentDependency": "Dumbbells, resistance bands, pull-up bar, dip station."
+      "equipmentDependency": "Dumbbells, resistance bands, pull-up bar, dip station.",
+      "description": "Advanced home muscle building with high-volume, high-intensity techniques. Combines mechanical drop sets and density blocks to maximise hypertrophy without a gym.",
+      "coachingNote": "Sleep and nutrition are training variables. At this volume, 7\u20138 hours of sleep and adequate protein aren't optional \u2014 they're what the gains are made of."
     },
-
     {
       "id": "bm-gym-beg-001",
       "templateName": "Functional Fitness",
@@ -679,11 +686,12 @@
         "between_blocks_sec": 60,
         "scaling": "Recovery LOW: reduce to 2 sets, extend rest to 90s"
       },
-      "progressionStyle": "Linear load progression – add smallest plate increment when all sets hit top of rep range",
+      "progressionStyle": "Linear load progression \u2013 add smallest plate increment when all sets hit top of rep range",
       "recoveryDemand": "Low",
-      "equipmentDependency": "Machines, cables, cardio equipment."
+      "equipmentDependency": "Machines, cables, cardio equipment.",
+      "description": "A beginner gym program building full-body strength with machines and free weights. Structured rest, progressive loading, and fundamental movement patterns lay the groundwork for long-term muscle development.",
+      "coachingNote": "Everything feels hard at first \u2014 that's neural adaptation, not weakness. Strength comes fast in the first 8 weeks. Trust the process and log every session."
     },
-
     {
       "id": "bm-gym-adv-001",
       "templateName": "Hypertrophy",
@@ -768,11 +776,12 @@
         "between_blocks_sec": 120,
         "scaling": "Recovery LOW: skip pump finisher, extend all rests by 30s, reduce isolation volume to 2 sets"
       },
-      "progressionStyle": "Block periodization – 4-week hypertrophy block, 2-week strength block, 1-week deload cycle",
+      "progressionStyle": "Block periodization \u2013 4-week hypertrophy block, 2-week strength block, 1-week deload cycle",
       "recoveryDemand": "High",
-      "equipmentDependency": "Full gym – barbells, dumbbells, cables, machines, foam roller."
+      "equipmentDependency": "Full gym \u2013 barbells, dumbbells, cables, machines, foam roller.",
+      "description": "Periodised hypertrophy training for advanced lifters. Structured mesocycles with planned deloads prevent overtraining while systematically increasing volume and intensity to drive new muscle growth.",
+      "coachingNote": "At the advanced level, recovery management is as important as training load. Honour the deload weeks \u2014 they're not weakness, they're what allows the next phase to work."
     },
-
     {
       "id": "gf-home-beg-001",
       "templateName": "Functional Fitness",
@@ -840,11 +849,12 @@
         "between_circuits_sec": 75,
         "scaling": "Recovery LOW: 1 round per circuit, 90s between blocks"
       },
-      "progressionStyle": "Skill + volume progression – master movement quality first, then add rounds, then reduce rest",
+      "progressionStyle": "Skill + volume progression \u2013 master movement quality first, then add rounds, then reduce rest",
       "recoveryDemand": "Low",
-      "equipmentDependency": "Bodyweight only. Optional: resistance bands."
+      "equipmentDependency": "Bodyweight only. Optional: resistance bands.",
+      "description": "A beginner home fitness program building real-world strength, mobility, and cardiovascular capacity. Functional movement patterns train your body to perform better at everything \u2014 not just in the gym.",
+      "coachingNote": "Functional fitness is about quality of movement above all. Focus on how well you move, not how much you do. That foundation makes every future program more effective."
     },
-
     {
       "id": "gf-home-int-001",
       "templateName": "Athletic Conditioning",
@@ -919,11 +929,12 @@
         "between_blocks_sec": 60,
         "scaling": "Recovery LOW: reduce conditioning circuit to 2 rounds, skip skill block"
       },
-      "progressionStyle": "Complexity progression – master basic patterns, introduce skill movements, then add load or speed",
+      "progressionStyle": "Complexity progression \u2013 master basic patterns, introduce skill movements, then add load or speed",
       "recoveryDemand": "Moderate",
-      "equipmentDependency": "Bodyweight. Resistance bands. Optional: dumbbells."
+      "equipmentDependency": "Bodyweight. Resistance bands. Optional: dumbbells.",
+      "description": "Intermediate athletic conditioning from your home. Combines strength circuits, explosive movements, and cardio intervals to build the kind of fitness that shows up in real life.",
+      "coachingNote": "Athletic conditioning rewards effort and consistency equally. Push hard when it counts, move well always. Aim to feel fitter \u2014 not just more exhausted \u2014 after each week."
     },
-
     {
       "id": "gf-home-adv-001",
       "templateName": "HIIT Strength",
@@ -952,7 +963,7 @@
           "sets": 3,
           "rest_sec": 90,
           "slots": ["explosive_power_slot", "strength_compound_slot"],
-          "notes": "Contrast pairs – heavy strength followed immediately by explosive movement. PAP effect."
+          "notes": "Contrast pairs \u2013 heavy strength followed immediately by explosive movement. PAP effect."
         },
         {
           "block": "strength_conditioning",
@@ -999,11 +1010,12 @@
         "between_blocks_sec": 75,
         "scaling": "Recovery LOW: skip skill finisher, reduce circuits to 2 rounds"
       },
-      "progressionStyle": "Sport periodization – power, strength, and conditioning rotated weekly with monthly deload",
+      "progressionStyle": "Sport periodization \u2013 power, strength, and conditioning rotated weekly with monthly deload",
       "recoveryDemand": "High",
-      "equipmentDependency": "Bodyweight, dumbbells, resistance bands. Optional: pull-up bar."
+      "equipmentDependency": "Bodyweight, dumbbells, resistance bands. Optional: pull-up bar.",
+      "description": "Advanced hybrid training fusing strength work with high-intensity conditioning. Demands full commitment \u2014 short rest windows, complex movements, and high output separate this program from anything else.",
+      "coachingNote": "At this level, mental toughness is a training variable. The moments you want to quit mid-set are exactly when the adaptation happens. Stay in the work."
     },
-
     {
       "id": "gf-gym-beg-001",
       "templateName": "Functional Strength",
@@ -1063,11 +1075,12 @@
         "between_blocks_sec": 60,
         "scaling": "Recovery LOW: 2 circuit rounds, reduce interval intensity to RPE 5"
       },
-      "progressionStyle": "Skill to load – master cable/machine mechanics first, then progressively add weight",
+      "progressionStyle": "Skill to load \u2013 master cable/machine mechanics first, then progressively add weight",
       "recoveryDemand": "Low",
-      "equipmentDependency": "Machines, cables, cardio equipment."
+      "equipmentDependency": "Machines, cables, cardio equipment.",
+      "description": "A beginner gym fitness program blending strength training with cardiovascular conditioning. Alternating between resistance work and cardio bursts builds a complete athletic base from the ground up.",
+      "coachingNote": "Every expert was once a beginner. Follow the rest periods, hit your reps, and show up consistently. Results at this stage come from attendance, not intensity."
     },
-
     {
       "id": "gf-gym-adv-001",
       "templateName": "Power & Strength",
@@ -1148,11 +1161,12 @@
         "between_blocks_sec": 90,
         "scaling": "Recovery LOW: replace contrast training with straight sets, reduce aerobic block to 2 rounds"
       },
-      "progressionStyle": "Concurrent periodization – strength, power, and aerobic capacity developed simultaneously with managed fatigue",
+      "progressionStyle": "Concurrent periodization \u2013 strength, power, and aerobic capacity developed simultaneously with managed fatigue",
       "recoveryDemand": "High",
-      "equipmentDependency": "Full gym – barbells, dumbbells, cables, machines, cardio equipment, foam roller."
+      "equipmentDependency": "Full gym \u2013 barbells, dumbbells, cables, machines, cardio equipment, foam roller.",
+      "description": "Advanced hybrid performance training for athletes who want it all \u2014 strength, power, and endurance. Complex programming demands high output and rewards those who bring consistent effort.",
+      "coachingNote": "Track performance metrics, not just how you feel. Advanced athletes sometimes feel strong on bad days and weak on good ones. Data doesn't lie \u2014 let the numbers guide you."
     },
-
     {
       "id": "lw-gym-int-001",
       "templateName": "HIIT Strength",
@@ -1226,11 +1240,12 @@
         "between_blocks_sec": 60,
         "scaling": "Recovery LOW: straight sets instead of supersets, reduce cardio to 7 rounds"
       },
-      "progressionStyle": "Load + density – increase weight OR reduce rest period, not both simultaneously",
+      "progressionStyle": "Load + density \u2013 increase weight OR reduce rest period, not both simultaneously",
       "recoveryDemand": "Moderate",
-      "equipmentDependency": "Barbells, dumbbells, cables, cardio machines."
+      "equipmentDependency": "Barbells, dumbbells, cables, cardio machines.",
+      "description": "Gym-based HIIT fused with strength work for maximum caloric impact. Alternating between loaded movements and cardio intervals keeps your metabolism elevated long after the session ends.",
+      "coachingNote": "Log your rest intervals. The goal over 4 weeks is to need less recovery between rounds without dropping performance. That's your progression marker."
     },
-
     {
       "id": "lw-home-rec-001",
       "templateName": "Recovery Session",
@@ -1282,9 +1297,10 @@
       },
       "progressionStyle": "Used as deload session. Progression not primary goal.",
       "recoveryDemand": "Very Low",
-      "equipmentDependency": "Bodyweight only."
+      "equipmentDependency": "Bodyweight only.",
+      "description": "A low-intensity home recovery session that keeps you moving without taxing your system. Light movement promotes circulation, reduces soreness, and maintains momentum on rest days.",
+      "coachingNote": "Recovery sessions are training too. Moving on your off days accelerates repair. Don't skip these \u2014 they're what make your hard sessions possible."
     },
-
     {
       "id": "bm-gym-int-001",
       "templateName": "Strength & Conditioning",
@@ -1362,11 +1378,12 @@
         "between_blocks_sec": 90,
         "scaling": "Recovery LOW: reduce isolation block to 2 sets, extend compound rest to 150s"
       },
-      "progressionStyle": "Progressive overload – log every session. Increase load when all sets hit top of rep range for 2 consecutive sessions",
+      "progressionStyle": "Progressive overload \u2013 log every session. Increase load when all sets hit top of rep range for 2 consecutive sessions",
       "recoveryDemand": "Moderate",
-      "equipmentDependency": "Barbells, dumbbells, cables, machines."
+      "equipmentDependency": "Barbells, dumbbells, cables, machines.",
+      "description": "A push-pull-legs split designed for intermediate lifters ready to add serious volume. Separate days for pushing, pulling, and leg movements allow full recovery and targeted muscle development.",
+      "coachingNote": "Progressive overload is the only rule that matters. Add weight, reps, or sets every session where you can. Small increases compound into significant results."
     },
-
     {
       "id": "bm-home-rec-001",
       "templateName": "Mobility Flow",
@@ -1426,9 +1443,10 @@
       },
       "progressionStyle": "Not a progressive session. Used between training days.",
       "recoveryDemand": "Very Low",
-      "equipmentDependency": "Bodyweight. Foam roller optional."
+      "equipmentDependency": "Bodyweight. Foam roller optional.",
+      "description": "A mobility and active recovery session for muscle-building programs. Joint work, controlled stretching, and low-load movement reduce stiffness and keep connective tissue healthy through high-volume training.",
+      "coachingNote": "Flexibility and mobility are strength assets, not extras. Athletes who prioritise movement quality lift heavier and stay injury-free longer. Treat this session seriously."
     },
-
     {
       "id": "gf-gym-int-001",
       "templateName": "Strength & Conditioning",
@@ -1505,9 +1523,10 @@
       },
       "progressionStyle": "AMRAP score tracking + load progression in tri-sets. Dual metric improvement.",
       "recoveryDemand": "Moderate",
-      "equipmentDependency": "Barbells, dumbbells, cables, cardio machines."
+      "equipmentDependency": "Barbells, dumbbells, cables, cardio machines.",
+      "description": "Intermediate strength and conditioning combining barbell lifts with cardio circuits. Builds a well-rounded athletic fitness base \u2014 strong, fast, and capable under fatigue.",
+      "coachingNote": "Conditioning improves faster than strength, so don't neglect the heavy work. Balance is the goal. A strong base makes every conditioning session more productive."
     },
-
     {
       "id": "gf-home-rec-001",
       "templateName": "Recovery Session",
@@ -1556,9 +1575,10 @@
       },
       "progressionStyle": "Not progressive. Use between training days or on low energy days.",
       "recoveryDemand": "Very Low",
-      "equipmentDependency": "Bodyweight only."
+      "equipmentDependency": "Bodyweight only.",
+      "description": "A gentle active recovery session combining mobility flows, light stretching, and controlled breathing. Keeps you moving on rest days while actively accelerating muscle repair.",
+      "coachingNote": "Active recovery is a competitive advantage. Athletes who move on their off days perform better on their training days. This session is an investment, not optional filler."
     },
-
     {
       "id": "lw-gym-beg-002",
       "templateName": "Endurance Builder",
@@ -1608,11 +1628,12 @@
         "between_blocks_sec": 60,
         "scaling": "Recovery LOW: reduce circuit to 1 round, walk during cardio"
       },
-      "progressionStyle": "Frequency first – master this session 3x/week before increasing intensity",
+      "progressionStyle": "Frequency first \u2013 master this session 3x/week before increasing intensity",
       "recoveryDemand": "Very Low",
-      "equipmentDependency": "Cardio machines, resistance machines."
+      "equipmentDependency": "Cardio machines, resistance machines.",
+      "description": "A low-impact gym program focused on building cardiovascular endurance from scratch. Machine-based cardio and light resistance training create a sustainable fat loss foundation.",
+      "coachingNote": "Endurance is built slowly. Resist the urge to jump intensity too fast. Steady pacing now means you can sustain effort \u2014 and results \u2014 long-term."
     },
-
     {
       "id": "bm-gym-adv-002",
       "templateName": "Powerbuilding",
@@ -1695,11 +1716,12 @@
         "between_blocks_sec": 120,
         "scaling": "Recovery LOW: reduce max strength to 3 sets at 85% intensity, skip pump finisher"
       },
-      "progressionStyle": "Powerbuilding periodization – 3-week strength focus, 1-week hypertrophy focus, deload every 5th week",
+      "progressionStyle": "Powerbuilding periodization \u2013 3-week strength focus, 1-week hypertrophy focus, deload every 5th week",
       "recoveryDemand": "Very High",
-      "equipmentDependency": "Full gym – barbells, rack, dumbbells, cables, machines."
+      "equipmentDependency": "Full gym \u2013 barbells, rack, dumbbells, cables, machines.",
+      "description": "A powerbuilding program combining strength progressions with hypertrophy volume. Heavy compound work builds a stronger base while accessory work sculpts the physique \u2014 the best of both disciplines.",
+      "coachingNote": "Powerbuilding rewards patience. Don't chase aesthetics and strength gains simultaneously at maximum effort. Let the structure do the work \u2014 your job is to show up and execute."
     },
-
     {
       "id": "gf-gym-adv-002",
       "templateName": "CrossFit Performance",
@@ -1728,7 +1750,7 @@
           "interval_sec": 90,
           "rounds": 6,
           "slots": ["barbell_lower_push_slot", "explosive_lower_slot"],
-          "notes": "Alternating EMOM – heavy barbell + explosive movement. PAP contrast."
+          "notes": "Alternating EMOM \u2013 heavy barbell + explosive movement. PAP contrast."
         },
         {
           "block": "workout_of_day",
@@ -1768,12 +1790,13 @@
         "between_blocks_sec": 90,
         "scaling": "Recovery LOW: reduce WOD to 12min, scale all movements to moderate intensity"
       },
-      "progressionStyle": "Benchmark tracking – retest WOD monthly, track score progression as primary fitness metric",
+      "progressionStyle": "Benchmark tracking \u2013 retest WOD monthly, track score progression as primary fitness metric",
       "recoveryDemand": "Very High",
-      "equipmentDependency": "Full gym – barbells, pull-up rig, cardio machines, dumbbells."
+      "equipmentDependency": "Full gym \u2013 barbells, pull-up rig, cardio machines, dumbbells.",
+      "description": "A CrossFit-style performance program built around functional movements, Olympic lifts, and timed workouts. Develops elite-level fitness across all domains \u2014 strength, speed, endurance, and coordination.",
+      "coachingNote": "WOD-style training rewards pacing intelligence over ego. Starting too hot burns you out mid-session. Know your sustainable pace \u2014 then push 5% beyond it."
     }
   ],
-
   "movementSlotRegistry": {
     "description": "All possible slot types the engine can populate. Engine selects appropriate exercise based on goal, level, equipment, and recovery.",
     "slots": {
@@ -1783,39 +1806,39 @@
       "movement_prep_slot": "Sport-specific or session-specific neuromuscular preparation",
       "sport_specific_prep_slot": "Athletic drills mimicking session demands",
       "balance_prep_slot": "Single-leg stance, proprioception drills",
-      "lower_body_push_slot": "Squat-pattern movement – bilateral",
+      "lower_body_push_slot": "Squat-pattern movement \u2013 bilateral",
       "lower_body_push_machine_slot": "Machine-based squat or leg press pattern",
-      "upper_push_slot": "Horizontal or vertical push – push-up, press pattern",
-      "upper_pull_slot": "Horizontal or vertical pull – row, pull-up pattern",
-      "hinge_slot": "Hip hinge pattern – deadlift, Romanian deadlift, good morning",
-      "core_anti_extension_slot": "Anti-extension core – plank variations, ab wheel",
-      "core_anti_rotation_slot": "Anti-rotation core – Pallof press, bird dog",
-      "core_rotation_slot": "Rotational core – wood chop, Russian twist",
+      "upper_push_slot": "Horizontal or vertical push \u2013 push-up, press pattern",
+      "upper_pull_slot": "Horizontal or vertical pull \u2013 row, pull-up pattern",
+      "hinge_slot": "Hip hinge pattern \u2013 deadlift, Romanian deadlift, good morning",
+      "core_anti_extension_slot": "Anti-extension core \u2013 plank variations, ab wheel",
+      "core_anti_rotation_slot": "Anti-rotation core \u2013 Pallof press, bird dog",
+      "core_rotation_slot": "Rotational core \u2013 wood chop, Russian twist",
       "core_stability_slot": "Isometric or slow-tempo core stability",
-      "core_slot": "General core movement – engine selects based on session balance",
+      "core_slot": "General core movement \u2013 engine selects based on session balance",
       "core_machine_slot": "Cable or machine-assisted core",
-      "unilateral_lower_slot": "Single-leg lower body – lunge, step-up, split squat",
-      "single_leg_slot": "Single-leg movement – balance or strength focused",
-      "lateral_movement_slot": "Lateral plane movement – side lunge, lateral shuffle",
-      "explosive_lower_slot": "Plyometric or explosive leg drive – jump squat, box jump",
-      "explosive_power_slot": "Full body explosive – broad jump, med ball slam, power clean",
-      "reactive_lower_slot": "Reactive plyometric – depth jump, reactive bound",
-      "cardio_burst_slot": "High-intensity cardio – sprint, jump rope, burpee, mountain climber",
-      "full_body_compound_slot": "Multi-joint full body movement – thruster, clean and press, kettlebell swing",
-      "compound_lower_slot": "Compound lower body – any level-appropriate squat or hinge",
-      "compound_upper_push_slot": "Compound upper push – bench, overhead press, push-up variation",
-      "strength_compound_slot": "Heavy compound movement – engine chooses based on goal and equipment",
-      "agility_slot": "Agility and coordination drill – ladder, cone, reactive movement",
-      "balance_slot": "Balance and proprioception – single-leg, bosu, unstable surface",
-      "isolation_upper_slot": "Isolation upper body – curl, extension, raise, fly",
-      "isolation_lower_slot": "Isolation lower body – leg curl, leg extension, calf raise",
+      "unilateral_lower_slot": "Single-leg lower body \u2013 lunge, step-up, split squat",
+      "single_leg_slot": "Single-leg movement \u2013 balance or strength focused",
+      "lateral_movement_slot": "Lateral plane movement \u2013 side lunge, lateral shuffle",
+      "explosive_lower_slot": "Plyometric or explosive leg drive \u2013 jump squat, box jump",
+      "explosive_power_slot": "Full body explosive \u2013 broad jump, med ball slam, power clean",
+      "reactive_lower_slot": "Reactive plyometric \u2013 depth jump, reactive bound",
+      "cardio_burst_slot": "High-intensity cardio \u2013 sprint, jump rope, burpee, mountain climber",
+      "full_body_compound_slot": "Multi-joint full body movement \u2013 thruster, clean and press, kettlebell swing",
+      "compound_lower_slot": "Compound lower body \u2013 any level-appropriate squat or hinge",
+      "compound_upper_push_slot": "Compound upper push \u2013 bench, overhead press, push-up variation",
+      "strength_compound_slot": "Heavy compound movement \u2013 engine chooses based on goal and equipment",
+      "agility_slot": "Agility and coordination drill \u2013 ladder, cone, reactive movement",
+      "balance_slot": "Balance and proprioception \u2013 single-leg, bosu, unstable surface",
+      "isolation_upper_slot": "Isolation upper body \u2013 curl, extension, raise, fly",
+      "isolation_lower_slot": "Isolation lower body \u2013 leg curl, leg extension, calf raise",
       "dumbbell_isolation_upper_slot": "Dumbbell-specific upper isolation",
       "machine_isolation_lower_slot": "Machine-specific lower isolation",
       "cable_isolation_slot": "Cable-specific isolation",
-      "barbell_lower_push_slot": "Barbell squat pattern – squat, front squat, hack squat",
-      "barbell_upper_push_slot": "Barbell press pattern – bench press, overhead press",
-      "barbell_hinge_slot": "Barbell hinge – deadlift, RDL, good morning",
-      "barbell_upper_pull_slot": "Barbell pull – bent-over row, Pendlay row",
+      "barbell_lower_push_slot": "Barbell squat pattern \u2013 squat, front squat, hack squat",
+      "barbell_upper_push_slot": "Barbell press pattern \u2013 bench press, overhead press",
+      "barbell_hinge_slot": "Barbell hinge \u2013 deadlift, RDL, good morning",
+      "barbell_upper_pull_slot": "Barbell pull \u2013 bent-over row, Pendlay row",
       "machine_lower_push_slot": "Leg press, hack squat machine",
       "machine_upper_push_slot": "Chest press machine, shoulder press machine",
       "machine_upper_pull_slot": "Lat pulldown, seated row machine",
@@ -1826,16 +1849,15 @@
       "dumbbell_unilateral_lower_slot": "Dumbbell split squat, step-up, reverse lunge",
       "dumbbell_unilateral_slot": "Any dumbbell unilateral movement",
       "cardio_machine_slot": "Treadmill, bike, rower, assault bike, elliptical",
-      "foam_roll_slot": "Self-myofascial release – foam rolling",
-      "static_stretch_lower_slot": "Lower body static stretching – hip flexors, hamstrings, quads, glutes",
-      "static_stretch_upper_slot": "Upper body static stretching – chest, shoulders, lats, triceps",
-      "breathwork_slot": "Controlled breathing protocol – box breathing, diaphragmatic breathing",
-      "mobility_lower_slot": "Active lower body mobility – hip CARs, ankle circles, knee circles",
-      "mobility_upper_slot": "Active upper body mobility – shoulder CARs, thoracic rotation",
-      "thoracic_mobility_slot": "Thoracic spine mobility – cat-cow, t-spine rotation, open book"
+      "foam_roll_slot": "Self-myofascial release \u2013 foam rolling",
+      "static_stretch_lower_slot": "Lower body static stretching \u2013 hip flexors, hamstrings, quads, glutes",
+      "static_stretch_upper_slot": "Upper body static stretching \u2013 chest, shoulders, lats, triceps",
+      "breathwork_slot": "Controlled breathing protocol \u2013 box breathing, diaphragmatic breathing",
+      "mobility_lower_slot": "Active lower body mobility \u2013 hip CARs, ankle circles, knee circles",
+      "mobility_upper_slot": "Active upper body mobility \u2013 shoulder CARs, thoracic rotation",
+      "thoracic_mobility_slot": "Thoracic spine mobility \u2013 cat-cow, t-spine rotation, open book"
     }
   },
-
   "engineRules": {
     "description": "Rules the workout generation engine must follow when populating skeletons",
     "rules": [
@@ -1848,7 +1870,7 @@
       "Cardio machine slot must offer at least 3 machine alternatives based on availability",
       "Recovery LOW state: reduce total volume by 20-30%, extend rest periods by 20-30%",
       "Recovery HIGH state: allow intensity increase, add optional finisher if skeleton includes one",
-      "Progression must be tracked – load, reps, rest, density, or complexity"
+      "Progression must be tracked \u2013 load, reps, rest, density, or complexity"
     ]
   }
 }

@@ -13,6 +13,59 @@ import {
 
 export const dynamic = "force-dynamic";
 
+// ─── Coaching notes by templateType ──────────────────────────────────────────
+// Sourced from template.json skeletons. Injected at response time — no DB column needed.
+const COACHING_NOTES: Record<string, string> = {
+  FAT_LOSS_HOME_BEGINNER:
+    "Focus on moving with control, not speed. Consistency beats intensity at this stage — showing up every session matters more than how hard you push.",
+  FAT_LOSS_HOME_INTERMEDIATE:
+    "Track how long your rest feels — as you improve, you'll need less recovery between rounds. That's the clearest sign the program is working.",
+  FAT_LOSS_HOME_ADVANCED:
+    "Push hard during work intervals — then recover fully. Half-effort on both is the worst approach. Commit to the intensity, earn the rest.",
+  FAT_LOSS_GYM_BEGINNER:
+    "Don't skip the rest periods — they're programmed deliberately. Learning to pace yourself now builds the discipline that carries you to advanced levels.",
+  FAT_LOSS_GYM_INTERMEDIATE:
+    "Log your rest intervals. The goal over 4 weeks is to need less recovery between rounds without dropping performance. That's your progression marker.",
+  FAT_LOSS_GYM_ADVANCED:
+    "Fuel your sessions properly. At this intensity, under-eating kills performance. Prioritise protein and don't fear pre-workout carbohydrates.",
+  FAT_LOSS_GYM_BEGINNER_2:
+    "Endurance is built slowly. Resist the urge to jump intensity too fast. Steady pacing now means you can sustain effort — and results — long-term.",
+  FAT_LOSS_HOME_RECOVERY:
+    "Recovery sessions are training too. Moving on your off days accelerates repair. Don't skip these — they're what make your hard sessions possible.",
+  MUSCLE_HOME_BEGINNER:
+    "Master the basics before chasing progression. Clean reps with full range of motion build the muscle memory that makes future gains faster and safer.",
+  MUSCLE_HOME_INTERMEDIATE:
+    "Muscle is built in the final reps of each set. If the last two reps feel comfortable, you're not pushing hard enough. Controlled difficulty builds size.",
+  MUSCLE_HOME_ADVANCED:
+    "Sleep and nutrition are training variables. At this volume, 7–8 hours of sleep and adequate protein aren't optional — they're what the gains are made of.",
+  MUSCLE_GYM_BEGINNER:
+    "Everything feels hard at first — that's neural adaptation, not weakness. Strength comes fast in the first 8 weeks. Trust the process and log every session.",
+  MUSCLE_GYM_INTERMEDIATE:
+    "Progressive overload is the only rule that matters. Add weight, reps, or sets every session where you can. Small increases compound into significant results.",
+  MUSCLE_GYM_ADVANCED:
+    "At the advanced level, recovery management is as important as training load. Honour the deload weeks — they're not weakness, they're what allows the next phase to work.",
+  POWERBUILDING_GYM_ADVANCED:
+    "Powerbuilding rewards patience. Don't chase aesthetics and strength gains simultaneously at maximum effort. Let the structure do the work — your job is to show up and execute.",
+  MUSCLE_HOME_RECOVERY:
+    "Flexibility and mobility are strength assets, not extras. Athletes who prioritise movement quality lift heavier and stay injury-free longer. Treat this session seriously.",
+  FUNCTIONAL_HOME_BEGINNER:
+    "Functional fitness is about quality of movement above all. Focus on how well you move, not how much you do. That foundation makes every future program more effective.",
+  FUNCTIONAL_HOME_INTERMEDIATE:
+    "Athletic conditioning rewards effort and consistency equally. Push hard when it counts, move well always. Aim to feel fitter — not just more exhausted — after each week.",
+  FUNCTIONAL_HOME_ADVANCED:
+    "At this level, mental toughness is a training variable. The moments you want to quit mid-set are exactly when the adaptation happens. Stay in the work.",
+  FUNCTIONAL_GYM_BEGINNER:
+    "Every expert was once a beginner. Follow the rest periods, hit your reps, and show up consistently. Results at this stage come from attendance, not intensity.",
+  FUNCTIONAL_GYM_INTERMEDIATE:
+    "Conditioning improves faster than strength, so don't neglect the heavy work. Balance is the goal. A strong base makes every conditioning session more productive.",
+  FUNCTIONAL_GYM_ADVANCED:
+    "Track performance metrics, not just how you feel. Advanced athletes sometimes feel strong on bad days and weak on good ones. Data doesn't lie — let the numbers guide you.",
+  CROSSFIT_GYM_ADVANCED:
+    "WOD-style training rewards pacing intelligence over ego. Starting too hot burns you out mid-session. Know your sustainable pace — then push 5% beyond it.",
+  FUNCTIONAL_HOME_RECOVERY:
+    "Active recovery is a competitive advantage. Athletes who move on their off days perform better on their training days. This session is an investment, not optional filler.",
+};
+
 export async function GET(req: NextRequest) {
   try {
     const session = await getMobileOrWebSession(req);
@@ -61,6 +114,8 @@ export async function GET(req: NextRequest) {
             sessionDurationMin: true,
             durationWeeks: true,
             sessionsPerWeek: true,
+            difficulty: true,
+            templateType: true,
             plannedSessions: {
               orderBy: { sessionNumber: "asc" },
               take: 1,
@@ -82,6 +137,9 @@ export async function GET(req: NextRequest) {
         allPrograms: allPrograms.map(({ plannedSessions: _, ...p }) => ({
           ...p,
           imageUrl: resolvePlanImage({ ...p, plannedSessions: _ }, "miniCard"),
+          coachingNote: p.templateType
+            ? (COACHING_NOTES[p.templateType] ?? null)
+            : null,
         })),
       });
     }
@@ -230,6 +288,9 @@ export async function GET(req: NextRequest) {
       allPrograms: allPrograms.map(({ plannedSessions: _, ...p }) => ({
         ...p,
         imageUrl: resolvePlanImage({ ...p, plannedSessions: _ }, "miniCard"),
+        coachingNote: p.templateType
+          ? (COACHING_NOTES[p.templateType] ?? null)
+          : null,
       })),
       activeEquipmentIds,
     });

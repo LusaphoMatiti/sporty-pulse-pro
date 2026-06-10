@@ -118,14 +118,14 @@ router.post(
       case "subscription.create": {
         // BUG FIX: was missing this destructure in the original file
         const { customer } = event.data;
-        console.log(`✅ Subscription created for ${customer.email}`);
+        console.log(` Subscription created for ${customer.email}`);
         // TODO: mark user as premium in your DB
         break;
       }
 
       case "subscription.disable": {
         const { customer } = event.data;
-        console.log(`⚠️  Subscription disabled for ${customer.email}`);
+        console.log(`  Subscription disabled for ${customer.email}`);
         // TODO: revoke premium access in your DB
         break;
       }
