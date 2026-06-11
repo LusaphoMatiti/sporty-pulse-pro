@@ -13,7 +13,7 @@ import {
 
 export const dynamic = "force-dynamic";
 
-// ─── Coaching notes by templateType ──────────────────────────────────────────
+// ─── Coaching notes by templateType ──
 // Sourced from template.json skeletons. Injected at response time — no DB column needed.
 const COACHING_NOTES: Record<string, string> = {
   FAT_LOSS_HOME_BEGINNER:
