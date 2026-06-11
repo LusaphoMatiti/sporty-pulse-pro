@@ -90,7 +90,7 @@
       "description": "A full-body gym circuit blending barbell lifts with explosive movements. Builds athletic capacity, strength endurance, and cardiovascular fitness simultaneously."
     },
     {
-      "workoutName": "AMRAP Fitness",
+      "workoutName": "AMRAP",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -177,7 +177,7 @@
       "description": "An AMRAP-style session using functional movements to test work capacity. Goblet squats, kettlebell swings, and rows cycle continuously for maximum conditioning output."
     },
     {
-      "workoutName": "Cardio Strength Intervals",
+      "workoutName": "Cardio Strength",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "BEGINNER",
@@ -435,7 +435,7 @@
       "description": "A strength-meets-cardio session pairing compound lifts with high-intensity intervals. Pulls, swings, and wall balls combine to build a well-rounded fitness base."
     },
     {
-      "workoutName": "No Equipment HIIT",
+      "workoutName": "Bodyweight HIIT",
       "goal": "GET_FIT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -609,7 +609,7 @@
       "description": "High-intensity intervals fused with kettlebell and barbell strength work. Pushes cardiovascular limits while building total body strength through compound movements."
     },
     {
-      "workoutName": "Lower Fitness Day",
+      "workoutName": "Lower Body Fitness",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -696,7 +696,7 @@
       "description": "An upper/lower split lower body session combining squats, hinges, and jumps. Builds leg strength and athletic power through structured gym training."
     },
     {
-      "workoutName": "Upper Fitness Day",
+      "workoutName": "Upper Body Fitness",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1114,7 +1114,7 @@
       "description": "An advanced athletic circuit combining sprint intervals with barbell strength work. Develops speed, power, and muscular endurance for high-performance conditioning."
     },
     {
-      "workoutName": "30-Minute Express",
+      "workoutName": "Express Workout",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1201,7 +1201,7 @@
       "description": "A time-efficient full-body session designed to build fitness in under 30 minutes. Kettlebell and dumbbell circuits keep intensity high with minimal rest."
     },
     {
-      "workoutName": "Machine & Free Weights",
+      "workoutName": "Machine & Weights",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "BEGINNER",
@@ -1459,7 +1459,7 @@
       "description": "A sport-prep session combining box jumps, barbell squats, and sprint drills. Designed to build the reactive strength and athletic power needed for sport performance."
     },
     {
-      "workoutName": "MetCon Blast",
+      "workoutName": "MetCon",
       "goal": "GET_FIT",
       "location": "GYM",
       "level": "INTERMEDIATE",

@@ -3,7 +3,7 @@
   "totalWorkouts": 20,
   "workouts": [
     {
-      "workoutName": "Upper Hypertrophy",
+      "workoutName": "Upper Body Hypertrophy",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -90,7 +90,7 @@
       "description": "A chest and back volume session built around compound pressing and pulling. Designed to maximise upper body mass with controlled tempos and strategic supersets."
     },
     {
-      "workoutName": "Leg Mass Builder",
+      "workoutName": "Leg Day",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -177,7 +177,7 @@
       "description": "A high-volume lower body day anchored by barbell squats and RDLs. Targets quads, hamstrings, and glutes through progressive overload and burnout finishers."
     },
     {
-      "workoutName": "Push Day",
+      "workoutName": "Chest & Shoulders",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -264,7 +264,7 @@
       "description": "Chest and shoulder emphasis with heavy pressing followed by isolation work. A classic PPL push session structured for hypertrophy from every angle."
     },
     {
-      "workoutName": "Pull Day",
+      "workoutName": "Back & Biceps",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -351,7 +351,7 @@
       "description": "Back and bicep width builder using vertical and horizontal pulls. Prioritises lat development and rear delt health for a balanced upper body."
     },
     {
-      "workoutName": "Posterior Chain Day",
+      "workoutName": "Posterior Chain",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -525,7 +525,7 @@
       "description": "Dedicated bicep and tricep volume day using supersets and drop sets. Maximises arm pump and time under tension for serious sleeve-filling gains."
     },
     {
-      "workoutName": "Chest & Tri Blast",
+      "workoutName": "Chest & Triceps",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "ADVANCED",
@@ -612,7 +612,7 @@
       "description": "An advanced push session pairing heavy chest compounds with tricep isolation. High volume, mechanical drop sets, and a burner finisher for upper body hypertrophy."
     },
     {
-      "workoutName": "Back Thickness Builder",
+      "workoutName": "Back & Biceps",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "ADVANCED",
@@ -699,7 +699,7 @@
       "description": "A rowing-focused pull day targeting mid-back thickness and bicep density. Uses barbell, dumbbell, and cable rows to attack the back from multiple angles."
     },
     {
-      "workoutName": "Glute & Hamstring Focus",
+      "workoutName": "Glutes & Hamstrings",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -786,7 +786,7 @@
       "description": "A specialisation session built entirely around posterior chain development. Hip thrusts, Romanian deadlifts, and Nordic curls drive glute and hamstring hypertrophy."
     },
     {
-      "workoutName": "Shoulder & Rear Delt Day",
+      "workoutName": "Shoulder & Delts",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -873,7 +873,7 @@
       "description": "Overhead pressing paired with lateral and rear delt isolation work. Builds shoulder width and rotator cuff health for a full, balanced deltoid."
     },
     {
-      "workoutName": "Heavy Compound Day",
+      "workoutName": "Heavy Compounds",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "ADVANCED",
@@ -1047,7 +1047,7 @@
       "description": "A home-friendly muscle-building session using dumbbells only. Full-body stimulus across push, pull, and hinge patterns with no barbell required."
     },
     {
-      "workoutName": "Tempo Hypertrophy",
+      "workoutName": "Tempo Training",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1134,7 +1134,7 @@
       "description": "A time-under-tension session using slow, deliberate tempos on every rep. Challenges muscles differently to standard lifting and accelerates hypertrophy stimulus."
     },
     {
-      "workoutName": "High Rep Volume Day",
+      "workoutName": "High Volume",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1221,7 +1221,7 @@
       "description": "Upper body hypertrophy through high-rep sets and pump-focused training. Designed to drive blood flow, muscle fullness, and sarcoplasmic growth."
     },
     {
-      "workoutName": "Unilateral Hypertrophy",
+      "workoutName": "Unilateral Strength",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1308,7 +1308,7 @@
       "description": "Single-limb training to correct imbalances and maximise isolation. Lunges, single-arm presses, and unilateral pulls build symmetry and functional strength."
     },
     {
-      "workoutName": "Calisthenics Strength",
+      "workoutName": "Calisthenics",
       "goal": "BUILD_MUSCLE",
       "location": "HOME",
       "level": "ADVANCED",
@@ -1395,7 +1395,7 @@
       "description": "Advanced bodyweight hypertrophy using rings, weighted progressions, and gymnastic-style movements. Builds functional muscle mass without a barbell in sight."
     },
     {
-      "workoutName": "Beginner Foundation",
+      "workoutName": "Foundation",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "BEGINNER",
@@ -1482,7 +1482,7 @@
       "description": "A full-body introduction to resistance training for new gym-goers. Covers the fundamental movement patterns with manageable loads and clear progression cues."
     },
     {
-      "workoutName": "Mechanical Drop Set",
+      "workoutName": "Drop Sets",
       "goal": "BUILD_MUSCLE",
       "location": "GYM",
       "level": "ADVANCED",

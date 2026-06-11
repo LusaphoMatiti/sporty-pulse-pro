@@ -3,7 +3,7 @@
   "totalWorkouts": 20,
   "workouts": [
     {
-      "workoutName": "Foundation Burn A",
+      "workoutName": "Fat Burn A",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -112,7 +112,7 @@
       "description": "A beginner home fat-loss session using bodyweight squats, push-ups, and core work. Builds movement quality and burns calories without any equipment."
     },
     {
-      "workoutName": "Foundation Burn B",
+      "workoutName": "Fat Burn B",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -221,7 +221,7 @@
       "description": "A hinge and pull-focused beginner circuit for home training. Good mornings, incline push-ups, and planks build posterior chain strength while keeping intensity accessible."
     },
     {
-      "workoutName": "Foundation Burn C",
+      "workoutName": "Fat Burn C",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -330,7 +330,7 @@
       "description": "A unilateral-focused fat-loss session using reverse lunges and single-leg hinges. Develops balance, corrects imbalances, and burns calories through single-limb training."
     },
     {
-      "workoutName": "Foundation Burn D",
+      "workoutName": "Fat Burn D",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -439,7 +439,7 @@
       "description": "A low-impact beginner session ideal for those with joint sensitivities. Wall sits, push-ups, and isometric holds drive calorie burn without high-impact movement."
     },
     {
-      "workoutName": "Foundation Burn E",
+      "workoutName": "Fat Burn E",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -548,7 +548,7 @@
       "description": "A glute and core activation circuit for beginners at home. Glute bridges, dead bugs, and donkey kicks build foundational strength and ignite the posterior chain."
     },
     {
-      "workoutName": "Fat Burn Circuit",
+      "workoutName": "Burn Circuit",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "INTERMEDIATE",
@@ -657,7 +657,7 @@
       "description": "An intermediate home circuit combining jump squats and dumbbell work with cardio bursts. Elevates heart rate and builds lean muscle through alternating strength and conditioning sets."
     },
     {
-      "workoutName": "Cardio Strength Burn",
+      "workoutName": "Cardio Burn",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "INTERMEDIATE",
@@ -766,7 +766,7 @@
       "description": "A home fat-loss session blending strength lunges and push variations with high knees and cardio. Builds endurance and burns fat through structured interval-style training."
     },
     {
-      "workoutName": "HIIT Strength Burn",
+      "workoutName": "HIIT Burn",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "INTERMEDIATE",
@@ -875,7 +875,7 @@
       "description": "A high-intensity home session pairing explosive jumps and burpees with strength movements. Maximises calorie burn and metabolic conditioning in a short, sharp workout."
     },
     {
-      "workoutName": "Dumbbell Burner",
+      "workoutName": "Dumbbell Burn",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "INTERMEDIATE",
@@ -1093,7 +1093,7 @@
       "description": "A full-body home circuit targeting all major muscle groups through compound movements. Sumo squats, push-ups, and mountain climbers drive fat loss and fitness simultaneously."
     },
     {
-      "workoutName": "Advanced Home Burn",
+      "workoutName": "Advanced Burn",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "ADVANCED",
@@ -1202,7 +1202,7 @@
       "description": "A high-intensity advanced session using burpees, pistol squats, and plyometrics. Demands full-body strength and serious cardio fitness to push fat loss to the limit."
     },
     {
-      "workoutName": "Plyometric Power Burn",
+      "workoutName": "Plyo Burn",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "ADVANCED",
@@ -1311,7 +1311,7 @@
       "description": "An advanced bodyweight fat-loss session built around explosive jump training. Skater lunges, split squats, and jump squats build power while burning maximum calories."
     },
     {
-      "workoutName": "Gym Burn Starter",
+      "workoutName": "Gym Burn",
       "goal": "LOSE_WEIGHT",
       "location": "GYM",
       "level": "BEGINNER",
@@ -1420,7 +1420,7 @@
       "description": "A beginner gym circuit using machines and goblet squats to build fat-loss foundations. Structured, safe, and effective for those new to training in a gym environment."
     },
     {
-      "workoutName": "Gym Strength Circuit",
+      "workoutName": "Strength Circuit",
       "goal": "LOSE_WEIGHT",
       "location": "GYM",
       "level": "INTERMEDIATE",
@@ -1529,7 +1529,7 @@
       "description": "An intermediate gym fat-loss session pairing barbell squats and kettlebell swings with push-ups. Builds lean muscle and cardiovascular conditioning through compound-focused circuits."
     },
     {
-      "workoutName": "Gym HIIT Strength",
+      "workoutName": "HIIT Strength",
       "goal": "LOSE_WEIGHT",
       "location": "GYM",
       "level": "ADVANCED",
@@ -1638,7 +1638,7 @@
       "description": "An advanced gym session combining barbell lifts, burpees, and kettlebell work at high intensity. Pushes metabolic output and strength simultaneously for maximum fat loss."
     },
     {
-      "workoutName": "Foundation Burn T",
+      "workoutName": "Fat Burn T",
       "goal": "LOSE_WEIGHT",
       "location": "HOME",
       "level": "BEGINNER",
@@ -1747,7 +1747,7 @@
       "description": "A beginner full-body balance session mixing goblet squats, good mornings, and planks. Builds movement competency and daily calorie burn for those starting their fat-loss journey."
     },
     {
-      "workoutName": "Gym Cardio Strength",
+      "workoutName": "Cardio Strength",
       "goal": "LOSE_WEIGHT",
       "location": "GYM",
       "level": "BEGINNER",
@@ -1856,7 +1856,7 @@
       "description": "A beginner gym session pairing bodyweight movements with light cardio bursts. Introduces gym training for fat loss with manageable intensity and clear progression."
     },
     {
-      "workoutName": "Kettlebell HIIT Burn",
+      "workoutName": "Kettlebell Burn",
       "goal": "LOSE_WEIGHT",
       "location": "GYM",
       "level": "INTERMEDIATE",
