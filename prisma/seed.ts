@@ -7,6 +7,7 @@ import {
   PrimaryGoal,
   EnvironmentTarget,
   SexTarget,
+  TemplateType,
 } from "../src/generated/prisma";
 import { PrismaPg } from "@prisma/adapter-pg";
 import exercises from "../src/training/exercises";
@@ -38,6 +39,7 @@ interface RawWorkout {
   environmentTarget?: string;
   collection?: string;
   duration: string | number;
+  description?: string;
   mainWorkout: RawExercise[];
   imageUrl?: string;
   videoUrl?: string;
@@ -331,6 +333,53 @@ function toSexTarget(sex: string | undefined): SexTarget | null {
   return null; // "ANY" → null = shown to everyone
 }
 
+/**
+ * Derive the templateType key from goal + location + level.
+ * This key indexes into the COACHING_NOTES map in the API routes.
+ *
+ * Special cases by workout name take priority:
+ *  - "CrossFit Performance" → CROSSFIT_GYM_ADVANCED
+ *  - "Active Recovery"      → FUNCTIONAL_HOME_RECOVERY
+ *
+ * All other workouts derive their key from:
+ *  goal:     Lose Weight → FAT_LOSS, Build Muscle → MUSCLE, Get Fit → FUNCTIONAL
+ *  location: Home → HOME, Gym → GYM
+ *  level:    Beginner → BEGINNER, Intermediate → INTERMEDIATE, Advanced → ADVANCED
+ */
+function toTemplateType(
+  workoutName: string,
+  goal: string,
+  location: string,
+  level: string,
+): TemplateType {
+  // Named special cases
+  if (workoutName === "CrossFit Performance")
+    return "CROSSFIT_GYM_ADVANCED" as TemplateType;
+  if (workoutName === "Active Recovery")
+    return "FUNCTIONAL_HOME_RECOVERY" as TemplateType;
+
+  const GOAL_MAP: Record<string, string> = {
+    "lose weight": "FAT_LOSS",
+    "build muscle": "MUSCLE",
+    "get fit": "FUNCTIONAL",
+  };
+  const LOC_MAP: Record<string, string> = {
+    home: "HOME",
+    gym: "GYM",
+  };
+  const LEVEL_MAP: Record<string, string> = {
+    beginner: "BEGINNER",
+    intermediate: "INTERMEDIATE",
+    advanced: "ADVANCED",
+  };
+
+  const g = GOAL_MAP[goal.toLowerCase()] ?? "FUNCTIONAL";
+  const l = LOC_MAP[location.toLowerCase()] ?? "HOME";
+  const lv = LEVEL_MAP[level.toLowerCase()] ?? "BEGINNER";
+
+  return `${g}_${l}_${lv}` as TemplateType;
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // HELPERS: parsing
 // ─────────────────────────────────────────────────────────────────────────────
@@ -387,6 +436,7 @@ interface NormalisedWorkout {
   environmentTarget?: string;
   collection?: string;
   duration: number;
+  description?: string;
   exercises: RawExercise[];
   imageUrl?: string;
   videoUrl?: string;
@@ -406,6 +456,7 @@ function normaliseJSON(raw: WorkoutGoalFile): NormalisedWorkout[] {
     environmentTarget: w.environmentTarget,
     collection: w.collection,
     duration: parseDuration(w.duration),
+    description: w.description,
     exercises: w.mainWorkout.filter((e) => e.exercise !== undefined),
     imageUrl: w.imageUrl,
     videoUrl: w.videoUrl,
@@ -456,19 +507,27 @@ const EXERCISE_NAME_ALIASES: Record<string, string> = {
   // Lateral raise
   "Lateral Raise": "Dumbbell Lateral Raise",
   "Lateral Raise (DB)": "Dumbbell Lateral Raise",
-  "Upright Row (DB)": "Dumbbell Upright Row",
+  // "Upright Row (DB)" is already the canonical exercises.ts name
 
   // Sprint
   "Sprint Intervals (Running)": "Sprint Intervals",
 
   // Plyo
-  "Skater Lunge": "Skater Jump",
+  "Skater Jump": "Plyometric Lunge (Jump Lunge)",
   "Forward Lunge": "Walking Lunge",
 
-  // Conditioning
-  "Battle Ropes": "Battle Rope Waves",
-  "Rowing Machine": "Rowing Erg",
-  "Assault Bike": "Assault Bike Sprint",
+  // Conditioning — JSON names → exercises.ts canonical names
+  "Battle Rope Waves": "Battle Ropes",
+  "Rowing Erg": "Rowing Machine",
+  "Assault Bike Sprint": "Assault Bike",
+
+  // Glute / lower body
+  "Single-Leg Glute Bridge": "Single Leg Hip Thrust",
+  "Donkey Kick": "Glute Bridge",
+  "Fire Hydrant": "Glute Bridge",
+
+  // Push variants
+  "Wide Push-Up": "Push-Up",
 
   // KB
   "Kettlebell Goblet Squat": "Goblet Squat",
@@ -638,6 +697,14 @@ async function main() {
     // ── Tier ─────────────────────────────────────────────────────────────
     const tier: PlanTier = PlanTier.FREE;
 
+    // ── TemplateType: keys into COACHING_NOTES in the API routes ─────────
+    const templateType = toTemplateType(
+      workout.workoutName,
+      workout.goal,
+      workout.location,
+      workout.level,
+    );
+
     // ── Asset URLs ────────────────────────────────────────────────────────
     const imageUrl = workout.imageUrl ?? null;
     const videoUrl = workout.videoUrl ?? null;
@@ -646,7 +713,9 @@ async function main() {
     const plan = await prisma.workoutPlan.upsert({
       where: { name: workout.workoutName },
       update: {
-        description: `${workout.goal} — ${workout.location} — ${workout.level}`,
+        description:
+          workout.description ??
+          `${workout.goal} — ${workout.location} — ${workout.level}`,
         muscleGroup,
         durationWeeks: 4,
         sessionsPerWeek: 3,
@@ -659,10 +728,13 @@ async function main() {
         environmentTarget,
         sexTarget,
         collection,
+        templateType,
       },
       create: {
         name: workout.workoutName,
-        description: `${workout.goal} — ${workout.location} — ${workout.level}`,
+        description:
+          workout.description ??
+          `${workout.goal} — ${workout.location} — ${workout.level}`,
         muscleGroup,
         durationWeeks: 4,
         sessionsPerWeek: 3,
@@ -675,6 +747,7 @@ async function main() {
         environmentTarget,
         sexTarget,
         collection,
+        templateType,
       },
     });
 
