@@ -1,30 +1,20 @@
-import { getSessionFromRequest } from "@/lib/getSession";
-import { prisma } from "@/lib/prisma";
-import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { matchTemplate, TEMPLATE_LABELS } from "@/lib/templateMatcher";
-import { resolveExercises, getUserEquipmentIds } from "@/lib/substitution";
-import { IDENTITY_LABELS, IDENTITY_DESCRIPTIONS } from "@/lib/identity";
+import { getMobileOrWebSession } from "@/lib/mobile-auth";
+import { prisma } from "@/lib/prisma";
+import { InstanceStatus } from "@/generated/prisma";
+import type { SessionDraft } from "@/lib/types";
+import { buildCloudinaryUrl, resolvePlanImage } from "@/lib/cloudinary";
 import {
-  Identity,
-  TrainingLocation,
-  UserLevel,
-  EnvironmentTarget,
-  Plan,
-  EquipmentSource,
-  PlanTier,
-} from "@/generated/prisma";
-import type { PlannedExerciseWithRelations } from "@/lib/substitution";
+  apiSuccess,
+  unauthorized,
+  notFound,
+  internalError,
+} from "@/lib/api-response";
 
 export const dynamic = "force-dynamic";
 
-// Constants
-
-/** Free users may only have 1 active program at a time. */
-const FREE_PROGRAM_CAP = 1;
-
-// Coaching notes by templateType
-// Mirrors the same map in /api/training/route.ts — injected at response time.
+// ─── Coaching notes by templateType ──
+// Sourced from template.json skeletons. Injected at response time — no DB column needed.
 const COACHING_NOTES: Record<string, string> = {
   FAT_LOSS_HOME_BEGINNER:
     "Focus on moving with control, not speed. Consistency beats intensity at this stage — showing up every session matters more than how hard you push.",
@@ -76,368 +66,236 @@ const COACHING_NOTES: Record<string, string> = {
     "Active recovery is a competitive advantage. Athletes who move on their off days perform better on their training days. This session is an investment, not optional filler.",
 };
 
-// ─── Access resolver ──────────────────────────────────────────────────────────
-
-interface AccessContext {
-  isPro: boolean;
-  isEquipment: boolean;
-  hasActiveTrial: boolean;
-  trialExpiresAt: string | null;
-  canStartNewProgram: boolean;
-  activeInstanceCount: number;
-  programCap: number | null;
-  activeEquipmentIds: string[];
-  expiredEquipmentIds: string[];
-  activePlanId: string | null;
-  declaredEquipmentIds: string[];
-}
-
-async function resolveAccess(userId: string): Promise<AccessContext> {
-  const now = new Date();
-
-  const [subscription, userEquipmentRecords, activeInstances] =
-    await Promise.all([
-      prisma.subscription.findUnique({
-        where: { userId },
-        select: { plan: true, status: true },
-      }),
-      prisma.userEquipment.findMany({
-        where: { userId },
-        select: { source: true, equipmentId: true, trialExpiresAt: true },
-      }),
-      prisma.planInstance.findMany({
-        where: { userId, status: "ACTIVE" },
-        select: { id: true, planId: true },
-      }),
-    ]);
-
-  const activePlan =
-    subscription?.status === "active" ? subscription.plan : null;
-
-  const isPro = activePlan === Plan.PRO;
-  const isEquipment = activePlan === Plan.EQUIPMENT;
-
-  // Declared trial — find the most recently expiring active one
-  const activeDeclared = userEquipmentRecords
-    .filter(
-      (r) =>
-        r.source === EquipmentSource.DECLARED &&
-        r.trialExpiresAt != null &&
-        r.trialExpiresAt > now,
-    )
-    .sort(
-      (a, b) =>
-        (b.trialExpiresAt?.getTime() ?? 0) - (a.trialExpiresAt?.getTime() ?? 0),
-    );
-
-  const hasActiveTrial = activeDeclared.length > 0;
-  const trialExpiresAt =
-    activeDeclared[0]?.trialExpiresAt?.toISOString() ?? null;
-
-  // Equipment IDs currently active (purchased or in-trial declared)
-  const activeEquipmentIds = userEquipmentRecords
-    .filter(
-      (r) =>
-        r.source === EquipmentSource.PURCHASED ||
-        (r.source === EquipmentSource.DECLARED &&
-          r.trialExpiresAt != null &&
-          r.trialExpiresAt > now),
-    )
-    .map((r) => r.equipmentId);
-
-  // Equipment IDs whose trial has expired
-  const expiredEquipmentIds = userEquipmentRecords
-    .filter(
-      (r) =>
-        r.source === EquipmentSource.DECLARED &&
-        r.trialExpiresAt != null &&
-        r.trialExpiresAt <= now,
-    )
-    .map((r) => r.equipmentId);
-
-  const declaredEquipmentIds = userEquipmentRecords
-    .filter((r) => r.source === EquipmentSource.DECLARED)
-    .map((r) => r.equipmentId);
-
-  const canUnlimitedPrograms = isPro || isEquipment;
-  const programCap = canUnlimitedPrograms ? null : FREE_PROGRAM_CAP;
-  const activeInstanceCount = activeInstances.length;
-  const canStartNewProgram =
-    canUnlimitedPrograms || activeInstanceCount < FREE_PROGRAM_CAP;
-
-  const activePlanId = activeInstances[0]?.planId ?? null;
-
-  return {
-    isPro,
-    isEquipment,
-    hasActiveTrial,
-    trialExpiresAt,
-    canStartNewProgram,
-    activeInstanceCount,
-    programCap,
-    activeEquipmentIds,
-    expiredEquipmentIds,
-    activePlanId,
-    declaredEquipmentIds,
-  };
-}
-
-// ─── Plan filter ──────────────────────────────────────────────────────────────
-
-/**
- * Server-side plan filter — runs before the payload leaves the API.
- *
- * LOCATION (EnvironmentTarget):
- *   HOME_BODYWEIGHT → shown to HOME users only (bodyweight-only plan, always free)
- *   HOME_EQUIPMENT  → shown to HOME users only (requires equipment)
- *   GYM             → shown to GYM users only
- *   ANY / null      → shown to everyone
- *
- * LEVEL (difficulty vs experienceLevel):
- *   Plan difficulty is stored as a free-form string that mirrors UserLevel values.
- *   - BEGINNER users  → see BEGINNER plans only (+ null difficulty)
- *   - INTERMEDIATE    → see BEGINNER + INTERMEDIATE (+ null)
- *   - ADVANCED        → see everything
- *   - null user level → see everything (identity not yet assigned)
- *
- * BODYWEIGHT plans (equipmentId = null, environmentTarget = HOME_BODYWEIGHT or ANY):
- *   Always shown — never locked regardless of tier.
- */
-function planMatchesUser(
-  plan: {
-    environmentTarget: EnvironmentTarget | null;
-    difficulty: string | null;
-    equipmentId: string | null;
-  },
-  user: {
-    trainingLocation: TrainingLocation | null;
-    experienceLevel: UserLevel | null;
-  },
-): boolean {
-  // ── Location filter ──────────────────────────────────────────────────────
-  const env = plan.environmentTarget;
-  const loc = user.trainingLocation;
-
-  if (env !== null && env !== EnvironmentTarget.ANY) {
-    if (
-      (env === EnvironmentTarget.HOME_BODYWEIGHT ||
-        env === EnvironmentTarget.HOME_EQUIPMENT) &&
-      loc !== TrainingLocation.HOME
-    ) {
-      return false;
-    }
-    if (env === EnvironmentTarget.GYM && loc !== TrainingLocation.GYM) {
-      return false;
-    }
-  }
-
-  // ── Level filter ─────────────────────────────────────────────────────────
-  // Only filter when both user level and plan difficulty are present
-  const userLevel = user.experienceLevel;
-  const planDifficulty = plan.difficulty?.toUpperCase();
-
-  if (userLevel && planDifficulty) {
-    if (userLevel === UserLevel.BEGINNER && planDifficulty !== "BEGINNER") {
-      return false;
-    }
-    if (userLevel === UserLevel.INTERMEDIATE && planDifficulty === "ADVANCED") {
-      return false;
-    }
-    // ADVANCED sees everything
-  }
-
-  return true;
-}
-
-// ─── Route ────────────────────────────────────────────────────────────────────
-
 export async function GET(req: NextRequest) {
-  const session = await getSessionFromRequest(req);
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
+  try {
+    const session = await getMobileOrWebSession(req);
+    if (!session) return unauthorized();
 
-  const userId = session.user.id;
+    const userId = session.user.id;
 
-  const user = await prisma.user.findUnique({
-    where: { id: userId },
-    select: {
-      identity: true,
-      primaryGoal: true,
-      trainingLocation: true,
-      experienceLevel: true,
-    },
-  });
+    const [instance, subscription, userEquipmentRecords, allPrograms] =
+      await Promise.all([
+        prisma.planInstance.findFirst({
+          where: { userId, status: InstanceStatus.ACTIVE },
+          select: {
+            id: true,
+            level: true,
+            planId: true,
+            currentSession: true,
+            sessionDraft: true,
+            plan: {
+              select: {
+                id: true,
+                name: true,
+                muscleGroup: true,
+                imageUrl: true,
+                sessionDurationMin: true,
+              },
+            },
+          },
+        }),
+        prisma.subscription.findUnique({
+          where: { userId },
+          select: { plan: true, status: true },
+        }),
+        prisma.userEquipment.findMany({
+          where: { userId },
+          select: { source: true, equipmentId: true, trialExpiresAt: true },
+        }),
+        prisma.workoutPlan.findMany({
+          orderBy: { name: "asc" },
+          select: {
+            id: true,
+            name: true,
+            description: true,
+            tier: true,
+            muscleGroup: true,
+            imageUrl: true,
+            sessionDurationMin: true,
+            durationWeeks: true,
+            sessionsPerWeek: true,
+            difficulty: true,
+            templateType: true,
+            plannedSessions: {
+              orderBy: { sessionNumber: "asc" },
+              take: 1,
+              select: {
+                plannedExercises: {
+                  orderBy: { order: "asc" },
+                  take: 1,
+                  select: { exercise: { select: { thumbnailUrl: true } } },
+                },
+              },
+            },
+          },
+        }),
+      ]);
 
-  if (!user) {
-    return NextResponse.json({ error: "User not found" }, { status: 404 });
-  }
+    if (!instance) {
+      return apiSuccess({
+        instanceId: null,
+        allPrograms: allPrograms.map(({ plannedSessions: _, ...p }) => ({
+          ...p,
+          imageUrl: resolvePlanImage({ ...p, plannedSessions: _ }, "miniCard"),
+          coachingNote: p.templateType
+            ? (COACHING_NOTES[p.templateType] ?? null)
+            : null,
+        })),
+      });
+    }
 
-  const access = await resolveAccess(userId);
-
-  // Declared equipment name for the trial banner
-  let declaredEquipmentName: string | null = null;
-  if (access.declaredEquipmentIds.length > 0) {
-    const eq = await prisma.equipment.findFirst({
-      where: { id: { in: access.declaredEquipmentIds } },
-      select: { name: true },
-    });
-    declaredEquipmentName = eq?.name ?? null;
-  }
-
-  // ── No identity yet — return all plans with real access context ───────────
-  if (!user.identity) {
-    const allPrograms = await prisma.workoutPlan.findMany({
-      orderBy: { name: "asc" },
-      select: {
-        id: true,
-        name: true,
-        description: true,
-        muscleGroup: true,
-        durationWeeks: true,
-        sessionsPerWeek: true,
-        difficulty: true,
-        tier: true,
-        imageUrl: true,
-        sessionDurationMin: true,
-        identityTarget: true,
-        goalTarget: true,
-        environmentTarget: true,
-        equipmentId: true,
-      },
-    });
-
-    const plans = allPrograms.map((p) => ({
-      ...p,
-      // A plan requires equipment when it has a direct equipmentId link
-      requiresEquipment: p.equipmentId !== null,
-    }));
-
-    return NextResponse.json(
-      { plans, access, declaredEquipmentName, userIdentity: null },
-      { headers: { "Cache-Control": "no-store" } },
-    );
-  }
-
-  // ── Identity assigned — full filtered + resolved response ─────────────────
-  const userEquipmentIds = await getUserEquipmentIds(userId);
-  const hasEquipment = userEquipmentIds.length > 0;
-
-  const templateMatch = matchTemplate({
-    identity: user.identity,
-    goal: user.primaryGoal,
-    trainingLocation: user.trainingLocation,
-    hasEquipment,
-    level: user.experienceLevel ?? UserLevel.BEGINNER,
-  });
-
-  const programs = await prisma.workoutPlan.findMany({
-    include: {
-      plannedSessions: {
-        orderBy: { sessionNumber: "asc" },
-        include: {
+    const [plannedSession, totalSessions] = await Promise.all([
+      prisma.plannedSession.findUnique({
+        where: {
+          planId_sessionNumber: {
+            planId: instance.planId,
+            sessionNumber: instance.currentSession,
+          },
+        },
+        select: {
+          focus: true,
+          estimatedMinutes: true,
           plannedExercises: {
             orderBy: { order: "asc" },
-            include: {
+            select: {
+              id: true,
+              order: true,
+              beginnerSets: true,
+              beginnerReps: true,
+              intermediateSets: true,
+              intermediateReps: true,
+              advancedSets: true,
+              advancedReps: true,
+              restSeconds: true,
               exercise: {
-                include: {
-                  equipment: { include: { equipment: true } },
-                  substitutions: {
-                    include: {
-                      substituteExercise: {
-                        include: {
-                          equipment: { include: { equipment: true } },
-                        },
-                      },
-                    },
+                select: {
+                  id: true,
+                  name: true,
+                  musclesWorked: true,
+                  thumbnailUrl: true,
+                  equipment: {
+                    select: { equipment: { select: { id: true, name: true } } },
                   },
                 },
               },
             },
           },
         },
+      }),
+      prisma.plannedSession.count({ where: { planId: instance.planId } }),
+    ]);
+
+    if (!plannedSession) return notFound("Planned session");
+
+    const now = new Date();
+    const activePlan =
+      subscription?.status === "active" ? subscription.plan : null;
+
+    type TrainingTier = "FREE" | "DECLARED_TRIAL" | "PURCHASED" | "PRO";
+    let tier: TrainingTier = "FREE";
+    let trialExpiresAt: string | null = null;
+
+    if (activePlan === "PRO") {
+      tier = "PRO";
+    } else if (activePlan === "EQUIPMENT") {
+      tier = "PURCHASED";
+    } else {
+      const declared = userEquipmentRecords.find(
+        (r) =>
+          r.source === "DECLARED" &&
+          r.trialExpiresAt != null &&
+          r.trialExpiresAt > now,
+      );
+      if (declared?.trialExpiresAt) {
+        tier = "DECLARED_TRIAL";
+        trialExpiresAt = declared.trialExpiresAt.toISOString();
+      }
+    }
+
+    const boughtFromStore = userEquipmentRecords.some(
+      (r) => r.source === "PURCHASED",
+    );
+
+    const activeEquipmentIds = userEquipmentRecords
+      .filter(
+        (r) =>
+          r.source === "PURCHASED" ||
+          (r.source === "DECLARED" &&
+            r.trialExpiresAt != null &&
+            r.trialExpiresAt > now),
+      )
+      .map((r) => r.equipmentId);
+
+    const levelKey = instance.level;
+
+    const exercisesForView = plannedSession.plannedExercises.map((pe) => ({
+      id: pe.id,
+      order: pe.order,
+      sets:
+        levelKey === "BEGINNER"
+          ? pe.beginnerSets
+          : levelKey === "INTERMEDIATE"
+            ? pe.intermediateSets
+            : pe.advancedSets,
+      reps:
+        levelKey === "BEGINNER"
+          ? pe.beginnerReps
+          : levelKey === "INTERMEDIATE"
+            ? pe.intermediateReps
+            : pe.advancedReps,
+      restSeconds: pe.restSeconds,
+      exercise: {
+        id: pe.exercise.id,
+        name: pe.exercise.name,
+        musclesWorked: pe.exercise.musclesWorked,
+        thumbnailUrl: buildCloudinaryUrl(pe.exercise.thumbnailUrl, "thumb"),
+        equipment: pe.exercise.equipment.map((ee) => ({
+          id: ee.equipment.id,
+          name: ee.equipment.name,
+        })),
       },
-      instances: {
-        where: { userId, status: "ACTIVE" },
-        select: { id: true, currentSession: true, progressionWeek: true },
-        take: 1,
-      },
-    },
-    orderBy: { name: "asc" },
-  });
+    }));
 
-  const resolvedPrograms = programs
-    .filter((program) =>
-      planMatchesUser(
-        {
-          environmentTarget: program.environmentTarget,
-          difficulty: program.difficulty,
-          equipmentId: program.equipmentId,
-        },
-        {
-          trainingLocation: user.trainingLocation,
-          experienceLevel: user.experienceLevel,
-        },
-      ),
-    )
-    .map((program) => {
-      const resolvedSessions = program.plannedSessions.map((ps) => ({
-        id: ps.id,
-        sessionNumber: ps.sessionNumber,
-        focus: ps.focus,
-        estimatedMinutes: ps.estimatedMinutes,
-        exercises: resolveExercises(
-          ps.plannedExercises as PlannedExerciseWithRelations[],
-          userEquipmentIds,
-        ),
-      }));
+    const muscles = [
+      ...new Set(exercisesForView.flatMap((e) => e.exercise.musclesWorked)),
+    ];
 
-      const activeInstance = program.instances[0] ?? null;
+    const planImageUrl =
+      buildCloudinaryUrl(instance.plan.imageUrl, "hero") ??
+      buildCloudinaryUrl(
+        exercisesForView[0]?.exercise.thumbnailUrl ?? null,
+        "hero",
+      );
 
-      return {
-        id: program.id,
-        name: program.name,
-        description: program.description,
-        coachingNote: program.templateType
-          ? (COACHING_NOTES[program.templateType] ?? null)
+    return apiSuccess({
+      instanceId: instance.id,
+      planId: instance.planId,
+      planName: instance.plan.name,
+      muscleGroup: instance.plan.muscleGroup,
+      sessionDurationMin: instance.plan.sessionDurationMin ?? null,
+      level: instance.level,
+      currentSession: instance.currentSession,
+      imageUrl: planImageUrl ?? null,
+      totalSessions,
+      focus: plannedSession.focus,
+      estimatedMinutes: plannedSession.estimatedMinutes,
+      exercisesForView,
+      muscles,
+      tier,
+      trialExpiresAt,
+      boughtFromStore,
+      draft: (instance.sessionDraft as SessionDraft) ?? null,
+      allPrograms: allPrograms.map(({ plannedSessions: _, ...p }) => ({
+        ...p,
+        imageUrl: resolvePlanImage({ ...p, plannedSessions: _ }, "miniCard"),
+        coachingNote: p.templateType
+          ? (COACHING_NOTES[p.templateType] ?? null)
           : null,
-        muscleGroup: program.muscleGroup,
-        durationWeeks: program.durationWeeks,
-        sessionsPerWeek: program.sessionsPerWeek,
-        difficulty: program.difficulty,
-        tier: program.tier,
-        imageUrl: program.imageUrl,
-        sessionDurationMin: program.sessionDurationMin,
-        templateType: program.templateType,
-        identityTarget: program.identityTarget,
-        goalTarget: program.goalTarget,
-        environmentTarget: program.environmentTarget,
-        impactLevel: program.impactLevel,
-        requiresEquipment: program.equipmentId !== null,
-        sessions: resolvedSessions,
-        activeInstance,
-      };
+      })),
+      activeEquipmentIds,
     });
-
-  return NextResponse.json(
-    {
-      plans: resolvedPrograms,
-      access,
-      declaredEquipmentName,
-      userIdentity: user.identity,
-      identity: {
-        value: user.identity,
-        label: IDENTITY_LABELS[user.identity as Identity],
-        description: IDENTITY_DESCRIPTIONS[user.identity as Identity],
-      },
-      templateMatch: {
-        templateType: templateMatch.templateType,
-        label: TEMPLATE_LABELS[templateMatch.templateType],
-        progressionType: templateMatch.progressionType,
-        environmentTarget: templateMatch.environmentTarget,
-        sessionDurationRange: templateMatch.sessionDurationRange,
-      },
-    },
-    { headers: { "Cache-Control": "no-store" } },
-  );
+  } catch (err) {
+    console.error("[training/GET] error:", err);
+    return internalError(err);
+  }
 }

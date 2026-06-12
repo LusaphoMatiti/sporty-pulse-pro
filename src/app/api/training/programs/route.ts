@@ -12,7 +12,6 @@ import {
   EnvironmentTarget,
   Plan,
   EquipmentSource,
-  PlanTier,
 } from "@/generated/prisma";
 import type { PlannedExerciseWithRelations } from "@/lib/substitution";
 
@@ -328,6 +327,7 @@ export async function GET(req: NextRequest) {
     goal: user.primaryGoal,
     trainingLocation: user.trainingLocation,
     hasEquipment,
+    level: user.experienceLevel ?? UserLevel.BEGINNER,
   });
 
   const programs = await prisma.workoutPlan.findMany({
