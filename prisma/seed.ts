@@ -43,6 +43,7 @@ interface RawWorkout {
   mainWorkout: RawExercise[];
   imageUrl?: string;
   videoUrl?: string;
+  equipment?: string | null; // e.g. "Dumbbell", "Kettlebell" — null means no specific equipment required
 }
 
 interface WorkoutGoalFile {
@@ -440,6 +441,7 @@ interface NormalisedWorkout {
   exercises: RawExercise[];
   imageUrl?: string;
   videoUrl?: string;
+  equipment?: string | null; // catalogue name of required equipment, null = no specific requirement
 }
 
 /**
@@ -460,6 +462,7 @@ function normaliseJSON(raw: WorkoutGoalFile): NormalisedWorkout[] {
     exercises: w.mainWorkout.filter((e) => e.exercise !== undefined),
     imageUrl: w.imageUrl,
     videoUrl: w.videoUrl,
+    equipment: w.equipment ?? null,
   }));
 }
 
@@ -709,6 +712,21 @@ async function main() {
     const imageUrl = workout.imageUrl ?? null;
     const videoUrl = workout.videoUrl ?? null;
 
+    // ── Plan-level equipmentId ────────────────────────────────────────────
+    // HOME_EQUIPMENT plans declare a single required piece of equipment in
+    // the JSON (e.g. "Dumbbell", "Kettlebell"). Resolve the name to the DB
+    // Equipment id so the route's equipment-access filter works correctly.
+    // null = no specific equipment required (bodyweight / gym plans).
+    const planEquipmentId: string | null = workout.equipment
+      ? (equipmentByName.get(workout.equipment) ?? null)
+      : null;
+
+    if (workout.equipment && !planEquipmentId) {
+      console.warn(
+        `  ⚠ Unknown equipment name "${workout.equipment}" on "${workout.workoutName}" — equipmentId will be null`,
+      );
+    }
+
     // ── Upsert the WorkoutPlan ────────────────────────────────────────────
     const plan = await prisma.workoutPlan.upsert({
       where: { name: workout.workoutName },
@@ -729,6 +747,7 @@ async function main() {
         sexTarget,
         collection,
         templateType,
+        equipmentId: planEquipmentId,
       },
       create: {
         name: workout.workoutName,
@@ -748,6 +767,7 @@ async function main() {
         sexTarget,
         collection,
         templateType,
+        equipmentId: planEquipmentId,
       },
     });
 
@@ -805,7 +825,7 @@ async function main() {
       });
     }
     console.log(
-      `  ✓ ${workout.workoutName} [${workout.goal} | ${environmentTarget} | ${workout.level} | ${muscleGroup}${collection ? ` | ${collection}` : ""}${sexTarget ? ` | ${sexTarget}` : ""}] — ${validExercises.length} exercises`,
+      `  ✓ ${workout.workoutName} [${workout.goal} | ${environmentTarget} | ${workout.level} | ${muscleGroup}${collection ? ` | ${collection}` : ""}${sexTarget ? ` | ${sexTarget}` : ""}${planEquipmentId ? ` | equip:${workout.equipment}` : ""}] — ${validExercises.length} exercises`,
     );
     seeded++;
   }

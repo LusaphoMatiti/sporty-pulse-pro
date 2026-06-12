@@ -1,0 +1,1 @@
+const { PrismaClient } = require('./src/generated/prisma'); const prisma = new PrismaClient(); prisma.workoutPlan.deleteMany({}).then(function(r) { console.log('Deleted', r.count, 'plans'); prisma.$disconnect(); }); 

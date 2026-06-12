@@ -1,14 +1,3 @@
-/**
- * GET /api/progress
- *
- * Returns ProgressData for the Expo mobile app.
- * Add this file to your Next.js project at:
- *   src/app/api/progress/route.ts
- *
- * Extracts the exact same data logic from src/app/progress/page.tsx
- * and exposes it as a JSON endpoint.
- */
-
 import { NextResponse } from "next/server";
 import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
@@ -29,6 +18,19 @@ type VolumeByMuscle = {
   percentChange: number | null;
 };
 
+type WeeklyVolumeDay = {
+  label: string;
+  kg: number;
+};
+
+type WeeklyVolumeData = {
+  totalKg: number;
+  setsCompleted: number;
+  durationMinutes: number;
+  vsLastWeekPct: number | null;
+  days: WeeklyVolumeDay[];
+};
+
 export async function GET(req: Request) {
   const session = await getMobileOrWebSession(req);
   if (!session)
@@ -47,8 +49,6 @@ export async function GET(req: Request) {
     59,
   );
 
-  // ── Parallel: subscription + userProfile + allLogs ────────────────
-  // All three are independent — fire them together, save 2 round-trips.
   const [subscription, userProfile, allLogs] = await Promise.all([
     prisma.subscription.findUnique({
       where: { userId },
@@ -95,7 +95,7 @@ export async function GET(req: Request) {
       : "FREE";
 
   // ── Trial ─────────────────────────────────────────────────────────
-  // Depends on userPlan so must run after the parallel block above.
+
   const declaredTrial =
     userPlan === "FREE"
       ? await prisma.userEquipment.findFirst({
@@ -410,6 +410,54 @@ export async function GET(req: Request) {
       },
     );
 
+    // Weekly volume (Mon–Sun, current week)
+    const dayLabels = ["M", "T", "W", "T", "F", "S", "S"];
+    const dayBuckets = dayLabels.map(() => 0);
+    let weeklySets = 0;
+
+    for (const log of allLogs) {
+      if (log.completedAt < thisWeekStart) continue;
+      if (!log.weightKg || !log.actualReps || !log.actualSets) continue;
+
+      const vol = log.weightKg * log.actualReps * log.actualSets;
+      const dow = log.completedAt.getDay(); // 0=Sun..6=Sat
+      const idx = dow === 0 ? 6 : dow - 1; // map to Mon=0..Sun=6
+      dayBuckets[idx] += vol;
+      weeklySets += log.actualSets;
+    }
+
+    const weeklyTotalKg = Math.round(dayBuckets.reduce((a, b) => a + b, 0));
+
+    // vs last week, for the trend pill
+    let lastWeekTotalKg = 0;
+    for (const log of allLogs) {
+      if (log.completedAt < lastWeekStart || log.completedAt > lastWeekEnd)
+        continue;
+      if (!log.weightKg || !log.actualReps || !log.actualSets) continue;
+      lastWeekTotalKg += log.weightKg * log.actualReps * log.actualSets;
+    }
+    lastWeekTotalKg = Math.round(lastWeekTotalKg);
+
+    const vsLastWeekPct =
+      lastWeekTotalKg > 0
+        ? Math.round(
+            ((weeklyTotalKg - lastWeekTotalKg) / lastWeekTotalKg) * 100,
+          )
+        : weeklyTotalKg > 0
+          ? 100
+          : null;
+
+    const weeklyVolume: WeeklyVolumeData = {
+      totalKg: weeklyTotalKg,
+      setsCompleted: weeklySets,
+      durationMinutes: 0,
+      vsLastWeekPct,
+      days: dayLabels.map((label, i) => ({
+        label,
+        kg: Math.round(dayBuckets[i]),
+      })),
+    };
+
     // Recovery
     let recentVolume = 0,
       priorVolume = 0,
@@ -459,6 +507,7 @@ export async function GET(req: Request) {
     let goalProgress = 0,
       goalLabel = "",
       goalInsight = "";
+
     if (primaryGoal === "LOSE_WEIGHT") {
       goalLabel = "Fat Loss";
       const volumeComponent =
@@ -506,6 +555,7 @@ export async function GET(req: Request) {
       goalLabel,
       goalInsight,
       recoveryStatus,
+      weeklyVolume,
       recoveryInsight,
       strengthTrends: strengthTrends.slice(0, 5),
       volumeByMuscle,
