@@ -1,6 +1,6 @@
 {
   "goal": "BUILD_MUSCLE",
-  "totalWorkouts": 20,
+  "totalWorkouts": 44,
   "workouts": [
     {
       "workoutName": "Upper Body Hypertrophy",
@@ -1567,6 +1567,1785 @@
       "progressionNotes": "Mechanical dropsets are an advanced technique \u2014 use sparingly (once per 2 weeks per muscle group).",
       "equipment": null,
       "description": "An advanced upper body session using mechanical drop sets to maximise fatigue and volume. Pre-exhausts major movers before following with straight strength sets."
+    },
+    {
+      "workoutName": "Kettlebell Strength Beginner",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Kettlebell Series",
+      "duration": "40 min",
+      "intensity": "MODERATE",
+      "warmup": "Jumping jacks x30, hip circles x10, arm swings x20, bodyweight squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Kettlebell Deadlift",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "2-1-1-0",
+          "rest": "90s",
+          "coachingFocus": "Learn the hip hinge here. Flat back. Drive through the floor.",
+          "id": "KB001"
+        },
+        {
+          "exercise": "Goblet Squat",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "KB at chest. Sit deep. Knees track toes.",
+          "id": "KB002"
+        },
+        {
+          "exercise": "Kettlebell Press",
+          "sets": 3,
+          "reps": "8 each",
+          "tempo": "2-0-2-0",
+          "rest": "75s",
+          "coachingFocus": "Strict press. No leg drive yet. Build shoulder strength first.",
+          "id": "KB003"
+        },
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "Rhythmic",
+          "rest": "60s",
+          "coachingFocus": "Hip hinge powers the swing \u2014 not the arms. Explosive snap.",
+          "id": "KB004"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 3,
+          "reps": "20-30s",
+          "tempo": "Isometric",
+          "rest": "45s",
+          "coachingFocus": "Ribs down. Glutes on. Build core stability that supports all lifting.",
+          "id": "CO001"
+        }
+      ],
+      "finisher": "Goblet Squat x10 + Kettlebell Swing x10: 3 rounds, 60s rest",
+      "cooldown": "Hip flexor lunge 45s each, hamstring stretch 60s each, chest opener 45s",
+      "estimatedCalories": "280-350",
+      "progressionNotes": "Beginner: focus on hinge and swing mechanics before adding load.",
+      "equipment": "Kettlebell",
+      "description": "A beginner kettlebell session covering the fundamental patterns \u2014 deadlift, squat, press, and swing. Builds the movement foundation for all KB training."
+    },
+    {
+      "workoutName": "Kettlebell Hypertrophy",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Kettlebell Series",
+      "duration": "50 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "Jumping jacks x40, hip hinge x10, goblet squat x10, arm circles x20",
+      "mainWorkout": [
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 4,
+          "reps": "20",
+          "tempo": "Rhythmic",
+          "rest": "60s",
+          "coachingFocus": "Hip snap. Horizontal force. 20 reps builds serious posterior chain endurance.",
+          "id": "KB004"
+        },
+        {
+          "exercise": "Goblet Squat",
+          "sets": 4,
+          "reps": "12-15",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Heavy goblet squat is a legitimate quad builder. Go deep every rep.",
+          "id": "KB002"
+        },
+        {
+          "exercise": "Kettlebell Press",
+          "sets": 4,
+          "reps": "8-10 each",
+          "tempo": "2-1-2-0",
+          "rest": "75s",
+          "coachingFocus": "Single arm press builds shoulder strength and anti-rotation core stability.",
+          "id": "KB003"
+        },
+        {
+          "exercise": "Turkish Get-Up",
+          "sets": 3,
+          "reps": "3 each",
+          "tempo": "Slow and deliberate",
+          "rest": "90s",
+          "coachingFocus": "Eyes on the bell throughout every phase. Strength, mobility, and control.",
+          "id": "KB005"
+        },
+        {
+          "exercise": "Kettlebell Deadlift",
+          "sets": 3,
+          "reps": "10",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Loaded hinge. Squeeze glutes at top. Sets the foundation for heavier work.",
+          "id": "KB001"
+        },
+        {
+          "exercise": "Side Plank",
+          "sets": 3,
+          "reps": "30s each",
+          "tempo": "Isometric",
+          "rest": "30s",
+          "coachingFocus": "Lateral core strength. Hips stay stacked. Don't let them drop.",
+          "id": "CO002"
+        }
+      ],
+      "finisher": "KB Swing x15 + Goblet Squat x10 + Press x5 each: 3 rounds, 90s rest",
+      "cooldown": "Hip flexor lunge 60s each, thoracic rotation 45s each, lat stretch 45s each",
+      "estimatedCalories": "380-460",
+      "progressionNotes": "Progress by increasing KB load when top-end reps feel easy across all sets.",
+      "equipment": "Kettlebell",
+      "description": "An intermediate kettlebell hypertrophy session using swings, presses, get-ups, and squats for full-body muscle stimulus without a barbell."
+    },
+    {
+      "workoutName": "Kettlebell Strength Advanced",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Kettlebell Series",
+      "duration": "60 min",
+      "intensity": "HIGH",
+      "warmup": "Jump rope 3 min, hip circles, KB halo x10, goblet squat x10, get-up x1 each light",
+      "mainWorkout": [
+        {
+          "exercise": "Kettlebell Snatch",
+          "sets": 5,
+          "reps": "5 each",
+          "tempo": "Explosive",
+          "rest": "90s",
+          "coachingFocus": "Punch through at the top. Full lockout. Hike the bell back aggressively.",
+          "id": "KB006"
+        },
+        {
+          "exercise": "Turkish Get-Up",
+          "sets": 4,
+          "reps": "4 each",
+          "tempo": "Controlled",
+          "rest": "90s",
+          "coachingFocus": "Loaded and deliberate. Every position locked before moving through it.",
+          "id": "KB005"
+        },
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 4,
+          "reps": "25",
+          "tempo": "Rhythmic \u2014 explosive",
+          "rest": "45s",
+          "coachingFocus": "25 reps at a heavy load. This is conditioning and strength simultaneously.",
+          "id": "KB004"
+        },
+        {
+          "exercise": "Kettlebell Press",
+          "sets": 4,
+          "reps": "6 each",
+          "tempo": "3-1-2-0",
+          "rest": "75s",
+          "coachingFocus": "Heavy single arm press. Strict. No lean. Maximum shoulder and tricep load.",
+          "id": "KB003"
+        },
+        {
+          "exercise": "Single Arm KB Overhead Carry",
+          "sets": 3,
+          "reps": "20m each",
+          "tempo": "Controlled walk",
+          "rest": "60s",
+          "coachingFocus": "Bell locked overhead. Packed shoulder. Core braced. Every step matters.",
+          "id": "KB007"
+        },
+        {
+          "exercise": "Dragon Flag",
+          "sets": 3,
+          "reps": "5-8",
+          "tempo": "3-0-1-0",
+          "rest": "60s",
+          "coachingFocus": "Advanced core. Rigid body from shoulders to feet. Slow descent.",
+          "id": "CO003"
+        }
+      ],
+      "finisher": "KB Snatch x5 each + Press x5 each + Swing x20: 3 rounds, 2 min rest",
+      "cooldown": "10 min walk, thoracic rotation 60s each, hip flexor stretch 60s each, wrist mobility 2 min",
+      "estimatedCalories": "480-580",
+      "progressionNotes": "Advanced: track snatch sets per minute. Periodise in 4-week blocks with a deload week.",
+      "equipment": "Kettlebell",
+      "description": "An advanced kettlebell session combining snatches, get-ups, and heavy carries. Builds maximum strength and power using a single implement."
+    },
+    {
+      "workoutName": "Band Strength Beginner",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Band Series",
+      "duration": "35 min",
+      "intensity": "MODERATE",
+      "warmup": "March in place 2 min, arm circles x20, band pull-apart x15, hip circle x10, bodyweight squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Resistance Band Squat",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Band adds resistance at the top where bodyweight squats are easiest. Full depth.",
+          "id": "RB001"
+        },
+        {
+          "exercise": "Band Overhead Press",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Stand on band. Press straight overhead. Core braced throughout.",
+          "id": "RB002"
+        },
+        {
+          "exercise": "Resistance Band Row",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "coachingFocus": "Anchor at waist height. Pull elbows back. Squeeze shoulder blades.",
+          "id": "RB003"
+        },
+        {
+          "exercise": "Band Pull Apart",
+          "sets": 3,
+          "reps": "20",
+          "tempo": "2-1-2-0",
+          "rest": "45s",
+          "coachingFocus": "Arms straight. Pull through full range. Rear delts and upper back health.",
+          "id": "RB004"
+        },
+        {
+          "exercise": "Glute Bridge",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-2-2-0",
+          "rest": "45s",
+          "coachingFocus": "Band across hips adds glute resistance at the top. Squeeze hard.",
+          "id": "HI009"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 3,
+          "reps": "20-30s",
+          "tempo": "Isometric",
+          "rest": "30s",
+          "coachingFocus": "Core foundation. Build this before anything else.",
+          "id": "CO001"
+        }
+      ],
+      "finisher": "Band Row x15 + Band Squat x15: 3 rounds, 45s rest",
+      "cooldown": "Doorway chest stretch 45s, hamstring stretch 60s each, hip flexor 45s each",
+      "estimatedCalories": "220-290",
+      "progressionNotes": "Increase resistance band thickness or shorten rest periods to progress.",
+      "equipment": "Resistance Bands",
+      "description": "A beginner full-body resistance band session covering squat, press, pull, and hinge. Accessible, joint-friendly, and effective for building a strength foundation at home."
+    },
+    {
+      "workoutName": "Band Hypertrophy",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Band Series",
+      "duration": "45 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "Jumping jacks x40, band pull-apart x20, arm swings, hip circles x10, band squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Band-Assisted Pull-Up",
+          "sets": 4,
+          "reps": "8-10",
+          "tempo": "3-0-2-0",
+          "rest": "90s",
+          "coachingFocus": "Band reduces load. Full dead hang. Chin over bar every rep.",
+          "id": "RB005"
+        },
+        {
+          "exercise": "Band Push-Up",
+          "sets": 4,
+          "reps": "12-15",
+          "tempo": "2-0-1-0",
+          "rest": "60s",
+          "coachingFocus": "Band across your back adds resistance at lockout. More chest work than standard push-ups.",
+          "id": "RB006"
+        },
+        {
+          "exercise": "Resistance Band Squat",
+          "sets": 4,
+          "reps": "15-20",
+          "tempo": "2-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "High rep band squat. Quad pump is real. Don't let the band pull your knees in.",
+          "id": "RB001"
+        },
+        {
+          "exercise": "Band Overhead Press",
+          "sets": 3,
+          "reps": "12-15",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Standing. Full overhead lockout. Triceps finish the rep.",
+          "id": "RB002"
+        },
+        {
+          "exercise": "Resistance Band Row",
+          "sets": 4,
+          "reps": "15-20",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "coachingFocus": "Volume pull work. 4 sets of 15-20. Back gets serious stimulus.",
+          "id": "RB003"
+        },
+        {
+          "exercise": "Band Lat Pulldown",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "coachingFocus": "Anchor high. Pull elbows to sides. Lat activation without a cable machine.",
+          "id": "RB007"
+        }
+      ],
+      "finisher": "Band Pull-Apart x20 + Band Row x15 + Band Press x12: 3 rounds, 60s rest",
+      "cooldown": "Lat stretch 45s each, chest doorway 60s, hip flexor lunge 45s each",
+      "estimatedCalories": "300-380",
+      "progressionNotes": "Progress via thicker bands or increasing rep tempo under tension.",
+      "equipment": "Resistance Bands",
+      "description": "An intermediate resistance band hypertrophy session pairing assisted pull-ups with pressing and pulling volume. Builds muscle through constant tension."
+    },
+    {
+      "workoutName": "Band Strength Advanced",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Band Series",
+      "duration": "55 min",
+      "intensity": "HIGH",
+      "warmup": "Jump rope 3 min, band pull-apart x25, arm circles, hip hinge x10, band squat x15, pull-up x5",
+      "mainWorkout": [
+        {
+          "exercise": "Weighted Pull-Up",
+          "sets": 5,
+          "reps": "6-8",
+          "tempo": "3-0-2-0",
+          "rest": "90s",
+          "coachingFocus": "Add band as resistance over your shoulder or hold with feet. Full ROM.",
+          "id": "PLV002"
+        },
+        {
+          "exercise": "Archer Push-Up",
+          "sets": 4,
+          "reps": "8 each",
+          "tempo": "3-0-1-0",
+          "rest": "75s",
+          "coachingFocus": "One arm does the work. The other arm is a guide. Serious unilateral pressing.",
+          "id": "PH020"
+        },
+        {
+          "exercise": "Pallof Press",
+          "sets": 4,
+          "reps": "12 each",
+          "tempo": "2-2-2-0",
+          "rest": "45s",
+          "coachingFocus": "Anti-rotation core. Don't let the band pull you. Full press \u2014 full retract.",
+          "id": "CO010"
+        },
+        {
+          "exercise": "Resistance Band Row",
+          "sets": 4,
+          "reps": "20",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "coachingFocus": "High volume pulls. Back strength is foundational. Don't rush the squeeze.",
+          "id": "RB003"
+        },
+        {
+          "exercise": "Band Overhead Press",
+          "sets": 4,
+          "reps": "12 each",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "coachingFocus": "Single arm standing press with band. Full lockout. Core fights the rotation.",
+          "id": "RB002"
+        },
+        {
+          "exercise": "Dragon Flag",
+          "sets": 3,
+          "reps": "6-8",
+          "tempo": "3-0-1-0",
+          "rest": "60s",
+          "coachingFocus": "Advanced core control. Rigid body. Slow descent is where the work happens.",
+          "id": "CO003"
+        }
+      ],
+      "finisher": "Weighted Push-Up x15 + Band Row x20 + Pull-Up x8: 3 rounds, 90s rest",
+      "cooldown": "Lat stretch 60s each, chest stretch 60s, thoracic rotation 45s each, wrist 2 min",
+      "estimatedCalories": "400-480",
+      "progressionNotes": "Advanced band training: track max reps each session and aim for improvement weekly.",
+      "equipment": "Resistance Bands",
+      "description": "An advanced resistance band session using unilateral pressing, heavy pulling volume, and anti-rotation core work. Achieves high muscle stimulus without machines."
+    },
+    {
+      "workoutName": "Dumbbell Strength Beginner",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Muscle Builder",
+      "duration": "40 min",
+      "intensity": "MODERATE",
+      "warmup": "Arm circles x20, hip hinge bodyweight x10, bodyweight squat x15, push-up x8",
+      "mainWorkout": [
+        {
+          "exercise": "Goblet Squat",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "DB at chest. Go deep. This is your squat teacher.",
+          "id": "DB001"
+        },
+        {
+          "exercise": "Dumbbell Row",
+          "sets": 3,
+          "reps": "12 each",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "coachingFocus": "Brace on your knee. Elbow to ceiling. Squeeze the back at the top.",
+          "id": "DB002"
+        },
+        {
+          "exercise": "Overhead Dumbbell Press",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Seated or standing. Core tight. Full overhead lockout.",
+          "id": "DB003"
+        },
+        {
+          "exercise": "Dumbbell RDL",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Hip hinge. Feel the hamstring stretch. Flat back the entire way.",
+          "id": "DB004"
+        },
+        {
+          "exercise": "Glute Bridge",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-2-2-0",
+          "rest": "45s",
+          "coachingFocus": "DB on hips. Drive up. Squeeze hard at the top.",
+          "id": "HI009"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 3,
+          "reps": "20-30s",
+          "tempo": "Isometric",
+          "rest": "30s",
+          "coachingFocus": "Core on. Everything tight. Build this now.",
+          "id": "CO001"
+        }
+      ],
+      "finisher": "Goblet Squat x10 + DB Row x10 each: 3 rounds, 60s rest",
+      "cooldown": "Doorway chest stretch 45s, hamstring seated 60s each, hip flexor 45s each",
+      "estimatedCalories": "260-320",
+      "progressionNotes": "Beginner: master form before adding load. Aim for 3 clean sets before increasing weight.",
+      "equipment": "Dumbbell",
+      "description": "A beginner dumbbell session covering the essential push, pull, squat, and hinge patterns. Builds a complete strength foundation using dumbbells only."
+    },
+    {
+      "workoutName": "Dumbbell Power",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Muscle Builder",
+      "duration": "60 min",
+      "intensity": "HIGH",
+      "warmup": "Jumping jacks x40, hip hinge x10, push-up x15, dumbbell swing x10, arm circles",
+      "mainWorkout": [
+        {
+          "exercise": "Dumbbell Thruster",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "1-0-X-0",
+          "rest": "90s",
+          "coachingFocus": "Squat drives the press. Use the momentum. Full lockout overhead every rep.",
+          "id": "DB005"
+        },
+        {
+          "exercise": "Renegade Row",
+          "sets": 4,
+          "reps": "8 each",
+          "tempo": "2-0-2-0",
+          "rest": "90s",
+          "coachingFocus": "Plank tight. Row from the back. Minimal hip rotation.",
+          "id": "DB006"
+        },
+        {
+          "exercise": "Dumbbell RDL",
+          "sets": 4,
+          "reps": "10-12",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Heavy RDL. Control the descent. Load the hamstring fully before driving up.",
+          "id": "DB004"
+        },
+        {
+          "exercise": "Dumbbell Bench Press",
+          "sets": 4,
+          "reps": "8-10",
+          "tempo": "3-1-1-0",
+          "rest": "90s",
+          "coachingFocus": "Floor press if no bench. Full stretch at the bottom. Explosive up.",
+          "id": "DB007"
+        },
+        {
+          "exercise": "Dumbbell Squat",
+          "sets": 4,
+          "reps": "12",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "DBs at sides. Goblet-style or front rack. Deep squat. Drive through the whole foot.",
+          "id": "DB008"
+        },
+        {
+          "exercise": "Hollow Body Hold",
+          "sets": 3,
+          "reps": "30-40s",
+          "tempo": "Isometric",
+          "rest": "45s",
+          "coachingFocus": "Lower back flat to floor. Arms overhead. Legs low. Advanced core control.",
+          "id": "CO004"
+        }
+      ],
+      "finisher": "DB Thruster x8 + Renegade Row x6 each: 4 rounds, 90s rest",
+      "cooldown": "Doorway chest 60s, lat stretch 45s each, hamstring 60s each, thoracic rotation 45s each",
+      "estimatedCalories": "460-560",
+      "progressionNotes": "Advanced: track thruster load and renegade row load monthly. Aim for progressive overload every 2 weeks.",
+      "equipment": "Dumbbell",
+      "description": "An advanced dumbbell session built around compound power movements \u2014 thrusters, renegade rows, and RDLs. Maximum muscle stimulus from dumbbells alone."
+    },
+    {
+      "workoutName": "Pull-Up Bar Foundations",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "UPPER",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Pull-Up Series",
+      "duration": "30 min",
+      "intensity": "MODERATE",
+      "warmup": "Arm circles x20, shoulder rolls x15, dead hang 20s x2, scapular pull-up x5",
+      "mainWorkout": [
+        {
+          "exercise": "Scapular Pull-Up",
+          "sets": 2,
+          "reps": "10",
+          "tempo": "2-1-2-0",
+          "rest": "90s",
+          "coachingFocus": "Retract and depress shoulder blades. Foundation of every pull-up. No arm bend yet.",
+          "id": "PUB001"
+        },
+        {
+          "exercise": "Negative Pull-Up",
+          "sets": 2,
+          "reps": "5",
+          "tempo": "5-0-X-0",
+          "rest": "90s",
+          "coachingFocus": "Jump to top. Lower as slowly as possible. Builds pull strength before you can pull.",
+          "id": "PUB002"
+        },
+        {
+          "exercise": "Chin-Up",
+          "sets": 2,
+          "reps": "3-5",
+          "tempo": "2-0-2-0",
+          "rest": "90s",
+          "coachingFocus": "Supinated grip is easier. Full dead hang bottom. Chin clears bar at top.",
+          "id": "PUB003"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 2,
+          "reps": "10-12",
+          "tempo": "2-0-1-0",
+          "rest": "75s",
+          "coachingFocus": "Pressing balance for the pulling session. Rigid body.",
+          "id": "PH001"
+        },
+        {
+          "exercise": "Dead Bug",
+          "sets": 2,
+          "reps": "8 each",
+          "tempo": "3-0-3-0",
+          "rest": "60s",
+          "coachingFocus": "Lower back flat. Opposite arm and leg lower slowly. Core braced throughout.",
+          "id": "CO_DB"
+        }
+      ],
+      "finisher": "Dead hang max hold x3, 60s rest",
+      "cooldown": "Doorway chest stretch 45s, lat side stretch 45s each, wrist circles 1 min",
+      "estimatedCalories": "180-240",
+      "progressionNotes": "Rebuild: when you hit 5 clean chin-ups, start adding pull-ups. Track negative hold time weekly.",
+      "equipment": "Pull-Up Bar",
+      "description": "A beginner pull-up bar session using negatives, scapular work, and chin-ups to build pulling strength. The Rebuild starting point."
+    },
+    {
+      "workoutName": "Pull-Up Bar Hypertrophy",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "UPPER",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Pull-Up Series",
+      "duration": "50 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "Dead hang 30s x2, scapular pull-up x10, arm circles x20, push-up x10",
+      "mainWorkout": [
+        {
+          "exercise": "Pull-Up",
+          "sets": 4,
+          "reps": "6-8",
+          "tempo": "3-0-2-0",
+          "rest": "90s",
+          "coachingFocus": "Full dead hang. Drive elbows to hips. Chest to bar is the goal.",
+          "id": "PUB004"
+        },
+        {
+          "exercise": "Chin-Up",
+          "sets": 3,
+          "reps": "8-10",
+          "tempo": "2-0-2-0",
+          "rest": "75s",
+          "coachingFocus": "Supinated grip hits biceps harder. Alternate with pull-ups for complete back development.",
+          "id": "PUB003"
+        },
+        {
+          "exercise": "Neutral Grip Pull-Up",
+          "sets": 3,
+          "reps": "8",
+          "tempo": "3-0-2-0",
+          "rest": "75s",
+          "coachingFocus": "Neutral grip is joint-friendly. Different lat angle than standard grip.",
+          "id": "PUB005"
+        },
+        {
+          "exercise": "Hanging Leg Raise",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Dead hang. Raise legs to 90 degrees. Control the descent. No swinging.",
+          "id": "PUB006"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-0-1-0",
+          "rest": "60s",
+          "coachingFocus": "Pressing balance for the back-dominant session. Full ROM.",
+          "id": "PH001"
+        }
+      ],
+      "finisher": "Pull-Up max reps x3 sets, 90s rest. Log every session.",
+      "cooldown": "Lat stretch 60s each, doorway chest 45s, wrist and forearm stretch 2 min",
+      "estimatedCalories": "320-400",
+      "progressionNotes": "Operator: add 1 rep per set every 2 weeks. When all sets hit 10 reps, add a weighted set.",
+      "equipment": "Pull-Up Bar",
+      "description": "An intermediate pull-up bar hypertrophy session across three grip variations. Builds a wide, muscular back using only a bar."
+    },
+    {
+      "workoutName": "Pull-Up Bar Strength",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "UPPER",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Pull-Up Series",
+      "duration": "60 min",
+      "intensity": "HIGH",
+      "warmup": "Dead hang 45s, scapular pull-up x12, chin-up x5, push-up x15, wrist mobility 2 min",
+      "mainWorkout": [
+        {
+          "exercise": "Weighted Pull-Up",
+          "sets": 5,
+          "reps": "5",
+          "tempo": "3-0-2-0",
+          "rest": "90s",
+          "coachingFocus": "Add load via vest or belt. Full ROM. This is the barbell row of home training.",
+          "id": "PUB007"
+        },
+        {
+          "exercise": "Chest-to-Bar Pull-Up",
+          "sets": 4,
+          "reps": "6",
+          "tempo": "2-0-2-0",
+          "rest": "75s",
+          "coachingFocus": "Chest contacts the bar. Full scapular depression at top. Elite pulling.",
+          "id": "PUB008"
+        },
+        {
+          "exercise": "Archer Pull-Up",
+          "sets": 3,
+          "reps": "5 each",
+          "tempo": "3-0-2-0",
+          "rest": "90s",
+          "coachingFocus": "One arm does the work. The other guides. Serious unilateral back strength.",
+          "id": "PUB009"
+        },
+        {
+          "exercise": "Toes-to-Bar",
+          "sets": 4,
+          "reps": "8-10",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Dead hang. Toes touch bar. Core and hip flexors fully loaded.",
+          "id": "PUB010"
+        },
+        {
+          "exercise": "L-Sit",
+          "sets": 3,
+          "reps": "15-20s",
+          "tempo": "Isometric",
+          "rest": "60s",
+          "coachingFocus": "Legs parallel to ground. Arms locked. Compression strength builds here.",
+          "id": "PUB011"
+        }
+      ],
+      "finisher": "Weighted Pull-Up x3 + Chest-to-Bar x5 + Archer x3 each: 3 rounds, 2 min rest",
+      "cooldown": "Dead hang passive 60s x2, lat stretch 60s each, thoracic rotation 45s each, wrist 2 min",
+      "estimatedCalories": "420-520",
+      "progressionNotes": "Exec Perf: track weighted pull-up load monthly. Progress archer pull-ups toward one-arm chin-up.",
+      "equipment": "Pull-Up Bar",
+      "description": "An advanced pull-up bar strength session using weighted pull-ups, chest-to-bar, archers, and L-sits. Executive Performance level pulling."
+    },
+    {
+      "workoutName": "Jump Rope Strength Starter",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Jump Rope Series",
+      "duration": "30 min",
+      "intensity": "MODERATE",
+      "warmup": "March in place 2 min, calf raises x20, arm circles x20, slow jump rope 1 min",
+      "mainWorkout": [
+        {
+          "exercise": "Jump Rope",
+          "sets": 3,
+          "reps": "60s",
+          "tempo": "Moderate",
+          "rest": "60s",
+          "coachingFocus": "Consistent rhythm. Light on feet. Builds calf and shoulder endurance.",
+          "id": "JR001"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 2,
+          "reps": "10-12",
+          "tempo": "2-0-1-0",
+          "rest": "75s",
+          "coachingFocus": "Pressing strength between rope sets. Chest to floor. Rigid body.",
+          "id": "PH001"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 2,
+          "reps": "15",
+          "tempo": "2-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Leg strength supports calves and feet under jump rope load.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Forward Lunge",
+          "sets": 2,
+          "reps": "10 each",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Single-leg strength. Builds balance and stability for rope work.",
+          "id": "LG001"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "25s",
+          "tempo": "Isometric",
+          "rest": "45s",
+          "coachingFocus": "Core stability. Build this before everything else.",
+          "id": "CO001"
+        }
+      ],
+      "finisher": "Jump Rope 60s + Push-Up x10: 3 rounds, 60s rest",
+      "cooldown": "Calf stretch 60s each, hip flexor 45s each, chest stretch 45s",
+      "estimatedCalories": "220-280",
+      "progressionNotes": "Rebuild: achieve 3 consecutive minutes of jump rope before adding intensity.",
+      "equipment": "Jump Rope",
+      "description": "A beginner jump rope session building rope endurance alongside basic strength. Full Body Restore template."
+    },
+    {
+      "workoutName": "Jump Rope Conditioning",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Jump Rope Series",
+      "duration": "45 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "Jump rope 2 min easy, calf raise x20, push-up x10, bodyweight squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Jump Rope",
+          "sets": 5,
+          "reps": "90s",
+          "tempo": "Moderate-high",
+          "rest": "30s",
+          "coachingFocus": "90s continuous at a challenging pace. Calves, shoulders, and cardio.",
+          "id": "JR001"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 4,
+          "reps": "15",
+          "tempo": "2-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Pressing volume between rope sets. Chest and tricep strength.",
+          "id": "PH001"
+        },
+        {
+          "exercise": "Forward Lunge",
+          "sets": 3,
+          "reps": "12 each",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Single-leg stability. Step long, knee doesn't pass toes.",
+          "id": "LG001"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 3,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "High-rep squat builds leg endurance that complements rope work.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "High effort",
+          "rest": "30s",
+          "coachingFocus": "Core conditioning between sets. Drive knees.",
+          "id": "CD002"
+        }
+      ],
+      "finisher": "Jump Rope 2 min + Push-Up x15 + Squat x20: 3 rounds, 60s rest",
+      "cooldown": "Calf stretch 90s each, hip flexor 45s each, chest doorway 45s",
+      "estimatedCalories": "380-460",
+      "progressionNotes": "Operator: add 10s to each rope set every 2 weeks. Target 5x3min.",
+      "equipment": "Jump Rope",
+      "description": "An intermediate jump rope conditioning session pairing rope intervals with pressing and leg strength. Full Body Strength template."
+    },
+    {
+      "workoutName": "Jump Rope Power",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Jump Rope Series",
+      "duration": "55 min",
+      "intensity": "HIGH",
+      "warmup": "Jump rope 3 min easy, double under practice 1 min, push-up x15, squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Double Under",
+          "sets": 5,
+          "reps": "50",
+          "tempo": "Explosive wrist",
+          "rest": "45s",
+          "coachingFocus": "Tight body. Fast wrist. Double unders demand coordination and explosive power.",
+          "id": "JR002"
+        },
+        {
+          "exercise": "Jump Rope",
+          "sets": 4,
+          "reps": "3 min",
+          "tempo": "High intensity",
+          "rest": "30s",
+          "coachingFocus": "3 minutes is an elite rope standard. Maintain rhythm and posture throughout.",
+          "id": "JR001"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 4,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "High-rep pressing between rope sets. Upper body muscular endurance.",
+          "id": "PH001"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "12",
+          "tempo": "Controlled fast",
+          "rest": "30s",
+          "coachingFocus": "Full body power output. Chest to floor. Explosive jump.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Forward Lunge",
+          "sets": 4,
+          "reps": "15 each",
+          "tempo": "1-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "High-rep lunges build single-leg power and endurance under fatigue.",
+          "id": "LG001"
+        }
+      ],
+      "finisher": "Double Under x30 + Burpee x10 + Push-Up x15: 3 rounds, 90s rest",
+      "cooldown": "Calf stretch 90s each, hip flexor 60s each, thoracic rotation 45s each, wrist 2 min",
+      "estimatedCalories": "500-620",
+      "progressionNotes": "Exec Perf: track double under reps per minute. Increase by 5 reps per set monthly.",
+      "equipment": "Jump Rope",
+      "description": "An advanced jump rope power session using double unders, 3-minute rope sets, and burpees. Performance Conditioning template."
+    },
+    {
+      "workoutName": "Battle Rope Strength Starter",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Battle Rope Series",
+      "duration": "30 min",
+      "intensity": "MODERATE",
+      "warmup": "Arm circles x20, shoulder rolls x15, hip circles x10, bodyweight squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Battle Ropes",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "Moderate alternating",
+          "rest": "90s",
+          "coachingFocus": "Alternating waves. Drive from the shoulder, not the wrist. Consistent rhythm.",
+          "id": "BR001"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 2,
+          "reps": "10-12",
+          "tempo": "2-0-1-0",
+          "rest": "75s",
+          "coachingFocus": "Pressing strength between rope sets. Full chest to floor.",
+          "id": "PH001"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 2,
+          "reps": "15",
+          "tempo": "2-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Leg strength anchors you during rope work. Deep and controlled.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Glute Bridge",
+          "sets": 2,
+          "reps": "15",
+          "tempo": "2-2-2-0",
+          "rest": "60s",
+          "coachingFocus": "Posterior chain activation. Glutes support all standing rope movements.",
+          "id": "HI009"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "25s",
+          "tempo": "Isometric",
+          "rest": "45s",
+          "coachingFocus": "Core braced. Battle rope work requires significant core stability.",
+          "id": "CO001"
+        }
+      ],
+      "finisher": "Battle Ropes 20s + Push-Up x10: 4 rounds, 60s rest",
+      "cooldown": "Doorway chest 45s, shoulder cross-body 45s each, hip flexor 45s each",
+      "estimatedCalories": "240-300",
+      "progressionNotes": "Rebuild: aim for 4x45s rope sets before increasing intensity.",
+      "equipment": "Battle Rope",
+      "description": "A beginner battle rope session building rope endurance alongside fundamental strength. Full Body Restore template."
+    },
+    {
+      "workoutName": "Battle Rope Hypertrophy",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Battle Rope Series",
+      "duration": "50 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "Arm circles x20, shoulder rolls, battle rope easy 30s, push-up x10, squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Battle Ropes",
+          "sets": 5,
+          "reps": "45s",
+          "tempo": "High intensity alternating",
+          "rest": "45s",
+          "coachingFocus": "Alternating waves at high tempo. Shoulders, arms, and core working simultaneously.",
+          "id": "BR001"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 4,
+          "reps": "15",
+          "tempo": "2-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Pressing strength between rope sets. Chest and tricep development.",
+          "id": "PH001"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 3,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "High-rep squat builds lower body strength that supports rope output.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Forward Lunge",
+          "sets": 3,
+          "reps": "12 each",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Single-leg strength. Builds the base for max rope intensity.",
+          "id": "LG001"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 3,
+          "reps": "40s",
+          "tempo": "Isometric",
+          "rest": "30s",
+          "coachingFocus": "Core endurance. Battle ropes demand sustained core bracing every set.",
+          "id": "CO001"
+        }
+      ],
+      "finisher": "Battle Ropes 30s + Push-Up x15 + Squat x20: 3 rounds, 75s rest",
+      "cooldown": "Doorway chest 60s, shoulder cross-body 45s each, hip flexor 45s each",
+      "estimatedCalories": "400-480",
+      "progressionNotes": "Operator: reduce rope rest 5s every 2 weeks. Target 5x60s sets.",
+      "equipment": "Battle Rope",
+      "description": "An intermediate battle rope hypertrophy session pairing rope intervals with pressing and leg strength. Full Body Strength template."
+    },
+    {
+      "workoutName": "Battle Rope Power",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Battle Rope Series",
+      "duration": "60 min",
+      "intensity": "HIGH",
+      "warmup": "Battle rope easy 1 min, arm circles x20, push-up x15, squat x20, mountain climbers 30s",
+      "mainWorkout": [
+        {
+          "exercise": "Battle Ropes",
+          "sets": 6,
+          "reps": "60s",
+          "tempo": "Max sustained intensity",
+          "rest": "30s",
+          "coachingFocus": "60s at maximum output. Shoulder and core endurance separates advanced athletes.",
+          "id": "BR001"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 5,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "20 reps between rope sets. Upper body muscular endurance.",
+          "id": "PH001"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "12",
+          "tempo": "Controlled fast",
+          "rest": "30s",
+          "coachingFocus": "Full body power between rope sets. Total system conditioning.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Forward Lunge",
+          "sets": 4,
+          "reps": "15 each",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "High-rep lunges under fatigue. Single-leg power.",
+          "id": "LG001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "40s",
+          "tempo": "Max effort",
+          "rest": "20s",
+          "coachingFocus": "Core and cardio between rope and lunge sets.",
+          "id": "CD002"
+        }
+      ],
+      "finisher": "Battle Ropes 45s + Burpee x10 + Mountain Climbers 30s: 3 rounds, 90s rest",
+      "cooldown": "Walk 5 min, shoulder cross-body 60s each, chest doorway 60s, thoracic rotation 45s each",
+      "estimatedCalories": "520-640",
+      "progressionNotes": "Exec Perf: track total rope time per session. Target 8 minutes over 4 weeks.",
+      "equipment": "Battle Rope",
+      "description": "An advanced battle rope power session with 6x60s intervals, burpees, and high-rep pressing. Performance Conditioning at home."
+    },
+    {
+      "workoutName": "Vest Strength Starter",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Vest Series",
+      "duration": "35 min",
+      "intensity": "MODERATE",
+      "warmup": "Arm circles x20, hip hinge x10, push-up x8 (no vest), squat x15 (no vest)",
+      "mainWorkout": [
+        {
+          "exercise": "Weighted Push-Up",
+          "sets": 2,
+          "reps": "10-12",
+          "tempo": "2-0-2-0",
+          "rest": "90s",
+          "coachingFocus": "Vest adds load to a bodyweight movement. Treat it like a loaded bench press.",
+          "id": "VS001"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 2,
+          "reps": "15",
+          "tempo": "3-1-1-0",
+          "rest": "90s",
+          "coachingFocus": "Vest turns a bodyweight squat into a loaded squat. Full depth. Slow eccentric.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Forward Lunge",
+          "sets": 2,
+          "reps": "10 each",
+          "tempo": "2-0-2-0",
+          "rest": "75s",
+          "coachingFocus": "Weighted lunges. Single-leg loading builds unilateral leg strength.",
+          "id": "LG001"
+        },
+        {
+          "exercise": "Pull-Up",
+          "sets": 2,
+          "reps": "4-6",
+          "tempo": "3-0-2-0",
+          "rest": "90s",
+          "coachingFocus": "Remove vest if needed. Full dead hang. Vest adds load as you get stronger.",
+          "id": "PUB004"
+        },
+        {
+          "exercise": "Dead Bug",
+          "sets": 2,
+          "reps": "8 each",
+          "tempo": "3-0-3-0",
+          "rest": "60s",
+          "coachingFocus": "Core control. Lower back flat. Vest trains core to brace under load.",
+          "id": "CO_DB"
+        }
+      ],
+      "finisher": "Weighted Push-Up x10 + Bodyweight Squat x15: 3 rounds, 75s rest",
+      "cooldown": "Doorway chest 45s, lat side stretch 45s each, hip flexor 45s each",
+      "estimatedCalories": "240-300",
+      "progressionNotes": "Rebuild: start with minimum vest load. Add weight every 2 weeks when all sets feel controlled.",
+      "equipment": "Adjustable Weight Training Vest",
+      "description": "A beginner weighted vest session turning bodyweight movements into loaded exercises. Full Body Restore template."
+    },
+    {
+      "workoutName": "Vest Hypertrophy",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Vest Series",
+      "duration": "55 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "Push-up x10 (no vest), pull-up x5 (no vest), squat x15, arm circles x20",
+      "mainWorkout": [
+        {
+          "exercise": "Weighted Pull-Up",
+          "sets": 4,
+          "reps": "6-8",
+          "tempo": "3-0-2-0",
+          "rest": "90s",
+          "coachingFocus": "Vest adds load to the most effective upper body exercise. Full ROM every rep.",
+          "id": "PUB007"
+        },
+        {
+          "exercise": "Weighted Push-Up",
+          "sets": 4,
+          "reps": "10-12",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Vest turns push-ups into a chest development exercise. Treat it like the bench.",
+          "id": "VS001"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 4,
+          "reps": "15-20",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Loaded squat. Vest adds extra resistance. Quad and glute hypertrophy.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Forward Lunge",
+          "sets": 3,
+          "reps": "12 each",
+          "tempo": "2-0-2-0",
+          "rest": "75s",
+          "coachingFocus": "Weighted lunge. Single-leg loading. Glute and quad development.",
+          "id": "LG001"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 3,
+          "reps": "45s",
+          "tempo": "Isometric",
+          "rest": "30s",
+          "coachingFocus": "Weighted plank. Vest increases core demand significantly.",
+          "id": "CO001"
+        }
+      ],
+      "finisher": "Weighted Pull-Up x5 + Weighted Push-Up x10 + Squat x20: 3 rounds, 90s rest",
+      "cooldown": "Lat stretch 60s each, doorway chest 60s, hip flexor 45s each, wrist 1 min",
+      "estimatedCalories": "380-460",
+      "progressionNotes": "Operator: add vest weight when top-end reps are hit across all sets. Track load monthly.",
+      "equipment": "Adjustable Weight Training Vest",
+      "description": "An intermediate weighted vest hypertrophy session using loaded pull-ups, push-ups, squats, and lunges. Progressive overload without a barbell."
+    },
+    {
+      "workoutName": "Vest Strength Advanced",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Vest Series",
+      "duration": "65 min",
+      "intensity": "HIGH",
+      "warmup": "Pull-up x5 (no vest), push-up x15 (no vest), squat x20 (no vest), arm circles",
+      "mainWorkout": [
+        {
+          "exercise": "Weighted Pull-Up",
+          "sets": 5,
+          "reps": "5",
+          "tempo": "3-0-2-0",
+          "rest": "90s",
+          "coachingFocus": "5x5 weighted pull-ups. The home equivalent of a barbell row. Track load.",
+          "id": "PUB007"
+        },
+        {
+          "exercise": "Weighted Push-Up",
+          "sets": 5,
+          "reps": "8-10",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Heavy vest push-ups. 5x10 with heavy vest is serious pressing work.",
+          "id": "VS001"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 4,
+          "reps": "20",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "20 reps with maximum vest load. Posterior chain and quad development.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Forward Lunge",
+          "sets": 4,
+          "reps": "15 each",
+          "tempo": "2-0-2-0",
+          "rest": "75s",
+          "coachingFocus": "Heavy weighted lunges. Single-leg loaded strength at the advanced level.",
+          "id": "LG001"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 4,
+          "reps": "60s",
+          "tempo": "Isometric",
+          "rest": "30s",
+          "coachingFocus": "60s weighted plank. Core under maximal load.",
+          "id": "CO001"
+        }
+      ],
+      "finisher": "Weighted Pull-Up x5 + Weighted Push-Up x10 + Lunge x12 each: 4 rounds, 90s rest",
+      "cooldown": "Dead hang passive 60s x2, lat stretch 60s each, chest doorway 60s, hip flexor 60s each",
+      "estimatedCalories": "460-560",
+      "progressionNotes": "Exec Perf: track weighted pull-up load weekly. Periodise in 4-week blocks. Deload week 5.",
+      "equipment": "Adjustable Weight Training Vest",
+      "description": "An advanced weighted vest strength session using 5x5 pull-ups, heavy push-ups, and loaded squats. Executive Performance home training."
+    },
+    {
+      "workoutName": "Medicine Ball Strength Starter",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Medicine Ball Series",
+      "duration": "30 min",
+      "intensity": "MODERATE",
+      "warmup": "Arm circles x20, hip circles x10, bodyweight squat x15, push-up x8",
+      "mainWorkout": [
+        {
+          "exercise": "Medicine Ball Slam",
+          "sets": 2,
+          "reps": "10",
+          "tempo": "Controlled explosive",
+          "rest": "90s",
+          "coachingFocus": "Raise fully overhead. Drive the ball into the ground. Total body power movement.",
+          "id": "MB001"
+        },
+        {
+          "exercise": "Wall Ball",
+          "sets": 2,
+          "reps": "10",
+          "tempo": "Rhythmic",
+          "rest": "75s",
+          "coachingFocus": "Squat down. Explode up. Release at the top. Catch and reload. Full body compound.",
+          "id": "MB002"
+        },
+        {
+          "exercise": "Russian Twist",
+          "sets": 2,
+          "reps": "20 total",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Sit at 45 degrees. Rotate fully each side. Core rotational strength.",
+          "id": "MB003"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 2,
+          "reps": "10-12",
+          "tempo": "2-0-1-0",
+          "rest": "75s",
+          "coachingFocus": "Pressing strength to balance the core-dominant MB work.",
+          "id": "PH001"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "25s",
+          "tempo": "Isometric",
+          "rest": "45s",
+          "coachingFocus": "Core stability. Supports all medicine ball loading and rotation.",
+          "id": "CO001"
+        }
+      ],
+      "finisher": "Medicine Ball Slam x10 + Russian Twist x20: 3 rounds, 60s rest",
+      "cooldown": "Thoracic rotation 45s each, hip flexor 45s each, hamstring seated 45s each",
+      "estimatedCalories": "220-280",
+      "progressionNotes": "Rebuild: control the catch before adding slam speed. Build power from the base up.",
+      "equipment": "Medicine Ball",
+      "description": "A beginner medicine ball session introducing slams, wall balls, and rotational core work. Full Body Restore template."
+    },
+    {
+      "workoutName": "Medicine Ball Hypertrophy",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Medicine Ball Series",
+      "duration": "50 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "MB slam x5 easy, arm circles x20, squat x15, push-up x10",
+      "mainWorkout": [
+        {
+          "exercise": "Medicine Ball Slam",
+          "sets": 4,
+          "reps": "12",
+          "tempo": "Explosive",
+          "rest": "60s",
+          "coachingFocus": "Max power each rep. Full overhead extension. Drive through the floor.",
+          "id": "MB001"
+        },
+        {
+          "exercise": "Wall Ball",
+          "sets": 4,
+          "reps": "15",
+          "tempo": "Rhythmic explosive",
+          "rest": "45s",
+          "coachingFocus": "15 wall balls is a conditioning benchmark. Consistent depth. Hit the target.",
+          "id": "MB002"
+        },
+        {
+          "exercise": "Russian Twist",
+          "sets": 4,
+          "reps": "30 total",
+          "tempo": "Controlled",
+          "rest": "45s",
+          "coachingFocus": "Feet off floor for more challenge. Full rotation each side. Oblique strength.",
+          "id": "MB003"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Pressing balance for the session.",
+          "id": "PH001"
+        },
+        {
+          "exercise": "Forward Lunge",
+          "sets": 3,
+          "reps": "12 each",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Weighted lunge holding MB at chest. Single-leg strength and balance.",
+          "id": "LG001"
+        }
+      ],
+      "finisher": "MB Slam x10 + Wall Ball x15 + Russian Twist x20: 3 rounds, 75s rest",
+      "cooldown": "Thoracic rotation 60s each, hip flexor 45s each, hamstring 45s each, chest 45s",
+      "estimatedCalories": "380-460",
+      "progressionNotes": "Operator: progress wall ball rep count and slam power. Move to heavier ball when 15 wall balls feel easy.",
+      "equipment": "Medicine Ball",
+      "description": "An intermediate medicine ball hypertrophy session combining power slams, wall balls, and rotational core work. Full Body Strength template."
+    },
+    {
+      "workoutName": "Medicine Ball Power",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Medicine Ball Series",
+      "duration": "60 min",
+      "intensity": "HIGH",
+      "warmup": "MB slam x8 moderate, wall ball x10, push-up x15, squat x20",
+      "mainWorkout": [
+        {
+          "exercise": "Medicine Ball Slam",
+          "sets": 5,
+          "reps": "15",
+          "tempo": "Max explosive",
+          "rest": "45s",
+          "coachingFocus": "Maximum power output. Full overhead every rep.",
+          "id": "MB001"
+        },
+        {
+          "exercise": "Wall Ball",
+          "sets": 5,
+          "reps": "20",
+          "tempo": "Rhythmic max",
+          "rest": "30s",
+          "coachingFocus": "20 wall balls is an advanced standard. Consistent squat depth. Hit the target every rep.",
+          "id": "MB002"
+        },
+        {
+          "exercise": "Russian Twist",
+          "sets": 4,
+          "reps": "40 total",
+          "tempo": "Controlled",
+          "rest": "30s",
+          "coachingFocus": "40 total touches. Feet off floor. Heavy MB. Advanced rotational strength.",
+          "id": "MB003"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "Controlled fast",
+          "rest": "30s",
+          "coachingFocus": "Power output between MB sets. Total body conditioning.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Forward Lunge",
+          "sets": 4,
+          "reps": "15 each",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "Heavy MB held at chest. Single-leg loaded strength at advanced level.",
+          "id": "LG001"
+        }
+      ],
+      "finisher": "MB Slam x15 + Wall Ball x20 + Burpee x10 + Russian Twist x20: 3 rounds, 90s rest",
+      "cooldown": "Walk 5 min, thoracic rotation 60s each, hip flexor 60s each, chest doorway 45s",
+      "estimatedCalories": "500-620",
+      "progressionNotes": "Exec Perf: track wall ball reps per minute. Move to a heavier ball every 4 weeks.",
+      "equipment": "Medicine Ball",
+      "description": "An advanced medicine ball power session using maximum-intensity slams, 20-rep wall balls, and heavy rotational work. Performance Conditioning at home."
+    },
+    {
+      "workoutName": "Sandbag Strength Starter",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Sandbag Series",
+      "duration": "35 min",
+      "intensity": "MODERATE",
+      "warmup": "Hip hinge bodyweight x10, squat x15, arm circles x20, shoulder rolls x15",
+      "mainWorkout": [
+        {
+          "exercise": "Sandbag Lunge",
+          "sets": 2,
+          "reps": "10 each",
+          "tempo": "2-0-2-0",
+          "rest": "90s",
+          "coachingFocus": "Sandbag on one shoulder or bear hug. Unstable load trains stabilisers more than dumbbells.",
+          "id": "SB001"
+        },
+        {
+          "exercise": "Bear Hug Carry (Sandbag)",
+          "sets": 3,
+          "reps": "20m",
+          "tempo": "Controlled walk",
+          "rest": "90s",
+          "coachingFocus": "Chest squeeze. Core braced. Sandbag wants to shift \u2014 fight it.",
+          "id": "SB002"
+        },
+        {
+          "exercise": "Zercher Squat",
+          "sets": 2,
+          "reps": "10",
+          "tempo": "3-1-1-0",
+          "rest": "90s",
+          "coachingFocus": "Sandbag in the crook of elbows. Upright torso. Unusual loading builds serious core strength.",
+          "id": "SB003"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 2,
+          "reps": "10",
+          "tempo": "2-0-1-0",
+          "rest": "60s",
+          "coachingFocus": "Pressing balance for the lower-body-dominant session.",
+          "id": "PH001"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 2,
+          "reps": "25s",
+          "tempo": "Isometric",
+          "rest": "45s",
+          "coachingFocus": "Core stability for all sandbag movements. Build the brace first.",
+          "id": "CO001"
+        }
+      ],
+      "finisher": "Bear Hug Carry 20m + Zercher Squat x8: 3 rounds, 90s rest",
+      "cooldown": "Hip flexor lunge 45s each, hamstring seated 60s each, thoracic rotation 45s each",
+      "estimatedCalories": "260-320",
+      "progressionNotes": "Rebuild: master the carry before adding squat volume. Sandbag instability is the load.",
+      "equipment": "Sandbag",
+      "description": "A beginner sandbag session building functional full-body strength through carries, squats, and lunges. The unstable load develops stabiliser strength no barbell can replicate."
+    },
+    {
+      "workoutName": "Sandbag Hypertrophy",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Sandbag Series",
+      "duration": "55 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "Hip hinge x10, zercher squat bodyweight x10, carry 10m, arm circles x20",
+      "mainWorkout": [
+        {
+          "exercise": "Sandbag Shouldering",
+          "sets": 4,
+          "reps": "5 each",
+          "tempo": "Explosive",
+          "rest": "90s",
+          "coachingFocus": "Hip drive from the floor. Shoulder the bag aggressively. Real-world loading strength.",
+          "id": "SB004"
+        },
+        {
+          "exercise": "Zercher Squat",
+          "sets": 4,
+          "reps": "8-10",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Heavy Zercher squat. Elbows hold the load. Core must stay rigid.",
+          "id": "SB003"
+        },
+        {
+          "exercise": "Sandbag Lunge",
+          "sets": 3,
+          "reps": "12 each",
+          "tempo": "2-0-2-0",
+          "rest": "75s",
+          "coachingFocus": "Weighted lunge with unstable load. Single-leg strength and stabilisation.",
+          "id": "SB001"
+        },
+        {
+          "exercise": "Bear Hug Carry (Sandbag)",
+          "sets": 4,
+          "reps": "30m",
+          "tempo": "Controlled",
+          "rest": "60s",
+          "coachingFocus": "Heavy bear hug carry. Chest squeeze. Core fight. Full body loaded.",
+          "id": "SB002"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-0-1-0",
+          "rest": "60s",
+          "coachingFocus": "Pressing strength to balance the carry-dominant session.",
+          "id": "PH001"
+        }
+      ],
+      "finisher": "Sandbag Shouldering x5 each + Zercher Squat x8 + Bear Hug Carry 20m: 3 rounds, 90s rest",
+      "cooldown": "Hip flexor lunge 60s each, hamstring 60s each, thoracic rotation 45s each, lat stretch 45s each",
+      "estimatedCalories": "420-500",
+      "progressionNotes": "Operator: increase sandbag load when shouldering feels fast and controlled. Track carry distance.",
+      "equipment": "Sandbag",
+      "description": "An intermediate sandbag hypertrophy session using shouldering, Zercher squats, and loaded carries. Builds functional muscle through real-world strength patterns."
+    },
+    {
+      "workoutName": "Sandbag Strength Advanced",
+      "goal": "BUILD_MUSCLE",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Sandbag Series",
+      "duration": "65 min",
+      "intensity": "HIGH",
+      "warmup": "Shouldering x3 each light, Zercher squat x10, carry 20m, push-up x15",
+      "mainWorkout": [
+        {
+          "exercise": "Sandbag Shouldering",
+          "sets": 5,
+          "reps": "6 each",
+          "tempo": "Max explosive",
+          "rest": "90s",
+          "coachingFocus": "Full power from hip to shoulder. Strongman-level total body strength at home.",
+          "id": "SB004"
+        },
+        {
+          "exercise": "Zercher Squat",
+          "sets": 5,
+          "reps": "6-8",
+          "tempo": "3-1-1-0",
+          "rest": "90s",
+          "coachingFocus": "Maximum load Zercher. The most unusual and effective home squat pattern.",
+          "id": "SB003"
+        },
+        {
+          "exercise": "Husafell Stone Carry (Simulate with Sandbag)",
+          "sets": 4,
+          "reps": "40m",
+          "tempo": "Deliberate controlled",
+          "rest": "90s",
+          "coachingFocus": "40m carry at max load. Full body stabilisation. Elite functional strength.",
+          "id": "SB005"
+        },
+        {
+          "exercise": "Sandbag Lunge",
+          "sets": 4,
+          "reps": "15 each",
+          "tempo": "1-0-1-0",
+          "rest": "60s",
+          "coachingFocus": "High-rep weighted lunges under fatigue. Leg strength and endurance.",
+          "id": "SB001"
+        },
+        {
+          "exercise": "Zercher Carry",
+          "sets": 3,
+          "reps": "30m",
+          "tempo": "Controlled",
+          "rest": "75s",
+          "coachingFocus": "Zercher carry demands core bracing unlike any other movement.",
+          "id": "SB006"
+        }
+      ],
+      "finisher": "Shouldering x5 each + Zercher Squat x6 + Husafell Carry 20m: 3 rounds, 2 min rest",
+      "cooldown": "Walk 5 min, hip flexor 60s each, hamstring 60s each, thoracic rotation 60s each, wrist 2 min",
+      "estimatedCalories": "520-640",
+      "progressionNotes": "Exec Perf: track shouldering speed and carry distance. Periodise in 4-week blocks.",
+      "equipment": "Sandbag",
+      "description": "An advanced sandbag strength session using heavy shouldering, Zercher squats, and maximum-load carries. Executive Performance functional strength."
     }
   ]
 }

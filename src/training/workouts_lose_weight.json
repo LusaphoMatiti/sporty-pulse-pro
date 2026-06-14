@@ -1,6 +1,6 @@
 {
   "goal": "LOSE_WEIGHT",
-  "totalWorkouts": 20,
+  "totalWorkouts": 44,
   "workouts": [
     {
       "workoutName": "Fat Burn A",
@@ -1963,6 +1963,1740 @@
       "progressionNotes": "Intermediate KB HIIT. Increase KB weight when 30s swings feel comfortable throughout.",
       "equipment": null,
       "description": "An intermediate gym fat-loss session centred on kettlebell swings, goblet squats, and RDLs. Drives metabolic conditioning and posterior chain activation for efficient calorie burn."
+    },
+    {
+      "workoutName": "Kettlebell Fat Burn Beginner",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Kettlebell Series",
+      "duration": "35 min",
+      "intensity": "MODERATE",
+      "warmup": "March in place 2 min, hip circles x10, arm swings x20, bodyweight squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 4,
+          "reps": "15",
+          "tempo": "Rhythmic",
+          "rest": "60s",
+          "coachingFocus": "The swing is the best fat-burning KB exercise. Hip drive. Let it float.",
+          "id": "KB004"
+        },
+        {
+          "exercise": "Goblet Squat",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "2-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Squat burns calories. Go deep. Drive through the heel.",
+          "id": "KB002"
+        },
+        {
+          "exercise": "Kettlebell Deadlift",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "2-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Posterior chain activation. Flat back. Squeeze glutes at the top.",
+          "id": "KB001"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "10",
+          "tempo": "2-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Upper body work between KB sets. Chest to floor. Consistent pace.",
+          "id": "PH001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "20s",
+          "tempo": "Moderate pace",
+          "rest": "30s",
+          "coachingFocus": "Cardio on the mat. Drive knees. Keep breathing.",
+          "id": "CD002"
+        }
+      ],
+      "finisher": "KB Swing x15 + Goblet Squat x10 + Mountain Climbers 20s: 3 rounds, 45s rest",
+      "cooldown": "Hip flexor lunge 45s each, hamstring 60s each, deep breathing 2 min",
+      "estimatedCalories": "280-360",
+      "progressionNotes": "Beginner: focus on swing mechanics. 15 reps per set before increasing load.",
+      "equipment": "Kettlebell",
+      "description": "A beginner kettlebell fat-burn session centred on swings and compound movements. Burns calories efficiently while teaching fundamental KB patterns."
+    },
+    {
+      "workoutName": "Kettlebell HIIT",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Kettlebell Series",
+      "duration": "40 min",
+      "intensity": "HIGH",
+      "warmup": "Jumping jacks x40, KB deadlift x10, goblet squat x10, swing x10",
+      "mainWorkout": [
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 5,
+          "reps": "20",
+          "tempo": "Rhythmic \u2014 max power",
+          "rest": "30s",
+          "coachingFocus": "20 swings with short rest is a caloric furnace. Hip snap every rep.",
+          "id": "KB004"
+        },
+        {
+          "exercise": "Goblet Squat",
+          "sets": 4,
+          "reps": "15",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "Fast squat. Stay deep. High rep for metabolic output.",
+          "id": "KB002"
+        },
+        {
+          "exercise": "Kettlebell Press",
+          "sets": 3,
+          "reps": "10 each",
+          "tempo": "2-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "Alternate arms. Quick transitions. Keep the heart rate up.",
+          "id": "KB003"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "Max effort",
+          "rest": "30s",
+          "coachingFocus": "The burpee + KB swing combination is elite fat burning.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "High effort",
+          "rest": "20s",
+          "coachingFocus": "Drive knees. High intensity. Cardio and core simultaneously.",
+          "id": "CD002"
+        }
+      ],
+      "finisher": "KB Swing x20 + Burpee x10 + Mountain Climbers 30s: 3 rounds, 60s rest",
+      "cooldown": "Walk 5 min, hip flexor 60s each, hamstring 60s each, deep breathing 2 min",
+      "estimatedCalories": "400-500",
+      "progressionNotes": "Intermediate: reduce rest by 5s every 2 weeks. Track total session time.",
+      "equipment": "Kettlebell",
+      "description": "An intermediate kettlebell HIIT session combining swings, squats, and burpees with minimal rest. High caloric output and full-body conditioning."
+    },
+    {
+      "workoutName": "Kettlebell Metabolic",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Kettlebell Series",
+      "duration": "45 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "Jump rope 3 min, KB halo x10, swing x10, goblet squat x10, get-up x1 each light",
+      "mainWorkout": [
+        {
+          "exercise": "Kettlebell Snatch",
+          "sets": 5,
+          "reps": "8 each",
+          "tempo": "Explosive",
+          "rest": "30s",
+          "coachingFocus": "The snatch is the highest-output KB exercise. Max caloric burn per rep.",
+          "id": "KB006"
+        },
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 5,
+          "reps": "25",
+          "tempo": "Rhythmic \u2014 explosive",
+          "rest": "20s",
+          "coachingFocus": "25 reps with 20s rest. This is metabolic conditioning at its most efficient.",
+          "id": "KB004"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "12",
+          "tempo": "Max effort",
+          "rest": "30s",
+          "coachingFocus": "Burpees between KB sets. Total body output. No shortcuts.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Kettlebell Press",
+          "sets": 3,
+          "reps": "10 each",
+          "tempo": "1-0-1-0",
+          "rest": "20s",
+          "coachingFocus": "Fast press. Upper body work in the circuit. Keep moving.",
+          "id": "KB003"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "40s",
+          "tempo": "Max effort",
+          "rest": "20s",
+          "coachingFocus": "40s of mountain climbers after swings. This is elite metabolic work.",
+          "id": "CD002"
+        }
+      ],
+      "finisher": "KB Snatch x5 each + Swing x20 + Burpee x10 + Climbers 30s: 3 rounds, 90s rest",
+      "cooldown": "Walk 5 min, full stretch sequence 10 min, hip flexor 60s each, hamstring 60s each",
+      "estimatedCalories": "500-620",
+      "progressionNotes": "Advanced: track total snatch reps per session. Add 10 reps per 2 weeks.",
+      "equipment": "Kettlebell",
+      "description": "An advanced kettlebell metabolic session using snatches, swings, and burpees at near-max intensity. Maximum calorie burn in minimum time."
+    },
+    {
+      "workoutName": "Band Fat Burn Beginner",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Band Series",
+      "duration": "30 min",
+      "intensity": "MODERATE",
+      "warmup": "March in place 2 min, band pull-apart x15, arm swings x20, bodyweight squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Resistance Band Squat",
+          "sets": 4,
+          "reps": "15",
+          "tempo": "1-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "High rep squat burns calories and builds legs. Keep moving.",
+          "id": "RB001"
+        },
+        {
+          "exercise": "Resistance Band Row",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-1-2-0",
+          "rest": "45s",
+          "coachingFocus": "Back work between squat sets. Pull elbows back. Posture improves calorie burn.",
+          "id": "RB003"
+        },
+        {
+          "exercise": "Band Overhead Press",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "2-0-2-0",
+          "rest": "45s",
+          "coachingFocus": "Stand on band. Press up. Core braced. Upper body contribution.",
+          "id": "RB002"
+        },
+        {
+          "exercise": "Glute Bridge",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-2-2-0",
+          "rest": "30s",
+          "coachingFocus": "Band across hips. Drive up. Lower body fat burning starts in the glutes.",
+          "id": "HI009"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "20s",
+          "tempo": "Moderate",
+          "rest": "30s",
+          "coachingFocus": "Cardio on the mat. Manageable pace. Heart rate up.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 3,
+          "reps": "30",
+          "tempo": "Moderate pace",
+          "rest": "30s",
+          "coachingFocus": "Simple cardio between sets. Keep moving to burn more.",
+          "id": "CD_JJ"
+        }
+      ],
+      "finisher": "Band Squat x20 + Mountain Climbers 20s: 4 rounds, 30s rest",
+      "cooldown": "Chest stretch 45s, hamstring seated 45s each, hip flexor 45s each",
+      "estimatedCalories": "220-290",
+      "progressionNotes": "Beginner: add 5 reps to each exercise every 2 weeks.",
+      "equipment": "Resistance Bands",
+      "description": "A beginner resistance band fat-burn session using high-rep circuits and cardio bursts. Low impact, accessible, and effective for weight loss at home."
+    },
+    {
+      "workoutName": "Band HIIT Circuit",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Band Series",
+      "duration": "40 min",
+      "intensity": "HIGH",
+      "warmup": "Jumping jacks x40, band pull-apart x20, hip circles x10, band squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Resistance Band Squat",
+          "sets": 4,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "20 reps, 30s rest. That's a caloric circuit. Stay at full depth.",
+          "id": "RB001"
+        },
+        {
+          "exercise": "Band Push-Up",
+          "sets": 4,
+          "reps": "15",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "Banded push-up adds resistance. High reps for metabolic output.",
+          "id": "RB006"
+        },
+        {
+          "exercise": "Resistance Band Row",
+          "sets": 4,
+          "reps": "20",
+          "tempo": "2-1-1-0",
+          "rest": "30s",
+          "coachingFocus": "High rep pulling. Back health supports calorie burn in every other exercise.",
+          "id": "RB003"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "Fast",
+          "rest": "30s",
+          "coachingFocus": "The burpee is a fat-burning machine. Chest to floor. Jump at the top.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "High effort",
+          "rest": "20s",
+          "coachingFocus": "Drive knees. Cardio on the mat. Core and calories.",
+          "id": "CD002"
+        }
+      ],
+      "finisher": "Band Squat x20 + Burpee x10 + Mountain Climbers 30s: 3 rounds, 45s rest",
+      "cooldown": "Walk 5 min, hip flexor 60s each, hamstring 60s each, chest stretch 45s",
+      "estimatedCalories": "340-420",
+      "progressionNotes": "Intermediate: reduce rest by 5s every 2 weeks. Track total rounds completed.",
+      "equipment": "Resistance Bands",
+      "description": "An intermediate resistance band HIIT circuit combining high-rep squats, banded push-ups, and burpees. Maximum calorie burn with minimal equipment."
+    },
+    {
+      "workoutName": "Band Metabolic Advanced",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Band Series",
+      "duration": "45 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "Jump rope 3 min, band pull-apart x25, hip circles, pull-up x5, band squat x20",
+      "mainWorkout": [
+        {
+          "exercise": "Weighted Pull-Up",
+          "sets": 5,
+          "reps": "8",
+          "tempo": "2-0-2-0",
+          "rest": "45s",
+          "coachingFocus": "Band as resistance. Heavy pulling burns serious calories and builds back.",
+          "id": "PLV002"
+        },
+        {
+          "exercise": "Resistance Band Squat",
+          "sets": 5,
+          "reps": "25",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "25 reps per set. Legs are the biggest calorie burners. Use them.",
+          "id": "RB001"
+        },
+        {
+          "exercise": "Band Push-Up",
+          "sets": 4,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "20 banded push-ups. Upper body muscular endurance = more calories.",
+          "id": "RB006"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 5,
+          "reps": "12",
+          "tempo": "Max controlled effort",
+          "rest": "30s",
+          "coachingFocus": "5 sets of 12. That's 60 burpees. Elite metabolic output.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "45s",
+          "tempo": "Max effort",
+          "rest": "15s",
+          "coachingFocus": "45s at max effort. Core and cardio. The last 10s are where fat loss happens.",
+          "id": "CD002"
+        }
+      ],
+      "finisher": "Weighted Pull-Up x6 + Band Squat x25 + Burpee x10 + Climbers 30s: 3 rounds, 90s rest",
+      "cooldown": "10 min walk, full body stretch, lat 60s each, hip flexor 60s each, hamstring 60s each",
+      "estimatedCalories": "460-560",
+      "progressionNotes": "Advanced: track total burpee count per session. Aim for more rounds in the finisher monthly.",
+      "equipment": "Resistance Bands",
+      "description": "An advanced band metabolic session with weighted pull-ups, 25-rep squats, and high-volume burpees. Maximum calorie burn through total body work."
+    },
+    {
+      "workoutName": "Dumbbell Fat Burn Beginner",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Fat Burn",
+      "duration": "35 min",
+      "intensity": "MODERATE",
+      "warmup": "March in place 2 min, arm circles x20, hip hinge bodyweight x10, bodyweight squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Goblet Squat",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "1-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "High rep squat. DB at chest. Legs drive fat loss. Full depth every time.",
+          "id": "DB001"
+        },
+        {
+          "exercise": "Dumbbell Row",
+          "sets": 3,
+          "reps": "12 each",
+          "tempo": "2-1-2-0",
+          "rest": "45s",
+          "coachingFocus": "Back work between squat sets. Balanced training burns more total calories.",
+          "id": "DB002"
+        },
+        {
+          "exercise": "Overhead Dumbbell Press",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "2-0-2-0",
+          "rest": "45s",
+          "coachingFocus": "Upper body work. Full range. Core braced.",
+          "id": "DB003"
+        },
+        {
+          "exercise": "Dumbbell RDL",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "3-1-1-0",
+          "rest": "45s",
+          "coachingFocus": "Hip hinge. Hamstrings loaded. Posterior chain drives fat loss.",
+          "id": "DB004"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "20s",
+          "tempo": "Moderate",
+          "rest": "30s",
+          "coachingFocus": "Cardio between strength sets. Keep the heart rate up.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 3,
+          "reps": "30",
+          "tempo": "Moderate",
+          "rest": "30s",
+          "coachingFocus": "Simple cardio. Elevate the heart rate. Burn more.",
+          "id": "CD_JJ"
+        }
+      ],
+      "finisher": "Goblet Squat x12 + Mountain Climbers 20s + Jumping Jacks x20: 3 rounds, 45s rest",
+      "cooldown": "Doorway chest 45s, hamstring seated 60s each, hip flexor 45s each",
+      "estimatedCalories": "260-340",
+      "progressionNotes": "Beginner: reduce rest by 5s every 2 weeks to increase caloric output.",
+      "equipment": "Dumbbell",
+      "description": "A beginner dumbbell fat-burn session using compound movements and cardio bursts. Builds metabolism-boosting muscle while burning calories at home."
+    },
+    {
+      "workoutName": "Dumbbell Metabolic",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Fat Burn",
+      "duration": "50 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "Jump rope 3 min, push-up x15, hip hinge x10, DB swing x10",
+      "mainWorkout": [
+        {
+          "exercise": "Dumbbell Thruster",
+          "sets": 5,
+          "reps": "12",
+          "tempo": "1-0-X-0",
+          "rest": "30s",
+          "coachingFocus": "The thruster is a fat-burning machine. Squat drives the press. Max output.",
+          "id": "DB005"
+        },
+        {
+          "exercise": "Renegade Row",
+          "sets": 4,
+          "reps": "10 each",
+          "tempo": "2-0-2-0",
+          "rest": "30s",
+          "coachingFocus": "Plank position. Back and core in one. Burns more than it looks.",
+          "id": "DB006"
+        },
+        {
+          "exercise": "Dumbbell RDL",
+          "sets": 4,
+          "reps": "12",
+          "tempo": "2-1-1-0",
+          "rest": "30s",
+          "coachingFocus": "Posterior chain at speed. Hip hinge power. Control the descent.",
+          "id": "DB004"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 5,
+          "reps": "12",
+          "tempo": "Max effort",
+          "rest": "30s",
+          "coachingFocus": "60 total burpees in this session. That is elite fat burning.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "45s",
+          "tempo": "Max effort",
+          "rest": "15s",
+          "coachingFocus": "Drive knees. Max effort. Last 10s are where the adaptation happens.",
+          "id": "CD002"
+        }
+      ],
+      "finisher": "DB Thruster x10 + Burpee x10 + Renegade Row x8 each + Climbers 30s: 3 rounds, 90s rest",
+      "cooldown": "10 min walk, hip flexor 60s each, hamstring 60s each, thoracic rotation 45s each",
+      "estimatedCalories": "500-620",
+      "progressionNotes": "Advanced: track thruster load. Increase weight every 2-3 weeks. Log total rounds in finisher.",
+      "equipment": "Dumbbell",
+      "description": "An advanced dumbbell metabolic session using thrusters, renegade rows, and high-volume burpees. Maximum calorie burn through compound power movements."
+    },
+    {
+      "workoutName": "Pull-Up Bar Burn Starter",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "UPPER",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Pull-Up Series",
+      "duration": "30 min",
+      "intensity": "MODERATE",
+      "warmup": "March in place 2 min, arm circles x20, dead hang 15s x2, push-up x8",
+      "mainWorkout": [
+        {
+          "exercise": "Scapular Pull-Up",
+          "sets": 2,
+          "reps": "10",
+          "tempo": "2-1-2-0",
+          "rest": "75s",
+          "coachingFocus": "Build shoulder blade control. Foundation before full pulls.",
+          "id": "PUB001"
+        },
+        {
+          "exercise": "Negative Pull-Up",
+          "sets": 2,
+          "reps": "4",
+          "tempo": "5-0-X-0",
+          "rest": "90s",
+          "coachingFocus": "Slow descent. Fat loss requires muscle. Muscle requires resistance.",
+          "id": "PUB002"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 2,
+          "reps": "10",
+          "tempo": "2-0-1-0",
+          "rest": "60s",
+          "coachingFocus": "Upper body pressing. Burns more calories than isolation work.",
+          "id": "PH001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "20s",
+          "tempo": "Moderate effort",
+          "rest": "30s",
+          "coachingFocus": "Cardio on the mat. Heart rate up. Fat burn happens here.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 3,
+          "reps": "30",
+          "tempo": "Moderate",
+          "rest": "30s",
+          "coachingFocus": "Simple full body cardio. Keep moving between bar sets.",
+          "id": "CD_JJ"
+        }
+      ],
+      "finisher": "Mountain Climbers 20s + Jumping Jacks x30: 4 rounds, 30s rest",
+      "cooldown": "Doorway chest 45s, lat side stretch 45s each, deep breathing 2 min",
+      "estimatedCalories": "200-260",
+      "progressionNotes": "Rebuild: add 5s to mountain climbers every 2 weeks.",
+      "equipment": "Pull-Up Bar",
+      "description": "A beginner pull-up bar fat-burn session pairing pulling development with cardio bursts. Burns calories while building upper body strength."
+    },
+    {
+      "workoutName": "Pull-Up Bar HIIT",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "UPPER",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Pull-Up Series",
+      "duration": "40 min",
+      "intensity": "HIGH",
+      "warmup": "Dead hang 30s x2, scapular pull-up x10, push-up x12, jumping jacks x40",
+      "mainWorkout": [
+        {
+          "exercise": "Pull-Up",
+          "sets": 4,
+          "reps": "6",
+          "tempo": "2-0-2-0",
+          "rest": "45s",
+          "coachingFocus": "Pulling builds muscle. Muscle burns fat. 45s rest keeps heart rate elevated.",
+          "id": "PUB004"
+        },
+        {
+          "exercise": "Hanging Leg Raise",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "2-0-2-0",
+          "rest": "30s",
+          "coachingFocus": "Core work on the bar. No swinging. Control.",
+          "id": "PUB006"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "Fast",
+          "rest": "30s",
+          "coachingFocus": "The fat burning accelerator. Chest to floor. Explosive top.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "Max effort",
+          "rest": "20s",
+          "coachingFocus": "Drive knees. Max effort for the 30s. Heart rate stays high.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "Pressing volume burns upper body calories and builds metabolism-supporting muscle.",
+          "id": "PH001"
+        }
+      ],
+      "finisher": "Pull-Up x5 + Burpee x10 + Mountain Climbers 30s: 4 rounds, 45s rest",
+      "cooldown": "Walk 5 min, lat stretch 45s each, chest doorway 45s, deep breathing 2 min",
+      "estimatedCalories": "360-440",
+      "progressionNotes": "Operator: reduce rest 5s every 2 weeks.",
+      "equipment": "Pull-Up Bar",
+      "description": "An intermediate pull-up bar HIIT session combining pulling volume with burpees and mountain climbers. Conditioning Circuit template for fat loss."
+    },
+    {
+      "workoutName": "Pull-Up Bar Metabolic",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "UPPER",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Pull-Up Series",
+      "duration": "45 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "Jump rope 2 min, dead hang 45s, scapular pull-up x12, pull-up x5, push-up x15",
+      "mainWorkout": [
+        {
+          "exercise": "Weighted Pull-Up",
+          "sets": 5,
+          "reps": "6",
+          "tempo": "2-0-2-0",
+          "rest": "45s",
+          "coachingFocus": "Weighted pulls build the most muscle per rep. More muscle = higher resting metabolism.",
+          "id": "PUB007"
+        },
+        {
+          "exercise": "Toes-to-Bar",
+          "sets": 4,
+          "reps": "12",
+          "tempo": "2-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "High-rep toes-to-bar on short rest. Core fatigue is metabolic.",
+          "id": "PUB010"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 5,
+          "reps": "12",
+          "tempo": "Max controlled",
+          "rest": "30s",
+          "coachingFocus": "5 sets of 12. 60 total. Elite fat-burning output.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "40s",
+          "tempo": "Max effort",
+          "rest": "20s",
+          "coachingFocus": "40s max effort. This is where the fat burn happens.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 4,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "20s",
+          "coachingFocus": "20 reps on short rest. Upper body metabolic work.",
+          "id": "PH001"
+        }
+      ],
+      "finisher": "Weighted Pull-Up x5 + Toes-to-Bar x10 + Burpee x12 + Climbers 30s: 3 rounds, 90s rest",
+      "cooldown": "Walk 5 min, lat stretch 60s each, chest doorway 60s, wrist 2 min",
+      "estimatedCalories": "480-580",
+      "progressionNotes": "Exec Perf: track weighted pull-up load. Increase every 2 weeks.",
+      "equipment": "Pull-Up Bar",
+      "description": "An advanced pull-up bar metabolic session using weighted pulls, toes-to-bar, and 60 burpees. Strength+HIIT Hybrid template for maximum fat loss."
+    },
+    {
+      "workoutName": "Jump Rope Fat Burn Starter",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Jump Rope Series",
+      "duration": "25 min",
+      "intensity": "MODERATE",
+      "warmup": "March in place 2 min, calf raises x20, arm circles x20",
+      "mainWorkout": [
+        {
+          "exercise": "Jump Rope",
+          "sets": 5,
+          "reps": "45s",
+          "tempo": "Moderate",
+          "rest": "45s",
+          "coachingFocus": "Jump rope is one of the best fat burning tools. Consistent rhythm. Light on feet.",
+          "id": "JR001"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 2,
+          "reps": "15",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "Leg work amplifies calorie burn. Deep and consistent.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "20s",
+          "tempo": "Moderate effort",
+          "rest": "30s",
+          "coachingFocus": "Cardio on the mat. Heart rate stays up.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 3,
+          "reps": "30",
+          "tempo": "Moderate",
+          "rest": "30s",
+          "coachingFocus": "Simple full body cardio. Keeps total caloric output high.",
+          "id": "CD_JJ"
+        },
+        {
+          "exercise": "Glute Bridge",
+          "sets": 2,
+          "reps": "15",
+          "tempo": "2-2-2-0",
+          "rest": "30s",
+          "coachingFocus": "Posterior chain activation. Lower body fat burn begins here.",
+          "id": "HI009"
+        }
+      ],
+      "finisher": "Jump Rope 45s + Mountain Climbers 20s + Jumping Jacks x25: 4 rounds, 30s rest",
+      "cooldown": "Calf stretch 60s each, hip flexor 45s each, deep breathing 2 min",
+      "estimatedCalories": "200-260",
+      "progressionNotes": "Rebuild: target 5x60s rope sets before progressing.",
+      "equipment": "Jump Rope",
+      "description": "A beginner jump rope fat-burn session using rope intervals and light cardio. Simple, effective, and burns serious calories once the rhythm is found."
+    },
+    {
+      "workoutName": "Jump Rope HIIT",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Jump Rope Series",
+      "duration": "35 min",
+      "intensity": "HIGH",
+      "warmup": "Jump rope 2 min easy, calf raise x20, jumping jacks x40",
+      "mainWorkout": [
+        {
+          "exercise": "Jump Rope",
+          "sets": 6,
+          "reps": "90s",
+          "tempo": "High effort",
+          "rest": "30s",
+          "coachingFocus": "90s at high effort is a serious fat-burning interval. Push the pace.",
+          "id": "JR001"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "Fast",
+          "rest": "30s",
+          "coachingFocus": "Burpees between rope sets. Total body fat burning.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "Max effort",
+          "rest": "20s",
+          "coachingFocus": "Drive knees. Max effort. Cardio and core simultaneously.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 3,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "20s",
+          "coachingFocus": "High rep squat between cardio. Legs are the biggest calorie burners.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 3,
+          "reps": "40",
+          "tempo": "Fast",
+          "rest": "20s",
+          "coachingFocus": "Active recovery between sets. Heart rate stays elevated.",
+          "id": "CD_JJ"
+        }
+      ],
+      "finisher": "Jump Rope 90s + Burpee x10 + Mountain Climbers 30s: 4 rounds, 45s rest",
+      "cooldown": "Walk 5 min, calf stretch 90s each, hip flexor 45s each, deep breathing 2 min",
+      "estimatedCalories": "400-500",
+      "progressionNotes": "Operator: reduce rest 5s every 2 weeks. Target 6x2min rope sets.",
+      "equipment": "Jump Rope",
+      "description": "An intermediate jump rope HIIT session combining 90-second rope intervals with burpees and mountain climbers. Conditioning Circuit template."
+    },
+    {
+      "workoutName": "Jump Rope Metabolic",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Jump Rope Series",
+      "duration": "40 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "Jump rope 3 min, double under practice 1 min, burpee x5, squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Double Under",
+          "sets": 5,
+          "reps": "50",
+          "tempo": "Max wrist speed",
+          "rest": "20s",
+          "coachingFocus": "50 double unders is a serious caloric event. Rhythm over brute effort.",
+          "id": "JR002"
+        },
+        {
+          "exercise": "Jump Rope",
+          "sets": 5,
+          "reps": "3 min",
+          "tempo": "High sustained",
+          "rest": "20s",
+          "coachingFocus": "3 minutes at high effort with 20s rest. Elite metabolic conditioning.",
+          "id": "JR001"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 5,
+          "reps": "12",
+          "tempo": "Max effort",
+          "rest": "20s",
+          "coachingFocus": "60 total burpees. The fat-burning combination with rope work is unmatched.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "45s",
+          "tempo": "Max effort",
+          "rest": "15s",
+          "coachingFocus": "45s at max effort on 15s rest. Advanced metabolic work.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 3,
+          "reps": "25",
+          "tempo": "1-0-1-0",
+          "rest": "20s",
+          "coachingFocus": "25 reps. Leg conditioning under fatigue. Burns serious calories.",
+          "id": "SQ001"
+        }
+      ],
+      "finisher": "Double Under x30 + Burpee x12 + Mountain Climbers 40s: 3 rounds, 90s rest",
+      "cooldown": "Walk 5 min, calf stretch 90s each, hip flexor 60s each, wrist 2 min, deep breathing",
+      "estimatedCalories": "540-660",
+      "progressionNotes": "Exec Perf: track double under total per session. Add 10 reps per set every 2 weeks.",
+      "equipment": "Jump Rope",
+      "description": "An advanced jump rope metabolic session using double unders, 3-minute sets, and 60 burpees. Maximum calorie burn. Strength+HIIT Hybrid template."
+    },
+    {
+      "workoutName": "Battle Rope Burn Starter",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Battle Rope Series",
+      "duration": "25 min",
+      "intensity": "MODERATE",
+      "warmup": "March in place 2 min, arm circles x20, shoulder rolls x15, squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Battle Ropes",
+          "sets": 4,
+          "reps": "20s",
+          "tempo": "Moderate",
+          "rest": "75s",
+          "coachingFocus": "Battle ropes burn more calories per minute than most exercises. Even 20s counts.",
+          "id": "BR001"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 2,
+          "reps": "15",
+          "tempo": "1-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Legs between rope sets. More muscle activation = more calories.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "20s",
+          "tempo": "Moderate",
+          "rest": "30s",
+          "coachingFocus": "Cardio on the mat. Heart rate up. Fat burning elevated.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 3,
+          "reps": "30",
+          "tempo": "Moderate",
+          "rest": "30s",
+          "coachingFocus": "Simple full body cardio. Keep the caloric output high.",
+          "id": "CD_JJ"
+        },
+        {
+          "exercise": "Glute Bridge",
+          "sets": 2,
+          "reps": "15",
+          "tempo": "2-2-2-0",
+          "rest": "30s",
+          "coachingFocus": "Posterior chain activation. Supports all fat-burning work.",
+          "id": "HI009"
+        }
+      ],
+      "finisher": "Battle Ropes 20s + Mountain Climbers 20s + Jumping Jacks x25: 4 rounds, 30s rest",
+      "cooldown": "Shoulder cross-body 45s each, chest stretch 45s, hip flexor 45s each, deep breathing 2 min",
+      "estimatedCalories": "220-280",
+      "progressionNotes": "Rebuild: extend rope sets by 5s every 2 weeks.",
+      "equipment": "Battle Rope",
+      "description": "A beginner battle rope fat-burn session using short rope intervals with cardio. High caloric output even for beginners."
+    },
+    {
+      "workoutName": "Battle Rope HIIT",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Battle Rope Series",
+      "duration": "35 min",
+      "intensity": "HIGH",
+      "warmup": "Battle rope easy 30s, arm circles x20, jumping jacks x40, squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Battle Ropes",
+          "sets": 6,
+          "reps": "40s",
+          "tempo": "Max effort",
+          "rest": "20s",
+          "coachingFocus": "40s at max effort. 20s rest. This ratio burns maximum fat in minimum time.",
+          "id": "BR001"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "Fast",
+          "rest": "20s",
+          "coachingFocus": "Battle ropes + burpees is the gold standard fat-loss combination.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "Max effort",
+          "rest": "15s",
+          "coachingFocus": "Core cardio at max intensity between rope and burpee sets.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 3,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "20s",
+          "coachingFocus": "High-rep squat burns serious calories. Legs on fire \u2014 that's the point.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 3,
+          "reps": "40",
+          "tempo": "Fast",
+          "rest": "15s",
+          "coachingFocus": "Active recovery. Heart rate stays elevated.",
+          "id": "CD_JJ"
+        }
+      ],
+      "finisher": "Battle Ropes 30s + Burpee x10 + Mountain Climbers 30s: 4 rounds, 45s rest",
+      "cooldown": "Walk 5 min, shoulder cross-body 45s each, chest doorway 45s, deep breathing 2 min",
+      "estimatedCalories": "420-520",
+      "progressionNotes": "Operator: reduce rest 5s every 2 weeks. Target 6x50s rope sets.",
+      "equipment": "Battle Rope",
+      "description": "An intermediate battle rope HIIT session using 40-second rope intervals, burpees, and mountain climbers. Conditioning Circuit template."
+    },
+    {
+      "workoutName": "Battle Rope Metabolic",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Battle Rope Series",
+      "duration": "40 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "Battle rope 1 min easy, arm circles x20, push-up x15, mountain climbers 30s",
+      "mainWorkout": [
+        {
+          "exercise": "Battle Ropes",
+          "sets": 7,
+          "reps": "50s",
+          "tempo": "Max output",
+          "rest": "10s",
+          "coachingFocus": "7x50s with 10s rest. Elite metabolic conditioning. Shoulders on fire.",
+          "id": "BR001"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 5,
+          "reps": "12",
+          "tempo": "Max effort",
+          "rest": "15s",
+          "coachingFocus": "60 total burpees alongside rope work. Maximum fat-burning combination.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 5,
+          "reps": "45s",
+          "tempo": "Max effort",
+          "rest": "15s",
+          "coachingFocus": "45s max. Core and cardio. The last 10s is where the adaptation happens.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 4,
+          "reps": "25",
+          "tempo": "1-0-1-0",
+          "rest": "15s",
+          "coachingFocus": "25 reps on 15s rest. Legs are the biggest calorie burners.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 3,
+          "reps": "50",
+          "tempo": "Fast",
+          "rest": "10s",
+          "coachingFocus": "Active recovery keeping heart rate maximal.",
+          "id": "CD_JJ"
+        }
+      ],
+      "finisher": "Battle Ropes 45s + Burpee x12 + Mountain Climbers 40s + Squat x25: 3 rounds, 90s rest",
+      "cooldown": "Walk 8 min, shoulder cross-body 60s each, chest doorway 60s, full body stretch 5 min",
+      "estimatedCalories": "560-700",
+      "progressionNotes": "Exec Perf: track total rope output minutes. Target 8 minutes of rope per session.",
+      "equipment": "Battle Rope",
+      "description": "An advanced battle rope metabolic session with 7x50s rope intervals, 60 burpees, and mountain climbers. The highest calorie output available at home."
+    },
+    {
+      "workoutName": "Vest Fat Burn Starter",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Vest Series",
+      "duration": "30 min",
+      "intensity": "MODERATE",
+      "warmup": "March in place 2 min, arm circles x20, push-up x8 (no vest), squat x15 (no vest)",
+      "mainWorkout": [
+        {
+          "exercise": "Weighted Push-Up",
+          "sets": 2,
+          "reps": "10",
+          "tempo": "2-0-1-0",
+          "rest": "60s",
+          "coachingFocus": "More load means more muscle. More muscle means more fat burned at rest.",
+          "id": "VS001"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 2,
+          "reps": "15",
+          "tempo": "1-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Weighted squat burns more calories than bodyweight alone.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "20s",
+          "tempo": "Moderate",
+          "rest": "30s",
+          "coachingFocus": "Cardio on the mat. Heart rate elevated.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 3,
+          "reps": "30",
+          "tempo": "Moderate",
+          "rest": "30s",
+          "coachingFocus": "Full body cardio. Vest adds 5-10% more caloric cost per movement.",
+          "id": "CD_JJ"
+        },
+        {
+          "exercise": "Forward Lunge",
+          "sets": 2,
+          "reps": "10 each",
+          "tempo": "2-0-2-0",
+          "rest": "45s",
+          "coachingFocus": "Weighted lunge. Big muscle groups burn the most fat.",
+          "id": "LG001"
+        }
+      ],
+      "finisher": "Vest Push-Up x8 + Squat x15 + Mountain Climbers 20s + Jumping Jacks x25: 3 rounds, 45s rest",
+      "cooldown": "Doorway chest 45s, hip flexor 45s each, hamstring seated 45s each, deep breathing",
+      "estimatedCalories": "240-300",
+      "progressionNotes": "Rebuild: start with minimal vest weight. Track how many rounds completed in finisher.",
+      "equipment": "Adjustable Weight Training Vest",
+      "description": "A beginner weighted vest fat-burn session using loaded bodyweight movements and cardio bursts. Burns more calories than standard bodyweight at the same effort."
+    },
+    {
+      "workoutName": "Vest HIIT",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Vest Series",
+      "duration": "40 min",
+      "intensity": "HIGH",
+      "warmup": "Push-up x10 (no vest), squat x15 (no vest), jumping jacks x40",
+      "mainWorkout": [
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "Fast",
+          "rest": "30s",
+          "coachingFocus": "Weighted burpees. Vest adds load to every phase \u2014 push-up, jump, everything.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Weighted Push-Up",
+          "sets": 4,
+          "reps": "15",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "High-rep vest push-ups. Upper body fat-burning and muscle building together.",
+          "id": "VS001"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 4,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "20 weighted squats burns significant calories. Legs lead fat loss.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "Max effort",
+          "rest": "20s",
+          "coachingFocus": "Vest + mountain climbers is advanced cardio conditioning.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Forward Lunge",
+          "sets": 3,
+          "reps": "12 each",
+          "tempo": "1-0-1-0",
+          "rest": "30s",
+          "coachingFocus": "Weighted lunges. Single-leg loaded fat burning.",
+          "id": "LG001"
+        }
+      ],
+      "finisher": "Vest Burpee x10 + Vest Push-Up x15 + Squat x20 + Mountain Climbers 30s: 3 rounds, 60s rest",
+      "cooldown": "Walk 5 min, doorway chest 45s, hip flexor 45s each, hamstring 45s each",
+      "estimatedCalories": "400-500",
+      "progressionNotes": "Operator: reduce rest 5s every 2 weeks. Increase vest load when burpees feel controlled.",
+      "equipment": "Adjustable Weight Training Vest",
+      "description": "An intermediate weighted vest HIIT session using burpees, push-ups, and squats under added load. Conditioning Circuit template."
+    },
+    {
+      "workoutName": "Vest Metabolic",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Vest Series",
+      "duration": "50 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "Pull-up x5 (no vest), push-up x15 (no vest), squat x20 (no vest), mountain climbers 30s",
+      "mainWorkout": [
+        {
+          "exercise": "Weighted Pull-Up",
+          "sets": 5,
+          "reps": "6",
+          "tempo": "2-0-2-0",
+          "rest": "45s",
+          "coachingFocus": "Heavy pulling builds the most metabolically active muscle in the upper body.",
+          "id": "PUB007"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 5,
+          "reps": "12",
+          "tempo": "Max effort",
+          "rest": "20s",
+          "coachingFocus": "60 weighted burpees. The highest calorie-per-minute exercise with a vest.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Weighted Push-Up",
+          "sets": 4,
+          "reps": "20",
+          "tempo": "1-0-1-0",
+          "rest": "20s",
+          "coachingFocus": "20 reps on 20s rest. Upper body metabolic work.",
+          "id": "VS001"
+        },
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 4,
+          "reps": "25",
+          "tempo": "1-0-1-0",
+          "rest": "20s",
+          "coachingFocus": "25 loaded squats. Legs burn fat. This is the caloric base of the session.",
+          "id": "SQ001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 5,
+          "reps": "45s",
+          "tempo": "Max effort",
+          "rest": "15s",
+          "coachingFocus": "Vest + mountain climbers. Maximum core and cardio output.",
+          "id": "CD002"
+        }
+      ],
+      "finisher": "Weighted Pull-Up x6 + Vest Burpee x10 + Vest Push-Up x15 + Mountain Climbers 40s: 3 rounds, 90s rest",
+      "cooldown": "Walk 8 min, lat stretch 60s each, chest doorway 60s, hip flexor 60s each",
+      "estimatedCalories": "540-660",
+      "progressionNotes": "Exec Perf: track vest load and total burpee count monthly. Periodise in 4-week blocks.",
+      "equipment": "Adjustable Weight Training Vest",
+      "description": "An advanced weighted vest metabolic session using 60 weighted burpees, loaded pull-ups, and high-volume squats. Maximum fat loss through amplified bodyweight training."
+    },
+    {
+      "workoutName": "Medicine Ball Fat Burn Starter",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Medicine Ball Series",
+      "duration": "30 min",
+      "intensity": "MODERATE",
+      "warmup": "March in place 2 min, arm circles x20, hip circles x10, bodyweight squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Medicine Ball Slam",
+          "sets": 3,
+          "reps": "10",
+          "tempo": "Moderate explosive",
+          "rest": "60s",
+          "coachingFocus": "Slams burn serious calories. Full overhead. Drive down with force.",
+          "id": "MB001"
+        },
+        {
+          "exercise": "Wall Ball",
+          "sets": 3,
+          "reps": "10",
+          "tempo": "Rhythmic",
+          "rest": "60s",
+          "coachingFocus": "Wall balls are one of the best full-body fat burners. Squat deep. Throw high.",
+          "id": "MB002"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "20s",
+          "tempo": "Moderate",
+          "rest": "30s",
+          "coachingFocus": "Cardio between MB sets. Heart rate stays elevated.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Russian Twist",
+          "sets": 2,
+          "reps": "20 total",
+          "tempo": "Moderate",
+          "rest": "30s",
+          "coachingFocus": "Rotational core. Burns the midsection while building strength.",
+          "id": "MB003"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 3,
+          "reps": "30",
+          "tempo": "Moderate",
+          "rest": "30s",
+          "coachingFocus": "Simple cardio between strength sets. Keeps caloric output high.",
+          "id": "CD_JJ"
+        }
+      ],
+      "finisher": "MB Slam x10 + Mountain Climbers 20s + Jumping Jacks x30: 4 rounds, 30s rest",
+      "cooldown": "Thoracic rotation 45s each, hip flexor 45s each, deep breathing 2 min",
+      "estimatedCalories": "240-300",
+      "progressionNotes": "Rebuild: increase slam reps by 2 and wall ball reps by 2 every 2 weeks.",
+      "equipment": "Medicine Ball",
+      "description": "A beginner medicine ball fat-burn session using slams, wall balls, and cardio bursts. High caloric output with engaging, powerful movements."
+    },
+    {
+      "workoutName": "Medicine Ball HIIT",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Medicine Ball Series",
+      "duration": "35 min",
+      "intensity": "HIGH",
+      "warmup": "MB slam x8 easy, wall ball x8, jumping jacks x40, squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Medicine Ball Slam",
+          "sets": 5,
+          "reps": "12",
+          "tempo": "Max explosive",
+          "rest": "30s",
+          "coachingFocus": "Maximum slam intensity. Short rest. Metabolic furnace.",
+          "id": "MB001"
+        },
+        {
+          "exercise": "Wall Ball",
+          "sets": 5,
+          "reps": "15",
+          "tempo": "Max rhythmic",
+          "rest": "20s",
+          "coachingFocus": "15 wall balls on 20s rest. Elite fat-burning interval work.",
+          "id": "MB002"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "Fast",
+          "rest": "20s",
+          "coachingFocus": "Burpees between MB sets. Total body fat burn accelerated.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "Max effort",
+          "rest": "15s",
+          "coachingFocus": "30s max effort. Core and cardio. The combination burns maximum calories.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Russian Twist",
+          "sets": 3,
+          "reps": "30 total",
+          "tempo": "Fast",
+          "rest": "20s",
+          "coachingFocus": "High-rep rotation. Core fat burn and oblique conditioning.",
+          "id": "MB003"
+        }
+      ],
+      "finisher": "MB Slam x12 + Wall Ball x15 + Burpee x10 + Mountain Climbers 30s: 3 rounds, 60s rest",
+      "cooldown": "Walk 5 min, thoracic rotation 45s each, hip flexor 45s each, deep breathing 2 min",
+      "estimatedCalories": "400-500",
+      "progressionNotes": "Operator: reduce rest 5s every 2 weeks. Track total slam and wall ball volume per session.",
+      "equipment": "Medicine Ball",
+      "description": "An intermediate medicine ball HIIT session combining maximum-intensity slams, wall balls, and burpees. Conditioning Circuit template."
+    },
+    {
+      "workoutName": "Medicine Ball Metabolic",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Medicine Ball Series",
+      "duration": "40 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "MB slam x10 moderate, wall ball x10, push-up x15, mountain climbers 30s",
+      "mainWorkout": [
+        {
+          "exercise": "Medicine Ball Slam",
+          "sets": 6,
+          "reps": "15",
+          "tempo": "Max explosive",
+          "rest": "15s",
+          "coachingFocus": "6 sets of 15 at maximum intensity with 15s rest. Elite metabolic output.",
+          "id": "MB001"
+        },
+        {
+          "exercise": "Wall Ball",
+          "sets": 5,
+          "reps": "20",
+          "tempo": "Max rhythmic",
+          "rest": "15s",
+          "coachingFocus": "100 total wall balls. Full depth squat every rep. Maximum fat burn.",
+          "id": "MB002"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 5,
+          "reps": "12",
+          "tempo": "Max effort",
+          "rest": "15s",
+          "coachingFocus": "60 burpees paired with slams and wall balls. Highest calorie output possible.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 5,
+          "reps": "45s",
+          "tempo": "Max effort",
+          "rest": "10s",
+          "coachingFocus": "45s max effort with 10s rest. Elite metabolic conditioning.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Russian Twist",
+          "sets": 4,
+          "reps": "40 total",
+          "tempo": "Fast",
+          "rest": "15s",
+          "coachingFocus": "Heavy MB. Feet off floor. 40 total reps. Rotational metabolic work.",
+          "id": "MB003"
+        }
+      ],
+      "finisher": "MB Slam x15 + Wall Ball x20 + Burpee x12 + Mountain Climbers 45s: 3 rounds, 90s rest",
+      "cooldown": "Walk 8 min, thoracic rotation 60s each, hip flexor 60s each, full body stretch 5 min",
+      "estimatedCalories": "560-700",
+      "progressionNotes": "Exec Perf: track total slam + wall ball volume per session. Progress to heavier ball when form stays perfect.",
+      "equipment": "Medicine Ball",
+      "description": "An advanced medicine ball metabolic session with 90 slams, 100 wall balls, and 60 burpees. Maximum calorie output at home."
+    },
+    {
+      "workoutName": "Sandbag Fat Burn Starter",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Sandbag Series",
+      "duration": "30 min",
+      "intensity": "MODERATE",
+      "warmup": "March in place 2 min, arm circles x20, hip hinge x10, bodyweight squat x15",
+      "mainWorkout": [
+        {
+          "exercise": "Bear Hug Carry (Sandbag)",
+          "sets": 4,
+          "reps": "15m",
+          "tempo": "Controlled",
+          "rest": "60s",
+          "coachingFocus": "Carries are conditioning. Core tight. Bag to chest. Burns calories while building strength.",
+          "id": "SB002"
+        },
+        {
+          "exercise": "Sandbag Lunge",
+          "sets": 3,
+          "reps": "10 each",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Legs are the biggest calorie burners. Weighted lunge amplifies that.",
+          "id": "SB001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 3,
+          "reps": "20s",
+          "tempo": "Moderate",
+          "rest": "30s",
+          "coachingFocus": "Cardio on the mat. Heart rate elevated.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Jumping Jacks",
+          "sets": 3,
+          "reps": "30",
+          "tempo": "Moderate",
+          "rest": "30s",
+          "coachingFocus": "Full body cardio between strength sets.",
+          "id": "CD_JJ"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 2,
+          "reps": "10",
+          "tempo": "2-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Upper body work. Balanced training burns more total calories.",
+          "id": "PH001"
+        }
+      ],
+      "finisher": "Bear Hug Carry 15m + Mountain Climbers 20s + Jumping Jacks x25: 4 rounds, 30s rest",
+      "cooldown": "Hip flexor lunge 45s each, hamstring 45s each, deep breathing 2 min",
+      "estimatedCalories": "240-300",
+      "progressionNotes": "Rebuild: increase carry distance by 5m every 2 weeks.",
+      "equipment": "Sandbag",
+      "description": "A beginner sandbag fat-burn session using loaded carries, lunges, and cardio bursts. Burns calories through functional full-body movement."
+    },
+    {
+      "workoutName": "Sandbag HIIT",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Sandbag Series",
+      "duration": "40 min",
+      "intensity": "HIGH",
+      "warmup": "Shouldering x3 each light, Zercher squat x10 light, carry 10m, push-up x10",
+      "mainWorkout": [
+        {
+          "exercise": "Sandbag Shouldering",
+          "sets": 5,
+          "reps": "5 each",
+          "tempo": "Explosive",
+          "rest": "30s",
+          "coachingFocus": "Shouldering is a full body calorie-burning event. Hip drive. Fast shoulder. Short rest.",
+          "id": "SB004"
+        },
+        {
+          "exercise": "Bear Hug Carry (Sandbag)",
+          "sets": 5,
+          "reps": "25m",
+          "tempo": "Controlled fast",
+          "rest": "30s",
+          "coachingFocus": "Loaded carry on short rest elevates heart rate and burns fat simultaneously.",
+          "id": "SB002"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "Fast",
+          "rest": "20s",
+          "coachingFocus": "Burpees between carry sets. Total body fat burning accelerated.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "Max effort",
+          "rest": "20s",
+          "coachingFocus": "Core cardio at max intensity between heavy work sets.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Sandbag Lunge",
+          "sets": 3,
+          "reps": "12 each",
+          "tempo": "1-0-1-0",
+          "rest": "20s",
+          "coachingFocus": "Weighted lunges on short rest. Legs burning. Calories flying.",
+          "id": "SB001"
+        }
+      ],
+      "finisher": "Shouldering x5 each + Carry 20m + Burpee x10 + Mountain Climbers 30s: 3 rounds, 60s rest",
+      "cooldown": "Walk 5 min, hip flexor 60s each, hamstring 60s each, deep breathing 2 min",
+      "estimatedCalories": "420-520",
+      "progressionNotes": "Operator: reduce rest 5s every 2 weeks. Increase sandbag load when carries feel controlled.",
+      "equipment": "Sandbag",
+      "description": "An intermediate sandbag HIIT session combining shouldering, carries, and burpees on minimal rest. Conditioning Circuit template \u2014 functional fat loss."
+    },
+    {
+      "workoutName": "Sandbag Metabolic",
+      "goal": "LOSE_WEIGHT",
+      "location": "HOME",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "HOME_EQUIPMENT",
+      "collection": "Home Sandbag Series",
+      "duration": "45 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "Shouldering x5 each moderate, Zercher squat x10, Husafell carry 20m, mountain climbers 30s",
+      "mainWorkout": [
+        {
+          "exercise": "Sandbag Shouldering",
+          "sets": 6,
+          "reps": "6 each",
+          "tempo": "Max power",
+          "rest": "15s",
+          "coachingFocus": "Max power shouldering on 15s rest. Elite metabolic and strength conditioning.",
+          "id": "SB004"
+        },
+        {
+          "exercise": "Husafell Stone Carry (Simulate with Sandbag)",
+          "sets": 5,
+          "reps": "40m",
+          "tempo": "Max controlled",
+          "rest": "20s",
+          "coachingFocus": "Heavy carry at 20s rest. Advanced metabolic conditioning. Core braced the entire distance.",
+          "id": "SB005"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 5,
+          "reps": "12",
+          "tempo": "Max effort",
+          "rest": "15s",
+          "coachingFocus": "60 burpees alongside shouldering and carries. Maximum fat-burning output.",
+          "id": "CD001"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 5,
+          "reps": "45s",
+          "tempo": "Max effort",
+          "rest": "10s",
+          "coachingFocus": "45s max effort on 10s rest. Elite metabolic conditioning.",
+          "id": "CD002"
+        },
+        {
+          "exercise": "Sandbag Lunge",
+          "sets": 4,
+          "reps": "15 each",
+          "tempo": "1-0-1-0",
+          "rest": "15s",
+          "coachingFocus": "15 weighted lunges under heavy fatigue. Legs are the engine of fat loss.",
+          "id": "SB001"
+        }
+      ],
+      "finisher": "Shouldering x6 each + Husafell Carry 30m + Burpee x12 + Mountain Climbers 40s: 3 rounds, 90s rest",
+      "cooldown": "Walk 8 min, hip flexor 60s each, hamstring 60s each, thoracic rotation 60s each, full body stretch",
+      "estimatedCalories": "580-720",
+      "progressionNotes": "Exec Perf: track total carry distance per session. Target 300m per session over 6 weeks.",
+      "equipment": "Sandbag",
+      "description": "An advanced sandbag metabolic session with heavy shouldering, 40m Husafell carries, and 60 burpees. Maximum functional fat loss."
     }
   ]
 }
