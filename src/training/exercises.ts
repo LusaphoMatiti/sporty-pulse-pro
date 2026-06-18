@@ -102,6 +102,8 @@ const exercises = [
     regressions: ["Goblet Squat", "Back Squat"],
     progressions: ["Paused Front Squat", "Tempo Front Squat"],
     substitutions: ["Hack Squat", "Goblet Squat"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780313435/Front_Squat_lxom6s.png",
   },
 
   {
@@ -127,6 +129,8 @@ const exercises = [
     regressions: ["Chair Squat"],
     progressions: ["Barbell Box Squat", "Pause Squat"],
     substitutions: ["Bodyweight Squat"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780313433/Box_Squat_f6bcux.png",
   },
   {
     id: "SQ006",
@@ -223,6 +227,8 @@ const exercises = [
     regressions: ["Leg Press", "Goblet Squat"],
     progressions: ["Heel-Elevated Hack Squat", "Paused Hack Squat"],
     substitutions: ["Leg Press", "Front Squat"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710450/Hack_Squat_ryovym.png",
   },
   {
     id: "SQ010",
@@ -295,6 +301,8 @@ const exercises = [
     regressions: ["Bodyweight Squat"],
     progressions: ["Weighted Jump Squat", "Broad Jump Squat"],
     substitutions: ["Box Jump", "Squat Thrust"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311621/Jump_Squat_wxcxe7.png",
   },
   {
     id: "SQ013",
@@ -343,6 +351,8 @@ const exercises = [
     regressions: ["Goblet Squat", "Front Squat"],
     progressions: ["Paused Zercher", "Zercher Good Morning"],
     substitutions: ["Front Squat", "Goblet Squat"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780315936/Barbell_Zercher_Squat_glpnly.png",
   },
   {
     id: "SQ015",
@@ -367,6 +377,8 @@ const exercises = [
     regressions: ["Box Squat", "Back Squat"],
     progressions: ["Overloaded Anderson Squat"],
     substitutions: ["Box Squat", "Paused Squat"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780876146/Barbell_Anderson_Squat_dprs5x.png",
   },
   {
     id: "SQ016",
@@ -391,6 +403,8 @@ const exercises = [
     regressions: ["Wall Sit"],
     progressions: ["Weighted Squat Pulse", "Jump Squat"],
     substitutions: ["Wall Sit", "Goblet Squat Hold"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311803/Squat_Pulse_bvdi9j.png",
   },
   {
     id: "SQ017",
@@ -439,6 +453,8 @@ const exercises = [
     regressions: ["Box Squat"],
     progressions: ["Pistol Squat", "Weighted Single Leg Box Squat"],
     substitutions: ["Bulgarian Split Squat"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311877/Single_Leg_Box_Squat_bkd9q6.png",
   },
   {
     id: "SQ019",
@@ -463,6 +479,8 @@ const exercises = [
     regressions: ["Bodyweight Squat"],
     progressions: ["Barbell Tempo Squat", "Pause Squat"],
     substitutions: ["Leg Press", "Goblet Squat"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311833/Tempo_Squat_ifbaek.png",
   },
   {
     id: "SQ020",
@@ -487,6 +505,8 @@ const exercises = [
     regressions: ["Goblet Squat", "PVC Overhead Squat"],
     progressions: ["Snatch Squat", "Weighted Overhead Squat"],
     substitutions: ["Front Squat", "Goblet Squat"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780877666/Overhead_Squat_jgiwf3.png",
   },
 
   // ==================== HINGE (20) ====================
@@ -514,6 +534,8 @@ const exercises = [
     regressions: ["Hip Hinge Bodyweight", "Kettlebell Deadlift"],
     progressions: ["Single Leg RDL", "Barbell RDL with pause"],
     substitutions: ["Good Morning", "Cable Pull-Through"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780877513/Barbell_Romanian_Deadlift_RDL_ifghvy.png",
   },
   {
     id: "HI002",
@@ -539,6 +561,8 @@ const exercises = [
     regressions: ["Trap Bar Deadlift", "Kettlebell Deadlift"],
     progressions: ["Sumo Deadlift", "Deficit Deadlift", "Paused Deadlift"],
     substitutions: ["Trap Bar Deadlift", "Machine Deadlift"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780315929/Barbell_Deadlift_ymfeww.png",
   },
   {
     id: "HI003",
@@ -591,6 +615,8 @@ const exercises = [
     regressions: ["Dumbbell Curl"],
     progressions: ["Barbell Curl", "Weighted EZ Bar Curl"],
     substitutions: ["Dumbbell Curl", "Cable Curl"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047761/Dumbbell_EZ_Bar_Curl_pxjmk0.png",
   },
   {
     id: "AR002",
@@ -615,6 +641,8 @@ const exercises = [
     regressions: ["Tricep Kickback", "Overhead Tricep Extension"],
     progressions: ["Close Grip Bench Press", "Weighted Skull Crusher"],
     substitutions: ["Overhead Tricep Extension", "Tricep Pushdown"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047727/Skull_Crusher_mtizh1.png",
   },
   {
     id: "AR003",
@@ -663,6 +691,8 @@ const exercises = [
     regressions: ["Standing Dumbbell Curl"],
     progressions: ["Spider Curl", "Cable Preacher Curl"],
     substitutions: ["EZ Bar Curl", "Cable Curl"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780877852/Incline_Dumbbell_Curl_zrtzqw.png",
   },
 
   // ==================== SHOULDER ACCESSORIES ====================
@@ -690,6 +720,8 @@ const exercises = [
     regressions: ["Band Lateral Raise"],
     progressions: ["Cable Lateral Raise", "Heavy Cheat Lateral"],
     substitutions: ["Cable Lateral Raise", "Machine Lateral Raise"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625878/Dumbbell_Lateral_Raise_pph70i.png",
   },
   {
     id: "SH002",
@@ -714,6 +746,8 @@ const exercises = [
     regressions: ["Lateral Raise", "Band Pull Apart"],
     progressions: ["Barbell Upright Row", "Cable Upright Row"],
     substitutions: ["Lateral Raise", "Face Pull"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047714/Dumbbell_Upright_Row_DB_ul4atf.png",
   },
 
   // ==================== CALVES ====================
@@ -741,6 +775,8 @@ const exercises = [
     regressions: ["Bodyweight Calf Raise"],
     progressions: ["Heavy Seated Calf Raise", "Single Leg Seated Calf Raise"],
     substitutions: ["Standing Calf Raise", "Calf Raise"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781398703/Seated_Calf_Raise_fjvpu6.png",
   },
   {
     id: "CAL002",
@@ -765,6 +801,8 @@ const exercises = [
     regressions: ["Seated Calf Raise"],
     progressions: ["Single Leg Standing Calf Raise", "Weighted Calf Raise"],
     substitutions: ["Seated Calf Raise", "Calf Raise"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781398704/Standing_Calf_Raise_o1s66g.png",
   },
 
   // ==================== CHEST CABLE VARIANT ====================
@@ -819,6 +857,8 @@ const exercises = [
     regressions: ["Goblet Squat", "Dumbbell Press"],
     progressions: ["Barbell Thruster", "Heavier Dumbbell Thruster"],
     substitutions: ["Thrusters", "Goblet Squat + Press"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625885/Dumbbell_Thruster_beul2d.png",
   },
 
   {
@@ -845,6 +885,8 @@ const exercises = [
     regressions: ["Bodyweight Good Morning"],
     progressions: ["Heavy Barbell Good Morning", "Pause Good Morning"],
     substitutions: ["RDL", "Back Extension"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781576211/Barbell_Good_Morning_z1fei2.png",
   },
   {
     id: "HI005",
@@ -870,6 +912,8 @@ const exercises = [
     regressions: ["RDL (Bilateral)", "Supported SL RDL"],
     progressions: ["Heavy DB Single Leg RDL", "Barbell SL RDL"],
     substitutions: ["RDL", "Cable Single Leg RDL"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311872/Single_Leg_RDL_xm3su9.png",
   },
   {
     id: "HI006",
@@ -919,6 +963,8 @@ const exercises = [
     regressions: ["Conventional Deadlift", "Trap Bar Deadlift"],
     progressions: ["Paused Sumo", "Deficit Sumo"],
     substitutions: ["Conventional Deadlift"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780877513/Barbell_Sumo_Deadlift_nroc4d.png",
   },
   {
     id: "HI008",
@@ -997,6 +1043,8 @@ const exercises = [
     regressions: ["Glute Bridge", "Bodyweight Hip Hinge"],
     progressions: ["Heavy Cable Pull-Through", "Single Leg Pull-Through"],
     substitutions: ["KB Swing", "Hip Thrust"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781272461/Cable_Machine_Pull-Through_nxwldg.png",
   },
   {
     id: "HI011",
@@ -1021,6 +1069,8 @@ const exercises = [
     regressions: ["Superman Hold"],
     progressions: ["Weighted Back Extension", "Single Leg Back Extension"],
     substitutions: ["RDL", "Superman"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781272454/Barbell_Back_Extension_tycxz8.png",
   },
   {
     id: "HI012",
@@ -1045,6 +1095,8 @@ const exercises = [
     regressions: ["Conventional Deadlift"],
     progressions: ["Heavier Deficit Deadlift"],
     substitutions: ["Romanian Deadlift", "Pause Deadlift"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780877515/Deficit_Deadlift_yvhibp.png",
   },
   {
     id: "HI013",
@@ -1119,6 +1171,8 @@ const exercises = [
     regressions: ["Partial Nordic Curl", "Leg Curl Machine"],
     progressions: ["Full Nordic Curl", "Weighted Nordic Curl"],
     substitutions: ["Leg Curl", "RDL"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781487382/Bar_Nordic_Curl_g6enp6.png",
   },
   {
     id: "HI016",
@@ -1144,6 +1198,8 @@ const exercises = [
     regressions: ["Bodyweight Good Morning"],
     progressions: ["Barbell RDL", "Single Leg RDL"],
     substitutions: ["KB Swing", "Back Extension"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780877915/Dumbbell_RDL_rupaqb.png",
   },
   {
     id: "HI017",
@@ -1290,6 +1346,8 @@ const exercises = [
     regressions: ["Split Squat"],
     progressions: ["Dumbbell Reverse Lunge", "Barbell Reverse Lunge"],
     substitutions: ["Forward Lunge", "Step-Up"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311575/Deficit_Reverse_Lunge_r9mugm.png",
   },
   {
     id: "LU003",
@@ -1338,6 +1396,8 @@ const exercises = [
     regressions: ["Stationary Lunge"],
     progressions: ["Weighted Walking Lunge", "Overhead Walking Lunge"],
     substitutions: ["Forward Lunge", "Step-Up"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311859/Walking_Lunge_uar4nr.png",
   },
   {
     id: "LU005",
@@ -1362,6 +1422,8 @@ const exercises = [
     regressions: ["Partial Split Squat"],
     progressions: ["Bulgarian Split Squat", "Dumbbell Split Squat"],
     substitutions: ["Reverse Lunge"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311811/Split_Squat_ltrvqb.png",
   },
   {
     id: "LU006",
@@ -1386,6 +1448,8 @@ const exercises = [
     regressions: ["Side Step"],
     progressions: ["Dumbbell Lateral Lunge", "Lateral Lunge with Reach"],
     substitutions: ["Sumo Squat", "Curtsy Lunge"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311638/Lateral_Lunge_nw9eu0.png",
   },
   {
     id: "LU007",
@@ -1410,6 +1474,8 @@ const exercises = [
     regressions: ["Reverse Lunge"],
     progressions: ["Weighted Curtsy Lunge", "Curtsy to Lateral Raise"],
     substitutions: ["Lateral Lunge", "Reverse Lunge"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780313436/Curtsy_Lunge_lpfacu.png",
   },
   {
     id: "LU008",
@@ -1482,6 +1548,8 @@ const exercises = [
     regressions: ["Low Box Step-Up"],
     progressions: ["Weighted Step-Up", "Deficit Step-Up"],
     substitutions: ["Reverse Lunge", "Bulgarian Split Squat"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311858/Step-Up_ukhjaf.png",
   },
   {
     id: "LU011",
@@ -1553,6 +1621,8 @@ const exercises = [
     regressions: ["Stationary Lunge"],
     progressions: ["Weighted Jump Lunge"],
     substitutions: ["Walking Lunge", "Jump Squat"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311664/Jump_Lunge_jscko8.png",
   },
   {
     id: "LU014",
@@ -1601,6 +1671,8 @@ const exercises = [
     regressions: ["Reverse Lunge"],
     progressions: ["Heavy Deficit Reverse Lunge"],
     substitutions: ["Bulgarian Split Squat"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311575/Deficit_Reverse_Lunge_r9mugm.png",
   },
   {
     id: "LU016",
@@ -1747,6 +1819,8 @@ const exercises = [
     regressions: ["Incline Push-Up", "Knee Push-Up"],
     progressions: ["Diamond Push-Up", "Archer Push-Up", "Weighted Push-Up"],
     substitutions: ["Dumbbell Bench Press", "Machine Chest Press"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png",
   },
   {
     id: "PH002",
@@ -1820,6 +1894,8 @@ const exercises = [
     regressions: ["Push-Up", "Flat DB Press"],
     progressions: ["Heavy Incline Press", "Barbell Incline Press"],
     substitutions: ["Incline Barbell Press", "Incline Push-Up"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780877857/Incline_Dumbbell_Press_wgkkxh.png",
   },
   {
     id: "PH005",
@@ -1892,6 +1968,8 @@ const exercises = [
     regressions: ["Wall Push-Up"],
     progressions: ["Standard Push-Up", "Weighted Push-Up"],
     substitutions: ["Knee Push-Up"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311681/Incline_Push-Ups_khlyu8.png",
   },
   {
     id: "PH008",
@@ -1916,6 +1994,8 @@ const exercises = [
     regressions: ["Standard Push-Up"],
     progressions: ["Handstand Push-Up", "Pike Push-Up"],
     substitutions: ["Incline DB Press", "Overhead Press"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311582/Decline_Push-Ups_jjnfzh.png",
   },
   {
     id: "PH009",
@@ -1940,6 +2020,8 @@ const exercises = [
     regressions: ["Machine Chest Press"],
     progressions: ["Single Arm Cable Press", "Standing Cable Press"],
     substitutions: ["Machine Chest Press", "DB Press"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781161582/Cable_Chest_Press_xvs9wv.png",
   },
   {
     id: "PH010",
@@ -1988,6 +2070,8 @@ const exercises = [
     regressions: ["Wide Push-Up"],
     progressions: ["One-Arm Push-Up"],
     substitutions: ["Single Arm DB Press"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047644/Archer_Push-Up_rk73w1.png",
   },
   {
     id: "PH012",
@@ -2012,6 +2096,8 @@ const exercises = [
     regressions: ["Cable Fly", "Machine Fly"],
     progressions: ["Incline DB Fly", "Heavy DB Fly"],
     substitutions: ["Cable Fly", "Machine Pec Deck"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625891/Dumbbell_Chest_Fly_ipvbpg.png",
   },
   {
     id: "PH013",
@@ -2108,6 +2194,8 @@ const exercises = [
     regressions: ["Standard Push-Up"],
     progressions: ["Heavy Band Push-Up", "Weighted Push-Up"],
     substitutions: ["Weighted Push-Up", "Bench Press"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047664/Band_Push-Up_qkmveg.png",
   },
   {
     id: "PH017",
@@ -2230,6 +2318,8 @@ const exercises = [
     regressions: ["Seated DB Press", "Machine OHP"],
     progressions: ["Standing DB Press", "Barbell OHP"],
     substitutions: ["Barbell OHP", "Machine Press"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625883/Dumbbell_Shoulder-Press_ikhnfe.png",
   },
   {
     id: "PV002",
@@ -2354,6 +2444,8 @@ const exercises = [
     regressions: ["Strict OHP"],
     progressions: ["Push Jerk", "Split Jerk"],
     substitutions: ["Barbell OHP", "DB Push Press"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780876149/Barbell_Push_Press_nm0abv.png",
   },
   {
     id: "PV007",
@@ -2378,6 +2470,8 @@ const exercises = [
     regressions: ["Machine Shoulder Press"],
     progressions: ["Standing DB Press", "Arnold Press"],
     substitutions: ["Machine Shoulder Press", "Barbell OHP"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625883/Dumbbell_Shoulder-Press_ikhnfe.png",
   },
   {
     id: "PV008",
@@ -2449,6 +2543,8 @@ const exercises = [
     regressions: ["Seated DB Press (light)"],
     progressions: ["DB Press", "Barbell OHP"],
     substitutions: ["DB OHP", "Cable Overhead Press"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781272463/Shoulder_Press_i9vw33.png",
   },
   {
     id: "PV011",
@@ -2545,6 +2641,8 @@ const exercises = [
     regressions: ["Band Lateral Raise"],
     progressions: ["Cable Lateral Raise", "Heavy DB Lateral Raise"],
     substitutions: ["Cable Lateral Raise", "Machine Lateral Raise"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625878/Dumbbell_Lateral_Raise_pph70i.png",
   },
   {
     id: "PV015",
@@ -2715,6 +2813,8 @@ const exercises = [
     regressions: ["Dumbbell Row", "Cable Row"],
     progressions: ["Pendlay Row", "Yates Row"],
     substitutions: ["DB Row", "Cable Row", "Machine Row"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781272455/Barbell_Bent-Over_Row_jkr1yk.png",
   },
   {
     id: "PLH002",
@@ -2763,6 +2863,8 @@ const exercises = [
     regressions: ["Band Row"],
     progressions: ["Heavy Cable Row", "Single Arm Cable Row"],
     substitutions: ["DB Row", "Machine Row"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781161587/Seated_Cable_Row_fqbrbc.png",
   },
   {
     id: "PLH004",
@@ -2787,6 +2889,8 @@ const exercises = [
     regressions: ["Bent Knee Inverted Row"],
     progressions: ["Feet Elevated Inverted Row", "Weighted Inverted Row"],
     substitutions: ["Pull-Up", "Cable Row"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781398698/Barbell_Inverted_Row_xadzbq.png",
   },
   {
     id: "PLH005",
@@ -2835,6 +2939,8 @@ const exercises = [
     regressions: ["Cable Row", "DB Row"],
     progressions: ["Heavy T-Bar Row"],
     substitutions: ["Barbell Row", "Landmine Row"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781398699/T-Bar_Row_yot0pv.png",
   },
   {
     id: "PLH007",
@@ -2859,6 +2965,8 @@ const exercises = [
     regressions: ["DB Row"],
     progressions: ["Heavy Chest-Supported Row", "Incline Barbell Row"],
     substitutions: ["Machine Row", "Cable Row"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781398702/Chest-Supported_Dumbbell_Row_aqtsnz.png",
   },
   {
     id: "PLH008",
@@ -2883,6 +2991,8 @@ const exercises = [
     regressions: ["Face Pull (band)"],
     progressions: ["Cable Row", "DB Row"],
     substitutions: ["Cable Row", "Inverted Row"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626173/Band_Row_vsuvwe.png",
   },
   {
     id: "PLH009",
@@ -2930,6 +3040,8 @@ const exercises = [
     regressions: ["Band Rear Delt Pull Apart"],
     progressions: ["Cable Rear Delt Fly", "Heavier DB Fly"],
     substitutions: ["Reverse Pec Deck", "Cable Rear Delt Fly"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047728/Dumbbell_Rear_Delt_Fly_DB_tuohfv.png",
   },
   {
     id: "PLH011",
@@ -3049,6 +3161,8 @@ const exercises = [
     regressions: ["DB Row"],
     progressions: ["Heavy Cable Single Arm Row"],
     substitutions: ["DB Row", "Machine Row"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781161581/Single_Arm_Row_rd5mfh.png",
   },
   {
     id: "PLH016",
@@ -3266,6 +3380,8 @@ const exercises = [
     regressions: ["Bodyweight Pull-Up"],
     progressions: ["Heavier Weighted Pull-Up", "One Arm Pull-Up"],
     substitutions: ["Lat Pulldown", "Cable Row"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626493/Weighted_Pull-Up_wcr3b3.png",
   },
   {
     id: "PLV005",
@@ -3362,6 +3478,8 @@ const exercises = [
     regressions: ["Lat Pulldown"],
     progressions: ["Heavy Straight Arm Pulldown"],
     substitutions: ["Lat Pulldown", "Pull-Over"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781161587/Straight_Arm_Pulldown_gmwtzb.png",
   },
   {
     id: "PLV009",
@@ -3698,6 +3816,8 @@ const exercises = [
     regressions: ["Single Arm or Leg Dead Bug"],
     progressions: ["Weighted Dead Bug", "Dead Bug with Band"],
     substitutions: ["Plank", "Bird Dog"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Dead_bug_xzgwjd.png",
   },
   {
     id: "CO003",
@@ -3722,6 +3842,8 @@ const exercises = [
     regressions: ["Single Limb Bird Dog"],
     progressions: ["Weighted Bird Dog", "Bird Dog Row"],
     substitutions: ["Dead Bug", "Plank"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780414696/Bird_Dog_karrdb.png",
   },
   {
     id: "CO004",
@@ -3746,6 +3868,8 @@ const exercises = [
     regressions: ["Tuck Hollow Hold"],
     progressions: ["Hollow Body Rock", "L-Sit"],
     substitutions: ["Plank", "Dead Bug"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625712/Hollow_Body_Hold_szi4by.png",
   },
   {
     id: "CO005",
@@ -3794,6 +3918,8 @@ const exercises = [
     regressions: ["Band Woodchop"],
     progressions: ["Heavy Cable Woodchop"],
     substitutions: ["Band Woodchop", "Medicine Ball Slam"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781163005/Wood_Chop_homifz.png",
   },
   {
     id: "CO007",
@@ -3818,6 +3944,8 @@ const exercises = [
     regressions: ["Hanging Knee Raise"],
     progressions: ["Toes-to-Bar", "L-Sit"],
     substitutions: ["Captain's Chair Leg Raise", "Lying Leg Raise"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780315042/Hanging_Leg_Raise_o9xy7v.png",
   },
   {
     id: "CO008",
@@ -3842,6 +3970,8 @@ const exercises = [
     regressions: ["Band Pallof Press"],
     progressions: ["Kneeling Pallof", "Overhead Pallof"],
     substitutions: ["Band Woodchop", "Dead Bug"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781162142/Pallof_Press_wn1cgg.png",
   },
   {
     id: "CO009",
@@ -3890,6 +4020,8 @@ const exercises = [
     regressions: ["Feet on Floor Russian Twist"],
     progressions: ["Weighted Russian Twist", "Decline Russian Twist"],
     substitutions: ["Cable Woodchop", "Bicycle Crunch"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311646/Russian_Twist_jo4qhc.png",
   },
   {
     id: "CO011",
@@ -4106,6 +4238,8 @@ const exercises = [
     regressions: ["Hollow Body Hold", "Crunch"],
     progressions: ["Weighted V-Up", "Tuck to V-Up"],
     substitutions: ["Hanging Leg Raise", "Hollow Body Rock"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311860/V-Up_rh4i57.png",
   },
   {
     id: "CO020",
@@ -4156,6 +4290,8 @@ const exercises = [
     regressions: ["Light Dumbbell Walk"],
     progressions: ["Heavy Farmer's Carry", "Single Arm Farmer's Carry"],
     substitutions: ["Deadlift Hold", "Suitcase Carry"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780317257/Farmer_s_Carry_wev5tb.png",
   },
   {
     id: "CA002",
@@ -4372,6 +4508,8 @@ const exercises = [
     regressions: ["Light Sled Push"],
     progressions: ["Heavy Sled Push", "Sprint Sled Push"],
     substitutions: ["Prowler Sprint", "Weighted Walk"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710458/Sled_Push_l4e9td.png",
   },
   {
     id: "CA011",
@@ -4396,6 +4534,8 @@ const exercises = [
     regressions: ["Light Sled Pull"],
     progressions: ["Heavy Sled Pull"],
     substitutions: ["Sled Push", "Farmer's Carry"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710458/Sled_Push_l4e9td.png",
   },
   {
     id: "CA012",
@@ -4709,6 +4849,8 @@ const exercises = [
     regressions: ["Step-Up", "Low Box Jump"],
     progressions: ["High Box Jump", "Weighted Box Jump"],
     substitutions: ["Jump Squat", "Broad Jump"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780585025/Box_Jump_wrgfhk.png",
   },
   {
     id: "CD005",
@@ -4733,6 +4875,8 @@ const exercises = [
     regressions: ["Slow Battle Rope Waves"],
     progressions: ["Sprint Battle Ropes", "Battle Rope Slams"],
     substitutions: ["Medicine Ball Slam", "Kettlebell Swing"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710450/Battle_Rope_kmqduv.png",
   },
   {
     id: "CD006",
@@ -4805,6 +4949,8 @@ const exercises = [
     regressions: ["March on Spot"],
     progressions: ["Sprint High Knees", "Bounding High Knees"],
     substitutions: ["Jump Rope", "Mountain Climbers"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780414689/High_Knees_cmkbay.png",
   },
   {
     id: "CD009",
@@ -4829,6 +4975,8 @@ const exercises = [
     regressions: ["KB Swing", "KB High Pull"],
     progressions: ["Double KB Snatch", "Competition KB Snatch"],
     substitutions: ["KB Swing", "Power Clean"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626975/Kettlebell_Snatch_fc5jfv.png",
   },
   {
     id: "CD010",
@@ -4853,6 +5001,8 @@ const exercises = [
     regressions: ["Hang Power Clean", "Dumbbell Hang Clean"],
     progressions: ["Clean and Jerk", "Squat Clean"],
     substitutions: ["Hang Power Clean", "KB Swing"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781398702/Barbell_Power_Clean_veehxr.png",
   },
   {
     id: "CD011",
@@ -4901,6 +5051,8 @@ const exercises = [
     regressions: ["Goblet Thruster", "DB Thruster"],
     progressions: ["Heavy Thruster", "Barbell Thruster for time"],
     substitutions: ["Dumbbell Thruster", "Push Press + Squat"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781398704/Barbell_Thrusters_ffneox.png",
   },
   {
     id: "CD013",
@@ -4925,6 +5077,8 @@ const exercises = [
     regressions: ["Jump Squat"],
     progressions: ["Weighted Broad Jump", "Broad Jump to Sprint"],
     substitutions: ["Box Jump", "Jump Squat"],
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780585067/Broad_Jump_cizant.png",
   },
   {
     id: "CD014",

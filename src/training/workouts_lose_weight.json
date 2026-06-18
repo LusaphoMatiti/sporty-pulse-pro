@@ -34,7 +34,7 @@
           "rest": "20s",
           "coachingFocus": "Body straight as a plank, lower chest to floor",
           "id": "PHH001",
-          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png",
           "videoUrl": "/exercises/videos/PHH001.mp4"
         },
         {
@@ -104,7 +104,7 @@
           "videoUrl": "/exercises/videos/CO003.mp4"
         }
       ],
-      "finisher": "None \u2014 beginner session ends after Circuit B",
+      "finisher": "None — beginner session ends after Circuit B",
       "cooldown": "5 min: Hip Flexor Stretch 40s each, Hamstring Stretch 40s each, Chest Stretch 30s, Deep Breathing 5 breaths",
       "estimatedCalories": "180-230",
       "progressionNotes": "When both circuits feel easy at 2 rounds, add a 3rd round of Circuit A before progressing to Intermediate.",
@@ -130,7 +130,7 @@
           "reps": "30s",
           "tempo": "2-0-1",
           "rest": "20s",
-          "coachingFocus": "Wide stance toes out 45\u00b0, squeeze glutes at top",
+          "coachingFocus": "Wide stance toes out 45°, squeeze glutes at top",
           "id": "SQ007",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
           "videoUrl": "/exercises/videos/SQ007.mp4"
@@ -143,7 +143,7 @@
           "rest": "20s",
           "coachingFocus": "Hands on surface, body straight, controlled press",
           "id": "PHH003",
-          "thumbnailUrl": "/exercises/thumbnails/PHH003.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311681/Incline_Push-Ups_khlyu8.png",
           "videoUrl": "/exercises/videos/PHH003.mp4"
         },
         {
@@ -250,9 +250,9 @@
           "reps": "30s",
           "tempo": "2-0-1",
           "rest": "20s",
-          "coachingFocus": "Elbows at 45\u00b0, lower chest to floor, press up strong",
+          "coachingFocus": "Elbows at 45°, lower chest to floor, press up strong",
           "id": "PHH001",
-          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png",
           "videoUrl": "/exercises/videos/PHH001.mp4"
         },
         {
@@ -316,9 +316,9 @@
           "reps": "30s",
           "tempo": "controlled",
           "rest": "20s",
-          "coachingFocus": "Lean back 45\u00b0, rotate through full range, chest tall",
+          "coachingFocus": "Lean back 45°, rotate through full range, chest tall",
           "id": "CO010",
-          "thumbnailUrl": "/exercises/thumbnails/CO010.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311646/Russian_Twist_jo4qhc.png",
           "videoUrl": "/exercises/videos/CO010.mp4"
         }
       ],
@@ -348,7 +348,7 @@
           "reps": "30s hold",
           "tempo": "iso",
           "rest": "20s",
-          "coachingFocus": "90\u00b0 knee angle, back flat, arms at sides",
+          "coachingFocus": "90° knee angle, back flat, arms at sides",
           "id": "SQ013",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704135/Wall_Sit_x1vi7d.png",
           "videoUrl": "/exercises/videos/SQ013.mp4"
@@ -361,7 +361,7 @@
           "rest": "20s",
           "coachingFocus": "Slow 3-count down, full range, push through palms",
           "id": "PHH001",
-          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png",
           "videoUrl": "/exercises/videos/PHH001.mp4"
         },
         {
@@ -470,7 +470,7 @@
           "rest": "20s",
           "coachingFocus": "Body as a plank. Chest to floor. Press strong.",
           "id": "PHH001",
-          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png",
           "videoUrl": "/exercises/videos/PHH001.mp4"
         },
         {
@@ -479,7 +479,7 @@
           "reps": "30s each",
           "tempo": "1-1-1",
           "rest": "20s",
-          "coachingFocus": "Drive heel to ceiling, knee at 90\u00b0, don't rotate hips",
+          "coachingFocus": "Drive heel to ceiling, knee at 90°, don't rotate hips",
           "id": "HI013",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png",
           "videoUrl": "/exercises/videos/HI013.mp4"
@@ -501,7 +501,7 @@
           "reps": "30s each",
           "tempo": "2-2-1",
           "rest": "20s",
-          "coachingFocus": "Single leg \u2014 double glute challenge. Hips level throughout.",
+          "coachingFocus": "Single leg — double glute challenge. Hips level throughout.",
           "id": "HI011",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png",
           "videoUrl": "/exercises/videos/HI011.mp4"
@@ -579,7 +579,7 @@
           "rest": "20s",
           "coachingFocus": "Chest to floor. Consistent rhythm. Don't sag at the hips.",
           "id": "PHH001",
-          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png",
           "videoUrl": "/exercises/videos/PHH001.mp4"
         },
         {
@@ -649,7 +649,7 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "3 rounds of Jumping Jacks x20 + Bodyweight Squat x10 \u2014 30s rest between rounds",
+      "finisher": "3 rounds of Jumping Jacks x20 + Bodyweight Squat x10 — 30s rest between rounds",
       "cooldown": "5 min: Hip Flexor Lunge 45s each, Hamstring Stretch 45s each, Chest Stretch 30s",
       "estimatedCalories": "280-360",
       "progressionNotes": "Intermediate: add a 3rd round to all circuits when 2 rounds feel manageable.",
@@ -754,12 +754,12 @@
           "rest": "20s",
           "coachingFocus": "Full rotation. Chest tall. Core under load after cardio.",
           "id": "CO010",
-          "thumbnailUrl": "/exercises/thumbnails/CO010.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311646/Russian_Twist_jo4qhc.png",
           "videoUrl": "/exercises/videos/CO010.mp4"
         }
       ],
       "finisher": "None",
-      "cooldown": "5 min full body stretch \u2014 hip flexors, hamstrings, chest, lats",
+      "cooldown": "5 min full body stretch — hip flexors, hamstrings, chest, lats",
       "estimatedCalories": "260-330",
       "progressionNotes": "Increase rounds from 2 to 3 when this session feels manageable throughout.",
       "equipment": null,
@@ -939,7 +939,7 @@
           "rest": "20s",
           "coachingFocus": "Full overhead range. Burns calories through compound upper body.",
           "id": "PHH020",
-          "thumbnailUrl": "/exercises/thumbnails/PHH020.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625883/Dumbbell_Shoulder-Press_ikhnfe.png",
           "videoUrl": "/exercises/videos/PHH020.mp4"
         },
         {
@@ -976,7 +976,7 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "Dumbbell Complex: Goblet Squat x8 + Shoulder Press x8 + Row x8 each arm \u2014 2 rounds, 60s rest",
+      "finisher": "Dumbbell Complex: Goblet Squat x8 + Shoulder Press x8 + Row x8 each arm — 2 rounds, 60s rest",
       "cooldown": "5 min: Doorway Chest Stretch 45s each, Hamstring Stretch 45s each, Hip Flexor 45s each",
       "estimatedCalories": "300-380",
       "progressionNotes": "Progress by increasing dumbbell weight when 30s intervals feel easy.",
@@ -1015,7 +1015,7 @@
           "rest": "20s",
           "coachingFocus": "Rhythmic pace. Full ROM. Don't let the hips sag.",
           "id": "PHH001",
-          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png",
           "videoUrl": "/exercises/videos/PHH001.mp4"
         },
         {
@@ -1166,7 +1166,7 @@
           "reps": "30s",
           "tempo": "max effort",
           "rest": "20s",
-          "coachingFocus": "Hips level. Drive knees. Full speed \u2014 this is the conditioning work.",
+          "coachingFocus": "Hips level. Drive knees. Full speed — this is the conditioning work.",
           "id": "CD002",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
           "videoUrl": "/exercises/videos/CD002.mp4"
@@ -1194,7 +1194,7 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "AMRAP 3 min: Burpee x5 + Jump Squat x10 \u2014 record rounds",
+      "finisher": "AMRAP 3 min: Burpee x5 + Jump Squat x10 — record rounds",
       "cooldown": "8 min: Hip Flexor 60s each, Pigeon Pose 60s each, Hamstring 60s each, Chest Doorway 45s each",
       "estimatedCalories": "420-520",
       "progressionNotes": "Advanced: track reps per 30s interval. Aim to beat total reps each session.",
@@ -1244,7 +1244,7 @@
           "rest": "20s",
           "coachingFocus": "High volume upper body. Maintain plank integrity. Consistent rhythm.",
           "id": "PHH001",
-          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png",
           "videoUrl": "/exercises/videos/PHH001.mp4"
         },
         {
@@ -1412,7 +1412,7 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "5 min incline treadmill walk \u2014 steady state caloric burn",
+      "finisher": "5 min incline treadmill walk — steady state caloric burn",
       "cooldown": "5 min: Hip Flexor 40s each, Hamstring 40s each, Chest Stretch 30s",
       "estimatedCalories": "220-300",
       "progressionNotes": "Beginner gym fat burn. Progress to 3 rounds when 2 feel easy.",
@@ -1462,7 +1462,7 @@
           "rest": "20s",
           "coachingFocus": "Chest to floor. Consistent rhythm. Upper body burn.",
           "id": "PHH001",
-          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png",
           "videoUrl": "/exercises/videos/PHH001.mp4"
         },
         {
@@ -1521,7 +1521,7 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "Assault Bike: 5 x 15s sprint / 45s easy \u2014 caloric afterburn protocol",
+      "finisher": "Assault Bike: 5 x 15s sprint / 45s easy — caloric afterburn protocol",
       "cooldown": "5 min walk, hip flexor 60s each, hamstring 60s each, child's pose 90s",
       "estimatedCalories": "400-500",
       "progressionNotes": "Progress KB weight when swings feel easy for 30s. Increase box jump height monthly.",
@@ -1630,7 +1630,7 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "AMRAP 4 min: 5 Burpees + 10 KB Swings + 5 Box Jumps \u2014 record rounds",
+      "finisher": "AMRAP 4 min: 5 Burpees + 10 KB Swings + 5 Box Jumps — record rounds",
       "cooldown": "8 min: Walk 3 min, Hip Flexor 60s each, Pigeon 60s each, Hamstring 60s each",
       "estimatedCalories": "520-640",
       "progressionNotes": "Advanced: track AMRAP rounds. Aim to increase by 1+ round each 4 weeks.",
@@ -1669,7 +1669,7 @@
           "rest": "20s",
           "coachingFocus": "Hands elevated, body straight line, full ROM",
           "id": "PHH003",
-          "thumbnailUrl": "/exercises/thumbnails/PHH003.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311681/Incline_Push-Ups_khlyu8.png",
           "videoUrl": "/exercises/videos/PHH003.mp4"
         },
         {
@@ -1735,7 +1735,7 @@
           "rest": "20s",
           "coachingFocus": "Rotate through full range, chest tall",
           "id": "CO010",
-          "thumbnailUrl": "/exercises/thumbnails/CO010.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311646/Russian_Twist_jo4qhc.png",
           "videoUrl": "/exercises/videos/CO010.mp4"
         }
       ],
@@ -1778,7 +1778,7 @@
           "rest": "20s",
           "coachingFocus": "Hands on bench or racked barbell. Full ROM. Easy entry point.",
           "id": "PHH003",
-          "thumbnailUrl": "/exercises/thumbnails/PHH003.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311681/Incline_Push-Ups_khlyu8.png",
           "videoUrl": "/exercises/videos/PHH003.mp4"
         },
         {
@@ -1898,7 +1898,7 @@
           "rest": "20s",
           "coachingFocus": "Chest to floor. Consistent rhythm. Body as a plank.",
           "id": "PHH001",
-          "thumbnailUrl": "/exercises/thumbnails/PHH001.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png",
           "videoUrl": "/exercises/videos/PHH001.mp4"
         },
         {
@@ -1957,7 +1957,7 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "KB Swing for 50 consecutive reps \u2014 record time, beat it next session",
+      "finisher": "KB Swing for 50 consecutive reps — record time, beat it next session",
       "cooldown": "5 min walk, hip flexor 60s each, hamstring 60s each, lat stretch 45s each",
       "estimatedCalories": "420-520",
       "progressionNotes": "Intermediate KB HIIT. Increase KB weight when 30s swings feel comfortable throughout.",
@@ -2011,7 +2011,8 @@
           "tempo": "2-0-1-0",
           "rest": "45s",
           "coachingFocus": "Upper body work between KB sets. Chest to floor. Consistent pace.",
-          "id": "PH001"
+          "id": "PH001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2047,7 +2048,7 @@
           "exercise": "Kettlebell Swing",
           "sets": 5,
           "reps": "20",
-          "tempo": "Rhythmic \u2014 max power",
+          "tempo": "Rhythmic — max power",
           "rest": "30s",
           "coachingFocus": "20 swings with short rest is a caloric furnace. Hip snap every rep.",
           "id": "KB004"
@@ -2116,13 +2117,14 @@
           "tempo": "Explosive",
           "rest": "30s",
           "coachingFocus": "The snatch is the highest-output KB exercise. Max caloric burn per rep.",
-          "id": "KB006"
+          "id": "KB006",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626975/Kettlebell_Snatch_fc5jfv.png"
         },
         {
           "exercise": "Kettlebell Swing",
           "sets": 5,
           "reps": "25",
-          "tempo": "Rhythmic \u2014 explosive",
+          "tempo": "Rhythmic — explosive",
           "rest": "20s",
           "coachingFocus": "25 reps with 20s rest. This is metabolic conditioning at its most efficient.",
           "id": "KB004"
@@ -2191,7 +2193,8 @@
           "tempo": "2-1-2-0",
           "rest": "45s",
           "coachingFocus": "Back work between squat sets. Pull elbows back. Posture improves calorie burn.",
-          "id": "RB003"
+          "id": "RB003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626173/Band_Row_vsuvwe.png"
         },
         {
           "exercise": "Band Overhead Press",
@@ -2266,7 +2269,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "Banded push-up adds resistance. High reps for metabolic output.",
-          "id": "RB006"
+          "id": "RB006",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047664/Band_Push-Up_qkmveg.png"
         },
         {
           "exercise": "Resistance Band Row",
@@ -2275,7 +2279,8 @@
           "tempo": "2-1-1-0",
           "rest": "30s",
           "coachingFocus": "High rep pulling. Back health supports calorie burn in every other exercise.",
-          "id": "RB003"
+          "id": "RB003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626173/Band_Row_vsuvwe.png"
         },
         {
           "exercise": "Burpee",
@@ -2323,7 +2328,8 @@
           "tempo": "2-0-2-0",
           "rest": "45s",
           "coachingFocus": "Band as resistance. Heavy pulling burns serious calories and builds back.",
-          "id": "PLV002"
+          "id": "PLV002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626493/Weighted_Pull-Up_wcr3b3.png"
         },
         {
           "exercise": "Resistance Band Squat",
@@ -2341,7 +2347,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "20 banded push-ups. Upper body muscular endurance = more calories.",
-          "id": "RB006"
+          "id": "RB006",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047664/Band_Push-Up_qkmveg.png"
         },
         {
           "exercise": "Burpee",
@@ -2407,7 +2414,8 @@
           "tempo": "2-0-2-0",
           "rest": "45s",
           "coachingFocus": "Upper body work. Full range. Core braced.",
-          "id": "DB003"
+          "id": "DB003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625883/Dumbbell_Shoulder-Press_ikhnfe.png"
         },
         {
           "exercise": "Dumbbell RDL",
@@ -2416,7 +2424,8 @@
           "tempo": "3-1-1-0",
           "rest": "45s",
           "coachingFocus": "Hip hinge. Hamstrings loaded. Posterior chain drives fat loss.",
-          "id": "DB004"
+          "id": "DB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780877915/Dumbbell_RDL_rupaqb.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2464,7 +2473,8 @@
           "tempo": "1-0-X-0",
           "rest": "30s",
           "coachingFocus": "The thruster is a fat-burning machine. Squat drives the press. Max output.",
-          "id": "DB005"
+          "id": "DB005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625885/Dumbbell_Thruster_beul2d.png"
         },
         {
           "exercise": "Renegade Row",
@@ -2482,7 +2492,8 @@
           "tempo": "2-1-1-0",
           "rest": "30s",
           "coachingFocus": "Posterior chain at speed. Hip hinge power. Control the descent.",
-          "id": "DB004"
+          "id": "DB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780877915/Dumbbell_RDL_rupaqb.png"
         },
         {
           "exercise": "Burpee",
@@ -2548,7 +2559,8 @@
           "tempo": "2-0-1-0",
           "rest": "60s",
           "coachingFocus": "Upper body pressing. Burns more calories than isolation work.",
-          "id": "PH001"
+          "id": "PH001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2605,7 +2617,8 @@
           "tempo": "2-0-2-0",
           "rest": "30s",
           "coachingFocus": "Core work on the bar. No swinging. Control.",
-          "id": "PUB006"
+          "id": "PUB006",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780315042/Hanging_Leg_Raise_o9xy7v.png"
         },
         {
           "exercise": "Burpee",
@@ -2632,7 +2645,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "Pressing volume burns upper body calories and builds metabolism-supporting muscle.",
-          "id": "PH001"
+          "id": "PH001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png"
         }
       ],
       "finisher": "Pull-Up x5 + Burpee x10 + Mountain Climbers 30s: 4 rounds, 45s rest",
@@ -2662,7 +2676,8 @@
           "tempo": "2-0-2-0",
           "rest": "45s",
           "coachingFocus": "Weighted pulls build the most muscle per rep. More muscle = higher resting metabolism.",
-          "id": "PUB007"
+          "id": "PUB007",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626493/Weighted_Pull-Up_wcr3b3.png"
         },
         {
           "exercise": "Toes-to-Bar",
@@ -2698,7 +2713,8 @@
           "tempo": "1-0-1-0",
           "rest": "20s",
           "coachingFocus": "20 reps on short rest. Upper body metabolic work.",
-          "id": "PH001"
+          "id": "PH001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png"
         }
       ],
       "finisher": "Weighted Pull-Up x5 + Toes-to-Bar x10 + Burpee x12 + Climbers 30s: 3 rounds, 90s rest",
@@ -2926,7 +2942,8 @@
           "tempo": "Moderate",
           "rest": "75s",
           "coachingFocus": "Battle ropes burn more calories per minute than most exercises. Even 20s counts.",
-          "id": "BR001"
+          "id": "BR001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710450/Battle_Rope_kmqduv.png"
         },
         {
           "exercise": "Bodyweight Squat",
@@ -2992,7 +3009,8 @@
           "tempo": "Max effort",
           "rest": "20s",
           "coachingFocus": "40s at max effort. 20s rest. This ratio burns maximum fat in minimum time.",
-          "id": "BR001"
+          "id": "BR001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710450/Battle_Rope_kmqduv.png"
         },
         {
           "exercise": "Burpee",
@@ -3018,7 +3036,7 @@
           "reps": "20",
           "tempo": "1-0-1-0",
           "rest": "20s",
-          "coachingFocus": "High-rep squat burns serious calories. Legs on fire \u2014 that's the point.",
+          "coachingFocus": "High-rep squat burns serious calories. Legs on fire — that's the point.",
           "id": "SQ001"
         },
         {
@@ -3058,7 +3076,8 @@
           "tempo": "Max output",
           "rest": "10s",
           "coachingFocus": "7x50s with 10s rest. Elite metabolic conditioning. Shoulders on fire.",
-          "id": "BR001"
+          "id": "BR001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710450/Battle_Rope_kmqduv.png"
         },
         {
           "exercise": "Burpee",
@@ -3189,7 +3208,7 @@
           "reps": "10",
           "tempo": "Fast",
           "rest": "30s",
-          "coachingFocus": "Weighted burpees. Vest adds load to every phase \u2014 push-up, jump, everything.",
+          "coachingFocus": "Weighted burpees. Vest adds load to every phase — push-up, jump, everything.",
           "id": "CD001"
         },
         {
@@ -3256,7 +3275,8 @@
           "tempo": "2-0-2-0",
           "rest": "45s",
           "coachingFocus": "Heavy pulling builds the most metabolically active muscle in the upper body.",
-          "id": "PUB007"
+          "id": "PUB007",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626493/Weighted_Pull-Up_wcr3b3.png"
         },
         {
           "exercise": "Burpee",
@@ -3349,7 +3369,8 @@
           "tempo": "Moderate",
           "rest": "30s",
           "coachingFocus": "Rotational core. Burns the midsection while building strength.",
-          "id": "MB003"
+          "id": "MB003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311646/Russian_Twist_jo4qhc.png"
         },
         {
           "exercise": "Jumping Jacks",
@@ -3424,7 +3445,8 @@
           "tempo": "Fast",
           "rest": "20s",
           "coachingFocus": "High-rep rotation. Core fat burn and oblique conditioning.",
-          "id": "MB003"
+          "id": "MB003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311646/Russian_Twist_jo4qhc.png"
         }
       ],
       "finisher": "MB Slam x12 + Wall Ball x15 + Burpee x10 + Mountain Climbers 30s: 3 rounds, 60s rest",
@@ -3490,7 +3512,8 @@
           "tempo": "Fast",
           "rest": "15s",
           "coachingFocus": "Heavy MB. Feet off floor. 40 total reps. Rotational metabolic work.",
-          "id": "MB003"
+          "id": "MB003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311646/Russian_Twist_jo4qhc.png"
         }
       ],
       "finisher": "MB Slam x15 + Wall Ball x20 + Burpee x12 + Mountain Climbers 45s: 3 rounds, 90s rest",
@@ -3556,7 +3579,8 @@
           "tempo": "2-0-1-0",
           "rest": "45s",
           "coachingFocus": "Upper body work. Balanced training burns more total calories.",
-          "id": "PH001"
+          "id": "PH001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png"
         }
       ],
       "finisher": "Bear Hug Carry 15m + Mountain Climbers 20s + Jumping Jacks x25: 4 rounds, 30s rest",
@@ -3630,7 +3654,7 @@
       "estimatedCalories": "420-520",
       "progressionNotes": "Operator: reduce rest 5s every 2 weeks. Increase sandbag load when carries feel controlled.",
       "equipment": "Sandbag",
-      "description": "An intermediate sandbag HIIT session combining shouldering, carries, and burpees on minimal rest. Conditioning Circuit template \u2014 functional fat loss."
+      "description": "An intermediate sandbag HIIT session combining shouldering, carries, and burpees on minimal rest. Conditioning Circuit template — functional fat loss."
     },
     {
       "workoutName": "Sandbag Metabolic",
