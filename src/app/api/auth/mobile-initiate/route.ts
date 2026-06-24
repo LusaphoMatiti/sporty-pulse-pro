@@ -1,16 +1,8 @@
-//
-// Called by the Expo app to start Google OAuth without touching the web login page.
-// Receives ?redirectUri=<app-deep-link> from the Expo app, encodes it into
-// the callbackUrl so mobile-callback knows where to send the final deep link.
-
 import type { NextRequest } from "next/server";
 
 export async function GET(req: NextRequest) {
   const baseUrl = process.env.NEXTAUTH_URL!;
 
-  // The deep-link scheme the app is currently running under.
-  // In dev: exp+sporty-pulse-expo://expo-development-client/...
-  // In prod: sporty-pulse-pro://auth
   const redirectUri =
     req.nextUrl.searchParams.get("redirectUri") ?? "sporty-pulse-pro://auth";
 
@@ -18,19 +10,81 @@ export async function GET(req: NextRequest) {
   // after the OAuth round-trip completes.
   const callbackUrl = `${baseUrl}/api/auth/mobile-callback?redirectUri=${encodeURIComponent(redirectUri)}`;
 
-  const secure = process.env.NODE_ENV === "production" ? "; secure" : "";
-
   const html = `<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Connecting to Google…</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #0C0E10;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+      .screen {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        background: #0C0E10;
+      }
+      .logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 14px;
+        object-fit: contain;
+      }
+      .spinner {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 3px solid rgba(200, 241, 53, 0.15);
+        border-top-color: #C8F135;
+        animation: spin 0.8s linear infinite;
+      }
+      .label {
+        color: #9A9A90;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+      }
+      .label strong {
+        color: #F0EDE4;
+        font-weight: 600;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      noscript .label {
+        color: #FF4D4D;
+      }
+    </style>
   </head>
   <body>
-    <form id="f" method="POST" action="${baseUrl}/api/auth/signin/google">
+    <div class="screen">
+      <div class="spinner" role="status" aria-label="Connecting"></div>
+      <p class="label">Connecting to <strong>Google</strong>…</p>
+    </div>
+
+    <form id="f" method="POST" action="${baseUrl}/api/auth/signin/google" style="display:none;">
       <input type="hidden" name="callbackUrl" value="${callbackUrl}" />
       <input type="hidden" name="csrfToken" id="csrf" />
     </form>
+
+    <noscript>
+      <div class="screen">
+        <p class="label">JavaScript is required to continue. Please try again.</p>
+      </div>
+    </noscript>
+
     <script>
       fetch('${baseUrl}/api/auth/csrf')
         .then(r => r.json())
@@ -42,7 +96,6 @@ export async function GET(req: NextRequest) {
           window.location.href = '${baseUrl}/login';
         });
     </script>
-    <p>Connecting to Google…</p>
   </body>
 </html>`;
 
