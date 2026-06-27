@@ -15,6 +15,7 @@ import { getUserAccess } from "../src/lib/access";
 import {
   getEligiblePlansContext,
   computePlanLocks,
+  sortPlansForCatalog,
 } from "../src/lib/programaccess";
 
 async function main() {
@@ -44,7 +45,7 @@ async function main() {
   console.log("── User profile ──────────────────────────────");
   console.log(user);
 
-  const { planWhere, orderBy, allUserEquipment, accessibleEquipmentIds, now } =
+  const { planWhere, allUserEquipment, accessibleEquipmentIds, now } =
     await getEligiblePlansContext(userId);
 
   console.log("\n── Declared/owned equipment ───────────────────");
@@ -63,11 +64,15 @@ async function main() {
     trialExpiresAt: access.trialExpiresAt,
   });
 
-  const plans = await prisma.workoutPlan.findMany({
+  const plansUnsorted = await prisma.workoutPlan.findMany({
     where: planWhere,
     select: { id: true, name: true, equipmentId: true, tier: true },
-    orderBy,
   });
+
+  // Catalog order: equipment-tied plans first, bodyweight after. MUST match
+  // what route.ts and resolver.ts do — see sortPlansForCatalog in
+  // lib/programaccess.ts.
+  const plans = sortPlansForCatalog(plansUnsorted);
 
   console.log(`\n── Eligible plans BEFORE locking: ${plans.length} total ──`);
   const bodyweight = plans.filter((p) => p.equipmentId === null);
