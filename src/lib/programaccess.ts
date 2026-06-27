@@ -168,13 +168,19 @@ export async function getEligiblePlansContext(userId: string) {
     )
     .map((e) => e.equipmentId);
 
+  // Visibility for the DB query is intentionally broader than "currently
+  // accessible": it includes equipment from an EXPIRED trial too. Those
+  // plans must still be fetched so computePlanLocks can mark them
+  // locked + trial_expired (and the UI can show an upgrade CTA), instead
+  // of the plans silently disappearing from the list once the trial ends.
+  const visibleEquipmentIds = Array.from(
+    new Set(allUserEquipment.map((e) => e.equipmentId)),
+  );
+
   planWhere.AND = [
     ...(Array.isArray(planWhere.AND) ? planWhere.AND : []),
     {
-      OR: [
-        { equipmentId: { in: accessibleEquipmentIds } },
-        { equipmentId: null },
-      ],
+      OR: [{ equipmentId: { in: visibleEquipmentIds } }, { equipmentId: null }],
     },
   ];
 
