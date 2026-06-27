@@ -1,74 +1,12 @@
 import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
 import { getUserAccess } from "@/lib/access";
-import {
-  InstanceStatus,
-  EnvironmentTarget,
-  PrimaryGoal,
-  SexTarget,
-  Prisma,
-} from "@/generated/prisma";
+import { getEligiblePlansContext, computePlanLocks } from "@/lib/programaccess";
+import { InstanceStatus } from "@/generated/prisma";
 import { buildCloudinaryUrl } from "@/lib/cloudinary";
 import { apiSuccess, unauthorized, internalError } from "@/lib/api-response";
 
 export const dynamic = "force-dynamic";
-
-// ─── Environment resolution ────────────────────────────────────────────────
-// Maps trainingLocation from User to the EnvironmentTarget values a plan can
-// have. EnvironmentTarget.ANY is always included.
-
-function resolveEnvironmentTargets(
-  trainingLocation: string | null,
-  hasDeclaredEquipment: boolean,
-): EnvironmentTarget[] {
-  if (trainingLocation === "GYM") {
-    return [EnvironmentTarget.GYM, EnvironmentTarget.ANY];
-  }
-  if (trainingLocation === "HOME") {
-    if (hasDeclaredEquipment) {
-      return [
-        EnvironmentTarget.HOME_BODYWEIGHT,
-        EnvironmentTarget.HOME_EQUIPMENT,
-        EnvironmentTarget.ANY,
-      ];
-    }
-    return [EnvironmentTarget.HOME_BODYWEIGHT, EnvironmentTarget.ANY];
-  }
-  // No location set yet — return everything so the screen isn't blank
-  return Object.values(EnvironmentTarget);
-}
-
-// ─── Goal resolution ───────────────────────────────────────────────────────
-// LOSE_WEIGHT falls back to GET_FIT while seed data is being completed.
-// As LOSE_WEIGHT plans are seeded for each environment + level, they will
-// naturally rank above GET_FIT plans once the DB has them.
-
-function resolveGoalTargets(primaryGoal: string): PrimaryGoal[] {
-  switch (primaryGoal as PrimaryGoal) {
-    case PrimaryGoal.LOSE_WEIGHT:
-      return [PrimaryGoal.LOSE_WEIGHT, PrimaryGoal.GET_FIT];
-    case PrimaryGoal.BUILD_MUSCLE:
-      return [PrimaryGoal.BUILD_MUSCLE];
-    case PrimaryGoal.GET_FIT:
-      return [PrimaryGoal.GET_FIT];
-    default:
-      return [primaryGoal as PrimaryGoal];
-  }
-}
-
-// ─── Sex target resolution ─────────────────────────────────────────────────
-// Returns the BiologicalSex values that should be shown to a given user.
-// null sexTarget on a plan = shown to everyone regardless of user's sex.
-// A plan tagged MALE/FEMALE is only shown to users with that declared sex.
-// NOT_SPECIFIED users see all plans (null sexTarget only), since we can't
-// make a good guess. Plans with sexTarget null are always included.
-
-function resolveSexTargets(biologicalSex: string | null): SexTarget[] | null {
-  if (!biologicalSex || biologicalSex === "NOT_SPECIFIED") return null;
-  if (biologicalSex === "MALE") return [SexTarget.MALE];
-  if (biologicalSex === "FEMALE") return [SexTarget.FEMALE];
-  return null;
-}
 
 // ─── GET /api/programs ─────────────────────────────────────────────────────
 
@@ -79,147 +17,27 @@ export async function GET(req: Request) {
 
     const userId = session.user.id;
 
-    const [allUserEquipment, activeInstances, user] = await Promise.all([
-      prisma.userEquipment.findMany({
-        where: { userId },
-        select: {
-          equipmentId: true,
-          source: true,
-          trialExpiresAt: true,
-          equipment: { select: { name: true } },
-        },
-      }),
-      // Multiple instances can be ACTIVE at once (bodyweight + equipment
-      // caps are enforced in resolveProgram, not by a single-active-instance
-      // rule), so this is a findMany, not a findFirst.
-      prisma.planInstance.findMany({
+    const [
+      {
+        planWhere,
+        orderBy,
+        allUserEquipment,
+        user,
+        accessibleEquipmentIds,
+        now,
+      },
+      activeInstance,
+      access,
+    ] = await Promise.all([
+      getEligiblePlansContext(userId),
+      // Only one instance is ever ACTIVE at a time (see lib/resolver.ts) —
+      // findFirst is correct here, not findMany.
+      prisma.planInstance.findFirst({
         where: { userId, status: InstanceStatus.ACTIVE },
         select: { planId: true },
       }),
-      prisma.user.findUnique({
-        where: { id: userId },
-        select: {
-          identity: true,
-          trainingLocation: true,
-          primaryGoal: true,
-          experienceLevel: true,
-          biologicalSex: true,
-        },
-      }),
+      getUserAccess({ userId }),
     ]);
-
-    const hasDeclaredEquipment = allUserEquipment.some(
-      (e) => e.source === "DECLARED",
-    );
-
-    const allowedEnvironments = resolveEnvironmentTargets(
-      user?.trainingLocation ?? null,
-      hasDeclaredEquipment,
-    );
-
-    // ── Build plan filter ──────────────────────────────────────────────────
-    //
-    // Environment: strict match against allowedEnvironments.
-    //   EnvironmentTarget.ANY is already in allowedEnvironments.
-    //   Plans with environmentTarget null are universal fallbacks.
-    //
-    // Goal: primary goal first, with a GET_FIT fallback for LOSE_WEIGHT users.
-    //   Plans with goalTarget null are shown to everyone.
-    //
-    // Level: cumulative — INTERMEDIATE users see BEGINNER + INTERMEDIATE plans.
-    //   Plans with difficulty null are shown to everyone.
-    //
-    // Sex: MALE users see plans tagged MALE or null.
-    //      FEMALE users see plans tagged FEMALE or null.
-    //      NOT_SPECIFIED users see only null (unisex) plans.
-    //      No sex declared = no sex filter applied (show everything).
-
-    const planWhere: Prisma.WorkoutPlanWhereInput = {
-      OR: [
-        { environmentTarget: { in: allowedEnvironments } },
-        { environmentTarget: null },
-      ],
-    };
-
-    // ── Goal filter
-    if (user?.primaryGoal) {
-      const goalTargets = resolveGoalTargets(user.primaryGoal);
-      planWhere.AND = [
-        ...(Array.isArray(planWhere.AND) ? planWhere.AND : []),
-        {
-          OR: [{ goalTarget: { in: goalTargets } }, { goalTarget: null }],
-        },
-      ];
-    }
-
-    // ── Level filter
-    if (user?.experienceLevel) {
-      const levelHierarchy: Record<string, string[]> = {
-        BEGINNER: ["BEGINNER"],
-        INTERMEDIATE: ["BEGINNER", "INTERMEDIATE"],
-        ADVANCED: ["BEGINNER", "INTERMEDIATE", "ADVANCED"],
-      };
-      const allowedDifficulties = levelHierarchy[user.experienceLevel] ?? [];
-      planWhere.AND = [
-        ...(Array.isArray(planWhere.AND) ? planWhere.AND : []),
-        {
-          OR: [
-            { difficulty: { in: allowedDifficulties } },
-            { difficulty: null },
-          ],
-        },
-      ];
-    }
-
-    // ── Sex filter
-    // Only applied when the user has declared a specific biological sex.
-    // - MALE user   → plans where sexTarget is MALE or null
-    // - FEMALE user → plans where sexTarget is FEMALE or null
-    // - NOT_SPECIFIED / no sex declared → only plans where sexTarget is null
-    //   (we can't make a good recommendation without knowing their sex)
-    // Sex filter
-    if (user?.biologicalSex) {
-      const sexTargets = resolveSexTargets(user.biologicalSex);
-      if (sexTargets !== null) {
-        planWhere.AND = [
-          ...(Array.isArray(planWhere.AND) ? planWhere.AND : []),
-          {
-            OR: [{ sexTarget: { in: sexTargets } }, { sexTarget: null }],
-          },
-        ];
-      } else if (user.biologicalSex === "NOT_SPECIFIED") {
-        planWhere.AND = [
-          ...(Array.isArray(planWhere.AND) ? planWhere.AND : []),
-          { sexTarget: null },
-        ];
-      }
-    }
-
-    // ── Equipment filter
-    // HOME_EQUIPMENT plans have an equipmentId set — only show them if the
-    // user has declared or purchased that specific equipment.
-    // GYM plans and bodyweight plans have equipmentId = null, so they always
-    // pass through this filter via the { equipmentId: null } OR clause.
-    const now = new Date();
-    const accessibleEquipmentIds = allUserEquipment
-      .filter(
-        (e) =>
-          e.source === "PURCHASED" ||
-          (e.source === "DECLARED" &&
-            e.trialExpiresAt &&
-            e.trialExpiresAt > now),
-      )
-      .map((e) => e.equipmentId);
-
-    planWhere.AND = [
-      ...(Array.isArray(planWhere.AND) ? planWhere.AND : []),
-      {
-        OR: [
-          { equipmentId: { in: accessibleEquipmentIds } }, // user has this equipment
-          { equipmentId: null }, // GYM or bodyweight plan
-        ],
-      },
-    ];
 
     const plans = await prisma.workoutPlan.findMany({
       where: planWhere,
@@ -254,15 +72,11 @@ export async function GET(req: Request) {
         environmentTarget: true,
         equipment: { select: { id: true, name: true } },
       },
-      orderBy: [{ tier: "asc" }, { name: "asc" }],
+      orderBy,
     });
 
     const declaredEntry = allUserEquipment.find((e) => e.source === "DECLARED");
     const declaredEquipmentName = declaredEntry?.equipment?.name ?? null;
-
-    const access = await getUserAccess({ userId });
-
-    const activeEquipmentIds = accessibleEquipmentIds;
 
     const expiredEquipmentIds = allUserEquipment
       .filter(
@@ -272,6 +86,15 @@ export async function GET(req: Request) {
           e.trialExpiresAt <= now,
       )
       .map((e) => e.equipmentId);
+
+    // Lock status is computed purely from fixed catalog position (first 4
+    // bodyweight / first 2 trial-equipment plans, in the order above) — NOT
+    // from activation history. See lib/programAccess.ts.
+    const lockMap = computePlanLocks(plans, {
+      isPro: access.isPro,
+      allUserEquipment,
+      now,
+    });
 
     const plansWithCount = plans.map((p) => {
       const exerciseCount = p.plannedSessions.reduce(
@@ -286,11 +109,18 @@ export async function GET(req: Request) {
         buildCloudinaryUrl(firstExerciseThumb, "card");
 
       const { plannedSessions: _, ...rest } = p;
+      const lock = lockMap.get(p.id) ?? {
+        locked: true,
+        lockReason: "upgrade_required" as const,
+      };
+
       return {
         ...rest,
         imageUrl: resolvedImageUrl,
         exerciseCount,
         requiresEquipment: !!p.equipmentId,
+        locked: lock.locked,
+        lockReason: lock.lockReason,
       };
     });
 
@@ -301,17 +131,10 @@ export async function GET(req: Request) {
         isEquipment: access.isEquipment,
         hasActiveTrial: access.hasActiveTrial,
         trialExpiresAt: access.trialExpiresAt?.toISOString() ?? null,
-        canStartNewProgram: access.canStartNewProgram,
-        activeInstanceCount: access.activeInstanceCount,
-        programCap: access.isPro ? null : access.programCap,
-        canStartNewEquipmentProgram: access.canStartNewEquipmentProgram,
-        equipmentActiveCount: access.equipmentActiveCount,
-        equipmentCap:
-          access.equipmentCap === Infinity ? null : access.equipmentCap,
         declaredEquipmentIds: access.declaredEquipmentIds,
-        activeEquipmentIds,
+        activeEquipmentIds: accessibleEquipmentIds,
         expiredEquipmentIds,
-        activePlanIds: activeInstances.map((i) => i.planId),
+        activePlanId: activeInstance?.planId ?? null,
       },
       declaredEquipmentName,
       userIdentity: user?.identity ?? null,
