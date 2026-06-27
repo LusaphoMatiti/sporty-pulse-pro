@@ -16,7 +16,7 @@ export async function GET(req: Request) {
     if (!session?.user?.id) return unauthorized();
 
     const userId = session.user.id;
-
+    //
     const [
       {
         planWhere,
