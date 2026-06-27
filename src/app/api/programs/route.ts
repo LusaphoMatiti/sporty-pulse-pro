@@ -79,7 +79,7 @@ export async function GET(req: Request) {
 
     const userId = session.user.id;
 
-    const [allUserEquipment, activeInstance, user] = await Promise.all([
+    const [allUserEquipment, activeInstances, user] = await Promise.all([
       prisma.userEquipment.findMany({
         where: { userId },
         select: {
@@ -89,7 +89,10 @@ export async function GET(req: Request) {
           equipment: { select: { name: true } },
         },
       }),
-      prisma.planInstance.findFirst({
+      // Multiple instances can be ACTIVE at once (bodyweight + equipment
+      // caps are enforced in resolveProgram, not by a single-active-instance
+      // rule), so this is a findMany, not a findFirst.
+      prisma.planInstance.findMany({
         where: { userId, status: InstanceStatus.ACTIVE },
         select: { planId: true },
       }),
@@ -301,10 +304,14 @@ export async function GET(req: Request) {
         canStartNewProgram: access.canStartNewProgram,
         activeInstanceCount: access.activeInstanceCount,
         programCap: access.isPro ? null : access.programCap,
+        canStartNewEquipmentProgram: access.canStartNewEquipmentProgram,
+        equipmentActiveCount: access.equipmentActiveCount,
+        equipmentCap:
+          access.equipmentCap === Infinity ? null : access.equipmentCap,
         declaredEquipmentIds: access.declaredEquipmentIds,
         activeEquipmentIds,
         expiredEquipmentIds,
-        activePlanId: activeInstance?.planId ?? null,
+        activePlanIds: activeInstances.map((i) => i.planId),
       },
       declaredEquipmentName,
       userIdentity: user?.identity ?? null,
