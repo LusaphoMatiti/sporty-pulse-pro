@@ -1,4 +1,3 @@
-// src/lib/cloudinary.ts
 import { v2 as cloudinary } from "cloudinary";
 
 cloudinary.config({
@@ -9,27 +8,17 @@ cloudinary.config({
 
 export default cloudinary;
 
-/**
- * PRESETS
- *  hero        → program hero card (full-width banner)   800 × 450 px
- *  card        → program list card (left-side image)     400 × 560 px
- *  miniCard    → horizontal scroll mini card             300 × 200 px
- *  thumb       → exercise row thumbnail                  200 × 150 px
- *  squareThumb → library / exercise grid tile            200 × 200 px
- */
-
 type Preset = "hero" | "card" | "miniCard" | "thumb" | "squareThumb";
 
 const PRESETS: Record<Preset, string> = {
-  hero: "w_800,h_450,c_fit,b_rgb:0C0E10,f_auto,q_auto",
-  card: "w_400,h_560,c_fit,b_rgb:0C0E10,f_auto,q_auto",
-  miniCard: "w_300,h_200,c_fit,b_rgb:0C0E10,f_auto,q_auto",
-  thumb: "w_200,h_150,c_fit,b_rgb:0C0E10,f_auto,q_auto",
-  squareThumb: "w_200,h_200,c_fit,b_rgb:0C0E10,f_auto,q_auto",
+  hero: "w_1600,h_900,c_fit,b_rgb:0C0E10,f_auto,q_auto,dpr_auto",
+  card: "w_800,h_1120,c_fit,b_rgb:0C0E10,f_auto,q_auto,dpr_auto",
+  miniCard: "w_600,h_400,c_fit,b_rgb:0C0E10,f_auto,q_auto,dpr_auto",
+  thumb: "w_400,h_300,c_fit,b_rgb:0C0E10,f_auto,q_auto,dpr_auto",
+  squareThumb: "w_400,h_400,c_fit,b_rgb:0C0E10,f_auto,q_auto,dpr_auto",
 };
 
 // ── Core builder ──────────────────────────────────────────────────────────────
-// FIX: cloud name now read from env var, not hardcoded
 function cloudinaryBase() {
   const cloud = process.env.CLOUDINARY_CLOUD_NAME;
   if (!cloud) throw new Error("CLOUDINARY_CLOUD_NAME env var is not set");
