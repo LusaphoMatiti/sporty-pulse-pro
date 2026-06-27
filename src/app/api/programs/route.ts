@@ -1,7 +1,11 @@
 import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
 import { getUserAccess } from "@/lib/access";
-import { getEligiblePlansContext, computePlanLocks } from "@/lib/programaccess";
+import {
+  getEligiblePlansContext,
+  computePlanLocks,
+  sortPlansForCatalog,
+} from "@/lib/programaccess";
 import { InstanceStatus } from "@/generated/prisma";
 import { buildCloudinaryUrl } from "@/lib/cloudinary";
 import { apiSuccess, unauthorized, internalError } from "@/lib/api-response";
@@ -18,14 +22,7 @@ export async function GET(req: Request) {
     const userId = session.user.id;
     //
     const [
-      {
-        planWhere,
-        orderBy,
-        allUserEquipment,
-        user,
-        accessibleEquipmentIds,
-        now,
-      },
+      { planWhere, allUserEquipment, user, accessibleEquipmentIds, now },
       activeInstance,
       access,
     ] = await Promise.all([
@@ -39,7 +36,7 @@ export async function GET(req: Request) {
       getUserAccess({ userId }),
     ]);
 
-    const plans = await prisma.workoutPlan.findMany({
+    const plansUnsorted = await prisma.workoutPlan.findMany({
       where: planWhere,
       select: {
         id: true,
@@ -72,8 +69,13 @@ export async function GET(req: Request) {
         environmentTarget: true,
         equipment: { select: { id: true, name: true } },
       },
-      orderBy,
     });
+
+    // Catalog order: equipment-tied plans first, bodyweight after — see
+    // sortPlansForCatalog in lib/programaccess.ts. This MUST match the
+    // order resolver.ts uses, since computePlanLocks's cap-counting is
+    // position-dependent.
+    const plans = sortPlansForCatalog(plansUnsorted);
 
     const declaredEntry = allUserEquipment.find((e) => e.source === "DECLARED");
     const declaredEquipmentName = declaredEntry?.equipment?.name ?? null;

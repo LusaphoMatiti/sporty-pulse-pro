@@ -1,7 +1,11 @@
 import { prisma } from "@/lib/prisma";
 import { UserLevel, InstanceStatus } from "@/generated/prisma";
 import { getUserAccess } from "@/lib/access";
-import { getEligiblePlansContext, computePlanLocks } from "@/lib/programaccess";
+import {
+  getEligiblePlansContext,
+  computePlanLocks,
+  sortPlansForCatalog,
+} from "@/lib/programaccess";
 
 type ResolverInput = {
   userId: string;
@@ -35,17 +39,20 @@ export async function resolveProgram({ userId, planId, level }: ResolverInput) {
   const plan = await prisma.workoutPlan.findUnique({ where: { id: planId } });
   if (!plan) throw new PlanNotFoundError(`No plan found: ${planId}`);
 
-  const [{ planWhere, orderBy, allUserEquipment, now }, access] =
-    await Promise.all([
-      getEligiblePlansContext(userId),
-      getUserAccess({ userId }),
-    ]);
+  const [{ planWhere, allUserEquipment, now }, access] = await Promise.all([
+    getEligiblePlansContext(userId),
+    getUserAccess({ userId }),
+  ]);
 
-  const eligiblePlans = await prisma.workoutPlan.findMany({
+  const eligiblePlansUnsorted = await prisma.workoutPlan.findMany({
     where: planWhere,
-    select: { id: true, equipmentId: true },
-    orderBy,
+    select: { id: true, name: true, equipmentId: true },
   });
+
+  // MUST use the same catalog order as the GET /api/programs route, since
+  // computePlanLocks's cap-counting is position-dependent. See
+  // sortPlansForCatalog in lib/programaccess.ts.
+  const eligiblePlans = sortPlansForCatalog(eligiblePlansUnsorted);
 
   const lockMap = computePlanLocks(eligiblePlans, {
     isPro: access.isPro,

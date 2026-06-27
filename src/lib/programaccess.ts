@@ -79,7 +79,8 @@ export type UserEquipmentEntry = {
  * at all" (environment/goal/level/sex/equipment-ownership), plus the
  * supporting data needed to compute locks afterward. Does NOT fetch the
  * plans themselves — callers run their own `findMany` with whatever
- * `select` they need, using the same `planWhere` and `orderBy`.
+ * `select` they need using `planWhere`, then apply `sortPlansForCatalog`
+ * (below) to the results before passing them to `computePlanLocks`.
  */
 export async function getEligiblePlansContext(userId: string) {
   const now = new Date();
@@ -186,12 +187,39 @@ export async function getEligiblePlansContext(userId: string) {
 
   return {
     planWhere,
-    orderBy: [{ tier: "asc" as const }, { name: "asc" as const }],
+    // NOTE: Prisma `orderBy` can't express "equipment-tied plans first,
+    // bodyweight after" directly (it has no boolean-on-nullness sort), so
+    // catalog ordering is done in application code via `sortPlansForCatalog`
+    // below, applied AFTER findMany. Both call sites (route.ts and
+    // resolver.ts) must call it on their fetched results so the order used
+    // for cap-counting in computePlanLocks is identical in both places.
     allUserEquipment,
     user,
     accessibleEquipmentIds,
     now,
   };
+}
+
+// ── Catalog ordering ───────────────────────────────────────────────────────
+
+type PlanForSorting = { id: string; name: string; equipmentId: string | null };
+
+/**
+ * Equipment-tied plans first, bodyweight plans after — within each group,
+ * alphabetical by name for a stable, predictable order. This is the
+ * canonical catalog order used for BOTH display and for the fixed-position
+ * cap counting in computePlanLocks, so it must be applied identically by
+ * every caller (route.ts and resolver.ts) on their findMany results.
+ */
+export function sortPlansForCatalog<T extends PlanForSorting>(plans: T[]): T[] {
+  return [...plans].sort((a, b) => {
+    const aIsEquipment = a.equipmentId !== null;
+    const bIsEquipment = b.equipmentId !== null;
+    if (aIsEquipment !== bIsEquipment) {
+      return aIsEquipment ? -1 : 1;
+    }
+    return a.name.localeCompare(b.name);
+  });
 }
 
 // ── Lock computation ───────────────────────────────────────────────────────
