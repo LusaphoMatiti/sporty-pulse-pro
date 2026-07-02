@@ -457,7 +457,7 @@ model WorkoutLog {
   createdAt DateTime @default(now())
 
   @@index([userId])
-  @@index([instanceId])
+  @@index([instanceId]) 
   @@index([userId, plannedExerciseId])
   @@index([instanceId, sessionNumber])
   @@map("workout_logs")
@@ -513,7 +513,7 @@ model PendingEntitlement {
   equipmentId String
   source      String // .e.g. "store_purchase"
   createdAt   DateTime @default(now())
-  claimedAt   DateTime
+  claimedAt   DateTime?
 
   equipment Equipment @relation(fields: [equipmentId], references: [id])
 
