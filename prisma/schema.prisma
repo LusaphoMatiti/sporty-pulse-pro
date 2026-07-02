@@ -497,6 +497,7 @@ model UserEquipment {
   equipmentId String
   equipment   Equipment @relation(fields: [equipmentId], references: [id])
 
+  @@unique([userId, equipmentId])
   @@index([userId])
   @@index([equipmentId])
   @@map("user_equipment")
