@@ -1,6 +1,3 @@
--- CreateSchema
-CREATE SCHEMA IF NOT EXISTS "public";
-
 -- CreateEnum
 CREATE TYPE "Role" AS ENUM ('ATHLETE', 'COACH', 'ADMIN');
 
@@ -38,7 +35,7 @@ CREATE TYPE "InstanceStatus" AS ENUM ('ACTIVE', 'COMPLETED', 'ABANDONED');
 CREATE TYPE "Identity" AS ENUM ('REBUILD', 'OPERATOR', 'EXECUTIVE_PERFORMANCE');
 
 -- CreateEnum
-CREATE TYPE "TemplateType" AS ENUM ('FULL_BODY_RESTORE', 'FULL_BODY_STRENGTH', 'CONDITIONING_CIRCUIT', 'PUSH_PULL_LEGS', 'ADVANCED_PPL', 'STRENGTH_HIIT', 'PERFORMANCE_CONDITIONING');
+CREATE TYPE "TemplateType" AS ENUM ('FAT_LOSS_HOME_BEGINNER', 'FAT_LOSS_HOME_INTERMEDIATE', 'FAT_LOSS_HOME_ADVANCED', 'FAT_LOSS_GYM_BEGINNER', 'FAT_LOSS_GYM_INTERMEDIATE', 'FAT_LOSS_GYM_ADVANCED', 'MUSCLE_HOME_BEGINNER', 'MUSCLE_HOME_INTERMEDIATE', 'MUSCLE_HOME_ADVANCED', 'MUSCLE_GYM_BEGINNER', 'MUSCLE_GYM_INTERMEDIATE', 'MUSCLE_GYM_ADVANCED', 'FUNCTIONAL_HOME_BEGINNER', 'FUNCTIONAL_HOME_INTERMEDIATE', 'FUNCTIONAL_HOME_ADVANCED', 'FUNCTIONAL_GYM_BEGINNER', 'FUNCTIONAL_GYM_INTERMEDIATE', 'FUNCTIONAL_GYM_ADVANCED', 'CROSSFIT_GYM_ADVANCED', 'FUNCTIONAL_HOME_RECOVERY');
 
 -- CreateEnum
 CREATE TYPE "EnvironmentTarget" AS ENUM ('HOME_BODYWEIGHT', 'HOME_EQUIPMENT', 'GYM', 'ANY');
@@ -291,6 +288,27 @@ CREATE TABLE "user_equipment" (
     CONSTRAINT "user_equipment_pkey" PRIMARY KEY ("id")
 );
 
+-- CreateTable
+CREATE TABLE "pending_entitlement" (
+    "id" TEXT NOT NULL,
+    "email" TEXT NOT NULL,
+    "equipmentId" TEXT NOT NULL,
+    "source" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "claimedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "pending_entitlement_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "product_equipment_map" (
+    "id" TEXT NOT NULL,
+    "storeProductId" TEXT NOT NULL,
+    "equipmentId" TEXT NOT NULL,
+
+    CONSTRAINT "product_equipment_map_pkey" PRIMARY KEY ("id")
+);
+
 -- CreateIndex
 CREATE UNIQUE INDEX "users_email_key" ON "users"("email");
 
@@ -390,6 +408,15 @@ CREATE INDEX "user_equipment_userId_idx" ON "user_equipment"("userId");
 -- CreateIndex
 CREATE INDEX "user_equipment_equipmentId_idx" ON "user_equipment"("equipmentId");
 
+-- CreateIndex
+CREATE INDEX "pending_entitlement_email_idx" ON "pending_entitlement"("email");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "pending_entitlement_email_equipmentId_key" ON "pending_entitlement"("email", "equipmentId");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "product_equipment_map_storeProductId_key" ON "product_equipment_map"("storeProductId");
+
 -- AddForeignKey
 ALTER TABLE "accounts" ADD CONSTRAINT "accounts_userId_fkey" FOREIGN KEY ("userId") REFERENCES "users"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
@@ -446,3 +473,9 @@ ALTER TABLE "user_equipment" ADD CONSTRAINT "user_equipment_userId_fkey" FOREIGN
 
 -- AddForeignKey
 ALTER TABLE "user_equipment" ADD CONSTRAINT "user_equipment_equipmentId_fkey" FOREIGN KEY ("equipmentId") REFERENCES "equipment"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "pending_entitlement" ADD CONSTRAINT "pending_entitlement_equipmentId_fkey" FOREIGN KEY ("equipmentId") REFERENCES "equipment"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "product_equipment_map" ADD CONSTRAINT "product_equipment_map_equipmentId_fkey" FOREIGN KEY ("equipmentId") REFERENCES "equipment"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

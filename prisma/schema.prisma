@@ -1,12 +1,10 @@
 generator client {
   provider = "prisma-client-js"
   output   = "../src/generated/prisma"
-
 }
 
 datasource db {
-  provider  = "postgresql"
-
+  provider = "postgresql"
 }
 
 // ─────────────────────────────────────────────
@@ -36,7 +34,7 @@ enum TrainingLocation {
   GYM
 }
 
-enum BiologicalSex {   
+enum BiologicalSex {
   MALE
   FEMALE
   NOT_SPECIFIED
@@ -78,7 +76,6 @@ enum InstanceStatus {
   COMPLETED
   ABANDONED
 }
-
 
 enum Identity {
   REBUILD
@@ -135,31 +132,29 @@ enum ImpactLevel {
   HIGH
 }
 
-
-
 // ─────────────────────────────────────────────
 // AUTH LAYER
 // ─────────────────────────────────────────────
 
 model User {
-  id                 String    @id @default(uuid())
-  email              String    @unique
-  name               String?
-  password           String?
-  emailVerified      DateTime?
-  image              String?
-  role               Role      @default(ATHLETE)
-  lastLoginAt        DateTime?
-  onboardingComplete Boolean   @default(false)
-  createdAt          DateTime  @default(now())
-  updatedAt          DateTime  @updatedAt
-  isNewUser         Boolean   @default(true)
-  identity          Identity?
-  identityAssignedAt  DateTime?
-  primaryGoal   PrimaryGoal?
-  trainingLocation TrainingLocation?
-  biologicalSex BiologicalSex?
-  experienceLevel UserLevel?
+  id                    String            @id @default(uuid())
+  email                 String            @unique
+  name                  String?
+  password              String?
+  emailVerified         DateTime?
+  image                 String?
+  role                  Role              @default(ATHLETE)
+  lastLoginAt           DateTime?
+  onboardingComplete    Boolean           @default(false)
+  createdAt             DateTime          @default(now())
+  updatedAt             DateTime          @updatedAt
+  isNewUser             Boolean           @default(true)
+  identity              Identity?
+  identityAssignedAt    DateTime?
+  primaryGoal           PrimaryGoal?
+  trainingLocation      TrainingLocation?
+  biologicalSex         BiologicalSex?
+  experienceLevel       UserLevel?
   onboardingCompletedAt DateTime?
 
   accounts      Account[]
@@ -190,7 +185,7 @@ model Account {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
-   @@index([userId])
+  @@index([userId])
   @@map("accounts")
 }
 
@@ -201,7 +196,8 @@ model NextAuthSession {
   expires      DateTime
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
- @@index([userId])
+
+  @@index([userId])
   @@map("sessions")
 }
 
@@ -211,8 +207,6 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
-
-  
   @@map("verification_tokens")
 }
 
@@ -221,13 +215,16 @@ model VerificationToken {
 // ─────────────────────────────────────────────
 
 model Equipment {
-  id        String @id @default(uuid())
-  name      String @unique
-  category  String // "fullbody" | "upper" | "lower" | "core"
+  id       String @id @default(uuid())
+  name     String @unique
+  category String // "fullbody" | "upper" | "lower" | "core"
 
   userEquipment UserEquipment[]
-   exercises     ExerciseEquipment[]
+  exercises     ExerciseEquipment[]
   workoutPlans  WorkoutPlan[]
+
+  pendingEntitlements PendingEntitlement[]
+  productMappings     ProductEquipmentMap[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -240,51 +237,48 @@ model Equipment {
 // ─────────────────────────────────────────────
 
 model Exercise {
-  id            String  @id @default(uuid())
-  name          String  @unique
+  id            String      @id @default(uuid())
+  name          String      @unique
   description   String?
   youtubeUrl    String?
-  musclesWorked String[] 
+  musclesWorked String[]
   muscleGroup   MuscleGroup
 
   equipmentId String?
-  
 
-
-  impactLevel ImpactLevel @default(MEDIUM)
-  isBodyweight Boolean @default(false)
+  impactLevel  ImpactLevel @default(MEDIUM)
+  isBodyweight Boolean     @default(false)
   thumbnailUrl String?
   videoUrl     String?
 
-  equipment ExerciseEquipment[]
-  substitutions ExerciseSubstitution[] @relation("OriginalExercise")
+  equipment        ExerciseEquipment[]
+  substitutions    ExerciseSubstitution[] @relation("OriginalExercise")
   substitutionsFor ExerciseSubstitution[] @relation("SubstituteExercise")
-  plannedExercises PlannedExercise []
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  plannedExercises PlannedExercise[]
+  createdAt        DateTime               @default(now())
+  updatedAt        DateTime               @updatedAt
 
-  @@index([equipmentId]) 
+  @@index([equipmentId])
   @@map("exercises")
 }
 
 model ExerciseEquipment {
-  exerciseId String
+  exerciseId  String
   equipmentId String
-  exercise Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
-equipment Equipment @relation(fields: [equipmentId], references: [id], onDelete: Cascade)
-
+  exercise    Exercise  @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  equipment   Equipment @relation(fields: [equipmentId], references: [id], onDelete: Cascade)
 
   @@id([exerciseId, equipmentId])
   @@map("exercise_equipment")
 }
 
 model ExerciseSubstitution {
-  id String @id @default(cuid())
-  originalExerciseId String
+  id                   String @id @default(cuid())
+  originalExerciseId   String
   substituteExerciseId String
-  reason String
+  reason               String
 
-  originalExercise Exercise @relation("OriginalExercise", fields: [originalExerciseId], references: [id])
+  originalExercise   Exercise @relation("OriginalExercise", fields: [originalExerciseId], references: [id])
   substituteExercise Exercise @relation("SubstituteExercise", fields: [substituteExerciseId], references: [id])
 
   @@unique([originalExerciseId, substituteExerciseId])
@@ -292,31 +286,29 @@ model ExerciseSubstitution {
   @@map("exercise_substitutions")
 }
 
-
-
 // ─────────────────────────────────────────────
 // WORKOUT PLAN
 // ─────────────────────────────────────────────
 
 model WorkoutPlan {
-  id              String      @id @default(cuid())
-  name            String      @unique
-  description     String
-  muscleGroup     MuscleGroup
-  durationWeeks   Int
-  sessionsPerWeek Int
-  difficulty      String?
-  tier            PlanTier    @default(FREE)
-  imageUrl        String?
-  videoUrl        String?
-  sessionDurationMin String? 
-  templateType TemplateType?
- identityTarget  Identity?
- goalTarget  PrimaryGoal?
-  environmentTarget EnvironmentTarget?
-  impactLevel ImpactLevel?
-  sexTarget          SexTarget?         
-  collection         String?  
+  id                 String             @id @default(cuid())
+  name               String             @unique
+  description        String
+  muscleGroup        MuscleGroup
+  durationWeeks      Int
+  sessionsPerWeek    Int
+  difficulty         String?
+  tier               PlanTier           @default(FREE)
+  imageUrl           String?
+  videoUrl           String?
+  sessionDurationMin String?
+  templateType       TemplateType?
+  identityTarget     Identity?
+  goalTarget         PrimaryGoal?
+  environmentTarget  EnvironmentTarget?
+  impactLevel        ImpactLevel?
+  sexTarget          SexTarget?
+  collection         String?
 
   equipmentId String?
   equipment   Equipment? @relation(fields: [equipmentId], references: [id])
@@ -327,12 +319,11 @@ model WorkoutPlan {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-   @@index([equipmentId])
+  @@index([equipmentId])
   @@index([goalTarget])
   @@index([environmentTarget])
   @@index([sexTarget])
   @@map("workout_plans")
-
 }
 
 // ─────────────────────────────────────────────
@@ -340,10 +331,10 @@ model WorkoutPlan {
 // ─────────────────────────────────────────────
 
 model PlannedSession {
-  id            String @id @default(cuid())
-  sessionNumber Int
-  focus         String
-  estimatedMinutes Int @default(45)
+  id               String @id @default(cuid())
+  sessionNumber    Int
+  focus            String
+  estimatedMinutes Int    @default(45)
 
   planId String
   plan   WorkoutPlan @relation(fields: [planId], references: [id], onDelete: Cascade)
@@ -351,7 +342,7 @@ model PlannedSession {
   plannedExercises PlannedExercise[]
 
   @@unique([planId, sessionNumber])
-   @@index([planId])
+  @@index([planId])
   @@map("planned_sessions")
 }
 
@@ -380,24 +371,23 @@ model PlannedExercise {
   loggedSets WorkoutLog[]
 
   @@unique([sessionId, order])
-    @@index([sessionId])
+  @@index([sessionId])
   @@index([exerciseId])
   @@map("planned_exercises")
 }
-
 
 // ─────────────────────────────────────────────
 // RECOVERY LOG
 // ─────────────────────────────────────────────
 
 model RecoveryLog {
-  id  String @id @default(cuid())
-  loggedAt  DateTime @default(now())
-  sleepHours Float?
-  sleepQuality   Int? 
+  id             String   @id @default(cuid())
+  loggedAt       DateTime @default(now())
+  sleepHours     Float?
+  sleepQuality   Int?
   muscleSoreness Int?
-  stressLevel Int?
-  recoveryPct Int
+  stressLevel    Int?
+  recoveryPct    Int
 
   userId String
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -406,9 +396,6 @@ model RecoveryLog {
   @@index([userId, loggedAt])
   @@map("recovery_logs")
 }
-
-
-
 
 // ─────────────────────────────────────────────
 // PLAN INSTANCE
@@ -426,23 +413,22 @@ model PlanInstance {
   userId String
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  planId String
-  plan   WorkoutPlan @relation(fields: [planId], references: [id])
-  workoutLogs WorkoutLog[]
-  progressionType ProgressionType?
-  progressionWeek Int?
-  currentSets Int?
-  currentReps Int?
+  planId             String
+  plan               WorkoutPlan      @relation(fields: [planId], references: [id])
+  workoutLogs        WorkoutLog[]
+  progressionType    ProgressionType?
+  progressionWeek    Int?
+  currentSets        Int?
+  currentReps        Int?
   currentRestSeconds Int?
-  deloadFlagged Boolean @default(false)
-  identityAtStart Identity?
+  deloadFlagged      Boolean          @default(false)
+  identityAtStart    Identity?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@index([userId, status])
   @@index([userId])
-
   @@map("plan_instances")
 }
 
@@ -469,10 +455,11 @@ model WorkoutLog {
   plannedExercise   PlannedExercise @relation(fields: [plannedExerciseId], references: [id])
 
   createdAt DateTime @default(now())
+
   @@index([userId])
   @@index([instanceId])
   @@index([userId, plannedExerciseId])
- @@index([instanceId, sessionNumber])
+  @@index([instanceId, sessionNumber])
   @@map("workout_logs")
 }
 
@@ -481,11 +468,11 @@ model WorkoutLog {
 // ─────────────────────────────────────────────
 
 model Subscription {
-  id        String   @id @default(uuid())
-  plan      Plan     @default(FREE)
+  id        String    @id @default(uuid())
+  plan      Plan      @default(FREE)
   status    String
   source    String?
-  startedAt DateTime @default(now())
+  startedAt DateTime  @default(now())
   expiresAt DateTime?
 
   userId String @unique
@@ -499,9 +486,9 @@ model Subscription {
 // ─────────────────────────────────────────────
 
 model UserEquipment {
-  id      String          @id @default(uuid())
-  source  EquipmentSource
-  addedAt DateTime        @default(now())
+  id             String          @id @default(uuid())
+  source         EquipmentSource
+  addedAt        DateTime        @default(now())
   trialExpiresAt DateTime? // only set when source = DECLARED
 
   userId String
@@ -509,8 +496,37 @@ model UserEquipment {
 
   equipmentId String
   equipment   Equipment @relation(fields: [equipmentId], references: [id])
-   @@index([userId])
 
+  @@index([userId])
   @@index([equipmentId])
   @@map("user_equipment")
+}
+
+// ─────────────────────────────────────────────
+// CONNECT STORE
+// ─────────────────────────────────────────────
+
+model PendingEntitlement {
+  id          String   @id @default(uuid())
+  email       String
+  equipmentId String
+  source      String // .e.g. "store_purchase"
+  createdAt   DateTime @default(now())
+  claimedAt   DateTime
+
+  equipment Equipment @relation(fields: [equipmentId], references: [id])
+
+  @@unique([email, equipmentId])
+  @@index([email])
+  @@map("pending_entitlement")
+}
+
+model ProductEquipmentMap {
+  id             String @id @default(uuid())
+  storeProductId String @unique
+  equipmentId    String
+
+  equipment Equipment @relation(fields: [equipmentId], references: [id])
+
+  @@map("product_equipment_map")
 }
