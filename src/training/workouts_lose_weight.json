@@ -1984,7 +1984,8 @@
           "tempo": "Rhythmic",
           "rest": "60s",
           "coachingFocus": "The swing is the best fat-burning KB exercise. Hip drive. Let it float.",
-          "id": "KB004"
+          "id": "KB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777174/Kettlebell_Swing_rijbyf.png"
         },
         {
           "exercise": "Goblet Squat",
@@ -1993,7 +1994,8 @@
           "tempo": "2-1-1-0",
           "rest": "60s",
           "coachingFocus": "Squat burns calories. Go deep. Drive through the heel.",
-          "id": "KB002"
+          "id": "KB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777173/Goblet_Squat_c4dfsl.png"
         },
         {
           "exercise": "Kettlebell Deadlift",
@@ -2021,7 +2023,8 @@
           "tempo": "Moderate pace",
           "rest": "30s",
           "coachingFocus": "Cardio on the mat. Drive knees. Keep breathing.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "KB Swing x15 + Goblet Squat x10 + Mountain Climbers 20s: 3 rounds, 45s rest",
@@ -2051,7 +2054,8 @@
           "tempo": "Rhythmic — max power",
           "rest": "30s",
           "coachingFocus": "20 swings with short rest is a caloric furnace. Hip snap every rep.",
-          "id": "KB004"
+          "id": "KB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777174/Kettlebell_Swing_rijbyf.png"
         },
         {
           "exercise": "Goblet Squat",
@@ -2060,7 +2064,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "Fast squat. Stay deep. High rep for metabolic output.",
-          "id": "KB002"
+          "id": "KB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777173/Goblet_Squat_c4dfsl.png"
         },
         {
           "exercise": "Kettlebell Press",
@@ -2078,7 +2083,8 @@
           "tempo": "Max effort",
           "rest": "30s",
           "coachingFocus": "The burpee + KB swing combination is elite fat burning.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2087,7 +2093,8 @@
           "tempo": "High effort",
           "rest": "20s",
           "coachingFocus": "Drive knees. High intensity. Cardio and core simultaneously.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "KB Swing x20 + Burpee x10 + Mountain Climbers 30s: 3 rounds, 60s rest",
@@ -2127,7 +2134,8 @@
           "tempo": "Rhythmic — explosive",
           "rest": "20s",
           "coachingFocus": "25 reps with 20s rest. This is metabolic conditioning at its most efficient.",
-          "id": "KB004"
+          "id": "KB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777174/Kettlebell_Swing_rijbyf.png"
         },
         {
           "exercise": "Burpee",
@@ -2136,7 +2144,8 @@
           "tempo": "Max effort",
           "rest": "30s",
           "coachingFocus": "Burpees between KB sets. Total body output. No shortcuts.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Kettlebell Press",
@@ -2154,7 +2163,8 @@
           "tempo": "Max effort",
           "rest": "20s",
           "coachingFocus": "40s of mountain climbers after swings. This is elite metabolic work.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "KB Snatch x5 each + Swing x20 + Burpee x10 + Climbers 30s: 3 rounds, 90s rest",
@@ -2203,7 +2213,8 @@
           "tempo": "2-0-2-0",
           "rest": "45s",
           "coachingFocus": "Stand on band. Press up. Core braced. Upper body contribution.",
-          "id": "RB002"
+          "id": "RB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777863/Band_Overhead_Press_aokkbv.png"
         },
         {
           "exercise": "Glute Bridge",
@@ -2212,7 +2223,8 @@
           "tempo": "2-2-2-0",
           "rest": "30s",
           "coachingFocus": "Band across hips. Drive up. Lower body fat burning starts in the glutes.",
-          "id": "HI009"
+          "id": "HI009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2221,7 +2233,8 @@
           "tempo": "Moderate",
           "rest": "30s",
           "coachingFocus": "Cardio on the mat. Manageable pace. Heart rate up.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Jumping Jacks",
@@ -2289,7 +2302,8 @@
           "tempo": "Fast",
           "rest": "30s",
           "coachingFocus": "The burpee is a fat-burning machine. Chest to floor. Jump at the top.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2298,7 +2312,8 @@
           "tempo": "High effort",
           "rest": "20s",
           "coachingFocus": "Drive knees. Cardio on the mat. Core and calories.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "Band Squat x20 + Burpee x10 + Mountain Climbers 30s: 3 rounds, 45s rest",
@@ -2357,7 +2372,8 @@
           "tempo": "Max controlled effort",
           "rest": "30s",
           "coachingFocus": "5 sets of 12. That's 60 burpees. Elite metabolic output.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2366,7 +2382,8 @@
           "tempo": "Max effort",
           "rest": "15s",
           "coachingFocus": "45s at max effort. Core and cardio. The last 10s are where fat loss happens.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "Weighted Pull-Up x6 + Band Squat x25 + Burpee x10 + Climbers 30s: 3 rounds, 90s rest",
@@ -2396,7 +2413,8 @@
           "tempo": "1-0-1-0",
           "rest": "45s",
           "coachingFocus": "High rep squat. DB at chest. Legs drive fat loss. Full depth every time.",
-          "id": "DB001"
+          "id": "DB001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777173/Goblet_Squat_c4dfsl.png"
         },
         {
           "exercise": "Dumbbell Row",
@@ -2405,7 +2423,8 @@
           "tempo": "2-1-2-0",
           "rest": "45s",
           "coachingFocus": "Back work between squat sets. Balanced training burns more total calories.",
-          "id": "DB002"
+          "id": "DB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png"
         },
         {
           "exercise": "Overhead Dumbbell Press",
@@ -2434,7 +2453,8 @@
           "tempo": "Moderate",
           "rest": "30s",
           "coachingFocus": "Cardio between strength sets. Keep the heart rate up.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Jumping Jacks",
@@ -2502,7 +2522,8 @@
           "tempo": "Max effort",
           "rest": "30s",
           "coachingFocus": "60 total burpees in this session. That is elite fat burning.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2511,7 +2532,8 @@
           "tempo": "Max effort",
           "rest": "15s",
           "coachingFocus": "Drive knees. Max effort. Last 10s are where the adaptation happens.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "DB Thruster x10 + Burpee x10 + Renegade Row x8 each + Climbers 30s: 3 rounds, 90s rest",
@@ -2541,7 +2563,8 @@
           "tempo": "2-1-2-0",
           "rest": "75s",
           "coachingFocus": "Build shoulder blade control. Foundation before full pulls.",
-          "id": "PUB001"
+          "id": "PUB001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783084714/Scapular_Pull-Up_chg8ae.png"
         },
         {
           "exercise": "Negative Pull-Up",
@@ -2569,7 +2592,8 @@
           "tempo": "Moderate effort",
           "rest": "30s",
           "coachingFocus": "Cardio on the mat. Heart rate up. Fat burn happens here.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Jumping Jacks",
@@ -2608,7 +2632,8 @@
           "tempo": "2-0-2-0",
           "rest": "45s",
           "coachingFocus": "Pulling builds muscle. Muscle burns fat. 45s rest keeps heart rate elevated.",
-          "id": "PUB004"
+          "id": "PUB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647914/Pull-Up_y2avik.png"
         },
         {
           "exercise": "Hanging Leg Raise",
@@ -2627,7 +2652,8 @@
           "tempo": "Fast",
           "rest": "30s",
           "coachingFocus": "The fat burning accelerator. Chest to floor. Explosive top.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2636,7 +2662,8 @@
           "tempo": "Max effort",
           "rest": "20s",
           "coachingFocus": "Drive knees. Max effort for the 30s. Heart rate stays high.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Push-Up",
@@ -2695,7 +2722,8 @@
           "tempo": "Max controlled",
           "rest": "30s",
           "coachingFocus": "5 sets of 12. 60 total. Elite fat-burning output.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2704,7 +2732,8 @@
           "tempo": "Max effort",
           "rest": "20s",
           "coachingFocus": "40s max effort. This is where the fat burn happens.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Push-Up",
@@ -2744,7 +2773,8 @@
           "tempo": "Moderate",
           "rest": "45s",
           "coachingFocus": "Jump rope is one of the best fat burning tools. Consistent rhythm. Light on feet.",
-          "id": "JR001"
+          "id": "JR001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782873588/Jump_Rope__hqgde2.png"
         },
         {
           "exercise": "Bodyweight Squat",
@@ -2753,7 +2783,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "Leg work amplifies calorie burn. Deep and consistent.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2762,7 +2793,8 @@
           "tempo": "Moderate effort",
           "rest": "30s",
           "coachingFocus": "Cardio on the mat. Heart rate stays up.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Jumping Jacks",
@@ -2780,7 +2812,8 @@
           "tempo": "2-2-2-0",
           "rest": "30s",
           "coachingFocus": "Posterior chain activation. Lower body fat burn begins here.",
-          "id": "HI009"
+          "id": "HI009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png"
         }
       ],
       "finisher": "Jump Rope 45s + Mountain Climbers 20s + Jumping Jacks x25: 4 rounds, 30s rest",
@@ -2810,7 +2843,8 @@
           "tempo": "High effort",
           "rest": "30s",
           "coachingFocus": "90s at high effort is a serious fat-burning interval. Push the pace.",
-          "id": "JR001"
+          "id": "JR001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782873588/Jump_Rope__hqgde2.png"
         },
         {
           "exercise": "Burpee",
@@ -2819,7 +2853,8 @@
           "tempo": "Fast",
           "rest": "30s",
           "coachingFocus": "Burpees between rope sets. Total body fat burning.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2828,7 +2863,8 @@
           "tempo": "Max effort",
           "rest": "20s",
           "coachingFocus": "Drive knees. Max effort. Cardio and core simultaneously.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Bodyweight Squat",
@@ -2837,7 +2873,8 @@
           "tempo": "1-0-1-0",
           "rest": "20s",
           "coachingFocus": "High rep squat between cardio. Legs are the biggest calorie burners.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Jumping Jacks",
@@ -2885,7 +2922,8 @@
           "tempo": "High sustained",
           "rest": "20s",
           "coachingFocus": "3 minutes at high effort with 20s rest. Elite metabolic conditioning.",
-          "id": "JR001"
+          "id": "JR001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782873588/Jump_Rope__hqgde2.png"
         },
         {
           "exercise": "Burpee",
@@ -2894,7 +2932,8 @@
           "tempo": "Max effort",
           "rest": "20s",
           "coachingFocus": "60 total burpees. The fat-burning combination with rope work is unmatched.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2903,7 +2942,8 @@
           "tempo": "Max effort",
           "rest": "15s",
           "coachingFocus": "45s at max effort on 15s rest. Advanced metabolic work.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Bodyweight Squat",
@@ -2912,7 +2952,8 @@
           "tempo": "1-0-1-0",
           "rest": "20s",
           "coachingFocus": "25 reps. Leg conditioning under fatigue. Burns serious calories.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         }
       ],
       "finisher": "Double Under x30 + Burpee x12 + Mountain Climbers 40s: 3 rounds, 90s rest",
@@ -2952,7 +2993,8 @@
           "tempo": "1-0-1-0",
           "rest": "45s",
           "coachingFocus": "Legs between rope sets. More muscle activation = more calories.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2961,7 +3003,8 @@
           "tempo": "Moderate",
           "rest": "30s",
           "coachingFocus": "Cardio on the mat. Heart rate up. Fat burning elevated.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Jumping Jacks",
@@ -2979,7 +3022,8 @@
           "tempo": "2-2-2-0",
           "rest": "30s",
           "coachingFocus": "Posterior chain activation. Supports all fat-burning work.",
-          "id": "HI009"
+          "id": "HI009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png"
         }
       ],
       "finisher": "Battle Ropes 20s + Mountain Climbers 20s + Jumping Jacks x25: 4 rounds, 30s rest",
@@ -3019,7 +3063,8 @@
           "tempo": "Fast",
           "rest": "20s",
           "coachingFocus": "Battle ropes + burpees is the gold standard fat-loss combination.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -3028,7 +3073,8 @@
           "tempo": "Max effort",
           "rest": "15s",
           "coachingFocus": "Core cardio at max intensity between rope and burpee sets.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Bodyweight Squat",
@@ -3037,7 +3083,8 @@
           "tempo": "1-0-1-0",
           "rest": "20s",
           "coachingFocus": "High-rep squat burns serious calories. Legs on fire — that's the point.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Jumping Jacks",
@@ -3086,7 +3133,8 @@
           "tempo": "Max effort",
           "rest": "15s",
           "coachingFocus": "60 total burpees alongside rope work. Maximum fat-burning combination.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -3095,7 +3143,8 @@
           "tempo": "Max effort",
           "rest": "15s",
           "coachingFocus": "45s max. Core and cardio. The last 10s is where the adaptation happens.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Bodyweight Squat",
@@ -3104,7 +3153,8 @@
           "tempo": "1-0-1-0",
           "rest": "15s",
           "coachingFocus": "25 reps on 15s rest. Legs are the biggest calorie burners.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Jumping Jacks",
@@ -3152,7 +3202,8 @@
           "tempo": "1-0-1-0",
           "rest": "45s",
           "coachingFocus": "Weighted squat burns more calories than bodyweight alone.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -3161,7 +3212,8 @@
           "tempo": "Moderate",
           "rest": "30s",
           "coachingFocus": "Cardio on the mat. Heart rate elevated.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Jumping Jacks",
@@ -3179,7 +3231,8 @@
           "tempo": "2-0-2-0",
           "rest": "45s",
           "coachingFocus": "Weighted lunge. Big muscle groups burn the most fat.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         }
       ],
       "finisher": "Vest Push-Up x8 + Squat x15 + Mountain Climbers 20s + Jumping Jacks x25: 3 rounds, 45s rest",
@@ -3209,7 +3262,8 @@
           "tempo": "Fast",
           "rest": "30s",
           "coachingFocus": "Weighted burpees. Vest adds load to every phase — push-up, jump, everything.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Weighted Push-Up",
@@ -3227,7 +3281,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "20 weighted squats burns significant calories. Legs lead fat loss.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -3236,7 +3291,8 @@
           "tempo": "Max effort",
           "rest": "20s",
           "coachingFocus": "Vest + mountain climbers is advanced cardio conditioning.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Forward Lunge",
@@ -3245,7 +3301,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "Weighted lunges. Single-leg loaded fat burning.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         }
       ],
       "finisher": "Vest Burpee x10 + Vest Push-Up x15 + Squat x20 + Mountain Climbers 30s: 3 rounds, 60s rest",
@@ -3285,7 +3342,8 @@
           "tempo": "Max effort",
           "rest": "20s",
           "coachingFocus": "60 weighted burpees. The highest calorie-per-minute exercise with a vest.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Weighted Push-Up",
@@ -3303,7 +3361,8 @@
           "tempo": "1-0-1-0",
           "rest": "20s",
           "coachingFocus": "25 loaded squats. Legs burn fat. This is the caloric base of the session.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -3312,7 +3371,8 @@
           "tempo": "Max effort",
           "rest": "15s",
           "coachingFocus": "Vest + mountain climbers. Maximum core and cardio output.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "Weighted Pull-Up x6 + Vest Burpee x10 + Vest Push-Up x15 + Mountain Climbers 40s: 3 rounds, 90s rest",
@@ -3360,7 +3420,8 @@
           "tempo": "Moderate",
           "rest": "30s",
           "coachingFocus": "Cardio between MB sets. Heart rate stays elevated.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Russian Twist",
@@ -3427,7 +3488,8 @@
           "tempo": "Fast",
           "rest": "20s",
           "coachingFocus": "Burpees between MB sets. Total body fat burn accelerated.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -3436,7 +3498,8 @@
           "tempo": "Max effort",
           "rest": "15s",
           "coachingFocus": "30s max effort. Core and cardio. The combination burns maximum calories.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Russian Twist",
@@ -3494,7 +3557,8 @@
           "tempo": "Max effort",
           "rest": "15s",
           "coachingFocus": "60 burpees paired with slams and wall balls. Highest calorie output possible.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -3503,7 +3567,8 @@
           "tempo": "Max effort",
           "rest": "10s",
           "coachingFocus": "45s max effort with 10s rest. Elite metabolic conditioning.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Russian Twist",
@@ -3561,7 +3626,8 @@
           "tempo": "Moderate",
           "rest": "30s",
           "coachingFocus": "Cardio on the mat. Heart rate elevated.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Jumping Jacks",
@@ -3628,7 +3694,8 @@
           "tempo": "Fast",
           "rest": "20s",
           "coachingFocus": "Burpees between carry sets. Total body fat burning accelerated.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -3637,7 +3704,8 @@
           "tempo": "Max effort",
           "rest": "20s",
           "coachingFocus": "Core cardio at max intensity between heavy work sets.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Sandbag Lunge",
@@ -3694,7 +3762,8 @@
           "tempo": "Max effort",
           "rest": "15s",
           "coachingFocus": "60 burpees alongside shouldering and carries. Maximum fat-burning output.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -3703,7 +3772,8 @@
           "tempo": "Max effort",
           "rest": "10s",
           "coachingFocus": "45s max effort on 10s rest. Elite metabolic conditioning.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Sandbag Lunge",

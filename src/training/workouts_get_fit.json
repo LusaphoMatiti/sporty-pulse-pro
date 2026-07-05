@@ -760,7 +760,7 @@
           "rest": "30s",
           "coachingFocus": "Rear delt and rotator cuff health. Non-negotiable.",
           "id": "PLH011",
-          "thumbnailUrl": "/exercises/thumbnails/PLH011.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777476/Face_Pull_sqthso.png",
           "videoUrl": "/exercises/videos/PLH011.mp4"
         },
         {
@@ -975,7 +975,8 @@
           "reps": "6-8 each",
           "tempo": "3-0-1-0",
           "rest": "60s between legs",
-          "coachingFocus": "Most demanding bodyweight leg exercise. Use wall for balance if needed. Control descent."
+          "coachingFocus": "Most demanding bodyweight leg exercise. Use wall for balance if needed. Control descent.",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872935/Box_Pistol_Squat_zuvbz8.png"
         },
         {
           "exercise": "Push-Up",
@@ -1715,7 +1716,8 @@
           "tempo": "2-1-1-0",
           "rest": "60s",
           "coachingFocus": "KB at chest. Deep and controlled. Builds leg fitness and positional strength.",
-          "id": "KB002"
+          "id": "KB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777173/Goblet_Squat_c4dfsl.png"
         },
         {
           "exercise": "Kettlebell Swing",
@@ -1724,7 +1726,8 @@
           "tempo": "Rhythmic",
           "rest": "60s",
           "coachingFocus": "The swing is the core of KB fitness. Hip drive. Let the bell float.",
-          "id": "KB004"
+          "id": "KB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777174/Kettlebell_Swing_rijbyf.png"
         },
         {
           "exercise": "Push-Up",
@@ -1743,7 +1746,8 @@
           "tempo": "Isometric",
           "rest": "30s",
           "coachingFocus": "Core foundation. Breathe steadily. Everything from here gets easier with this.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "KB Swing x10 + Goblet Squat x10: 3 rounds, 45s rest",
@@ -1773,7 +1777,8 @@
           "tempo": "Rhythmic",
           "rest": "45s",
           "coachingFocus": "The swing is cardio and strength in one. 20 reps is the fitness sweet spot.",
-          "id": "KB004"
+          "id": "KB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777174/Kettlebell_Swing_rijbyf.png"
         },
         {
           "exercise": "Goblet Squat",
@@ -1782,7 +1787,8 @@
           "tempo": "2-1-1-0",
           "rest": "60s",
           "coachingFocus": "Leg strength drives overall fitness. Deep and upright.",
-          "id": "KB002"
+          "id": "KB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777173/Goblet_Squat_c4dfsl.png"
         },
         {
           "exercise": "Kettlebell Press",
@@ -1809,7 +1815,8 @@
           "tempo": "High effort",
           "rest": "30s",
           "coachingFocus": "Cardio finisher on the floor. Drive knees. Keep hips level.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "KB Swing x20 + Press x8 each + Goblet Squat x12: 3 rounds, 90s rest",
@@ -1849,7 +1856,8 @@
           "tempo": "Rhythmic — max hip drive",
           "rest": "45s",
           "coachingFocus": "25 reps is a conditioning statement. Breathe on the downswing.",
-          "id": "KB004"
+          "id": "KB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777174/Kettlebell_Swing_rijbyf.png"
         },
         {
           "exercise": "Turkish Get-Up",
@@ -1876,7 +1884,8 @@
           "tempo": "Controlled fast",
           "rest": "45s",
           "coachingFocus": "KB conditioning + burpee conditioning. This is what fitness looks like.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         }
       ],
       "finisher": "KB Snatch x5 each + Swing x20 + Burpee x10: 3 rounds, 2 min rest",
@@ -1925,7 +1934,8 @@
           "tempo": "2-0-2-0",
           "rest": "45s",
           "coachingFocus": "Stand on band. Press overhead. Core braced throughout.",
-          "id": "RB002"
+          "id": "RB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777863/Band_Overhead_Press_aokkbv.png"
         },
         {
           "exercise": "Glute Bridge",
@@ -1934,7 +1944,8 @@
           "tempo": "2-2-2-0",
           "rest": "30s",
           "coachingFocus": "Band across hips. Drive up. Lower body fitness starts here.",
-          "id": "HI009"
+          "id": "HI009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -1943,7 +1954,8 @@
           "tempo": "Moderate effort",
           "rest": "30s",
           "coachingFocus": "Cardio on the floor. Manageable pace for a beginner.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Plank",
@@ -1952,7 +1964,8 @@
           "tempo": "Isometric",
           "rest": "30s",
           "coachingFocus": "Core stability is the base of all fitness. Start short, build up.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Band Squat x15 + Band Row x15: 3 rounds, 45s rest",
@@ -1982,7 +1995,8 @@
           "tempo": "2-0-2-0",
           "rest": "75s",
           "coachingFocus": "Band takes load off the bottom. Full ROM every rep. Back fitness cornerstone.",
-          "id": "RB005"
+          "id": "RB005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647906/Band-Assisted_Pull-Up_gaj5cu.png"
         },
         {
           "exercise": "Resistance Band Squat",
@@ -2020,7 +2034,8 @@
           "tempo": "High effort",
           "rest": "30s",
           "coachingFocus": "Drive knees. Cardio through the core. Hips stay level.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Pallof Press",
@@ -2099,7 +2114,8 @@
           "tempo": "Fast and controlled",
           "rest": "45s",
           "coachingFocus": "Chest to floor. Explosive jump. Athletic conditioning demands output.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Band Lat Pulldown",
@@ -2138,7 +2154,8 @@
           "tempo": "2-1-1-0",
           "rest": "60s",
           "coachingFocus": "DB at chest. Full depth. Builds leg fitness and squat mechanics together.",
-          "id": "DB001"
+          "id": "DB001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777173/Goblet_Squat_c4dfsl.png"
         },
         {
           "exercise": "Dumbbell Row",
@@ -2147,7 +2164,8 @@
           "tempo": "2-1-2-0",
           "rest": "60s",
           "coachingFocus": "Brace on knee. Pull elbow to ceiling. Back health is fitness foundation.",
-          "id": "DB002"
+          "id": "DB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png"
         },
         {
           "exercise": "Overhead Dumbbell Press",
@@ -2176,7 +2194,8 @@
           "tempo": "Moderate pace",
           "rest": "30s",
           "coachingFocus": "Cardio between strength sets. Drive knees. Hips down.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Plank",
@@ -2185,7 +2204,8 @@
           "tempo": "Isometric",
           "rest": "30s",
           "coachingFocus": "Core before everything else. Build this first.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Goblet Squat x10 + DB Row x10 each + Mountain Climbers 20s: 3 rounds, 60s rest",
@@ -2254,7 +2274,8 @@
           "tempo": "Fast and controlled",
           "rest": "45s",
           "coachingFocus": "Cardio intensity spike. Chest to floor. Explosive jump.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2263,7 +2284,8 @@
           "tempo": "High effort",
           "rest": "30s",
           "coachingFocus": "Drive knees. Core and cardio simultaneously.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "DB Thruster x10 + Burpee x8 + Mountain Climbers 30s: 3 rounds, 90s rest",
@@ -2331,7 +2353,8 @@
           "tempo": "Controlled max effort",
           "rest": "45s",
           "coachingFocus": "15 burpees is a serious fitness challenge. Consistent pace. Don't blow up early.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Dragon Flag",
@@ -2340,7 +2363,8 @@
           "tempo": "3-0-1-0",
           "rest": "60s",
           "coachingFocus": "Advanced core. Rigid body. Slow descent is where the strength is built.",
-          "id": "CO003"
+          "id": "CO003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780414696/Bird_Dog_karrdb.png"
         }
       ],
       "finisher": "DB Thruster x8 + Renegade Row x8 each + Burpee x12: 3 rounds, 2 min rest",
@@ -2370,7 +2394,8 @@
           "tempo": "2-1-2-0",
           "rest": "75s",
           "coachingFocus": "Shoulder blade control. Foundation of upper body fitness.",
-          "id": "PUB001"
+          "id": "PUB001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783084714/Scapular_Pull-Up_chg8ae.png"
         },
         {
           "exercise": "Negative Pull-Up",
@@ -2398,7 +2423,8 @@
           "tempo": "Moderate",
           "rest": "45s",
           "coachingFocus": "Cardio on the mat. Hips level. Drive knees.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Dead Bug",
@@ -2438,7 +2464,8 @@
           "tempo": "2-0-2-0",
           "rest": "60s",
           "coachingFocus": "Full ROM. Drive the elbows down. Consistent reps, not max reps.",
-          "id": "PUB004"
+          "id": "PUB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647914/Pull-Up_y2avik.png"
         },
         {
           "exercise": "Hanging Leg Raise",
@@ -2467,7 +2494,8 @@
           "tempo": "High effort",
           "rest": "30s",
           "coachingFocus": "Cardio between bar work. Drive knees. Hips level.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Burpee",
@@ -2476,7 +2504,8 @@
           "tempo": "Controlled fast",
           "rest": "45s",
           "coachingFocus": "Full body cardio finisher. Chest to floor. Explosive jump.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         }
       ],
       "finisher": "Pull-Up x5 + Push-Up x10 + Mountain Climbers 30s: 4 rounds, 60s rest",
@@ -2534,7 +2563,8 @@
           "tempo": "Max effort",
           "rest": "30s",
           "coachingFocus": "Full effort. This is where performance fitness is built.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "L-Sit",
@@ -2543,7 +2573,8 @@
           "tempo": "Isometric",
           "rest": "45s",
           "coachingFocus": "Compression strength. Arms locked. Legs parallel. Hold it.",
-          "id": "PUB011"
+          "id": "PUB011",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783084710/L-Sit_hhj2ii.png"
         }
       ],
       "finisher": "Chest-to-Bar x5 + Toes-to-Bar x8 + Burpee x10: 3 rounds, 90s rest",
@@ -2573,7 +2604,8 @@
           "tempo": "Easy-moderate",
           "rest": "60s",
           "coachingFocus": "Find your rhythm. Light on feet. This is where fitness starts.",
-          "id": "JR001"
+          "id": "JR001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782873588/Jump_Rope__hqgde2.png"
         },
         {
           "exercise": "Bodyweight Squat",
@@ -2582,7 +2614,8 @@
           "tempo": "2-1-1-0",
           "rest": "45s",
           "coachingFocus": "Leg strength between rope sets. Full depth. Drive through the heels.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Push-Up",
@@ -2601,7 +2634,8 @@
           "tempo": "Isometric",
           "rest": "30s",
           "coachingFocus": "Core stability. Everything from here gets better with a strong core.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         },
         {
           "exercise": "Jumping Jacks",
@@ -2640,7 +2674,8 @@
           "tempo": "Moderate-high",
           "rest": "30s",
           "coachingFocus": "2 minutes per set. Consistent rhythm. This is your aerobic engine.",
-          "id": "JR001"
+          "id": "JR001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782873588/Jump_Rope__hqgde2.png"
         },
         {
           "exercise": "Bodyweight Squat",
@@ -2649,7 +2684,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "High rep squat between rope sets. Leg conditioning.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Push-Up",
@@ -2668,7 +2704,8 @@
           "tempo": "High effort",
           "rest": "20s",
           "coachingFocus": "Core cardio between rope and strength. Drive knees. Hips level.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Forward Lunge",
@@ -2677,7 +2714,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "Single leg strength and balance. Keeps legs strong for rope work.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         }
       ],
       "finisher": "Jump Rope 2 min + Squat x20 + Push-Up x15 + Mountain Climbers 30s: 3 rounds, 60s rest",
@@ -2716,7 +2754,8 @@
           "tempo": "High",
           "rest": "30s",
           "coachingFocus": "3-minute sets are elite. Maintain posture and rhythm the entire time.",
-          "id": "JR001"
+          "id": "JR001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782873588/Jump_Rope__hqgde2.png"
         },
         {
           "exercise": "Burpee",
@@ -2725,7 +2764,8 @@
           "tempo": "Fast",
           "rest": "30s",
           "coachingFocus": "Explosive full body work between rope sets. Total performance output.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2734,7 +2774,8 @@
           "tempo": "Max effort",
           "rest": "20s",
           "coachingFocus": "40s max effort. Core and cardio. The last 10s is what builds fitness.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Forward Lunge",
@@ -2743,7 +2784,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "Single-leg endurance under fatigue. Performance athletes have strong legs.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         }
       ],
       "finisher": "Double Under x30 + Burpee x12 + Mountain Climbers 40s: 3 rounds, 90s rest",
@@ -2783,7 +2825,8 @@
           "tempo": "2-1-1-0",
           "rest": "45s",
           "coachingFocus": "Leg conditioning between rope sets. Full depth.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Push-Up",
@@ -2802,7 +2845,8 @@
           "tempo": "Moderate",
           "rest": "30s",
           "coachingFocus": "Cardio on the mat. Keep the heart rate up.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Plank",
@@ -2811,7 +2855,8 @@
           "tempo": "Isometric",
           "rest": "30s",
           "coachingFocus": "Core stability. The foundation of all fitness.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Battle Ropes 20s + Mountain Climbers 20s: 4 rounds, 45s rest",
@@ -2851,7 +2896,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "High rep squat. Legs burning. That's the fitness building.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Push-Up",
@@ -2870,7 +2916,8 @@
           "tempo": "High effort",
           "rest": "20s",
           "coachingFocus": "Core cardio. Drive knees. Total fitness.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Forward Lunge",
@@ -2879,7 +2926,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "Single-leg conditioning. Balance and lower body fitness.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         }
       ],
       "finisher": "Battle Ropes 30s + Push-Up x15 + Mountain Climbers 30s + Squat x20: 3 rounds, 60s rest",
@@ -2919,7 +2967,8 @@
           "tempo": "Fast controlled",
           "rest": "20s",
           "coachingFocus": "Full body explosive work between rope sets. Performance output.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Push-Up",
@@ -2938,7 +2987,8 @@
           "tempo": "Max effort",
           "rest": "15s",
           "coachingFocus": "Core and cardio at max intensity. Advanced performance conditioning.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Forward Lunge",
@@ -2947,7 +2997,8 @@
           "tempo": "1-0-1-0",
           "rest": "20s",
           "coachingFocus": "High-rep lunges between all the other work. Leg endurance under full body fatigue.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         }
       ],
       "finisher": "Battle Ropes 45s + Burpee x10 + Mountain Climbers 40s + Push-Up x15: 3 rounds, 90s rest",
@@ -2986,7 +3037,8 @@
           "tempo": "2-1-1-0",
           "rest": "60s",
           "coachingFocus": "Loaded squat builds leg fitness. Drive through both feet.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Forward Lunge",
@@ -2995,7 +3047,8 @@
           "tempo": "2-0-2-0",
           "rest": "60s",
           "coachingFocus": "Weighted lunge. Single-leg balance and fitness.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -3004,7 +3057,8 @@
           "tempo": "Moderate",
           "rest": "45s",
           "coachingFocus": "Cardio on the mat. Hips level. Keep breathing.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Plank",
@@ -3013,7 +3067,8 @@
           "tempo": "Isometric",
           "rest": "30s",
           "coachingFocus": "Vest makes the plank harder. Core works harder. Fitness improves faster.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Weighted Push-Up x8 + Squat x15 + Mountain Climbers 20s: 3 rounds, 60s rest",
@@ -3062,7 +3117,8 @@
           "tempo": "1-0-1-0",
           "rest": "45s",
           "coachingFocus": "High-rep loaded squat. Leg fitness drives overall conditioning.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -3071,7 +3127,8 @@
           "tempo": "High effort",
           "rest": "30s",
           "coachingFocus": "Core cardio. Vest adds weight. More output per second.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Burpee",
@@ -3080,7 +3137,8 @@
           "tempo": "Controlled fast",
           "rest": "45s",
           "coachingFocus": "Weighted burpees. Full body fitness. Harder than they look with a vest.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         }
       ],
       "finisher": "Weighted Pull-Up x5 + Vest Push-Up x12 + Squat x20 + Mountain Climbers 30s: 3 rounds, 75s rest",
@@ -3129,7 +3187,8 @@
           "tempo": "Fast controlled",
           "rest": "30s",
           "coachingFocus": "Weighted burpees are next-level conditioning.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Bodyweight Squat",
@@ -3138,7 +3197,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "25 loaded squats under fatigue. Leg endurance for athletic performance.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -3147,7 +3207,8 @@
           "tempo": "Max effort",
           "rest": "20s",
           "coachingFocus": "Vest + mountain climbers. Core and cardio at maximum demand.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "Weighted Pull-Up x6 + Vest Push-Up x15 + Burpee x10 + Mountain Climbers 40s: 3 rounds, 90s rest",
@@ -3215,7 +3276,8 @@
           "tempo": "Moderate",
           "rest": "30s",
           "coachingFocus": "Cardio between MB work. Heart rate up. Hips level.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "MB Slam x8 + Wall Ball x10 + Mountain Climbers 20s: 3 rounds, 60s rest",
@@ -3273,7 +3335,8 @@
           "tempo": "High effort",
           "rest": "20s",
           "coachingFocus": "Cardio between MB sets. Drive knees. Hips level.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Burpee",
@@ -3282,7 +3345,8 @@
           "tempo": "Fast",
           "rest": "30s",
           "coachingFocus": "Full body fitness between MB sets. Total conditioning output.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         }
       ],
       "finisher": "MB Slam x10 + Wall Ball x15 + Mountain Climbers 30s + Burpee x8: 3 rounds, 75s rest",
@@ -3330,7 +3394,8 @@
           "tempo": "Max effort",
           "rest": "20s",
           "coachingFocus": "60 burpees alongside wall balls. Elite performance conditioning.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Russian Twist",
@@ -3349,7 +3414,8 @@
           "tempo": "Max effort",
           "rest": "15s",
           "coachingFocus": "45s max. Core and cardio. Performance conditioning demands total output.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "MB Slam x15 + Wall Ball x20 + Burpee x10 + Mountain Climbers 40s: 3 rounds, 90s rest",
@@ -3407,7 +3473,8 @@
           "tempo": "Moderate",
           "rest": "30s",
           "coachingFocus": "Cardio between carries and lunges. Heart rate stays elevated.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Plank",
@@ -3416,7 +3483,8 @@
           "tempo": "Isometric",
           "rest": "30s",
           "coachingFocus": "Core stability. The foundation of all sandbag fitness.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Bear Hug Carry 15m + Mountain Climbers 20s: 4 rounds, 45s rest",
@@ -3474,7 +3542,8 @@
           "tempo": "High effort",
           "rest": "30s",
           "coachingFocus": "Cardio between carries. Heart rate stays high.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         },
         {
           "exercise": "Burpee",
@@ -3483,7 +3552,8 @@
           "tempo": "Fast",
           "rest": "30s",
           "coachingFocus": "Full body conditioning between carry and squat work.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         }
       ],
       "finisher": "Shouldering x5 each + Zercher Squat x8 + Carry 20m + Mountain Climbers 30s: 3 rounds, 75s rest",
@@ -3541,7 +3611,8 @@
           "tempo": "Fast",
           "rest": "30s",
           "coachingFocus": "Conditioning between strength sets. Total body performance output.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -3550,7 +3621,8 @@
           "tempo": "Max effort",
           "rest": "20s",
           "coachingFocus": "Core and cardio at max intensity. Performance conditioning staple.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "Shouldering x6 each + Zercher Squat x8 + Husafell Carry 30m + Burpee x10: 3 rounds, 90s rest",

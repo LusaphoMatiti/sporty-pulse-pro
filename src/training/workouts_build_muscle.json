@@ -78,7 +78,7 @@
           "rest": "45s",
           "coachingFocus": "Rope to face height. Elbows high and wide. External rotate hard at the end. Shoulder health non-negotiable.",
           "id": "PLH011",
-          "thumbnailUrl": "/exercises/thumbnails/PLH011.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777476/Face_Pull_sqthso.png",
           "videoUrl": "/exercises/videos/PLH011.mp4"
         }
       ],
@@ -578,7 +578,7 @@
           "rest": "60s",
           "coachingFocus": "Cables from low position, arc up and together. Constant tension — peak contraction focus.",
           "id": "PHH016",
-          "thumbnailUrl": "/exercises/thumbnails/PHH016.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647910/Cable_Fly_kkhhjd.png",
           "videoUrl": "/exercises/videos/PHH016.mp4"
         },
         {
@@ -676,7 +676,7 @@
           "rest": "45s",
           "coachingFocus": "Rear delt health. Elbows high and wide. External rotate hard.",
           "id": "PLH011",
-          "thumbnailUrl": "/exercises/thumbnails/PLH011.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777476/Face_Pull_sqthso.png",
           "videoUrl": "/exercises/videos/PLH011.mp4"
         },
         {
@@ -828,7 +828,7 @@
           "rest": "45s",
           "coachingFocus": "Rope at face height. Elbows high. External rotate hard. Never skip these.",
           "id": "PLH011",
-          "thumbnailUrl": "/exercises/thumbnails/PLH011.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777476/Face_Pull_sqthso.png",
           "videoUrl": "/exercises/videos/PLH011.mp4"
         },
         {
@@ -1198,7 +1198,7 @@
           "rest": "30s",
           "coachingFocus": "Rear delt health and volume. High rep, light weight. Do them every push session.",
           "id": "PLH011",
-          "thumbnailUrl": "/exercises/thumbnails/PLH011.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777476/Face_Pull_sqthso.png",
           "videoUrl": "/exercises/videos/PLH011.mp4"
         },
         {
@@ -1557,7 +1557,7 @@
           "rest": "45s",
           "coachingFocus": "Rotator cuff and rear delt health. External rotate hard. Elbows high.",
           "id": "PLH011",
-          "thumbnailUrl": "/exercises/thumbnails/PLH011.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777476/Face_Pull_sqthso.png",
           "videoUrl": "/exercises/videos/PLH011.mp4"
         }
       ],
@@ -1597,7 +1597,8 @@
           "tempo": "3-1-1-0",
           "rest": "75s",
           "coachingFocus": "KB at chest. Sit deep. Knees track toes.",
-          "id": "KB002"
+          "id": "KB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777173/Goblet_Squat_c4dfsl.png"
         },
         {
           "exercise": "Kettlebell Press",
@@ -1615,7 +1616,8 @@
           "tempo": "Rhythmic",
           "rest": "60s",
           "coachingFocus": "Hip hinge powers the swing — not the arms. Explosive snap.",
-          "id": "KB004"
+          "id": "KB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777174/Kettlebell_Swing_rijbyf.png"
         },
         {
           "exercise": "Plank",
@@ -1624,7 +1626,8 @@
           "tempo": "Isometric",
           "rest": "45s",
           "coachingFocus": "Ribs down. Glutes on. Build core stability that supports all lifting.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Goblet Squat x10 + Kettlebell Swing x10: 3 rounds, 60s rest",
@@ -1654,7 +1657,8 @@
           "tempo": "Rhythmic",
           "rest": "60s",
           "coachingFocus": "Hip snap. Horizontal force. 20 reps builds serious posterior chain endurance.",
-          "id": "KB004"
+          "id": "KB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777174/Kettlebell_Swing_rijbyf.png"
         },
         {
           "exercise": "Goblet Squat",
@@ -1663,7 +1667,8 @@
           "tempo": "3-1-1-0",
           "rest": "75s",
           "coachingFocus": "Heavy goblet squat is a legitimate quad builder. Go deep every rep.",
-          "id": "KB002"
+          "id": "KB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777173/Goblet_Squat_c4dfsl.png"
         },
         {
           "exercise": "Kettlebell Press",
@@ -1699,7 +1704,8 @@
           "tempo": "Isometric",
           "rest": "30s",
           "coachingFocus": "Lateral core strength. Hips stay stacked. Don't let them drop.",
-          "id": "CO002"
+          "id": "CO002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Dead_bug_xzgwjd.png"
         }
       ],
       "finisher": "KB Swing x15 + Goblet Squat x10 + Press x5 each: 3 rounds, 90s rest",
@@ -1748,7 +1754,8 @@
           "tempo": "Rhythmic — explosive",
           "rest": "45s",
           "coachingFocus": "25 reps at a heavy load. This is conditioning and strength simultaneously.",
-          "id": "KB004"
+          "id": "KB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777174/Kettlebell_Swing_rijbyf.png"
         },
         {
           "exercise": "Kettlebell Press",
@@ -1775,7 +1782,8 @@
           "tempo": "3-0-1-0",
           "rest": "60s",
           "coachingFocus": "Advanced core. Rigid body from shoulders to feet. Slow descent.",
-          "id": "CO003"
+          "id": "CO003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780414696/Bird_Dog_karrdb.png"
         }
       ],
       "finisher": "KB Snatch x5 each + Press x5 each + Swing x20: 3 rounds, 2 min rest",
@@ -1814,7 +1822,8 @@
           "tempo": "2-0-2-0",
           "rest": "60s",
           "coachingFocus": "Stand on band. Press straight overhead. Core braced throughout.",
-          "id": "RB002"
+          "id": "RB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777863/Band_Overhead_Press_aokkbv.png"
         },
         {
           "exercise": "Resistance Band Row",
@@ -1833,7 +1842,8 @@
           "tempo": "2-1-2-0",
           "rest": "45s",
           "coachingFocus": "Arms straight. Pull through full range. Rear delts and upper back health.",
-          "id": "RB004"
+          "id": "RB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777097/Band_Pull_Apart_h8qfok.png"
         },
         {
           "exercise": "Glute Bridge",
@@ -1842,7 +1852,8 @@
           "tempo": "2-2-2-0",
           "rest": "45s",
           "coachingFocus": "Band across hips adds glute resistance at the top. Squeeze hard.",
-          "id": "HI009"
+          "id": "HI009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png"
         },
         {
           "exercise": "Plank",
@@ -1851,7 +1862,8 @@
           "tempo": "Isometric",
           "rest": "30s",
           "coachingFocus": "Core foundation. Build this before anything else.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Band Row x15 + Band Squat x15: 3 rounds, 45s rest",
@@ -1881,7 +1893,8 @@
           "tempo": "3-0-2-0",
           "rest": "90s",
           "coachingFocus": "Band reduces load. Full dead hang. Chin over bar every rep.",
-          "id": "RB005"
+          "id": "RB005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647906/Band-Assisted_Pull-Up_gaj5cu.png"
         },
         {
           "exercise": "Band Push-Up",
@@ -1909,7 +1922,8 @@
           "tempo": "2-0-2-0",
           "rest": "60s",
           "coachingFocus": "Standing. Full overhead lockout. Triceps finish the rep.",
-          "id": "RB002"
+          "id": "RB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777863/Band_Overhead_Press_aokkbv.png"
         },
         {
           "exercise": "Resistance Band Row",
@@ -1998,7 +2012,8 @@
           "tempo": "2-1-2-0",
           "rest": "60s",
           "coachingFocus": "Single arm standing press with band. Full lockout. Core fights the rotation.",
-          "id": "RB002"
+          "id": "RB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777863/Band_Overhead_Press_aokkbv.png"
         },
         {
           "exercise": "Dragon Flag",
@@ -2007,7 +2022,8 @@
           "tempo": "3-0-1-0",
           "rest": "60s",
           "coachingFocus": "Advanced core control. Rigid body. Slow descent is where the work happens.",
-          "id": "CO003"
+          "id": "CO003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780414696/Bird_Dog_karrdb.png"
         }
       ],
       "finisher": "Weighted Push-Up x15 + Band Row x20 + Pull-Up x8: 3 rounds, 90s rest",
@@ -2037,7 +2053,8 @@
           "tempo": "3-1-1-0",
           "rest": "75s",
           "coachingFocus": "DB at chest. Go deep. This is your squat teacher.",
-          "id": "DB001"
+          "id": "DB001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777173/Goblet_Squat_c4dfsl.png"
         },
         {
           "exercise": "Dumbbell Row",
@@ -2046,7 +2063,8 @@
           "tempo": "2-1-2-0",
           "rest": "60s",
           "coachingFocus": "Brace on your knee. Elbow to ceiling. Squeeze the back at the top.",
-          "id": "DB002"
+          "id": "DB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png"
         },
         {
           "exercise": "Overhead Dumbbell Press",
@@ -2075,7 +2093,8 @@
           "tempo": "2-2-2-0",
           "rest": "45s",
           "coachingFocus": "DB on hips. Drive up. Squeeze hard at the top.",
-          "id": "HI009"
+          "id": "HI009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png"
         },
         {
           "exercise": "Plank",
@@ -2084,7 +2103,8 @@
           "tempo": "Isometric",
           "rest": "30s",
           "coachingFocus": "Core on. Everything tight. Build this now.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Goblet Squat x10 + DB Row x10 each: 3 rounds, 60s rest",
@@ -2143,7 +2163,8 @@
           "tempo": "3-1-1-0",
           "rest": "90s",
           "coachingFocus": "Floor press if no bench. Full stretch at the bottom. Explosive up.",
-          "id": "DB007"
+          "id": "DB007",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647870/Dumbbell_Bench_Press_yimj7r.png"
         },
         {
           "exercise": "Dumbbell Squat",
@@ -2192,7 +2213,8 @@
           "tempo": "2-1-2-0",
           "rest": "90s",
           "coachingFocus": "Retract and depress shoulder blades. Foundation of every pull-up. No arm bend yet.",
-          "id": "PUB001"
+          "id": "PUB001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783084714/Scapular_Pull-Up_chg8ae.png"
         },
         {
           "exercise": "Negative Pull-Up",
@@ -2210,7 +2232,8 @@
           "tempo": "2-0-2-0",
           "rest": "90s",
           "coachingFocus": "Supinated grip is easier. Full dead hang bottom. Chin clears bar at top.",
-          "id": "PUB003"
+          "id": "PUB003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647911/Chin-Up_xubyhx.png"
         },
         {
           "exercise": "Push-Up",
@@ -2260,7 +2283,8 @@
           "tempo": "3-0-2-0",
           "rest": "90s",
           "coachingFocus": "Full dead hang. Drive elbows to hips. Chest to bar is the goal.",
-          "id": "PUB004"
+          "id": "PUB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647914/Pull-Up_y2avik.png"
         },
         {
           "exercise": "Chin-Up",
@@ -2269,7 +2293,8 @@
           "tempo": "2-0-2-0",
           "rest": "75s",
           "coachingFocus": "Supinated grip hits biceps harder. Alternate with pull-ups for complete back development.",
-          "id": "PUB003"
+          "id": "PUB003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647911/Chin-Up_xubyhx.png"
         },
         {
           "exercise": "Neutral Grip Pull-Up",
@@ -2278,7 +2303,8 @@
           "tempo": "3-0-2-0",
           "rest": "75s",
           "coachingFocus": "Neutral grip is joint-friendly. Different lat angle than standard grip.",
-          "id": "PUB005"
+          "id": "PUB005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647914/Neutral_Grip_Pull-Up_vairgz.png"
         },
         {
           "exercise": "Hanging Leg Raise",
@@ -2365,7 +2391,8 @@
           "tempo": "Isometric",
           "rest": "60s",
           "coachingFocus": "Legs parallel to ground. Arms locked. Compression strength builds here.",
-          "id": "PUB011"
+          "id": "PUB011",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783084710/L-Sit_hhj2ii.png"
         }
       ],
       "finisher": "Weighted Pull-Up x3 + Chest-to-Bar x5 + Archer x3 each: 3 rounds, 2 min rest",
@@ -2395,7 +2422,8 @@
           "tempo": "Moderate",
           "rest": "60s",
           "coachingFocus": "Consistent rhythm. Light on feet. Builds calf and shoulder endurance.",
-          "id": "JR001"
+          "id": "JR001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782873588/Jump_Rope__hqgde2.png"
         },
         {
           "exercise": "Push-Up",
@@ -2414,7 +2442,8 @@
           "tempo": "2-1-1-0",
           "rest": "60s",
           "coachingFocus": "Leg strength supports calves and feet under jump rope load.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Forward Lunge",
@@ -2423,7 +2452,8 @@
           "tempo": "2-0-2-0",
           "rest": "60s",
           "coachingFocus": "Single-leg strength. Builds balance and stability for rope work.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         },
         {
           "exercise": "Plank",
@@ -2432,7 +2462,8 @@
           "tempo": "Isometric",
           "rest": "45s",
           "coachingFocus": "Core stability. Build this before everything else.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Jump Rope 60s + Push-Up x10: 3 rounds, 60s rest",
@@ -2462,7 +2493,8 @@
           "tempo": "Moderate-high",
           "rest": "30s",
           "coachingFocus": "90s continuous at a challenging pace. Calves, shoulders, and cardio.",
-          "id": "JR001"
+          "id": "JR001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782873588/Jump_Rope__hqgde2.png"
         },
         {
           "exercise": "Push-Up",
@@ -2481,7 +2513,8 @@
           "tempo": "2-0-2-0",
           "rest": "60s",
           "coachingFocus": "Single-leg stability. Step long, knee doesn't pass toes.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         },
         {
           "exercise": "Bodyweight Squat",
@@ -2490,7 +2523,8 @@
           "tempo": "1-0-1-0",
           "rest": "45s",
           "coachingFocus": "High-rep squat builds leg endurance that complements rope work.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2499,7 +2533,8 @@
           "tempo": "High effort",
           "rest": "30s",
           "coachingFocus": "Core conditioning between sets. Drive knees.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "Jump Rope 2 min + Push-Up x15 + Squat x20: 3 rounds, 60s rest",
@@ -2538,7 +2573,8 @@
           "tempo": "High intensity",
           "rest": "30s",
           "coachingFocus": "3 minutes is an elite rope standard. Maintain rhythm and posture throughout.",
-          "id": "JR001"
+          "id": "JR001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782873588/Jump_Rope__hqgde2.png"
         },
         {
           "exercise": "Push-Up",
@@ -2557,7 +2593,8 @@
           "tempo": "Controlled fast",
           "rest": "30s",
           "coachingFocus": "Full body power output. Chest to floor. Explosive jump.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Forward Lunge",
@@ -2566,7 +2603,8 @@
           "tempo": "1-0-1-0",
           "rest": "45s",
           "coachingFocus": "High-rep lunges build single-leg power and endurance under fatigue.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         }
       ],
       "finisher": "Double Under x30 + Burpee x10 + Push-Up x15: 3 rounds, 90s rest",
@@ -2616,7 +2654,8 @@
           "tempo": "2-1-1-0",
           "rest": "60s",
           "coachingFocus": "Leg strength anchors you during rope work. Deep and controlled.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Glute Bridge",
@@ -2625,7 +2664,8 @@
           "tempo": "2-2-2-0",
           "rest": "60s",
           "coachingFocus": "Posterior chain activation. Glutes support all standing rope movements.",
-          "id": "HI009"
+          "id": "HI009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png"
         },
         {
           "exercise": "Plank",
@@ -2634,7 +2674,8 @@
           "tempo": "Isometric",
           "rest": "45s",
           "coachingFocus": "Core braced. Battle rope work requires significant core stability.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Battle Ropes 20s + Push-Up x10: 4 rounds, 60s rest",
@@ -2684,7 +2725,8 @@
           "tempo": "1-0-1-0",
           "rest": "45s",
           "coachingFocus": "High-rep squat builds lower body strength that supports rope output.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Forward Lunge",
@@ -2693,7 +2735,8 @@
           "tempo": "2-0-2-0",
           "rest": "60s",
           "coachingFocus": "Single-leg strength. Builds the base for max rope intensity.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         },
         {
           "exercise": "Plank",
@@ -2702,7 +2745,8 @@
           "tempo": "Isometric",
           "rest": "30s",
           "coachingFocus": "Core endurance. Battle ropes demand sustained core bracing every set.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Battle Ropes 30s + Push-Up x15 + Squat x20: 3 rounds, 75s rest",
@@ -2752,7 +2796,8 @@
           "tempo": "Controlled fast",
           "rest": "30s",
           "coachingFocus": "Full body power between rope sets. Total system conditioning.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Forward Lunge",
@@ -2761,7 +2806,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "High-rep lunges under fatigue. Single-leg power.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -2770,7 +2816,8 @@
           "tempo": "Max effort",
           "rest": "20s",
           "coachingFocus": "Core and cardio between rope and lunge sets.",
-          "id": "CD002"
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png"
         }
       ],
       "finisher": "Battle Ropes 45s + Burpee x10 + Mountain Climbers 30s: 3 rounds, 90s rest",
@@ -2809,7 +2856,8 @@
           "tempo": "3-1-1-0",
           "rest": "90s",
           "coachingFocus": "Vest turns a bodyweight squat into a loaded squat. Full depth. Slow eccentric.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Forward Lunge",
@@ -2818,7 +2866,8 @@
           "tempo": "2-0-2-0",
           "rest": "75s",
           "coachingFocus": "Weighted lunges. Single-leg loading builds unilateral leg strength.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         },
         {
           "exercise": "Pull-Up",
@@ -2827,7 +2876,8 @@
           "tempo": "3-0-2-0",
           "rest": "90s",
           "coachingFocus": "Remove vest if needed. Full dead hang. Vest adds load as you get stronger.",
-          "id": "PUB004"
+          "id": "PUB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647914/Pull-Up_y2avik.png"
         },
         {
           "exercise": "Dead Bug",
@@ -2886,7 +2936,8 @@
           "tempo": "3-1-1-0",
           "rest": "75s",
           "coachingFocus": "Loaded squat. Vest adds extra resistance. Quad and glute hypertrophy.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Forward Lunge",
@@ -2895,7 +2946,8 @@
           "tempo": "2-0-2-0",
           "rest": "75s",
           "coachingFocus": "Weighted lunge. Single-leg loading. Glute and quad development.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         },
         {
           "exercise": "Plank",
@@ -2904,7 +2956,8 @@
           "tempo": "Isometric",
           "rest": "30s",
           "coachingFocus": "Weighted plank. Vest increases core demand significantly.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Weighted Pull-Up x5 + Weighted Push-Up x10 + Squat x20: 3 rounds, 90s rest",
@@ -2953,7 +3006,8 @@
           "tempo": "3-1-1-0",
           "rest": "75s",
           "coachingFocus": "20 reps with maximum vest load. Posterior chain and quad development.",
-          "id": "SQ001"
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png"
         },
         {
           "exercise": "Forward Lunge",
@@ -2962,7 +3016,8 @@
           "tempo": "2-0-2-0",
           "rest": "75s",
           "coachingFocus": "Heavy weighted lunges. Single-leg loaded strength at the advanced level.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         },
         {
           "exercise": "Plank",
@@ -2971,7 +3026,8 @@
           "tempo": "Isometric",
           "rest": "30s",
           "coachingFocus": "60s weighted plank. Core under maximal load.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Weighted Pull-Up x5 + Weighted Push-Up x10 + Lunge x12 each: 4 rounds, 90s rest",
@@ -3039,7 +3095,8 @@
           "tempo": "Isometric",
           "rest": "45s",
           "coachingFocus": "Core stability. Supports all medicine ball loading and rotation.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Medicine Ball Slam x10 + Russian Twist x20: 3 rounds, 60s rest",
@@ -3107,7 +3164,8 @@
           "tempo": "2-0-2-0",
           "rest": "60s",
           "coachingFocus": "Weighted lunge holding MB at chest. Single-leg strength and balance.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         }
       ],
       "finisher": "MB Slam x10 + Wall Ball x15 + Russian Twist x20: 3 rounds, 75s rest",
@@ -3165,7 +3223,8 @@
           "tempo": "Controlled fast",
           "rest": "30s",
           "coachingFocus": "Power output between MB sets. Total body conditioning.",
-          "id": "CD001"
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png"
         },
         {
           "exercise": "Forward Lunge",
@@ -3174,7 +3233,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "Heavy MB held at chest. Single-leg loaded strength at advanced level.",
-          "id": "LG001"
+          "id": "LG001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872543/Forward_Lunge_zkjsps.png"
         }
       ],
       "finisher": "MB Slam x15 + Wall Ball x20 + Burpee x10 + Russian Twist x20: 3 rounds, 90s rest",
@@ -3242,7 +3302,8 @@
           "tempo": "Isometric",
           "rest": "45s",
           "coachingFocus": "Core stability for all sandbag movements. Build the brace first.",
-          "id": "CO001"
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png"
         }
       ],
       "finisher": "Bear Hug Carry 20m + Zercher Squat x8: 3 rounds, 90s rest",

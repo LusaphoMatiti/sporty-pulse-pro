@@ -489,7 +489,7 @@ model UserEquipment {
   id             String          @id @default(uuid())
   source         EquipmentSource
   addedAt        DateTime        @default(now())
-  trialExpiresAt DateTime? // only set when source = DECLARED
+  trialExpiresAt DateTime? // Only declared when source = Declared
 
   userId String
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
