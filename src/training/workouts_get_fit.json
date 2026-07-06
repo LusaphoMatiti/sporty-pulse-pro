@@ -337,7 +337,8 @@
           "reps": "20s sprint",
           "tempo": "Max effort",
           "rest": "40s",
-          "coachingFocus": "Upright posture. Arm drive. Max effort every sprint."
+          "coachingFocus": "Upright posture. Arm drive. Max effort every sprint.",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783376333/Sprint_Interval_wfkagn.png"
         }
       ],
       "finisher": "Assault Bike: 5 x 10s all-out sprint / 50s rest",
@@ -684,7 +685,7 @@
           "rest": "45s between arms",
           "coachingFocus": "Tall posture. Don't lean into the load. Core fights the weight laterally.",
           "id": "CA002",
-          "thumbnailUrl": "/exercises/thumbnails/CA002.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296849/Suitcase_Carry_vebfcs.png",
           "videoUrl": "/exercises/videos/CA002.mp4"
         }
       ],
@@ -945,7 +946,7 @@
           "rest": "45s",
           "coachingFocus": "Jump higher than single under. Wrists spin fast. Stay relaxed in the shoulders.",
           "id": "CD018",
-          "thumbnailUrl": "/exercises/thumbnails/CD018.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306480/Double_Under_ojdppd.png",
           "videoUrl": "/exercises/videos/CD018.mp4"
         }
       ],
@@ -1060,7 +1061,8 @@
           "reps": "30s sprint",
           "tempo": "Max effort",
           "rest": "90s walk",
-          "coachingFocus": "True max effort. Upright posture. Arm drive. Each sprint should feel like you couldn't possibly go harder."
+          "coachingFocus": "True max effort. Upright posture. Arm drive. Each sprint should feel like you couldn't possibly go harder.",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783376333/Sprint_Interval_wfkagn.png"
         },
         {
           "exercise": "Barbell Back Squat",
@@ -1427,7 +1429,8 @@
           "reps": "15s sprint",
           "tempo": "Maximal",
           "rest": "75s walk",
-          "coachingFocus": "Short, maximal sprints. Anaerobic power. Every sprint full effort."
+          "coachingFocus": "Short, maximal sprints. Anaerobic power. Every sprint full effort.",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783376333/Sprint_Interval_wfkagn.png"
         },
         {
           "exercise": "Barbell Bent-Over Row",
@@ -1556,7 +1559,7 @@
           "rest": "60s between sides",
           "coachingFocus": "Eyes on the weight throughout. Master each position before moving through it.",
           "id": "CD014",
-          "thumbnailUrl": "/exercises/thumbnails/CD014.jpg",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296853/Turkish_Get-Up_juuidt.png",
           "videoUrl": "/exercises/videos/CD014.mp4"
         },
         {
@@ -1707,7 +1710,8 @@
           "tempo": "2-1-1-0",
           "rest": "60s",
           "coachingFocus": "Learn the hinge. This is the foundation of all KB fitness work.",
-          "id": "KB001"
+          "id": "KB001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296824/Kettlebell_Deadlift_qsygzl.png"
         },
         {
           "exercise": "Goblet Squat",
@@ -1797,7 +1801,8 @@
           "tempo": "2-0-2-0",
           "rest": "60s",
           "coachingFocus": "Single arm overhead. Core fights the rotation. Shoulder fitness.",
-          "id": "KB003"
+          "id": "KB003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296827/Kettlebell_Press_bq5ssy.png"
         },
         {
           "exercise": "Turkish Get-Up",
@@ -1806,7 +1811,8 @@
           "tempo": "Deliberate",
           "rest": "90s",
           "coachingFocus": "Full-body coordination and mobility. Eyes on the bell always.",
-          "id": "KB005"
+          "id": "KB005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296853/Turkish_Get-Up_juuidt.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -1866,7 +1872,8 @@
           "tempo": "Controlled",
           "rest": "90s",
           "coachingFocus": "Loaded get-ups at this level are a genuine strength and mobility test.",
-          "id": "KB005"
+          "id": "KB005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296853/Turkish_Get-Up_juuidt.png"
         },
         {
           "exercise": "Kettlebell Press",
@@ -1875,7 +1882,8 @@
           "tempo": "2-1-2-0",
           "rest": "60s",
           "coachingFocus": "Strict single arm. No lean. Full lockout. Shoulder strength drives everything overhead.",
-          "id": "KB003"
+          "id": "KB003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296827/Kettlebell_Press_bq5ssy.png"
         },
         {
           "exercise": "Burpee",
@@ -1915,7 +1923,8 @@
           "tempo": "2-1-1-0",
           "rest": "45s",
           "coachingFocus": "Band adds resistance at lockout. Squat for fitness — controlled but purposeful.",
-          "id": "RB001"
+          "id": "RB001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301884/Resistance_Band_Squat_yp0vyq.png"
         },
         {
           "exercise": "Resistance Band Row",
@@ -2005,7 +2014,8 @@
           "tempo": "1-0-1-0",
           "rest": "45s",
           "coachingFocus": "High rep band squat. Continuous tension. Legs are burning — that's the point.",
-          "id": "RB001"
+          "id": "RB001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301884/Resistance_Band_Squat_yp0vyq.png"
         },
         {
           "exercise": "Band Push-Up",
@@ -2095,7 +2105,8 @@
           "tempo": "1-0-1-0",
           "rest": "45s",
           "coachingFocus": "25 reps. Constant tension. Legs on fire — that's athletic conditioning.",
-          "id": "RB001"
+          "id": "RB001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301884/Resistance_Band_Squat_yp0vyq.png"
         },
         {
           "exercise": "Pallof Press",
@@ -2124,7 +2135,8 @@
           "tempo": "2-1-2-0",
           "rest": "30s",
           "coachingFocus": "Anchor high. Pull elbows to sides. High-rep lat endurance.",
-          "id": "RB007"
+          "id": "RB007",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301881/Pull-up_bar_Band_Lat_Pulldown_ece4q1.png"
         }
       ],
       "finisher": "Weighted Pull-Up x5 + Burpee x10 + Band Squat x20: 3 rounds, 90s rest",
@@ -2245,7 +2257,8 @@
           "tempo": "2-0-2-0",
           "rest": "75s",
           "coachingFocus": "Plank position. Row from the back. Minimal rotation.",
-          "id": "DB006"
+          "id": "DB006",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306483/Renegade_Row_unlokt.png"
         },
         {
           "exercise": "Dumbbell RDL",
@@ -2325,7 +2338,8 @@
           "tempo": "2-0-2-0",
           "rest": "75s",
           "coachingFocus": "Heavy renegade rows. Plank position. Back strength and core stability.",
-          "id": "DB006"
+          "id": "DB006",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306483/Renegade_Row_unlokt.png"
         },
         {
           "exercise": "Dumbbell RDL",
@@ -2344,7 +2358,8 @@
           "tempo": "2-1-1-0",
           "rest": "60s",
           "coachingFocus": "High volume squat. Maintain depth and posture even when tired.",
-          "id": "DB008"
+          "id": "DB008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301880/Dumbbell_Squat_zebkek.png"
         },
         {
           "exercise": "Burpee",
@@ -2404,7 +2419,8 @@
           "tempo": "4-0-X-0",
           "rest": "90s",
           "coachingFocus": "Lower slowly. This is where fitness-level pulling strength is built.",
-          "id": "PUB002"
+          "id": "PUB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296831/Negative_Pull-Up_m4fmik.png"
         },
         {
           "exercise": "Push-Up",
@@ -2535,7 +2551,8 @@
           "tempo": "2-0-2-0",
           "rest": "75s",
           "coachingFocus": "Full contact at top. Elite pulling standard. Back development at its peak.",
-          "id": "PUB008"
+          "id": "PUB008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296813/Chest-to-Bar_Pull-Up_f12wqk.png"
         },
         {
           "exercise": "Toes-to-Bar",
@@ -2544,7 +2561,8 @@
           "tempo": "2-0-2-0",
           "rest": "45s",
           "coachingFocus": "Dead hang to toes touching bar. Total core and pulling integration.",
-          "id": "PUB010"
+          "id": "PUB010",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296852/Toes-to-Bar_nrmvc8.png"
         },
         {
           "exercise": "Push-Up",
@@ -2644,7 +2662,8 @@
           "tempo": "Moderate",
           "rest": "30s",
           "coachingFocus": "Simple full body cardio. Keep the heart rate up between sets.",
-          "id": "CD_JJ"
+          "id": "CD_JJ",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306480/Jumping_Jacks_nhiccj.png"
         }
       ],
       "finisher": "Jump Rope 45s + Jumping Jacks x30: 3 rounds, 45s rest",
@@ -2745,7 +2764,8 @@
           "tempo": "Fast wrist",
           "rest": "30s",
           "coachingFocus": "40 consecutive double unders demands coordination, timing, and fitness.",
-          "id": "JR002"
+          "id": "JR002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306480/Double_Under_ojdppd.png"
         },
         {
           "exercise": "Jump Rope",
@@ -3028,7 +3048,8 @@
           "tempo": "2-0-1-0",
           "rest": "75s",
           "coachingFocus": "Vest adds resistance. Fitness improves when there is progressive challenge.",
-          "id": "VS001"
+          "id": "VS001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296855/Weighted_Push-Up_w60cpv.png"
         },
         {
           "exercise": "Bodyweight Squat",
@@ -3108,7 +3129,8 @@
           "tempo": "2-0-1-0",
           "rest": "60s",
           "coachingFocus": "High rep vest push-ups. Chest endurance and upper body fitness.",
-          "id": "VS001"
+          "id": "VS001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296855/Weighted_Push-Up_w60cpv.png"
         },
         {
           "exercise": "Bodyweight Squat",
@@ -3178,7 +3200,8 @@
           "tempo": "1-0-1-0",
           "rest": "30s",
           "coachingFocus": "15 reps with vest is advanced chest and tricep endurance.",
-          "id": "VS001"
+          "id": "VS001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296855/Weighted_Push-Up_w60cpv.png"
         },
         {
           "exercise": "Burpee",
@@ -3238,7 +3261,8 @@
           "tempo": "Controlled",
           "rest": "75s",
           "coachingFocus": "Learn to slam with control first. Full overhead raise. Drive down with intent.",
-          "id": "MB001"
+          "id": "MB001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306485/Medicine_Ball_Slam_amu0ws.png"
         },
         {
           "exercise": "Wall Ball",
@@ -3247,7 +3271,8 @@
           "tempo": "Rhythmic",
           "rest": "60s",
           "coachingFocus": "Squat and throw. Build the coordination first. Hit the same spot each time.",
-          "id": "MB002"
+          "id": "MB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783376335/Wall_Ball_kqdjov.png"
         },
         {
           "exercise": "Russian Twist",
@@ -3307,7 +3332,8 @@
           "tempo": "Explosive",
           "rest": "45s",
           "coachingFocus": "Explosive power output. Full overhead. The slam drives cardiovascular fitness.",
-          "id": "MB001"
+          "id": "MB001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306485/Medicine_Ball_Slam_amu0ws.png"
         },
         {
           "exercise": "Wall Ball",
@@ -3316,7 +3342,8 @@
           "tempo": "Rhythmic explosive",
           "rest": "30s",
           "coachingFocus": "15 reps per set. Cardio and legs simultaneously. The benchmark of fitness.",
-          "id": "MB002"
+          "id": "MB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783376335/Wall_Ball_kqdjov.png"
         },
         {
           "exercise": "Russian Twist",
@@ -3376,7 +3403,8 @@
           "tempo": "Max explosive",
           "rest": "30s",
           "coachingFocus": "Maximum power each rep. Full overhead. 15 reps at elite output.",
-          "id": "MB001"
+          "id": "MB001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306485/Medicine_Ball_Slam_amu0ws.png"
         },
         {
           "exercise": "Wall Ball",
@@ -3385,7 +3413,8 @@
           "tempo": "Max rhythmic",
           "rest": "30s",
           "coachingFocus": "20 wall balls is the elite fitness benchmark. Don't compromise squat depth.",
-          "id": "MB002"
+          "id": "MB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783376335/Wall_Ball_kqdjov.png"
         },
         {
           "exercise": "Burpee",
@@ -3445,7 +3474,8 @@
           "tempo": "Controlled",
           "rest": "75s",
           "coachingFocus": "Core braced. Bag tight to chest. Full body stabilisation builds fitness from the inside out.",
-          "id": "SB002"
+          "id": "SB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296809/Bear_Hug_Carry_Sandbag_qvgk1n.png"
         },
         {
           "exercise": "Sandbag Lunge",
@@ -3454,7 +3484,8 @@
           "tempo": "2-0-2-0",
           "rest": "75s",
           "coachingFocus": "Weighted lunge. Single-leg strength is functional fitness.",
-          "id": "SB001"
+          "id": "SB001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296841/Sandbag_Lunge_xgkacq.png"
         },
         {
           "exercise": "Push-Up",
@@ -3514,7 +3545,8 @@
           "tempo": "Explosive",
           "rest": "60s",
           "coachingFocus": "Hip drive. Shoulder fast. Total body fitness in a way no machine can replicate.",
-          "id": "SB004"
+          "id": "SB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296842/Sandbag_Shouldering_yqh8vi.png"
         },
         {
           "exercise": "Zercher Squat",
@@ -3533,7 +3565,8 @@
           "tempo": "Controlled",
           "rest": "45s",
           "coachingFocus": "Loaded carry is conditioning. Chest squeeze. Don't let the bag drop.",
-          "id": "SB002"
+          "id": "SB002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296809/Bear_Hug_Carry_Sandbag_qvgk1n.png"
         },
         {
           "exercise": "Mountain Climbers",
@@ -3583,7 +3616,8 @@
           "tempo": "Max power",
           "rest": "60s",
           "coachingFocus": "Maximum shouldering power. Speed from hip. Advanced functional fitness.",
-          "id": "SB004"
+          "id": "SB004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296842/Sandbag_Shouldering_yqh8vi.png"
         },
         {
           "exercise": "Husafell Stone Carry (Simulate with Sandbag)",
@@ -3592,7 +3626,8 @@
           "tempo": "Controlled max load",
           "rest": "60s",
           "coachingFocus": "40m at heavy load. Full body bracing. Elite fitness conditioning.",
-          "id": "SB005"
+          "id": "SB005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296839/Sandbag_Husafell_Stone_Carry_zndoza.png"
         },
         {
           "exercise": "Zercher Squat",

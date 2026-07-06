@@ -271,6 +271,8 @@ const exercises = [
   {
     id: "SQ011",
     name: "Dumbbell Squat",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301880/Dumbbell_Squat_zebkek.png",
     movementPattern: "SQUAT",
     primaryMuscles: ["Quadriceps", "Glutes"],
     secondaryMuscles: ["Hamstrings", "Core"],
@@ -425,6 +427,8 @@ const exercises = [
   {
     id: "SQ017",
     name: "Resistance Band Squat",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301884/Resistance_Band_Squat_yp0vyq.png",
     movementPattern: "SQUAT",
     primaryMuscles: ["Quadriceps", "Glutes"],
     secondaryMuscles: ["Hamstrings", "Abductors"],
@@ -665,6 +669,8 @@ const exercises = [
   {
     id: "AR003",
     name: "Hammer Curl",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301895/Dumbbell_Hammer_Curl_qunox3.png",
     movementPattern: "PULL",
     primaryMuscles: ["Brachialis", "Biceps"],
     secondaryMuscles: ["Forearms", "Brachioradialis"],
@@ -828,6 +834,8 @@ const exercises = [
   {
     id: "PH013",
     name: "Cable Fly (Low to High)",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296809/Cable_Fly_Low_to_High_ydwobn.png",
     movementPattern: "PUSH",
     primaryMuscles: ["Upper Chest", "Anterior Deltoid"],
     secondaryMuscles: ["Biceps"],
@@ -1125,6 +1133,8 @@ const exercises = [
   {
     id: "HI013",
     name: "Kettlebell Deadlift",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296824/Kettlebell_Deadlift_qsygzl.png",
     movementPattern: "HINGE",
     primaryMuscles: ["Glutes", "Hamstrings"],
     secondaryMuscles: ["Erectors", "Core"],
@@ -1150,6 +1160,8 @@ const exercises = [
   {
     id: "HI014",
     name: "Stiff Leg Deadlift",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301893/Stiff_Leg_Deadlift_g4easm.png",
     movementPattern: "HINGE",
     primaryMuscles: ["Hamstrings"],
     secondaryMuscles: ["Glutes", "Erectors"],
@@ -1228,6 +1240,8 @@ const exercises = [
   {
     id: "HI017",
     name: "Single Leg Hip Thrust",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301887/Single_Leg_Hip_Thrust_m33l9f.png",
     movementPattern: "HINGE",
     primaryMuscles: ["Glutes"],
     secondaryMuscles: ["Hamstrings", "Core"],
@@ -1278,6 +1292,8 @@ const exercises = [
   {
     id: "HI019",
     name: "Landmine RDL",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306481/Landmine_RDL_im3ket.png",
     movementPattern: "HINGE",
     primaryMuscles: ["Hamstrings", "Glutes"],
     secondaryMuscles: ["Core", "Grip"],
@@ -1302,6 +1318,8 @@ const exercises = [
   {
     id: "HI020",
     name: "Snatch Grip Deadlift",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306486/Snatch_Grip_Deadlift_c4xlpw.png",
     movementPattern: "HINGE",
     primaryMuscles: ["Hamstrings", "Glutes", "Upper Back", "Traps"],
     secondaryMuscles: ["Erectors", "Core", "Lats"],
@@ -1588,6 +1606,8 @@ const exercises = [
   {
     id: "LU011",
     name: "Overhead Walking Lunge",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783377385/Overhead_Walking_Lunge_wfgnxv.png",
     movementPattern: "LUNGE",
     primaryMuscles: ["Quadriceps", "Glutes"],
     secondaryMuscles: ["Core", "Shoulders", "Upper Back"],
@@ -1612,6 +1632,8 @@ const exercises = [
   {
     id: "LU012",
     name: "Goblet Lunge",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301896/Kettlebell_Goblet_Lunge_tn5y4s.png",
     movementPattern: "LUNGE",
     primaryMuscles: ["Quadriceps", "Glutes"],
     secondaryMuscles: ["Core", "Upper Back"],
@@ -1661,6 +1683,8 @@ const exercises = [
   {
     id: "LU014",
     name: "Reverse Lunge to Knee Drive",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301886/Reverse_Lunge_to_Knee_Drive_zvajgn.png",
     movementPattern: "LUNGE",
     primaryMuscles: ["Quadriceps", "Glutes", "Hip Flexors"],
     secondaryMuscles: ["Core", "Hamstrings"],
@@ -1711,6 +1735,8 @@ const exercises = [
   {
     id: "LU016",
     name: "Lateral Step-Up",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301897/Lateral_Step-Up_ywzmz2.png",
     movementPattern: "LUNGE",
     primaryMuscles: ["Glutes", "Abductors", "Quadriceps"],
     secondaryMuscles: ["Hamstrings", "Core"],
@@ -1735,6 +1761,8 @@ const exercises = [
   {
     id: "LU017",
     name: "Front Rack Lunge",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301894/Front_Rack_Lunge_mlipi5.png",
     movementPattern: "LUNGE",
     primaryMuscles: ["Quadriceps", "Glutes"],
     secondaryMuscles: ["Core", "Upper Back"],
@@ -1759,6 +1787,8 @@ const exercises = [
   {
     id: "LU018",
     name: "Single Leg Squat Off Box",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301894/Single_Leg_Squat_Off_Box_rybnml.png",
     movementPattern: "LUNGE",
     primaryMuscles: ["Quadriceps", "Glutes"],
     secondaryMuscles: ["Core", "Hip Stabilizers"],
@@ -1783,6 +1813,8 @@ const exercises = [
   {
     id: "LU019",
     name: "Clock Lunge",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301878/Clock_Lunge_s2ym3j.png",
     movementPattern: "LUNGE",
     primaryMuscles: ["Glutes", "Quadriceps", "Adductors", "Abductors"],
     secondaryMuscles: ["Core", "Hamstrings"],
@@ -1807,6 +1839,8 @@ const exercises = [
   {
     id: "LU020",
     name: "Sandbag Lunge",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296841/Sandbag_Lunge_xgkacq.png",
     movementPattern: "LUNGE",
     primaryMuscles: ["Quadriceps", "Glutes"],
     secondaryMuscles: ["Core", "Hamstrings", "Grip"],
@@ -1938,6 +1972,8 @@ const exercises = [
   {
     id: "PH005",
     name: "Diamond Push-Up",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296817/Diamond_Push-Up_ndmqyl.png",
     movementPattern: "PUSH_HORIZONTAL",
     primaryMuscles: ["Triceps", "Inner Pectorals"],
     secondaryMuscles: ["Anterior Deltoid", "Core"],
@@ -1962,6 +1998,8 @@ const exercises = [
   {
     id: "PH006",
     name: "Chest Dip",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296814/Chest_Dip_i0bn9b.png",
     movementPattern: "PUSH_HORIZONTAL",
     primaryMuscles: ["Lower Pectorals", "Triceps"],
     secondaryMuscles: ["Anterior Deltoid"],
@@ -2064,6 +2102,8 @@ const exercises = [
   {
     id: "PH010",
     name: "Machine Chest Press",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296832/Machine_Chest_Press_egc09p.png",
     movementPattern: "PUSH_HORIZONTAL",
     primaryMuscles: ["Pectorals"],
     secondaryMuscles: ["Triceps", "Anterior Deltoid"],
@@ -2140,6 +2180,8 @@ const exercises = [
   {
     id: "PH013",
     name: "Close Grip Bench Press",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296817/Close_Grip_Bench_Press_va93f8.png",
     movementPattern: "PUSH_HORIZONTAL",
     primaryMuscles: ["Triceps", "Inner Pectorals"],
     secondaryMuscles: ["Anterior Deltoid"],
@@ -2242,6 +2284,8 @@ const exercises = [
   {
     id: "PH017",
     name: "Single Arm Dumbbell Press",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296847/Single_Arm_Dumbbell_Press_u4xavr.png",
     movementPattern: "PUSH_HORIZONTAL",
     primaryMuscles: ["Pectorals"],
     secondaryMuscles: ["Triceps", "Core", "Anterior Deltoid"],
@@ -2266,6 +2310,8 @@ const exercises = [
   {
     id: "PH018",
     name: "Weighted Push-Up",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296855/Weighted_Push-Up_w60cpv.png",
     movementPattern: "PUSH_HORIZONTAL",
     primaryMuscles: ["Pectorals", "Triceps"],
     secondaryMuscles: ["Core", "Anterior Deltoid"],
@@ -2316,6 +2362,8 @@ const exercises = [
   {
     id: "PH020",
     name: "Landmine Press",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296832/Landmine_Press_jgmqul.png",
     movementPattern: "PUSH_HORIZONTAL",
     primaryMuscles: ["Pectorals", "Anterior Deltoid"],
     secondaryMuscles: ["Triceps", "Core"],
@@ -2528,6 +2576,8 @@ const exercises = [
   {
     id: "PV008",
     name: "Single Arm DB Overhead Press",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296846/Single_Arm_DB_Overhead_Press_hbrwg1.png",
     movementPattern: "PUSH_VERTICAL",
     primaryMuscles: ["Anterior Deltoid"],
     secondaryMuscles: ["Core", "Triceps", "Lateral Deltoid"],
@@ -2552,6 +2602,8 @@ const exercises = [
   {
     id: "PV009",
     name: "Kettlebell Press",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296827/Kettlebell_Press_bq5ssy.png",
     movementPattern: "PUSH_VERTICAL",
     primaryMuscles: ["Anterior Deltoid", "Lateral Deltoid"],
     secondaryMuscles: ["Triceps", "Core", "Rotator Cuff"],
@@ -2627,6 +2679,8 @@ const exercises = [
   {
     id: "PV012",
     name: "Half-Kneeling Single Arm Press",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296823/Half-Kneeling_Single_Arm_Press_bfcbva.png",
     movementPattern: "PUSH_VERTICAL",
     primaryMuscles: ["Anterior Deltoid"],
     secondaryMuscles: ["Core", "Hip Stabilizers", "Triceps"],
@@ -2755,6 +2809,8 @@ const exercises = [
   {
     id: "PV017",
     name: "Seated Barbell OHP",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296846/Seated_Barbell_OHP_hkrklc.png",
     movementPattern: "PUSH_VERTICAL",
     primaryMuscles: ["Anterior Deltoid", "Lateral Deltoid"],
     secondaryMuscles: ["Triceps", "Traps"],
@@ -2805,6 +2861,8 @@ const exercises = [
   {
     id: "PV019",
     name: "Dumbbell Front Raise",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296820/Dumbbell_Front_Raise_w7moxh.png",
     movementPattern: "PUSH_VERTICAL",
     primaryMuscles: ["Anterior Deltoid"],
     secondaryMuscles: ["Lateral Deltoid", "Core"],
@@ -3323,6 +3381,8 @@ const exercises = [
   {
     id: "PLH019",
     name: "Renegade Row",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306483/Renegade_Row_unlokt.png",
     movementPattern: "PULL_HORIZONTAL",
     primaryMuscles: ["Lats", "Rhomboids"],
     secondaryMuscles: ["Core", "Triceps", "Shoulders"],
@@ -3530,6 +3590,8 @@ const exercises = [
   {
     id: "PLV007",
     name: "Wide Grip Lat Pulldown",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296855/Wide_Grip_Lat_Pulldown_r7wxam.png",
     movementPattern: "PULL_VERTICAL",
     primaryMuscles: ["Lats (upper)"],
     secondaryMuscles: ["Biceps", "Rear Deltoid"],
@@ -3580,6 +3642,8 @@ const exercises = [
   {
     id: "PLV009",
     name: "Dumbbell Pull-Over",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296821/Dumbbell_Pull-Over_yv3hfn.png",
     movementPattern: "PULL_VERTICAL",
     primaryMuscles: ["Lats", "Serratus"],
     secondaryMuscles: ["Pectorals", "Core"],
@@ -3604,6 +3668,8 @@ const exercises = [
   {
     id: "PLV010",
     name: "Single Arm Lat Pulldown",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296848/Single_Arm_Lat_Pulldown_patzwl.png",
     movementPattern: "PULL_VERTICAL",
     primaryMuscles: ["Lats"],
     secondaryMuscles: ["Biceps", "Core"],
@@ -3654,6 +3720,8 @@ const exercises = [
   {
     id: "PLV012",
     name: "Chest-to-Bar Pull-Up",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296813/Chest-to-Bar_Pull-Up_f12wqk.png",
     movementPattern: "PULL_VERTICAL",
     primaryMuscles: ["Lats"],
     secondaryMuscles: ["Biceps", "Rear Deltoid"],
@@ -3703,6 +3771,8 @@ const exercises = [
   {
     id: "PLV014",
     name: "Negative Pull-Up",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296831/Negative_Pull-Up_m4fmik.png",
     movementPattern: "PULL_VERTICAL",
     primaryMuscles: ["Lats"],
     secondaryMuscles: ["Biceps", "Rear Deltoid"],
@@ -3752,6 +3822,8 @@ const exercises = [
   {
     id: "PLV016",
     name: "Band Lat Pulldown",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301881/Pull-up_bar_Band_Lat_Pulldown_ece4q1.png",
     movementPattern: "PULL_VERTICAL",
     primaryMuscles: ["Lats"],
     secondaryMuscles: ["Biceps"],
@@ -3776,6 +3848,8 @@ const exercises = [
   {
     id: "PLV017",
     name: "Machine Assisted Pull-Up",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296831/Machine_Assisted_Pull-Up_ranklm.png",
     movementPattern: "PULL_VERTICAL",
     primaryMuscles: ["Lats"],
     secondaryMuscles: ["Biceps", "Rear Deltoid"],
@@ -3826,6 +3900,8 @@ const exercises = [
   {
     id: "PLV019",
     name: "Close Grip Lat Pulldown",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296816/Close_Grip_Lat_Pulldown_yylyid.png",
     movementPattern: "PULL_VERTICAL",
     primaryMuscles: ["Lats (lower)"],
     secondaryMuscles: ["Biceps", "Mid Traps"],
@@ -3850,6 +3926,8 @@ const exercises = [
   {
     id: "PLV020",
     name: "Archer Pull-Up",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296808/Archer_Pull-Up_kui3tx.png",
     movementPattern: "PULL_VERTICAL",
     primaryMuscles: ["Lats"],
     secondaryMuscles: ["Biceps", "Core"],
@@ -4214,6 +4292,8 @@ const exercises = [
   {
     id: "CO014",
     name: "Suitcase Carry",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296849/Suitcase_Carry_vebfcs.png",
     movementPattern: "CORE",
     primaryMuscles: ["Obliques", "Transverse Abdominis"],
     secondaryMuscles: ["Glute Medius", "Grip", "Traps"],
@@ -4264,6 +4344,8 @@ const exercises = [
   {
     id: "CO016",
     name: "Medicine Ball Slam",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306485/Medicine_Ball_Slam_amu0ws.png",
     movementPattern: "CORE",
     primaryMuscles: ["Rectus Abdominis", "Obliques"],
     secondaryMuscles: ["Shoulders", "Lats", "Hip Flexors"],
@@ -4288,6 +4370,8 @@ const exercises = [
   {
     id: "CO017",
     name: "Toes-to-Bar",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296852/Toes-to-Bar_nrmvc8.png",
     movementPattern: "CORE",
     primaryMuscles: ["Rectus Abdominis", "Hip Flexors"],
     secondaryMuscles: ["Grip", "Lats", "Obliques"],
@@ -4312,6 +4396,8 @@ const exercises = [
   {
     id: "CO018",
     name: "Stir the Pot",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306488/Stir_the_Pot_v9hwpw.png",
     movementPattern: "CORE",
     primaryMuscles: ["Transverse Abdominis"],
     secondaryMuscles: ["Obliques", "Shoulder Stabilizers"],
@@ -4362,6 +4448,8 @@ const exercises = [
   {
     id: "CO020",
     name: "Landmine Rotation",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306481/Landmine_Rotation_tvr71p.png",
     movementPattern: "CORE",
     primaryMuscles: ["Obliques"],
     secondaryMuscles: ["Shoulders", "Core", "Glutes"],
@@ -4414,6 +4502,8 @@ const exercises = [
   {
     id: "CA002",
     name: "Suitcase Carry",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296849/Suitcase_Carry_vebfcs.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Obliques", "Grip"],
     secondaryMuscles: ["Core", "Glute Medius"],
@@ -4438,6 +4528,8 @@ const exercises = [
   {
     id: "CA003",
     name: "Overhead Carry",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296836/Overhead_Carry_wyvjsq.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Shoulder Stabilizers", "Core"],
     secondaryMuscles: ["Traps", "Triceps", "Obliques"],
@@ -4462,6 +4554,8 @@ const exercises = [
   {
     id: "CA004",
     name: "Trap Bar Farmer's Carry",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296852/Trap_Bar_Farmer_s_Carry_av5hdh.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Grip", "Traps", "Core", "Glutes"],
     secondaryMuscles: ["Quads", "Calves"],
@@ -4486,6 +4580,8 @@ const exercises = [
   {
     id: "CA005",
     name: "Waiters Carry",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296853/Waiters_Carry_s9spjt.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Shoulder Stabilizers", "Core"],
     secondaryMuscles: ["Obliques", "Wrist Stabilizers"],
@@ -4510,6 +4606,8 @@ const exercises = [
   {
     id: "CA006",
     name: "Rack Carry (Front Rack)",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296838/Rack_Carry_Front_Rack_lcizfj.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Core", "Shoulder Girdle"],
     secondaryMuscles: ["Obliques", "Hip Flexors"],
@@ -4534,6 +4632,8 @@ const exercises = [
   {
     id: "CA007",
     name: "Bear Hug Carry (Sandbag)",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296809/Bear_Hug_Carry_Sandbag_qvgk1n.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Core", "Upper Back", "Biceps"],
     secondaryMuscles: ["Glutes", "Shoulders"],
@@ -4558,6 +4658,8 @@ const exercises = [
   {
     id: "CA008",
     name: "Single Arm KB Overhead Carry",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296828/Kettlebell_Single_Arm_KB_Overhead_Carry_whr09p.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Shoulder Stabilizers"],
     secondaryMuscles: ["Core", "Obliques", "Lats"],
@@ -4582,6 +4684,8 @@ const exercises = [
   {
     id: "CA009",
     name: "Yoke Carry",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296857/Yoke_Carry_ohyaln.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Traps", "Core", "Glutes"],
     secondaryMuscles: ["Quads", "Calves", "Hamstrings"],
@@ -4658,6 +4762,8 @@ const exercises = [
   {
     id: "CA012",
     name: "Plate Pinch Carry",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296838/Plate_Pinch_Carry_eta1ua.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Grip (Pinch)", "Forearms"],
     secondaryMuscles: ["Core", "Traps"],
@@ -4682,6 +4788,8 @@ const exercises = [
   {
     id: "CA013",
     name: "Double KB Rack Carry",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296817/Double_KB_Rack_Carry_qx0izs.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Core", "Shoulder Girdle"],
     secondaryMuscles: ["Obliques", "Upper Back"],
@@ -4706,6 +4814,8 @@ const exercises = [
   {
     id: "CA014",
     name: "Zercher Carry",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296845/Sandbag_Zercher_Carry_pmkxhw.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Core", "Biceps", "Upper Back"],
     secondaryMuscles: ["Glutes", "Quads"],
@@ -4730,6 +4840,8 @@ const exercises = [
   {
     id: "CA015",
     name: "Offset Farmer's Carry",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296835/Offset_Farmer_s_Carry_kdbl2r.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Core", "Obliques"],
     secondaryMuscles: ["Grip", "Traps", "Glute Medius"],
@@ -4754,6 +4866,8 @@ const exercises = [
   {
     id: "CA016",
     name: "Kettlebell Bottoms-Up Carry",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296824/Kettlebell_Bottoms-Up_Carry_z1uejq.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Shoulder Stabilizers", "Grip"],
     secondaryMuscles: ["Core", "Forearm Stabilizers"],
@@ -4778,6 +4892,8 @@ const exercises = [
   {
     id: "CA017",
     name: "Heavy DB Walk",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296824/Heavy_DB_Walk_yprgoq.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Grip", "Core", "Traps"],
     secondaryMuscles: ["Glutes", "Calves"],
@@ -4802,6 +4918,8 @@ const exercises = [
   {
     id: "CA018",
     name: "Prowler Sprint",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306486/Prowler_Sprint_oegw6h.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Quadriceps", "Glutes"],
     secondaryMuscles: ["Hamstrings", "Calves", "Core"],
@@ -4826,6 +4944,8 @@ const exercises = [
   {
     id: "CA019",
     name: "Sandbag Shouldering",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296842/Sandbag_Shouldering_yqh8vi.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Glutes", "Core", "Upper Back"],
     secondaryMuscles: ["Biceps", "Shoulders", "Hamstrings"],
@@ -4850,6 +4970,8 @@ const exercises = [
   {
     id: "CA020",
     name: "Husafell Stone Carry (Simulate with Sandbag)",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296839/Sandbag_Husafell_Stone_Carry_zndoza.png",
     movementPattern: "CARRY",
     primaryMuscles: ["Core", "Glutes", "Upper Back"],
     secondaryMuscles: ["Biceps", "Forearms"],
@@ -5135,6 +5257,8 @@ const exercises = [
   {
     id: "CD011",
     name: "Sprint Intervals",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783376333/Sprint_Interval_wfkagn.png",
     movementPattern: "CONDITIONING",
     primaryMuscles: ["Quads", "Hamstrings", "Glutes"],
     secondaryMuscles: ["Core", "Calves", "Cardiovascular System"],
@@ -5211,6 +5335,8 @@ const exercises = [
   {
     id: "CD014",
     name: "Turkish Get-Up",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296853/Turkish_Get-Up_juuidt.png",
     movementPattern: "CONDITIONING",
     primaryMuscles: ["Shoulder Stabilizers", "Core", "Glutes"],
     secondaryMuscles: ["Hip Flexors", "Quads", "Upper Back"],
@@ -5235,6 +5361,8 @@ const exercises = [
   {
     id: "CD015",
     name: "Jumping Jacks",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306480/Jumping_Jacks_nhiccj.png",
     movementPattern: "CONDITIONING",
     primaryMuscles: ["Cardiovascular System"],
     secondaryMuscles: ["Shoulders", "Calves", "Hip Abductors"],
@@ -5259,6 +5387,8 @@ const exercises = [
   {
     id: "CD016",
     name: "Squat Thrust",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306487/Squat_Thrust_gg4ao6.png",
     movementPattern: "CONDITIONING",
     primaryMuscles: ["Hip Flexors", "Core", "Quads"],
     secondaryMuscles: ["Shoulders"],
@@ -5283,6 +5413,8 @@ const exercises = [
   {
     id: "CD017",
     name: "Ski Erg",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306486/Ski_Erg_fozuit.png",
     movementPattern: "CONDITIONING",
     primaryMuscles: ["Lats", "Core", "Triceps"],
     secondaryMuscles: ["Hamstrings", "Glutes", "Cardiovascular System"],
@@ -5307,6 +5439,8 @@ const exercises = [
   {
     id: "CD018",
     name: "Double Under",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306480/Double_Under_ojdppd.png",
     movementPattern: "CONDITIONING",
     primaryMuscles: ["Calves", "Cardiovascular System"],
     secondaryMuscles: ["Shoulders", "Core"],
@@ -5331,6 +5465,8 @@ const exercises = [
   {
     id: "CD019",
     name: "Wall Ball",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783376335/Wall_Ball_kqdjov.png",
     movementPattern: "CONDITIONING",
     primaryMuscles: ["Quadriceps", "Glutes", "Shoulders"],
     secondaryMuscles: ["Core", "Hamstrings", "Arms"],
@@ -5355,6 +5491,8 @@ const exercises = [
   {
     id: "CD020",
     name: "Bear Crawl",
+    thumbnailUrl:
+      "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306478/Bear_Crawl_sgnvdl.png",
     movementPattern: "CONDITIONING",
     primaryMuscles: ["Core", "Shoulders", "Hip Flexors"],
     secondaryMuscles: ["Quads", "Triceps", "Cardiovascular System"],
