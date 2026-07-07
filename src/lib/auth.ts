@@ -5,6 +5,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
 import { Role } from "@/generated/prisma";
+import { reconcilePendingEntitlements } from "@/lib/reconcile-entitlements";
 
 interface ExtendedUser extends User {
   id: string;
@@ -63,6 +64,12 @@ export const authOptions: NextAuthOptions = {
           data: { lastLoginAt: new Date() },
         });
 
+        try {
+          await reconcilePendingEntitlements(user.id, user.email);
+        } catch (error) {
+          console.error("Failed to reconcile pending entitlements:", error);
+        }
+
         return {
           id: user.id,
           email: user.email,
@@ -111,6 +118,12 @@ export const authOptions: NextAuthOptions = {
           update: {},
           create: { userId: dbUser.id, plan: "FREE", status: "active" },
         });
+
+        try {
+          await reconcilePendingEntitlements(dbUser.id, user.email!);
+        } catch (error) {
+          console.error("Failed to reconcile pending entitlements:", error);
+        }
 
         const ext = user as ExtendedUser;
         ext.id = dbUser.id;
