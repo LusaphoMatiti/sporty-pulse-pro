@@ -30,13 +30,13 @@ export type LockReason =
 
 function resolveEnvironmentTargets(
   trainingLocation: string | null,
-  hasDeclaredEquipment: boolean,
+  hasAccessibleEquipment: boolean,
 ): EnvironmentTarget[] {
   if (trainingLocation === "GYM") {
     return [EnvironmentTarget.GYM, EnvironmentTarget.ANY];
   }
   if (trainingLocation === "HOME") {
-    if (hasDeclaredEquipment) {
+    if (hasAccessibleEquipment) {
       return [
         EnvironmentTarget.HOME_BODYWEIGHT,
         EnvironmentTarget.HOME_EQUIPMENT,
@@ -107,13 +107,26 @@ export async function getEligiblePlansContext(userId: string) {
     }),
   ]);
 
-  const hasDeclaredEquipment = allUserEquipment.some(
-    (e) => e.source === "DECLARED",
-  );
+  // Same predicate used everywhere else equipment "counts" (matches
+  // computePlanLocks's PURCHASED/active-trial logic below): purchased
+  // equipment is always accessible; declared/trial equipment only counts
+  // while the trial hasn't expired. This used to only check
+  // source === "DECLARED", so purchased-only users never got
+  // HOME_EQUIPMENT plans in their eligible set at all, and users whose
+  // trial had already EXPIRED incorrectly kept seeing them.
+  const accessibleEquipmentIds = allUserEquipment
+    .filter(
+      (e) =>
+        e.source === "PURCHASED" ||
+        (e.source === "DECLARED" && e.trialExpiresAt && e.trialExpiresAt > now),
+    )
+    .map((e) => e.equipmentId);
+
+  const hasAccessibleEquipment = accessibleEquipmentIds.length > 0;
 
   const allowedEnvironments = resolveEnvironmentTargets(
     user?.trainingLocation ?? null,
-    hasDeclaredEquipment,
+    hasAccessibleEquipment,
   );
 
   const planWhere: Prisma.WorkoutPlanWhereInput = {
@@ -160,14 +173,6 @@ export async function getEligiblePlansContext(userId: string) {
       ];
     }
   }
-
-  const accessibleEquipmentIds = allUserEquipment
-    .filter(
-      (e) =>
-        e.source === "PURCHASED" ||
-        (e.source === "DECLARED" && e.trialExpiresAt && e.trialExpiresAt > now),
-    )
-    .map((e) => e.equipmentId);
 
   // Visibility for the DB query is intentionally broader than "currently
   // accessible": it includes equipment from an EXPIRED trial too. Those
