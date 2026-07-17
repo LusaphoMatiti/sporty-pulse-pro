@@ -1,4 +1,3 @@
-// src/lib/substitution.ts
 // ─────────────────────────────────────────────
 // SUBSTITUTION ENGINE
 // Resolves a session's exercise list against
@@ -244,15 +243,27 @@ function buildResolvedExercise(
 
 // ─────────────────────────────────────────────
 // DB HELPER: getUserEquipmentIds
-// Fetches the user's equipment IDs from DB.
+// Fetches the user's currently ACTIVE equipment IDs --
+// purchased equipment always counts; declared (trial)
+// equipment only counts while the trial hasn't expired.
 // Call this in your API route before resolveExercises.
 // ─────────────────────────────────────────────
 
 export async function getUserEquipmentIds(userId: string): Promise<string[]> {
+  const now = new Date();
+
   const userEquipment = await prisma.userEquipment.findMany({
     where: { userId },
-    select: { equipmentId: true },
+    select: { source: true, equipmentId: true, trialExpiresAt: true },
   });
 
-  return userEquipment.map((ue) => ue.equipmentId);
+  return userEquipment
+    .filter(
+      (ue) =>
+        ue.source === "PURCHASED" ||
+        (ue.source === "DECLARED" &&
+          ue.trialExpiresAt != null &&
+          ue.trialExpiresAt > now),
+    )
+    .map((ue) => ue.equipmentId);
 }
