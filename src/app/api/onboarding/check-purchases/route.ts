@@ -1,7 +1,7 @@
 import { type NextRequest } from "next/server";
 import { getSessionFromRequest } from "@/lib/getSession";
 import { prisma } from "@/lib/prisma";
-import { EquipmentSource } from "@/generated/prisma/client";
+import { EquipmentSource, Plan } from "@/generated/prisma/client";
 
 export async function GET(req: NextRequest) {
   const session = await getSessionFromRequest(req);
@@ -67,6 +67,28 @@ export async function GET(req: NextRequest) {
   });
 
   const purchasedEquipment = purchased.map((ue) => ue.equipment);
+
+  // Keep Subscription.plan in sync with real ownership -- same fix as
+  // the grant route and reconcile-entitlements.ts. Never downgrades an
+  // existing PRO subscriber. Runs on every call, same self-healing
+  // philosophy as the rest of this endpoint -- not gated on anything
+  // that was freshly granted this call, since previously-granted
+  // equipment should keep the plan correct too.
+  if (purchasedEquipment.length > 0) {
+    const subscription = await prisma.subscription.findUnique({
+      where: { userId: user.id },
+      select: { plan: true },
+    });
+
+    if (subscription?.plan !== Plan.PRO) {
+      await prisma.subscription.upsert({
+        where: { userId: user.id },
+        update: { plan: Plan.EQUIPMENT },
+        create: { userId: user.id, plan: Plan.EQUIPMENT, status: "active" },
+      });
+    }
+  }
+
   const showModal = purchasedEquipment.length > 0 && !user.purchaseModalShown;
 
   if (showModal) {
