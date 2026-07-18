@@ -1,7 +1,7 @@
 import { type NextRequest } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
-import { EquipmentSource } from "@/generated/prisma/client";
+import { EquipmentSource, Plan } from "@/generated/prisma/client";
 
 // Store calls this after a PayFast payment confirms.
 // Not public-facing — protected by a shared secret, not user auth.
@@ -73,7 +73,7 @@ export const POST = async (req: NextRequest) => {
           where: {
             userId_equipmentId: { userId: user.id, equipmentId },
           },
-          update: {}, // already exists -- leave as-is
+          update: {},
           create: {
             userId: user.id,
             equipmentId,
@@ -82,13 +82,32 @@ export const POST = async (req: NextRequest) => {
         });
         granted.push(equipmentId);
       }
+
+      // Keep Subscription.plan in sync with real ownership -- this is
+      // the single source-of-truth fix, rather than patching every
+      // place downstream that reads plan === "EQUIPMENT". Never
+      // downgrades an existing PRO subscriber.
+      if (granted.length > 0) {
+        const subscription = await prisma.subscription.findUnique({
+          where: { userId: user.id },
+          select: { plan: true },
+        });
+
+        if (subscription?.plan !== Plan.PRO) {
+          await prisma.subscription.upsert({
+            where: { userId: user.id },
+            update: { plan: Plan.EQUIPMENT },
+            create: { userId: user.id, plan: Plan.EQUIPMENT, status: "active" },
+          });
+        }
+      }
     } else {
       for (const equipmentId of equipmentIds) {
         await prisma.pendingEntitlement.upsert({
           where: {
             email_equipmentId: { email, equipmentId },
           },
-          update: {}, // already pending -- leave as-is
+          update: {},
           create: {
             email,
             equipmentId,
