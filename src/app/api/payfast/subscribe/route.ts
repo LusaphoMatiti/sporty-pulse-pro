@@ -1,7 +1,6 @@
 import { type NextRequest } from "next/server";
 import crypto from "crypto";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+import { getMobileOrWebSession } from "@/lib/mobile-auth";
 
 const PAYFAST_MERCHANT_ID = process.env.PAYFAST_MERCHANT_ID as string;
 const PAYFAST_MERCHANT_KEY = process.env.PAYFAST_MERCHANT_KEY as string;
@@ -53,6 +52,7 @@ const SIGNATURE_FIELD_ORDER = [
   "cycles",
 ] as const;
 
+// PHP urlencode() replication -- same as Store's, proven correct there.
 const payfastEncode = (value: string) =>
   encodeURIComponent(value.trim())
     .replace(/%20/g, "+")
@@ -86,7 +86,7 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  const session = await getServerSession(authOptions);
+  const session = await getMobileOrWebSession(req);
   if (!session?.user?.id || !session.user.email) {
     return Response.json(null, { status: 401, statusText: "Unauthorized" });
   }
@@ -101,7 +101,7 @@ export async function POST(req: NextRequest) {
     const fields: Record<string, string> = {
       merchant_id: PAYFAST_MERCHANT_ID,
       merchant_key: PAYFAST_MERCHANT_KEY,
-      // These need to be real web pages that deep-link back into the
+
       // app -- see note below, not built yet.
       return_url: `${origin}/subscribe/success`,
       cancel_url: `${origin}/subscribe/cancelled`,
