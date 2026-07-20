@@ -332,6 +332,20 @@ model ProductEquipmentMap {
   @@map("product_equipment_map")
 }
 
+model CheckoutSession {
+  id  String @id @default(uuid())
+  fields Json
+  actionUrl String
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+  usedAt DateTime?
+
+  @@map("checkout_sessions")
+}
+
+
+
+
 enum Role {
   ATHLETE
   COACH
