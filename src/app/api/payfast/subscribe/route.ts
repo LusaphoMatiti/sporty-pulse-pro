@@ -65,9 +65,11 @@ const payfastEncode = (value: string) =>
     .replace(/~/g, "%7E");
 
 const buildSignature = (fields: Record<string, string>) => {
-  const paramString = SIGNATURE_FIELD_ORDER.filter(
+  const presentKeys = SIGNATURE_FIELD_ORDER.filter(
     (key) => fields[key] !== undefined && fields[key] !== "",
-  )
+  );
+
+  const paramString = presentKeys
     .map((key) => `${key}=${payfastEncode(fields[key])}`)
     .join("&");
 
@@ -75,7 +77,18 @@ const buildSignature = (fields: Record<string, string>) => {
     ? `${paramString}&passphrase=${payfastEncode(PAYFAST_PASSPHRASE)}`
     : paramString;
 
-  return crypto.createHash("md5").update(withPassphrase).digest("hex");
+  const signature = crypto.createHash("md5").update(withPassphrase).digest("hex");
+
+  // TEMPORARY -- remove once the signature mismatch is confirmed resolved.
+  console.log("Pro subscribe checkout signature debug:", {
+    fieldOrderUsed: presentKeys,
+    paramString,
+    hasPassphraseSet: Boolean(PAYFAST_PASSPHRASE),
+    passphraseLength: PAYFAST_PASSPHRASE?.length ?? 0,
+    signature,
+  });
+
+  return signature;
 };
 
 export async function POST(req: NextRequest) {
