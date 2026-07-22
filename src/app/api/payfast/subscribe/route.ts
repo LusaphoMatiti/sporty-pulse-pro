@@ -92,8 +92,7 @@ export async function POST(req: NextRequest) {
     return Response.json(null, { status: 401, statusText: "Unauthorized" });
   }
 
-  const requestHeaders = new Headers(req.headers);
-  const origin = requestHeaders.get("origin");
+  const origin = req.nextUrl.origin;
 
   try {
     // Charge immediately -- confirmed decision, no trial period.
@@ -133,6 +132,7 @@ export async function POST(req: NextRequest) {
       data: {
         fields: allFields,
         actionUrl: PAYFAST_PROCESS_URL,
+        createdAt: new Date(),
         expiresAt,
       },
     });
