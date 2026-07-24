@@ -27,6 +27,7 @@ model User {
   biologicalSex         BiologicalSex?
   experienceLevel       UserLevel?
   onboardingCompletedAt DateTime?
+  privacyPolicyAcceptedAt DateTime?
   purchaseModalShown    Boolean           @default(false)
   accounts              Account[]
   instances             PlanInstance[]
