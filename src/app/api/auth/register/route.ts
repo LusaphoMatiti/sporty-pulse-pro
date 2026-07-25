@@ -15,6 +15,8 @@ export async function POST(req: Request) {
       );
     }
 
+    const normalizedEmail = email.toLowerCase().trim();
+
     if (password.length < 8) {
       return NextResponse.json(
         { error: "Password must be at least 8 characters." },
@@ -22,7 +24,9 @@ export async function POST(req: Request) {
       );
     }
 
-    const existing = await prisma.user.findUnique({ where: { email } });
+    const existing = await prisma.user.findUnique({
+      where: { email: normalizedEmail },
+    });
     if (existing) {
       return NextResponse.json(
         { error: "An account with that email already exists." },
@@ -40,7 +44,7 @@ export async function POST(req: Request) {
     const newUser = await prisma.user.create({
       data: {
         name,
-        email,
+        email: normalizedEmail,
         password: hashed,
         role: Role.ATHLETE,
         isNewUser: true,
