@@ -3,6 +3,7 @@ import {
   EnvironmentTarget,
   PrimaryGoal,
   SexTarget,
+  GymTrainingStyle,
   Prisma,
 } from "@/generated/prisma";
 
@@ -23,13 +24,11 @@ export type LockReason =
   | "equipment_required"
   | "upgrade_required";
 
-// ── Personalization filters (environment / goal / level / sex) ───────────
-// Moved here (rather than duplicated) so the activate route can rebuild the
-// exact same eligible-plan list the Programs screen used to decide what's
-// locked, instead of maintaining a second copy that could drift out of sync.
+// ── Personalization filters (environment / goal / level / sex / style) ───
 
 function resolveEnvironmentTargets(
   trainingLocation: string | null,
+
   hasAccessibleEquipment: boolean,
 ): EnvironmentTarget[] {
   if (trainingLocation === "GYM") {
@@ -68,6 +67,16 @@ function resolveSexTargets(biologicalSex: string | null): SexTarget[] | null {
   return null;
 }
 
+// Only meaningful when the user trains at a GYM — HOME users have no
+// gymTrainingStyle set, and this must not affect their filtering at all.
+function resolveGymStyleTarget(
+  trainingLocation: string | null,
+  gymTrainingStyle: string | null,
+): GymTrainingStyle | null {
+  if (trainingLocation !== "GYM") return null;
+  return (gymTrainingStyle as GymTrainingStyle) ?? null;
+}
+
 export type UserEquipmentEntry = {
   equipmentId: string;
   source: string;
@@ -76,7 +85,7 @@ export type UserEquipmentEntry = {
 
 /**
  * Builds the Prisma `where` clause for "plans this user is eligible to see
- * at all" (environment/goal/level/sex/equipment-ownership), plus the
+ * at all" (environment/goal/level/sex/style/equipment-ownership), plus the
  * supporting data needed to compute locks afterward. Does NOT fetch the
  * plans themselves — callers run their own `findMany` with whatever
  * `select` they need using `planWhere`, then apply `sortPlansForCatalog`
@@ -103,6 +112,7 @@ export async function getEligiblePlansContext(userId: string) {
         primaryGoal: true,
         experienceLevel: true,
         biologicalSex: true,
+        gymTrainingStyle: true,
       },
     }),
   ]);
@@ -155,6 +165,19 @@ export async function getEligiblePlansContext(userId: string) {
       ...(Array.isArray(planWhere.AND) ? planWhere.AND : []),
       {
         OR: [{ difficulty: { in: allowedDifficulties } }, { difficulty: null }],
+      },
+    ];
+  }
+
+  const gymStyleTarget = resolveGymStyleTarget(
+    user?.trainingLocation ?? null,
+    user?.gymTrainingStyle ?? null,
+  );
+  if (gymStyleTarget) {
+    planWhere.AND = [
+      ...(Array.isArray(planWhere.AND) ? planWhere.AND : []),
+      {
+        OR: [{ gymStyleTarget: gymStyleTarget }, { gymStyleTarget: null }],
       },
     ];
   }

@@ -9,6 +9,12 @@ export const dynamic = "force-dynamic";
 
 const VALID_PRIMARY_GOALS = ["LOSE_WEIGHT", "BUILD_MUSCLE", "GET_FIT"] as const;
 const VALID_TRAINING_LOCATIONS = ["HOME", "GYM"] as const;
+const VALID_GYM_TRAINING_STYLES = [
+  "BODYWEIGHT",
+  "CALISTHENICS",
+  "WEIGHTS_AND_MACHINES",
+  "WEIGHTS_ONLY",
+] as const;
 const VALID_BIOLOGICAL_SEXES = ["MALE", "FEMALE", "NOT_SPECIFIED"] as const;
 const VALID_EXPERIENCE_LEVELS = [
   "BEGINNER",
@@ -20,6 +26,7 @@ const TRIAL_DAYS = 14;
 
 type PrimaryGoal = (typeof VALID_PRIMARY_GOALS)[number];
 type TrainingLocation = (typeof VALID_TRAINING_LOCATIONS)[number];
+type GymTrainingStyle = (typeof VALID_GYM_TRAINING_STYLES)[number];
 type BiologicalSex = (typeof VALID_BIOLOGICAL_SEXES)[number];
 type ExperienceLevel = (typeof VALID_EXPERIENCE_LEVELS)[number];
 
@@ -39,6 +46,7 @@ export async function POST(req: NextRequest) {
   let body: {
     primaryGoal?: string;
     trainingLocation?: string;
+    gymTrainingStyle?: string;
     biologicalSex?: string;
     experienceLevel?: string;
     equipmentId?: string;
@@ -53,6 +61,7 @@ export async function POST(req: NextRequest) {
   const {
     primaryGoal,
     trainingLocation,
+    gymTrainingStyle,
     biologicalSex,
     experienceLevel,
     equipmentId,
@@ -81,6 +90,26 @@ export async function POST(req: NextRequest) {
       { status: 400 },
     );
   }
+
+  // gymTrainingStyle is required only when training at a gym — mirrors
+  // how equipmentId is conditionally required for the HOME flow below.
+
+  if (trainingLocation === "GYM") {
+    if (
+      !gymTrainingStyle ||
+      !(VALID_GYM_TRAINING_STYLES as readonly string[]).includes(
+        gymTrainingStyle,
+      )
+    ) {
+      return NextResponse.json(
+        {
+          error: `Invalid gymTrainingStyle. Must be one of: ${VALID_GYM_TRAINING_STYLES.join(", ")}`,
+        },
+        { status: 400 },
+      );
+    }
+  }
+
   if (
     !biologicalSex ||
     !(VALID_BIOLOGICAL_SEXES as readonly string[]).includes(biologicalSex)
@@ -156,6 +185,10 @@ export async function POST(req: NextRequest) {
         data: {
           primaryGoal: primaryGoal as PrimaryGoal,
           trainingLocation: trainingLocation as TrainingLocation,
+          gymTrainingStyle:
+            trainingLocation === "GYM"
+              ? (gymTrainingStyle as GymTrainingStyle)
+              : null,
           biologicalSex: biologicalSex as BiologicalSex,
           experienceLevel: experienceLevel as ExperienceLevel,
           onboardingComplete: true,

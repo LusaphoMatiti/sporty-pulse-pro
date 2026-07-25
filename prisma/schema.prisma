@@ -24,6 +24,7 @@ model User {
   identityAssignedAt    DateTime?
   primaryGoal           PrimaryGoal?
   trainingLocation      TrainingLocation?
+  gymTrainingStyle      GymTrainingStyle?
   biologicalSex         BiologicalSex?
   experienceLevel       UserLevel?
   onboardingCompletedAt DateTime?
@@ -166,6 +167,7 @@ model WorkoutPlan {
   instances          PlanInstance[]
   plannedSessions    PlannedSession[]
   equipment          Equipment?         @relation(fields: [equipmentId], references: [id])
+  gymStyleTarget  GymTrainingStyle?
 
   @@index([equipmentId])
   @@index([goalTarget])
@@ -460,3 +462,12 @@ enum ImpactLevel {
   MEDIUM
   HIGH
 }
+
+
+enum GymTrainingStyle {
+  BODYWEIGHT
+  CALISTHENICS
+    WEIGHTS_AND_MACHINES
+  WEIGHTS_ONLY
+}
+
