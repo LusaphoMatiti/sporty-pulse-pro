@@ -5,6 +5,7 @@ import {
   getEligiblePlansContext,
   computePlanLocks,
   sortPlansForCatalog,
+  buildWeeklySchedule,
 } from "@/lib/programaccess";
 import { InstanceStatus } from "@/generated/prisma";
 import { buildCloudinaryUrl } from "@/lib/cloudinary";
@@ -31,7 +32,7 @@ export async function GET(req: Request) {
       // findFirst is correct here, not findMany.
       prisma.planInstance.findFirst({
         where: { userId, status: InstanceStatus.ACTIVE },
-        select: { planId: true },
+        select: { planId: true, level: true },
       }),
       getUserAccess({ userId }),
     ]);
@@ -71,11 +72,44 @@ export async function GET(req: Request) {
       },
     });
 
+    const plans = sortPlansForCatalog(plansUnsorted);
+
+    // Additive: only computed for GYM users with an active plan. Doesn't
+    // touch anything the catalog grid below already relies on.
+    let weeklySchedule = null;
+    if (user?.trainingLocation === "GYM" && activeInstance?.planId) {
+      const activePlanSessions = await prisma.plannedSession.findMany({
+        where: { planId: activeInstance.planId },
+        select: {
+          sessionNumber: true,
+          focus: true,
+          estimatedMinutes: true,
+          plannedExercises: {
+            orderBy: { order: "asc" },
+            select: {
+              id: true,
+              order: true,
+              exercise: { select: { name: true } },
+              beginnerSets: true,
+              beginnerReps: true,
+              intermediateSets: true,
+              intermediateReps: true,
+              advancedSets: true,
+              advancedReps: true,
+            },
+          },
+        },
+      });
+      weeklySchedule = buildWeeklySchedule(
+        activePlanSessions,
+        activeInstance.level,
+      );
+    }
+
     // Catalog order: equipment-tied plans first, bodyweight after — see
     // sortPlansForCatalog in lib/programaccess.ts. This MUST match the
     // order resolver.ts uses, since computePlanLocks's cap-counting is
     // position-dependent.
-    const plans = sortPlansForCatalog(plansUnsorted);
 
     const declaredEntry = allUserEquipment.find((e) => e.source === "DECLARED");
     const declaredEquipmentName = declaredEntry?.equipment?.name ?? null;
@@ -140,6 +174,8 @@ export async function GET(req: Request) {
       },
       declaredEquipmentName,
       userIdentity: user?.identity ?? null,
+      trainingLocation: user?.trainingLocation ?? null,
+      weeklySchedule,
     });
   } catch (err) {
     console.error("[programs/GET] error:", err);

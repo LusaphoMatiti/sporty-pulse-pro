@@ -7,6 +7,109 @@ import {
   Prisma,
 } from "@/generated/prisma";
 
+// ── Weekly schedule (GYM only) ─────────────────────────────────────────────
+// Purely additive — does not touch MuscleGroup, which stays as the broad
+// UPPER/LOWER/CORE/FULLBODY categorization it already serves elsewhere.
+// This uses PlannedSession.focus (already a free-text field on every
+// session, e.g. "Legs", "Back", "Shoulders") to lay a plan's sessions
+// across the days of the week for the GYM schedule view
+
+export type ScheduleDay = {
+  dayIndex: number; // 0 = Monday ... 6 = Sunday
+  dayLabel: string;
+  sessionNumber: number | null;
+  focus: string | null;
+  isRestDay: boolean;
+};
+
+export type ScheduleExercise = {
+  id: string;
+  name: string;
+  sets: number;
+  reps: number;
+};
+
+const WEEK_DAY_LABELS = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+
+type SchedulePlannedExercise = {
+  id: string;
+  order: number;
+  exercise: { name: string };
+  beginnerSets: number;
+  beginnerReps: number;
+  intermediateSets: number;
+  intermediateReps: number;
+  advancedSets: number;
+  advancedReps: number;
+};
+
+type SchedulePlannedSession = {
+  sessionNumber: number;
+  focus: string;
+  estimatedMinutes: number;
+  plannedExercises: SchedulePlannedExercise[];
+};
+
+function pickSetsReps(pe: SchedulePlannedExercise, level: string) {
+  if (level === "ADVANCED")
+    return { sets: pe.advancedSets, reps: pe.advancedReps };
+  if (level === "INTERMEDIATE")
+    return { sets: pe.intermediateSets, reps: pe.intermediateReps };
+  return { sets: pe.beginnerSets, reps: pe.beginnerReps };
+}
+
+/**
+ * Lays a plan's sessions across the 7 days of the week, Monday first,
+ * in sessionNumber order. Extra days beyond sessionsPerWeek are rest days.
+ * Fixed pattern for v1 — no persisted day-of-week choice yet.
+ */
+export function buildWeeklySchedule(
+  plannedSessions: SchedulePlannedSession[],
+  level: string,
+): ScheduleDay[] {
+  const sorted = [...plannedSessions].sort(
+    (a, b) => a.sessionNumber - b.sessionNumber,
+  );
+
+  return WEEK_DAY_LABELS.map((dayLabel, dayIndex) => {
+    const session = sorted[dayIndex] ?? null;
+    if (!session) {
+      return {
+        dayIndex,
+        dayLabel,
+        sessionNumber: null,
+        focus: null,
+        estimatedMinutes: null,
+        exercises: [],
+        isRestDay: true,
+      };
+    }
+    const exercises = [...session.plannedExercises]
+      .sort((a, b) => a.order - b.order)
+      .map((pe) => {
+        const { sets, reps } = pickSetsReps(pe, level);
+        return { id: pe.id, name: pe.exercise.name, sets, reps };
+      });
+    return {
+      dayIndex,
+      dayLabel,
+      sessionNumber: session.sessionNumber,
+      focus: session.focus,
+      estimatedMinutes: session.estimatedMinutes,
+      exercises,
+      isRestDay: false,
+    };
+  });
+}
+
 // ── Caps ─────────────────────────────────────────────────────────────────
 // These are NOT activation-history counters. They're a fixed number of
 // catalog slots: exactly the first BODYWEIGHT_FREE_CAP bodyweight plans (in
