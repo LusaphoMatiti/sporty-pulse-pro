@@ -464,10 +464,18 @@ enum ImpactLevel {
 }
 
 
-enum GymTrainingStyle {
+enum GymTrainingStyle {   
   BODYWEIGHT
   CALISTHENICS
-    WEIGHTS_AND_MACHINES
+  WEIGHTS_AND_MACHINES
   WEIGHTS_ONLY
 }
+
+enum GymStyle {           
+  FREE_WEIGHT
+  CALISTHENIC
+  WEIGHTS_ONLY
+  WEIGHTS_MACHINE
+}
+
 

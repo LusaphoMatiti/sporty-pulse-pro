@@ -21,7 +21,7 @@
           "reps": "8",
           "tempo": "2-0-1-0",
           "rest": "60s",
-          "coachingFocus": "Controlled descent, explosive up. Don't grind \u2014 train to feel athletic.",
+          "coachingFocus": "Controlled descent, explosive up. Don't grind — train to feel athletic.",
           "id": "SQ003",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626390/Get_Fit_UpperLower_Split_Day_1_dio3bq.png",
           "videoUrl": "/exercises/videos/SQ003.mp4"
@@ -82,12 +82,13 @@
           "videoUrl": "/exercises/videos/CD005.mp4"
         }
       ],
-      "finisher": "Assault Bike: 4 x 20s sprint / 40s rest \u2014 max effort intervals",
+      "finisher": "Assault Bike: 4 x 20s sprint / 40s rest — max effort intervals",
       "cooldown": "5 min walk, hip flexor lunge 45s each, hamstring stretch 60s each, thoracic rotation 30s each side",
       "estimatedCalories": "520-640",
       "progressionNotes": "Increase box jump height monthly. Reduce rest periods by 5s every 2 weeks.",
       "equipment": null,
-      "description": "A full-body gym circuit blending barbell lifts with explosive movements. Builds athletic capacity, strength endurance, and cardiovascular fitness simultaneously."
+      "description": "A full-body gym circuit blending barbell lifts with explosive movements. Builds athletic capacity, strength endurance, and cardiovascular fitness simultaneously.",
+      "gymStyle": "WEIGHTS_ONLY"
     },
     {
       "workoutName": "AMRAP",
@@ -108,7 +109,7 @@
           "reps": "15",
           "tempo": "1-0-1-0",
           "rest": "30s",
-          "coachingFocus": "Higher reps for fitness \u2014 keep form sharp even when fatigued. Upright torso. Full depth.",
+          "coachingFocus": "Higher reps for fitness — keep form sharp even when fatigued. Upright torso. Full depth.",
           "id": "SQ002",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
           "videoUrl": "/exercises/videos/SQ002.mp4"
@@ -174,7 +175,8 @@
       "estimatedCalories": "500-620",
       "progressionNotes": "Track completion time for the circuit. Aim to reduce total session time by 2-3 min over 4 weeks.",
       "equipment": null,
-      "description": "An AMRAP-style session using functional movements to test work capacity. Goblet squats, kettlebell swings, and rows cycle continuously for maximum conditioning output."
+      "description": "An AMRAP-style session using functional movements to test work capacity. Goblet squats, kettlebell swings, and rows cycle continuously for maximum conditioning output.",
+      "gymStyle": "WEIGHTS_ONLY"
     },
     {
       "workoutName": "Cardio Strength",
@@ -206,7 +208,7 @@
           "reps": "15",
           "tempo": "2-0-1-0",
           "rest": "45s",
-          "coachingFocus": "Hands elevated reduces load \u2014 perfect entry point. Full ROM is the priority.",
+          "coachingFocus": "Hands elevated reduces load — perfect entry point. Full ROM is the priority.",
           "id": "PH007",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
           "videoUrl": "/exercises/videos/PH007.mp4"
@@ -261,7 +263,8 @@
       "estimatedCalories": "300-380",
       "progressionNotes": "Beginner base-building. Progress when each exercise feels 'easy'. Milestone: push-up on flat, 3x15 clean reps.",
       "equipment": null,
-      "description": "A beginner-friendly gym session alternating strength sets with cardio bursts. Builds a fitness base by pairing bodyweight movements with short, structured rest periods."
+      "description": "A beginner-friendly gym session alternating strength sets with cardio bursts. Builds a fitness base by pairing bodyweight movements with short, structured rest periods.",
+      "gymStyle": "FREE_WEIGHT"
     },
     {
       "workoutName": "Power Session",
@@ -282,7 +285,7 @@
           "reps": "4",
           "tempo": "Explosive",
           "rest": "90s",
-          "coachingFocus": "Triple extension \u2014 ankle, knee, hip. Aggressive high pull. Catch in quarter squat.",
+          "coachingFocus": "Triple extension — ankle, knee, hip. Aggressive high pull. Catch in quarter squat.",
           "id": "CD010",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
           "videoUrl": "/exercises/videos/CD010.mp4"
@@ -346,7 +349,8 @@
       "estimatedCalories": "620-750",
       "progressionNotes": "Advanced: periodise power work in 4-week blocks.",
       "equipment": null,
-      "description": "An explosive advanced session built around power cleans, box jumps, and plyometrics. Develops athletic power, speed-strength, and neuromuscular coordination."
+      "description": "An explosive advanced session built around power cleans, box jumps, and plyometrics. Develops athletic power, speed-strength, and neuromuscular coordination.",
+      "gymStyle": "WEIGHTS_ONLY"
     },
     {
       "workoutName": "Hybrid Fitness",
@@ -376,7 +380,7 @@
           "exercise": "Kettlebell Swing",
           "sets": 4,
           "reps": "20",
-          "tempo": "Rhythmic \u2014 explosive hip snap",
+          "tempo": "Rhythmic — explosive hip snap",
           "rest": "45s",
           "coachingFocus": "Bridge between strength and conditioning. Cardio through strength.",
           "id": "HI003",
@@ -389,7 +393,7 @@
           "reps": "8-12",
           "tempo": "2-1-2-0",
           "rest": "60s",
-          "coachingFocus": "Strength pull-up \u2014 pure and demanding. Dead hang, chin over bar.",
+          "coachingFocus": "Strength pull-up — pure and demanding. Dead hang, chin over bar.",
           "id": "PLV001",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704136/Chin_Up_Pull_Up_lylqeo.png",
           "videoUrl": "/exercises/videos/PLV001.mp4"
@@ -428,12 +432,13 @@
           "videoUrl": "/exercises/videos/CD006.mp4"
         }
       ],
-      "finisher": "Kettlebell Swing x50 for time \u2014 record time and beat it next session",
+      "finisher": "Kettlebell Swing x50 for time — record time and beat it next session",
       "cooldown": "Row easy 2 min, hamstring stretch 60s each, lat stretch 45s each, deep breathing 60s",
       "estimatedCalories": "540-660",
       "progressionNotes": "Hybrid training requires managing both strength and cardio fatigue. Keep a training log.",
       "equipment": null,
-      "description": "A strength-meets-cardio session pairing compound lifts with high-intensity intervals. Pulls, swings, and wall balls combine to build a well-rounded fitness base."
+      "description": "A strength-meets-cardio session pairing compound lifts with high-intensity intervals. Pulls, swings, and wall balls combine to build a well-rounded fitness base.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Bodyweight Burn",
@@ -607,7 +612,8 @@
       "estimatedCalories": "560-680",
       "progressionNotes": "HIIS training: track reps per interval across sessions.",
       "equipment": null,
-      "description": "High-intensity intervals fused with kettlebell and barbell strength work. Pushes cardiovascular limits while building total body strength through compound movements."
+      "description": "High-intensity intervals fused with kettlebell and barbell strength work. Pushes cardiovascular limits while building total body strength through compound movements.",
+      "gymStyle": "WEIGHTS_ONLY"
     },
     {
       "workoutName": "Lower Body Circuit",
@@ -628,7 +634,7 @@
           "reps": "8-10",
           "tempo": "2-0-1-0",
           "rest": "75s",
-          "coachingFocus": "Fitness requires strength. Squat is king. Controlled descent \u2014 explosive ascent.",
+          "coachingFocus": "Fitness requires strength. Squat is king. Controlled descent — explosive ascent.",
           "id": "SQ003",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626390/Get_Fit_UpperLower_Split_Day_1_dio3bq.png",
           "videoUrl": "/exercises/videos/SQ003.mp4"
@@ -650,7 +656,7 @@
           "reps": "10 each",
           "tempo": "2-0-1-0",
           "rest": "60s between legs",
-          "coachingFocus": "Unilateral fitness \u2014 address imbalances. Rear foot elevated. Front foot drives.",
+          "coachingFocus": "Unilateral fitness — address imbalances. Rear foot elevated. Front foot drives.",
           "id": "LU003",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Bulgarian_Split_Squat_mdoejf.png",
           "videoUrl": "/exercises/videos/LU003.mp4"
@@ -694,7 +700,8 @@
       "estimatedCalories": "500-600",
       "progressionNotes": "Lower body fitness day. Track total session completion time.",
       "equipment": null,
-      "description": "An upper/lower split lower body session combining squats, hinges, and jumps. Builds leg strength and athletic power through structured gym training."
+      "description": "An upper/lower split lower body session combining squats, hinges, and jumps. Builds leg strength and athletic power through structured gym training.",
+      "gymStyle": "WEIGHTS_ONLY"
     },
     {
       "workoutName": "Upper Body Circuit",
@@ -781,7 +788,8 @@
       "estimatedCalories": "480-580",
       "progressionNotes": "Upper body fitness. Track pull-up max reps monthly.",
       "equipment": null,
-      "description": "The upper body complement to the split, blending pressing, pulling, and battle rope conditioning. Develops pushing and pulling strength alongside metabolic output."
+      "description": "The upper body complement to the split, blending pressing, pulling, and battle rope conditioning. Develops pushing and pulling strength alongside metabolic output.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Recovery Flow",
@@ -864,7 +872,7 @@
         }
       ],
       "finisher": "Walk 5 min at easy pace outdoors if possible",
-      "cooldown": "15 min full body stretch \u2014 hold each position for 60-90s, focus on breathing and parasympathetic recovery",
+      "cooldown": "15 min full body stretch — hold each position for 60-90s, focus on breathing and parasympathetic recovery",
       "estimatedCalories": "160-220",
       "progressionNotes": "Recovery sessions should feel restorative, not challenging.",
       "equipment": null,
@@ -920,9 +928,9 @@
           "exercise": "Box Jump",
           "sets": 4,
           "reps": "10",
-          "tempo": "Explosive \u2014 reset each rep",
+          "tempo": "Explosive — reset each rep",
           "rest": "45s",
-          "coachingFocus": "Full hip extension at top of box. Step down \u2014 always.",
+          "coachingFocus": "Full hip extension at top of box. Step down — always.",
           "id": "CD004",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
           "videoUrl": "/exercises/videos/CD004.mp4"
@@ -951,11 +959,12 @@
         }
       ],
       "finisher": "For Time: 21-15-9 of Kettlebell Swing + Push-Up. Record time.",
-      "cooldown": "Walk 5 min, full body stretch \u2014 minimum 10 min.",
+      "cooldown": "Walk 5 min, full body stretch — minimum 10 min.",
       "estimatedCalories": "650-800",
       "progressionNotes": "Advanced: track WOD times. Progress load on power cleans and thrusters monthly.",
       "equipment": null,
-      "description": "A WOD-style advanced session with Olympic lifts, gymnastics, and high-intensity cardio. Challenges total body fitness, work capacity, and mental toughness simultaneously."
+      "description": "A WOD-style advanced session with Olympic lifts, gymnastics, and high-intensity cardio. Challenges total body fitness, work capacity, and mental toughness simultaneously.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Bodyweight Builder",
@@ -1114,7 +1123,8 @@
       "estimatedCalories": "600-740",
       "progressionNotes": "Sprint fitness: track 30m sprint time monthly.",
       "equipment": null,
-      "description": "An advanced athletic circuit combining sprint intervals with barbell strength work. Develops speed, power, and muscular endurance for high-performance conditioning."
+      "description": "An advanced athletic circuit combining sprint intervals with barbell strength work. Develops speed, power, and muscular endurance for high-performance conditioning.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Express Workout",
@@ -1135,7 +1145,7 @@
           "reps": "20",
           "tempo": "Rhythmic",
           "rest": "20s",
-          "coachingFocus": "Express format \u2014 minimal rest. Explosive hip snap. Breathing is your pacing tool.",
+          "coachingFocus": "Express format — minimal rest. Explosive hip snap. Breathing is your pacing tool.",
           "id": "HI003",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626978/Kettlebell_Swing_brmuxc.png",
           "videoUrl": "/exercises/videos/HI003.mp4"
@@ -1196,12 +1206,13 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "Assault Bike: 1 min max effort \u2014 everything you have left. Record calories in 1 min.",
-      "cooldown": "5 min walk, basic stretch sequence \u2014 hamstrings, hip flexors, chest, lats",
+      "finisher": "Assault Bike: 1 min max effort — everything you have left. Record calories in 1 min.",
+      "cooldown": "5 min walk, basic stretch sequence — hamstrings, hip flexors, chest, lats",
       "estimatedCalories": "420-520",
       "progressionNotes": "Express sessions: track total workout density. Add reps or reduce rest every 2 weeks.",
       "equipment": null,
-      "description": "A time-efficient full-body session designed to build fitness in under 30 minutes. Kettlebell and dumbbell circuits keep intensity high with minimal rest."
+      "description": "A time-efficient full-body session designed to build fitness in under 30 minutes. Kettlebell and dumbbell circuits keep intensity high with minimal rest.",
+      "gymStyle": "WEIGHTS_ONLY"
     },
     {
       "workoutName": "Machine & Weights",
@@ -1288,7 +1299,8 @@
       "estimatedCalories": "320-400",
       "progressionNotes": "Beginner machine-based fitness. Progress when 15 reps feels easy. Transition from machine to free weight equivalents over 8-12 weeks.",
       "equipment": null,
-      "description": "A beginner-friendly gym session using machines and dumbbells to build fitness foundations. Safe, structured, and ideal for learning movement patterns in a gym environment."
+      "description": "A beginner-friendly gym session using machines and dumbbells to build fitness foundations. Safe, structured, and ideal for learning movement patterns in a gym environment.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Conditioning Challenge",
@@ -1342,7 +1354,7 @@
           "reps": "10",
           "tempo": "Max controlled effort",
           "rest": "45s",
-          "coachingFocus": "50 total burpees across 5 sets. Paced effort \u2014 equal output per set. That's fitness discipline.",
+          "coachingFocus": "50 total burpees across 5 sets. Paced effort — equal output per set. That's fitness discipline.",
           "id": "CD001",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
           "videoUrl": "/exercises/videos/CD001.mp4"
@@ -1370,8 +1382,8 @@
           "videoUrl": "/exercises/videos/SQ012.mp4"
         }
       ],
-      "finisher": "Plank hold: 90s \u2014 stillness and breath control after high-intensity work.",
-      "cooldown": "10 min walk if possible, full stretch sequence \u2014 quad, hip flexor, hamstring, chest, lat, shoulder",
+      "finisher": "Plank hold: 90s — stillness and breath control after high-intensity work.",
+      "cooldown": "10 min walk if possible, full stretch sequence — quad, hip flexor, hamstring, chest, lat, shoulder",
       "estimatedCalories": "480-580",
       "progressionNotes": "Ladder training: track total completion time for the full session.",
       "equipment": null,
@@ -1394,7 +1406,7 @@
           "exercise": "Box Jump",
           "sets": 5,
           "reps": "6",
-          "tempo": "Max intent \u2014 reset each rep",
+          "tempo": "Max intent — reset each rep",
           "rest": "60s",
           "coachingFocus": "Reactive power. Explosive hip extension. Soft landing with full foot. Step down.",
           "id": "CD004",
@@ -1460,7 +1472,8 @@
       "estimatedCalories": "560-680",
       "progressionNotes": "Sport fitness: track measurable output monthly.",
       "equipment": null,
-      "description": "A sport-prep session combining box jumps, barbell squats, and sprint drills. Designed to build the reactive strength and athletic power needed for sport performance."
+      "description": "A sport-prep session combining box jumps, barbell squats, and sprint drills. Designed to build the reactive strength and athletic power needed for sport performance.",
+      "gymStyle": "WEIGHTS_ONLY"
     },
     {
       "workoutName": "MetCon",
@@ -1514,7 +1527,7 @@
           "reps": "250m sprint",
           "tempo": "Max effort",
           "rest": "90s",
-          "coachingFocus": "250m sprint \u2014 all-out effort. Legs then back then arms. Record your time.",
+          "coachingFocus": "250m sprint — all-out effort. Legs then back then arms. Record your time.",
           "id": "CD006",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779710454/Rowing_Erg_Sprint_pk4g5w.png",
           "videoUrl": "/exercises/videos/CD006.mp4"
@@ -1531,12 +1544,13 @@
           "videoUrl": "/exercises/videos/CD001.mp4"
         }
       ],
-      "finisher": "AMRAP 5 min: 5 Thrusters + 5 Pull-Ups + 10 Burpees \u2014 record rounds completed",
+      "finisher": "AMRAP 5 min: 5 Thrusters + 5 Pull-Ups + 10 Burpees — record rounds completed",
       "cooldown": "5 min walk, full body stretch, hip flexors 60s each, hamstrings 60s each, child's pose 90s, deep breathing 2 min",
       "estimatedCalories": "580-700",
       "progressionNotes": "MetCon sessions: track the AMRAP score. Add 1+ round over 4 weeks.",
       "equipment": null,
-      "description": "A metabolic conditioning session using kettlebells, rowing, and box jumps. Drives cardiovascular fitness and muscular endurance through structured high-intensity work."
+      "description": "A metabolic conditioning session using kettlebells, rowing, and box jumps. Drives cardiovascular fitness and muscular endurance through structured high-intensity work.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Total Body Circuit",
@@ -1590,7 +1604,7 @@
           "reps": "8",
           "tempo": "Explosive",
           "rest": "45s",
-          "coachingFocus": "Reactive power \u2014 critical for functional fitness. Express power every rep.",
+          "coachingFocus": "Reactive power — critical for functional fitness. Express power every rep.",
           "id": "CD004",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
           "videoUrl": "/exercises/videos/CD004.mp4"
@@ -1607,12 +1621,13 @@
           "videoUrl": "/exercises/videos/PLV001.mp4"
         }
       ],
-      "finisher": "Sled Push: 4 x 20m \u2014 add moderate load. Conditioning and leg strength in one brutal finisher.",
+      "finisher": "Sled Push: 4 x 20m — add moderate load. Conditioning and leg strength in one brutal finisher.",
       "cooldown": "Walk 3 min, hip circle 60s each, thoracic rotation 45s each, wrist flexor stretch 30s each",
       "estimatedCalories": "500-620",
       "progressionNotes": "Functional fitness progression: increase carry distance monthly, increase KB weight on swings when 25 reps feel comfortable.",
       "equipment": null,
-      "description": "A movement-quality focused circuit using Turkish get-ups, carries, and swings. Develops total body coordination, stability, and functional strength."
+      "description": "A movement-quality focused circuit using Turkish get-ups, carries, and swings. Develops total body coordination, stability, and functional strength.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Endurance Strength",
@@ -1633,7 +1648,7 @@
           "reps": "20",
           "tempo": "1-0-1-0",
           "rest": "45s",
-          "coachingFocus": "Moderate weight. High reps. Breathing is key \u2014 exhale on the way up.",
+          "coachingFocus": "Moderate weight. High reps. Breathing is key — exhale on the way up.",
           "id": "SQ002",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625877/Dumbbell_Hip_Thrust_ad6xmo.png",
           "videoUrl": "/exercises/videos/SQ002.mp4"
@@ -1683,12 +1698,13 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "Jump Rope: 5 min continuous at moderate pace \u2014 aerobic capacity builder",
+      "finisher": "Jump Rope: 5 min continuous at moderate pace — aerobic capacity builder",
       "cooldown": "10 min walk, hip flexor stretch 60s each, hamstring stretch 60s each, child's pose 90s",
       "estimatedCalories": "450-560",
       "progressionNotes": "Endurance strength improves through increasing density. Track total reps completed per session.",
       "equipment": null,
-      "description": "A long-format moderate intensity session blending strength movements with cardio machine work. Builds aerobic base and muscular endurance through sustained effort."
+      "description": "A long-format moderate intensity session blending strength movements with cardio machine work. Builds aerobic base and muscular endurance through sustained effort.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Kettlebell Conditioning Beginner",
@@ -1859,7 +1875,7 @@
           "exercise": "Kettlebell Swing",
           "sets": 4,
           "reps": "25",
-          "tempo": "Rhythmic \u2014 max hip drive",
+          "tempo": "Rhythmic — max hip drive",
           "rest": "45s",
           "coachingFocus": "25 reps is a conditioning statement. Breathe on the downswing.",
           "id": "KB004",
@@ -1922,7 +1938,7 @@
           "reps": "15",
           "tempo": "2-1-1-0",
           "rest": "45s",
-          "coachingFocus": "Band adds resistance at lockout. Squat for fitness \u2014 controlled but purposeful.",
+          "coachingFocus": "Band adds resistance at lockout. Squat for fitness — controlled but purposeful.",
           "id": "RB001",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301884/Resistance_Band_Squat_yp0vyq.png"
         },
@@ -2013,7 +2029,7 @@
           "reps": "20",
           "tempo": "1-0-1-0",
           "rest": "45s",
-          "coachingFocus": "High rep band squat. Continuous tension. Legs are burning \u2014 that's the point.",
+          "coachingFocus": "High rep band squat. Continuous tension. Legs are burning — that's the point.",
           "id": "RB001",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301884/Resistance_Band_Squat_yp0vyq.png"
         },
@@ -2104,7 +2120,7 @@
           "reps": "25",
           "tempo": "1-0-1-0",
           "rest": "45s",
-          "coachingFocus": "25 reps. Constant tension. Legs on fire \u2014 that's athletic conditioning.",
+          "coachingFocus": "25 reps. Constant tension. Legs on fire — that's athletic conditioning.",
           "id": "RB001",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301884/Resistance_Band_Squat_yp0vyq.png"
         },
@@ -2306,7 +2322,7 @@
       "estimatedCalories": "380-460",
       "progressionNotes": "Intermediate: track thruster load and aim to increase every 3-4 weeks.",
       "equipment": "Dumbbell",
-      "description": "An intermediate dumbbell fitness circuit using thrusters, renegade rows, and conditioning work. High intensity and full body \u2014 no gym needed."
+      "description": "An intermediate dumbbell fitness circuit using thrusters, renegade rows, and conditioning work. High intensity and full body — no gym needed."
     },
     {
       "workoutName": "Athlete Mode",
@@ -2671,7 +2687,7 @@
       "estimatedCalories": "180-240",
       "progressionNotes": "Rebuild: target 4x60s rope sets before progressing to intermediate.",
       "equipment": "Jump Rope",
-      "description": "A beginner jump rope fitness session alternating rope intervals with strength and cardio. Low complexity, high energy \u2014 the Rebuild entry point."
+      "description": "A beginner jump rope fitness session alternating rope intervals with strength and cardio. Low complexity, high energy — the Rebuild entry point."
     },
     {
       "workoutName": "Cardio Circuit",
@@ -3666,6 +3682,528 @@
       "progressionNotes": "Exec Perf: track shouldering reps per minute and carry time over distance. Periodise monthly.",
       "equipment": "Sandbag",
       "description": "An advanced sandbag performance session using heavy shouldering, Husafell carries, and Zercher squats. Performance Conditioning template."
+    },
+    {
+      "workoutName": "Gymnastic Foundations",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "gymStyle": "CALISTHENIC",
+      "collection": "Calisthenics Performance Series",
+      "duration": "40 min",
+      "intensity": "LOW_MODERATE",
+      "warmup": "5 min easy row or bike, arm circles x10, bodyweight squat x10, dead hang 15s x2",
+      "mainWorkout": [
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-1-1-0",
+          "rest": "45s",
+          "coachingFocus": "Full body movement to raise your heart rate and groove the pattern.",
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ001.mp4"
+        },
+        {
+          "exercise": "Scapular Pull-Up",
+          "sets": 3,
+          "reps": "8-10",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "coachingFocus": "The starting point for every hanging exercise you'll build toward.",
+          "id": "PLV018",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783084714/Scapular_Pull-Up_chg8ae.png",
+          "videoUrl": "/exercises/videos/PLV018.mp4"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "10",
+          "tempo": "2-1-1-0",
+          "rest": "45s",
+          "coachingFocus": "Regress to an incline surface if a full push-up isn't clean yet.",
+          "id": "PH001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png",
+          "videoUrl": "/exercises/videos/PH001.mp4"
+        },
+        {
+          "exercise": "Split Squat",
+          "sets": 3,
+          "reps": "10 each leg",
+          "tempo": "2-1-1-0",
+          "rest": "45s",
+          "coachingFocus": "Control the descent — this is about balance as much as strength.",
+          "id": "LU005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311811/Split_Squat_ltrvqb.png",
+          "videoUrl": "/exercises/videos/LU005.mp4"
+        },
+        {
+          "exercise": "Dead Bug",
+          "sets": 3,
+          "reps": "10 each side",
+          "tempo": "2-1-2-0",
+          "rest": "45s",
+          "coachingFocus": "Lower back stays pinned to the floor the entire time.",
+          "id": "CO002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Dead_bug_xzgwjd.png",
+          "videoUrl": "/exercises/videos/CO002.mp4"
+        },
+        {
+          "exercise": "Bear Crawl",
+          "sets": 3,
+          "reps": "20s",
+          "tempo": "Controlled",
+          "rest": "45s",
+          "coachingFocus": "Hips low, knees hovering just off the floor. Move with control, not speed.",
+          "id": "CD020",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783306478/Bear_Crawl_sgnvdl.png",
+          "videoUrl": "/exercises/videos/CD020.mp4"
+        }
+      ],
+      "cooldown": "Child's pose 60s, hip flexor stretch 45s each, shoulder stretch 30s each",
+      "estimatedCalories": "220-280",
+      "progressionNotes": "Focus entirely on movement quality this phase — once every exercise feels controlled and repeatable, we'll start adding rig work like negatives and hangs.",
+      "equipment": null,
+      "description": "A gentle first introduction to training in the gym's calisthenics area — no rig skills required yet, just the movement foundations that everything else gets built on."
+    },
+    {
+      "workoutName": "Bar Athlete",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "gymStyle": "CALISTHENIC",
+      "collection": "Calisthenics Performance Series",
+      "duration": "50 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "5 min row, dynamic mobility, 2 rounds: 5 pull-ups + 8 push-ups + 10 squats easy pace",
+      "mainWorkout": [
+        {
+          "exercise": "Pull-Up",
+          "sets": 4,
+          "reps": "8",
+          "tempo": "2-0-2-0",
+          "rest": "75s",
+          "coachingFocus": "Full dead hang to chin-over-bar every rep. Add a band if needed to keep quality high.",
+          "id": "PLV001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647914/Pull-Up_y2avik.png",
+          "videoUrl": "/exercises/videos/PLV001.mp4"
+        },
+        {
+          "exercise": "Chest Dip",
+          "sets": 4,
+          "reps": "10",
+          "tempo": "2-0-2-0",
+          "rest": "75s",
+          "coachingFocus": "Control the bottom — don't bounce out of the stretch.",
+          "id": "PH006",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296814/Chest_Dip_i0bn9b.png",
+          "videoUrl": "/exercises/videos/PH006.mp4"
+        },
+        {
+          "exercise": "Pistol Squat",
+          "sets": 3,
+          "reps": "6 each leg",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Use a rig post for balance assistance if you need it — the goal is control.",
+          "id": "SQ008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872935/Box_Pistol_Squat_zuvbz8.png",
+          "videoUrl": "/exercises/videos/SQ008.mp4"
+        },
+        {
+          "exercise": "Hanging Leg Raise",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Keep the swing out of it. Slow and controlled beats fast and sloppy.",
+          "id": "CO007",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780315042/Hanging_Leg_Raise_o9xy7v.png",
+          "videoUrl": "/exercises/videos/CO007.mp4"
+        },
+        {
+          "exercise": "Handstand Push-Up",
+          "sets": 3,
+          "reps": "6-8",
+          "tempo": "2-1-2-0",
+          "rest": "75s",
+          "coachingFocus": "Feet on a box or wall for support. Head lightly taps the floor at the bottom.",
+          "id": "PV005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704135/Handstand_Push-Up_qn7vbf.png",
+          "videoUrl": "/exercises/videos/PV005.mp4"
+        },
+        {
+          "exercise": "Burpee",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "Fast",
+          "rest": "60s",
+          "coachingFocus": "Full-body conditioning finisher pace — chest to the floor, full jump at the top.",
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
+          "videoUrl": "/exercises/videos/CD001.mp4"
+        }
+      ],
+      "cooldown": "Foam roll upper back, doorway stretch 45s, hip flexor stretch 45s each, breathwork 60s",
+      "estimatedCalories": "380-450",
+      "progressionNotes": "When 4x8 pull-ups and dips both feel controlled, add a 3-5s pause at the hardest point of each rep before chasing higher rep counts.",
+      "equipment": null,
+      "description": "A well-rounded athletic session blending rig-based pulling and pressing strength with bodyweight conditioning — the kind of programming that builds real functional capacity, not just isolated muscle."
+    },
+    {
+      "workoutName": "Calisthenics Performance",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "gymStyle": "CALISTHENIC",
+      "collection": "Calisthenics Performance Series",
+      "duration": "55 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "6 min row, dynamic mobility, 2 rounds: 5 chest-to-bar pull-ups + 8 dips + 10 jump squats",
+      "mainWorkout": [
+        {
+          "exercise": "Muscle-Up",
+          "sets": 5,
+          "reps": "4",
+          "tempo": "Explosive",
+          "rest": "2min",
+          "coachingFocus": "Full extension at the top. If quality drops, switch to chest-to-bar pull-ups for remaining sets.",
+          "id": "PLV011",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783084711/Muscle-Up_amigpp.png",
+          "videoUrl": "/exercises/videos/PLV011.mp4"
+        },
+        {
+          "exercise": "Handstand Push-Up",
+          "sets": 4,
+          "reps": "8",
+          "tempo": "2-0-2-0",
+          "rest": "90s",
+          "coachingFocus": "Chase full range of motion before chasing extra reps.",
+          "id": "PV005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704135/Handstand_Push-Up_qn7vbf.png",
+          "videoUrl": "/exercises/videos/PV005.mp4"
+        },
+        {
+          "exercise": "Toes-to-Bar",
+          "sets": 4,
+          "reps": "10-12",
+          "tempo": "Controlled",
+          "rest": "75s",
+          "coachingFocus": "Toes touch the bar with control — no wild kipping swing.",
+          "id": "CO017",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296852/Toes-to-Bar_nrmvc8.png",
+          "videoUrl": "/exercises/videos/CO017.mp4"
+        },
+        {
+          "exercise": "Pistol Squat",
+          "sets": 4,
+          "reps": "8 each leg",
+          "tempo": "2-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Full depth, controlled tempo — this is a strength movement, not a speed one.",
+          "id": "SQ008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872935/Box_Pistol_Squat_zuvbz8.png",
+          "videoUrl": "/exercises/videos/SQ008.mp4"
+        },
+        {
+          "exercise": "Archer Pull-Up",
+          "sets": 3,
+          "reps": "6 each side",
+          "tempo": "2-1-2-0",
+          "rest": "90s",
+          "coachingFocus": "One arm dominant, the other assists lightly. Alternate sides each rep.",
+          "id": "PLV020",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296808/Archer_Pull-Up_kui3tx.png",
+          "videoUrl": "/exercises/videos/PLV020.mp4"
+        },
+        {
+          "exercise": "Broad Jump",
+          "sets": 3,
+          "reps": "6",
+          "tempo": "Explosive",
+          "rest": "60s",
+          "coachingFocus": "Full hip extension on every jump — reset fully between reps for max output.",
+          "id": "CD013",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780585067/Broad_Jump_cizant.png",
+          "videoUrl": "/exercises/videos/CD013.mp4"
+        }
+      ],
+      "cooldown": "Foam roll lats and hip flexors, wrist and shoulder stretch, breathwork 90s",
+      "estimatedCalories": "480-550",
+      "progressionNotes": "This session is built around skill under fatigue. If muscle-ups break down early, cap that set and bank the volume elsewhere — chasing bad reps here builds bad patterns.",
+      "equipment": null,
+      "description": "An elite-level gymnastic-strength session combining explosive skill work with heavy isometric core demand and lower-body power — built for someone who has already mastered the basics."
+    },
+    {
+      "workoutName": "Functional Bodyweight Flow",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "gymStyle": "FREE_WEIGHT",
+      "collection": "Bodyweight Athletic Series",
+      "duration": "40 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "5 min light jog or row, high knees x20, walking lunge x10, arm circles x10",
+      "mainWorkout": [
+        {
+          "exercise": "Jump Squat",
+          "sets": 4,
+          "reps": "12",
+          "tempo": "Explosive",
+          "rest": "60s",
+          "coachingFocus": "Soft landing, full hip extension at the top of every rep.",
+          "id": "SQ012",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311621/Jump_Squat_wxcxe7.png",
+          "videoUrl": "/exercises/videos/SQ012.mp4"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 4,
+          "reps": "12-15",
+          "tempo": "2-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Steady pace — this is a strength-endurance builder, not a max-effort set.",
+          "id": "PH001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png",
+          "videoUrl": "/exercises/videos/PH001.mp4"
+        },
+        {
+          "exercise": "Reverse Lunge to Knee Drive",
+          "sets": 3,
+          "reps": "10 each leg",
+          "tempo": "2-0-1-0",
+          "rest": "45s",
+          "coachingFocus": "Drive the knee up explosively at the top for a balance and power challenge.",
+          "id": "LU014",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301886/Reverse_Lunge_to_Knee_Drive_zvajgn.png",
+          "videoUrl": "/exercises/videos/LU014.mp4"
+        },
+        {
+          "exercise": "Mountain Climbers",
+          "sets": 4,
+          "reps": "30s",
+          "tempo": "Fast",
+          "rest": "30s",
+          "coachingFocus": "Hips low, knees driving briskly toward the chest.",
+          "id": "CD002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625728/Mountain_climber_q2fd3c.png",
+          "videoUrl": "/exercises/videos/CD002.mp4"
+        },
+        {
+          "exercise": "Side Plank",
+          "sets": 3,
+          "reps": "30s each side",
+          "tempo": "Isometric",
+          "rest": "30s",
+          "coachingFocus": "Stack hips and shoulders — resist the urge to rotate forward.",
+          "id": "CO009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Side_Planks_sjrxva.png",
+          "videoUrl": "/exercises/videos/CO009.mp4"
+        },
+        {
+          "exercise": "Broad Jump",
+          "sets": 3,
+          "reps": "8",
+          "tempo": "Explosive",
+          "rest": "45s",
+          "coachingFocus": "Full extension on takeoff, stick the landing before resetting.",
+          "id": "CD013",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780585067/Broad_Jump_cizant.png",
+          "videoUrl": "/exercises/videos/CD013.mp4"
+        }
+      ],
+      "cooldown": "Child's pose 60s, hip flexor stretch 45s each, quad stretch 30s each",
+      "estimatedCalories": "320-390",
+      "progressionNotes": "Once this feels smooth at a steady pace, cut rest periods by 10s across the board before adding an extra round.",
+      "equipment": null,
+      "description": "A functional, athletic-style bodyweight session blending explosive lower-body power with steady strength-endurance work — no equipment needed, just open floor space."
+    },
+    {
+      "workoutName": "Athletic Bodyweight Challenge",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "gymStyle": "FREE_WEIGHT",
+      "collection": "Bodyweight Athletic Series",
+      "duration": "50 min",
+      "intensity": "HIGH",
+      "warmup": "6 min row or jog, dynamic mobility, 2 rounds: 10 squats + 8 push-ups + 20s plank easy pace",
+      "mainWorkout": [
+        {
+          "exercise": "Burpee",
+          "sets": 5,
+          "reps": "15",
+          "tempo": "Fast",
+          "rest": "45s",
+          "coachingFocus": "Chest to the floor, full jump at the top — this sets the intensity for the session.",
+          "id": "CD001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Burpees_wtdw71.png",
+          "videoUrl": "/exercises/videos/CD001.mp4"
+        },
+        {
+          "exercise": "Pistol Squat",
+          "sets": 4,
+          "reps": "8 each leg",
+          "tempo": "2-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Full control on the way down — this is a strength move even inside a conditioning session.",
+          "id": "SQ008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872935/Box_Pistol_Squat_zuvbz8.png",
+          "videoUrl": "/exercises/videos/SQ008.mp4"
+        },
+        {
+          "exercise": "Handstand Push-Up",
+          "sets": 4,
+          "reps": "8",
+          "tempo": "2-0-2-0",
+          "rest": "75s",
+          "coachingFocus": "Feet supported on a wall — chase full range before chasing extra reps.",
+          "id": "PV005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704135/Handstand_Push-Up_qn7vbf.png",
+          "videoUrl": "/exercises/videos/PV005.mp4"
+        },
+        {
+          "exercise": "Plyometric Lunge (Jump Lunge)",
+          "sets": 4,
+          "reps": "12 each leg",
+          "tempo": "Explosive",
+          "rest": "60s",
+          "coachingFocus": "Switch legs mid-air, land soft and immediately drop into the next rep.",
+          "id": "LU013",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311664/Jump_Lunge_jscko8.png",
+          "videoUrl": "/exercises/videos/LU013.mp4"
+        },
+        {
+          "exercise": "Sprint Intervals",
+          "sets": 4,
+          "reps": "20s",
+          "tempo": "Max effort",
+          "rest": "40s",
+          "coachingFocus": "All-out effort for 20 seconds — this is where your conditioning ceiling gets built.",
+          "id": "CD011",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783376333/Sprint_Interval_wfkagn.png",
+          "videoUrl": "/exercises/videos/CD011.mp4"
+        },
+        {
+          "exercise": "Hollow Body Hold",
+          "sets": 4,
+          "reps": "30-40s",
+          "tempo": "Isometric",
+          "rest": "45s",
+          "coachingFocus": "Full-body tension — lower back stays pinned to the floor.",
+          "id": "CO004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625712/Hollow_Body_Hold_szi4by.png",
+          "videoUrl": "/exercises/videos/CO004.mp4"
+        }
+      ],
+      "cooldown": "Foam roll full body, extended hip flexor stretch 60s each, breathwork 90s",
+      "estimatedCalories": "460-540",
+      "progressionNotes": "This session is intentionally brutal — if quality drops on burpees or pistols past round 3, that's your current ceiling. Bank the volume and chase one more clean round next week.",
+      "equipment": null,
+      "description": "An advanced athletic-conditioning gauntlet using nothing but bodyweight — built to test power, single-leg strength, and top-end conditioning in the same session."
+    },
+    {
+      "workoutName": "Free Weight Fundamentals",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "gymStyle": "WEIGHTS_ONLY",
+      "collection": "Free Weight Performance Series",
+      "duration": "40 min",
+      "intensity": "MODERATE",
+      "warmup": "5 min bike or row, bodyweight squat x10, band-free arm circles x10, walking lunge x10 each leg",
+      "mainWorkout": [
+        {
+          "exercise": "Goblet Squat",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "2-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Full depth, upright torso — the foundation squat for functional strength.",
+          "id": "SQ002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777173/Goblet_Squat_c4dfsl.png",
+          "videoUrl": "/exercises/videos/SQ002.mp4"
+        },
+        {
+          "exercise": "Dumbbell Thruster",
+          "sets": 3,
+          "reps": "10",
+          "tempo": "Controlled but purposeful",
+          "rest": "60s",
+          "coachingFocus": "Squat drives the press. One fluid movement, not two separate ones.",
+          "id": "CD021",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625885/Dumbbell_Thruster_beul2d.png",
+          "videoUrl": "/exercises/videos/CD021.mp4"
+        },
+        {
+          "exercise": "Kettlebell Swing",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "Explosive hip",
+          "rest": "60s",
+          "coachingFocus": "Power comes from the hips snapping forward, not the arms lifting.",
+          "id": "HI003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777174/Kettlebell_Swing_rijbyf.png",
+          "videoUrl": "/exercises/videos/HI003.mp4"
+        },
+        {
+          "exercise": "Dumbbell Row",
+          "sets": 3,
+          "reps": "12 each side",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Full stretch at the bottom, squeeze at the top.",
+          "id": "PLH002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH002.mp4"
+        },
+        {
+          "exercise": "Farmer's Carry",
+          "sets": 3,
+          "reps": "30m",
+          "tempo": "Steady",
+          "rest": "60s",
+          "coachingFocus": "Shoulders back, ribs down, walk with control — this builds full-body work capacity.",
+          "id": "CA001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780317257/Farmer_s_Carry_wev5tb.png",
+          "videoUrl": "/exercises/videos/CA001.mp4"
+        },
+        {
+          "exercise": "Dead Bug",
+          "sets": 3,
+          "reps": "10 each side",
+          "tempo": "2-1-2-0",
+          "rest": "45s",
+          "coachingFocus": "Lower back stays flat on the floor the entire time.",
+          "id": "CO002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Dead_bug_xzgwjd.png",
+          "videoUrl": "/exercises/videos/CO002.mp4"
+        }
+      ],
+      "cooldown": "Hip flexor stretch 45s each, hamstring stretch 45s each, shoulder stretch 30s each",
+      "estimatedCalories": "280-350",
+      "progressionNotes": "As these movements start to feel easy, the next step is adding a second working set to the swings and carries before increasing load.",
+      "equipment": null,
+      "description": "An approachable first session with barbells and dumbbells built around functional, full-body movement patterns rather than isolated muscle work."
     }
   ]
 }

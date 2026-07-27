@@ -32,7 +32,7 @@
           "reps": "10-12",
           "tempo": "3-0-1-0",
           "rest": "75s",
-          "coachingFocus": "30-45\u00b0 bench. Feel the upper chest stretch at the bottom. Squeeze hard at the top. Don't let the elbows flare beyond 45\u00b0.",
+          "coachingFocus": "30-45° bench. Feel the upper chest stretch at the bottom. Squeeze hard at the top. Don't let the elbows flare beyond 45°.",
           "id": "PH004",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704181/Dumbbell_Press_d6emjw.png",
           "videoUrl": "/exercises/videos/PH004.mp4"
@@ -43,7 +43,7 @@
           "reps": "10-12",
           "tempo": "2-1-2-0",
           "rest": "75s",
-          "coachingFocus": "Initiate with scapular depression. Pull elbows to ribs. Full stretch at top \u2014 don't short-change the ROM.",
+          "coachingFocus": "Initiate with scapular depression. Pull elbows to ribs. Full stretch at top — don't short-change the ROM.",
           "id": "PLV003",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779711454/Lat_Down_jxxqmy.png",
           "videoUrl": "/exercises/videos/PLV003.mp4"
@@ -82,12 +82,13 @@
           "videoUrl": "/exercises/videos/PLH011.mp4"
         }
       ],
-      "finisher": "Cable Chest Press: 3 sets of 20 reps with minimal rest (30s) \u2014 pump and blood flow focus",
+      "finisher": "Cable Chest Press: 3 sets of 20 reps with minimal rest (30s) — pump and blood flow focus",
       "cooldown": "Doorway chest stretch 60s each side, lat hang 45s, child's pose 60s, thoracic extension on foam roller 90s",
       "estimatedCalories": "420-500",
       "progressionNotes": "Add 2.5kg to bench when all 4 sets hit 10 reps with clean form. Add 1 rep per session on accessories before increasing weight.",
       "equipment": null,
-      "description": "A chest and back volume session built around compound pressing and pulling. Designed to maximise upper body mass with controlled tempos and strategic supersets."
+      "description": "A chest and back volume session built around compound pressing and pulling. Designed to maximise upper body mass with controlled tempos and strategic supersets.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Leg Day",
@@ -108,7 +109,7 @@
           "reps": "6-8",
           "tempo": "3-1-1-0",
           "rest": "2 min",
-          "coachingFocus": "Brace 360\u00b0 before descent. Break hips and knees simultaneously. Drive knees out.",
+          "coachingFocus": "Brace 360° before descent. Break hips and knees simultaneously. Drive knees out.",
           "id": "SQ003",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626390/Get_Fit_UpperLower_Split_Day_1_dio3bq.png",
           "videoUrl": "/exercises/videos/SQ003.mp4"
@@ -119,7 +120,7 @@
           "reps": "10-12",
           "tempo": "3-1-1-0",
           "rest": "90s",
-          "coachingFocus": "Hip hinge \u2014 push hips back, not down. Maintain neutral spine. Feel the hamstring stretch load.",
+          "coachingFocus": "Hip hinge — push hips back, not down. Maintain neutral spine. Feel the hamstring stretch load.",
           "id": "HI004",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779626396/Get_Fit_UpperLower_Split_Day_2_ssee7x.png",
           "videoUrl": "/exercises/videos/HI004.mp4"
@@ -169,12 +170,13 @@
           "videoUrl": "/exercises/videos/HI015.mp4"
         }
       ],
-      "finisher": "Wall Sit: 3 x max hold (aim 45-60s) with 30s rest \u2014 quad burnout",
+      "finisher": "Wall Sit: 3 x max hold (aim 45-60s) with 30s rest — quad burnout",
       "cooldown": "Seated hamstring stretch 60s each, pigeon pose 90s each, quad stretch 45s each, hip flexor lunge 60s each",
       "estimatedCalories": "500-620",
       "progressionNotes": "Prioritise squat strength. Add 2.5-5kg when all sets hit top of rep range.",
       "equipment": null,
-      "description": "A high-volume lower body day anchored by barbell squats and RDLs. Targets quads, hamstrings, and glutes through progressive overload and burnout finishers."
+      "description": "A high-volume lower body day anchored by barbell squats and RDLs. Targets quads, hamstrings, and glutes through progressive overload and burnout finishers.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Chest & Shoulders",
@@ -256,12 +258,13 @@
           "videoUrl": "/exercises/videos/TRI005.mp4"
         }
       ],
-      "finisher": "Diamond Push-Up: AMRAP x2 with 30s rest \u2014 tricep and inner pec burnout",
+      "finisher": "Diamond Push-Up: AMRAP x2 with 30s rest — tricep and inner pec burnout",
       "cooldown": "Cross-body shoulder stretch 45s each, overhead tricep stretch 45s each, doorway chest stretch 60s each side",
       "estimatedCalories": "380-460",
       "progressionNotes": "Rotate primary lift weekly between Barbell Bench and Incline DB Press.",
       "equipment": null,
-      "description": "Chest and shoulder emphasis with heavy pressing followed by isolation work. A classic PPL push session structured for hypertrophy from every angle."
+      "description": "Chest and shoulder emphasis with heavy pressing followed by isolation work. A classic PPL push session structured for hypertrophy from every angle.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Back & Biceps",
@@ -293,7 +296,7 @@
           "reps": "8-10",
           "tempo": "2-1-2-0",
           "rest": "90s",
-          "coachingFocus": "Hinge to 45\u00b0 and hold. Row to lower abdomen. Elbows drive back, not out.",
+          "coachingFocus": "Hinge to 45° and hold. Row to lower abdomen. Elbows drive back, not out.",
           "id": "PLH001",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704398/Pendlay_Row_ybff7k.png",
           "videoUrl": "/exercises/videos/PLH001.mp4"
@@ -326,7 +329,7 @@
           "reps": "15-20",
           "tempo": "2-1-2-0",
           "rest": "45s",
-          "coachingFocus": "Hinge 45\u00b0+. Arc arms out to side. Rear delts are chronically underdeveloped.",
+          "coachingFocus": "Hinge 45°+. Arc arms out to side. Rear delts are chronically underdeveloped.",
           "id": "PLH010",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047728/Dumbbell_Rear_Delt_Fly_DB_tuohfv.png",
           "videoUrl": "/exercises/videos/PLH010.mp4"
@@ -343,12 +346,13 @@
           "videoUrl": "/exercises/videos/BIC005.mp4"
         }
       ],
-      "finisher": "Chin-Up: max reps x2 sets / Lat Pulldown: 2 x 20 (if pull-ups are limited) \u2014 60s rest",
+      "finisher": "Chin-Up: max reps x2 sets / Lat Pulldown: 2 x 20 (if pull-ups are limited) — 60s rest",
       "cooldown": "Lat stretch on rack 45s each side, bicep wall stretch 45s each, thoracic foam roll 90s",
       "estimatedCalories": "400-480",
       "progressionNotes": "Track total weighted pull-up volume. Progress weighted pull-up before adding more accessory volume.",
       "equipment": null,
-      "description": "Back and bicep width builder using vertical and horizontal pulls. Prioritises lat development and rear delt health for a balanced upper body."
+      "description": "Back and bicep width builder using vertical and horizontal pulls. Prioritises lat development and rear delt health for a balanced upper body.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Backside Builder",
@@ -430,12 +434,13 @@
           "videoUrl": "/exercises/videos/CO001.mp4"
         }
       ],
-      "finisher": "Bodyweight Squat x20 + Push-Up x10: 3 rounds with 45s rest \u2014 total body pump",
+      "finisher": "Bodyweight Squat x20 + Push-Up x10: 3 rounds with 45s rest — total body pump",
       "cooldown": "Hip flexor lunge stretch 60s each, chest doorway stretch 45s each, lat stretch 45s each",
       "estimatedCalories": "350-420",
       "progressionNotes": "Beginner-focused. Log every session. Increase weight by smallest increment when top rep range is achieved.",
       "equipment": null,
-      "description": "A hinge-heavy leg session focused on hamstrings, glutes, and lower back. Pairs deadlift patterns with unilateral work for complete posterior development."
+      "description": "A hinge-heavy leg session focused on hamstrings, glutes, and lower back. Pairs deadlift patterns with unilateral work for complete posterior development.",
+      "gymStyle": "WEIGHTS_ONLY"
     },
     {
       "workoutName": "Arm Sculptor",
@@ -489,7 +494,7 @@
           "reps": "10-12",
           "tempo": "2-0-3-0",
           "rest": "60s",
-          "coachingFocus": "Bench at 45\u00b0. Arms hang back \u2014 maximum stretch on the long head.",
+          "coachingFocus": "Bench at 45°. Arms hang back — maximum stretch on the long head.",
           "id": "BIC007",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780877852/Incline_Dumbbell_Curl_zrtzqw.png",
           "videoUrl": "/exercises/videos/BIC007.mp4"
@@ -517,12 +522,13 @@
           "videoUrl": "/exercises/videos/BIC006.mp4"
         }
       ],
-      "finisher": "Curl-to-Press: 3 x 10 \u2014 bicep curl straight into overhead press \u2014 integrated pump",
+      "finisher": "Curl-to-Press: 3 x 10 — bicep curl straight into overhead press — integrated pump",
       "cooldown": "Overhead tricep stretch 45s each, bicep wall stretch 45s each, wrist flexor/extensor stretch 30s each",
       "estimatedCalories": "280-360",
       "progressionNotes": "Arms respond to volume. Track total sets per week (aim for 12-16 sets per muscle).",
       "equipment": null,
-      "description": "Dedicated bicep and tricep volume day using supersets and drop sets. Maximises arm pump and time under tension for serious sleeve-filling gains."
+      "description": "Dedicated bicep and tricep volume day using supersets and drop sets. Maximises arm pump and time under tension for serious sleeve-filling gains.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Chest & Triceps",
@@ -576,7 +582,7 @@
           "reps": "15-20",
           "tempo": "2-1-2-0",
           "rest": "60s",
-          "coachingFocus": "Cables from low position, arc up and together. Constant tension \u2014 peak contraction focus.",
+          "coachingFocus": "Cables from low position, arc up and together. Constant tension — peak contraction focus.",
           "id": "PHH016",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647910/Cable_Fly_kkhhjd.png",
           "videoUrl": "/exercises/videos/PHH016.mp4"
@@ -604,12 +610,13 @@
           "videoUrl": "/exercises/videos/PH005.mp4"
         }
       ],
-      "finisher": "Cable Chest Press: 3 x 25 with 30s rest \u2014 high-rep pump",
+      "finisher": "Cable Chest Press: 3 x 25 with 30s rest — high-rep pump",
       "cooldown": "Doorway chest stretch 90s each side, overhead tricep stretch 60s each, PVC thoracic extension 90s",
       "estimatedCalories": "460-540",
-      "progressionNotes": "Advanced: use double progression \u2014 increase reps first, then weight.",
+      "progressionNotes": "Advanced: use double progression — increase reps first, then weight.",
       "equipment": null,
-      "description": "An advanced push session pairing heavy chest compounds with tricep isolation. High volume, mechanical drop sets, and a burner finisher for upper body hypertrophy."
+      "description": "An advanced push session pairing heavy chest compounds with tricep isolation. High volume, mechanical drop sets, and a burner finisher for upper body hypertrophy.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Back & Biceps",
@@ -630,7 +637,7 @@
           "reps": "5-6",
           "tempo": "2-1-2-0",
           "rest": "2 min",
-          "coachingFocus": "Heaviest compound row. Hinge to 45\u00b0. Pull to belly button. Upper back contracted hard.",
+          "coachingFocus": "Heaviest compound row. Hinge to 45°. Pull to belly button. Upper back contracted hard.",
           "id": "PLH001",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704398/Pendlay_Row_ybff7k.png",
           "videoUrl": "/exercises/videos/PLH001.mp4"
@@ -691,12 +698,13 @@
           "videoUrl": "/exercises/videos/BIC005.mp4"
         }
       ],
-      "finisher": "Chin-Up mechanical dropset: max reps with load \u2192 strip weight \u2192 max bodyweight reps \u2014 2 rounds",
+      "finisher": "Chin-Up mechanical dropset: max reps with load → strip weight → max bodyweight reps — 2 rounds",
       "cooldown": "Lat stretch on rack 60s each side, bicep stretch on wall 45s each, thoracic extension foam roll 2 min",
       "estimatedCalories": "480-580",
       "progressionNotes": "Advanced back training requires managing cumulative fatigue. Rotate primary row every 4 weeks.",
       "equipment": null,
-      "description": "A rowing-focused pull day targeting mid-back thickness and bicep density. Uses barbell, dumbbell, and cable rows to attack the back from multiple angles."
+      "description": "A rowing-focused pull day targeting mid-back thickness and bicep density. Uses barbell, dumbbell, and cable rows to attack the back from multiple angles.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Glutes & Hamstrings",
@@ -750,7 +758,7 @@
           "reps": "12-15",
           "tempo": "3-1-1-0",
           "rest": "60s",
-          "coachingFocus": "Wide stance, toes 45\u00b0. Inner thigh and glute emphasis. Go deep. Squeeze glutes hard at the top.",
+          "coachingFocus": "Wide stance, toes 45°. Inner thigh and glute emphasis. Go deep. Squeeze glutes hard at the top.",
           "id": "SQ007",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
           "videoUrl": "/exercises/videos/SQ007.mp4"
@@ -783,7 +791,8 @@
       "estimatedCalories": "420-500",
       "progressionNotes": "Hip thrust progression: target 1-1.5x bodyweight for 10 reps within 12 weeks.",
       "equipment": null,
-      "description": "A specialisation session built entirely around posterior chain development. Hip thrusts, Romanian deadlifts, and Nordic curls drive glute and hamstring hypertrophy."
+      "description": "A specialisation session built entirely around posterior chain development. Hip thrusts, Romanian deadlifts, and Nordic curls drive glute and hamstring hypertrophy.",
+      "gymStyle": "WEIGHTS_ONLY"
     },
     {
       "workoutName": "Shoulder & Delts",
@@ -837,7 +846,7 @@
           "reps": "15-20",
           "tempo": "2-1-2-0",
           "rest": "45s",
-          "coachingFocus": "Hinge 45\u00b0+. Lift arms to side. Consistent high volume here changes your physique.",
+          "coachingFocus": "Hinge 45°+. Lift arms to side. Consistent high volume here changes your physique.",
           "id": "PLH010",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047728/Dumbbell_Rear_Delt_Fly_DB_tuohfv.png",
           "videoUrl": "/exercises/videos/PLH010.mp4"
@@ -865,12 +874,13 @@
           "videoUrl": "/exercises/videos/PHH024.mp4"
         }
       ],
-      "finisher": "Lateral Raise dropset: heavy x10 \u2192 medium x10 \u2192 light x10 \u2014 3 rounds, 60s rest",
+      "finisher": "Lateral Raise dropset: heavy x10 → medium x10 → light x10 — 3 rounds, 60s rest",
       "cooldown": "Cross-body shoulder stretch 60s each, neck side stretch 45s each, doorway stretch 60s",
       "estimatedCalories": "320-400",
       "progressionNotes": "Lateral raises: prioritise feel over weight.",
       "equipment": null,
-      "description": "Overhead pressing paired with lateral and rear delt isolation work. Builds shoulder width and rotator cuff health for a full, balanced deltoid."
+      "description": "Overhead pressing paired with lateral and rear delt isolation work. Builds shoulder width and rotator cuff health for a full, balanced deltoid.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Heavy Compounds",
@@ -953,11 +963,12 @@
         }
       ],
       "finisher": "Farmer's Carry: 4 x 30m with heavy dumbbells",
-      "cooldown": "Full body stretch sequence \u2014 hip flexors, hamstrings, chest, lats, shoulders \u2014 2 min total",
+      "cooldown": "Full body stretch sequence — hip flexors, hamstrings, chest, lats, shoulders — 2 min total",
       "estimatedCalories": "580-700",
       "progressionNotes": "Heavy compound days require recovery. Sleep 8h minimum. Eat above maintenance.",
       "equipment": null,
-      "description": "A full-body strength session centred on the big lifts \u2014 squat, deadlift, and press. Low reps, heavy loads, and long rest periods to drive maximal strength adaptation."
+      "description": "A full-body strength session centred on the big lifts — squat, deadlift, and press. Low reps, heavy loads, and long rest periods to drive maximal strength adaptation.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Muscle Builder",
@@ -1065,7 +1076,7 @@
           "reps": "8",
           "tempo": "5-1-1-0",
           "rest": "90s",
-          "coachingFocus": "5-second descent. 1-second pause. Lighter weight than normal \u2014 that's correct.",
+          "coachingFocus": "5-second descent. 1-second pause. Lighter weight than normal — that's correct.",
           "id": "SQ019",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
           "videoUrl": "/exercises/videos/SQ019.mp4"
@@ -1109,7 +1120,7 @@
           "reps": "12",
           "tempo": "4-1-1-0",
           "rest": "60s",
-          "coachingFocus": "Stretch-focused exercise already \u2014 add 4-second descent and it becomes elite.",
+          "coachingFocus": "Stretch-focused exercise already — add 4-second descent and it becomes elite.",
           "id": "PH012",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704400/Cable_Fly_zuuqot.png",
           "videoUrl": "/exercises/videos/PH012.mp4"
@@ -1127,11 +1138,12 @@
         }
       ],
       "finisher": "Pause Squat: 3 x 10 with 2-second pause at bottom",
-      "cooldown": "Full body stretch \u2014 extra time on each position given the deep muscle fatigue from tempo work. Minimum 10 min.",
+      "cooldown": "Full body stretch — extra time on each position given the deep muscle fatigue from tempo work. Minimum 10 min.",
       "estimatedCalories": "360-440",
       "progressionNotes": "Tempo training: reduce load 20-30% compared to normal.",
       "equipment": null,
-      "description": "A time-under-tension session using slow, deliberate tempos on every rep. Challenges muscles differently to standard lifting and accelerates hypertrophy stimulus."
+      "description": "A time-under-tension session using slow, deliberate tempos on every rep. Challenges muscles differently to standard lifting and accelerates hypertrophy stimulus.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "High Volume",
@@ -1218,7 +1230,8 @@
       "estimatedCalories": "350-430",
       "progressionNotes": "Volume-focused day. Track total reps per exercise. Add 1-2 reps per set each week before increasing weight.",
       "equipment": null,
-      "description": "Upper body hypertrophy through high-rep sets and pump-focused training. Designed to drive blood flow, muscle fullness, and sarcoplasmic growth."
+      "description": "Upper body hypertrophy through high-rep sets and pump-focused training. Designed to drive blood flow, muscle fullness, and sarcoplasmic growth.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Unilateral Strength",
@@ -1300,12 +1313,13 @@
           "videoUrl": "/exercises/videos/BIC006.mp4"
         }
       ],
-      "finisher": "Single Arm Overhead Carry: 3 x 20m each arm \u2014 shoulder stability and core anti-lateral flexion",
+      "finisher": "Single Arm Overhead Carry: 3 x 20m each arm — shoulder stability and core anti-lateral flexion",
       "cooldown": "Hip flexor lunge 60s each, cross-body stretch 45s each, lat hang 45s, hamstring seated stretch 60s each",
       "estimatedCalories": "380-460",
       "progressionNotes": "Unilateral work: correct imbalances before adding load. Weaker side dictates the weight.",
       "equipment": null,
-      "description": "Single-limb training to correct imbalances and maximise isolation. Lunges, single-arm presses, and unilateral pulls build symmetry and functional strength."
+      "description": "Single-limb training to correct imbalances and maximise isolation. Lunges, single-arm presses, and unilateral pulls build symmetry and functional strength.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Calisthenics",
@@ -1479,7 +1493,8 @@
       "estimatedCalories": "300-380",
       "progressionNotes": "Beginners: increase weight by the smallest increment available when all sets and reps are completed with full control.",
       "equipment": null,
-      "description": "A full-body introduction to resistance training for new gym-goers. Covers the fundamental movement patterns with manageable loads and clear progression cues."
+      "description": "A full-body introduction to resistance training for new gym-goers. Covers the fundamental movement patterns with manageable loads and clear progression cues.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Drop Sets",
@@ -1511,7 +1526,7 @@
           "reps": "8 each grip (mechanical drop)",
           "tempo": "2-1-2-0",
           "rest": "2 min",
-          "coachingFocus": "Mechanical lat dropset \u2014 same cable, different grips in sequence. Massive lat volume in short time.",
+          "coachingFocus": "Mechanical lat dropset — same cable, different grips in sequence. Massive lat volume in short time.",
           "id": "PLH009",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
           "videoUrl": "/exercises/videos/PLH009.mp4"
@@ -1564,9 +1579,10 @@
       "finisher": "Push-Up x20 + Chin-Up x8: 3 superset rounds, 60s rest",
       "cooldown": "Doorway stretch 60s each side, lat bar hang 45s, cross-body stretch 45s each, thoracic foam roll 2 min",
       "estimatedCalories": "420-500",
-      "progressionNotes": "Mechanical dropsets are an advanced technique \u2014 use sparingly (once per 2 weeks per muscle group).",
+      "progressionNotes": "Mechanical dropsets are an advanced technique — use sparingly (once per 2 weeks per muscle group).",
       "equipment": null,
-      "description": "An advanced upper body session using mechanical drop sets to maximise fatigue and volume. Pre-exhausts major movers before following with straight strength sets."
+      "description": "An advanced upper body session using mechanical drop sets to maximise fatigue and volume. Pre-exhausts major movers before following with straight strength sets.",
+      "gymStyle": "WEIGHTS_MACHINE"
     },
     {
       "workoutName": "Strong Start",
@@ -1617,7 +1633,7 @@
           "reps": "12",
           "tempo": "Rhythmic",
           "rest": "60s",
-          "coachingFocus": "Hip hinge powers the swing \u2014 not the arms. Explosive snap.",
+          "coachingFocus": "Hip hinge powers the swing — not the arms. Explosive snap.",
           "id": "KB004",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777174/Kettlebell_Swing_rijbyf.png"
         },
@@ -1637,7 +1653,7 @@
       "estimatedCalories": "280-350",
       "progressionNotes": "Beginner: focus on hinge and swing mechanics before adding load.",
       "equipment": "Kettlebell",
-      "description": "A beginner kettlebell session covering the fundamental patterns \u2014 deadlift, squat, press, and swing. Builds the movement foundation for all KB training."
+      "description": "A beginner kettlebell session covering the fundamental patterns — deadlift, squat, press, and swing. Builds the movement foundation for all KB training."
     },
     {
       "workoutName": "Muscle Builder",
@@ -1757,7 +1773,7 @@
           "exercise": "Kettlebell Swing",
           "sets": 4,
           "reps": "25",
-          "tempo": "Rhythmic \u2014 explosive",
+          "tempo": "Rhythmic — explosive",
           "rest": "45s",
           "coachingFocus": "25 reps at a heavy load. This is conditioning and strength simultaneously.",
           "id": "KB004",
@@ -2002,7 +2018,7 @@
           "reps": "12 each",
           "tempo": "2-2-2-0",
           "rest": "45s",
-          "coachingFocus": "Anti-rotation core. Don't let the band pull you. Full press \u2014 full retract.",
+          "coachingFocus": "Anti-rotation core. Don't let the band pull you. Full press — full retract.",
           "id": "CO010",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781162142/Pallof_Press_wn1cgg.png"
         },
@@ -2204,7 +2220,7 @@
       "estimatedCalories": "460-560",
       "progressionNotes": "Advanced: track thruster load and renegade row load monthly. Aim for progressive overload every 2 weeks.",
       "equipment": "Dumbbell",
-      "description": "An advanced dumbbell session built around compound power movements \u2014 thrusters, renegade rows, and RDLs. Maximum muscle stimulus from dumbbells alone."
+      "description": "An advanced dumbbell session built around compound power movements — thrusters, renegade rows, and RDLs. Maximum muscle stimulus from dumbbells alone."
     },
     {
       "workoutName": "Pull-Up Basics",
@@ -3300,7 +3316,7 @@
           "reps": "20m",
           "tempo": "Controlled walk",
           "rest": "90s",
-          "coachingFocus": "Chest squeeze. Core braced. Sandbag wants to shift \u2014 fight it.",
+          "coachingFocus": "Chest squeeze. Core braced. Sandbag wants to shift — fight it.",
           "id": "SB002",
           "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296809/Bear_Hug_Carry_Sandbag_qvgk1n.png"
         },
@@ -3483,6 +3499,702 @@
       "progressionNotes": "Exec Perf: track shouldering speed and carry distance. Periodise in 4-week blocks.",
       "equipment": "Sandbag",
       "description": "An advanced sandbag strength session using heavy shouldering, Zercher squats, and maximum-load carries. Executive Performance functional strength."
+    },
+    {
+      "workoutName": "Bar Basics",
+      "goal": "BUILD_MUSCLE",
+      "location": "GYM",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "gymStyle": "CALISTHENIC",
+      "collection": "Calisthenics Strength Series",
+      "duration": "45 min",
+      "intensity": "MODERATE",
+      "warmup": "5 min row or bike easy, band pull-aparts x15, scapular shrugs on bar x10, bodyweight squat x10, cat-cow x10",
+      "mainWorkout": [
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 3,
+          "reps": "12-15",
+          "tempo": "3-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Build the pattern before adding rig work. Chest tall, full depth.",
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ001.mp4"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "3-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Straight line head to heels. Regress to incline if form breaks down.",
+          "id": "PH001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png",
+          "videoUrl": "/exercises/videos/PH001.mp4"
+        },
+        {
+          "exercise": "Negative Pull-Up",
+          "sets": 3,
+          "reps": "5-6",
+          "tempo": "5-0-1-0",
+          "rest": "90s",
+          "coachingFocus": "Jump to top position, lower for a full 5 seconds. This builds the strength for a real pull-up.",
+          "id": "PLV014",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296831/Negative_Pull-Up_m4fmik.png",
+          "videoUrl": "/exercises/videos/PLV014.mp4"
+        },
+        {
+          "exercise": "Scapular Pull-Up",
+          "sets": 3,
+          "reps": "8-10",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "coachingFocus": "Hang and depress the shoulder blades without bending the elbows. This is the foundation of every pulling movement.",
+          "id": "PLV018",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783084714/Scapular_Pull-Up_chg8ae.png",
+          "videoUrl": "/exercises/videos/PLV018.mp4"
+        },
+        {
+          "exercise": "Split Squat",
+          "sets": 3,
+          "reps": "10 each leg",
+          "tempo": "3-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Rear foot light, front heel driving through the floor.",
+          "id": "LU005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311811/Split_Squat_ltrvqb.png",
+          "videoUrl": "/exercises/videos/LU005.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "Isometric",
+          "rest": "45s",
+          "coachingFocus": "Ribs down, glutes on. Build toward 45-60s over the coming weeks.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        }
+      ],
+      "cooldown": "Doorway chest stretch 45s, lat stretch on bar 30s each arm, hip flexor stretch 45s each, child's pose 60s",
+      "estimatedCalories": "280-350",
+      "progressionNotes": "You won't get a full pull-up on day one, and that's fine — scapular pull-ups and negatives are how every strong puller starts. Add 1 rep per exercise each week before adding load or complexity.",
+      "equipment": null,
+      "description": "A true beginner's introduction to training with just your body and the gym's pull-up rig. Builds the strength base — especially in the back and shoulders — that bodyweight training demands before anything fancier."
+    },
+    {
+      "workoutName": "Ring & Bar Builder",
+      "goal": "BUILD_MUSCLE",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "UPPER",
+      "environmentTarget": "GYM",
+      "gymStyle": "CALISTHENIC",
+      "collection": "Calisthenics Strength Series",
+      "duration": "50 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "5 min row, arm circles x10 each way, scapular pull-ups x10, dip support hold 20s, walking lunge x10",
+      "mainWorkout": [
+        {
+          "exercise": "Pull-Up",
+          "sets": 4,
+          "reps": "6-8",
+          "tempo": "2-1-2-0",
+          "rest": "90s",
+          "coachingFocus": "Dead hang start, chest to bar if you can control it. Full range every rep.",
+          "id": "PLV001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647914/Pull-Up_y2avik.png",
+          "videoUrl": "/exercises/videos/PLV001.mp4"
+        },
+        {
+          "exercise": "Chest Dip",
+          "sets": 4,
+          "reps": "8-10",
+          "tempo": "2-1-2-0",
+          "rest": "90s",
+          "coachingFocus": "Lean forward slightly for more chest emphasis. Stop at 90° of elbow bend.",
+          "id": "PH006",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296814/Chest_Dip_i0bn9b.png",
+          "videoUrl": "/exercises/videos/PH006.mp4"
+        },
+        {
+          "exercise": "Bulgarian Split Squat",
+          "sets": 3,
+          "reps": "10 each leg",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Rear foot elevated on a bench. Front thigh reaches parallel.",
+          "id": "LU003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Bulgarian_Split_Squat_mdoejf.png",
+          "videoUrl": "/exercises/videos/LU003.mp4"
+        },
+        {
+          "exercise": "Chin-Up",
+          "sets": 3,
+          "reps": "8-10",
+          "tempo": "2-0-2-0",
+          "rest": "75s",
+          "coachingFocus": "Underhand grip shifts more work to the biceps. Full stretch at the bottom.",
+          "id": "PLV002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647911/Chin-Up_xubyhx.png",
+          "videoUrl": "/exercises/videos/PLV002.mp4"
+        },
+        {
+          "exercise": "Suspension Trainer Row",
+          "sets": 3,
+          "reps": "12-15",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "coachingFocus": "Body angle controls difficulty — walk feet forward to make it harder.",
+          "id": "PLH020",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783084717/Suspension_Trainer_Row_xptxvi.png",
+          "videoUrl": "/exercises/videos/PLH020.mp4"
+        },
+        {
+          "exercise": "Hanging Leg Raise",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Curl the pelvis under at the top. No swinging — control the descent.",
+          "id": "CO007",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780315042/Hanging_Leg_Raise_o9xy7v.png",
+          "videoUrl": "/exercises/videos/CO007.mp4"
+        }
+      ],
+      "cooldown": "Thoracic rotation x8 each side, lat stretch on bar 30s each side, hip flexor stretch 45s each, breathwork 60s",
+      "estimatedCalories": "350-420",
+      "progressionNotes": "Once dips and chin-ups both hit 4x10 clean, start adding a 2-3s pause at the hardest point of each rep before progressing to weighted variations.",
+      "equipment": null,
+      "description": "A rig-based hypertrophy session pairing pull-ups and dips as your primary strength builders, with unilateral leg work and rotator-friendly rows filling out the session."
+    },
+    {
+      "workoutName": "Calisthenics Hypertrophy",
+      "goal": "BUILD_MUSCLE",
+      "location": "GYM",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "UPPER",
+      "environmentTarget": "GYM",
+      "gymStyle": "CALISTHENIC",
+      "collection": "Calisthenics Strength Series",
+      "duration": "55 min",
+      "intensity": "HIGH",
+      "warmup": "6 min row or bike, dead hang 30s, scap pulls x10, dip support hold 30s, 2 rounds: 5 pull-ups + 5 dips easy pace",
+      "mainWorkout": [
+        {
+          "exercise": "Muscle-Up",
+          "sets": 5,
+          "reps": "3-5",
+          "tempo": "Explosive",
+          "rest": "2min",
+          "coachingFocus": "Explosive pull transitioning into a dip lockout. Quality over quantity — reset if form breaks.",
+          "id": "PLV011",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783084711/Muscle-Up_amigpp.png",
+          "videoUrl": "/exercises/videos/PLV011.mp4"
+        },
+        {
+          "exercise": "Chest-to-Bar Pull-Up",
+          "sets": 4,
+          "reps": "6-8",
+          "tempo": "2-0-1-0",
+          "rest": "90s",
+          "coachingFocus": "Pull aggressively to touch chest to the bar. This demands more lat and upper-back drive than a standard pull-up.",
+          "id": "PLV012",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296813/Chest-to-Bar_Pull-Up_f12wqk.png",
+          "videoUrl": "/exercises/videos/PLV012.mp4"
+        },
+        {
+          "exercise": "Archer Push-Up",
+          "sets": 4,
+          "reps": "8 each side",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "One arm does the work while the other stays nearly straight for support. Rotate sides each rep.",
+          "id": "PH011",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047644/Archer_Push-Up_rk73w1.png",
+          "videoUrl": "/exercises/videos/PH011.mp4"
+        },
+        {
+          "exercise": "Ring Pull-Up",
+          "sets": 4,
+          "reps": "8-10",
+          "tempo": "2-1-2-0",
+          "rest": "90s",
+          "coachingFocus": "Rings add an instability challenge — squeeze them hard throughout the pull.",
+          "id": "PLV015",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783084714/Ring_Pull-Up_bsvpfg.png",
+          "videoUrl": "/exercises/videos/PLV015.mp4"
+        },
+        {
+          "exercise": "Pistol Squat",
+          "sets": 3,
+          "reps": "6-8 each leg",
+          "tempo": "3-1-1-0",
+          "rest": "90s",
+          "coachingFocus": "Extend the free leg forward, sit back into the heel of the standing leg.",
+          "id": "SQ008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872935/Box_Pistol_Squat_zuvbz8.png",
+          "videoUrl": "/exercises/videos/SQ008.mp4"
+        },
+        {
+          "exercise": "L-Sit",
+          "sets": 4,
+          "reps": "15-20s",
+          "tempo": "Isometric",
+          "rest": "60s",
+          "coachingFocus": "Hold on parallel bars with legs straight and elevated. Core braced hard throughout.",
+          "id": "CO011",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783084710/L-Sit_hhj2ii.png",
+          "videoUrl": "/exercises/videos/CO011.mp4"
+        }
+      ],
+      "cooldown": "Foam roll lats and shoulders, doorway chest stretch 45s, wrist stretch 30s, hip flexor stretch 45s each",
+      "estimatedCalories": "420-500",
+      "progressionNotes": "Muscle-ups are the ceiling exercise here — if you're not landing them consistently yet, sub in 5x3 explosive chest-to-bar pull-ups instead and revisit muscle-ups every 2-3 weeks.",
+      "equipment": null,
+      "description": "An advanced skill-and-strength session built around the muscle-up, one of calisthenics' benchmark movements, layered with unilateral pressing and pulling work for balanced upper-body development."
+    },
+    {
+      "workoutName": "Bodyweight Foundations",
+      "goal": "BUILD_MUSCLE",
+      "location": "GYM",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "gymStyle": "FREE_WEIGHT",
+      "collection": "Bodyweight Muscle Series",
+      "duration": "40 min",
+      "intensity": "MODERATE",
+      "warmup": "5 min walk or light jog, cat-cow x10, arm circles x10 each way, bodyweight squat x10",
+      "mainWorkout": [
+        {
+          "exercise": "Bodyweight Squat",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "3-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Full depth, chest tall. This is your foundation lower-body pattern.",
+          "id": "SQ001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625725/squat_fum8cz.png",
+          "videoUrl": "/exercises/videos/SQ001.mp4"
+        },
+        {
+          "exercise": "Push-Up",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "3-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Straight line head to heels. Regress to incline if needed to keep form clean.",
+          "id": "PH001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047642/Push-Up_lkfhys.png",
+          "videoUrl": "/exercises/videos/PH001.mp4"
+        },
+        {
+          "exercise": "Split Squat",
+          "sets": 3,
+          "reps": "10 each leg",
+          "tempo": "3-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Control the descent — balance is part of the strength here.",
+          "id": "LU005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311811/Split_Squat_ltrvqb.png",
+          "videoUrl": "/exercises/videos/LU005.mp4"
+        },
+        {
+          "exercise": "Glute Bridge",
+          "sets": 3,
+          "reps": "15",
+          "tempo": "2-1-2-0",
+          "rest": "45s",
+          "coachingFocus": "Squeeze glutes hard at the top. This is your primary hinge-pattern substitute.",
+          "id": "HI009",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625716/Glute_bridge_imsdfr.png",
+          "videoUrl": "/exercises/videos/HI009.mp4"
+        },
+        {
+          "exercise": "Incline Push-Up",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "2-1-1-0",
+          "rest": "45s",
+          "coachingFocus": "Hands elevated on a bench for an easier pressing angle — pairs well after flat push-ups.",
+          "id": "PH007",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311681/Incline_Push-Ups_khlyu8.png",
+          "videoUrl": "/exercises/videos/PH007.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "Isometric",
+          "rest": "45s",
+          "coachingFocus": "Ribs down, glutes engaged. Build toward 45-60s over the coming weeks.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        }
+      ],
+      "cooldown": "Child's pose 60s, hip flexor stretch 45s each, chest stretch 45s",
+      "estimatedCalories": "260-330",
+      "progressionNotes": "A pure-bodyweight session at the gym can't train a true pulling pattern without a bar or rig — if that's available where you train, add 2-3 sets of scapular pull-ups here for balanced development.",
+      "equipment": null,
+      "description": "A foundational full-body session using nothing but your bodyweight and the gym floor — ideal for building movement competency before adding load."
+    },
+    {
+      "workoutName": "Bodyweight Muscle Builder",
+      "goal": "BUILD_MUSCLE",
+      "location": "GYM",
+      "level": "INTERMEDIATE",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "gymStyle": "FREE_WEIGHT",
+      "collection": "Bodyweight Muscle Series",
+      "duration": "45 min",
+      "intensity": "MODERATE_HIGH",
+      "warmup": "5 min dynamic warmup, walking lunge x10, arm circles x10, push-up x8 easy pace",
+      "mainWorkout": [
+        {
+          "exercise": "Bulgarian Split Squat",
+          "sets": 4,
+          "reps": "10 each leg",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Rear foot elevated on a bench — this is your primary quad and glute driver today.",
+          "id": "LU003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Bulgarian_Split_Squat_mdoejf.png",
+          "videoUrl": "/exercises/videos/LU003.mp4"
+        },
+        {
+          "exercise": "Diamond Push-Up",
+          "sets": 4,
+          "reps": "10-12",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Hands close together under the chest shifts more load to the triceps.",
+          "id": "PH005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783296817/Diamond_Push-Up_ndmqyl.png",
+          "videoUrl": "/exercises/videos/PH005.mp4"
+        },
+        {
+          "exercise": "Single Leg Hip Thrust",
+          "sets": 4,
+          "reps": "12 each leg",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "coachingFocus": "Upper back on a bench, drive through the heel. Squeeze at the top.",
+          "id": "HI017",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783301887/Single_Leg_Hip_Thrust_m33l9f.png",
+          "videoUrl": "/exercises/videos/HI017.mp4"
+        },
+        {
+          "exercise": "Decline Push-Up",
+          "sets": 3,
+          "reps": "12",
+          "tempo": "3-1-1-0",
+          "rest": "60s",
+          "coachingFocus": "Feet elevated shifts emphasis to the upper chest and shoulders.",
+          "id": "PH008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311582/Decline_Push-Ups_jjnfzh.png",
+          "videoUrl": "/exercises/videos/PH008.mp4"
+        },
+        {
+          "exercise": "Pistol Squat",
+          "sets": 3,
+          "reps": "6-8 each leg",
+          "tempo": "3-1-1-0",
+          "rest": "75s",
+          "coachingFocus": "Use a bench or box to regress if full depth isn't there yet.",
+          "id": "SQ008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872935/Box_Pistol_Squat_zuvbz8.png",
+          "videoUrl": "/exercises/videos/SQ008.mp4"
+        },
+        {
+          "exercise": "Hollow Body Hold",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "Isometric",
+          "rest": "45s",
+          "coachingFocus": "Lower back pressed flat, ribs down — this is your core anchor for every pressing movement.",
+          "id": "CO004",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625712/Hollow_Body_Hold_szi4by.png",
+          "videoUrl": "/exercises/videos/CO004.mp4"
+        }
+      ],
+      "cooldown": "Foam roll quads and chest, hip flexor stretch 45s each, doorway stretch 45s",
+      "estimatedCalories": "340-410",
+      "progressionNotes": "Once single-leg work feels controlled at these rep ranges, add a 3-second pause at the bottom of each rep before chasing higher reps.",
+      "equipment": null,
+      "description": "A hypertrophy-style bodyweight session leaning on unilateral squats and varied push-up angles to build real upper- and lower-body size without any equipment."
+    },
+    {
+      "workoutName": "Bodyweight Strength Challenge",
+      "goal": "BUILD_MUSCLE",
+      "location": "GYM",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "gymStyle": "FREE_WEIGHT",
+      "collection": "Bodyweight Muscle Series",
+      "duration": "50 min",
+      "intensity": "HIGH",
+      "warmup": "6 min dynamic warmup, walking lunge x10, push-up x10, pistol squat practice x5 each leg",
+      "mainWorkout": [
+        {
+          "exercise": "Pistol Squat",
+          "sets": 5,
+          "reps": "8 each leg",
+          "tempo": "3-1-1-0",
+          "rest": "90s",
+          "coachingFocus": "Full depth, controlled tempo. This is the hardest single-leg strength test in bodyweight training.",
+          "id": "SQ008",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872935/Box_Pistol_Squat_zuvbz8.png",
+          "videoUrl": "/exercises/videos/SQ008.mp4"
+        },
+        {
+          "exercise": "Archer Push-Up",
+          "sets": 5,
+          "reps": "8 each side",
+          "tempo": "3-1-1-0",
+          "rest": "90s",
+          "coachingFocus": "One arm bears most of the load — rotate sides evenly each set.",
+          "id": "PH011",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047644/Archer_Push-Up_rk73w1.png",
+          "videoUrl": "/exercises/videos/PH011.mp4"
+        },
+        {
+          "exercise": "Handstand Push-Up",
+          "sets": 4,
+          "reps": "8-10",
+          "tempo": "2-1-2-0",
+          "rest": "90s",
+          "coachingFocus": "Feet on a wall or box. Head lightly taps the floor at the bottom of each rep.",
+          "id": "PV005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779704135/Handstand_Push-Up_qn7vbf.png",
+          "videoUrl": "/exercises/videos/PV005.mp4"
+        },
+        {
+          "exercise": "Nordic Curl",
+          "sets": 4,
+          "reps": "6-8",
+          "tempo": "5-0-1-0",
+          "rest": "90s",
+          "coachingFocus": "Anchor your feet and lower as slowly as control allows — this is elite hamstring strength.",
+          "id": "HI015",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781487382/Bar_Nordic_Curl_g6enp6.png",
+          "videoUrl": "/exercises/videos/HI015.mp4"
+        },
+        {
+          "exercise": "Copenhagen Plank",
+          "sets": 3,
+          "reps": "20s each side",
+          "tempo": "Isometric",
+          "rest": "60s",
+          "coachingFocus": "One foot elevated on a bench, hips lifted and square. Serious adductor and core demand.",
+          "id": "CO013",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1783084707/Copenhagen_Plank_fwblnm.png",
+          "videoUrl": "/exercises/videos/CO013.mp4"
+        },
+        {
+          "exercise": "V-Up",
+          "sets": 4,
+          "reps": "15",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "coachingFocus": "Reach hands to toes at the top, control the descent fully.",
+          "id": "CO019",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780311860/V-Up_rh4i57.png",
+          "videoUrl": "/exercises/videos/CO019.mp4"
+        }
+      ],
+      "cooldown": "Foam roll hamstrings and shoulders, wrist stretch, extended hip flexor stretch 60s each",
+      "estimatedCalories": "420-500",
+      "progressionNotes": "This is advanced-tier bodyweight strength — if Nordic curls or pistols aren't controlled yet, spend 2-3 weeks on the assisted versions before chasing full reps here.",
+      "equipment": null,
+      "description": "An advanced no-equipment strength session built around three of bodyweight training's hardest benchmarks — the pistol squat, the Nordic curl, and the handstand push-up."
+    },
+    {
+      "workoutName": "Barbell Basics",
+      "goal": "BUILD_MUSCLE",
+      "location": "GYM",
+      "level": "BEGINNER",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "gymStyle": "WEIGHTS_ONLY",
+      "collection": "Free Weight Strength Series",
+      "duration": "45 min",
+      "intensity": "MODERATE",
+      "warmup": "5 min bike or row, empty bar squat x10, band-free arm circles x10, bodyweight lunge x10 each leg",
+      "mainWorkout": [
+        {
+          "exercise": "Goblet Squat",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "3-1-1-0",
+          "rest": "90s",
+          "coachingFocus": "Hold the dumbbell at chest height. This teaches the squat pattern before you touch a barbell.",
+          "id": "SQ002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777173/Goblet_Squat_c4dfsl.png",
+          "videoUrl": "/exercises/videos/SQ002.mp4"
+        },
+        {
+          "exercise": "Dumbbell Bench Press",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "3-1-1-0",
+          "rest": "90s",
+          "coachingFocus": "Safer than barbell for learning the pressing pattern. Control the weight down.",
+          "id": "PH003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647870/Dumbbell_Bench_Press_yimj7r.png",
+          "videoUrl": "/exercises/videos/PH003.mp4"
+        },
+        {
+          "exercise": "Dumbbell Row",
+          "sets": 3,
+          "reps": "10-12 each side",
+          "tempo": "2-1-2-0",
+          "rest": "75s",
+          "coachingFocus": "Brace on a bench, pull elbow to hip. Keep the torso still.",
+          "id": "PLH002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625873/Dumbbell_Bent-Over_Row_i4s9in.png",
+          "videoUrl": "/exercises/videos/PLH002.mp4"
+        },
+        {
+          "exercise": "Dumbbell RDL",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "3-0-1-0",
+          "rest": "90s",
+          "coachingFocus": "Hips push back, slight knee bend, feel the stretch through the hamstrings.",
+          "id": "HI016",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780877915/Dumbbell_RDL_rupaqb.png",
+          "videoUrl": "/exercises/videos/HI016.mp4"
+        },
+        {
+          "exercise": "Overhead Dumbbell Press",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "2-0-2-0",
+          "rest": "75s",
+          "coachingFocus": "Brace the core hard — don't let the lower back arch to press the weight up.",
+          "id": "PV001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625883/Dumbbell_Shoulder-Press_ikhnfe.png",
+          "videoUrl": "/exercises/videos/PV001.mp4"
+        },
+        {
+          "exercise": "Plank",
+          "sets": 3,
+          "reps": "30s",
+          "tempo": "Isometric",
+          "rest": "45s",
+          "coachingFocus": "Ribs down, glutes on. Core stability underpins every lift you just did.",
+          "id": "CO001",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625723/Planks_kk2ssr.png",
+          "videoUrl": "/exercises/videos/CO001.mp4"
+        }
+      ],
+      "cooldown": "Hip flexor lunge 60s each, hamstring stretch 45s each, chest stretch 45s",
+      "estimatedCalories": "300-370",
+      "progressionNotes": "Once every lift here feels controlled at this weight for all sets, increase load by the smallest available increment rather than adding reps.",
+      "equipment": null,
+      "description": "A beginner-friendly introduction to training with just a barbell and dumbbells — covers the fundamental strength patterns with manageable loads and clear technique cues."
+    },
+    {
+      "workoutName": "Free Weight Overload",
+      "goal": "BUILD_MUSCLE",
+      "location": "GYM",
+      "level": "ADVANCED",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "environmentTarget": "GYM",
+      "gymStyle": "WEIGHTS_ONLY",
+      "collection": "Free Weight Strength Series",
+      "duration": "55 min",
+      "intensity": "VERY_HIGH",
+      "warmup": "6 min bike, empty bar squat x10, empty bar RDL x10, band-free shoulder circles x10",
+      "mainWorkout": [
+        {
+          "exercise": "Barbell Back Squat",
+          "sets": 5,
+          "reps": "5",
+          "tempo": "3-1-1-0",
+          "rest": "2min",
+          "coachingFocus": "Heavy compound work — brace hard, break at hips and knees together.",
+          "id": "SQ003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782872513/Barbell_Back_Squat_wcjsdj.png",
+          "videoUrl": "/exercises/videos/SQ003.mp4"
+        },
+        {
+          "exercise": "Barbell Bench Press",
+          "sets": 5,
+          "reps": "5",
+          "tempo": "3-1-1-0",
+          "rest": "2min",
+          "coachingFocus": "Full control on the way down, drive explosively out of the bottom.",
+          "id": "PH002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782647789/Barbell_Bench_Press_wdv2m3.png",
+          "videoUrl": "/exercises/videos/PH002.mp4"
+        },
+        {
+          "exercise": "Conventional Deadlift",
+          "sets": 4,
+          "reps": "5",
+          "tempo": "2-0-1-0",
+          "rest": "2min",
+          "coachingFocus": "Neutral spine, bar stays close to the shins the entire pull.",
+          "id": "HI002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1780315929/Barbell_Deadlift_ymfeww.png",
+          "videoUrl": "/exercises/videos/HI002.mp4"
+        },
+        {
+          "exercise": "Pendlay Row",
+          "sets": 4,
+          "reps": "8",
+          "tempo": "2-0-1-0",
+          "rest": "90s",
+          "coachingFocus": "Reset each rep from a dead stop on the floor for strict, controlled power.",
+          "id": "PLH005",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1782777577/Pendlay_Row_hmy0hg.png",
+          "videoUrl": "/exercises/videos/PLH005.mp4"
+        },
+        {
+          "exercise": "Bulgarian Split Squat",
+          "sets": 3,
+          "reps": "8 each leg",
+          "tempo": "3-1-1-0",
+          "rest": "90s",
+          "coachingFocus": "Rear foot elevated, load with dumbbells for a serious unilateral finisher.",
+          "id": "LU003",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1779625711/Bulgarian_Split_Squat_mdoejf.png",
+          "videoUrl": "/exercises/videos/LU003.mp4"
+        },
+        {
+          "exercise": "Skull Crusher",
+          "sets": 3,
+          "reps": "10",
+          "tempo": "2-0-1-0",
+          "rest": "75s",
+          "coachingFocus": "Elbows stay fixed in place — only the forearm moves.",
+          "id": "AR002",
+          "thumbnailUrl": "https://res.cloudinary.com/dsoxsrjn2/image/upload/v1781047727/Skull_Crusher_mtizh1.png",
+          "videoUrl": "/exercises/videos/AR002.mp4"
+        }
+      ],
+      "cooldown": "Foam roll quads and lats, hamstring stretch 60s each, chest stretch 45s",
+      "estimatedCalories": "450-540",
+      "progressionNotes": "This is a heavy, low-rep strength phase — if bar speed slows dramatically on the last rep of a set, that's your true working max for the week. Don't grind ugly reps.",
+      "equipment": null,
+      "description": "An advanced heavy-barbell session built around the big three compound lifts, with dumbbell accessory work to round out the session — pure strength, no machines required."
     }
   ]
 }

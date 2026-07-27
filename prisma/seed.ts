@@ -8,6 +8,7 @@ import {
   EnvironmentTarget,
   SexTarget,
   TemplateType,
+  GymTrainingStyle,
 } from "../src/generated/prisma";
 import { PrismaPg } from "@prisma/adapter-pg";
 import exercises from "../src/training/exercises";
@@ -37,6 +38,7 @@ interface RawWorkout {
   sex?: string;
   muscleGroup?: string;
   environmentTarget?: string;
+  gymStyle?: string | null; // only meaningful when location === "GYM": FREE_WEIGHT | CALISTHENIC | WEIGHTS_ONLY | WEIGHTS_MACHINE
   collection?: string;
   duration: string | number;
   description?: string;
@@ -323,6 +325,29 @@ function toDeclaredMuscleGroup(declared: string | undefined): MuscleGroup {
 }
 
 /**
+ * Map gymStyle string from JSON to GymStyle enum.
+ * Only meaningful for GYM workouts — mirrors how `equipment` refines
+ * HOME_EQUIPMENT workouts. Returns null for HOME workouts or anything
+ * undeclared (legacy GYM entries not yet retagged fall back to
+ * WEIGHTS_MACHINE, since that's the "full commercial gym" catch-all).
+ */
+function toGymStyle(
+  declared: string | null | undefined,
+  location: string,
+): GymTrainingStyle | null {
+  if (location.toUpperCase() !== "GYM") return null;
+  if (declared) {
+    const d = declared.toUpperCase();
+    if (d === "FREE_WEIGHT") return GymTrainingStyle.WEIGHTS_ONLY;
+    if (d === "CALISTHENIC") return GymTrainingStyle.CALISTHENICS;
+    if (d === "WEIGHTS_ONLY") return GymTrainingStyle.WEIGHTS_ONLY;
+    if (d === "WEIGHTS_MACHINE") return GymTrainingStyle.WEIGHTS_AND_MACHINES;
+  }
+  // Legacy fallback: untagged GYM workout, assume full commercial gym
+  return GymTrainingStyle.WEIGHTS_AND_MACHINES;
+}
+
+/**
  * Map sex string to a value storable in the sexTarget column.
  * Returns null for "ANY" (shown to everyone) or if not declared.
  */
@@ -435,6 +460,7 @@ interface NormalisedWorkout {
   sex?: string;
   muscleGroup?: string;
   environmentTarget?: string;
+  gymStyle?: string | null;
   collection?: string;
   duration: number;
   description?: string;
@@ -456,6 +482,7 @@ function normaliseJSON(raw: WorkoutGoalFile): NormalisedWorkout[] {
     sex: w.sex,
     muscleGroup: w.muscleGroup,
     environmentTarget: w.environmentTarget,
+    gymStyle: w.gymStyle ?? null,
     collection: w.collection,
     duration: parseDuration(w.duration),
     description: w.description,
@@ -694,6 +721,9 @@ async function main() {
     // ── SexTarget: null = shown to everyone ───────────────────────────────
     const sexTarget = toSexTarget(workout.sex);
 
+    // ── GymStyle: only set for GYM workouts ────────────────────────────────
+    const gymStyle = toGymStyle(workout.gymStyle, workout.location);
+
     // ── Collection: optional series grouping ─────────────────────────────
     const collection = workout.collection ?? null;
 
@@ -745,6 +775,7 @@ async function main() {
         videoUrl,
         environmentTarget,
         sexTarget,
+        gymStyleTarget: gymStyle,
         collection,
         templateType,
         equipmentId: planEquipmentId,
@@ -765,6 +796,7 @@ async function main() {
         videoUrl,
         environmentTarget,
         sexTarget,
+        gymStyleTarget: gymStyle,
         collection,
         templateType,
         equipmentId: planEquipmentId,
@@ -825,7 +857,7 @@ async function main() {
       });
     }
     console.log(
-      `  ✓ ${workout.workoutName} [${workout.goal} | ${environmentTarget} | ${workout.level} | ${muscleGroup}${collection ? ` | ${collection}` : ""}${sexTarget ? ` | ${sexTarget}` : ""}${planEquipmentId ? ` | equip:${workout.equipment}` : ""}] — ${validExercises.length} exercises`,
+      `  ✓ ${workout.workoutName} [${workout.goal} | ${environmentTarget} | ${workout.level} | ${muscleGroup}${gymStyle ? ` | ${gymStyle}` : ""}${collection ? ` | ${collection}` : ""}${sexTarget ? ` | ${sexTarget}` : ""}${planEquipmentId ? ` | equip:${workout.equipment}` : ""}] — ${validExercises.length} exercises`,
     );
     seeded++;
   }
