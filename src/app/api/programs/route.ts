@@ -72,12 +72,46 @@ export async function GET(req: Request) {
       },
     });
 
+    // Catalog order: equipment-tied plans first, bodyweight after — see
+    // sortPlansForCatalog in lib/programaccess.ts. This MUST match the
+    // order resolver.ts uses, since computePlanLocks's cap-counting is
+    // position-dependent.
+
+    const declaredEntry = allUserEquipment.find((e) => e.source === "DECLARED");
+    const declaredEquipmentName = declaredEntry?.equipment?.name ?? null;
+
+    const expiredEquipmentIds = allUserEquipment
+      .filter(
+        (e) =>
+          e.source === "DECLARED" &&
+          e.trialExpiresAt &&
+          e.trialExpiresAt <= now,
+      )
+      .map((e) => e.equipmentId);
+
     const plans = sortPlansForCatalog(plansUnsorted);
 
-    // Additive: only computed for GYM users with an active plan. Doesn't
-    // touch anything the catalog grid below already relies on.
+    // Lock status is computed purely from fixed catalog position (first 4
+    // bodyweight / first 2 trial-equipment plans, in the order above) — NOT
+    // from activation history. See lib/programAccess.ts.
+    const lockMap = computePlanLocks(plans, {
+      isPro: access.isPro,
+      allUserEquipment,
+      now,
+      gymTrialExpiresAt: access.gymTrialExpiresAt,
+    });
+
+    const activePlanLock = activeInstance?.planId
+      ? lockMap.get(activeInstance.planId)
+      : null;
+    const weeklyScheduleLocked = !!activePlanLock?.locked;
+
     let weeklySchedule = null;
-    if (user?.trainingLocation === "GYM" && activeInstance?.planId) {
+    if (
+      user?.trainingLocation === "GYM" &&
+      activeInstance?.planId &&
+      !weeklyScheduleLocked
+    ) {
       const activePlanSessions = await prisma.plannedSession.findMany({
         where: { planId: activeInstance.planId },
         select: {
@@ -105,32 +139,6 @@ export async function GET(req: Request) {
         activeInstance.level,
       );
     }
-
-    // Catalog order: equipment-tied plans first, bodyweight after — see
-    // sortPlansForCatalog in lib/programaccess.ts. This MUST match the
-    // order resolver.ts uses, since computePlanLocks's cap-counting is
-    // position-dependent.
-
-    const declaredEntry = allUserEquipment.find((e) => e.source === "DECLARED");
-    const declaredEquipmentName = declaredEntry?.equipment?.name ?? null;
-
-    const expiredEquipmentIds = allUserEquipment
-      .filter(
-        (e) =>
-          e.source === "DECLARED" &&
-          e.trialExpiresAt &&
-          e.trialExpiresAt <= now,
-      )
-      .map((e) => e.equipmentId);
-
-    // Lock status is computed purely from fixed catalog position (first 4
-    // bodyweight / first 2 trial-equipment plans, in the order above) — NOT
-    // from activation history. See lib/programAccess.ts.
-    const lockMap = computePlanLocks(plans, {
-      isPro: access.isPro,
-      allUserEquipment,
-      now,
-    });
 
     const plansWithCount = plans.map((p) => {
       const exerciseCount = p.plannedSessions.reduce(
@@ -167,6 +175,7 @@ export async function GET(req: Request) {
         isEquipment: access.isEquipment,
         hasActiveTrial: access.hasActiveTrial,
         trialExpiresAt: access.trialExpiresAt?.toISOString() ?? null,
+        gymTrialExpiresAt: access.gymTrialExpiresAt,
         declaredEquipmentIds: access.declaredEquipmentIds,
         activeEquipmentIds: accessibleEquipmentIds,
         expiredEquipmentIds,

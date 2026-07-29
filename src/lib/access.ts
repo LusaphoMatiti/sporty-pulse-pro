@@ -5,6 +5,8 @@ export type AccessContext = {
   userId: string;
 };
 
+const GYM_TRIAL_DAYS = 15;
+
 export async function getUserAccess(ctx: AccessContext) {
   const now = new Date();
 
@@ -67,10 +69,30 @@ export async function getUserAccess(ctx: AccessContext) {
       .filter((d): d is Date => d !== null)
       .sort((a, b) => a.getTime() - b.getTime())[0] ?? null;
 
+  // GYM trial
+  // GYM users don't declare equipment ( a commercial gym already has it),
+  // so this isn't tracked on UserEquipment - it runs from
+  // onboardingCompletedAt for GYM_TRIAL_DAYS instead. Pro users bypass
+  // this entirely (computePlanLocks checks isPro first).
+
+  const user = await prisma.user.findUnique({
+    where: { id: ctx.userId },
+    select: { trainingLocation: true, onboardingCompletedAt: true },
+  });
+
+  let gymTrialExpiresAt: Date | null = null;
+  if (user?.trainingLocation === "GYM" && user.onboardingCompletedAt) {
+    gymTrialExpiresAt = new Date(user.onboardingCompletedAt);
+    gymTrialExpiresAt.setDate(gymTrialExpiresAt.getDate() + GYM_TRIAL_DAYS);
+  }
+  const hasActiveGymTrial = !!gymTrialExpiresAt && gymTrialExpiresAt > now;
+
   return {
     isPro,
     isEquipment,
     hasAnyActiveEquipment,
+    gymTrialExpiresAt,
+    hasActiveGymTrial,
     hasPurchasedEquipment,
     canAccessEquipmentProgram,
     activeEquipmentIds: Array.from(activeEquipmentIds),

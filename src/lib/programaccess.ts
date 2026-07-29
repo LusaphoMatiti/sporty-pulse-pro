@@ -124,6 +124,7 @@ export const EQUIPMENT_TRIAL_CAP = 2;
 export type LockReason =
   | "trial_expired"
   | "cap_reached"
+  | "gym_trial_expired"
   | "equipment_required"
   | "upgrade_required";
 
@@ -355,7 +356,11 @@ export function sortPlansForCatalog<T extends PlanForSorting>(plans: T[]): T[] {
 
 // ── Lock computation ───────────────────────────────────────────────────────
 
-type PlanForLocking = { id: string; equipmentId: string | null };
+type PlanForLocking = {
+  id: string;
+  equipmentId: string | null;
+  environmentTarget: EnvironmentTarget | null;
+};
 
 /**
  * Given the eligible plans in their existing catalog order, decides which
@@ -365,9 +370,14 @@ type PlanForLocking = { id: string; equipmentId: string | null };
  */
 export function computePlanLocks<T extends PlanForLocking>(
   plans: T[],
-  opts: { isPro: boolean; allUserEquipment: UserEquipmentEntry[]; now: Date },
+  opts: {
+    isPro: boolean;
+    allUserEquipment: UserEquipmentEntry[];
+    now: Date;
+    gymTrialExpiresAt: Date | null;
+  },
 ): Map<string, { locked: boolean; lockReason: LockReason | null }> {
-  const { isPro, allUserEquipment, now } = opts;
+  const { isPro, allUserEquipment, now, gymTrialExpiresAt } = opts;
   const result = new Map<
     string,
     { locked: boolean; lockReason: LockReason | null }
@@ -380,6 +390,7 @@ export function computePlanLocks<T extends PlanForLocking>(
     return result;
   }
 
+  const gymTrialActive = !!gymTrialExpiresAt && gymTrialExpiresAt > now;
   const equipmentById = new Map(
     allUserEquipment.map((e) => [e.equipmentId, e]),
   );
@@ -388,6 +399,20 @@ export function computePlanLocks<T extends PlanForLocking>(
   let equipmentTrialUnlockedCount = 0;
 
   for (const p of plans) {
+    // GYM plans run their own 15-day trial from onboarding — checked
+    // FIRST, before the equipmentId===null bodyweight branch below,
+    // since GYM plans also have equipmentId===null and would otherwise
+    // get silently swept into the permanent bodyweight free cap.
+    if (p.environmentTarget === "GYM") {
+      result.set(
+        p.id,
+        gymTrialActive
+          ? { locked: false, lockReason: null }
+          : { locked: true, lockReason: "gym_trial_expired" },
+      );
+      continue;
+    }
+
     if (p.equipmentId === null) {
       // Bodyweight — first BODYWEIGHT_FREE_CAP in catalog order are
       // unlocked, free forever, for every non-Pro tier.

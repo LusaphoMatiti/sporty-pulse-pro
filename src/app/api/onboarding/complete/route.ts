@@ -199,6 +199,64 @@ export async function POST(req: NextRequest) {
         },
       });
 
+      // --- Auto-activate
+      // So GymProgramsScreen has something
+
+      if (trainingLocation === "GYM") {
+        const baseWhere = { environmentTarget: "GYM" as const };
+        const tiers = [
+          {
+            ...baseWhere,
+            OR: [
+              { gymStyleTarget: gymTrainingStyle as GymTrainingStyle },
+              { gymStyleTarget: null },
+            ],
+            AND: [
+              {
+                OR: [
+                  { goalTarget: primaryGoal as PrimaryGoal },
+                  { goalTarget: null },
+                ],
+              },
+              { OR: [{ difficulty: experienceLevel }, { difficulty: null }] },
+            ],
+          },
+          {
+            ...baseWhere,
+            OR: [
+              { gymStyleTarget: gymTrainingStyle as GymTrainingStyle },
+              { gymStyleTarget: null },
+            ],
+          },
+          baseWhere,
+        ];
+
+        let matchedPlan: { id: string } | null = null;
+        for (const where of tiers) {
+          matchedPlan = await tx.workoutPlan.findFirst({
+            where,
+            orderBy: { name: "asc" },
+            select: { id: true },
+          });
+          if (matchedPlan) break;
+        }
+
+        if (matchedPlan) {
+          await tx.planInstance.create({
+            data: {
+              userId,
+              planId: matchedPlan.id,
+              level: experienceLevel as ExperienceLevel,
+              status: "ACTIVE",
+            },
+          });
+        } else {
+          console.warn(
+            `[onboarding/complete] no GYM plan found to auto-activate for userId=${userId}`,
+          );
+        }
+      }
+
       // Create UserEquipment if equipment was declared
       if (equipmentId) {
         const trialExpiresAt = new Date();

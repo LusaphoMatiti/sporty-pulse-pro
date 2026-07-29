@@ -46,7 +46,12 @@ export async function resolveProgram({ userId, planId, level }: ResolverInput) {
 
   const eligiblePlansUnsorted = await prisma.workoutPlan.findMany({
     where: planWhere,
-    select: { id: true, name: true, equipmentId: true },
+    select: {
+      id: true,
+      name: true,
+      equipmentId: true,
+      environmentTarget: true,
+    },
   });
 
   // MUST use the same catalog order as the GET /api/programs route, since
@@ -58,6 +63,7 @@ export async function resolveProgram({ userId, planId, level }: ResolverInput) {
     isPro: access.isPro,
     allUserEquipment,
     now,
+    gymTrialExpiresAt: access.gymTrialExpiresAt,
   });
 
   const lock = lockMap.get(planId);
