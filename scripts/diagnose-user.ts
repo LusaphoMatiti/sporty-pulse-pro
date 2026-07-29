@@ -62,11 +62,19 @@ async function main() {
     isEquipment: access.isEquipment,
     hasActiveTrial: access.hasActiveTrial,
     trialExpiresAt: access.trialExpiresAt,
+    hasActiveGymTrial: access.hasActiveGymTrial,
+    gymTrialExpiresAt: access.gymTrialExpiresAt,
   });
 
   const plansUnsorted = await prisma.workoutPlan.findMany({
     where: planWhere,
-    select: { id: true, name: true, equipmentId: true, tier: true },
+    select: {
+      id: true,
+      name: true,
+      equipmentId: true,
+      tier: true,
+      environmentTarget: true,
+    },
   });
 
   // Catalog order: equipment-tied plans first, bodyweight after. MUST match
@@ -90,6 +98,7 @@ async function main() {
     isPro: access.isPro,
     allUserEquipment,
     now,
+    gymTrialExpiresAt: access.gymTrialExpiresAt,
   });
 
   console.log("\n── Lock results ───────────────────────────────");
