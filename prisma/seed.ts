@@ -766,40 +766,39 @@ async function seedWeeklyPrograms(
     });
     await prisma.plannedSession.deleteMany({ where: { planId: plan.id } });
 
-    // ── Create real distinct sessions, cycled across durationWeeks ────────
-    // sessionNumber increments continuously (week 1 = 1..sessionCount,
-    // week 2 = sessionCount+1..2*sessionCount, etc.) so buildWeeklySchedule
-    // — which just sorts by sessionNumber and lays results across Mon-Sun —
-    // always sees exactly `sessionCount` distinct sessions per week, with
-    // any days beyond that correctly falling back to rest days.
-    for (let week = 0; week < program.durationWeeks; week++) {
-      for (const session of program.sessions) {
-        const sessionNumber = week * sessionCount + session.sessionNumber;
+    // ── Create ONE repeating week template ─────────────────────────────────
+    // buildWeeklySchedule takes no "current week" argument — it just sorts
+    // whatever PlannedSession[] it receives by sessionNumber and slots array
+    // positions 0-6 straight into Monday-Sunday. Pre-creating durationWeeks
+    // copies (as the legacy loop does) meant Saturday/Sunday were quietly
+    // picking up week 2's Legs/Chest sessions instead of falling through to
+    // isRestDay — durationWeeks controls how long the plan runs, not how
+    // many PlannedSession rows exist; the same sessionCount sessions recur
+    // every week.
+    for (const session of program.sessions) {
+      const plannedSession = await prisma.plannedSession.create({
+        data: {
+          planId: plan.id,
+          sessionNumber: session.sessionNumber,
+          focus: session.focus,
+          estimatedMinutes: session.estimatedMinutes,
+        },
+      });
 
-        const plannedSession = await prisma.plannedSession.create({
-          data: {
-            planId: plan.id,
-            sessionNumber,
-            focus: session.focus,
-            estimatedMinutes: session.estimatedMinutes,
-          },
-        });
-
-        await prisma.plannedExercise.createMany({
-          data: session.exercises.map((e, i) => ({
-            sessionId: plannedSession.id,
-            exerciseId: exerciseByName.get(e.exercise)!,
-            order: i + 1,
-            beginnerSets: e.beginnerSets,
-            beginnerReps: e.beginnerReps,
-            intermediateSets: e.intermediateSets,
-            intermediateReps: e.intermediateReps,
-            advancedSets: e.advancedSets,
-            advancedReps: e.advancedReps,
-            restSeconds: e.restSeconds,
-          })),
-        });
-      }
+      await prisma.plannedExercise.createMany({
+        data: session.exercises.map((e, i) => ({
+          sessionId: plannedSession.id,
+          exerciseId: exerciseByName.get(e.exercise)!,
+          order: i + 1,
+          beginnerSets: e.beginnerSets,
+          beginnerReps: e.beginnerReps,
+          intermediateSets: e.intermediateSets,
+          intermediateReps: e.intermediateReps,
+          advancedSets: e.advancedSets,
+          advancedReps: e.advancedReps,
+          restSeconds: e.restSeconds,
+        })),
+      });
     }
 
     console.log(

@@ -359,6 +359,2472 @@
           ]
         }
       ]
+    },
+    {
+      "workoutName": "Full Gym Hypertrophy Split",
+      "goal": "BUILD_MUSCLE",
+      "location": "GYM",
+      "environmentTarget": "GYM",
+      "gymStyle": "WEIGHTS_AND_MACHINES",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "collection": "Weights & Machines Series",
+      "durationWeeks": 6,
+      "description": "A 5-day body-part hypertrophy split using the full gym — free weights, cables, and machines. Moderate rep ranges and longer rest periods for maximum muscle growth, following NASM's muscular development principles.",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "focus": "Legs",
+          "estimatedMinutes": 60,
+          "exercises": [
+            {
+              "exercise": "Barbell Back Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 5,
+              "advancedReps": 6,
+              "restSeconds": 120
+            },
+            {
+              "exercise": "Romanian Deadlift (RDL)",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 120
+            },
+            {
+              "exercise": "Leg Press",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Walking Lunge",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Hack Squat (Machine)",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 75,
+              "_substituteNote": "sub for Leg Extension — no leg-extension machine exists yet"
+            },
+            {
+              "exercise": "Stiff Leg Deadlift",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 75,
+              "_substituteNote": "sub for Lying Leg Curl — no leg-curl machine exists yet"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 2,
+          "focus": "Chest",
+          "estimatedMinutes": 55,
+          "exercises": [
+            {
+              "exercise": "Barbell Bench Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 5,
+              "advancedReps": 6,
+              "restSeconds": 120
+            },
+            {
+              "exercise": "Incline Dumbbell Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Floor Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90,
+              "_substituteNote": "sub for Decline Dumbbell Press — no decline press variant exists yet"
+            },
+            {
+              "exercise": "Dumbbell Fly",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Cable Fly",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Machine Chest Press",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 75,
+              "_substituteNote": "sub for Pec Deck Machine Fly — no forward pec-deck fly exists yet"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 3,
+          "focus": "Shoulders",
+          "estimatedMinutes": 50,
+          "exercises": [
+            {
+              "exercise": "Seated Dumbbell Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Dumbbell Lateral Raise",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Rear Delt Fly (DB)",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Dumbbell Front Raise",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 3,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Upright Row (DB)",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Cable Lateral Raise",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            }
+          ]
+        },
+        {
+          "sessionNumber": 4,
+          "focus": "Back",
+          "estimatedMinutes": 60,
+          "exercises": [
+            {
+              "exercise": "Pull-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 8,
+              "intermediateSets": 4,
+              "intermediateReps": 6,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 120
+            },
+            {
+              "exercise": "Lat Pulldown",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Barbell Bent-Over Row",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 120
+            },
+            {
+              "exercise": "Seated Cable Row",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Dumbbell Row",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Straight Arm Pulldown",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            }
+          ]
+        },
+        {
+          "sessionNumber": 5,
+          "focus": "Arms",
+          "estimatedMinutes": 50,
+          "exercises": [
+            {
+              "exercise": "EZ Bar Curl",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75,
+              "_substituteNote": "sub for Barbell Curl — no plain barbell-curl entry exists yet"
+            },
+            {
+              "exercise": "Incline Dumbbell Curl",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Hammer Curl",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Skull Crusher",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Close Grip Bench Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90,
+              "_substituteNote": "sub for Cable Triceps Pushdown — no cable-pushdown entry exists yet"
+            },
+            {
+              "exercise": "Diamond Push-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 15,
+              "advancedSets": 3,
+              "advancedReps": 20,
+              "restSeconds": 45,
+              "_substituteNote": "sub for Overhead Dumbbell Triceps Extension — bodyweight finisher"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workoutName": "Full Gym Athletic Performance",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "environmentTarget": "GYM",
+      "gymStyle": "WEIGHTS_AND_MACHINES",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "collection": "Weights & Machines Series",
+      "durationWeeks": 6,
+      "description": "A 4-day functional strength-and-conditioning split using the full gym. Blends compound strength work, explosive power, and metabolic conditioning — built for general athleticism rather than pure size or pure fat loss.",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "focus": "Upper Body",
+          "estimatedMinutes": 50,
+          "exercises": [
+            {
+              "exercise": "Barbell Bench Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Lat Pulldown",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Seated Dumbbell Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Seated Cable Row",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Dumbbell Lateral Raise",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 45
+            }
+          ]
+        },
+        {
+          "sessionNumber": 2,
+          "focus": "Lower Body",
+          "estimatedMinutes": 50,
+          "exercises": [
+            {
+              "exercise": "Barbell Back Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Romanian Deadlift (RDL)",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Leg Press",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Walking Lunge",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Standing Calf Raise",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 45
+            }
+          ]
+        },
+        {
+          "sessionNumber": 3,
+          "focus": "Full Body Power",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "Power Clean",
+              "beginnerSets": 4,
+              "beginnerReps": 5,
+              "intermediateSets": 5,
+              "intermediateReps": 4,
+              "advancedSets": 5,
+              "advancedReps": 3,
+              "restSeconds": 120,
+              "_substituteNote": "explosive triple-extension — technique first, load second"
+            },
+            {
+              "exercise": "Push Press",
+              "beginnerSets": 4,
+              "beginnerReps": 6,
+              "intermediateSets": 4,
+              "intermediateReps": 6,
+              "advancedSets": 5,
+              "advancedReps": 5,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Kettlebell Swing",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 20,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Box Jump",
+              "beginnerSets": 3,
+              "beginnerReps": 8,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Sled Push",
+              "beginnerSets": 3,
+              "beginnerReps": 20,
+              "intermediateSets": 4,
+              "intermediateReps": 20,
+              "advancedSets": 4,
+              "advancedReps": 25,
+              "restSeconds": 75,
+              "_substituteNote": "distance in meters, stored under reps"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 4,
+          "focus": "Conditioning & Core",
+          "estimatedMinutes": 40,
+          "exercises": [
+            {
+              "exercise": "Rowing Machine",
+              "beginnerSets": 4,
+              "beginnerReps": 60,
+              "intermediateSets": 5,
+              "intermediateReps": 60,
+              "advancedSets": 6,
+              "advancedReps": 60,
+              "restSeconds": 45,
+              "_substituteNote": "seconds, stored under reps"
+            },
+            {
+              "exercise": "Assault Bike",
+              "beginnerSets": 4,
+              "beginnerReps": 30,
+              "intermediateSets": 5,
+              "intermediateReps": 30,
+              "advancedSets": 6,
+              "advancedReps": 30,
+              "restSeconds": 45,
+              "_substituteNote": "seconds, stored under reps"
+            },
+            {
+              "exercise": "Medicine Ball Slam",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 15,
+              "restSeconds": 45
+            },
+            {
+              "exercise": "Cable Woodchop",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 45
+            },
+            {
+              "exercise": "Plank",
+              "beginnerSets": 3,
+              "beginnerReps": 40,
+              "intermediateSets": 3,
+              "intermediateReps": 50,
+              "advancedSets": 4,
+              "advancedReps": 60,
+              "restSeconds": 45,
+              "_substituteNote": "seconds, stored under reps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workoutName": "Barbell & Dumbbell Hypertrophy Split",
+      "goal": "BUILD_MUSCLE",
+      "location": "GYM",
+      "environmentTarget": "GYM",
+      "gymStyle": "WEIGHTS_ONLY",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "collection": "Free Weight Strength Series",
+      "durationWeeks": 6,
+      "description": "A 5-day hypertrophy split using only a barbell and dumbbells — no cables or machines. NASM muscular-development rep ranges throughout. Back day leans on horizontal rowing variety since there's no lat pulldown or pull-up bar available in a pure free-weight setup.",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "focus": "Legs",
+          "estimatedMinutes": 60,
+          "exercises": [
+            {
+              "exercise": "Barbell Back Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 5,
+              "advancedReps": 6,
+              "restSeconds": 120
+            },
+            {
+              "exercise": "Romanian Deadlift (RDL)",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 120
+            },
+            {
+              "exercise": "Front Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 105
+            },
+            {
+              "exercise": "Bulgarian Split Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Walking Lunge",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Stiff Leg Deadlift",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            }
+          ]
+        },
+        {
+          "sessionNumber": 2,
+          "focus": "Chest",
+          "estimatedMinutes": 50,
+          "exercises": [
+            {
+              "exercise": "Barbell Bench Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 5,
+              "advancedReps": 6,
+              "restSeconds": 120
+            },
+            {
+              "exercise": "Incline Dumbbell Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Floor Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Dumbbell Fly",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Single Arm Dumbbell Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 60
+            }
+          ]
+        },
+        {
+          "sessionNumber": 3,
+          "focus": "Shoulders",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "Seated Barbell OHP",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Arnold Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Dumbbell Lateral Raise",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Rear Delt Fly (DB)",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Upright Row (DB)",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 60
+            }
+          ]
+        },
+        {
+          "sessionNumber": 4,
+          "focus": "Back",
+          "estimatedMinutes": 55,
+          "exercises": [
+            {
+              "exercise": "Barbell Bent-Over Row",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 120,
+              "_substituteNote": "primary back builder — no lat pulldown/pull-up bar in a pure free-weight setup, so horizontal rows carry the day"
+            },
+            {
+              "exercise": "Pendlay Row",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Chest-Supported Dumbbell Row",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Yates Row",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Dumbbell Pull-Over",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60,
+              "_substituteNote": "closest free-weight equivalent to a vertical lat-pull movement"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 5,
+          "focus": "Arms",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "EZ Bar Curl",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Incline Dumbbell Curl",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Hammer Curl",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Skull Crusher",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Close Grip Bench Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workoutName": "Barbell & Dumbbell Athletic Performance",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "environmentTarget": "GYM",
+      "gymStyle": "WEIGHTS_ONLY",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "collection": "Free Weight Performance Series",
+      "durationWeeks": 6,
+      "description": "A 4-day functional strength split using only a barbell and dumbbells. Built around real strength standards, explosive power, and loaded carries — classic free-weight athleticism.",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "focus": "Upper Body",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "Barbell Bench Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Barbell Bent-Over Row",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Seated Dumbbell Press",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Dumbbell Row",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Dumbbell Lateral Raise",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 45
+            }
+          ]
+        },
+        {
+          "sessionNumber": 2,
+          "focus": "Lower Body",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "Barbell Back Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Romanian Deadlift (RDL)",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Walking Lunge",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Goblet Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Farmer's Carry",
+              "beginnerSets": 3,
+              "beginnerReps": 30,
+              "intermediateSets": 4,
+              "intermediateReps": 30,
+              "advancedSets": 4,
+              "advancedReps": 40,
+              "restSeconds": 60,
+              "_substituteNote": "meters, stored under reps"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 3,
+          "focus": "Full Body Power",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "Power Clean",
+              "beginnerSets": 4,
+              "beginnerReps": 5,
+              "intermediateSets": 5,
+              "intermediateReps": 4,
+              "advancedSets": 5,
+              "advancedReps": 3,
+              "restSeconds": 120
+            },
+            {
+              "exercise": "Push Press",
+              "beginnerSets": 4,
+              "beginnerReps": 6,
+              "intermediateSets": 4,
+              "intermediateReps": 6,
+              "advancedSets": 5,
+              "advancedReps": 5,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Kettlebell Swing",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 20,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Turkish Get-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 5,
+              "intermediateSets": 3,
+              "intermediateReps": 5,
+              "advancedSets": 4,
+              "advancedReps": 4,
+              "restSeconds": 75,
+              "_substituteNote": "each side"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 4,
+          "focus": "Conditioning & Core",
+          "estimatedMinutes": 40,
+          "exercises": [
+            {
+              "exercise": "Kettlebell Snatch",
+              "beginnerSets": 4,
+              "beginnerReps": 8,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 5,
+              "advancedReps": 6,
+              "restSeconds": 60,
+              "_substituteNote": "each side"
+            },
+            {
+              "exercise": "Thrusters",
+              "beginnerSets": 4,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 12,
+              "advancedSets": 5,
+              "advancedReps": 10,
+              "restSeconds": 45
+            },
+            {
+              "exercise": "Renegade Row",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 45,
+              "_substituteNote": "each side"
+            },
+            {
+              "exercise": "Russian Twist",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 15,
+              "restSeconds": 45,
+              "_substituteNote": "each side"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workoutName": "Barbell & Dumbbell Fat Loss Split",
+      "goal": "LOSE_WEIGHT",
+      "location": "GYM",
+      "environmentTarget": "GYM",
+      "gymStyle": "WEIGHTS_ONLY",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "collection": "Free Weight Burn Series",
+      "durationWeeks": 6,
+      "description": "A 4-day fat-loss split using only a barbell and dumbbells. Higher reps and shorter rest than a pure strength split, with two dedicated metabolic days — NASM Phase 1 Stabilization Endurance principles throughout.",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "focus": "Push",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "Barbell Bench Press",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Seated Dumbbell Press",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Incline Dumbbell Press",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Dumbbell Lateral Raise",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 45
+            }
+          ]
+        },
+        {
+          "sessionNumber": 2,
+          "focus": "Pull & Legs",
+          "estimatedMinutes": 50,
+          "exercises": [
+            {
+              "exercise": "Barbell Back Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Barbell Bent-Over Row",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Romanian Deadlift (RDL)",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Dumbbell Row",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 45
+            }
+          ]
+        },
+        {
+          "sessionNumber": 3,
+          "focus": "Metabolic Conditioning",
+          "estimatedMinutes": 40,
+          "exercises": [
+            {
+              "exercise": "Thrusters",
+              "beginnerSets": 4,
+              "beginnerReps": 15,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 5,
+              "advancedReps": 12,
+              "restSeconds": 40
+            },
+            {
+              "exercise": "Kettlebell Swing",
+              "beginnerSets": 4,
+              "beginnerReps": 15,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 5,
+              "advancedReps": 15,
+              "restSeconds": 40
+            },
+            {
+              "exercise": "Renegade Row",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 40,
+              "_substituteNote": "each side"
+            },
+            {
+              "exercise": "Front Rack Lunge",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 40,
+              "_substituteNote": "each leg"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 4,
+          "focus": "Full Body Burn",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "Power Clean",
+              "beginnerSets": 4,
+              "beginnerReps": 6,
+              "intermediateSets": 4,
+              "intermediateReps": 6,
+              "advancedSets": 5,
+              "advancedReps": 5,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Kettlebell Snatch",
+              "beginnerSets": 4,
+              "beginnerReps": 8,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 5,
+              "advancedReps": 8,
+              "restSeconds": 45,
+              "_substituteNote": "each side"
+            },
+            {
+              "exercise": "Turkish Get-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 5,
+              "intermediateSets": 3,
+              "intermediateReps": 5,
+              "advancedSets": 4,
+              "advancedReps": 5,
+              "restSeconds": 60,
+              "_substituteNote": "each side"
+            },
+            {
+              "exercise": "Farmer's Carry",
+              "beginnerSets": 3,
+              "beginnerReps": 30,
+              "intermediateSets": 4,
+              "intermediateReps": 30,
+              "advancedSets": 4,
+              "advancedReps": 40,
+              "restSeconds": 45,
+              "_substituteNote": "meters, stored under reps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workoutName": "Rig & Bodyweight Hypertrophy Split",
+      "goal": "BUILD_MUSCLE",
+      "location": "GYM",
+      "environmentTarget": "GYM",
+      "gymStyle": "CALISTHENICS",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "collection": "Calisthenics Strength Series",
+      "durationWeeks": 6,
+      "description": "A 4-day muscle-building split using bodyweight and the gym's rig — pull-up bar, dip station, rings. Skill-gated moves like muscle-ups are left out of the core lineup since they don't scale down for a true beginner; progress there is coached separately.",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "focus": "Push",
+          "estimatedMinutes": 50,
+          "exercises": [
+            {
+              "exercise": "Chest Dip",
+              "beginnerSets": 4,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 5,
+              "advancedReps": 12,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Push-Up",
+              "beginnerSets": 4,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 20,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Pike Push-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 8,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Archer Push-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 6,
+              "intermediateSets": 3,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 75,
+              "_substituteNote": "each side"
+            },
+            {
+              "exercise": "Diamond Push-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 15,
+              "restSeconds": 60
+            }
+          ]
+        },
+        {
+          "sessionNumber": 2,
+          "focus": "Pull",
+          "estimatedMinutes": 50,
+          "exercises": [
+            {
+              "exercise": "Pull-Up",
+              "beginnerSets": 4,
+              "beginnerReps": 6,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 5,
+              "advancedReps": 10,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Chin-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 6,
+              "intermediateSets": 3,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Neutral Grip Pull-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 6,
+              "intermediateSets": 3,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Suspension Trainer Row",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 15,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Scapular Pull-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 60
+            }
+          ]
+        },
+        {
+          "sessionNumber": 3,
+          "focus": "Legs",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "Pistol Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 6,
+              "intermediateSets": 3,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 90,
+              "_substituteNote": "each leg — a genuine progression target; regress with a box/rig-assisted version as needed"
+            },
+            {
+              "exercise": "Split Squat",
+              "beginnerSets": 4,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Bodyweight Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 20,
+              "advancedSets": 4,
+              "advancedReps": 25,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Nordic Curl",
+              "beginnerSets": 3,
+              "beginnerReps": 5,
+              "intermediateSets": 3,
+              "intermediateReps": 6,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Wall Sit",
+              "beginnerSets": 3,
+              "beginnerReps": 30,
+              "intermediateSets": 3,
+              "intermediateReps": 45,
+              "advancedSets": 4,
+              "advancedReps": 60,
+              "restSeconds": 60,
+              "_substituteNote": "seconds, stored under reps"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 4,
+          "focus": "Core & Arms",
+          "estimatedMinutes": 40,
+          "exercises": [
+            {
+              "exercise": "L-Sit",
+              "beginnerSets": 4,
+              "beginnerReps": 15,
+              "intermediateSets": 4,
+              "intermediateReps": 20,
+              "advancedSets": 5,
+              "advancedReps": 25,
+              "restSeconds": 60,
+              "_substituteNote": "seconds, stored under reps"
+            },
+            {
+              "exercise": "Hanging Leg Raise",
+              "beginnerSets": 4,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 12,
+              "advancedSets": 5,
+              "advancedReps": 15,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Toes-to-Bar",
+              "beginnerSets": 3,
+              "beginnerReps": 8,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Copenhagen Plank",
+              "beginnerSets": 3,
+              "beginnerReps": 20,
+              "intermediateSets": 3,
+              "intermediateReps": 25,
+              "advancedSets": 4,
+              "advancedReps": 30,
+              "restSeconds": 45,
+              "_substituteNote": "each side, seconds stored under reps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workoutName": "Rig & Bodyweight Athletic Performance",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "environmentTarget": "GYM",
+      "gymStyle": "CALISTHENICS",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "collection": "Calisthenics Performance Series",
+      "durationWeeks": 6,
+      "description": "A 4-day athletic conditioning split using bodyweight and the gym's rig. Blends pulling/pressing strength with explosive and metabolic bodyweight conditioning.",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "focus": "Push & Pull",
+          "estimatedMinutes": 50,
+          "exercises": [
+            {
+              "exercise": "Push-Up",
+              "beginnerSets": 4,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 18,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Pull-Up",
+              "beginnerSets": 4,
+              "beginnerReps": 6,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 5,
+              "advancedReps": 10,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Chest Dip",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Suspension Trainer Row",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 15,
+              "restSeconds": 60
+            }
+          ]
+        },
+        {
+          "sessionNumber": 2,
+          "focus": "Legs & Power",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "Jump Squat",
+              "beginnerSets": 4,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 12,
+              "advancedSets": 5,
+              "advancedReps": 15,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Split Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Broad Jump",
+              "beginnerSets": 3,
+              "beginnerReps": 8,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Plyometric Lunge (Jump Lunge)",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 60,
+              "_substituteNote": "each leg"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 3,
+          "focus": "Conditioning",
+          "estimatedMinutes": 40,
+          "exercises": [
+            {
+              "exercise": "Burpee",
+              "beginnerSets": 4,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 5,
+              "advancedReps": 15,
+              "restSeconds": 45
+            },
+            {
+              "exercise": "Mountain Climbers",
+              "beginnerSets": 4,
+              "beginnerReps": 30,
+              "intermediateSets": 4,
+              "intermediateReps": 40,
+              "advancedSets": 5,
+              "advancedReps": 40,
+              "restSeconds": 30,
+              "_substituteNote": "seconds, stored under reps"
+            },
+            {
+              "exercise": "Bear Crawl",
+              "beginnerSets": 3,
+              "beginnerReps": 20,
+              "intermediateSets": 3,
+              "intermediateReps": 25,
+              "advancedSets": 4,
+              "advancedReps": 30,
+              "restSeconds": 45,
+              "_substituteNote": "seconds, stored under reps"
+            },
+            {
+              "exercise": "Sprint Intervals",
+              "beginnerSets": 4,
+              "beginnerReps": 20,
+              "intermediateSets": 5,
+              "intermediateReps": 20,
+              "advancedSets": 6,
+              "advancedReps": 20,
+              "restSeconds": 40,
+              "_substituteNote": "seconds, stored under reps"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 4,
+          "focus": "Core & Grip",
+          "estimatedMinutes": 40,
+          "exercises": [
+            {
+              "exercise": "Hanging Leg Raise",
+              "beginnerSets": 4,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 12,
+              "advancedSets": 5,
+              "advancedReps": 15,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Toes-to-Bar",
+              "beginnerSets": 3,
+              "beginnerReps": 8,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Plank",
+              "beginnerSets": 3,
+              "beginnerReps": 40,
+              "intermediateSets": 3,
+              "intermediateReps": 50,
+              "advancedSets": 4,
+              "advancedReps": 60,
+              "restSeconds": 45,
+              "_substituteNote": "seconds, stored under reps"
+            },
+            {
+              "exercise": "Side Plank",
+              "beginnerSets": 3,
+              "beginnerReps": 30,
+              "intermediateSets": 3,
+              "intermediateReps": 40,
+              "advancedSets": 4,
+              "advancedReps": 45,
+              "restSeconds": 45,
+              "_substituteNote": "each side, seconds stored under reps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workoutName": "Rig & Bodyweight Fat Loss Circuit",
+      "goal": "LOSE_WEIGHT",
+      "location": "GYM",
+      "environmentTarget": "GYM",
+      "gymStyle": "CALISTHENICS",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "collection": "Calisthenics Burn Series",
+      "durationWeeks": 6,
+      "description": "A 3-day fat-loss circuit using bodyweight and the gym's rig. Higher reps, short rest, and a density-focused structure — the rig adds pulling variety a pure bodyweight session can't offer.",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "focus": "Full Body Circuit A",
+          "estimatedMinutes": 40,
+          "exercises": [
+            {
+              "exercise": "Burpee",
+              "beginnerSets": 4,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 5,
+              "advancedReps": 15,
+              "restSeconds": 40
+            },
+            {
+              "exercise": "Pull-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 6,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 45
+            },
+            {
+              "exercise": "Push-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 18,
+              "restSeconds": 40
+            },
+            {
+              "exercise": "Jump Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 18,
+              "restSeconds": 40
+            }
+          ]
+        },
+        {
+          "sessionNumber": 2,
+          "focus": "Full Body Circuit B",
+          "estimatedMinutes": 40,
+          "exercises": [
+            {
+              "exercise": "Mountain Climbers",
+              "beginnerSets": 4,
+              "beginnerReps": 30,
+              "intermediateSets": 4,
+              "intermediateReps": 40,
+              "advancedSets": 5,
+              "advancedReps": 40,
+              "restSeconds": 30,
+              "_substituteNote": "seconds, stored under reps"
+            },
+            {
+              "exercise": "Suspension Trainer Row",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 15,
+              "restSeconds": 40
+            },
+            {
+              "exercise": "Chest Dip",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 40
+            },
+            {
+              "exercise": "Split Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 40,
+              "_substituteNote": "each leg"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 3,
+          "focus": "Full Body Circuit C",
+          "estimatedMinutes": 40,
+          "exercises": [
+            {
+              "exercise": "Squat Thrust",
+              "beginnerSets": 4,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 5,
+              "advancedReps": 15,
+              "restSeconds": 40
+            },
+            {
+              "exercise": "Scapular Pull-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 40
+            },
+            {
+              "exercise": "Diamond Push-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 15,
+              "restSeconds": 40
+            },
+            {
+              "exercise": "High Knees",
+              "beginnerSets": 4,
+              "beginnerReps": 30,
+              "intermediateSets": 4,
+              "intermediateReps": 40,
+              "advancedSets": 5,
+              "advancedReps": 40,
+              "restSeconds": 30,
+              "_substituteNote": "seconds, stored under reps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workoutName": "Bodyweight Hypertrophy Rotation",
+      "goal": "BUILD_MUSCLE",
+      "location": "GYM",
+      "environmentTarget": "GYM",
+      "gymStyle": "BODYWEIGHT",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "collection": "Bodyweight Muscle Series",
+      "durationWeeks": 6,
+      "description": "A 3-day full-body muscle-building rotation using zero equipment. No true pulling pattern is possible without a bar or rig, so this leans on unilateral squat/lunge work, varied push-up angles, and posterior-chain bridge/hinge work instead. Add rig-based pulling separately if any bar is available where you train.",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "focus": "Full Body A",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "Bulgarian Split Squat",
+              "beginnerSets": 4,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 5,
+              "advancedReps": 12,
+              "restSeconds": 75,
+              "_substituteNote": "each leg"
+            },
+            {
+              "exercise": "Diamond Push-Up",
+              "beginnerSets": 4,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 12,
+              "advancedSets": 5,
+              "advancedReps": 15,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Single Leg Hip Thrust",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 15,
+              "restSeconds": 60,
+              "_substituteNote": "each leg"
+            },
+            {
+              "exercise": "Archer Push-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 6,
+              "intermediateSets": 3,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 75,
+              "_substituteNote": "each side"
+            },
+            {
+              "exercise": "Hollow Body Hold",
+              "beginnerSets": 3,
+              "beginnerReps": 20,
+              "intermediateSets": 3,
+              "intermediateReps": 30,
+              "advancedSets": 4,
+              "advancedReps": 40,
+              "restSeconds": 45,
+              "_substituteNote": "seconds, stored under reps"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 2,
+          "focus": "Full Body B",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "Pistol Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 5,
+              "intermediateSets": 3,
+              "intermediateReps": 6,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90,
+              "_substituteNote": "each leg — regress to a box-assisted version as needed"
+            },
+            {
+              "exercise": "Decline Push-Up",
+              "beginnerSets": 4,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 15,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Nordic Curl",
+              "beginnerSets": 3,
+              "beginnerReps": 5,
+              "intermediateSets": 3,
+              "intermediateReps": 6,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Handstand Push-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 5,
+              "intermediateSets": 3,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 90,
+              "_substituteNote": "feet supported on a wall — regress range of motion, not the exercise"
+            },
+            {
+              "exercise": "Copenhagen Plank",
+              "beginnerSets": 3,
+              "beginnerReps": 20,
+              "intermediateSets": 3,
+              "intermediateReps": 25,
+              "advancedSets": 4,
+              "advancedReps": 30,
+              "restSeconds": 45,
+              "_substituteNote": "each side, seconds stored under reps"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 3,
+          "focus": "Full Body C",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "Split Squat",
+              "beginnerSets": 4,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 75,
+              "_substituteNote": "each leg"
+            },
+            {
+              "exercise": "Incline Push-Up",
+              "beginnerSets": 4,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 15,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Glute Bridge",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 20,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Pike Push-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 8,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "V-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 20,
+              "restSeconds": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workoutName": "Bodyweight Athletic Rotation",
+      "goal": "GET_FIT",
+      "location": "GYM",
+      "environmentTarget": "GYM",
+      "gymStyle": "BODYWEIGHT",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "collection": "Bodyweight Athletic Series",
+      "durationWeeks": 6,
+      "description": "A 3-day full-body athletic rotation using zero equipment — explosive lower-body power, pressing strength, and conditioning. No pulling pattern is possible without a bar, so this stays push/legs/conditioning-focused.",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "focus": "Power & Push",
+          "estimatedMinutes": 40,
+          "exercises": [
+            {
+              "exercise": "Jump Squat",
+              "beginnerSets": 4,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 12,
+              "advancedSets": 5,
+              "advancedReps": 15,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Push-Up",
+              "beginnerSets": 4,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 18,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Broad Jump",
+              "beginnerSets": 3,
+              "beginnerReps": 8,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Plyometric Lunge (Jump Lunge)",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 60,
+              "_substituteNote": "each leg"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 2,
+          "focus": "Conditioning",
+          "estimatedMinutes": 40,
+          "exercises": [
+            {
+              "exercise": "Burpee",
+              "beginnerSets": 4,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 5,
+              "advancedReps": 15,
+              "restSeconds": 45
+            },
+            {
+              "exercise": "Mountain Climbers",
+              "beginnerSets": 4,
+              "beginnerReps": 30,
+              "intermediateSets": 4,
+              "intermediateReps": 40,
+              "advancedSets": 5,
+              "advancedReps": 40,
+              "restSeconds": 30,
+              "_substituteNote": "seconds, stored under reps"
+            },
+            {
+              "exercise": "High Knees",
+              "beginnerSets": 4,
+              "beginnerReps": 30,
+              "intermediateSets": 4,
+              "intermediateReps": 40,
+              "advancedSets": 5,
+              "advancedReps": 40,
+              "restSeconds": 30,
+              "_substituteNote": "seconds, stored under reps"
+            },
+            {
+              "exercise": "Sprint Intervals",
+              "beginnerSets": 4,
+              "beginnerReps": 20,
+              "intermediateSets": 5,
+              "intermediateReps": 20,
+              "advancedSets": 6,
+              "advancedReps": 20,
+              "restSeconds": 40,
+              "_substituteNote": "seconds, stored under reps"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 3,
+          "focus": "Strength & Core",
+          "estimatedMinutes": 40,
+          "exercises": [
+            {
+              "exercise": "Pistol Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 5,
+              "intermediateSets": 3,
+              "intermediateReps": 6,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90,
+              "_substituteNote": "each leg"
+            },
+            {
+              "exercise": "Decline Push-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 15,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Bear Crawl",
+              "beginnerSets": 3,
+              "beginnerReps": 20,
+              "intermediateSets": 3,
+              "intermediateReps": 25,
+              "advancedSets": 4,
+              "advancedReps": 30,
+              "restSeconds": 45,
+              "_substituteNote": "seconds, stored under reps"
+            },
+            {
+              "exercise": "Hollow Body Hold",
+              "beginnerSets": 3,
+              "beginnerReps": 20,
+              "intermediateSets": 3,
+              "intermediateReps": 30,
+              "advancedSets": 4,
+              "advancedReps": 40,
+              "restSeconds": 45,
+              "_substituteNote": "seconds, stored under reps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workoutName": "Bodyweight Fat Loss Rotation",
+      "goal": "LOSE_WEIGHT",
+      "location": "GYM",
+      "environmentTarget": "GYM",
+      "gymStyle": "BODYWEIGHT",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "collection": "Bodyweight Burn Series",
+      "durationWeeks": 6,
+      "description": "A 3-day full-body fat-loss circuit using zero equipment. High reps, short rest, density-focused — no equipment needed anywhere in the gym.",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "focus": "Full Body Burn A",
+          "estimatedMinutes": 35,
+          "exercises": [
+            {
+              "exercise": "Burpee",
+              "beginnerSets": 4,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 5,
+              "advancedReps": 15,
+              "restSeconds": 30
+            },
+            {
+              "exercise": "Jump Squat",
+              "beginnerSets": 4,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 5,
+              "advancedReps": 18,
+              "restSeconds": 30
+            },
+            {
+              "exercise": "Push-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 18,
+              "restSeconds": 30
+            },
+            {
+              "exercise": "Mountain Climbers",
+              "beginnerSets": 4,
+              "beginnerReps": 30,
+              "intermediateSets": 4,
+              "intermediateReps": 40,
+              "advancedSets": 5,
+              "advancedReps": 40,
+              "restSeconds": 20,
+              "_substituteNote": "seconds, stored under reps"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 2,
+          "focus": "Full Body Burn B",
+          "estimatedMinutes": 35,
+          "exercises": [
+            {
+              "exercise": "Squat Thrust",
+              "beginnerSets": 4,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 5,
+              "advancedReps": 15,
+              "restSeconds": 30
+            },
+            {
+              "exercise": "Split Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 30,
+              "_substituteNote": "each leg"
+            },
+            {
+              "exercise": "Diamond Push-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 15,
+              "restSeconds": 30
+            },
+            {
+              "exercise": "High Knees",
+              "beginnerSets": 4,
+              "beginnerReps": 30,
+              "intermediateSets": 4,
+              "intermediateReps": 40,
+              "advancedSets": 5,
+              "advancedReps": 40,
+              "restSeconds": 20,
+              "_substituteNote": "seconds, stored under reps"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 3,
+          "focus": "Full Body Burn C",
+          "estimatedMinutes": 35,
+          "exercises": [
+            {
+              "exercise": "Plyometric Lunge (Jump Lunge)",
+              "beginnerSets": 4,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 12,
+              "advancedSets": 5,
+              "advancedReps": 15,
+              "restSeconds": 30,
+              "_substituteNote": "each leg"
+            },
+            {
+              "exercise": "Incline Push-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 18,
+              "restSeconds": 30
+            },
+            {
+              "exercise": "Glute Bridge",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 15,
+              "advancedSets": 4,
+              "advancedReps": 20,
+              "restSeconds": 30
+            },
+            {
+              "exercise": "Sprint Intervals",
+              "beginnerSets": 4,
+              "beginnerReps": 20,
+              "intermediateSets": 5,
+              "intermediateReps": 20,
+              "advancedSets": 6,
+              "advancedReps": 20,
+              "restSeconds": 30,
+              "_substituteNote": "seconds, stored under reps"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
