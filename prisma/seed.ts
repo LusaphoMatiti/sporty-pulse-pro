@@ -16,6 +16,7 @@ import exercises from "../src/training/exercises";
 import buildMuscleRaw from "../src/training/workouts_build_muscle.json";
 import loseWeightRaw from "../src/training/workouts_lose_weight.json";
 import getFitRaw from "../src/training/workouts_get_fit.json";
+import weeklyProgramsRaw from "../src/training/weekly.json";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // TYPES
@@ -38,7 +39,7 @@ interface RawWorkout {
   sex?: string;
   muscleGroup?: string;
   environmentTarget?: string;
-  gymStyle?: string | null; // only meaningful when location === "GYM": FREE_WEIGHT | CALISTHENIC | WEIGHTS_ONLY | WEIGHTS_MACHINE
+  gymStyle?: string | null; // only meaningful when location === "GYM": BODYWEIGHT | CALISTHENICS | WEIGHTS_ONLY | WEIGHTS_AND_MACHINES
   collection?: string;
   duration: string | number;
   description?: string;
@@ -51,6 +52,52 @@ interface RawWorkout {
 interface WorkoutGoalFile {
   goal: string;
   workouts: RawWorkout[];
+}
+
+// ── Multi-session weekly programs ───────────────────────────────────────────
+// A real week: N distinct PlannedSessions (e.g. Legs/Chest/Shoulders/Back/Arms),
+// each with its own focus and exercise list. This is what GymScreen needs to
+// show a proper Monday→Sunday split with correct rest days — the legacy
+// RawWorkout/mainWorkout shape above can only ever produce ONE session, which
+// was getting duplicated across every day (see seedWeeklyPrograms below for
+// the fix). Sets/reps are authored explicitly per level here — no more
+// deriving beginner/advanced from a single shared value.
+
+interface RawSessionExercise {
+  exercise: string;
+  beginnerSets: number;
+  beginnerReps: number;
+  intermediateSets: number;
+  intermediateReps: number;
+  advancedSets: number;
+  advancedReps: number;
+  restSeconds: number;
+}
+
+interface RawSession {
+  sessionNumber: number; // 1-indexed position within the week, Monday-first
+  focus: string; // e.g. "Legs", "Chest", "Shoulders", "Back", "Arms"
+  estimatedMinutes: number;
+  exercises: RawSessionExercise[];
+}
+
+interface RawWeeklyProgram {
+  workoutName: string;
+  goal: string;
+  location: string; // "GYM" for all current weekly programs
+  sex?: string;
+  muscleGroup?: string;
+  environmentTarget?: string;
+  gymStyle?: string | null;
+  collection?: string;
+  durationWeeks: number;
+  description?: string;
+  sessions: RawSession[];
+  equipment?: string | null;
+}
+
+interface WeeklyProgramFile {
+  programs: RawWeeklyProgram[];
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -325,26 +372,29 @@ function toDeclaredMuscleGroup(declared: string | undefined): MuscleGroup {
 }
 
 /**
- * Map gymStyle string from JSON to GymStyle enum.
- * Only meaningful for GYM workouts — mirrors how `equipment` refines
- * HOME_EQUIPMENT workouts. Returns null for HOME workouts or anything
- * undeclared (legacy GYM entries not yet retagged fall back to
- * WEIGHTS_MACHINE, since that's the "full commercial gym" catch-all).
+ * Map gymStyle string from JSON to the GymTrainingStyle enum used by both
+ * WorkoutPlan.gymStyleTarget and User.gymTrainingStyle (see programaccess.ts's
+ * resolveGymStyleTarget, which matches a user's onboarding selection against
+ * this exact field). Only meaningful for GYM workouts — mirrors how
+ * `equipment` refines HOME_EQUIPMENT workouts. Returns null for HOME
+ * workouts. Untagged/unrecognised GYM entries also return null rather than
+ * guessing — programaccess.ts already treats gymStyleTarget: null as
+ * "visible regardless of the user's selected gym style", which is the
+ * correct safe default for anything not explicitly classified.
  */
-function toGymStyle(
+function toGymTrainingStyle(
   declared: string | null | undefined,
   location: string,
 ): GymTrainingStyle | null {
   if (location.toUpperCase() !== "GYM") return null;
-  if (declared) {
-    const d = declared.toUpperCase();
-    if (d === "FREE_WEIGHT") return GymTrainingStyle.WEIGHTS_ONLY;
-    if (d === "CALISTHENIC") return GymTrainingStyle.CALISTHENICS;
-    if (d === "WEIGHTS_ONLY") return GymTrainingStyle.WEIGHTS_ONLY;
-    if (d === "WEIGHTS_MACHINE") return GymTrainingStyle.WEIGHTS_AND_MACHINES;
-  }
-  // Legacy fallback: untagged GYM workout, assume full commercial gym
-  return GymTrainingStyle.WEIGHTS_AND_MACHINES;
+  if (!declared) return null;
+  const d = declared.toUpperCase();
+  if (d === "BODYWEIGHT") return GymTrainingStyle.BODYWEIGHT;
+  if (d === "CALISTHENICS") return GymTrainingStyle.CALISTHENICS;
+  if (d === "WEIGHTS_ONLY") return GymTrainingStyle.WEIGHTS_ONLY;
+  if (d === "WEIGHTS_AND_MACHINES")
+    return GymTrainingStyle.WEIGHTS_AND_MACHINES;
+  return null;
 }
 
 /**
@@ -567,6 +617,200 @@ const EXERCISE_NAME_ALIASES: Record<string, string> = {
 // MAIN
 // ─────────────────────────────────────────────────────────────────────────────
 
+// ─────────────────────────────────────────────────────────────────────────────
+// WEEKLY PROGRAMS — real multi-session weeks (Legs/Chest/Shoulders/Back/Arms…)
+//
+// This is additive and does NOT touch the legacy single-session loop inside
+// main(). That loop has the exact bug reported on GymScreen: it builds
+// `exercisePayloads` ONCE from a single flat exercise list, then creates
+// `durationWeeks * sessionsPerWeek` (hardcoded 4*3=12) PlannedSession rows
+// in a loop that reuses that same payload every iteration — so every
+// session is an identical copy, `focus` is set to the name of exercise #1
+// (never a real body-part label), and sessionsPerWeek is hardcoded rather
+// than reflecting real content. For a plan that's genuinely meant to repeat
+// one session N×/week that hardcoding happens to look correct; for a real
+// day-split program it produces exactly what was reported: same workout,
+// same icons, every day, no rest days.
+//
+// seedWeeklyPrograms fixes this for any plan authored with a `sessions[]`
+// array: each array entry becomes its own distinct PlannedSession (correct
+// focus, correct exercises), cycled across `durationWeeks`, with
+// sessionsPerWeek set to the real session count — so days beyond that count
+// come back from buildWeeklySchedule as genuine rest days.
+// ─────────────────────────────────────────────────────────────────────────────
+
+async function seedWeeklyPrograms(
+  exerciseByName: Map<string, string>,
+  exerciseRecords: { id: string; name: string; isBodyweight: boolean }[],
+  equipmentByName: Map<string, string>,
+) {
+  console.log("Seeding weekly programs...");
+
+  const programs = (weeklyProgramsRaw as unknown as WeeklyProgramFile).programs;
+
+  let seeded = 0;
+  let skipped = 0;
+
+  for (const program of programs) {
+    // ── Validate every session's exercises, resolving aliases ────────────
+    let allValid = true;
+    for (const session of program.sessions) {
+      for (const e of session.exercises) {
+        const resolvedName = EXERCISE_NAME_ALIASES[e.exercise] ?? e.exercise;
+        e.exercise = resolvedName;
+        if (!exerciseByName.has(resolvedName)) {
+          console.warn(
+            `    ⚠ Skipping unknown exercise: "${resolvedName}" in "${program.workoutName}" (session ${session.sessionNumber}: ${session.focus})`,
+          );
+          allValid = false;
+        }
+      }
+    }
+    if (!program.sessions.length || !allValid) {
+      console.warn(
+        `  ⚠ "${program.workoutName}" has invalid or missing sessions — skipping plan`,
+      );
+      skipped++;
+      continue;
+    }
+
+    const goalTarget = toPrimaryGoal(program.goal);
+    const muscleGroup = toDeclaredMuscleGroup(program.muscleGroup);
+
+    const planNeedsEquipment = program.sessions.some((s) =>
+      s.exercises.some((e) => {
+        const exRecord = exerciseRecords.find((r) => r.name === e.exercise);
+        return exRecord ? !exRecord.isBodyweight : false;
+      }),
+    );
+    const environmentTarget = toEnvironmentTarget(
+      program.environmentTarget,
+      program.location,
+      planNeedsEquipment,
+    );
+
+    const sexTarget = toSexTarget(program.sex);
+    const gymStyleTarget = toGymTrainingStyle(
+      program.gymStyle,
+      program.location,
+    );
+    const collection = program.collection ?? null;
+    const tier: PlanTier = PlanTier.FREE;
+
+    // NOTE: TemplateType assumes one difficulty tier per plan (keys into
+    // COACHING_NOTES in the API routes) but weekly programs serve all three
+    // levels from one plan via each PlannedExercise's beginner/intermediate/
+    // advanced columns. Defaulting to "beginner" here until we can see how
+    // COACHING_NOTES is actually consumed — flag if that needs to vary by
+    // the viewing user's level instead.
+    const templateType = toTemplateType(
+      program.workoutName,
+      program.goal,
+      program.location,
+      "beginner",
+    );
+
+    const planEquipmentId: string | null = program.equipment
+      ? (equipmentByName.get(program.equipment) ?? null)
+      : null;
+
+    const sessionCount = program.sessions.length;
+    const avgMinutes = Math.round(
+      program.sessions.reduce((sum, s) => sum + s.estimatedMinutes, 0) /
+        sessionCount,
+    );
+
+    const plan = await prisma.workoutPlan.upsert({
+      where: { name: program.workoutName },
+      update: {
+        description:
+          program.description ??
+          `${program.goal} — ${program.location} — ${sessionCount}-day split`,
+        muscleGroup,
+        durationWeeks: program.durationWeeks,
+        sessionsPerWeek: sessionCount,
+        tier,
+        goalTarget,
+        difficulty: null, // serves all levels via per-exercise beginner/intermediate/advanced columns
+        sessionDurationMin: String(avgMinutes),
+        environmentTarget,
+        sexTarget,
+        gymStyleTarget,
+        collection,
+        templateType,
+        equipmentId: planEquipmentId,
+      },
+      create: {
+        name: program.workoutName,
+        description:
+          program.description ??
+          `${program.goal} — ${program.location} — ${sessionCount}-day split`,
+        muscleGroup,
+        durationWeeks: program.durationWeeks,
+        sessionsPerWeek: sessionCount,
+        tier,
+        goalTarget,
+        difficulty: null,
+        sessionDurationMin: String(avgMinutes),
+        environmentTarget,
+        sexTarget,
+        gymStyleTarget,
+        collection,
+        templateType,
+        equipmentId: planEquipmentId,
+      },
+    });
+
+    await prisma.workoutLog.deleteMany({
+      where: { plannedExercise: { session: { planId: plan.id } } },
+    });
+    await prisma.plannedSession.deleteMany({ where: { planId: plan.id } });
+
+    // ── Create real distinct sessions, cycled across durationWeeks ────────
+    // sessionNumber increments continuously (week 1 = 1..sessionCount,
+    // week 2 = sessionCount+1..2*sessionCount, etc.) so buildWeeklySchedule
+    // — which just sorts by sessionNumber and lays results across Mon-Sun —
+    // always sees exactly `sessionCount` distinct sessions per week, with
+    // any days beyond that correctly falling back to rest days.
+    for (let week = 0; week < program.durationWeeks; week++) {
+      for (const session of program.sessions) {
+        const sessionNumber = week * sessionCount + session.sessionNumber;
+
+        const plannedSession = await prisma.plannedSession.create({
+          data: {
+            planId: plan.id,
+            sessionNumber,
+            focus: session.focus,
+            estimatedMinutes: session.estimatedMinutes,
+          },
+        });
+
+        await prisma.plannedExercise.createMany({
+          data: session.exercises.map((e, i) => ({
+            sessionId: plannedSession.id,
+            exerciseId: exerciseByName.get(e.exercise)!,
+            order: i + 1,
+            beginnerSets: e.beginnerSets,
+            beginnerReps: e.beginnerReps,
+            intermediateSets: e.intermediateSets,
+            intermediateReps: e.intermediateReps,
+            advancedSets: e.advancedSets,
+            advancedReps: e.advancedReps,
+            restSeconds: e.restSeconds,
+          })),
+        });
+      }
+    }
+
+    console.log(
+      `  ✓ ${program.workoutName} [${program.goal} | ${environmentTarget}${gymStyleTarget ? ` | ${gymStyleTarget}` : ""}${sexTarget ? ` | ${sexTarget}` : ""}] — ${sessionCount} sessions/week × ${program.durationWeeks} weeks: ${program.sessions.map((s) => s.focus).join(", ")}`,
+    );
+    seeded++;
+  }
+
+  console.log(`\n  ${seeded} weekly programs seeded, ${skipped} skipped.`);
+}
+
 async function main() {
   // ── 1. Equipment ──────────────────────────────────────────────────────────
   console.log("Seeding equipment...");
@@ -721,8 +965,11 @@ async function main() {
     // ── SexTarget: null = shown to everyone ───────────────────────────────
     const sexTarget = toSexTarget(workout.sex);
 
-    // ── GymStyle: only set for GYM workouts ────────────────────────────────
-    const gymStyle = toGymStyle(workout.gymStyle, workout.location);
+    // ── GymTrainingStyle: only set for GYM workouts ────────────────────────
+    const gymStyleTarget = toGymTrainingStyle(
+      workout.gymStyle,
+      workout.location,
+    );
 
     // ── Collection: optional series grouping ─────────────────────────────
     const collection = workout.collection ?? null;
@@ -775,7 +1022,7 @@ async function main() {
         videoUrl,
         environmentTarget,
         sexTarget,
-        gymStyleTarget: gymStyle,
+        gymStyleTarget,
         collection,
         templateType,
         equipmentId: planEquipmentId,
@@ -796,7 +1043,7 @@ async function main() {
         videoUrl,
         environmentTarget,
         sexTarget,
-        gymStyleTarget: gymStyle,
+        gymStyleTarget,
         collection,
         templateType,
         equipmentId: planEquipmentId,
@@ -857,12 +1104,14 @@ async function main() {
       });
     }
     console.log(
-      `  ✓ ${workout.workoutName} [${workout.goal} | ${environmentTarget} | ${workout.level} | ${muscleGroup}${gymStyle ? ` | ${gymStyle}` : ""}${collection ? ` | ${collection}` : ""}${sexTarget ? ` | ${sexTarget}` : ""}${planEquipmentId ? ` | equip:${workout.equipment}` : ""}] — ${validExercises.length} exercises`,
+      `  ✓ ${workout.workoutName} [${workout.goal} | ${environmentTarget} | ${workout.level} | ${muscleGroup}${gymStyleTarget ? ` | ${gymStyleTarget}` : ""}${collection ? ` | ${collection}` : ""}${sexTarget ? ` | ${sexTarget}` : ""}${planEquipmentId ? ` | equip:${workout.equipment}` : ""}] — ${validExercises.length} exercises`,
     );
     seeded++;
   }
 
   console.log(`\n  ${seeded} plans seeded, ${skipped} skipped.`);
+
+  await seedWeeklyPrograms(exerciseByName, exerciseRecords, equipmentByName);
 }
 
 main()

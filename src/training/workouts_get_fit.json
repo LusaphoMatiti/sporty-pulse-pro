@@ -264,7 +264,7 @@
       "progressionNotes": "Beginner base-building. Progress when each exercise feels 'easy'. Milestone: push-up on flat, 3x15 clean reps.",
       "equipment": null,
       "description": "A beginner-friendly gym session alternating strength sets with cardio bursts. Builds a fitness base by pairing bodyweight movements with short, structured rest periods.",
-      "gymStyle": "FREE_WEIGHT"
+      "gymStyle": "BODYWEIGHT"
     },
     {
       "workoutName": "Power Session",
@@ -438,7 +438,7 @@
       "progressionNotes": "Hybrid training requires managing both strength and cardio fatigue. Keep a training log.",
       "equipment": null,
       "description": "A strength-meets-cardio session pairing compound lifts with high-intensity intervals. Pulls, swings, and wall balls combine to build a well-rounded fitness base.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Bodyweight Burn",
@@ -789,7 +789,7 @@
       "progressionNotes": "Upper body fitness. Track pull-up max reps monthly.",
       "equipment": null,
       "description": "The upper body complement to the split, blending pressing, pulling, and battle rope conditioning. Develops pushing and pulling strength alongside metabolic output.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Recovery Flow",
@@ -964,7 +964,7 @@
       "progressionNotes": "Advanced: track WOD times. Progress load on power cleans and thrusters monthly.",
       "equipment": null,
       "description": "A WOD-style advanced session with Olympic lifts, gymnastics, and high-intensity cardio. Challenges total body fitness, work capacity, and mental toughness simultaneously.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Bodyweight Builder",
@@ -1124,7 +1124,7 @@
       "progressionNotes": "Sprint fitness: track 30m sprint time monthly.",
       "equipment": null,
       "description": "An advanced athletic circuit combining sprint intervals with barbell strength work. Develops speed, power, and muscular endurance for high-performance conditioning.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Express Workout",
@@ -1300,7 +1300,7 @@
       "progressionNotes": "Beginner machine-based fitness. Progress when 15 reps feels easy. Transition from machine to free weight equivalents over 8-12 weeks.",
       "equipment": null,
       "description": "A beginner-friendly gym session using machines and dumbbells to build fitness foundations. Safe, structured, and ideal for learning movement patterns in a gym environment.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Conditioning Challenge",
@@ -1550,7 +1550,7 @@
       "progressionNotes": "MetCon sessions: track the AMRAP score. Add 1+ round over 4 weeks.",
       "equipment": null,
       "description": "A metabolic conditioning session using kettlebells, rowing, and box jumps. Drives cardiovascular fitness and muscular endurance through structured high-intensity work.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Total Body Circuit",
@@ -1627,7 +1627,7 @@
       "progressionNotes": "Functional fitness progression: increase carry distance monthly, increase KB weight on swings when 25 reps feel comfortable.",
       "equipment": null,
       "description": "A movement-quality focused circuit using Turkish get-ups, carries, and swings. Develops total body coordination, stability, and functional strength.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Endurance Strength",
@@ -1704,7 +1704,7 @@
       "progressionNotes": "Endurance strength improves through increasing density. Track total reps completed per session.",
       "equipment": null,
       "description": "A long-format moderate intensity session blending strength movements with cardio machine work. Builds aerobic base and muscular endurance through sustained effort.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Kettlebell Conditioning Beginner",
@@ -3691,7 +3691,7 @@
       "sex": "ANY",
       "muscleGroup": "FULLBODY",
       "environmentTarget": "GYM",
-      "gymStyle": "CALISTHENIC",
+      "gymStyle": "CALISTHENICS",
       "collection": "Calisthenics Performance Series",
       "duration": "40 min",
       "intensity": "LOW_MODERATE",
@@ -3778,7 +3778,7 @@
       "sex": "ANY",
       "muscleGroup": "FULLBODY",
       "environmentTarget": "GYM",
-      "gymStyle": "CALISTHENIC",
+      "gymStyle": "CALISTHENICS",
       "collection": "Calisthenics Performance Series",
       "duration": "50 min",
       "intensity": "MODERATE_HIGH",
@@ -3865,7 +3865,7 @@
       "sex": "ANY",
       "muscleGroup": "FULLBODY",
       "environmentTarget": "GYM",
-      "gymStyle": "CALISTHENIC",
+      "gymStyle": "CALISTHENICS",
       "collection": "Calisthenics Performance Series",
       "duration": "55 min",
       "intensity": "VERY_HIGH",
@@ -3952,7 +3952,7 @@
       "sex": "ANY",
       "muscleGroup": "FULLBODY",
       "environmentTarget": "GYM",
-      "gymStyle": "FREE_WEIGHT",
+      "gymStyle": "BODYWEIGHT",
       "collection": "Bodyweight Athletic Series",
       "duration": "40 min",
       "intensity": "MODERATE_HIGH",
@@ -4039,7 +4039,7 @@
       "sex": "ANY",
       "muscleGroup": "FULLBODY",
       "environmentTarget": "GYM",
-      "gymStyle": "FREE_WEIGHT",
+      "gymStyle": "BODYWEIGHT",
       "collection": "Bodyweight Athletic Series",
       "duration": "50 min",
       "intensity": "HIGH",

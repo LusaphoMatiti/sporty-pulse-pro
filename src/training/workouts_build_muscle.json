@@ -88,7 +88,7 @@
       "progressionNotes": "Add 2.5kg to bench when all 4 sets hit 10 reps with clean form. Add 1 rep per session on accessories before increasing weight.",
       "equipment": null,
       "description": "A chest and back volume session built around compound pressing and pulling. Designed to maximise upper body mass with controlled tempos and strategic supersets.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Leg Day",
@@ -176,7 +176,7 @@
       "progressionNotes": "Prioritise squat strength. Add 2.5-5kg when all sets hit top of rep range.",
       "equipment": null,
       "description": "A high-volume lower body day anchored by barbell squats and RDLs. Targets quads, hamstrings, and glutes through progressive overload and burnout finishers.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Chest & Shoulders",
@@ -264,7 +264,7 @@
       "progressionNotes": "Rotate primary lift weekly between Barbell Bench and Incline DB Press.",
       "equipment": null,
       "description": "Chest and shoulder emphasis with heavy pressing followed by isolation work. A classic PPL push session structured for hypertrophy from every angle.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Back & Biceps",
@@ -352,7 +352,7 @@
       "progressionNotes": "Track total weighted pull-up volume. Progress weighted pull-up before adding more accessory volume.",
       "equipment": null,
       "description": "Back and bicep width builder using vertical and horizontal pulls. Prioritises lat development and rear delt health for a balanced upper body.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Backside Builder",
@@ -528,7 +528,7 @@
       "progressionNotes": "Arms respond to volume. Track total sets per week (aim for 12-16 sets per muscle).",
       "equipment": null,
       "description": "Dedicated bicep and tricep volume day using supersets and drop sets. Maximises arm pump and time under tension for serious sleeve-filling gains.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Chest & Triceps",
@@ -616,7 +616,7 @@
       "progressionNotes": "Advanced: use double progression — increase reps first, then weight.",
       "equipment": null,
       "description": "An advanced push session pairing heavy chest compounds with tricep isolation. High volume, mechanical drop sets, and a burner finisher for upper body hypertrophy.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Back & Biceps",
@@ -704,7 +704,7 @@
       "progressionNotes": "Advanced back training requires managing cumulative fatigue. Rotate primary row every 4 weeks.",
       "equipment": null,
       "description": "A rowing-focused pull day targeting mid-back thickness and bicep density. Uses barbell, dumbbell, and cable rows to attack the back from multiple angles.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Glutes & Hamstrings",
@@ -880,7 +880,7 @@
       "progressionNotes": "Lateral raises: prioritise feel over weight.",
       "equipment": null,
       "description": "Overhead pressing paired with lateral and rear delt isolation work. Builds shoulder width and rotator cuff health for a full, balanced deltoid.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Heavy Compounds",
@@ -968,7 +968,7 @@
       "progressionNotes": "Heavy compound days require recovery. Sleep 8h minimum. Eat above maintenance.",
       "equipment": null,
       "description": "A full-body strength session centred on the big lifts — squat, deadlift, and press. Low reps, heavy loads, and long rest periods to drive maximal strength adaptation.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Muscle Builder",
@@ -1143,7 +1143,7 @@
       "progressionNotes": "Tempo training: reduce load 20-30% compared to normal.",
       "equipment": null,
       "description": "A time-under-tension session using slow, deliberate tempos on every rep. Challenges muscles differently to standard lifting and accelerates hypertrophy stimulus.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "High Volume",
@@ -1231,7 +1231,7 @@
       "progressionNotes": "Volume-focused day. Track total reps per exercise. Add 1-2 reps per set each week before increasing weight.",
       "equipment": null,
       "description": "Upper body hypertrophy through high-rep sets and pump-focused training. Designed to drive blood flow, muscle fullness, and sarcoplasmic growth.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Unilateral Strength",
@@ -1319,7 +1319,7 @@
       "progressionNotes": "Unilateral work: correct imbalances before adding load. Weaker side dictates the weight.",
       "equipment": null,
       "description": "Single-limb training to correct imbalances and maximise isolation. Lunges, single-arm presses, and unilateral pulls build symmetry and functional strength.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Calisthenics",
@@ -1494,7 +1494,7 @@
       "progressionNotes": "Beginners: increase weight by the smallest increment available when all sets and reps are completed with full control.",
       "equipment": null,
       "description": "A full-body introduction to resistance training for new gym-goers. Covers the fundamental movement patterns with manageable loads and clear progression cues.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Drop Sets",
@@ -1582,7 +1582,7 @@
       "progressionNotes": "Mechanical dropsets are an advanced technique — use sparingly (once per 2 weeks per muscle group).",
       "equipment": null,
       "description": "An advanced upper body session using mechanical drop sets to maximise fatigue and volume. Pre-exhausts major movers before following with straight strength sets.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Strong Start",
@@ -3508,7 +3508,7 @@
       "sex": "ANY",
       "muscleGroup": "FULLBODY",
       "environmentTarget": "GYM",
-      "gymStyle": "CALISTHENIC",
+      "gymStyle": "CALISTHENICS",
       "collection": "Calisthenics Strength Series",
       "duration": "45 min",
       "intensity": "MODERATE",
@@ -3595,7 +3595,7 @@
       "sex": "ANY",
       "muscleGroup": "UPPER",
       "environmentTarget": "GYM",
-      "gymStyle": "CALISTHENIC",
+      "gymStyle": "CALISTHENICS",
       "collection": "Calisthenics Strength Series",
       "duration": "50 min",
       "intensity": "MODERATE_HIGH",
@@ -3682,7 +3682,7 @@
       "sex": "ANY",
       "muscleGroup": "UPPER",
       "environmentTarget": "GYM",
-      "gymStyle": "CALISTHENIC",
+      "gymStyle": "CALISTHENICS",
       "collection": "Calisthenics Strength Series",
       "duration": "55 min",
       "intensity": "HIGH",
@@ -3769,7 +3769,7 @@
       "sex": "ANY",
       "muscleGroup": "FULLBODY",
       "environmentTarget": "GYM",
-      "gymStyle": "FREE_WEIGHT",
+      "gymStyle": "BODYWEIGHT",
       "collection": "Bodyweight Muscle Series",
       "duration": "40 min",
       "intensity": "MODERATE",
@@ -3856,7 +3856,7 @@
       "sex": "ANY",
       "muscleGroup": "FULLBODY",
       "environmentTarget": "GYM",
-      "gymStyle": "FREE_WEIGHT",
+      "gymStyle": "BODYWEIGHT",
       "collection": "Bodyweight Muscle Series",
       "duration": "45 min",
       "intensity": "MODERATE_HIGH",
@@ -3943,7 +3943,7 @@
       "sex": "ANY",
       "muscleGroup": "FULLBODY",
       "environmentTarget": "GYM",
-      "gymStyle": "FREE_WEIGHT",
+      "gymStyle": "BODYWEIGHT",
       "collection": "Bodyweight Muscle Series",
       "duration": "50 min",
       "intensity": "HIGH",

@@ -1,0 +1,364 @@
+{
+  "programs": [
+    {
+      "workoutName": "Full Gym 5-Day Split",
+      "goal": "LOSE_WEIGHT",
+      "location": "GYM",
+      "environmentTarget": "GYM",
+      "gymStyle": "WEIGHTS_AND_MACHINES",
+      "sex": "ANY",
+      "muscleGroup": "FULLBODY",
+      "collection": "Weights & Machines Series",
+      "durationWeeks": 4,
+      "description": "A 5-day body-part split for lose-weight goals using full commercial-gym equipment — free weights, cables, and machines. Higher rep ranges and shorter rest periods than a pure muscle-building split, matching NASM Phase 1 Stabilization Endurance principles for a beginner while staying easy to progress from.",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "focus": "Legs",
+          "estimatedMinutes": 55,
+          "exercises": [
+            {
+              "exercise": "Barbell Back Squat",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Romanian Deadlift (RDL)",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Leg Press",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 4,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 75,
+              "_substituteNote": "machine quad compound — direct match"
+            },
+            {
+              "exercise": "Walking Lunge",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Hack Squat (Machine)",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60,
+              "_substituteNote": "sub for Leg Extension — no leg-extension machine exists yet in exercises.ts"
+            },
+            {
+              "exercise": "Stiff Leg Deadlift",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60,
+              "_substituteNote": "sub for Lying Leg Curl — no leg-curl machine exists yet in exercises.ts"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 2,
+          "focus": "Chest",
+          "estimatedMinutes": 50,
+          "exercises": [
+            {
+              "exercise": "Barbell Bench Press",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Incline Dumbbell Press",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Floor Press",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75,
+              "_substituteNote": "sub for Decline Dumbbell Press — no decline press variant exists yet"
+            },
+            {
+              "exercise": "Dumbbell Fly",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 45
+            },
+            {
+              "exercise": "Cable Fly",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 45,
+              "_substituteNote": "direct match for Cable Chest Flyes"
+            },
+            {
+              "exercise": "Machine Chest Press",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 4,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60,
+              "_substituteNote": "sub for Pec Deck Machine Fly — no forward pec-deck fly exists yet (Reverse Pec Deck targets rear delts, not chest)"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 3,
+          "focus": "Shoulders",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "Seated Dumbbell Press",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Dumbbell Lateral Raise",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 45
+            },
+            {
+              "exercise": "Rear Delt Fly (DB)",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 45
+            },
+            {
+              "exercise": "Dumbbell Front Raise",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 3,
+              "advancedReps": 12,
+              "restSeconds": 45
+            },
+            {
+              "exercise": "Upright Row (DB)",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Cable Lateral Raise",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 45
+            }
+          ]
+        },
+        {
+          "sessionNumber": 4,
+          "focus": "Back",
+          "estimatedMinutes": 55,
+          "exercises": [
+            {
+              "exercise": "Machine Assisted Pull-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 10,
+              "intermediateSets": 4,
+              "intermediateReps": 8,
+              "advancedSets": 4,
+              "advancedReps": 6,
+              "restSeconds": 90,
+              "_substituteNote": "beginner-appropriate sub for Pull-Ups — assisted machine is the correct NASM regression"
+            },
+            {
+              "exercise": "Lat Pulldown",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Barbell Bent-Over Row",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 90
+            },
+            {
+              "exercise": "Seated Cable Row",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 75
+            },
+            {
+              "exercise": "Dumbbell Row",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Straight Arm Pulldown",
+              "beginnerSets": 3,
+              "beginnerReps": 15,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 4,
+              "advancedReps": 12,
+              "restSeconds": 45,
+              "_substituteNote": "direct match"
+            }
+          ]
+        },
+        {
+          "sessionNumber": 5,
+          "focus": "Arms",
+          "estimatedMinutes": 45,
+          "exercises": [
+            {
+              "exercise": "EZ Bar Curl",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60,
+              "_substituteNote": "sub for Barbell Curl — easier on the wrists, no plain barbell-curl entry exists yet"
+            },
+            {
+              "exercise": "Incline Dumbbell Curl",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 45
+            },
+            {
+              "exercise": "Hammer Curl",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 45
+            },
+            {
+              "exercise": "Skull Crusher",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 3,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 10,
+              "restSeconds": 60
+            },
+            {
+              "exercise": "Close Grip Bench Press",
+              "beginnerSets": 3,
+              "beginnerReps": 12,
+              "intermediateSets": 4,
+              "intermediateReps": 10,
+              "advancedSets": 4,
+              "advancedReps": 8,
+              "restSeconds": 75,
+              "_substituteNote": "sub for Cable Triceps Pushdown — no cable-pushdown entry exists yet"
+            },
+            {
+              "exercise": "Diamond Push-Up",
+              "beginnerSets": 3,
+              "beginnerReps": 8,
+              "intermediateSets": 3,
+              "intermediateReps": 12,
+              "advancedSets": 3,
+              "advancedReps": 15,
+              "restSeconds": 45,
+              "_substituteNote": "sub for Overhead Dumbbell Triceps Extension — no overhead-extension entry exists yet; bodyweight finisher, reps scale UP with level since it gets relatively easier"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

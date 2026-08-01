@@ -1418,7 +1418,7 @@
       "progressionNotes": "Beginner gym fat burn. Progress to 3 rounds when 2 feel easy.",
       "equipment": null,
       "description": "A beginner gym circuit using machines and goblet squats to build fat-loss foundations. Structured, safe, and effective for those new to training in a gym environment.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Strength Circuit",
@@ -1528,7 +1528,7 @@
       "progressionNotes": "Progress KB weight when swings feel easy for 30s. Increase box jump height monthly.",
       "equipment": null,
       "description": "An intermediate gym fat-loss session pairing barbell squats and kettlebell swings with push-ups. Builds lean muscle and cardiovascular conditioning through compound-focused circuits.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "HIIT Strength",
@@ -1638,7 +1638,7 @@
       "progressionNotes": "Advanced: track AMRAP rounds. Aim to increase by 1+ round each 4 weeks.",
       "equipment": null,
       "description": "An advanced gym session combining barbell lifts, burpees, and kettlebell work at high intensity. Pushes metabolic output and strength simultaneously for maximum fat loss.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Final Burn",
@@ -1857,7 +1857,7 @@
       "progressionNotes": "Beginner gym fat burn. Progress to 3 rounds when 2 feel fully comfortable.",
       "equipment": null,
       "description": "A beginner gym session pairing bodyweight movements with light cardio bursts. Introduces gym training for fat loss with manageable intensity and clear progression.",
-      "gymStyle": "FREE_WEIGHT"
+      "gymStyle": "BODYWEIGHT"
     },
     {
       "workoutName": "Kettlebell Burn",
@@ -1967,7 +1967,7 @@
       "progressionNotes": "Intermediate KB HIIT. Increase KB weight when 30s swings feel comfortable throughout.",
       "equipment": null,
       "description": "An intermediate gym fat-loss session centred on kettlebell swings, goblet squats, and RDLs. Drives metabolic conditioning and posterior chain activation for efficient calorie burn.",
-      "gymStyle": "WEIGHTS_MACHINE"
+      "gymStyle": "WEIGHTS_AND_MACHINES"
     },
     {
       "workoutName": "Quick Burn",
@@ -3843,7 +3843,7 @@
       "sex": "ANY",
       "muscleGroup": "FULLBODY",
       "environmentTarget": "GYM",
-      "gymStyle": "CALISTHENIC",
+      "gymStyle": "CALISTHENICS",
       "collection": "Calisthenics Burn Series",
       "duration": "35 min",
       "intensity": "MODERATE",
@@ -3930,7 +3930,7 @@
       "sex": "ANY",
       "muscleGroup": "FULLBODY",
       "environmentTarget": "GYM",
-      "gymStyle": "CALISTHENIC",
+      "gymStyle": "CALISTHENICS",
       "collection": "Calisthenics Burn Series",
       "duration": "45 min",
       "intensity": "HIGH",
@@ -4017,7 +4017,7 @@
       "sex": "ANY",
       "muscleGroup": "FULLBODY",
       "environmentTarget": "GYM",
-      "gymStyle": "CALISTHENIC",
+      "gymStyle": "CALISTHENICS",
       "collection": "Calisthenics Burn Series",
       "duration": "50 min",
       "intensity": "VERY_HIGH",
@@ -4104,7 +4104,7 @@
       "sex": "ANY",
       "muscleGroup": "FULLBODY",
       "environmentTarget": "GYM",
-      "gymStyle": "FREE_WEIGHT",
+      "gymStyle": "BODYWEIGHT",
       "collection": "Bodyweight Burn Series",
       "duration": "40 min",
       "intensity": "HIGH",
@@ -4191,7 +4191,7 @@
       "sex": "ANY",
       "muscleGroup": "FULLBODY",
       "environmentTarget": "GYM",
-      "gymStyle": "FREE_WEIGHT",
+      "gymStyle": "BODYWEIGHT",
       "collection": "Bodyweight Burn Series",
       "duration": "45 min",
       "intensity": "VERY_HIGH",
