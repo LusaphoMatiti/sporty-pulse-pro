@@ -650,164 +650,179 @@ async function seedWeeklyPrograms(
 
   let seeded = 0;
   let skipped = 0;
+  let failed = 0;
 
   for (const program of programs) {
-    // ── Validate every session's exercises, resolving aliases ────────────
-    let allValid = true;
-    for (const session of program.sessions) {
-      for (const e of session.exercises) {
-        const resolvedName = EXERCISE_NAME_ALIASES[e.exercise] ?? e.exercise;
-        e.exercise = resolvedName;
-        if (!exerciseByName.has(resolvedName)) {
-          console.warn(
-            `    ⚠ Skipping unknown exercise: "${resolvedName}" in "${program.workoutName}" (session ${session.sessionNumber}: ${session.focus})`,
-          );
-          allValid = false;
+    try {
+      // ── Validate every session's exercises, resolving aliases ────────────
+      let allValid = true;
+      for (const session of program.sessions) {
+        for (const e of session.exercises) {
+          const resolvedName = EXERCISE_NAME_ALIASES[e.exercise] ?? e.exercise;
+          e.exercise = resolvedName;
+          if (!exerciseByName.has(resolvedName)) {
+            console.warn(
+              `    ⚠ Skipping unknown exercise: "${resolvedName}" in "${program.workoutName}" (session ${session.sessionNumber}: ${session.focus})`,
+            );
+            allValid = false;
+          }
         }
       }
-    }
-    if (!program.sessions.length || !allValid) {
-      console.warn(
-        `  ⚠ "${program.workoutName}" has invalid or missing sessions — skipping plan`,
+      if (!program.sessions.length || !allValid) {
+        console.warn(
+          `  ⚠ "${program.workoutName}" has invalid or missing sessions — skipping plan`,
+        );
+        skipped++;
+        continue;
+      }
+
+      const goalTarget = toPrimaryGoal(program.goal);
+      const muscleGroup = toDeclaredMuscleGroup(program.muscleGroup);
+
+      const planNeedsEquipment = program.sessions.some((s) =>
+        s.exercises.some((e) => {
+          const exRecord = exerciseRecords.find((r) => r.name === e.exercise);
+          return exRecord ? !exRecord.isBodyweight : false;
+        }),
       );
-      skipped++;
-      continue;
-    }
+      const environmentTarget = toEnvironmentTarget(
+        program.environmentTarget,
+        program.location,
+        planNeedsEquipment,
+      );
 
-    const goalTarget = toPrimaryGoal(program.goal);
-    const muscleGroup = toDeclaredMuscleGroup(program.muscleGroup);
+      const sexTarget = toSexTarget(program.sex);
+      const gymStyleTarget = toGymTrainingStyle(
+        program.gymStyle,
+        program.location,
+      );
+      const collection = program.collection ?? null;
+      const tier: PlanTier = PlanTier.FREE;
 
-    const planNeedsEquipment = program.sessions.some((s) =>
-      s.exercises.some((e) => {
-        const exRecord = exerciseRecords.find((r) => r.name === e.exercise);
-        return exRecord ? !exRecord.isBodyweight : false;
-      }),
-    );
-    const environmentTarget = toEnvironmentTarget(
-      program.environmentTarget,
-      program.location,
-      planNeedsEquipment,
-    );
+      // NOTE: TemplateType assumes one difficulty tier per plan (keys into
+      // COACHING_NOTES in the API routes) but weekly programs serve all three
+      // levels from one plan via each PlannedExercise's beginner/intermediate/
+      // advanced columns. Defaulting to "beginner" here until we can see how
+      // COACHING_NOTES is actually consumed — flag if that needs to vary by
+      // the viewing user's level instead.
+      const templateType = toTemplateType(
+        program.workoutName,
+        program.goal,
+        program.location,
+        "beginner",
+      );
 
-    const sexTarget = toSexTarget(program.sex);
-    const gymStyleTarget = toGymTrainingStyle(
-      program.gymStyle,
-      program.location,
-    );
-    const collection = program.collection ?? null;
-    const tier: PlanTier = PlanTier.FREE;
+      const planEquipmentId: string | null = program.equipment
+        ? (equipmentByName.get(program.equipment) ?? null)
+        : null;
 
-    // NOTE: TemplateType assumes one difficulty tier per plan (keys into
-    // COACHING_NOTES in the API routes) but weekly programs serve all three
-    // levels from one plan via each PlannedExercise's beginner/intermediate/
-    // advanced columns. Defaulting to "beginner" here until we can see how
-    // COACHING_NOTES is actually consumed — flag if that needs to vary by
-    // the viewing user's level instead.
-    const templateType = toTemplateType(
-      program.workoutName,
-      program.goal,
-      program.location,
-      "beginner",
-    );
+      const sessionCount = program.sessions.length;
+      const avgMinutes = Math.round(
+        program.sessions.reduce((sum, s) => sum + s.estimatedMinutes, 0) /
+          sessionCount,
+      );
 
-    const planEquipmentId: string | null = program.equipment
-      ? (equipmentByName.get(program.equipment) ?? null)
-      : null;
-
-    const sessionCount = program.sessions.length;
-    const avgMinutes = Math.round(
-      program.sessions.reduce((sum, s) => sum + s.estimatedMinutes, 0) /
-        sessionCount,
-    );
-
-    const plan = await prisma.workoutPlan.upsert({
-      where: { name: program.workoutName },
-      update: {
-        description:
-          program.description ??
-          `${program.goal} — ${program.location} — ${sessionCount}-day split`,
-        muscleGroup,
-        durationWeeks: program.durationWeeks,
-        sessionsPerWeek: sessionCount,
-        tier,
-        goalTarget,
-        difficulty: null, // serves all levels via per-exercise beginner/intermediate/advanced columns
-        sessionDurationMin: String(avgMinutes),
-        environmentTarget,
-        sexTarget,
-        gymStyleTarget,
-        collection,
-        templateType,
-        equipmentId: planEquipmentId,
-      },
-      create: {
-        name: program.workoutName,
-        description:
-          program.description ??
-          `${program.goal} — ${program.location} — ${sessionCount}-day split`,
-        muscleGroup,
-        durationWeeks: program.durationWeeks,
-        sessionsPerWeek: sessionCount,
-        tier,
-        goalTarget,
-        difficulty: null,
-        sessionDurationMin: String(avgMinutes),
-        environmentTarget,
-        sexTarget,
-        gymStyleTarget,
-        collection,
-        templateType,
-        equipmentId: planEquipmentId,
-      },
-    });
-
-    await prisma.workoutLog.deleteMany({
-      where: { plannedExercise: { session: { planId: plan.id } } },
-    });
-    await prisma.plannedSession.deleteMany({ where: { planId: plan.id } });
-
-    // ── Create ONE repeating week template ─────────────────────────────────
-    // buildWeeklySchedule takes no "current week" argument — it just sorts
-    // whatever PlannedSession[] it receives by sessionNumber and slots array
-    // positions 0-6 straight into Monday-Sunday. Pre-creating durationWeeks
-    // copies (as the legacy loop does) meant Saturday/Sunday were quietly
-    // picking up week 2's Legs/Chest sessions instead of falling through to
-    // isRestDay — durationWeeks controls how long the plan runs, not how
-    // many PlannedSession rows exist; the same sessionCount sessions recur
-    // every week.
-    for (const session of program.sessions) {
-      const plannedSession = await prisma.plannedSession.create({
-        data: {
-          planId: plan.id,
-          sessionNumber: session.sessionNumber,
-          focus: session.focus,
-          estimatedMinutes: session.estimatedMinutes,
+      const plan = await prisma.workoutPlan.upsert({
+        where: { name: program.workoutName },
+        update: {
+          description:
+            program.description ??
+            `${program.goal} — ${program.location} — ${sessionCount}-day split`,
+          muscleGroup,
+          durationWeeks: program.durationWeeks,
+          sessionsPerWeek: sessionCount,
+          tier,
+          goalTarget,
+          difficulty: null, // serves all levels via per-exercise beginner/intermediate/advanced columns
+          sessionDurationMin: String(avgMinutes),
+          environmentTarget,
+          sexTarget,
+          gymStyleTarget,
+          collection,
+          templateType,
+          equipmentId: planEquipmentId,
+        },
+        create: {
+          name: program.workoutName,
+          description:
+            program.description ??
+            `${program.goal} — ${program.location} — ${sessionCount}-day split`,
+          muscleGroup,
+          durationWeeks: program.durationWeeks,
+          sessionsPerWeek: sessionCount,
+          tier,
+          goalTarget,
+          difficulty: null,
+          sessionDurationMin: String(avgMinutes),
+          environmentTarget,
+          sexTarget,
+          gymStyleTarget,
+          collection,
+          templateType,
+          equipmentId: planEquipmentId,
         },
       });
 
-      await prisma.plannedExercise.createMany({
-        data: session.exercises.map((e, i) => ({
-          sessionId: plannedSession.id,
-          exerciseId: exerciseByName.get(e.exercise)!,
-          order: i + 1,
-          beginnerSets: e.beginnerSets,
-          beginnerReps: e.beginnerReps,
-          intermediateSets: e.intermediateSets,
-          intermediateReps: e.intermediateReps,
-          advancedSets: e.advancedSets,
-          advancedReps: e.advancedReps,
-          restSeconds: e.restSeconds,
-        })),
+      await prisma.workoutLog.deleteMany({
+        where: { plannedExercise: { session: { planId: plan.id } } },
       });
-    }
+      await prisma.plannedSession.deleteMany({ where: { planId: plan.id } });
 
-    console.log(
-      `  ✓ ${program.workoutName} [${program.goal} | ${environmentTarget}${gymStyleTarget ? ` | ${gymStyleTarget}` : ""}${sexTarget ? ` | ${sexTarget}` : ""}] — ${sessionCount} sessions/week × ${program.durationWeeks} weeks: ${program.sessions.map((s) => s.focus).join(", ")}`,
-    );
-    seeded++;
+      // ── Create ONE repeating week template ─────────────────────────────────
+      // buildWeeklySchedule takes no "current week" argument — it just sorts
+      // whatever PlannedSession[] it receives by sessionNumber and slots array
+      // positions 0-6 straight into Monday-Sunday. Pre-creating durationWeeks
+      // copies (as the legacy loop does) meant Saturday/Sunday were quietly
+      // picking up week 2's Legs/Chest sessions instead of falling through to
+      // isRestDay — durationWeeks controls how long the plan runs, not how
+      // many PlannedSession rows exist; the same sessionCount sessions recur
+      // every week.
+      for (const session of program.sessions) {
+        const plannedSession = await prisma.plannedSession.create({
+          data: {
+            planId: plan.id,
+            sessionNumber: session.sessionNumber,
+            focus: session.focus,
+            estimatedMinutes: session.estimatedMinutes,
+          },
+        });
+
+        await prisma.plannedExercise.createMany({
+          data: session.exercises.map((e, i) => ({
+            sessionId: plannedSession.id,
+            exerciseId: exerciseByName.get(e.exercise)!,
+            order: i + 1,
+            beginnerSets: e.beginnerSets,
+            beginnerReps: e.beginnerReps,
+            intermediateSets: e.intermediateSets,
+            intermediateReps: e.intermediateReps,
+            advancedSets: e.advancedSets,
+            advancedReps: e.advancedReps,
+            restSeconds: e.restSeconds,
+          })),
+        });
+      }
+
+      console.log(
+        `  ✓ ${program.workoutName} [${program.goal} | ${environmentTarget}${gymStyleTarget ? ` | ${gymStyleTarget}` : ""}${sexTarget ? ` | ${sexTarget}` : ""}] — ${sessionCount} sessions/week × ${program.durationWeeks} weeks: ${program.sessions.map((s) => s.focus).join(", ")}`,
+      );
+      seeded++;
+    } catch (err) {
+      // A failure on ANY single program must not silently kill every program
+      // after it in this array — that was invisible before (the loop would
+      // just stop and everything past the failure point would be left
+      // untouched, with no error surfaced), and looks exactly like "some
+      // combos work, others randomly don't" with no obvious pattern.
+      failed++;
+      console.error(
+        `  ✗ FAILED to seed "${program.workoutName}": ${err instanceof Error ? err.message : String(err)}`,
+      );
+    }
   }
 
-  console.log(`\n  ${seeded} weekly programs seeded, ${skipped} skipped.`);
+  console.log(
+    `\n  ${seeded} weekly programs seeded, ${skipped} skipped, ${failed} failed.`,
+  );
 }
 
 async function main() {
