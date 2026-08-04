@@ -18,12 +18,7 @@ export type PlannedExerciseWithRelations = {
   id: string;
   order: number;
   exerciseId: string;
-  beginnerSets: number;
-  beginnerReps: number;
-  intermediateSets: number;
-  intermediateReps: number;
-  advancedSets: number;
-  advancedReps: number;
+  repsScheme: number[];
   restSeconds: number;
   exercise: {
     id: string;
@@ -74,12 +69,7 @@ export type ResolvedExercise = {
   muscleGroup: string;
   impactLevel: string;
   isBodyweight: boolean;
-  beginnerSets: number;
-  beginnerReps: number;
-  intermediateSets: number;
-  intermediateReps: number;
-  advancedSets: number;
-  advancedReps: number;
+  repsScheme: number[];
   restSeconds: number;
   wasSubstituted: boolean;
   substitutionReason: string | null;
@@ -228,12 +218,7 @@ function buildResolvedExercise(
     muscleGroup: exercise.muscleGroup,
     impactLevel: exercise.impactLevel,
     isBodyweight: exercise.isBodyweight,
-    beginnerSets: pe.beginnerSets,
-    beginnerReps: pe.beginnerReps,
-    intermediateSets: pe.intermediateSets,
-    intermediateReps: pe.intermediateReps,
-    advancedSets: pe.advancedSets,
-    advancedReps: pe.advancedReps,
+    repsScheme: pe.repsScheme,
     restSeconds: pe.restSeconds,
     wasSubstituted,
     substitutionReason,
