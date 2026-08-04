@@ -55,24 +55,23 @@ export default async function Training() {
 
   if (!plannedSession) redirect("/programs");
 
-  //  Pick sets/reps for this user's level
-  const levelKey = instance.level; // "BEGINNER" | "INTERMEDIATE" | "ADVANCED"
+  //  Plans are level-specific now (WorkoutPlan.difficulty), so each
+  //  plannedExercise's repsScheme already holds the right values for
+  //  whichever level's plan matched this user — no per-level branching.
+  //
+  //  NOTE: sets/reps below are a legacy shim for ExerciseForView, which
+  //  still expects single numbers. For a flat scheme (e.g. [12,12]) this
+  //  is exact. For a real pyramid (e.g. [15,12,10]) it's an approximation
+  //  (sets = scheme length, reps = first set only) — TrainingView should
+  //  be migrated to read repsScheme directly, at which point this shim
+  //  and the sets/reps fields can be removed.
 
   const exercisesForView = plannedSession.plannedExercises.map((pe) => ({
     id: pe.id,
     order: pe.order,
-    sets:
-      levelKey === "BEGINNER"
-        ? pe.beginnerSets
-        : levelKey === "INTERMEDIATE"
-          ? pe.intermediateSets
-          : pe.advancedSets,
-    reps:
-      levelKey === "BEGINNER"
-        ? pe.beginnerReps
-        : levelKey === "INTERMEDIATE"
-          ? pe.intermediateReps
-          : pe.advancedReps,
+    repsScheme: pe.repsScheme,
+    sets: pe.repsScheme.length,
+    reps: pe.repsScheme[0] ?? 0,
     restSeconds: pe.restSeconds,
     exercise: {
       id: pe.exercise.id,
