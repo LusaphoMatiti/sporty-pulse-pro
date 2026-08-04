@@ -75,30 +75,15 @@ export async function GET(
     );
   }
 
-  // 4. Pick sets/reps for this user's level
-
-  const levelKey = instance.level;
+  // 4. Plans are level-specific now (WorkoutPlan.difficulty), so each
+  // plannedExercise's repsScheme already holds the right values for
+  // whichever level's plan matched this user — no per-level branching.
 
   const exercises = plannedSession.plannedExercises.map((pe) => {
-    const sets =
-      levelKey === "BEGINNER"
-        ? pe.beginnerSets
-        : levelKey === "INTERMEDIATE"
-          ? pe.intermediateSets
-          : pe.advancedSets;
-
-    const reps =
-      levelKey === "BEGINNER"
-        ? pe.beginnerReps
-        : levelKey === "INTERMEDIATE"
-          ? pe.intermediateReps
-          : pe.advancedReps;
-
     return {
       id: pe.id,
       order: pe.order,
-      sets,
-      reps,
+      repsScheme: pe.repsScheme,
       restSeconds: pe.restSeconds,
       exercise: {
         id: pe.exercise.id,
