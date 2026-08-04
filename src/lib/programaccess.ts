@@ -25,8 +25,7 @@ export type ScheduleDay = {
 export type ScheduleExercise = {
   id: string;
   name: string;
-  sets: number;
-  reps: number;
+  repsScheme: number[]; // one rep count per set, in order — e.g. [12,12] or [15,12,10]
 };
 
 const WEEK_DAY_LABELS = [
@@ -43,44 +42,56 @@ type SchedulePlannedExercise = {
   id: string;
   order: number;
   exercise: { name: string };
-  beginnerSets: number;
-  beginnerReps: number;
-  intermediateSets: number;
-  intermediateReps: number;
-  advancedSets: number;
-  advancedReps: number;
+  repsScheme: number[];
 };
 
 type SchedulePlannedSession = {
   sessionNumber: number;
+  dayOfWeek: number | null;
   focus: string;
   estimatedMinutes: number;
   plannedExercises: SchedulePlannedExercise[];
 };
 
-function pickSetsReps(pe: SchedulePlannedExercise, level: string) {
-  if (level === "ADVANCED")
-    return { sets: pe.advancedSets, reps: pe.advancedReps };
-  if (level === "INTERMEDIATE")
-    return { sets: pe.intermediateSets, reps: pe.intermediateReps };
-  return { sets: pe.beginnerSets, reps: pe.beginnerReps };
-}
-
 /**
- * Lays a plan's sessions across the 7 days of the week, Monday first,
- * in sessionNumber order. Extra days beyond sessionsPerWeek are rest days.
- * Fixed pattern for v1 — no persisted day-of-week choice yet.
+ * Lays a plan's sessions across the 7 days of the week.
+ *
+ * If every session on the plan has a dayOfWeek set, sessions are placed
+ * on their exact day — this is what makes a mid-week rest day (e.g.
+ * Wednesday off between Tuesday and Thursday sessions) representable at
+ * all, which pure sequential fill never could.
+ *
+ * If no session has dayOfWeek set (plans seeded before this field
+ * existed), falls back to the original behavior: sessions in
+ * sessionNumber order, Monday first, consecutively, with anything left
+ * over becoming a rest day. This keeps every plan seeded before this
+ * migration working exactly as before with zero data changes required.
+ *
+ * Plans are level-specific now (WorkoutPlan.difficulty pins one level),
+ * so there's no `level` param anymore — a session's plannedExercises
+ * already carry the right repsScheme for whichever plan matched the user.
  */
 export function buildWeeklySchedule(
   plannedSessions: SchedulePlannedSession[],
-  level: string,
 ): ScheduleDay[] {
-  const sorted = [...plannedSessions].sort(
-    (a, b) => a.sessionNumber - b.sessionNumber,
+  const usesExplicitDays = plannedSessions.every(
+    (s) => s.dayOfWeek !== null && s.dayOfWeek !== undefined,
   );
 
+  const byDay = new Map<number, SchedulePlannedSession>();
+  if (usesExplicitDays) {
+    for (const s of plannedSessions) {
+      byDay.set(s.dayOfWeek as number, s);
+    }
+  } else {
+    const sorted = [...plannedSessions].sort(
+      (a, b) => a.sessionNumber - b.sessionNumber,
+    );
+    sorted.forEach((s, i) => byDay.set(i, s));
+  }
+
   return WEEK_DAY_LABELS.map((dayLabel, dayIndex) => {
-    const session = sorted[dayIndex] ?? null;
+    const session = byDay.get(dayIndex) ?? null;
     if (!session) {
       return {
         dayIndex,
@@ -94,10 +105,11 @@ export function buildWeeklySchedule(
     }
     const exercises = [...session.plannedExercises]
       .sort((a, b) => a.order - b.order)
-      .map((pe) => {
-        const { sets, reps } = pickSetsReps(pe, level);
-        return { id: pe.id, name: pe.exercise.name, sets, reps };
-      });
+      .map((pe) => ({
+        id: pe.id,
+        name: pe.exercise.name,
+        repsScheme: pe.repsScheme,
+      }));
     return {
       dayIndex,
       dayLabel,

@@ -116,6 +116,7 @@ export async function GET(req: Request) {
         where: { planId: activeInstance.planId },
         select: {
           sessionNumber: true,
+          dayOfWeek: true,
           focus: true,
           estimatedMinutes: true,
           plannedExercises: {
@@ -124,20 +125,12 @@ export async function GET(req: Request) {
               id: true,
               order: true,
               exercise: { select: { name: true } },
-              beginnerSets: true,
-              beginnerReps: true,
-              intermediateSets: true,
-              intermediateReps: true,
-              advancedSets: true,
-              advancedReps: true,
+              repsScheme: true,
             },
           },
         },
       });
-      weeklySchedule = buildWeeklySchedule(
-        activePlanSessions,
-        activeInstance.level,
-      );
+      weeklySchedule = buildWeeklySchedule(activePlanSessions);
     }
 
     const plansWithCount = plans.map((p) => {
