@@ -179,6 +179,7 @@ model WorkoutPlan {
 model PlannedSession {
   id               String            @id @default(cuid())
   sessionNumber    Int
+  dayOfWeek        Int? // 0=Monday..6=Sunday. Null = legacy sequential fill (backward compatible with plans seeded before this field existed); set = exact day placement, enabling gaps like a mid-week rest day that sequential fill can't represent.
   focus            String
   estimatedMinutes Int               @default(45)
   planId           String
@@ -191,20 +192,15 @@ model PlannedSession {
 }
 
 model PlannedExercise {
-  id               String         @id @default(cuid())
-  order            Int
-  sessionId        String
-  exerciseId       String
-  beginnerSets     Int
-  beginnerReps     Int
-  intermediateSets Int
-  intermediateReps Int
-  advancedSets     Int
-  advancedReps     Int
-  restSeconds      Int
-  exercise         Exercise       @relation(fields: [exerciseId], references: [id])
-  session          PlannedSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
-  loggedSets       WorkoutLog[]
+  id          String         @id @default(cuid())
+  order       Int
+  sessionId   String
+  exerciseId  String
+  repsScheme  Int[] // one rep count per set, in order, e.g. [12,12] = 2 sets of 12, [15,12,10] = a 3-set descending pyramid. Array length IS the set count — no separate sets field. Plans are level-specific (via WorkoutPlan.difficulty), so this holds the scheme for that plan's level only, not three parallel tiers.
+  restSeconds Int
+  exercise    Exercise       @relation(fields: [exerciseId], references: [id])
+  session     PlannedSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  loggedSets  WorkoutLog[]
 
   @@unique([sessionId, order])
   @@index([sessionId])
@@ -469,13 +465,6 @@ enum GymTrainingStyle {
   CALISTHENICS
   WEIGHTS_AND_MACHINES
   WEIGHTS_ONLY
-}
-
-enum GymStyle {           
-  FREE_WEIGHT
-  CALISTHENIC
-  WEIGHTS_ONLY
-  WEIGHTS_MACHINE
 }
 
 
