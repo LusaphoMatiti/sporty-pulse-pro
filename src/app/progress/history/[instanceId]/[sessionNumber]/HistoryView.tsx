@@ -10,8 +10,7 @@ type ExerciseLog = {
   weightKg: number | null;
   actualReps: number | null;
   actualSets: number | null;
-  plannedSets: number;
-  plannedReps: number;
+  repsScheme: number[]; // one rep count per set, in order — e.g. [12,12] or [15,12,10]
 };
 
 type Props = {
@@ -45,10 +44,26 @@ function formatDate(iso: string) {
   });
 }
 
+// A flat scheme (every set the same rep count, e.g. Beginner's [12,12])
+// reads better as compact "2 x 12" gym shorthand. A real pyramid (e.g.
+// Intermediate's [15,12,10]) needs every number shown in order — collapsing
+// it to "3 x 12" would silently hide the descending structure that's the
+// whole point of the scheme. Mirrors ExpandableWorkoutList's formatRepsScheme.
+function formatRepsScheme(scheme: number[]): string {
+  if (scheme.length === 0) return "";
+  const isFlat = scheme.every((r) => r === scheme[0]);
+  return isFlat ? `${scheme.length} x ${scheme[0]}` : scheme.join(" → ");
+}
+
+function plannedTotalReps(scheme: number[]): number {
+  return scheme.reduce((sum, r) => sum + r, 0);
+}
+
 function completionPercent(e: ExerciseLog) {
   if (!e.actualSets || !e.actualReps) return 0;
   const actual = e.actualSets * e.actualReps;
-  const planned = e.plannedSets * e.plannedReps;
+  const planned = plannedTotalReps(e.repsScheme);
+  if (planned === 0) return 0;
   return Math.min(100, Math.round((actual / planned) * 100));
 }
 
@@ -113,6 +128,7 @@ export default function HistoryView({ meta, exercises, totalVolume }: Props) {
           <div className="space-y-3">
             {exercises.map((e, i) => {
               const pct = completionPercent(e);
+              const didLog = e.actualSets !== null && e.actualReps !== null;
               return (
                 <div
                   key={e.id}
@@ -132,8 +148,9 @@ export default function HistoryView({ meta, exercises, totalVolume }: Props) {
                       </div>
                     </div>
                     <span className="font-barlow font-semibold text-base text-sp-accent shrink-0">
-                      {e.actualSets ?? e.plannedSets} ×{" "}
-                      {e.actualReps ?? e.plannedReps}
+                      {didLog
+                        ? `${e.actualSets} × ${e.actualReps}`
+                        : formatRepsScheme(e.repsScheme)}
                     </span>
                   </div>
 
@@ -154,7 +171,7 @@ export default function HistoryView({ meta, exercises, totalVolume }: Props) {
                         Planned
                       </p>
                       <p className="font-barlow font-bold text-sm">
-                        {e.plannedSets}×{e.plannedReps}
+                        {formatRepsScheme(e.repsScheme)}
                       </p>
                     </div>
                     <div className="flex-1 bg-sp-surface2 rounded-xl p-2.5 text-center">

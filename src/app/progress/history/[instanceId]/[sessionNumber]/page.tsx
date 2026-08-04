@@ -40,6 +40,9 @@ export default async function History({ params }: { params: Params }) {
     level: first.instance.level,
   };
 
+  // Plans are level-specific now (WorkoutPlan.difficulty), so each
+  // plannedExercise's repsScheme already holds the right values for
+  // whichever level's plan this instance is on — no per-level branching.
   const exercises = logs.map((l) => ({
     id: l.id,
     name: l.plannedExercise.exercise.name,
@@ -47,18 +50,7 @@ export default async function History({ params }: { params: Params }) {
     weightKg: l.weightKg,
     actualReps: l.actualReps,
     actualSets: l.actualSets,
-    plannedSets:
-      first.instance.level === "BEGINNER"
-        ? l.plannedExercise.beginnerSets
-        : first.instance.level === "INTERMEDIATE"
-          ? l.plannedExercise.intermediateSets
-          : l.plannedExercise.advancedSets,
-    plannedReps:
-      first.instance.level === "BEGINNER"
-        ? l.plannedExercise.beginnerReps
-        : first.instance.level === "INTERMEDIATE"
-          ? l.plannedExercise.intermediateReps
-          : l.plannedExercise.advancedReps,
+    repsScheme: l.plannedExercise.repsScheme,
   }));
 
   const totalVolume = exercises.reduce((sum, e) => {
