@@ -432,9 +432,9 @@ function toTemplateType(
     return "FUNCTIONAL_HOME_RECOVERY" as TemplateType;
 
   const GOAL_MAP: Record<string, string> = {
-    "lose weight": "FAT_LOSS",
-    "build muscle": "MUSCLE",
-    "get fit": "FUNCTIONAL",
+    lose_weight: "FAT_LOSS",
+    build_muscle: "MUSCLE",
+    get_fit: "FUNCTIONAL",
   };
   const LOC_MAP: Record<string, string> = {
     home: "HOME",
