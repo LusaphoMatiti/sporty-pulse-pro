@@ -65,18 +65,14 @@ interface WorkoutGoalFile {
 
 interface RawSessionExercise {
   exercise: string;
-  beginnerSets: number;
-  beginnerReps: number;
-  intermediateSets: number;
-  intermediateReps: number;
-  advancedSets: number;
-  advancedReps: number;
+  repsScheme: number[]; // one rep count per set, in order — e.g. [12,12] or [15,12,10]
   restSeconds: number;
 }
 
 interface RawSession {
-  sessionNumber: number; // 1-indexed position within the week, Monday-first
-  focus: string; // e.g. "Legs", "Chest", "Shoulders", "Back", "Arms"
+  sessionNumber: number; // 1-indexed position within the week
+  dayOfWeek?: number; // 0=Monday..6=Sunday. Omit to fall back to legacy sequential fill.
+  focus: string; // e.g. "Legs", "Chest", "Active Recovery"
   estimatedMinutes: number;
   exercises: RawSessionExercise[];
 }
@@ -85,6 +81,7 @@ interface RawWeeklyProgram {
   workoutName: string;
   goal: string;
   location: string; // "GYM" for all current weekly programs
+  level: string; // BEGINNER | INTERMEDIATE | ADVANCED — plans are level-specific now
   sex?: string;
   muscleGroup?: string;
   environmentTarget?: string;
@@ -699,17 +696,13 @@ async function seedWeeklyPrograms(
       const collection = program.collection ?? null;
       const tier: PlanTier = PlanTier.FREE;
 
-      // NOTE: TemplateType assumes one difficulty tier per plan (keys into
-      // COACHING_NOTES in the API routes) but weekly programs serve all three
-      // levels from one plan via each PlannedExercise's beginner/intermediate/
-      // advanced columns. Defaulting to "beginner" here until we can see how
-      // COACHING_NOTES is actually consumed — flag if that needs to vary by
-      // the viewing user's level instead.
+      // TemplateType keys into COACHING_NOTES in the API routes — now uses
+      // the plan's real level directly, since plans are level-specific.
       const templateType = toTemplateType(
         program.workoutName,
         program.goal,
         program.location,
-        "beginner",
+        program.level,
       );
 
       const planEquipmentId: string | null = program.equipment
@@ -733,7 +726,7 @@ async function seedWeeklyPrograms(
           sessionsPerWeek: sessionCount,
           tier,
           goalTarget,
-          difficulty: null, // serves all levels via per-exercise beginner/intermediate/advanced columns
+          difficulty: program.level.toUpperCase(),
           sessionDurationMin: String(avgMinutes),
           environmentTarget,
           sexTarget,
@@ -752,7 +745,7 @@ async function seedWeeklyPrograms(
           sessionsPerWeek: sessionCount,
           tier,
           goalTarget,
-          difficulty: null,
+          difficulty: program.level.toUpperCase(),
           sessionDurationMin: String(avgMinutes),
           environmentTarget,
           sexTarget,
@@ -782,6 +775,7 @@ async function seedWeeklyPrograms(
           data: {
             planId: plan.id,
             sessionNumber: session.sessionNumber,
+            dayOfWeek: session.dayOfWeek ?? null,
             focus: session.focus,
             estimatedMinutes: session.estimatedMinutes,
           },
@@ -792,12 +786,7 @@ async function seedWeeklyPrograms(
             sessionId: plannedSession.id,
             exerciseId: exerciseByName.get(e.exercise)!,
             order: i + 1,
-            beginnerSets: e.beginnerSets,
-            beginnerReps: e.beginnerReps,
-            intermediateSets: e.intermediateSets,
-            intermediateReps: e.intermediateReps,
-            advancedSets: e.advancedSets,
-            advancedReps: e.advancedReps,
+            repsScheme: e.repsScheme,
             restSeconds: e.restSeconds,
           })),
         });
@@ -1074,21 +1063,31 @@ async function main() {
     await prisma.plannedSession.deleteMany({ where: { planId: plan.id } });
 
     // ── Pre-compute exercise payloads once — all sessions share the same list ──
+    // Each legacy workout already declares one level via `workout.level`
+    // (set as this plan's `difficulty` above), so — same as
+    // seedWeeklyPrograms — only ONE reps scheme is needed here, not three
+    // parallel tiers that were previously computed but only ever one of
+    // which (matching the plan's own difficulty) was the "correct" one to
+    // begin with. Keeps the exact same +/-1 set, +/-2 rep heuristic spread
+    // this always used, just resolved once instead of three times.
+    const level = workout.level.toUpperCase();
     const exercisePayloads = validExercises.map((e, i) => {
       const exerciseId = exerciseByName.get(e.exercise!)!;
       const repsVal = parseReps(e.reps);
       const setsVal = parseSets(e.sets);
       const restSeconds = parseRestSeconds(e.rest);
 
+      const { sets, reps } =
+        level === "ADVANCED"
+          ? { sets: setsVal + 1, reps: repsVal + 2 }
+          : level === "BEGINNER"
+            ? { sets: Math.max(1, setsVal - 1), reps: Math.max(6, repsVal - 2) }
+            : { sets: setsVal, reps: repsVal }; // INTERMEDIATE (also the fallback for any unrecognised level)
+
       return {
         exerciseId,
         order: i + 1,
-        beginnerSets: Math.max(1, setsVal - 1),
-        beginnerReps: Math.max(6, repsVal - 2),
-        intermediateSets: setsVal,
-        intermediateReps: repsVal,
-        advancedSets: setsVal + 1,
-        advancedReps: repsVal + 2,
+        repsScheme: Array(sets).fill(reps),
         restSeconds,
       };
     });
