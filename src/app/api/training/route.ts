@@ -160,12 +160,7 @@ export async function GET(req: NextRequest) {
             select: {
               id: true,
               order: true,
-              beginnerSets: true,
-              beginnerReps: true,
-              intermediateSets: true,
-              intermediateReps: true,
-              advancedSets: true,
-              advancedReps: true,
+              repsScheme: true,
               restSeconds: true,
               exercise: {
                 select: {
@@ -226,23 +221,10 @@ export async function GET(req: NextRequest) {
       )
       .map((r) => r.equipmentId);
 
-    const levelKey = instance.level;
-
     const exercisesForView = plannedSession.plannedExercises.map((pe) => ({
       id: pe.id,
       order: pe.order,
-      sets:
-        levelKey === "BEGINNER"
-          ? pe.beginnerSets
-          : levelKey === "INTERMEDIATE"
-            ? pe.intermediateSets
-            : pe.advancedSets,
-      reps:
-        levelKey === "BEGINNER"
-          ? pe.beginnerReps
-          : levelKey === "INTERMEDIATE"
-            ? pe.intermediateReps
-            : pe.advancedReps,
+      repsScheme: pe.repsScheme,
       restSeconds: pe.restSeconds,
       exercise: {
         id: pe.exercise.id,
