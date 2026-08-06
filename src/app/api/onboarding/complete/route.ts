@@ -1,4 +1,3 @@
-// src/app/api/onboarding/complete/route.ts
 import { getSessionFromRequest } from "@/lib/getSession";
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
@@ -203,7 +202,20 @@ export async function POST(req: NextRequest) {
       // So GymProgramsScreen has something
 
       if (trainingLocation === "GYM") {
-        const baseWhere = { environmentTarget: "GYM" as const };
+        const baseWhere = {
+          environmentTarget: "GYM" as const,
+          // Restrict auto-activation to plans seeded with a real
+          // day-by-day structure (seedWeeklyPrograms sets dayOfWeek on
+          // every PlannedSession it creates). The legacy single-session
+          // loop earlier in seed.ts never sets dayOfWeek and instead
+          // copies one exercise payload into 12 identical sessions with
+          // no day placement at all -- without this filter, one of
+          // those legacy plans can win the `orderBy: name asc` race
+          // below and produce exactly the reported bug: the same
+          // workout on every day, with no rest days. See seed.ts's
+          // comment on seedWeeklyPrograms for the full story.
+          plannedSessions: { some: { dayOfWeek: { not: null } } },
+        };
         const tiers = [
           {
             ...baseWhere,

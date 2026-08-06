@@ -107,7 +107,7 @@
   },
   "programs": [
     {
-      "workoutName": "Full Gym 4-Day Split (Beginner)",
+      "workoutName": "Full Gym 5-Day Split (Beginner)",
       "goal": "LOSE_WEIGHT",
       "location": "GYM",
       "level": "BEGINNER",
@@ -166,6 +166,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -198,6 +199,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -230,6 +232,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 3,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -262,6 +265,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 4,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -351,6 +355,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -383,6 +388,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -415,6 +421,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -447,6 +454,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -474,6 +482,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -563,6 +572,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -595,6 +605,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -627,6 +638,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -659,6 +671,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -686,6 +699,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -773,6 +787,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -805,6 +820,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -837,6 +853,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 3,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -869,6 +886,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 4,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -958,6 +976,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -990,6 +1009,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -1022,6 +1042,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -1054,6 +1075,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -1081,6 +1103,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -1170,6 +1193,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -1202,6 +1226,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -1234,6 +1259,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -1266,6 +1292,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -1293,6 +1320,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -1380,6 +1408,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -1412,6 +1441,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -1444,6 +1474,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 3,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -1476,6 +1507,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 4,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -1565,6 +1597,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -1597,6 +1630,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -1629,6 +1663,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -1661,6 +1696,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -1688,6 +1724,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -1777,6 +1814,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -1809,6 +1847,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -1841,6 +1880,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -1873,6 +1913,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -1900,6 +1941,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -1987,6 +2029,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2019,6 +2062,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2051,6 +2095,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 3,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2083,6 +2128,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 4,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -2172,6 +2218,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2204,6 +2251,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2236,6 +2284,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2268,6 +2317,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -2295,6 +2345,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -2384,6 +2435,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2416,6 +2468,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2448,6 +2501,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2480,6 +2534,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -2507,6 +2562,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -2594,6 +2650,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2626,6 +2683,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2658,6 +2716,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 3,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2690,6 +2749,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 4,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -2779,6 +2839,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2811,6 +2872,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2843,6 +2905,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -2875,6 +2938,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -2902,6 +2966,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -2991,6 +3056,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3023,6 +3089,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3055,6 +3122,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3087,6 +3155,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -3114,6 +3183,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -3201,6 +3271,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3233,6 +3304,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3265,6 +3337,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 3,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3297,6 +3370,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 4,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -3386,6 +3460,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3418,6 +3493,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3450,6 +3526,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3482,6 +3559,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -3509,6 +3587,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -3598,6 +3677,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3630,6 +3710,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3662,6 +3743,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3694,6 +3776,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -3721,6 +3804,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -3808,6 +3892,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3840,6 +3925,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3872,6 +3958,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 3,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -3904,6 +3991,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 4,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -3993,6 +4081,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4025,6 +4114,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4057,6 +4147,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4089,6 +4180,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -4116,6 +4208,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -4205,6 +4298,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4237,6 +4331,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4269,6 +4364,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4301,6 +4397,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -4328,6 +4425,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -4415,6 +4513,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4447,6 +4546,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4479,6 +4579,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 3,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4511,6 +4612,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 4,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -4600,6 +4702,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4632,6 +4735,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4664,6 +4768,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4696,6 +4801,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -4723,6 +4829,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -4812,6 +4919,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4844,6 +4952,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4876,6 +4985,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -4908,6 +5018,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -4935,6 +5046,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -5022,6 +5134,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5054,6 +5167,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5086,6 +5200,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 3,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5118,6 +5233,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 4,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -5207,6 +5323,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5239,6 +5356,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5271,6 +5389,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5303,6 +5422,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -5330,6 +5450,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -5419,6 +5540,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5451,6 +5573,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5483,6 +5606,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5515,6 +5639,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 40,
           "exercises": [
@@ -5542,6 +5667,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -5629,6 +5755,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5661,6 +5788,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5693,6 +5821,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 3,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5725,6 +5854,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 4,
           "focus": "Arms",
           "estimatedMinutes": 30,
           "exercises": [
@@ -5804,6 +5934,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5836,6 +5967,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5868,6 +6000,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -5900,6 +6033,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 30,
           "exercises": [
@@ -5917,6 +6051,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -6006,6 +6141,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6038,6 +6174,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6070,6 +6207,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6102,6 +6240,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 30,
           "exercises": [
@@ -6119,6 +6258,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -6206,6 +6346,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6238,6 +6379,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6270,6 +6412,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 3,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6302,6 +6445,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 4,
           "focus": "Arms",
           "estimatedMinutes": 30,
           "exercises": [
@@ -6381,6 +6525,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6413,6 +6558,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6445,6 +6591,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6477,6 +6624,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 30,
           "exercises": [
@@ -6494,6 +6642,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -6583,6 +6732,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6615,6 +6765,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6647,6 +6798,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6679,6 +6831,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 30,
           "exercises": [
@@ -6696,6 +6849,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -6783,6 +6937,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6815,6 +6970,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6847,6 +7003,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 3,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6879,6 +7036,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 4,
           "focus": "Arms",
           "estimatedMinutes": 30,
           "exercises": [
@@ -6958,6 +7116,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -6990,6 +7149,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -7022,6 +7182,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -7054,6 +7215,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 30,
           "exercises": [
@@ -7071,6 +7233,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
@@ -7160,6 +7323,7 @@
       "sessions": [
         {
           "sessionNumber": 1,
+          "dayOfWeek": 0,
           "focus": "Legs",
           "estimatedMinutes": 50,
           "exercises": [
@@ -7192,6 +7356,7 @@
         },
         {
           "sessionNumber": 2,
+          "dayOfWeek": 1,
           "focus": "Chest",
           "estimatedMinutes": 50,
           "exercises": [
@@ -7224,6 +7389,7 @@
         },
         {
           "sessionNumber": 3,
+          "dayOfWeek": 2,
           "focus": "Back",
           "estimatedMinutes": 50,
           "exercises": [
@@ -7256,6 +7422,7 @@
         },
         {
           "sessionNumber": 4,
+          "dayOfWeek": 3,
           "focus": "Arms",
           "estimatedMinutes": 30,
           "exercises": [
@@ -7273,6 +7440,7 @@
         },
         {
           "sessionNumber": 5,
+          "dayOfWeek": 4,
           "focus": "Shoulders",
           "estimatedMinutes": 40,
           "exercises": [
