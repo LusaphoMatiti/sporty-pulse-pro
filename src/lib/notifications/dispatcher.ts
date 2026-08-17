@@ -55,7 +55,19 @@ export async function dispatchDueNotifications(now: Date = new Date()) {
       continue;
     }
 
-    await sendExpoPush(prefs.pushToken, notif.title, notif.body);
+    await sendExpoPush(prefs.pushToken, notif.title, notif.body, {
+      type: notif.type,
+    });
+
+    async function sendExpoPush(
+      pushToken: string,
+      title: string,
+      body: string,
+      data: Record<string, unknown> = {},
+    ) {
+      console.log(`[stub push] -> ${pushToken}: ${title} — ${body}`, data);
+      return { success: true };
+    }
 
     await prisma.$transaction([
       prisma.scheduledNotification.update({
