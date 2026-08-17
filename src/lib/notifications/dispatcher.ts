@@ -13,11 +13,13 @@
 import { prisma } from "@/lib/prisma";
 import { getTodaysSessionStatus } from "./dataAdapter";
 
-async function sendExpoPush(pushToken: string, title: string, body: string) {
-  // TODO: replace with expo-server-sdk. Kept as a stub so the backend
-  // pipeline (plan -> dispatch -> log) is fully testable in isolation
-  // before any mobile wiring exists.
-  console.log(`[stub push] -> ${pushToken}: ${title} — ${body}`);
+async function sendExpoPush(
+  pushToken: string,
+  title: string,
+  body: string,
+  data: Record<string, unknown> = {},
+) {
+  console.log(`[stub push] -> ${pushToken}: ${title} — ${body}`, data);
   return { success: true };
 }
 
@@ -58,16 +60,6 @@ export async function dispatchDueNotifications(now: Date = new Date()) {
     await sendExpoPush(prefs.pushToken, notif.title, notif.body, {
       type: notif.type,
     });
-
-    async function sendExpoPush(
-      pushToken: string,
-      title: string,
-      body: string,
-      data: Record<string, unknown> = {},
-    ) {
-      console.log(`[stub push] -> ${pushToken}: ${title} — ${body}`, data);
-      return { success: true };
-    }
 
     await prisma.$transaction([
       prisma.scheduledNotification.update({
