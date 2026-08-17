@@ -37,6 +37,11 @@ model User {
   subscription          Subscription?
   userEquipment         UserEquipment[]
   workoutLogs           WorkoutLog[]
+  scheduledNotification ScheduledNotification []
+  notificationPreference NotificationPreference? 
+notificationLog NotificationLog []
+
+
 
   @@map("users")
 }
@@ -246,6 +251,7 @@ model PlanInstance {
   plan               WorkoutPlan      @relation(fields: [planId], references: [id])
   user               User             @relation(fields: [userId], references: [id], onDelete: Cascade)
   workoutLogs        WorkoutLog[]
+  
 
   @@index([userId, status])
   @@index([userId])
@@ -340,6 +346,67 @@ model CheckoutSession {
   usedAt DateTime?
 
   @@map("checkout_sessions")
+}
+
+
+// NOTIFICATION SYSTEM 
+
+model NotificationPreference {
+  id                     String    @id @default(cuid())
+  userId                 String    @unique
+  user                   User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  pushToken              String?
+  notificationsEnabled   Boolean   @default(true)
+
+  timezone               String    @default("Africa/Johannesburg")
+  bedtimeLocal           String    @default("22:00")   // "HH:mm", 24h local time
+
+  // Learned behavior — updated over time as the user trains
+  avgSessionStartMinutes Int?      // EMA of minutes-since-midnight when they actually start sessions
+  lastAppOpenAt          DateTime?
+
+  createdAt              DateTime  @default(now())
+  updatedAt              DateTime  @updatedAt
+}
+
+
+model ScheduledNotification {
+  id            String            @id @default(cuid())
+  userId        String
+  user          User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  type          NotificationType
+  tier          IdentityTier
+  title         String
+  body          String
+
+  scheduledFor  DateTime          // planner decides WHEN today this should fire
+  status        ScheduleStatus    @default(PENDING)
+  sentAt        DateTime?
+
+  createdAt     DateTime          @default(now())
+
+  @@index([status, scheduledFor])
+  @@index([userId, createdAt])
+}
+
+
+model NotificationLog {
+  id          String            @id @default(cuid())
+  userId      String
+  user        User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  type        NotificationType
+  tier        IdentityTier
+  title       String
+  body        String
+
+  sentAt      DateTime          @default(now())
+  actioned    Boolean           @default(false)   // did a session get completed after this fired?
+  actionedAt  DateTime?
+
+  @@index([userId, sentAt])
+  @@index([userId, type, sentAt])
 }
 
 
@@ -465,6 +532,32 @@ enum GymTrainingStyle {
   CALISTHENICS
   WEIGHTS_AND_MACHINES
   WEIGHTS_ONLY
+}
+
+
+
+// NOTIFICATION SYSTEM 
+
+enum NotificationType {
+  DAILY_HABIT
+  STREAK_SAVER
+  RECOVERY_READY
+  RECOVERY_NUDGE
+  RESCHEDULE_SUGGESTION
+  MILESTONE
+}
+
+enum IdentityTier {
+  REBUILD
+  OPERATOR
+  EXECUTIVE
+}
+
+enum ScheduleStatus {
+  PENDING
+  SENT
+  SUPPRESSED
+  CANCELLED
 }
 
 
