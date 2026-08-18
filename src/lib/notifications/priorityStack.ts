@@ -17,7 +17,7 @@
  * for the one-per-day slot this function guards.
  */
 
-import { NotificationType, IdentityTier } from "@prisma/client";
+import { NotificationType, IdentityTier } from "@/generated/prisma";
 import { COPY, recoveryReadyCopy } from "./copy";
 
 export type UserSnapshot = {

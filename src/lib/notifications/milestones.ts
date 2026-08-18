@@ -16,10 +16,7 @@
 import { prisma } from "@/lib/prisma";
 import { milestoneCopy } from "./copy";
 import { getIdentityTier } from "./dataAdapter";
-
-async function sendExpoPush(pushToken: string, title: string, body: string) {
-  console.log(`[stub push] -> ${pushToken}: ${title} — ${body}`);
-}
+import { sendExpoPush } from "./sendPush";
 
 export async function checkAndFireMilestone(
   userId: string,
@@ -36,7 +33,9 @@ export async function checkAndFireMilestone(
   const tier = await getIdentityTier(userId);
   const copy = milestoneCopy(milestoneKey);
 
-  await sendExpoPush(prefs.pushToken, copy.title, copy.body);
+  await sendExpoPush(prefs.pushToken, copy.title, copy.body, {
+    type: "MILESTONE",
+  });
 
   await prisma.notificationLog.create({
     data: {

@@ -12,16 +12,7 @@
 
 import { prisma } from "@/lib/prisma";
 import { getTodaysSessionStatus } from "./dataAdapter";
-
-async function sendExpoPush(
-  pushToken: string,
-  title: string,
-  body: string,
-  data: Record<string, unknown> = {},
-) {
-  console.log(`[stub push] -> ${pushToken}: ${title} — ${body}`, data);
-  return { success: true };
-}
+import { sendExpoPush } from "./sendPush";
 
 export async function dispatchDueNotifications(now: Date = new Date()) {
   const due = await prisma.scheduledNotification.findMany({
