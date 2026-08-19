@@ -258,6 +258,8 @@ model PlanInstance {
   @@map("plan_instances")
 }
 
+// WorkoutLog
+
 model WorkoutLog {
   id                String          @id @default(cuid())
   sessionNumber     Int
