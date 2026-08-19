@@ -1,0 +1,15 @@
+# .github/workflows/dispatch-notifications.yml
+name: Dispatch Notifications
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {} # lets you trigger it manually from the Actions tab too
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hit dispatch endpoint
+        run: |
+          curl -f -X POST curl -f curl -f https://sporty-pulse-pro.vercel.app/api/cron/notifications/dispatch \
+  -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}"
