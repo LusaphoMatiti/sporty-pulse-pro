@@ -1,42 +1,55 @@
-import type { NextRequest } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { NextResponse } from "next/server";
 import { getMobileOrWebSession } from "@/lib/mobile-auth";
-import {
-  apiSuccess,
-  unauthorized,
-  validationError,
-  internalError,
-} from "@/lib/api-response";
+import { prisma } from "@/lib/prisma";
 
-export async function POST(req: NextRequest) {
+export async function POST(req: Request) {
+  const session = await getMobileOrWebSession(req);
+  if (!session)
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  const userId = session.user.id;
+
+  let body: { pushToken?: string; timezone?: string };
   try {
-    const session = await getMobileOrWebSession(req);
-    if (!session) return unauthorized();
-
-    const body = await req.json().catch(() => null);
-    if (!body?.pushToken || typeof body.pushToken !== "string") {
-      return validationError("pushToken is required");
-    }
-
-    const prefs = await prisma.notificationPreference.upsert({
-      where: { userId: session.user.id },
-      create: {
-        userId: session.user.id,
-        pushToken: body.pushToken,
-        timezone: body.timezone ?? "Africa/Johannesburg",
-        notificationsEnabled: true, // first-ever registration = OS permission just granted, safe default
-      },
-      update: {
-        pushToken: body.pushToken,
-        ...(body.timezone ? { timezone: body.timezone } : {}),
-        // deliberately NOT touching notificationsEnabled on update —
-        // a token refresh isn't the user asking to be re-opted-in
-      },
-      select: { notificationsEnabled: true },
-    });
-
-    return apiSuccess(prefs);
-  } catch (err) {
-    return internalError(err);
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
   }
+
+  const { pushToken, timezone } = body;
+  if (!pushToken || typeof pushToken !== "string") {
+    return NextResponse.json(
+      { error: "pushToken is required" },
+      { status: 400 },
+    );
+  }
+
+  // Registering a device only ever happens from the "turn notifications on"
+  // path (SettingsScreen.handleNotifToggle -> usePushRegistration), so
+  // notificationsEnabled is set true here unconditionally. This is the fix:
+  // previously this route only persisted pushToken + timezone, so the
+  // enabled flag never flipped true in the DB even though the client
+  // switch showed "on" -- planner.ts's guard
+  // (`!prefs.notificationsEnabled || !prefs.pushToken`) then silently
+  // skipped every user who'd "enabled" notifications this way.
+  //
+  // Disabling remains a separate concern, handled by
+  // PATCH /api/notifications/preferences.
+  const prefs = await prisma.notificationPreference.upsert({
+    where: { userId },
+    create: {
+      userId,
+      pushToken,
+      timezone: timezone ?? "Africa/Johannesburg",
+      notificationsEnabled: true,
+    },
+    update: {
+      pushToken,
+      ...(timezone ? { timezone } : {}),
+      notificationsEnabled: true,
+    },
+    select: { pushToken: true, notificationsEnabled: true, timezone: true },
+  });
+
+  return NextResponse.json({ success: true, preferences: prefs });
 }
