@@ -10,7 +10,7 @@
  * WorkoutLog/RecoveryLog history, so this never touches your real
  * streak/recovery data. The dispatcher's "already completed today?"
  * re-check IS real -- if you've trained today, expect SUPPRESSED
- * results, which is correct behavior, not a bug.
+ * results, which is correct behavior, not () a bug.
  *
  * GET /api/notifications/test-scenario?scenario=X
  *   X one of: STREAK_SAVER | RECOVERY_NUDGE | RECOVERY_READY |
