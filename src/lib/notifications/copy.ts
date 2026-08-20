@@ -36,43 +36,43 @@ export const COPY: Record<
   },
   STREAK_SAVER: {
     REBUILD: {
-      title: "Don't lose the streak",
+      title: "🔥 Don't lose the streak",
       body: "10 minutes. That's all it takes to keep it going.",
     },
     OPERATOR: {
-      title: "Protect the streak",
+      title: "🔥 Protect the streak",
       body: "You built this. Close today out.",
     },
     EXECUTIVE: {
-      title: "Streak at risk",
+      title: "🔥 Streak at risk",
       body: "Discipline is the streak. Finish today.",
     },
   },
   RECOVERY_NUDGE: {
     REBUILD: {
-      title: "Recovery day",
+      title: "💤 Recovery day",
       body: "Take today's recovery session instead. Still counts.",
     },
     OPERATOR: {
-      title: "Recovery recommended",
+      title: "💤 Recovery recommended",
       body: "Load's high. Recovery session keeps you on track.",
     },
     EXECUTIVE: {
-      title: "Recovery",
+      title: "💤 Recovery",
       body: "Managing load is part of the job. Recovery session today.",
     },
   },
   RESCHEDULE_SUGGESTION: {
     REBUILD: {
-      title: "Move today's session",
+      title: "📅 Move today's session",
       body: "Missed Monday? Pick it up here instead.",
     },
     OPERATOR: {
-      title: "Schedule shift",
+      title: "📅 Schedule shift",
       body: "Monday's session moves to today. No penalty, just the next step.",
     },
     EXECUTIVE: {
-      title: "Reschedule",
+      title: "📅 Reschedule",
       body: "Adjust and execute. Today covers Monday.",
     },
   },
@@ -86,7 +86,7 @@ export function recoveryReadyCopy(
 ): CopyEntry {
   if (recoveryGood) {
     return {
-      title: "Recovery looks good",
+      title: "⚡ Recovery looks good",
       body:
         tier === "EXECUTIVE"
           ? "Numbers are clear. Push today."
@@ -96,7 +96,7 @@ export function recoveryReadyCopy(
     };
   }
   return {
-    title: "Recovery is low",
+    title: "💤 Recovery is low",
     body: "Take today's recovery session instead.",
   };
 }
@@ -105,19 +105,19 @@ export function milestoneCopy(milestoneKey: string): CopyEntry {
   // Milestones stay tier-neutral — the achievement is the message.
   const map: Record<string, CopyEntry> = {
     "10_WORKOUTS": {
-      title: "10 workouts down",
+      title: "🏆 10 workouts down",
       body: "You're building consistency.",
     },
     FIRST_WEEK: {
-      title: "First full week complete",
+      title: "🏆 First full week complete",
       body: "That's the hardest week done.",
     },
     "30_DAY_STREAK": {
-      title: "30 day streak",
+      title: "🏆 30 day streak",
       body: "This is who you are now.",
     },
   };
   return (
-    map[milestoneKey] ?? { title: "Milestone reached", body: "Keep going." }
+    map[milestoneKey] ?? { title: "🏆 Milestone reached", body: "Keep going." }
   );
 }

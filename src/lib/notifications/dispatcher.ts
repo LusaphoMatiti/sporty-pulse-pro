@@ -1,18 +1,7 @@
-/**
- *
- * Runs every ~10-15 min (see
- * app/api/cron/notifications/dispatch/route.ts). Finds due
- * ScheduledNotification rows and RE-VALIDATES before sending — a lot
- * can change between planning (once a day) and the scheduled time,
- * most importantly: they might have already trained.
- *
- * Actual push delivery (sendExpoPush) is stubbed — wire this up with
- * expo-server-sdk when we get to the mobile side.
- */
-
 import { prisma } from "@/lib/prisma";
 import { getTodaysSessionStatus } from "./dataAdapter";
 import { sendExpoPush } from "./sendPush";
+import { NOTIFICATION_STYLE } from "./style";
 
 export async function dispatchDueNotifications(now: Date = new Date()) {
   const due = await prisma.scheduledNotification.findMany({
@@ -48,9 +37,18 @@ export async function dispatchDueNotifications(now: Date = new Date()) {
       continue;
     }
 
-    await sendExpoPush(prefs.pushToken, notif.title, notif.body, {
-      type: notif.type,
-    });
+    const style = NOTIFICATION_STYLE[notif.type];
+    await sendExpoPush(
+      prefs.pushToken,
+      notif.title,
+      notif.body,
+      { type: notif.type },
+      {
+        channelId: style.channelId,
+        subtitle: style.iosSubtitle,
+        threadId: style.iosThreadId,
+      },
+    );
 
     await prisma.$transaction([
       prisma.scheduledNotification.update({

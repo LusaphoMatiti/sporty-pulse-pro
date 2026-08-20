@@ -9,6 +9,10 @@ import {
 import { dispatchDueNotifications } from "@/lib/notifications/dispatcher";
 import { checkAndFireMilestone } from "@/lib/notifications/milestones";
 
+// NOTE: dispatcher.ts already applies NOTIFICATION_STYLE internally when it
+// sends, so this route doesn't need to touch styling itself -- running the
+// real dispatcher is exactly what makes this test reflect production look.
+
 const MILESTONE_SCENARIOS = {
   MILESTONE_10_WORKOUTS: "10_WORKOUTS",
   MILESTONE_FIRST_WEEK: "FIRST_WEEK",
@@ -76,7 +80,7 @@ export async function GET(req: Request) {
     await checkAndFireMilestone(userId, key, true);
     return NextResponse.json({
       scenario,
-      note: "Milestone fired via the real checkAndFireMilestone path. Check your phone.",
+      note: "Milestone fired via the real checkAndFireMilestone path (styled via NOTIFICATION_STYLE.MILESTONE). Check your phone.",
     });
   }
 
