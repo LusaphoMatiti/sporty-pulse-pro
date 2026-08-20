@@ -1,24 +1,3 @@
-/**
- * src/app/api/notifications/test-scenario/route.ts
- *
- * DEV/QA ONLY. Exercises the REAL decision + delivery pipeline:
- * evaluatePriorityStack (pure logic) -> writes a real
- * ScheduledNotification row -> dispatchDueNotifications (real,
- * re-validates against your actual DB state, sends via sendExpoPush).
- *
- * UserSnapshots are hand-crafted per scenario rather than faked via
- * WorkoutLog/RecoveryLog history, so this never touches your real
- * streak/recovery data. The dispatcher's "already completed today?"
- * re-check IS real -- if you've trained today, expect SUPPRESSED
- * results, which is correct behavior, not () a bug.
- *
- * GET /api/notifications/test-scenario?scenario=X
- *   X one of: STREAK_SAVER | RECOVERY_NUDGE | RECOVERY_READY |
- *             RESCHEDULE_SUGGESTION | DAILY_HABIT |
- *             MILESTONE_10_WORKOUTS | MILESTONE_FIRST_WEEK |
- *             MILESTONE_30_DAY_STREAK
- */
-
 import { NextResponse } from "next/server";
 import { getMobileOrWebSession } from "@/lib/mobile-auth";
 import { prisma } from "@/lib/prisma";
@@ -36,7 +15,6 @@ const MILESTONE_SCENARIOS = {
   MILESTONE_30_DAY_STREAK: "30_DAY_STREAK",
 } as const;
 
-// Robust local-time construction for arbitrary IANA zones (no hardcoded offsets).
 function utcOffsetMinutes(timeZone: string, date: Date): number {
   const parts = new Intl.DateTimeFormat("en-US", {
     timeZone,
@@ -92,7 +70,6 @@ export async function GET(req: Request) {
     );
   }
 
-  // ── Milestones: fully real path, no faking needed ──────────────────────
   if (scenario in MILESTONE_SCENARIOS) {
     const key =
       MILESTONE_SCENARIOS[scenario as keyof typeof MILESTONE_SCENARIOS];
@@ -130,7 +107,7 @@ export async function GET(req: Request) {
     tier,
     timezone,
     bedtimeLocal: prefs.bedtimeLocal,
-    avgSessionStartMinutes: null, // null avoids the "already in app near usual time" early-return
+    avgSessionStartMinutes: null,
     lastAppOpenAt: null,
     hasScheduledSession: true,
     sessionCompleted: false,
@@ -148,7 +125,7 @@ export async function GET(req: Request) {
         yesterdayMissed: false,
         recoveryStatus: "UNKNOWN",
         recoveryUpdatedToday: false,
-        now: atLocalMinutes(timezone, sendAtMinutes), // exactly at the trigger threshold
+        now: atLocalMinutes(timezone, sendAtMinutes),
       };
       break;
     }
@@ -207,8 +184,7 @@ export async function GET(req: Request) {
   if (!candidate) {
     return NextResponse.json(
       {
-        error:
-          "evaluatePriorityStack returned null for this snapshot — check priorityStack.ts logic",
+        error: "evaluatePriorityStack returned null for this snapshot",
         snapshot,
       },
       { status: 500 },
@@ -227,7 +203,6 @@ export async function GET(req: Request) {
     },
   });
 
-  // Run the real dispatcher, "now" set just past scheduledFor so it's due.
   const dispatchResult = await dispatchDueNotifications(
     new Date(candidate.scheduledFor.getTime() + 1000),
   );
