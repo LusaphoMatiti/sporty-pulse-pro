@@ -95,16 +95,22 @@ export const authOptions: NextAuthOptions = {
           },
         });
 
-        const dbUser = await prisma.user.upsert({
-          where: { email: user.email! },
-          update: { name: user.name, lastLoginAt: new Date() },
-          create: {
-            email: user.email!,
-            name: user.name,
-            role: Role.ATHLETE,
-            isNewUser: true,
-            onboardingComplete: false,
-          },
+        if (!existing) {
+          // No account registered with this email — do NOT auto-create one.
+          // We still return true so the OAuth handshake completes cleanly
+          // and the app gets redirected through mobile-callback (rather than
+          // NextAuth's generic error page, which can't deep-link back into
+          // the app). We deliberately leave `user.id` as the raw Google
+          // profile id instead of a real Prisma id, so mobile-callback's
+          // existing `if (!user) return htmlRedirect(...error=no_user...)`
+          // check — and the web root route's equivalent `!user` check —
+          // correctly treat this as "no account" instead of creating one.
+          return true;
+        }
+
+        const dbUser = await prisma.user.update({
+          where: { id: existing.id },
+          data: { name: user.name, lastLoginAt: new Date() },
           select: {
             id: true,
             role: true,
@@ -128,10 +134,8 @@ export const authOptions: NextAuthOptions = {
         const ext = user as ExtendedUser;
         ext.id = dbUser.id;
         ext.role = dbUser.role;
-        ext.isNewUser = !existing;
-        ext.onboardingComplete = existing
-          ? (existing.onboardingComplete ?? false)
-          : false;
+        ext.isNewUser = false;
+        ext.onboardingComplete = existing.onboardingComplete ?? false;
       }
       return true;
     },
