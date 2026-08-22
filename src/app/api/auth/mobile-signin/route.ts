@@ -5,6 +5,7 @@ import { SignJWT } from "jose";
 import {
   apiSuccess,
   unauthorized,
+  accountNotFound,
   validationError,
   internalError,
 } from "@/lib/api-response";
@@ -32,7 +33,11 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    if (!user || !user.password) {
+    if (!user) {
+      return accountNotFound("No account found with this email");
+    }
+
+    if (!user.password) {
       return unauthorized("Invalid credentials");
     }
 
@@ -56,7 +61,6 @@ export async function POST(req: NextRequest) {
       .setExpirationTime("30d")
       .sign(secret);
 
-    // Awaited — fire-and-forget was a silent bug
     await prisma.user.update({
       where: { id: user.id },
       data: { lastLoginAt: new Date() },
