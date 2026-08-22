@@ -25,6 +25,7 @@ export type ErrorCode =
   | "UNAUTHORIZED" // 401 — missing or invalid session/token
   | "FORBIDDEN" // 403 — authenticated but not allowed
   | "NOT_FOUND" // 404 — resource doesn't exist
+  | "ACCOUNT_NOT_FOUND" // 404 — no user registered with this email
   | "VALIDATION_ERROR" // 400 — bad input
   | "CONFLICT" // 409 — state conflict (e.g. plan already active)
   | "INTERNAL_ERROR"; // 500 — unexpected server error
@@ -59,6 +60,9 @@ export const forbidden = (message = "You do not have permission to do this") =>
 
 export const notFound = (resource = "Resource") =>
   apiError(404, "NOT_FOUND", `${resource} not found`);
+
+export const accountNotFound = (message = "No account found with this email") =>
+  apiError(404, "ACCOUNT_NOT_FOUND", message);
 
 export const validationError = (message: string) =>
   apiError(400, "VALIDATION_ERROR", message);
