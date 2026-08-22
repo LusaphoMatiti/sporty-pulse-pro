@@ -144,7 +144,7 @@ export async function GET(req: NextRequest) {
       });
     }
 
-    const [plannedSession, totalSessions] = await Promise.all([
+    const [plannedSession, totalSessions, allSessionsRaw] = await Promise.all([
       prisma.plannedSession.findUnique({
         where: {
           planId_sessionNumber: {
@@ -178,6 +178,25 @@ export async function GET(req: NextRequest) {
         },
       }),
       prisma.plannedSession.count({ where: { planId: instance.planId } }),
+      // Full session list for the active plan — used by TrainingScreen's
+      // "Program Structure" list. Distinct from `plannedSession` above,
+      // which is only the user's CURRENT session (for the actual workout
+      // view). This gives every session its own real focus/duration
+      // instead of the client fabricating one card per exercise.
+      prisma.plannedSession.findMany({
+        where: { planId: instance.planId },
+        orderBy: { sessionNumber: "asc" },
+        select: {
+          sessionNumber: true,
+          focus: true,
+          estimatedMinutes: true,
+          plannedExercises: {
+            orderBy: { order: "asc" },
+            take: 1,
+            select: { exercise: { select: { thumbnailUrl: true } } },
+          },
+        },
+      }),
     ]);
 
     if (!plannedSession) return notFound("Planned session");
@@ -249,6 +268,16 @@ export async function GET(req: NextRequest) {
         "hero",
       );
 
+    const allSessions = allSessionsRaw.map((s) => ({
+      sessionNumber: s.sessionNumber,
+      focus: s.focus,
+      estimatedMinutes: s.estimatedMinutes,
+      thumbnailUrl: buildCloudinaryUrl(
+        s.plannedExercises[0]?.exercise.thumbnailUrl ?? null,
+        "thumb",
+      ),
+    }));
+
     return apiSuccess({
       instanceId: instance.id,
       planId: instance.planId,
@@ -275,6 +304,7 @@ export async function GET(req: NextRequest) {
           : null,
       })),
       activeEquipmentIds,
+      allSessions,
     });
   } catch (err) {
     console.error("[training/GET] error:", err);
