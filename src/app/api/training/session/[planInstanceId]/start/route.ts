@@ -51,22 +51,31 @@ export async function GET(
     );
   }
 
-  // 3. Load the planned session
+  // 3. Load the planned session, and the plan's real session count alongside
+  // it. totalSessions used to be durationWeeks * sessionsPerWeek — a formula
+  // that assumes every week has exactly sessionsPerWeek sessions. That
+  // doesn't always hold (e.g. Gym plans with dedicated recovery days), so it
+  // could drift from the plan's actual PlannedSession rows and disagree with
+  // /api/training, which already counts rows directly. Counting here too
+  // keeps both endpoints — and Home and Gym plans alike — in agreement.
 
-  const plannedSession = await prisma.plannedSession.findUnique({
-    where: {
-      planId_sessionNumber: {
-        planId: instance.planId,
-        sessionNumber,
+  const [plannedSession, totalSessions] = await Promise.all([
+    prisma.plannedSession.findUnique({
+      where: {
+        planId_sessionNumber: {
+          planId: instance.planId,
+          sessionNumber,
+        },
       },
-    },
-    include: {
-      plannedExercises: {
-        orderBy: { order: "asc" },
-        include: { exercise: true },
+      include: {
+        plannedExercises: {
+          orderBy: { order: "asc" },
+          include: { exercise: true },
+        },
       },
-    },
-  });
+    }),
+    prisma.plannedSession.count({ where: { planId: instance.planId } }),
+  ]);
 
   if (!plannedSession) {
     return NextResponse.json(
@@ -109,8 +118,7 @@ export async function GET(
           instance.currentSession === sessionNumber
             ? ((instance.sessionDraft as object) ?? null)
             : null,
-        totalSessions:
-          instance.plan.durationWeeks * instance.plan.sessionsPerWeek,
+        totalSessions,
       },
     },
     { headers: { "Cache-Control": "no-store" } },

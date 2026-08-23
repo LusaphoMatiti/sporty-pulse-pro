@@ -67,15 +67,36 @@ export async function POST(
       );
     }
 
-    const user = await prisma.user.findUnique({
-      where: { id: userId },
-      select: { identity: true, primaryGoal: true, trainingLocation: true },
-    });
+    // Guard against completing a session that no longer matches the plan's
+    // actual current session (e.g. a stale draft/deep link from before the
+    // plan advanced, or the plan being completed elsewhere in the meantime).
+    // Without this, the block below always advances instance.currentSession
+    // from the SERVER's state regardless of what the client just completed,
+    // while logging the WorkoutLog rows under the CLIENT's reported session
+    // number — letting the two silently drift apart. Applies the same way
+    // to every plan; nothing here depends on Home vs Gym.
+    if (body.sessionNumber !== instance.currentSession) {
+      return validationError(
+        "This session is no longer the plan's current session — it may have already been completed, or the plan has since moved on.",
+      );
+    }
+
+    const [user, totalSessions] = await Promise.all([
+      prisma.user.findUnique({
+        where: { id: userId },
+        select: { identity: true, primaryGoal: true, trainingLocation: true },
+      }),
+      // Actual PlannedSession row count, not sessionsPerWeek * durationWeeks.
+      // That formula assumes every week has exactly sessionsPerWeek sessions,
+      // which doesn't always hold (e.g. Gym plans with dedicated recovery
+      // days). Matches how /api/training and the session start route both
+      // already compute totalSessions, so "current session N of totalSessions"
+      // and isLastSession agree everywhere instead of drifting apart.
+      prisma.plannedSession.count({ where: { planId: instance.planId } }),
+    ]);
 
     if (!user) return notFound("User");
 
-    const totalSessions =
-      instance.plan.sessionsPerWeek * instance.plan.durationWeeks;
     const isLastSession = instance.currentSession >= totalSessions;
 
     let progressionType = instance.progressionType;
