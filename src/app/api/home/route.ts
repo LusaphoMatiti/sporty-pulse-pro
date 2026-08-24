@@ -196,8 +196,14 @@ export async function GET(req: Request) {
 
   if (activeInstance) {
     planName = activeInstance.plan.name;
-    planTotalSessions =
-      activeInstance.plan.durationWeeks * activeInstance.plan.sessionsPerWeek;
+    // Actual PlannedSession row count, not durationWeeks * sessionsPerWeek —
+    // that formula assumes every week has exactly sessionsPerWeek sessions,
+    // which doesn't always hold (e.g. Gym plans with dedicated recovery
+    // days). Same fix already applied to the session start/complete routes
+    // and /api/progress, so this now agrees with those instead of drifting.
+    planTotalSessions = await prisma.plannedSession.count({
+      where: { planId: activeInstance.planId },
+    });
     const completedSessionsInPlan = Array.from(uniqueSessions.keys()).filter(
       (key) => key.startsWith(activeInstance.id),
     ).length;
