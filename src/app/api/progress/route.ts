@@ -31,6 +31,35 @@ type WeeklyVolumeData = {
   days: WeeklyVolumeDay[];
 };
 
+// bodySplit and volumeByMuscle used to bucket every session by the PLAN's
+// single overall muscleGroup field. That's accurate for a genuinely
+// single-focus plan, but a plan whose sessions vary day to day (e.g. a Gym
+// plan alternating Legs/Push/Pull under one WorkoutPlan record) would have
+// every session dumped into the same one bucket, losing the real spread.
+// Classify from the SESSION's own focus string first — which already
+// varies correctly per session — and only fall back to the plan's
+// muscleGroup when the focus text doesn't clearly indicate a body part.
+function classifyFocus(
+  focus: string,
+  planMuscleGroup: MuscleGroup,
+): MuscleGroup {
+  const f = focus.toLowerCase();
+  if (
+    /\b(legs?|lower|glute|glutes|quad|quads|hamstrings?|calves|calf)\b/.test(f)
+  )
+    return "LOWER" as MuscleGroup;
+  if (
+    /\b(upper|push|pull|chest|back|shoulders?|delts?|arms?|bicep|biceps|tricep|triceps)\b/.test(
+      f,
+    )
+  )
+    return "UPPER" as MuscleGroup;
+  if (/\b(core|abs?|abdominals?)\b/.test(f)) return "CORE" as MuscleGroup;
+  if (/\b(full[\s-]?body|total[\s-]?body)\b/.test(f))
+    return "FULLBODY" as MuscleGroup;
+  return planMuscleGroup;
+}
+
 export async function GET(req: Request) {
   const session = await getMobileOrWebSession(req);
   if (!session)
@@ -113,10 +142,12 @@ export async function GET(req: Request) {
   for (const log of allLogs) {
     const key = `${log.instanceId}-${log.sessionNumber}`;
     if (!uniqueSessions.has(key)) {
+      const planMuscleGroup =
+        log.plannedExercise?.session?.plan?.muscleGroup ?? "FULLBODY";
+      const focus = log.plannedExercise?.session?.focus ?? "";
       uniqueSessions.set(key, {
         completedAt: log.completedAt,
-        muscleGroup:
-          log.plannedExercise?.session?.plan?.muscleGroup ?? "FULLBODY",
+        muscleGroup: classifyFocus(focus, planMuscleGroup as MuscleGroup),
       });
     }
   }
@@ -282,6 +313,7 @@ export async function GET(req: Request) {
       where: { userId, status: "ACTIVE" },
       select: {
         id: true,
+        planId: true,
         startedAt: true,
         plan: {
           select: {
@@ -306,10 +338,16 @@ export async function GET(req: Request) {
           (now.getTime() - activeInstance.startedAt.getTime()) / msPerWeek,
         ),
       );
-      const plannedSoFar = Math.min(
-        activeInstance.plan.durationWeeks * spw,
-        weeksElapsed * spw,
-      );
+      // Actual PlannedSession row count for this plan, not
+      // durationWeeks * sessionsPerWeek — that formula assumes every week
+      // has exactly `sessionsPerWeek` sessions, which doesn't always hold
+      // (e.g. Gym plans with dedicated recovery days). Same fix already
+      // applied to the session start/complete routes, so this cap now
+      // agrees with those instead of drifting from them.
+      const totalPlanSessions = await prisma.plannedSession.count({
+        where: { planId: activeInstance.planId },
+      });
+      const plannedSoFar = Math.min(totalPlanSessions, weeksElapsed * spw);
       const completedInPlan = new Set(
         Array.from(uniqueSessions.keys()).filter((k) =>
           k.startsWith(activeInstance.id),
@@ -387,7 +425,9 @@ export async function GET(req: Request) {
     for (const log of allLogs) {
       if (!log.weightKg || !log.actualReps || !log.actualSets) continue;
       const vol = log.weightKg * log.actualReps * log.actualSets;
-      const mg = log.instance.plan.muscleGroup as string;
+      const planMuscleGroup = log.instance.plan.muscleGroup;
+      const focus = log.plannedExercise?.session?.focus ?? "";
+      const mg = classifyFocus(focus, planMuscleGroup) as string;
       if (!(mg in volumeMap)) continue;
       if (log.completedAt >= thisWeekStart) volumeMap[mg].thisWeek += vol;
       else if (
