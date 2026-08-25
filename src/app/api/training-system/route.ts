@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
     return Response.json(null, { status: 401, statusText: "Unauthorized" });
   }
 
-  // ASSUMPTION: these four are direct scalar fields on User, matching
+  // ASSUMPTION: these five are direct scalar fields on User, matching
   // OnboardingScreen's local Answers state. Not independently confirmed
   // against the actual schema -- flag if this doesn't match reality.
   const user = await prisma.user.findUnique({
@@ -17,6 +17,7 @@ export async function GET(req: NextRequest) {
     select: {
       primaryGoal: true,
       trainingLocation: true,
+      gymTrainingStyle: true,
       biologicalSex: true,
       experienceLevel: true,
     },
@@ -49,6 +50,7 @@ export async function POST(req: NextRequest) {
   const {
     primaryGoal,
     trainingLocation,
+    gymTrainingStyle,
     biologicalSex,
     experienceLevel,
     equipmentId,
@@ -58,7 +60,13 @@ export async function POST(req: NextRequest) {
     // Same assumption as the GET route -- direct scalar fields on User.
     await prisma.user.update({
       where: { id: session.user.id },
-      data: { primaryGoal, trainingLocation, biologicalSex, experienceLevel },
+      data: {
+        primaryGoal,
+        trainingLocation,
+        gymTrainingStyle,
+        biologicalSex,
+        experienceLevel,
+      },
     });
 
     if (equipmentId) {
