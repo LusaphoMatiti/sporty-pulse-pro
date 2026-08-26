@@ -157,7 +157,16 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    if (equipmentId) {
+    // ── Equipment ───────────────────────────────────────────────────────
+    // Gym is already fully equipped -- users don't declare home equipment
+    // for it. If they're on GYM, clear any previously-declared equipment
+    // (and its trial) instead of leaving a stale HOME selection sitting in
+    // the DB unused. Otherwise, same upsert-with-trial logic as before.
+    if (trainingLocation === "GYM") {
+      await prisma.userEquipment.deleteMany({
+        where: { userId, source: EquipmentSource.DECLARED },
+      });
+    } else if (equipmentId) {
       const existing = await prisma.userEquipment.findFirst({
         where: { userId, source: EquipmentSource.DECLARED },
       });
