@@ -1,106 +1,135 @@
+//
+// After Google OAuth completes, NextAuth redirects here.
+// Reads ?redirectUri from the query string (set by mobile-initiate),
+// mints a JWT, and fires it back to the app via the correct deep-link scheme.
+
 import type { NextRequest } from "next/server";
+import { getToken } from "next-auth/jwt";
+import { SignJWT } from "jose";
+import { prisma } from "@/lib/prisma";
+import { Role } from "@/generated/prisma";
 
 export async function GET(req: NextRequest) {
-  const baseUrl = process.env.NEXTAUTH_URL!;
-
+  // redirectUri is the deep-link scheme the Expo app passed through mobile-initiate.
+  // In dev:  exp+sporty-pulse-expo://expo-development-client/--/auth
+  // In prod: sporty-pulse-pro://auth
   const redirectUri =
     req.nextUrl.searchParams.get("redirectUri") ?? "sporty-pulse-pro://auth";
 
-  // Encode redirectUri into the callbackUrl so mobile-callback receives it
-  // after the OAuth round-trip completes.
-  const callbackUrl = `${baseUrl}/api/auth/mobile-callback?redirectUri=${encodeURIComponent(redirectUri)}`;
+  // Set by mobile-initiate only when RegisterScreen kicked off this flow.
+  // LoginScreen never sends this, so its requests are unaffected below.
+  const intent = req.nextUrl.searchParams.get("intent");
 
+  const nextAuthToken = await getToken({
+    req,
+    secret: process.env.NEXTAUTH_SECRET!,
+  });
+
+  if (!nextAuthToken?.sub) {
+    return htmlRedirect(`${redirectUri}?error=no_session`);
+  }
+
+  let user = await prisma.user.findUnique({
+    where: { id: nextAuthToken.sub },
+    select: {
+      id: true,
+      email: true,
+      name: true,
+      image: true,
+      role: true,
+      isNewUser: true,
+      onboardingComplete: true,
+    },
+  });
+
+  // auth.ts's signIn callback deliberately does NOT create a User row for a
+  // first-time Google sign-in — it leaves `sub` as the raw Google profile id
+  // so this lookup misses and we land here. For Login that's the desired
+  // "no account" rejection below. For Register, create the account now,
+  // mirroring /api/auth/register's plan for a password sign-up.
+  if (!user && intent === "register" && nextAuthToken.email) {
+    try {
+      user = await prisma.user.create({
+        data: {
+          name: (nextAuthToken.name as string | undefined) ?? null,
+          email: nextAuthToken.email as string,
+          image: (nextAuthToken.picture as string | undefined) ?? null,
+          role: Role.ATHLETE,
+          isNewUser: true,
+          onboardingComplete: false,
+          subscription: {
+            create: { plan: "FREE", status: "active" },
+          },
+        },
+        select: {
+          id: true,
+          email: true,
+          name: true,
+          image: true,
+          role: true,
+          isNewUser: true,
+          onboardingComplete: true,
+        },
+      });
+    } catch (err) {
+      console.error("[mobile-callback] Google sign-up create failed:", err);
+      return htmlRedirect(`${redirectUri}?error=no_user`);
+    }
+  }
+
+  if (!user) {
+    return htmlRedirect(`${redirectUri}?error=no_user`);
+  }
+
+  // Clear isNewUser once onboarding is done
+  if (user.isNewUser && user.onboardingComplete) {
+    await prisma.user.update({
+      where: { id: user.id },
+      data: { isNewUser: false },
+    });
+    user.isNewUser = false;
+  }
+
+  const secret = new TextEncoder().encode(process.env.NEXTAUTH_SECRET!);
+  const token = await new SignJWT({
+    id: user.id,
+    sub: user.id,
+    email: user.email,
+    name: user.name,
+    image: user.image,
+    role: user.role,
+    isNewUser: user.isNewUser,
+    onboardingComplete: user.onboardingComplete,
+  })
+    .setProtectedHeader({ alg: "HS256" })
+    .setIssuedAt()
+    .setExpirationTime("30d")
+    .sign(secret);
+
+  // Fire the deep link back to the app using whatever scheme it sent us
+  const deepLink = `${redirectUri}?token=${token}&isNew=${user.isNewUser}`;
+  return htmlRedirect(deepLink);
+}
+
+function htmlRedirect(deepLink: string) {
   const html = `<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Connecting to Google…</title>
-    <style>
-      :root {
-        color-scheme: dark;
-      }
-      html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        background: #0C0E10;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      }
-      .screen {
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 24px;
-        background: #0C0E10;
-      }
-      .logo {
-        width: 60px;
-        height: 60px;
-        border-radius: 14px;
-        object-fit: contain;
-      }
-      .spinner {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        border: 3px solid rgba(200, 241, 53, 0.15);
-        border-top-color: #C8F135;
-        animation: spin 0.8s linear infinite;
-      }
-      .label {
-        color: #9A9A90;
-        font-size: 14px;
-        letter-spacing: 0.2px;
-      }
-      .label strong {
-        color: #F0EDE4;
-        font-weight: 600;
-      }
-      @keyframes spin {
-        to { transform: rotate(360deg); }
-      }
-      noscript .label {
-        color: #FF4D4D;
-      }
-    </style>
+    <title>Redirecting…</title>
+    <script>window.location.replace(${JSON.stringify(deepLink)});</script>
   </head>
   <body>
-    <div class="screen">
-      <div class="spinner" role="status" aria-label="Connecting"></div>
-      <p class="label">Connecting to <strong>Google</strong>…</p>
-    </div>
-
-    <form id="f" method="POST" action="${baseUrl}/api/auth/signin/google" style="display:none;">
-      <input type="hidden" name="callbackUrl" value="${callbackUrl}" />
-      <input type="hidden" name="csrfToken" id="csrf" />
-    </form>
-
-    <noscript>
-      <div class="screen">
-        <p class="label">JavaScript is required to continue. Please try again.</p>
-      </div>
-    </noscript>
-
-    <script>
-      fetch('${baseUrl}/api/auth/csrf')
-        .then(r => r.json())
-        .then(data => {
-          document.getElementById('csrf').value = data.csrfToken;
-          document.getElementById('f').submit();
-        })
-        .catch(() => {
-          window.location.href = '${baseUrl}/login';
-        });
-    </script>
+    <p>Redirecting back to the app…</p>
+    <p>If nothing happens, <a href="${deepLink}">tap here</a>.</p>
   </body>
 </html>`;
 
   return new Response(html, {
     status: 200,
-    headers: { "Content-Type": "text/html" },
+    headers: {
+      "Content-Type": "text/html",
+      "Cache-Control": "no-store",
+    },
   });
 }

@@ -1,12 +1,8 @@
-//
-// After Google OAuth completes, NextAuth redirects here.
-// Reads ?redirectUri from the query string (set by mobile-initiate),
-// mints a JWT, and fires it back to the app via the correct deep-link scheme.
-
 import type { NextRequest } from "next/server";
 import { getToken } from "next-auth/jwt";
 import { SignJWT } from "jose";
 import { prisma } from "@/lib/prisma";
+import { Role } from "@/generated/prisma";
 
 export async function GET(req: NextRequest) {
   // redirectUri is the deep-link scheme the Expo app passed through mobile-initiate.
@@ -14,6 +10,10 @@ export async function GET(req: NextRequest) {
   // In prod: sporty-pulse-pro://auth
   const redirectUri =
     req.nextUrl.searchParams.get("redirectUri") ?? "sporty-pulse-pro://auth";
+
+  // Set by mobile-initiate only when RegisterScreen kicked off this flow.
+  // LoginScreen never sends this, so its requests are unaffected below.
+  const intent = req.nextUrl.searchParams.get("intent");
 
   const nextAuthToken = await getToken({
     req,
@@ -24,7 +24,7 @@ export async function GET(req: NextRequest) {
     return htmlRedirect(`${redirectUri}?error=no_session`);
   }
 
-  const user = await prisma.user.findUnique({
+  let user = await prisma.user.findUnique({
     where: { id: nextAuthToken.sub },
     select: {
       id: true,
@@ -36,6 +36,41 @@ export async function GET(req: NextRequest) {
       onboardingComplete: true,
     },
   });
+
+  // auth.ts's signIn callback deliberately does NOT create a User row for a
+  // first-time Google sign-in — it leaves `sub` as the raw Google profile id
+  // so this lookup misses and we land here. For Login that's the desired
+  // "no account" rejection below. For Register, create the account now,
+  // mirroring /api/auth/register's plan for a password sign-up.
+  if (!user && intent === "register" && nextAuthToken.email) {
+    try {
+      user = await prisma.user.create({
+        data: {
+          name: (nextAuthToken.name as string | undefined) ?? null,
+          email: nextAuthToken.email as string,
+          image: (nextAuthToken.picture as string | undefined) ?? null,
+          role: Role.ATHLETE,
+          isNewUser: true,
+          onboardingComplete: false,
+          subscription: {
+            create: { plan: "FREE", status: "active" },
+          },
+        },
+        select: {
+          id: true,
+          email: true,
+          name: true,
+          image: true,
+          role: true,
+          isNewUser: true,
+          onboardingComplete: true,
+        },
+      });
+    } catch (err) {
+      console.error("[mobile-callback] Google sign-up create failed:", err);
+      return htmlRedirect(`${redirectUri}?error=no_user`);
+    }
+  }
 
   if (!user) {
     return htmlRedirect(`${redirectUri}?error=no_user`);
