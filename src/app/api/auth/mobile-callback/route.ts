@@ -2,7 +2,7 @@ import type { NextRequest } from "next/server";
 import { getToken } from "next-auth/jwt";
 import { SignJWT } from "jose";
 import { prisma } from "@/lib/prisma";
-import { Role } from "@/generated/prisma";
+import { Role, Prisma } from "@/generated/prisma";
 
 const USER_SELECT = {
   id: true,
@@ -60,7 +60,7 @@ export async function GET(req: NextRequest) {
         },
         select: USER_SELECT,
       });
-    } catch (err: any) {
+    } catch (err: unknown) {
       // This route is a GET handler that performs a write, and GET requests
       // to an OAuth callback URL routinely get hit more than once for the
       // same sign-up (Custom Tabs / SFSafariViewController prefetch, the
@@ -73,7 +73,11 @@ export async function GET(req: NextRequest) {
       // unique email constraint (Prisma error code P2002). That's not a
       // real failure — the account was already created a moment ago by the
       // first hit — so recover by fetching it instead of hard-failing.
-      if (err?.code === "P2002") {
+      const isDuplicateEmail =
+        err instanceof Prisma.PrismaClientKnownRequestError &&
+        err.code === "P2002";
+
+      if (isDuplicateEmail) {
         user = await prisma.user.findUnique({
           where: { email: nextAuthToken.email as string },
           select: USER_SELECT,
