@@ -28,6 +28,13 @@ export const authOptions: NextAuthOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      // Without this, Google skips the account chooser entirely whenever
+      // the browser session already has an active Google login, and
+      // silently signs in with that account. This applies to both Login
+      // and Register — showing the picker is desirable for both.
+      authorization: {
+        params: { prompt: "select_account" },
+      },
     }),
 
     CredentialsProvider({
