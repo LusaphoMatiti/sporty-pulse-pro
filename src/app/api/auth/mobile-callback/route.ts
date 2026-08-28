@@ -4,6 +4,16 @@ import { SignJWT } from "jose";
 import { prisma } from "@/lib/prisma";
 import { Role } from "@/generated/prisma";
 
+const USER_SELECT = {
+  id: true,
+  email: true,
+  name: true,
+  image: true,
+  role: true,
+  isNewUser: true,
+  onboardingComplete: true,
+} as const;
+
 export async function GET(req: NextRequest) {
   // redirectUri is the deep-link scheme the Expo app passed through mobile-initiate.
   // In dev:  exp+sporty-pulse-expo://expo-development-client/--/auth
@@ -26,15 +36,7 @@ export async function GET(req: NextRequest) {
 
   let user = await prisma.user.findUnique({
     where: { id: nextAuthToken.sub },
-    select: {
-      id: true,
-      email: true,
-      name: true,
-      image: true,
-      role: true,
-      isNewUser: true,
-      onboardingComplete: true,
-    },
+    select: USER_SELECT,
   });
 
   // auth.ts's signIn callback deliberately does NOT create a User row for a
@@ -56,19 +58,32 @@ export async function GET(req: NextRequest) {
             create: { plan: "FREE", status: "active" },
           },
         },
-        select: {
-          id: true,
-          email: true,
-          name: true,
-          image: true,
-          role: true,
-          isNewUser: true,
-          onboardingComplete: true,
-        },
+        select: USER_SELECT,
       });
-    } catch (err) {
-      console.error("[mobile-callback] Google sign-up create failed:", err);
-      return htmlRedirect(`${redirectUri}?error=no_user`);
+    } catch (err: any) {
+      // This route is a GET handler that performs a write, and GET requests
+      // to an OAuth callback URL routinely get hit more than once for the
+      // same sign-up (Custom Tabs / SFSafariViewController prefetch, the
+      // app's deep-link listener racing the WebView redirect, a dropped
+      // connection triggering a client retry, etc).
+      //
+      // Because `nextAuthToken.sub` is the raw Google profile id (never the
+      // row's DB id — see comment above), a second hit for the *same*
+      // registration will land in this branch again and collide on the
+      // unique email constraint (Prisma error code P2002). That's not a
+      // real failure — the account was already created a moment ago by the
+      // first hit — so recover by fetching it instead of hard-failing.
+      if (err?.code === "P2002") {
+        user = await prisma.user.findUnique({
+          where: { email: nextAuthToken.email as string },
+          select: USER_SELECT,
+        });
+      }
+
+      if (!user) {
+        console.error("[mobile-callback] Google sign-up create failed:", err);
+        return htmlRedirect(`${redirectUri}?error=no_user`);
+      }
     }
   }
 
