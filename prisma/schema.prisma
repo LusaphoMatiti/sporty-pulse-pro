@@ -190,10 +190,31 @@ model PlannedSession {
   planId           String
   plannedExercises PlannedExercise[]
   plan             WorkoutPlan       @relation(fields: [planId], references: [id], onDelete: Cascade)
+  dayOverrides     PlanInstanceDayOverride[]
 
   @@unique([planId, sessionNumber])
   @@index([planId])
   @@map("planned_sessions")
+}
+
+// A user's personal reordering of their weekly schedule (e.g. moving Legs
+// from Monday to Thursday). Scoped to one PlanInstance — never modifies
+// PlannedSession.dayOfWeek itself, since that field is shared across every
+// user with an active instance of the same WorkoutPlan template. Absence
+// of a row here means "use the template's default day" for that session.
+model PlanInstanceDayOverride {
+  id               String         @id @default(cuid())
+  instanceId       String
+  plannedSessionId String
+  dayOfWeek        Int // 0=Monday..6=Sunday — this user's chosen day, this run of the plan
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  instance         PlanInstance   @relation(fields: [instanceId], references: [id], onDelete: Cascade)
+  plannedSession   PlannedSession @relation(fields: [plannedSessionId], references: [id], onDelete: Cascade)
+
+  @@unique([instanceId, plannedSessionId])
+  @@index([instanceId])
+  @@map("plan_instance_day_overrides")
 }
 
 model PlannedExercise {
@@ -251,6 +272,7 @@ model PlanInstance {
   plan               WorkoutPlan      @relation(fields: [planId], references: [id])
   user               User             @relation(fields: [userId], references: [id], onDelete: Cascade)
   workoutLogs        WorkoutLog[]
+  dayOverrides       PlanInstanceDayOverride[]
   
 
   @@index([userId, status])

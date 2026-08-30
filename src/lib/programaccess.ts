@@ -20,6 +20,7 @@ export type ScheduleDay = {
   sessionNumber: number | null;
   focus: string | null;
   isRestDay: boolean;
+  plannedSessionId: string | null;
 };
 
 export type ScheduleExercise = {
@@ -46,6 +47,7 @@ type SchedulePlannedExercise = {
 };
 
 type SchedulePlannedSession = {
+  id: string;
   sessionNumber: number;
   dayOfWeek: number | null;
   focus: string;
@@ -70,9 +72,18 @@ type SchedulePlannedSession = {
  * Plans are level-specific now (WorkoutPlan.difficulty pins one level),
  * so there's no `level` param anymore — a session's plannedExercises
  * already carry the right repsScheme for whichever plan matched the user.
+ *
+ * `dayOverrides` is optional and additive: a per-instance map of
+ * plannedSessionId -> dayOfWeek, letting one user's own reordering of
+ * their week (see PlanInstanceDayOverride) take priority over the
+ * template's default placement, without ever touching the template
+ * itself — every other user on the same plan is unaffected. Only
+ * applies on the explicit-days path; the legacy sequential-fill
+ * fallback has no per-session days to override in the first place.
  */
 export function buildWeeklySchedule(
   plannedSessions: SchedulePlannedSession[],
+  dayOverrides?: Map<string, number>,
 ): ScheduleDay[] {
   const usesExplicitDays = plannedSessions.every(
     (s) => s.dayOfWeek !== null && s.dayOfWeek !== undefined,
@@ -81,7 +92,10 @@ export function buildWeeklySchedule(
   const byDay = new Map<number, SchedulePlannedSession>();
   if (usesExplicitDays) {
     for (const s of plannedSessions) {
-      byDay.set(s.dayOfWeek as number, s);
+      const overriddenDay = dayOverrides?.get(s.id);
+      const day =
+        overriddenDay !== undefined ? overriddenDay : (s.dayOfWeek as number);
+      byDay.set(day, s);
     }
   } else {
     const sorted = [...plannedSessions].sort(
@@ -101,6 +115,7 @@ export function buildWeeklySchedule(
         estimatedMinutes: null,
         exercises: [],
         isRestDay: true,
+        plannedSessionId: null,
       };
     }
     const exercises = [...session.plannedExercises]
@@ -118,6 +133,7 @@ export function buildWeeklySchedule(
       estimatedMinutes: session.estimatedMinutes,
       exercises,
       isRestDay: false,
+      plannedSessionId: session.id,
     };
   });
 }

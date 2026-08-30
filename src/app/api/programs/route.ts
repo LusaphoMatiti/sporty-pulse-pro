@@ -32,7 +32,7 @@ export async function GET(req: Request) {
       // findFirst is correct here, not findMany.
       prisma.planInstance.findFirst({
         where: { userId, status: InstanceStatus.ACTIVE },
-        select: { planId: true, level: true },
+        select: { id: true, planId: true, level: true },
       }),
       getUserAccess({ userId }),
     ]);
@@ -112,25 +112,39 @@ export async function GET(req: Request) {
       activeInstance?.planId &&
       !weeklyScheduleLocked
     ) {
-      const activePlanSessions = await prisma.plannedSession.findMany({
-        where: { planId: activeInstance.planId },
-        select: {
-          sessionNumber: true,
-          dayOfWeek: true,
-          focus: true,
-          estimatedMinutes: true,
-          plannedExercises: {
-            orderBy: { order: "asc" },
-            select: {
-              id: true,
-              order: true,
-              exercise: { select: { name: true } },
-              repsScheme: true,
+      const [activePlanSessions, overrideRows] = await Promise.all([
+        prisma.plannedSession.findMany({
+          where: { planId: activeInstance.planId },
+          select: {
+            id: true,
+            sessionNumber: true,
+            dayOfWeek: true,
+            focus: true,
+            estimatedMinutes: true,
+            plannedExercises: {
+              orderBy: { order: "asc" },
+              select: {
+                id: true,
+                order: true,
+                exercise: { select: { name: true } },
+                repsScheme: true,
+              },
             },
           },
-        },
-      });
-      weeklySchedule = buildWeeklySchedule(activePlanSessions);
+        }),
+        // Per-user reordering of this specific plan run — see
+        // PlanInstanceDayOverride. Only meaningful once we have an
+        // instance id, which we do inside this branch.
+        prisma.planInstanceDayOverride.findMany({
+          where: { instanceId: activeInstance.id },
+          select: { plannedSessionId: true, dayOfWeek: true },
+        }),
+      ]);
+
+      const dayOverrides = new Map(
+        overrideRows.map((o) => [o.plannedSessionId, o.dayOfWeek]),
+      );
+      weeklySchedule = buildWeeklySchedule(activePlanSessions, dayOverrides);
     }
 
     const plansWithCount = plans.map((p) => {
@@ -173,6 +187,10 @@ export async function GET(req: Request) {
         activeEquipmentIds: accessibleEquipmentIds,
         expiredEquipmentIds,
         activePlanId: activeInstance?.planId ?? null,
+        // Needed by the client to call /api/programs/schedule/reorder —
+        // activePlanId above is the catalog plan id, not this specific
+        // user's run of it, and overrides are scoped to the instance.
+        activeInstanceId: activeInstance?.id ?? null,
       },
       declaredEquipmentName,
       userIdentity: user?.identity ?? null,
