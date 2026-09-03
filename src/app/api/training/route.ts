@@ -73,6 +73,14 @@ export async function GET(req: NextRequest) {
 
     const userId = session.user.id;
 
+    // Optional ?sessionNumber= param — lets callers (e.g. GymProgramsScreen's
+    // per-day "Start Session" tap) request a specific day's session detail
+    // instead of always getting the active instance's currentSession. Falls
+    // back to currentSession when absent/invalid, so existing callers that
+    // don't pass it are unaffected.
+    const { searchParams } = new URL(req.url);
+    const requestedSessionParam = searchParams.get("sessionNumber");
+
     const [instance, subscription, userEquipmentRecords, allPrograms] =
       await Promise.all([
         prisma.planInstance.findFirst({
@@ -144,12 +152,26 @@ export async function GET(req: NextRequest) {
       });
     }
 
+    // Which session's detail to actually load. Defaults to the instance's
+    // real progress marker (currentSession) when no sessionNumber is passed
+    // or it's invalid — previously this endpoint ignored sessionNumber
+    // entirely and always returned currentSession's exercises, so tapping
+    // "Start Session" on a non-current day still showed the current day's
+    // workout in the weight-entry sheet.
+    const parsedRequestedSession = requestedSessionParam
+      ? Number(requestedSessionParam)
+      : NaN;
+    const viewSessionNumber =
+      Number.isInteger(parsedRequestedSession) && parsedRequestedSession > 0
+        ? parsedRequestedSession
+        : instance.currentSession;
+
     const [plannedSession, totalSessions, allSessionsRaw] = await Promise.all([
       prisma.plannedSession.findUnique({
         where: {
           planId_sessionNumber: {
             planId: instance.planId,
-            sessionNumber: instance.currentSession,
+            sessionNumber: viewSessionNumber,
           },
         },
         select: {
