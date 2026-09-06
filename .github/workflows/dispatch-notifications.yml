@@ -1,15 +1,26 @@
-# .github/workflows/dispatch-notifications.yml
-name: Dispatch Notifications
+name: Dispatch scheduled notifications
+
+# Vercel Hobby caps every cron entry (native to vercel.json) at once
+# per day, so it can't run the dispatcher's 10-15 min polling loop.
+# That cap only applies to Vercel's own scheduler though -- the route
+# itself is a normal authenticated HTTP endpoint, so this workflow
+# hits it from GitHub Actions instead.
+#
+
 on:
   schedule:
-    - cron: "*/15 * * * *"
-  workflow_dispatch: {} # lets you trigger it manually from the Actions tab too
+    - cron: "*/10 * * * *"
+  workflow_dispatch: {} # lets you trigger a run manually from the Actions tab
+
+env:
+  DISPATCH_URL: https://YOUR_DOMAIN_HERE/api/cron/notifications/dispatch
 
 jobs:
   dispatch:
     runs-on: ubuntu-latest
     steps:
-      - name: Hit dispatch endpoint
+      - name: Call dispatch endpoint
         run: |
-          curl -f -X POST curl -f curl -f https://sporty-pulse-pro.vercel.app/api/cron/notifications/dispatch \
-  -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}"
+          curl --fail --silent --show-error \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            "$DISPATCH_URL"
