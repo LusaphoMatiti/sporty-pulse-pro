@@ -124,6 +124,7 @@ export async function GET(req: NextRequest) {
             sessionsPerWeek: true,
             difficulty: true,
             templateType: true,
+            collection: true,
             plannedSessions: {
               orderBy: { sessionNumber: "asc" },
               take: 1,
