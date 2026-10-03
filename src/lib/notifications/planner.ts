@@ -1,16 +1,3 @@
-/**
- * lib/notifications/planner.ts
- *
- * Runs once per day per user (see
- * app/api/cron/notifications/plan/route.ts). Builds a snapshot from
- * real data, runs it through the priority stack, and writes AT MOST
- * ONE ScheduledNotification row for today.
- *
- * Frequency-capping lives here: if a row already exists for this
- * user for today, the planner skips them — no exceptions, no
- * second pass later in the day.
- */
-
 import { prisma } from "@/lib/prisma";
 import { evaluatePriorityStack, UserSnapshot } from "./priorityStack";
 import {
