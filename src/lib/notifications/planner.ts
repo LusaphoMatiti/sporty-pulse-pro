@@ -89,6 +89,17 @@ export async function planForAllActiveUsers(now: Date = new Date()) {
     users.map((u) => planForUser(u.userId, now)),
   );
 
+  // allSettled swallows rejection reasons — without this the cron response
+  // only says "failed: N" and the cause never reaches the Vercel logs.
+  results.forEach((r, i) => {
+    if (r.status === "rejected") {
+      console.error(
+        `[planner] planForUser failed for ${users[i].userId}:`,
+        r.reason,
+      );
+    }
+  });
+
   return {
     total: users.length,
     planned: results.filter((r) => r.status === "fulfilled" && r.value).length,
