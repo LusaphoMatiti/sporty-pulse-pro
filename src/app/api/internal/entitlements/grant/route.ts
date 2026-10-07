@@ -2,6 +2,7 @@ import { type NextRequest } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { EquipmentSource, Plan } from "@/generated/prisma/client";
+import crypto from "crypto";
 
 // Store calls this after a PayFast payment confirms.
 // Not public-facing — protected by a shared secret, not user auth.
@@ -23,8 +24,12 @@ export const POST = async (req: NextRequest) => {
     });
   }
 
-  const authHeader = req.headers.get("authorization");
-  if (authHeader !== `Bearer ${expectedSecret}`) {
+  const given = Buffer.from(req.headers.get("authorization") ?? "");
+  const expected = Buffer.from(`Bearer ${expectedSecret}`);
+  if (
+    given.length !== expected.length ||
+    !crypto.timingSafeEqual(given, expected)
+  ) {
     return Response.json(null, { status: 401, statusText: "Unauthorized" });
   }
 

@@ -6,6 +6,7 @@ export type AccessContext = {
 };
 
 const GYM_TRIAL_DAYS = 15;
+const PRO_GRACE_DAYS = 3;
 
 export async function getUserAccess(ctx: AccessContext) {
   const now = new Date();
@@ -13,10 +14,21 @@ export async function getUserAccess(ctx: AccessContext) {
   //  Subscription
   const subscription = await prisma.subscription.findUnique({
     where: { userId: ctx.userId },
-    select: { plan: true },
+    select: { plan: true, status: true, nextBillingDate: true },
   });
 
-  const isPro = subscription?.plan === Plan.PRO;
+  const proPaidThrough = subscription?.nextBillingDate
+    ? new Date(
+        subscription.nextBillingDate.getTime() +
+          PRO_GRACE_DAYS * 24 * 60 * 1000,
+      )
+    : null;
+
+  const isPro =
+    subscription?.plan === Plan.PRO &&
+    subscription.status === "active" &&
+    !!proPaidThrough &&
+    proPaidThrough > now;
   const isEquipment = subscription?.plan === Plan.EQUIPMENT;
 
   // Equipment ownership
