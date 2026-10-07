@@ -1,10 +1,12 @@
 import type { NextRequest } from "next/server";
+import { safeRedirectUri } from "@/lib/safe-redirect";
 
 export async function GET(req: NextRequest) {
   const baseUrl = process.env.NEXTAUTH_URL!;
 
-  const redirectUri =
-    req.nextUrl.searchParams.get("redirectUri") ?? "sporty-pulse-pro://auth";
+  const redirectUri = safeRedirectUri(
+    req.nextUrl.searchParams.get("redirectUri"),
+  );
 
   // "register" when RegisterScreen initiated this; absent/anything else
   // (e.g. LoginScreen) leaves mobile-callback's behavior untouched.

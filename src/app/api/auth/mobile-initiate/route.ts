@@ -3,6 +3,7 @@ import { getToken } from "next-auth/jwt";
 import { SignJWT } from "jose";
 import { prisma } from "@/lib/prisma";
 import { Role, Prisma } from "@/generated/prisma";
+import { safeRedirectUri } from "@/lib/safe-redirect";
 
 const USER_SELECT = {
   id: true,
@@ -18,8 +19,9 @@ export async function GET(req: NextRequest) {
   // redirectUri is the deep-link scheme the Expo app passed through mobile-initiate.
   // In dev:  exp+sporty-pulse-expo://expo-development-client/--/auth
   // In prod: sporty-pulse-pro://auth
-  const redirectUri =
-    req.nextUrl.searchParams.get("redirectUri") ?? "sporty-pulse-pro://auth";
+  const redirectUri = safeRedirectUri(
+    req.nextUrl.searchParams.get("redirectUri"),
+  );
 
   // Set by mobile-initiate only when RegisterScreen kicked off this flow.
   // LoginScreen never sends this, so its requests are unaffected below.
