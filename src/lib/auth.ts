@@ -6,6 +6,7 @@ import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
 import { Role } from "@/generated/prisma";
 import { reconcilePendingEntitlements } from "@/lib/reconcile-entitlements";
+import { loginEmailLimiter, loginIpLimiter } from "@/lib/rate-limit";
 
 interface ExtendedUser extends User {
   id: string;
@@ -43,12 +44,25 @@ export const authOptions: NextAuthOptions = {
         email: { label: "Email", type: "email" },
         password: { label: "Password", type: "password" },
       },
-      async authorize(credentials): Promise<ExtendedUser | null> {
+      async authorize(credentials, req): Promise<ExtendedUser | null> {
         if (!credentials?.email || !credentials?.password)
           throw new Error("Email and password are required");
 
+        const ip =
+          String(req?.headers?.["x-forwarded-for"] ?? "")
+            .split(",")[0]
+            .trim() || "unknown";
+        const [ipCheck, emailCheck] = await Promise.all([
+          loginIpLimiter.limit(ip),
+          loginEmailLimiter.limit(credentials.email.toLowerCase().trim()),
+        ]);
+        if (!ipCheck.success || !emailCheck.success)
+          throw new Error(
+            "Too many attempts. Please try again in a few minutes.",
+          );
+
         const user = await prisma.user.findUnique({
-          where: { email: credentials.email },
+          where: { email: credentials.email.toLowerCase().trim() },
           select: {
             id: true,
             email: true,

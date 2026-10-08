@@ -2,7 +2,39 @@
 import type { NextConfig } from "next";
 import { withSentryConfig } from "@sentry/nextjs";
 
+const csp = [
+  "default-src 'self'",
+  // Next.js needs inline scripts/styles; tighten later with nonces.
+  "script-src 'self' 'unsafe-inline'" +
+    (process.env.NODE_ENV !== "production" ? " 'unsafe-eval'" : ""),
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob: https://res.cloudinary.com https://lh3.googleusercontent.com",
+  "font-src 'self' data:",
+  "connect-src 'self' https://*.ingest.sentry.io https://*.ingest.us.sentry.io",
+  "frame-ancestors 'none'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  // Google sign-in and PayFast checkout are reached by form posts/redirects.
+  "form-action 'self' https://accounts.google.com https://www.payfast.co.za https://sandbox.payfast.co.za",
+].join("; ");
+
+const securityHeaders = [
+  { key: "Strict-Transport-Security", value: "max-age=31536000" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "X-Frame-Options", value: "DENY" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  {
+    key: "Permissions-Policy",
+    value: "camera=(), microphone=(), geolocation=()",
+  },
+  { key: "Content-Security-Policy-Report-Only", value: csp },
+];
+
 const nextConfig: NextConfig = {
+  async headers() {
+    return [{ source: "/(.*)", headers: securityHeaders }];
+  },
+
   images: {
     remotePatterns: [
       {

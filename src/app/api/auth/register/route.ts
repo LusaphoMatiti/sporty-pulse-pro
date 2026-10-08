@@ -3,6 +3,7 @@ import bcrypt from "bcryptjs";
 import { SignJWT } from "jose";
 import { prisma } from "@/lib/prisma";
 import { Role } from "@/generated/prisma";
+import { registerIpLimiter, getClientIp } from "@/lib/rate-limit";
 
 export async function POST(req: Request) {
   try {
@@ -75,6 +76,14 @@ export async function POST(req: Request) {
       .setIssuedAt()
       .setExpirationTime("30d")
       .sign(secret);
+
+    const { success } = await registerIpLimiter.limit(getClientIp(req));
+    if (!success) {
+      return NextResponse.json(
+        { error: "Too many sign-up attempts. Please try again later." },
+        { status: 429 },
+      );
+    }
 
     return NextResponse.json({ token }, { status: 201 });
   } catch (err) {

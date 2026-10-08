@@ -44,7 +44,8 @@ export const POST = async (req: NextRequest) => {
     );
   }
 
-  const { email, storeProductIds } = parsed.data;
+  const { storeProductIds } = parsed.data;
+  const email = parsed.data.email.toLowerCase().trim();
 
   try {
     // ── 3. Translate Store product IDs -> Pro equipment IDs ───────

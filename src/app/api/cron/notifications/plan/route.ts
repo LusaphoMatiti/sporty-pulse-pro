@@ -6,8 +6,8 @@ export const dynamic = "force-dynamic";
 // Runs every ~10-15 min (see vercel.json cron schedule). Sends any
 // ScheduledNotification whose time has come, re-validating first.
 export async function GET(req: Request) {
-  const authHeader = req.headers.get("authorization");
-  if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+  const secret = process.env.CRON_SECRET;
+  if (!secret || req.headers.get("authorization") !== `Bearer ${secret}`) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 

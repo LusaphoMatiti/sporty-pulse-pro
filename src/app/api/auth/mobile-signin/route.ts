@@ -9,6 +9,11 @@ import {
   validationError,
   internalError,
 } from "@/lib/api-response";
+import {
+  loginEmailLimiter,
+  loginIpLimiter,
+  getClientIp,
+} from "@/lib/rate-limit";
 
 export async function POST(req: NextRequest) {
   try {
@@ -19,6 +24,17 @@ export async function POST(req: NextRequest) {
 
     const { email, password } = body;
     const normalizedEmail = email.toLowerCase().trim();
+
+    const [ipCheck, emailCheck] = await Promise.all([
+      loginIpLimiter.limit(getClientIp(req)),
+      loginEmailLimiter.limit(normalizedEmail),
+    ]);
+    if (!ipCheck.success || !emailCheck.success) {
+      return Response.json(
+        { error: "Too many attempts. Please try again in a few minutes." },
+        { status: 429 },
+      );
+    }
 
     const user = await prisma.user.findUnique({
       where: { email: normalizedEmail },

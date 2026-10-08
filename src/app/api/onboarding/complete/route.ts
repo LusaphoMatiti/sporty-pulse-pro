@@ -162,8 +162,16 @@ export async function POST(req: NextRequest) {
   // ─────────────────────────────────────────────
   const user = await prisma.user.findUnique({
     where: { id: userId },
-    select: { lastLoginAt: true, onboardingCompletedAt: true },
+    select: {
+      lastLoginAt: true,
+      onboardingCompletedAt: true,
+      onboardingComplete: true,
+    },
   });
+
+  if (user?.onboardingComplete) {
+    return NextResponse.json({ ok: true, already: true });
+  }
 
   const { identity, reason } = assignIdentity({
     experienceLevel: experienceLevel as ExperienceLevel,
