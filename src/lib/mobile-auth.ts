@@ -1,6 +1,7 @@
 import { jwtVerify } from "jose";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
+import { prisma } from "@/lib/prisma";
 
 export async function getMobileOrWebSession(req: Request) {
   const auth = req.headers.get("authorization");
@@ -11,6 +12,16 @@ export async function getMobileOrWebSession(req: Request) {
       const secret = new TextEncoder().encode(process.env.NEXTAUTH_SECRET!);
       const { payload } = await jwtVerify(token, secret);
       if (!payload.sub) return null;
+      const dbUser = await prisma.user.findUnique({
+        where: { id: payload.sub },
+        select: { tokenVersion: true },
+      });
+      if (
+        !dbUser ||
+        dbUser.tokenVersion !== ((payload.tv as number | undefined) ?? 0)
+      ) {
+        return null;
+      }
       return {
         user: {
           id: payload.sub,

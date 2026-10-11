@@ -30,6 +30,7 @@ model User {
   onboardingCompletedAt DateTime?
   privacyPolicyAcceptedAt DateTime?
   purchaseModalShown    Boolean           @default(false)
+  tokenVersion          Int @default(0)
   accounts              Account[]
   instances             PlanInstance[]
   recoveryLogs          RecoveryLog[]

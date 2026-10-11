@@ -3,6 +3,7 @@ import { authOptions } from "@/lib/auth";
 import { jwtVerify } from "jose";
 import type { NextRequest } from "next/server";
 import type { Role } from "@/generated/prisma";
+import { prisma } from "@/lib/prisma";
 
 interface MobileSession {
   user: {
@@ -30,15 +31,16 @@ export async function getSessionFromRequest(
     const { payload } = await jwtVerify(bearer, secret);
 
     if (payload?.id) {
-      return {
-        user: {
-          id: payload.id as string,
-          email: payload.email as string,
-          role: payload.role as Role,
-          isNewUser: payload.isNewUser as boolean,
-          onboardingComplete: payload.onboardingComplete as boolean,
-        },
-      };
+      const dbUser = await prisma.user.findUnique({
+        where: { id: payload.id as string },
+        select: { tokenVersion: true },
+      });
+      if (
+        !dbUser ||
+        dbUser.tokenVersion !== ((payload.tv as number | undefined) ?? 0)
+      ) {
+        return null;
+      }
     }
   } catch (e) {
     console.error("[getSession] jwtVerify failed:", e);
