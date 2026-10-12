@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import type { CheckoutSessionResponse } from "@/types/paystack";
 
 const FREE_FEATURES = [
   { text: "Bodyweight programs", included: true },
@@ -42,26 +41,24 @@ const PricingPage = () => {
     setAlert(null);
 
     try {
-      const res = await fetch("/api/create-checkout-session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ userId, userEmail }),
-      });
+      const res = await fetch("/api/payfast/subscribe", { method: "POST" });
 
-      if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.error ?? "Server error");
+      if (res.status === 401) {
+        window.location.href = "/login";
+        return;
       }
 
-      const data: CheckoutSessionResponse = await res.json();
+      if (!res.ok) {
+        const err = await res.json().catch(() => null);
+        throw new Error(err?.error ?? "Server error");
+      }
 
-      setAlert({
-        type: "success",
-        msg: `Session created (ref: ${data.reference}). Redirecting... `,
-      });
+      const data: { checkoutUrl: string } = await res.json();
+
+      setAlert({ type: "success", msg: "Redirecting to secure checkout..." });
 
       setTimeout(() => {
-        window.location.href = data.url;
+        window.location.href = data.checkoutUrl;
       }, 900);
     } catch (err) {
       const message = err instanceof Error ? err.message : "Unknown error";
@@ -263,10 +260,10 @@ const PricingPage = () => {
         <div className="text-center text-[#555] text-xs mt-12 leading-7">
           Payments powered by{" "}
           <a
-            href="https://paystack.com"
+            href="https://www.payfast.co.za"
             className="text-[#666] hover:text-[#888]"
           >
-            Paystack
+            PayFast
           </a>{" "}
           · ZAR · Recurring monthly billing
         </div>
