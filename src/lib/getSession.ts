@@ -22,29 +22,48 @@ export async function getSessionFromRequest(
   const session = await getServerSession(authOptions);
   if (session?.user?.id) return session as MobileSession;
 
-  // 2. Bearer token (Expo — both credentials and Google OAuth path)
-  const bearer = req.headers.get("authorization")?.replace("Bearer ", "");
-  if (!bearer) return null;
+  // 2. Bearer token (Expo)
+  const header = req.headers.get("authorization");
+  if (!header?.startsWith("Bearer ")) return null;
+  const bearer = header.slice(7);
 
   try {
     const secret = new TextEncoder().encode(process.env.NEXTAUTH_SECRET!);
     const { payload } = await jwtVerify(bearer, secret);
 
-    if (payload?.id) {
-      const dbUser = await prisma.user.findUnique({
-        where: { id: payload.id as string },
-        select: { tokenVersion: true },
-      });
-      if (
-        !dbUser ||
-        dbUser.tokenVersion !== ((payload.tv as number | undefined) ?? 0)
-      ) {
-        return null;
-      }
+    const userId = (payload.id ?? payload.sub) as string | undefined;
+    if (!userId) return null;
+
+    const dbUser = await prisma.user.findUnique({
+      where: { id: userId },
+      select: {
+        id: true,
+        email: true,
+        role: true,
+        isNewUser: true,
+        onboardingComplete: true,
+        tokenVersion: true,
+      },
+    });
+
+    if (
+      !dbUser ||
+      dbUser.tokenVersion !== ((payload.tv as number | undefined) ?? 0)
+    ) {
+      return null;
     }
+
+    return {
+      user: {
+        id: dbUser.id,
+        email: dbUser.email,
+        role: dbUser.role,
+        isNewUser: dbUser.isNewUser,
+        onboardingComplete: dbUser.onboardingComplete,
+      },
+    };
   } catch (e) {
     console.error("[getSession] jwtVerify failed:", e);
+    return null;
   }
-
-  return null;
 }
