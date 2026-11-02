@@ -19,8 +19,15 @@ jobs:
   dispatch:
     runs-on: ubuntu-latest
     steps:
-      - name: Call dispatch endpoint
+      - name: Call dispatch endpoint (DEBUG)
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
         run: |
-          curl --fail --silent --show-error \
-            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
-            "$DISPATCH_URL"
+          echo "secret length: ${#CRON_SECRET}"
+          curl -sS -o body.txt -D headers.txt -w "HTTP %{http_code}\n" \
+            -H "Authorization: Bearer ${CRON_SECRET}" \
+            "$DISPATCH_URL" || true
+          echo "--- headers ---"
+          head -n 15 headers.txt
+          echo "--- body ---"
+          head -c 500 body.txt
