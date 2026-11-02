@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { dispatchDueNotifications } from "@/lib/notifications/dispatcher";
+import { planForAllActiveUsers } from "@/lib/notifications/planner";
 
 export const dynamic = "force-dynamic";
 
@@ -11,6 +11,6 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
-  const result = await dispatchDueNotifications();
+  const result = await planForAllActiveUsers();
   return NextResponse.json(result);
 }
